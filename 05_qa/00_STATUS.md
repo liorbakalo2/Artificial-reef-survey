@@ -441,3 +441,15 @@ Shape tracing continues for all 13 reefs.
 ## 2026-10-07 (orchestrator) - Lior's go: queue items 1-3 started (3 fresh Sonnet agents, PC)
 - Mount Maunganui update (_agent_briefs/task_mm_update.md), Narrowneck verification stage 1 (task_narrowneck_verify.md), Borth D6 + Boscombe D2 seabed fixes (task_seabed_fixes.md; applied as recommended, reversible via 3d/archive/pre_D6, pre_D2).
 - Live table of running agents + PC->cloud transfer protocol: _agent_briefs/orchestrator.md sections 7-8 (CLAUDE.md rule 10 points there). Agents never run git; the orchestrator commits.
+
+## 2026-10-07 (seabed-fix agent) - Borth D6 DONE, Boscombe D2 NOT started (stopped on the 5-hour limit)
+- Borth (07_scale/shapes/borth-coastal-defence-reef/3d): seabed fixed. Fig 2 -4.0 contour is now a node set (13 traced + 6 assumed bridge + 3 assumed east nodes); anchor -4.0 at y = 335 removed; EMODnet gradient starts on the contour. Model minus contour -4.0: -0.89 -> 0.00 m; -3.0 0.00; -2.0 -0.14 (unchanged); vs EMODnet cells 1.5-1.6 -> 0.7-1.2 m deeper; Navionics-implied zero -4.73 -> -3.75 (RMS vs LAT 2.30 -> 1.33 m).
+- Bug found: the old fit clamped y to 335, ignoring the design bed nodes at y 360/385 (bed under the arm head -4.7, design -4.0). Option B (faithful fix) approved by the coordinator; volumes 31,336 / 30,091 / 26,400 -> 30,119 / 28,919 / 25,504 m3 (tonnes 53,271 / 51,154 / 44,880 -> 51,203 / 49,162 / 43,357); Type 4 layer of the default 36,646 -> 36,074 t.
+- Files: model.js, docs.js, shape.json (volume_m3_model), METHODS_3D.md, SOURCES_3D.md, viewer note in index.html, annotated A1/A7-A10, previews, registry (img-17, img-30 refreshed), HANDOFF.md, root REQUESTS D6. Pre-fix copies: 3d/archive/pre_D6/. State is consistent (fully new). 04_build not touched: main must refresh the page and edit the typed texts (list in the agent's final report).
+- Boscombe D2: not started; see Borth HANDOFF section 7 and the brief task_seabed_fixes.md.
+
+## 2026-10-07 (Mount Maunganui update agent) - P2/P3 analysed, D1 NOT yet applied (stopped on the 5-hour limit)
+- The "Fig. 3, design 6,500 m3 vs as-built survey 2,800 m3" is in P3 (Mead & Borrero 2011), not P2 (Mead, Black & Moores 2007; P2 has no as-built outline, bed or datum). main was told.
+- P3 Fig 3 bottom (205 px, unlabelled grid ticks): fits the ASR toe outline (IoU 0.87, grid about 10 m, bag-top area 1,436 vs toe 1,424 m2) -> corroborates the toe version; not traced as a new version; default stays the 2013 multibeam outline. P2 Fig 12 top (Oct 2006, unfinished reef): bed beside the reef 2.0-3.7 m, reef parts 0.33-1.5 m below an unstated datum (CD assumed) -> shallower than -3.6 (reported only).
+- Saved 16 figure files in 07_scale/shapes/mount-maunganui-reef/3d/src/ (not yet registered, ids 23-38 planned) and two check scripts in 3d/. Nothing else changed (model.js, shape.json, images.json, REQUESTS untouched; 04_build untouched).
+- Continue from 3d/SOURCES_3D.md "CHECKPOINT (2026-10-07 b ...)" and HANDOFF.md section 0.

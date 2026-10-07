@@ -120,9 +120,9 @@ All of them are in `REQUESTS_FOR_LIOR.md`:
 ## 7. Running agents (live table: update it when you start or finish an agent, and commit)
 | Started | Task file | Work folder | Checkpoint a fresh agent continues from | Status |
 |---|---|---|---|---|
-| 2026-10-07 | `_agent_briefs/task_mm_update.md` | `07_scale/shapes/mount-maunganui-reef/` | `HANDOFF.md` section 0 + `3d/SOURCES_3D.md` CHECKPOINT | STOPPING 2026-10-07 for Lior's usage limit: told to checkpoint + stop. Restart FRESH from the checkpoint (never resume) |
-| 2026-10-07 | `_agent_briefs/task_narrowneck_verify.md` | `07_scale/shapes/narrowneck-gold-coast/` | `VERIFY.md` CHECKPOINT + `HANDOFF.md` | STOPPING 2026-10-07 for Lior's usage limit: told to checkpoint + stop. Restart FRESH from the checkpoint (never resume) |
-| 2026-10-07 | `_agent_briefs/task_seabed_fixes.md` | Borth and Boscombe `3d/` | each reef's `HANDOFF.md` (Borth first) | STOPPING 2026-10-07 for Lior's usage limit: told to checkpoint + stop. Restart FRESH from the checkpoint (never resume) |
+| 2026-10-07 | `_agent_briefs/task_mm_update.md` | `07_scale/shapes/mount-maunganui-reef/` | `HANDOFF.md` section 0 + `3d/SOURCES_3D.md` CHECKPOINT | STOPPED 2026-10-07 (clean). Done: P2 OCR + figures, P3 read, Fig 3 check (not traced: corroborates the toe version), Oct 2006 bed read. NEXT (fresh agent): D1 in code (bed selector, bed_scenarios), volume table version x bed, register the 16 saved figures (img-23..38), card [Rn] refs, previews - from `3d/SOURCES_3D.md` "CHECKPOINT (2026-10-07 b ...)" |
+| 2026-10-07 | `_agent_briefs/task_narrowneck_verify.md` | `07_scale/shapes/narrowneck-gold-coast/` | `VERIFY.md` CHECKPOINT + `HANDOFF.md` | CUT OFF by the usage limit 2026-10-07 (no new checkpoint written). Fresh agent: start from the old `VERIFY.md` CHECKPOINT, but first list files in the folder changed on 2026-10-07 after it (partial work of the cut-off run) |
+| 2026-10-07 | `_agent_briefs/task_seabed_fixes.md` | Borth and Boscombe `3d/` | each reef's `HANDOFF.md` (Borth first) | Borth D6 DONE 2026-10-07 (option B; volumes now 30,119 / 28,919 / 25,504 m³). NEXT: (a) main/page agent: apply the typed-text edits in Borth `HANDOFF.md` section 7 item 1 to `04_build/data/models3d_caveats.json` + `models3d_curated.json`, then `python src/update_page.py --full`; (b) Boscombe D2 not started: fresh agent, Boscombe part of the task file |
 
 **When an agent finishes:**
 - save its report from the hand-back;

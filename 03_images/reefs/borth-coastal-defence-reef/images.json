@@ -596,7 +596,7 @@
     "seabed",
     "tides"
    ],
-   "result": "MSL - LAT = 2.75 m (z_MSL = e_LAT - 2.75). The reef-zone EMODnet cells (-2.78..-2.57 mODN) are 1.0-1.4 m shallower than the design bed (-4.0): GEBCO interpolation, not used. Only the offshore gradient -1.1 % (survey cells from y 335 m) is used; the seabed seaward of y 335 m is NOT validated by it (model 1.5 m deeper than the cells at y 368-513, see METHODS_3D 4.4)."
+   "result": "MSL - LAT = 2.75 m (z_MSL = e_LAT - 2.75). The reef-zone EMODnet cells (-2.78..-2.57 mODN) are 1.0-1.4 m shallower than the design bed (-4.0): GEBCO interpolation, not used. Only the offshore gradient -1.1 % (survey cells y 368-652 m) is used, starting from the Fig 2 -4.0 contour (D6 fix 2026-10-07); the absolute cell values are not used (model 0.7-1.2 m deeper than the cells at y 368-513, mean 0.87 m; pre-D6 1.5-1.6 m; see METHODS_3D 4.4)."
   },
   "added_by": "EMODnet bathymetry test, 2026-10-06"
  },
@@ -623,7 +623,7 @@
    "cross_check",
    "3d_seabed"
   ],
-  "how_used": "Used to identify the source of the DTM cells at the reef (CDI 115084 + GEBCO 2024 fill) and its quality index (horizontal 0, vertical 3, age 0 = older than 30 y, purpose 3). Documented in REPORT.md; no model value taken. Result of the 3D check 2026-10-07: One survey patch (CDI 115084, OceanWise) supplies the gradient -1.1 % for y 368-652 m (one sounding per cell, age > 30 y): used as a gradient only, anchored on the design bed level at y = 335 m.",
+  "how_used": "Used to identify the source of the DTM cells at the reef (CDI 115084 + GEBCO 2024 fill) and its quality index (horizontal 0, vertical 3, age 0 = older than 30 y, purpose 3). Documented in REPORT.md; no model value taken. Result of the 3D check 2026-10-07: One survey patch (CDI 115084, OceanWise) supplies the gradient -1.1 % for y 368-652 m (one sounding per cell, age > 30 y): used as a gradient only, anchored on the design bed level at y = 335 m. Result of the 3D check 2026-10-07: One survey patch (CDI 115084, OceanWise) supplies the gradient -1.1 % for y 368-652 m (one sounding per cell, age > 30 y): used as a gradient only, starting from the Fig 2 -4.0 contour (pre-D6: from an assumed anchor -4.0 at y = 335 m).",
   "linked_records": [
    "07_scale/bathymetry/emodnet/REPORT.md",
    "07_scale/bathymetry/emodnet/data/borth-coastal-defence-reef_results.json",
@@ -644,7 +644,7 @@
    "model_values_affected": [
     "seabed"
    ],
-   "result": "One survey patch (CDI 115084, OceanWise) supplies the gradient -1.1 % for y 368-652 m (one sounding per cell, age > 30 y): used as a gradient only, anchored on the design bed level at y = 335 m. Kept as context; the Navionics datum test (METHODS_3D 3.6) puts the chart 0.6 m shallower than these cells."
+   "result": "One survey patch (CDI 115084, OceanWise) supplies the gradient -1.1 % for y 368-652 m (one sounding per cell, age > 30 y): used as a gradient only, starting from the Fig 2 -4.0 contour (pre-D6: from an assumed anchor -4.0 at y = 335 m). Kept as context; the Navionics datum test (METHODS_3D 3.6) puts the chart 0.6 m shallower than these cells."
   },
   "added_by": "EMODnet bathymetry test, 2026-10-06"
  },
@@ -693,7 +693,7 @@
     "seabed",
     "tides"
    ],
-   "result": "The DTM steps along the shore normal confirm the trend (-1.1 %); the absolute reef-zone values are interpolated and are not used. Model vs EMODnet at x -30: 1.5-1.6 m deeper at y 368-513 (METHODS_3D 4.4)."
+   "result": "The DTM steps along the shore normal confirm the trend (-1.1 %); the absolute reef-zone values are interpolated and are not used. Model vs EMODnet at x -30: 0.7-1.2 m deeper at y 368-513 (pre-D6 1.5-1.6 m; METHODS_3D 4.4)."
   },
   "added_by": "EMODnet bathymetry test, 2026-10-06"
  },
@@ -743,7 +743,7 @@
    "model_values_affected": [
     "seabed"
    ],
-   "result": "Fig 2 traced and georeferenced (A1): -3.0 contour used as seabed control outside the reef zone (model minus contour -0.01 m, n 24); -2.0 contour -0.14 m (n 24, not a control); -4.0 contour: the model is 0.89 m DEEPER (sd 0.14, n 13), because only the -3.0 contour and the -4.0 anchor at y = 335 m plus the EMODnet gradient were used. Open issue (METHODS_3D 4.4, 7)."
+   "result": "Fig 2 traced and georeferenced (A1): -3.0 and -4.0 contours used as seabed control outside the reef zone (model minus contour 0.00 m for both, n 24 and n 13); -2.0 contour -0.14 m (n 24, not a control). The -4.0 contour became a control on 2026-10-07 (D6 fix): before it the model was 0.89 m DEEPER than it (sd 0.14, n 13), because only the -3.0 contour and an assumed anchor -4.0 at y = 335 m plus the EMODnet gradient were used. Resolved (METHODS_3D 3.3, 4.4, 7)."
   },
   "added_by": "Borth shape verification + 3D-input preparation, 2026-10-06"
  },
@@ -1389,17 +1389,17 @@
    "3d_seabed",
    "cross_check"
   ],
-  "how_used": "Documents where every part of the modelled seabed comes from; shows the weak zones (tail bed assumed, anchor assumed, nothing between y 335 and 520 m but the EMODnet gradient). METHODS_3D.md 3.3 and 4.4.",
+  "how_used": "Documents where every part of the modelled seabed comes from; shows the weak zones (tail bed assumed, anchor assumed, nothing between y 335 and 520 m but the EMODnet gradient). METHODS_3D.md 3.3 and 4.4. Regenerated 2026-10-07 after the D6 seabed fix (Fig 2 -4.0 contour nodes replace the anchor line; the pre-fix figure is in 07_scale/shapes/borth-coastal-defence-reef/3d/archive/pre_D6/annotated/).",
   "linked_records": [
    "07_scale/shapes/borth-coastal-defence-reef/3d/METHODS_3D.md section 3.3",
    "07_scale/shapes/borth-coastal-defence-reef/3d/SOURCES_3D.md"
   ],
-  "bytes": 223945,
+  "bytes": 239288,
   "px": [
    1194,
    855
   ],
-  "sha256": "8ca5689a131732d91137aed0e1656bf2fee3b6793602a973df6f86df11d678b8",
+  "sha256": "789e47596be4f3190528bd2a854d7b647026d52bab52217a260a51aafd787b3e",
   "rights_note": "Private research copy; reuse rights to be checked before any public release.",
   "display": true,
   "for_3d_check": {

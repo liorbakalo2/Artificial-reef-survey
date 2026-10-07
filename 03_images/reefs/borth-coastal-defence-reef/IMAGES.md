@@ -389,6 +389,7 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **added by**: EMODnet bathymetry test, 2026-10-06
 - **3D check result (2026-10-07)**: MSL - LAT = 2.75 m (z_MSL = e_LAT - 2.75). The reef-zone EMODnet cells (-2.78..-2.57 mODN) are 1.0-1.4 m shallower than the design bed (-4.0): GEBCO interpolation, not used. Only the offshore gradient -1.1 % (survey cells from y 335 m) is used; the seabed seaward of y 335 m is NOT validated by it (model 1.5 m deeper than the cells at y 368-513, see METHODS_3D 4.4).
 - **How used (update 2026-10-07)**: Result of the 3D check 2026-10-07: MSL - LAT = 2.75 m (z_MSL = e_LAT - 2.75).
+- **3D check result (2026-10-07)**: MSL - LAT = 2.75 m (z_MSL = e_LAT - 2.75). The reef-zone EMODnet cells (-2.78..-2.57 mODN) are 1.0-1.4 m shallower than the design bed (-4.0): GEBCO interpolation, not used. Only the offshore gradient -1.1 % (survey cells y 368-652 m) is used, starting from the Fig 2 -4.0 contour (D6 fix 2026-10-07); the absolute cell values are not used (model 0.7-1.2 m deeper than the cells at y 368-513, mean 0.87 m; pre-D6 1.5-1.6 m; see METHODS_3D 4.4).
 
 ## borth-coastal-defence-reef-img-15 - EMODnet Map Viewer at Borth: 'Source references' layer over Esri imagery with cell grid, reef outlines and profile
 
@@ -419,6 +420,8 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **added by**: EMODnet bathymetry test, 2026-10-06
 - **3D check result (2026-10-07)**: One survey patch (CDI 115084, OceanWise) supplies the gradient -1.1 % for y 368-652 m (one sounding per cell, age > 30 y): used as a gradient only, anchored on the design bed level at y = 335 m. Kept as context; the Navionics datum test (METHODS_3D 3.6) puts the chart 0.6 m shallower than these cells.
 - **How used (update 2026-10-07)**: Result of the 3D check 2026-10-07: One survey patch (CDI 115084, OceanWise) supplies the gradient -1.1 % for y 368-652 m (one sounding per cell, age > 30 y): used as a gradient only, anchored on the design bed level at y = 335 m.
+- **3D check result (2026-10-07)**: One survey patch (CDI 115084, OceanWise) supplies the gradient -1.1 % for y 368-652 m (one sounding per cell, age > 30 y): used as a gradient only, starting from the Fig 2 -4.0 contour (pre-D6: from an assumed anchor -4.0 at y = 335 m). Kept as context; the Navionics datum test (METHODS_3D 3.6) puts the chart 0.6 m shallower than these cells.
+- **How used (update 2026-10-07)**: Result of the 3D check 2026-10-07: One survey patch (CDI 115084, OceanWise) supplies the gradient -1.1 % for y 368-652 m (one sounding per cell, age > 30 y): used as a gradient only, starting from the Fig 2 -4.0 contour (pre-D6: from an assumed anchor -4.0 at y = 335 m).
 
 ## borth-coastal-defence-reef-img-16 - Shore-normal depth profile through the Borth reef mounds from the EMODnet DTM 2024 cells (reef centre, northern hook, southern oval) and the REST depth_profile
 
@@ -448,6 +451,7 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **added by**: EMODnet bathymetry test, 2026-10-06
 - **3D check result (2026-10-07)**: The DTM steps along the shore normal confirm the trend (-1.1 %); the absolute reef-zone values are interpolated and are not used. Model vs EMODnet at x -30: 1.5-1.6 m deeper at y 368-513 (METHODS_3D 4.4).
 - **How used (update 2026-10-07)**: Result of the 3D check 2026-10-07: The DTM steps along the shore normal confirm the trend (-1.1 %); the absolute reef-zone values are interpolated and are not used.
+- **3D check result (2026-10-07)**: The DTM steps along the shore normal confirm the trend (-1.1 %); the absolute reef-zone values are interpolated and are not used. Model vs EMODnet at x -30: 0.7-1.2 m deeper at y 368-513 (pre-D6 1.5-1.6 m; METHODS_3D 4.4).
 
 ## borth-coastal-defence-reef-img-17 - HRPP576 Fig. 2: general layout of Phase 1 with mODN seabed contours (A north reef, B south reef, C shore-parallel breakwater)
 
@@ -477,6 +481,7 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **added by**: Borth shape verification + 3D-input preparation, 2026-10-06
 - **3D check result (2026-10-07)**: Fig 2 traced and georeferenced (A1): -3.0 contour used as seabed control outside the reef zone (model minus contour -0.01 m, n 24); -2.0 contour -0.14 m (n 24, not a control); -4.0 contour: the model is 0.89 m DEEPER (sd 0.14, n 13), because only the -3.0 contour and the -4.0 anchor at y = 335 m plus the EMODnet gradient were used. Open issue (METHODS_3D 4.4, 7).
 - **annotated versions (added 2026-10-07)**: 07_scale/shapes/borth-coastal-defence-reef/3d/annotated/A1_fig2_contours_read.png, 07_scale/shapes/borth-coastal-defence-reef/3d/annotated/A7_lidar_beach_vs_fig2.png
+- **3D check result (2026-10-07)**: Fig 2 traced and georeferenced (A1): -3.0 and -4.0 contours used as seabed control outside the reef zone (model minus contour 0.00 m for both, n 24 and n 13); -2.0 contour -0.14 m (n 24, not a control). The -4.0 contour became a control on 2026-10-07 (D6 fix): before it the model was 0.89 m DEEPER than it (sd 0.14, n 13), because only the -3.0 contour and an assumed anchor -4.0 at y = 335 m plus the EMODnet gradient were used. Resolved (METHODS_3D 3.3, 4.4, 7).
 
 ## borth-coastal-defence-reef-img-18 - HRPP576 Fig. 3: initial plan view and side profile of the Northern reef (geotube truncated delta, 180 m x 65 m, 4.0 m high)
 
@@ -841,8 +846,9 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **How used for the model**: Documents where every part of the modelled seabed comes from; shows the weak zones (tail bed assumed, anchor assumed, nothing between y 335 and 520 m but the EMODnet gradient). METHODS_3D.md 3.3 and 4.4.
 - **3D check pending**: no - none: documentation figure
 - **linked records**: 07_scale/shapes/borth-coastal-defence-reef/3d/METHODS_3D.md section 3.3; 07_scale/shapes/borth-coastal-defence-reef/3d/SOURCES_3D.md
-- **size**: 223945 bytes, 1194x855 px
-- **sha256**: 8ca5689a131732d91137aed0e1656bf2fee3b6793602a973df6f86df11d678b8
+- **size**: 239288 bytes, 1194x855 px
+- **sha256**: 789e47596be4f3190528bd2a854d7b647026d52bab52217a260a51aafd787b3e
 - **rights**: Private research copy; reuse rights to be checked before any public release.
 - **display in HTML**: True
 - **added by**: Borth 3D model, finish run, 2026-10-07
+- **How used (update 2026-10-07)**: Regenerated 2026-10-07 after the D6 seabed fix (Fig 2 -4.0 contour nodes replace the anchor line; the pre-fix figure is in 07_scale/shapes/borth-coastal-defence-reef/3d/archive/pre_D6/annotated/).
