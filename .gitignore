@@ -1,0 +1,12 @@
+# Python caches
+__pycache__/
+*.pyc
+
+# Page build: rollback copies and old picture copies (regenerated; git history replaces them)
+04_build/QA/prev/
+04_build/QA/removed_assets/
+
+# Editor / OS clutter
+Thumbs.db
+desktop.ini
+.DS_Store
