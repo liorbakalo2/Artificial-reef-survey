@@ -74,17 +74,18 @@
   not yet confirmed by Lior.
 
 ## 5. Work queue (each item restarts only on Lior's go; checkpoint files in brackets)
-1. **Mount Maunganui update** (`07_scale/shapes/mount-maunganui-reef/HANDOFF.md`, `3d/SOURCES_3D.md`; brief `model_3d.md`).
+1. **Mount Maunganui update.** RUNNING since 2026-10-07; task file `_agent_briefs/task_mm_update.md` (see section 7).
    - OCR P2 pages 2-6. Fig 3 is the as-built survey, 2,800 m³ vs design 6,500 m³; it may give a measured default outline.
    - Apply D1.
    - Add facts from P3 (Mead & Borrero 2011).
    - Then run `update_page.py`.
-2. **Narrowneck** (`07_scale/shapes/narrowneck-gold-coast/VERIFY.md` CHECKPOINT, a 10-step TO DO; briefs `verify_shape.md`,
-   then `model_3d.md`).
+2. **Narrowneck.** Stage 1 (verification and versions) RUNNING since 2026-10-07; task file `_agent_briefs/task_narrowneck_verify.md`.
+   Stage 2 (the 3D model, brief `model_3d.md`) starts after it, from the 3D plan in its `HANDOFF.md`.
    - Resolve the scale conflict: Corbett 2023 Fig 2 crest loops ~85-90 m vs Jackson Fig 7 60-62 m.
    - Versions: 2020 photo (default), Corbett Option 2, the 2004 design, 2011 survey relief, Navionics (indicative only).
    - Then build the 3D model.
-3. **Seabed fixes.** Borth D6 and Boscombe D2 in their `3d/` folders, then `update_page.py`. The Borth "0.89 m" caveat text is
+3. **Seabed fixes.** RUNNING since 2026-10-07; task file `_agent_briefs/task_seabed_fixes.md`. Covers Borth D6 and Boscombe D2 in
+   their `3d/` folders, then `update_page.py`. The Borth "0.89 m" caveat text is
    typed by hand (`04_build/UPDATE_PROTOCOL.md`).
 4. **Boscombe from Rendle 2016** (P5, 343 pp): as-built bag layout, crest levels, survey datum.
 5. **Papers intake.** P3 (Mead & Borrero 2011) and P8 (Blacka et al. 2013): per-reef facts and figures into cards, HANDOFFs and
@@ -114,3 +115,45 @@ All of them are in `REQUESTS_FOR_LIOR.md`:
 - Navionics app and Google Earth readings;
 - decisions D2-D6;
 - the media review (`05_qa/media_recheck_summary.md`).
+
+## 7. Running agents (live table: update it when you start or finish an agent, and commit)
+| Started | Task file | Work folder | Checkpoint a fresh agent continues from | Status |
+|---|---|---|---|---|
+| 2026-10-07 | `_agent_briefs/task_mm_update.md` | `07_scale/shapes/mount-maunganui-reef/` | `HANDOFF.md` section 0 + `3d/SOURCES_3D.md` CHECKPOINT | running (PC) |
+| 2026-10-07 | `_agent_briefs/task_narrowneck_verify.md` | `07_scale/shapes/narrowneck-gold-coast/` | `VERIFY.md` CHECKPOINT + `HANDOFF.md` | running (PC) |
+| 2026-10-07 | `_agent_briefs/task_seabed_fixes.md` | Borth and Boscombe `3d/` | each reef's `HANDOFF.md` (Borth first) | running (PC) |
+
+**When an agent finishes:**
+- save its report from the hand-back;
+- refresh the page: `python src/update_page.py` from `04_build`, after the model agents. Check the SUMMARY and FAIL lines;
+- make the hand edits it lists. The Borth "0.89 m" caveat is in `04_build/data/models3d_caveats.json` and `models3d_curated.json`;
+- set its row to done;
+- commit;
+- start the next queue item, keeping at most 3 agents at a time.
+
+**Rules for agents running in parallel:**
+- Agents never run git; the orchestrator commits.
+- Model agents never edit `04_build`.
+- Each agent edits only its own reef folders. Shared root files (`05_qa/00_STATUS.md`, `REQUESTS_FOR_LIOR.md`, `03_images/reefs/NEW_IMAGES_LOG.md`) get short appends only.
+
+## 8. Transfer protocol: Lior's PC to a cloud session
+**On the PC (the orchestrator, when Lior says "hand over"):**
+1. Tell every running agent (SendMessage) to finish its current step, write its checkpoint (the file in the section 7 table) and stop.
+   Wait for the hand-backs; use TaskStop only for an agent that does not respond.
+2. Set each row in section 7 to "stopped at <step>, continue from <checkpoint>". Add a dated `05_qa/00_STATUS.md` entry.
+3. Commit everything, with the message "handover to cloud <date>". Push to the private GitHub repo. The first push needs Lior: he
+   creates the empty private repo and gives its URL, and Git Credential Manager signs him in. Then "Continue in cloud" (or Lior
+   opens a new cloud session on that repo).
+
+**In the cloud (the new orchestrator):**
+1. Read `CLAUDE.md`, this file (sections 2-3 and 5-8), and the last `05_qa/00_STATUS.md` entry.
+2. Run the setup check:
+   - `pip install -r requirements.txt`;
+   - Chromium (section 3);
+   - `python src/update_page.py --dry` from `04_build` must run without errors.
+3. For each section 7 row marked stopped or running: start a FRESH agent with the same task file and the checkpoint named in the
+   row. Never try to resume PC agents; they do not exist in the cloud.
+4. Continue the queue (section 5) only as far as Lior has given the go. On 2026-10-07 he gave it for the queue in order.
+   Commit after each finished agent. Push the session branch so Lior can pull and view the page on his PC.
+
+**Back to the PC:** Lior runs `git pull` in the project folder before any local session works there. Work in one place at a time.

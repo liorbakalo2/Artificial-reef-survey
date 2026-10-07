@@ -53,7 +53,10 @@ Gemini's folder (`C:\Users\lior\Documents\Gemini\AG\artifical reef`) is NOT in t
    - update the folder's `HANDOFF.md` (up to ~300 lines);
    - add a dated entry to `05_qa/00_STATUS.md`;
    - update `REQUESTS_FOR_LIOR.md` (root);
-   - commit with a clear message. Never force-push or rewrite history.
+   - the orchestrator commits, with a clear message. Agents never run git: parallel agents share one working tree. Never
+     force-push or rewrite history.
+10. Moving between Lior's PC and the cloud: follow `_agent_briefs/orchestrator.md` section 8 (transfer protocol). Section 7
+    there lists the running agents and their checkpoints.
 
 ## Talking to Lior
 - Lead with the outcome, or with the decision you need. Details live in files.
