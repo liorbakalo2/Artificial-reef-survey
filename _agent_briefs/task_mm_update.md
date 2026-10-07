@@ -23,10 +23,11 @@ This file adds the decisions and papers that arrived since then.
 ## Papers (in `papers/`, Lior's folder: read only, never move)
 - **P2. Mead, Black & Moores (2007),** Coasts & Ports 2007. It is a scan with no text layer.
   - OCR pages 2-6 with `07_scale/tools/ocr_windows.ps1`, and view the figure pages downscaled.
-  - **Fig. 3:** design 6,500 m³ (top) vs as-built survey 2,800 m³ (bottom). Lior's caption: "The 2 containers end to end on the left of the picture are the replacements for the damaged and removed 60 x 6 m container."
+  - CORRECTION (agent, confirmed by main 2026-10-07): the "Fig. 3 design 6,500 m³ vs as-built survey 2,800 m³" is Fig. 3 of **P3 (Mead & Borrero 2011, PDF p3)**, not P2. P2's own Fig. 3 is a 1:20 physical-model plan; P2 Fig. 12 = Oct 2006 unfinished bathymetry, Fig. 8 = container layout. Use P2 for design/construction facts. The as-built candidate below = **P3 Fig. 3 (bottom)**:
+  - P3 Fig. 3: design 6,500 m³ (top) vs as-built survey 2,800 m³ (bottom). Lior's caption: "The 2 containers end to end on the left of the picture are the replacements for the damaged and removed 60 x 6 m container."
   - Register the figure (image rule).
   - If Fig. 3 (bottom) has a usable scale, grid or contours:
-    - trace it as a new outline version, "As-built survey 2007 (Mead et al. 2007 Fig. 3)";
+    - trace it as a new outline version, "As-built survey (Mead & Borrero 2011 Fig. 3)" with the survey date if the paper gives it;
     - make it the default. Reason: it is the earliest measured survey of the completed reef, and the rules are measured survey > design > photo, and 3D = as-built.
   - If its geometry is too poor to trace, keep the 2013 multibeam as the default and write down why.
   - Also extract slopes, crest levels, the seabed level and construction notes, each with its page or figure.

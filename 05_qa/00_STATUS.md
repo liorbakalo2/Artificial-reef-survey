@@ -437,3 +437,7 @@ Shape tracing continues for all 13 reefs.
 - Local git repo at the project root (branch main, first commit 97a8766; 2,565 files, .git 597 MB; largest file 28 MB). Not pushed yet: waits for Lior to create a PRIVATE GitHub repo.
 - New: CLAUDE.md (read-first rules for every session/agent, path mapping), _agent_briefs/orchestrator.md (orchestrator playbook, cloud/Linux notes, Lior's decisions, ordered work queue), requirements.txt, .gitignore (excludes 04_build/QA/prev and QA/removed_assets), .gitattributes (no line-ending conversion). common.md: root path maps to the repo root in the cloud.
 - 04_build/src/qa_cdp.py + qa_shots.py: Chrome lookup also honours CHROME_PATH, chromium on PATH and Playwright's Chromium (Linux); still finds Windows Chrome locally.
+
+## 2026-10-07 (orchestrator) - Lior's go: queue items 1-3 started (3 fresh Sonnet agents, PC)
+- Mount Maunganui update (_agent_briefs/task_mm_update.md), Narrowneck verification stage 1 (task_narrowneck_verify.md), Borth D6 + Boscombe D2 seabed fixes (task_seabed_fixes.md; applied as recommended, reversible via 3d/archive/pre_D6, pre_D2).
+- Live table of running agents + PC->cloud transfer protocol: _agent_briefs/orchestrator.md sections 7-8 (CLAUDE.md rule 10 points there). Agents never run git; the orchestrator commits.

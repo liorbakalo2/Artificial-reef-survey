@@ -40,7 +40,7 @@ VALIDATION
   - peer-reviewed or official sources over press and developer claims, which are labelled as such.
 - Independent re-verification: every fact and every traced outline was checked a second time, separately, against the original source. An earlier AI-generated survey of the same reefs was used only as a lead, and re-checking it exposed several errors.
 - Cross-checks between independent data. For example, Borth's design drawings and the 2022 LiDAR survey agree on crest level to within 0.14 ± 0.28 m, and aerial photographs match the traced outlines to within about 2–3 m.
-- Reported versus reconstructed quantities. At Mount Maunganui, the reconstruction reproduces the surveyed as-built volume of about 2,800 m³ (against 6,500 m³ designed; Mead, Black & Moores 2007) only if the seabed lies near −3.5 m chart datum. This is stated as an assumption.
+- Reported versus reconstructed quantities. At Mount Maunganui, the reconstruction reproduces the surveyed as-built volume of about 2,800 m³ (against 6,500 m³ designed; Mead & Borrero 2011) only if the seabed lies near −3.5 m chart datum. This is stated as an assumption.
 - All levels are converted to local mean sea level with stated equations. Each model carries a confidence rating with its reason, and the unknowns are listed.
 
 PRELIMINARY CONCLUSIONS

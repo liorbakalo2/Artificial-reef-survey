@@ -22,7 +22,10 @@ The problem and the fix are in Borth `HANDOFF.md`, open issue 1 and next-step 2.
 - **Acceptance:**
   - model minus the −4.0 contour: |mean| < 0.2 m;
   - the −3.0 and −2.0 contour checks do not get worse;
-  - volumes under the rock are UNCHANGED (31,336 / 30,091 / 26,400 m³ for lidar_2022 / design_1020 / sat_2024).
+  - volumes under the rock: originally "UNCHANGED" (31,336 / 30,091 / 26,400 m³ for lidar_2022 / design_1020 / sat_2024).
+    REVISED 2026-10-07 (main approved option B). The old grid clamped y to ANCHOR_Y = 335, so the design bed nodes at y 360/385
+    were ignored. Volumes may now change only through that bed-node fix, documented. Agent's numbers: 30,132 / 28,929 /
+    25,505 m³ (−3.4 to −3.9 %).
   Report the new Navionics and EMODnet differences too.
 - **Update:** `METHODS_3D.md` sections 3.3, 4.4 and 7, the viewer's "Seabed in this model" note, `HANDOFF.md`, and root REQUESTS D6 → "applied <date>".
 
