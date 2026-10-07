@@ -35,7 +35,14 @@
   - Needed for: the page QA and the export of the combined "All (compare)" meshes (`04_build/src/export_combined.py`, run by
     `build.py` / `update_page.py`).
   - Install Chromium, e.g. `pip install playwright && python -m playwright install --with-deps chromium`.
-  - Set `CHROME_PATH` to the binary. `04_build/src/qa_cdp.py` and `qa_shots.py` read `CHROME_PATH` first.
+  - `04_build/src/qa_cdp.py` and `qa_shots.py` look for Chrome in this order:
+    1. `CHROME_PATH`;
+    2. the Windows paths;
+    3. chrome / chromium on PATH;
+    4. Playwright's Chromium in `~/.cache/ms-playwright`.
+    So after the install above nothing needs setting.
+  - Suggested cloud setup script:
+    `pip install -r requirements.txt playwright && python -m playwright install --with-deps chromium && apt-get install -y tesseract-ocr`.
 - **OCR.** `07_scale/tools/ocr_windows.ps1` is Windows-only. On Linux use tesseract: `apt-get install tesseract-ocr`, then
   PyMuPDF's OCR text page or pytesseract. P2 (Mead, Black & Moores 2007) is a scan with no text layer.
 - **Network.** Research steps fetch web pages, Esri Wayback tiles, EMODnet, Navionics web charts and papers. The environment

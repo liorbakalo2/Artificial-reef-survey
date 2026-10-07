@@ -28,6 +28,8 @@ def browsers():
         p = shutil.which(n)
         if p and p not in found:
             found.append(p)
+    # Playwright's own Chromium on Linux (python -m playwright install chromium)
+    found += [str(h) for h in sorted(Path.home().glob(".cache/ms-playwright/chromium-*/chrome-linux*/chrome"))[-1:]]
     if not found:
         sys.exit("No Chrome/Edge found for headless QA.")
     return found

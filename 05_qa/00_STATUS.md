@@ -432,3 +432,8 @@ Shape tracing continues for all 13 reefs.
 - Checks: build OK (verify 119 snippets, 0 failed); check.py 0 failures; qa_models3d.py --prefix round11_3d 162/162 PASS (79 old + 83 round-11); qa_versions_synth.py 27/27. Screenshots 04_build\QA\round11_3d_*.png (41, viewed downscaled). Page 2.1 MB.
 - Docs: 04_build\README.md ("3D models tab", "How to rebuild"), data\SCHEMA.md ("Round 11 additions"), HANDOFF.md (181 lines), UPDATE_PROTOCOL.md (34 lines), QA\round11_3d_LOG.md. Nothing in 07_scale or 03_images was edited; one edit in 02_research (the Boscombe card above).
 - Open for Lior: pending model updates (Mount Maunganui bed + 2007 survey, Borth offshore fix, Boscombe flattening) come in with update_page.py; look at the tab once in his own browser; the 4 m tolerance for georeferenced pictures is my decision (the residual there measures the edge definition); 04_build\QA\removed_assets (39 MB of old picture copies) can be deleted.
+
+## 2026-10-07 (orchestrator) - project made handoff-ready (git, cloud)
+- Local git repo at the project root (branch main, first commit 97a8766; 2,565 files, .git 597 MB; largest file 28 MB). Not pushed yet: waits for Lior to create a PRIVATE GitHub repo.
+- New: CLAUDE.md (read-first rules for every session/agent, path mapping), _agent_briefs/orchestrator.md (orchestrator playbook, cloud/Linux notes, Lior's decisions, ordered work queue), requirements.txt, .gitignore (excludes 04_build/QA/prev and QA/removed_assets), .gitattributes (no line-ending conversion). common.md: root path maps to the repo root in the cloud.
+- 04_build/src/qa_cdp.py + qa_shots.py: Chrome lookup also honours CHROME_PATH, chromium on PATH and Playwright's Chromium (Linux); still finds Windows Chrome locally.

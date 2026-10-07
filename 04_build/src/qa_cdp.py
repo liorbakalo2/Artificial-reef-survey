@@ -51,6 +51,9 @@ def find_chrome() -> str:
             return c
     p = next((shutil.which(n) for n in ("chrome", "google-chrome", "google-chrome-stable", "chromium",
                                          "chromium-browser") if shutil.which(n)), None)
+    if not p:  # Playwright's own Chromium (python -m playwright install chromium)
+        hits = sorted(Path.home().glob(".cache/ms-playwright/chromium-*/chrome-linux*/chrome"))
+        p = str(hits[-1]) if hits else None
     if not p:
         raise SystemExit("No Chrome found")
     return p
