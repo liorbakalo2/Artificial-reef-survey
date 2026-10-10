@@ -1,6 +1,6 @@
 {
  "boscombe-surf-reef": {
-  "sig": "0f9237e8cf998a6b6dac2652807baedd829f2aad",
+  "sig": "20d2b382d770acb1b377e7dd598e4841d80c78ee",
   "result": {
    "slug": "boscombe-surf-reef",
    "status": "ok",
@@ -98,7 +98,7 @@
   }
  },
  "bunbury-airwave": {
-  "sig": "207f8ce42d3f83473fcb39fd9de898962dd108a1",
+  "sig": "a5d38b91f6fe7531f0edeeb2eddb5bef7fbca5d3",
   "result": {
    "slug": "bunbury-airwave",
    "status": "ok",
@@ -157,9 +157,9 @@
     },
     {
      "name": "seabed falls away offshore (+z)",
-     "got": 1.2744210795261128,
+     "got": 1.2744210795261113,
      "ref": 0.0,
-     "err": 1.2744210795261128,
+     "err": 1.2744210795261113,
      "tol": 20,
      "unit": "deg",
      "ok": true
@@ -196,7 +196,7 @@
   }
  },
  "mount-maunganui-reef": {
-  "sig": "7fae99976181aba2ac644448b5e40532f2bf21ce",
+  "sig": "7820dfcf96d9ac179c5504e484d40d4982ba20ab",
   "result": {
    "slug": "mount-maunganui-reef",
    "status": "ok",
@@ -294,7 +294,7 @@
   }
  },
  "palm-beach-gold-coast": {
-  "sig": "f077ca47d4d07a808e9ea77f2695a26887368609",
+  "sig": "5100b069597611a2e98932239df10782ed04ab80",
   "result": {
    "slug": "palm-beach-gold-coast",
    "status": "ok",
@@ -353,9 +353,9 @@
     },
     {
      "name": "seabed falls away offshore (+z)",
-     "got": 1.619020263590119,
+     "got": 1.6190202635901196,
      "ref": 0.0,
-     "err": 1.619020263590119,
+     "err": 1.6190202635901196,
      "tol": 20,
      "unit": "deg",
      "ok": true
@@ -392,7 +392,7 @@
   }
  },
  "prattes-reef-el-segundo": {
-  "sig": "39afd487ad23c5ce04c154bc27f06976463041bd",
+  "sig": "df3ed490bdb2d7fafb84ea991bd2767a41009c8e",
   "result": {
    "slug": "prattes-reef-el-segundo",
    "status": "ok",
@@ -451,9 +451,9 @@
     },
     {
      "name": "seabed falls away offshore (+z)",
-     "got": 7.937097138164821e-16,
+     "got": 1.9182039847843677e-17,
      "ref": 0.0,
-     "err": 7.937097138164821e-16,
+     "err": 1.9182039847843677e-17,
      "tol": 20,
      "unit": "deg",
      "ok": true
@@ -490,7 +490,7 @@
   }
  },
  "borth-coastal-defence-reef": {
-  "sig": "2351af7c775b3fd515e5fe98d4d0eb5b37c13486",
+  "sig": "bc4e84482d2bd96bcd9cef8a5547ec485afff8bc",
   "result": {
    "slug": "borth-coastal-defence-reef",
    "status": "ok",

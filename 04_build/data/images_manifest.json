@@ -3773,6 +3773,181 @@ false,
 false
 ]
 },
+"assets/images/boscombe-surf-reef/boscombe-surf-reef-img-33": {
+"res": {
+"bytes": 266060,
+"h": 631,
+"scale": 1.0,
+"src_h": 631,
+"src_w": 921,
+"th": 274,
+"thumb": "assets/images/boscombe-surf-reef/boscombe-surf-reef-img-33_400.jpg",
+"tw": 400,
+"w": 921,
+"web": "assets/images/boscombe-surf-reef/boscombe-surf-reef-img-33.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/03_images/reefs/boscombe-surf-reef/boscombe-surf-reef_bag-layout-asr-design_2006-12.png",
+250350,
+1791665744,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/boscombe-surf-reef/boscombe-surf-reef-img-34": {
+"res": {
+"bytes": 131205,
+"h": 585,
+"scale": 1.0,
+"src_h": 585,
+"src_w": 853,
+"th": 274,
+"thumb": "assets/images/boscombe-surf-reef/boscombe-surf-reef-img-34_400.jpg",
+"tw": 400,
+"w": 853,
+"web": "assets/images/boscombe-surf-reef/boscombe-surf-reef-img-34.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/03_images/reefs/boscombe-surf-reef/boscombe-surf-reef_cross-sections-asr-design_2006-12.png",
+124435,
+1791665744,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/boscombe-surf-reef/boscombe-surf-reef-img-35": {
+"res": {
+"bytes": 55042,
+"h": 652,
+"scale": 1.0,
+"src_h": 652,
+"src_w": 1367,
+"th": 191,
+"thumb": "assets/images/boscombe-surf-reef/boscombe-surf-reef-img-35_400.jpg",
+"tw": 400,
+"w": 1367,
+"web": "assets/images/boscombe-surf-reef/boscombe-surf-reef-img-35.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/03_images/reefs/boscombe-surf-reef/boscombe-surf-reef_surveys-4-dates-3d-surface_2009-2011.png",
+54545,
+1791665744,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/boscombe-surf-reef/boscombe-surf-reef-img-36": {
+"res": {
+"bytes": 77001,
+"h": 636,
+"scale": 1.0,
+"src_h": 636,
+"src_w": 1001,
+"th": 254,
+"thumb": "assets/images/boscombe-surf-reef/boscombe-surf-reef-img-36_400.jpg",
+"tw": 400,
+"w": 1001,
+"web": "assets/images/boscombe-surf-reef/boscombe-surf-reef-img-36.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/03_images/reefs/boscombe-surf-reef/boscombe-surf-reef_survey-april-2011-plan-osgb_2011-04.png",
+78907,
+1791665744,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/boscombe-surf-reef/boscombe-surf-reef-img-37": {
+"res": {
+"bytes": 52626,
+"h": 1214,
+"scale": 1.0,
+"src_h": 1214,
+"src_w": 1174,
+"th": 400,
+"thumb": "assets/images/boscombe-surf-reef/boscombe-surf-reef-img-37_400.jpg",
+"tw": 387,
+"w": 1174,
+"web": "assets/images/boscombe-surf-reef/boscombe-surf-reef-img-37.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/03_images/reefs/boscombe-surf-reef/boscombe-surf-reef_profiles-across-along_2009-2011.png",
+53851,
+1791665744,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/boscombe-surf-reef/boscombe-surf-reef-img-38": {
+"res": {
+"bytes": 72761,
+"h": 753,
+"scale": 1.0,
+"src_h": 753,
+"src_w": 1130,
+"th": 267,
+"thumb": "assets/images/boscombe-surf-reef/boscombe-surf-reef-img-38_400.jpg",
+"tw": 400,
+"w": 1130,
+"web": "assets/images/boscombe-surf-reef/boscombe-surf-reef-img-38.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/03_images/reefs/boscombe-surf-reef/boscombe-surf-reef_aerial-completed-reef_2009.png",
+1054735,
+1791665744,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/boscombe-surf-reef/boscombe-surf-reef-img-39": {
+"res": {
+"bytes": 84473,
+"h": 893,
+"scale": 1.0,
+"src_h": 893,
+"src_w": 362,
+"th": 400,
+"thumb": "assets/images/boscombe-surf-reef/boscombe-surf-reef-img-39_400.jpg",
+"tw": 162,
+"w": 362,
+"web": "assets/images/boscombe-surf-reef/boscombe-surf-reef-img-39.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/03_images/reefs/boscombe-surf-reef/boscombe-surf-reef_satellite-google-earth-4-dates_2002-2012.png",
+705718,
+1791665744,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
 "assets/images/bunbury-airwave/bunbury-airwave-img-06": {
 "res": {
 "bytes": 42849,
