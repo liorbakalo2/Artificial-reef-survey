@@ -14,3 +14,15 @@ Every image is registered in 03_images/reefs/cables-reef-wa/images.json (IMAGES.
 | S1 page render S1_fig1_sitemap_full_page.png | cables-reef-wa-img-21 |
 | S1 page render S1_fig4_wavebasin_full_page.png | cables-reef-wa-img-22 |
 | S1 page render S1_fig7_location_map.png | cables-reef-wa-img-23 |
+
+## Added 2026-10-10 (fresh-agent run) - sources used for the trace
+All are registered in 03_images/reefs/cables-reef-wa/images.json. Role in shape.json:
+| shape.json id | registry id | what | role | url |
+|---|---|---|---|---|
+| img05 | cables-reef-wa-img-05 | RWR 'Cables Design' plan, 'The original design' | PRIMARY (traced) | https://raisedwaterresearch.com/wp-content/uploads/2019/11/Cables-Design.jpg |
+| img06 | cables-reef-wa-img-06 | RWR 'Cables Additional Fill Area', 'The extension to the right' | cross-check; extension triangle | https://raisedwaterresearch.com/wp-content/uploads/2019/11/Cables-Additional-Fill-Area.jpg |
+| img07 | cables-reef-wa-img-07 | RWR 'Cables Drawing' (Image: Pitt), proposal plan with scale bar | context / concept version | https://raisedwaterresearch.com/wp-content/uploads/2019/11/Cables-Drawing.jpg |
+| img20 | cables-reef-wa-img-20 | Pattiaratchi 1999 Fig 7 (native raster, printed rotated) | cross-check; orientation | http://joas.free.fr/studies/bei/g2s/reefdesign.pdf |
+| S1 | img-15/16/17/20/23 | Pattiaratchi 1999 paper (text: 3 m contour extended offshore, 1:20 slope to the 1 m contour, peel angle 45 deg, MTL 0.78 m above datum, 250 m offshore) | text source | same PDF |
+Our overlays (annotated, registered): overlays/*.png. Image dates: all 'undated 1990s' (RWR gives no dates); paper 1999-04-13.
+Retrieved 2026-10-04..06 by earlier runs; licences: none stated, private research copies.

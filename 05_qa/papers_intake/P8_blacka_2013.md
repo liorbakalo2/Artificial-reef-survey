@@ -85,7 +85,7 @@ Cards: all consistent in substance; the "Partially/Minor/Negligible" labels are 
 | Modelling | numerical WBEND/3DD then physical model; 2DBeach after construction; model captured bar formation but accuracy very sensitive to inputs (p.102-103); empirical salient models over-predicted (p.25) | LACKS |
 | Verdict | surfing "No (incomplete)"; protection "Negligible" (Table 4.1) | LACKS as the independent label |
 
-## Opunake (opunake-reef) - Tables only (p.63-69), p.80 (feasibility lists); no appendix
+## Opunake (opunake-reef) - Tables only (p.63-69), reference list p.90; no appendix
 | Fact | P8 | Card status |
 |---|---|---|
 | Size | GCs; longshore 30 m, cross-shore 100 m, depth 1.8-3.0 m, offshore ~300 m, submergence "at LAT", no nourishment, settlement not reported (Table 4.2 p.65) | CONTRADICTS: card footprint 90 m long x 20 m wide (north reef). Orientation or reef definition differs; flag. Depth 1.8-3.0: card has "1.8-2.5 m" wave height (not depth) - HAS only by coincidence. |
@@ -140,7 +140,7 @@ Reference entry (assign next free R-number): `{"id":"R-P8","citation":"Blacka, M
 
 - **cables-reef-wa**
   - size: append "Blacka et al. (2013, p.92-93): V-shape, 140 x 70 m, 275 m offshore, depth 3-6 m, crest submergence 1.0-2.5 m below MSL, 5,500 m3 of 1.5 t (body) and 3.0 t (keyed perimeter) granite boulders placed from a barge [R-P8]. Volume sources now 3,500 / 5,000 / 5,500 m3."
-  - cost: append "Blacka et al. (2013, p.94, Table 4.4): documented US cost A$1.51 M (Ranasinghe 2001) to A$1.8 M (Jackson & Corbett 2007); approx. A$2.5 M in 2013 AUD (0.5 feasibility + 2.0 construction), A$457 per m3 [R-P8]."
+  - cost: append "Blacka et al. (2013, p.94, Table 4.4): documented total cost A$1.51 M (Ranasinghe 2001) to A$1.8 M (Jackson & Corbett 2007); approx. A$2.5 M in 2013 AUD (0.5 feasibility + 2.0 construction), A$457 per m3 [R-P8]."
   - outcome: append "Blacka et al. (2013, p.93): Pattiaratchi's video study found surfable days as predicted or better, but surfers reported good waves only in big swells, that modelling over-predicted wave height and few good days per year; rated 'partially' successful for surfing; site tide range 0.8 m, Hs 1-2 m summer and 1.5-2.5 m winter (Table 4.3) [R-P8]."
 - **narrowneck-gold-coast**
   - as_built_vs_design: REPLACE/CORRECT "crest lowered 1 m" with "original design crest -1.0 m AHD; the constructed crest was set at -1.5 m AHD (0.5 m lower) on safety grounds; all design modelling used -1.0 m (Blacka et al. 2013, p.94-95) [R-P8]. The crest was later not topped up after settling to limit user risk (p.77-78). Crest raised/trimmed in 2001, 2002, 2004, 2006 (p.94); about 50 more containers placed 2001-2007 (p.97)." Keep Swellnet's 1 m claim as a conflicting source.
