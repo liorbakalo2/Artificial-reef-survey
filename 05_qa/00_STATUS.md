@@ -568,3 +568,6 @@ Slugs: borth-coastal-defence-reef, boscombe-surf-reef, mount-maunganui-reef, opu
 - Lior's answers applied: D7 agreed (keep photo trace); Pratte's J1 decided (MLLW); J2 closed as decided by us (+-150 m; noted in prattes HANDOFF section 5 for the model agent).
 - Papers: already in papers/ = P1, P2, P3, P5, P8 (asking agents should be told); missing = P4, P7, P9-P16 (P10 and P16 have free online copies).
 - Contacts confirmed by web search: City of Gold Coast beaches@, City of Albany staff@ (general), BCP Council (Matt Hosey), CCO cco@channelcoast.org, City of Bunbury info@, WA DoT cdc@, TRC consents@, STDC phone/form, Bundaberg council general. Not confirmed: DETSI, Bluecoast, Borrero/Nelsen, Coastal Frontiers, Waveco, RWR, ASR/CESS.
+
+## 2026-10-10 - kovalam-reef-india card: P3/P8 facts applied
+Added R13 (Mead & Borrero 2011) and R14 (Blacka et al. 2013) to the .json and .md. Size: P8 Table 4.2 geometry (65 x 85 m, 1.3-3.7 m, 90 m offshore, submergence 0.2-3.4 m, datum not stated), tide/wave climate (Table 4.3). Outcome: beach 10-15 m / up to 30 m wider (P3 p.5 Fig. 7), why surfing worked, P8 p.70 verdict, CESS assessment pending, 2013 damage note. Volume sources disagree and are kept side by side: 4,000 m3 (P3), ~4,017 m3 implied (P8 cost rate), 4,800 m3 (R1/R10); the shape HANDOFF also uses 4,000. JSON validated; md kept CRLF.

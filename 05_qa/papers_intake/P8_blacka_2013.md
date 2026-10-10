@@ -173,4 +173,4 @@ Reference entry (assign next free R-number): `{"id":"R-P8","citation":"Blacka, M
   - outcome: append "Blacka et al. (2013, p.70): performance 'yet to be determined' (completed 2012); rated 'unknown'; Fig 4.1 shows the reef in June 2012 [R-P8]."
 - **palm-beach-gold-coast, southern-ocean-surf-reef-albany, burkitts-reef-bargara, bunbury-airwave, mexico-reef-2026-unnamed**: nothing in P8.
 
-**Applied 2026-10-10:** borth-coastal-defence-reef, boscombe-surf-reef, mount-maunganui-reef, opunake-reef, prattes-reef-el-segundo, narrowneck-gold-coast. Pending: cables-reef-wa, kovalam-reef-india.
+**Applied 2026-10-10:** borth-coastal-defence-reef, boscombe-surf-reef, mount-maunganui-reef, opunake-reef, prattes-reef-el-segundo, narrowneck-gold-coast. Pending: cables-reef-wa. Kovalam-reef-india applied 2026-10-10.
