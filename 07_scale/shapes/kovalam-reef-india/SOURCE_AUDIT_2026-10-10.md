@@ -21,7 +21,7 @@ In this audit the papers in `papers/` were re-read at the cited places (PyMuPDF 
 | # | statement | source | location | how used | status |
 |---|---|---|---|---|---|
 | 1 | Completed late Feb 2010 | Mead & Borrero 2011 s.3.1.7, s.4.1.4 | p.4-5 of PDF | state drawn | ok |
-| 2 | Volume 4,000 m3 (card 4,800 m3; WRL rate implies 1.41 M / 351 = 4,017 m3) | Mead & Borrero; card; WRL Table 4.4 (recomputed 1,410,000 / 351 = 4,017) | - | volume inference | ok; UNRESOLVED conflict 4,000 vs 4,800 m3 (card should say 4,000 per two sources; card not edited) |
+| 2 | Volume 4,000 m3 (card 4,800 m3; WRL rate implies 1.41 M / 351 = 4,017 m3) | Mead & Borrero; card; WRL Table 4.4 (recomputed 1,410,000 / 351 = 4,017) | - | volume inference | ok; UNRESOLVED conflict: 4,000 (Mead & Borrero), 4,800 (card/RWR), 4,300 m3 (Rendle 2016 thesis Table 2.1, printed p.41 / PDF p.41: Kovalum 2010, 4,300 m3 SFC, cost 1,640,321 in the table's first currency column; currency header not checked) and 4,017 derived. Four values for one reef; the shape uses none of them in geometry. Card not edited |
 | 3 | 65 m long-shore, 85 m cross-shore ("for V-shape reefs refer to max. alongshore and cross-shore dimension") | WRL Table 4.2 | printed p.66 | dimension check | ok (re-read) |
 | 4 | Water depth 1.3-3.7 m; submergence 0.2-3.4 m; 90 m offshore ("distance to the undisturbed shoreline prior construction") | WRL Table 4.2 | printed p.66 | FEASIBILITY b, d | ok as published; NOT locatable on the reef, no datum |
 | 5 | Tide range ~1.0 m | WRL Table 4.3 | printed p.68 | FEASIBILITY e | ok |

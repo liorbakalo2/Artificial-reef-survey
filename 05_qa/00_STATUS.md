@@ -606,3 +606,8 @@ SOURCE_AUDIT_2026-10-10.md written; METHODS_3D/SOURCES_3D extended (assumptions 
 
 ## 2026-10-10 - mount-maunganui-reef source audit (fresh agent)
 - SOURCE_AUDIT_2026-10-10.md in 07_scale/shapes/mount-maunganui-reef/. METHODS_3D template: sources table with how used, assumptions A1-A14 (why/effect/replacement), decisions M1-M15, scripts/AI note, confidence per element; stale summary text (-4.0, 3 m) fixed. BoPRC citation corrected (Dahm & Gibberd, Focus Report 131, Dec 2013) in methods, model.js sources and registry; NIWA authors Bell & Lewis; 2,800 m3 shown as one origin (Mead 2011). Viewer: tabs Sources & how used / Assumptions / Decisions (render checked, no page errors). model.js: only 4 citation strings changed. Registry header 41 images. For main: page-text edits listed in the audit file section B.
+
+## 2026-10-10 - Narrowneck source audit (fresh agent, documentation only)
+- 07_scale/shapes/narrowneck-gold-coast/SOURCE_AUDIT_2026-10-10.md: 47 statements traced (29 ok, 13 fixed, 2 missing = Black & Mead 2001 and Jackson 2012 DOI/2007 journal pages not confirmed, 3 mismatches in the reef card only, not edited). No model value changed; model.js differs from the previous build only in versions_info and confidence_3d.reason text.
+- D7 recorded (Lior, 2026-10-10: default = 2020 photo trace) in METHODS_3D 3.8, shape.json, HANDOFF, VERIFY, registry img-45. METHODS_3D gained 2b (how each source was used), A1-A16 assumptions with effects, 3.7 methods/AI, 3.8 decisions, per-element confidence; viewer has chips Sources: how used / Assumptions / Decisions (smoke test passed).
+- Fixed: vds21 survey date 18 -> 19 Jul 2018 in the model text; stale HANDOFF counts. REQUESTS_FOR_LIOR.md appended (citations not confirmed).
