@@ -275,7 +275,7 @@ let curView = hp.get('view') || 'oblique';
 const T = m2s(0, 270, -3);
 const axisH = M.axis_xy ? M.axis_xy.head : [-12, 312], axisT = M.axis_xy ? M.axis_xy.tail : [60, 240];
 const VIEWS = {
-  oblique: { label: 'Oblique from sea', pos: () => m2s(25, 352, 30), tgt: () => m2s(0, 268, -3 * state.ve) },
+  oblique: { label: 'Oblique from sea', pos: () => m2s(45, 388, 44), tgt: () => m2s(0, 270, -3 * state.ve) },
   plan: { label: 'Plan (north = left)', pos: () => m2s(0, 272, 260), tgt: () => m2s(0, 270, 0) },
   crest: { label: 'Along the south arm crest', pos: () => { const d = [axisT[0] - axisH[0], axisT[1] - axisH[1]], L = Math.hypot(...d); return m2s(axisT[0] + d[0] / L * 25, axisT[1] + d[1] / L * 25, 3.0); }, tgt: () => m2s(axisH[0], axisH[1], -2) },
   shore: { label: 'From the shore side (eye 1.7 m)', pos: () => m2s(0, 205, 1.7), tgt: () => m2s(0, 280, -2) },
