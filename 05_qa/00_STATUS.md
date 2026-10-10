@@ -488,3 +488,7 @@ Shape tracing continues for all 13 reefs.
 - Running (12 agents): Narrowneck 3D; page agent (remove Map + Scale tabs, small fixes); Palm Beach 3D re-check + HANDOFF; Pratte's re-verify + HANDOFF; Bunbury/bathymetry HANDOFFs + Boscombe wording; papers intake P3/P8; trace/verify/3D for Cables, Opunake, Kovalam, Albany, Burkitts, Mexico.
 - New models are held off the page (04_build/data/models3d_hold.json) until their agents finish.
 - The cloud environment's network reaches package servers only (websites, map tiles, EMODnet, Navionics blocked): reef agents work from local files and list what needs the network.
+
+## 2026-10-10 (mexico-reef-2026-unnamed, queue item 9) - FEASIBILITY only
+- No image shows the structure, no dimensions/coordinates exist (card gaps, 2 context images); raisedwaterresearch.com 403 from the container. No trace, verify or 3D made.
+- Wrote 07_scale/shapes/mexico-reef-2026-unnamed/FEASIBILITY.md + HANDOFF.md (needs-network list in section 7). Registry unchanged.

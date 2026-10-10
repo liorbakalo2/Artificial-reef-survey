@@ -137,7 +137,7 @@ All of them are in `REQUESTS_FOR_LIOR.md`:
 | 2026-10-10 | `trace_shape.md` / `verify_shape.md` / `model_3d.md` (queue 9) | `07_scale/shapes/kovalam-reef-india/` | `HANDOFF.md` | RUNNING (fresh cloud agent) |
 | 2026-10-10 | `trace_shape.md` / `verify_shape.md` / `model_3d.md` (queue 9) | `07_scale/shapes/southern-ocean-surf-reef-albany/` | `HANDOFF.md` | RUNNING (fresh cloud agent) |
 | 2026-10-10 | `trace_shape.md` / `verify_shape.md` / `model_3d.md` (queue 9) | `07_scale/shapes/burkitts-reef-bargara/` | `HANDOFF.md` | RUNNING (fresh cloud agent) |
-| 2026-10-10 | `trace_shape.md` / `verify_shape.md` / `model_3d.md` (queue 9) | `07_scale/shapes/mexico-reef-2026-unnamed/` | `HANDOFF.md` | RUNNING (fresh cloud agent) |
+| 2026-10-10 | `trace_shape.md` / `verify_shape.md` / `model_3d.md` (queue 9) | `07_scale/shapes/mexico-reef-2026-unnamed/` | `HANDOFF.md` | DONE 2026-10-10: FEASIBILITY only (no coordinates, size or plan; 2 underwater photos). Needs: coordinates / design plan / Xala MIA, or network. Lior: show the analogy envelope or no shape? |
 **When an agent finishes:**
 - save its report from the hand-back;
 - refresh the page: `python src/update_page.py` from `04_build`, after the model agents. Check the SUMMARY and FAIL lines;

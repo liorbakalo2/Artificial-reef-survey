@@ -37,6 +37,6 @@ def seabed_profile(mb):
     ys = mb['ys']; B = mb['bed']; med = np.array([np.nanmedian(r) if np.isfinite(r).sum() > 20 else np.nan for r in B])
     ok = np.isfinite(med); yw = ys[ok][::10]; zw = ndi.gaussian_filter1d(med[ok], 6)[::10]
     yw = yw[(yw >= 215) & (yw <= 365)]; zw = zw[:len(yw)] if False else np.interp(yw, ys[ok], ndi.gaussian_filter1d(med[ok], 6))
-    ctrl = [(-40, 1.2), (0, 0.0), (100, -1.8), (190, -2.1)] + list(zip(yw, zw)) + [(385, -7.76), (402, -8.76), (462, -9.76), (497, -10.5), (520, -10.8)]
+    ctrl = [(-40, 1.2), (0, 0.0), (100, -1.8), (190, -2.1)] + list(zip(yw, zw)) + [(402, -7.76), (411, -8.76), (474, -9.76), (514, -10.76), (540, -11.0)]
     ctrl.sort(); y = np.array([c[0] for c in ctrl]); z = np.array([c[1] for c in ctrl])
     return PchipInterpolator(y, z), ctrl

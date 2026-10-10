@@ -1,0 +1,108 @@
+{
+ "slug": "opunake-reef",
+ "name": "Opunake Surf Reef (north reef, geotextile bags)",
+ "status": "no_source",
+ "updated": "2026-10-10",
+ "confidence": {
+  "level": "low",
+  "reason": "No plan figure, survey or visible structure on the imagery we hold; only the text size ~90 m x 20 m (single source lineage) is known.",
+  "factors": [
+   "no georeferenced position",
+   "reef not visible on Esri 2025-01-16 z20",
+   "no datum for depths",
+   "built state never finished to design"
+  ]
+ },
+ "design_version": {
+  "drawn": "none",
+  "why_this_one": "nothing drawn",
+  "alternatives_seen": [
+   {
+    "what": "symmetric wedge schematic in 07_scale/reefs/opunake-reef.footprint.json",
+    "source_id": "footprint S1",
+    "why_not_used": "admitted placeholder by analogy to Mount Maunganui; not evidence"
+   }
+  ]
+ },
+ "sources": [
+  {
+   "id": "sat_z20",
+   "kind": "satellite",
+   "title": "Esri World Imagery z20",
+   "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+   "image_date": "2025-01-16",
+   "credit": "Esri, Maxar, Earthstar Geographics",
+   "license": "Esri terms",
+   "local_file": "07_scale/shapes/opunake-reef/src/opunake_sat_z20.png",
+   "image_size": [
+    4338,
+    4338
+   ],
+   "georef": {
+    "provider": "Esri World Imagery",
+    "zoom": 20,
+    "bounds": {
+     "north": -39.4554537453776,
+     "south": -39.459945565271106,
+     "east": 173.85740876197815,
+     "west": 173.85159105062485
+    },
+    "imagery_date": "2025-01-16"
+   },
+   "scale": {
+    "px_per_m": 8.676,
+    "method": "georeferenced",
+    "evidence": "m_per_px_center 0.11527 in .geo.json",
+    "uncertainty_pct": 1
+   },
+   "pixel_polygons": [],
+   "traced_what": "nothing: reef not visible",
+   "role": "context"
+  }
+ ],
+ "canonical": null,
+ "geo": null,
+ "angles": [],
+ "dimensions_check": [
+  {
+   "quantity": "footprint",
+   "text_value": "~90 m long x 20 m wide",
+   "text_ref": "card R1/R2/R4",
+   "drawing_value": null,
+   "diff_pct": null,
+   "comment": "no drawing"
+  }
+ ],
+ "gemini": {
+  "values": {},
+  "sources_used": [],
+  "summary": "Gemini sources inaccessible/unverifiable (2026-09-25); not used."
+ },
+ "no_source": {
+  "searched": [
+   "card refs R1-R12 (text only)",
+   "local Esri imagery z20/mid/wide/current",
+   "network probe 2026-10-10 (Esri, LINZ, nzgeo refused)"
+  ],
+  "gemini_sources": "Mead & Black 2007 Design Dossier; Taranaki Regional Council Monitoring Records 2010 - inaccessible",
+  "why_insufficient": "no plan-view figure, no position, structure not visible, no depth datum",
+  "fallback_used": "text bbox 90 x 20 m only; the wedge in 07_scale/reefs/opunake-reef.footprint.json is a schematic placeholder and is NOT used"
+ },
+ "references": [
+  {
+   "id": "R2",
+   "citation": "Raised Water Research. Opunake.",
+   "url": "https://raisedwaterresearch.com/spot/artificial-reef/new-zealand/north-island/opunake/",
+   "accessed": "2026-09-24 (card)",
+   "supports": "90 x 20 m, 27 bags"
+  }
+ ],
+ "verified_on": "2026-10-10",
+ "verification": [
+  {
+   "check": "structure visible on held imagery",
+   "verdict": "no",
+   "evidence": "overlays/search_frame_z20_no_structure.png"
+  }
+ ]
+}
