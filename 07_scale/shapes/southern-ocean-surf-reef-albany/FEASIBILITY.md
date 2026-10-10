@@ -46,3 +46,9 @@ profile, or the slopes).
 ## Ready for the build
 Shape (both outline versions, lat/lon too), annotated overlays, tide datums, request points, registry updates. When depth data arrive, follow
 `_agent_briefs/model_3d.md` and copy the Borth `3d/` pattern (build_3d.py, model.js, docs.js, index.html).
+
+## Source audit 2026-10-10 (see SOURCE_AUDIT_2026-10-10.md for the full tables)
+- Sources and how used: Esri World Imagery 2026-01-20 (plan, visible outline); Bluecoast design plan via Raised Water Research (default outline, scale bar); City of Albany design table design.jpg and project profile (crest -1.00 m AHD, 34,000 m3 on 2017 bathymetry, 110 m @ -2 m AHD; re-confirmed by web search 2026-10-10); Wikipedia King George Sound (tide ranges, weak source).
+- Assumed (labelled ASSUMPTION in shape.json A1-A9): final design = built reef; design figure north-up and placed by satellite overlap; shoreline = beach-face line; AHD about MSL for the MLLW/MHHW derivation. The "seabed about -3.5 to -4.5 m AHD" remark above is an inference from volume / footprint, NOT used in any model.
+- Why no 3D: seabed, pile height and slopes have no source; nothing was invented.
+- Confidence: plan HIGH; crest MEDIUM-LOW (design value, no as-built); seabed none; tides LOW-MEDIUM; volume MEDIUM.

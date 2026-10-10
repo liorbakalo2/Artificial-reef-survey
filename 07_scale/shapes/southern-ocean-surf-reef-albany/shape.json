@@ -15,17 +15,17 @@
   ]
  },
  "design_version": {
-  "drawn": "Default outline = Bluecoast Consulting Engineers 'Final Reef Design' (detailed design for the reef built Oct 2024 - Mar 2025; design volume 34,000 m3 on 2017 bathymetry; crest -1.0 m AHD). Alternative outline = visible reef on Esri imagery of 2026-01-20 (as built, in service).",
+  "drawn": "Default outline = Bluecoast Consulting Engineers 'Final Reef Design' (detailed design for the reef built Oct 2024 (quarry establishment) to Mar 2025 (rock placement mainly Jan-Mar 2025); design volume 34,000 m3 on 2017 bathymetry; crest -1.0 m AHD). Alternative outline = visible reef on Esri imagery of 2026-01-20 (as built, in service).",
   "why_this_one": "The City of Albany completed-project page gives the same dimensions for the built reef as the Bluecoast final design (165 m long, up to 110 m wide, crest -1.0 m AHD, 62,800 t = about 34,000 m3), and the satellite wedge has the same shape and orientation, so the final design is the built version. Per Lior's rule, no measured survey is available, so the design drawing of the built version is the default over the photo trace.",
   "alternatives_seen": [
    {
     "what": "Earlier concept/interim positions (Wikipedia ~120 m offshore; City FAQ May 2023 ~145 m; the 2023 relocation to cut injuries)",
-    "source_id": "card R15/R11",
+    "source_id": "card R4 (Wikipedia ~120 m), card R15 (City FAQ May 2023, ~145 m), card R11",
     "why_not_used": "superseded by the final design table (140 m) and by the satellite image of the built reef"
    },
    {
     "what": "Post-opening change: 18 rocks repositioned in March 2026 (Albany Advertiser, per card R11)",
-    "source_id": "card R11",
+    "source_id": "card R11, R18 (Albany Advertiser, M. Sheil, 11 Mar 2026; body paywalled)",
     "why_not_used": "after the 2026-01-20 image; a note only (3D shows as-built state), planform effect negligible"
    },
    {
@@ -694,6 +694,27 @@
    "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer",
    "accessed": "2026-10-04 (tiles saved)",
    "supports": "georeferenced planform of the built reef"
+  },
+  {
+   "id": "R18",
+   "citation": "Sheil, M. (2026-03-11). Eighteen rocks of Southern Ocean Surf Reef repositioned in successful bid to reduce user injuries. Albany Advertiser.",
+   "url": "https://www.albanyadvertiser.com.au/news/albany-advertiser/eighteen-rocks-of-southern-ocean-surf-reef-repositioned-in-successful-bid-to-reduce-user-injuries-c-21896905",
+   "accessed": "2026-09-25 (card); headline, byline and date only, body paywalled",
+   "supports": "18 rocks repositioned in March 2026 (note only)"
+  },
+  {
+   "id": "R5",
+   "citation": "Wikipedia. King George Sound (Western Australia).",
+   "url": "https://en.wikipedia.org/wiki/King_George_Sound_(Western_Australia)",
+   "accessed": "2026-09-24 (card)",
+   "supports": "mean tidal range 0.4 m, spring range 1.1 m (weak secondary source; context only)"
+  },
+  {
+   "id": "R3b",
+   "citation": "City of Albany. Southern Ocean Surf Reef project profile.",
+   "url": "https://www.albany.wa.gov.au/documents/804/southern-ocean-surf-reef-project-profile",
+   "accessed": "2026-10-10 (WebSearch snippet, source audit)",
+   "supports": "re-confirms -1.00 m AHD, 34,000 m3 on 2017 bathymetry, 110 m @ -2 m AHD, 350 m, 140 m, 270-305 N"
   }
  ],
  "outline_versions": [
@@ -1155,5 +1176,112 @@
    "verdict": "limitation",
    "evidence": "traced and verified by the same agent in one run (fresh-eye re-render and recomputation done, but not a different person); a second look at the east edge on another dated image would raise the certainty."
   }
- ]
+ ],
+ "assumptions": [
+  {
+   "id": "A1",
+   "assumption": "The Bluecoast final design is the reef as built",
+   "why": "City page dimensions equal the design table; satellite wedge same shape and orientation (IoU 0.84)",
+   "effect": "toe may differ by metres to tens of metres; default 13,100 m2 vs visible 10,900 m2",
+   "replaced_by": "as-built survey"
+  },
+  {
+   "id": "A2",
+   "assumption": "The design figure is north-up",
+   "why": "crest line 278 deg vs text 270-305 N; free fit -3 deg",
+   "effect": "+-3 deg = about +-3 m at 60 m",
+   "replaced_by": "Bluecoast CAD plan"
+  },
+  {
+   "id": "A3",
+   "assumption": "Design figure position = translation of best overlap with the 2026-01-20 satellite trace",
+   "why": "figure has no coordinates",
+   "effect": "+-3 m alongshore",
+   "replaced_by": "CAD coordinates"
+  },
+  {
+   "id": "A4",
+   "assumption": "Shoreline = beach-face line (edge of bright dry sand)",
+   "why": "swash line unmeasurable (foam)",
+   "effect": "offshore distances 10-15 m smaller to the swash line",
+   "replaced_by": "clean low-tide waterline"
+  },
+  {
+   "id": "A5",
+   "assumption": "The dark patch of 2026-01-20 is the reef and its edge is the visible toe",
+   "why": "before/after pair 2025-01-16 vs 2026-01-20",
+   "effect": "offshore edge +-5-7 m; area -30 %/+20 %",
+   "replaced_by": "multibeam or LiDAR"
+  },
+  {
+   "id": "A6",
+   "assumption": "The 110 m and 140 m arrows on the figure are schematic; only the scale bar is used",
+   "why": "arrows measure 69 m and 117 m by the bar",
+   "effect": "up to +-10 % size if the arrows were right",
+   "replaced_by": "report drawing"
+  },
+  {
+   "id": "A7",
+   "assumption": "AHD read as about mean sea level when deriving MLLW -0.26 and MHHW +0.34 m AHD",
+   "why": "no source",
+   "effect": "tide levels +-0.1 m possible",
+   "replaced_by": "WA Department of Transport datum sheet for Albany"
+  },
+  {
+   "id": "A8",
+   "assumption": "The 34,000 m3 lies inside the traced outline (mean height 2.6-3.1 m); inference only, used by no model",
+   "why": "design table",
+   "effect": "none on the shape",
+   "replaced_by": "bathymetry"
+  },
+  {
+   "id": "A9",
+   "assumption": "The March 2026 move of 18 rocks does not change the planform",
+   "why": "after the image; article paywalled",
+   "effect": "unquantified, expected small",
+   "replaced_by": "post-2026 survey"
+  }
+ ],
+ "decisions": [
+  {
+   "id": "D1",
+   "decision": "Default outline = Bluecoast final design; toggle = visible reef 2026-01-20",
+   "options": "design vs satellite trace",
+   "who": "agent, 2026-10-10, applying Lior's rule (survey > design drawing of the built version > photo trace)",
+   "reason": "no survey found"
+  },
+  {
+   "id": "D2",
+   "decision": "State drawn = as built (Mar 2025); 2026 rock move is a note",
+   "options": "as built / after 2026",
+   "who": "agent, 2026-10-10",
+   "reason": "rule 5"
+  },
+  {
+   "id": "D3",
+   "decision": "Frame +x NNE 30.3 deg, +y offshore 120.3 deg, true unmirrored",
+   "options": "shoreline-aligned vs north-up",
+   "who": "agent, 2026-10-10",
+   "reason": "page spec, as Borth"
+  },
+  {
+   "id": "D4",
+   "decision": "3D model not built",
+   "options": "assume bed at -4 m / wait for data",
+   "who": "agent, 2026-10-10",
+   "reason": "no seabed, height or slope source"
+  },
+  {
+   "id": "D5",
+   "decision": "Gemini not used",
+   "options": "-",
+   "who": "agent",
+   "reason": "rule 2; sources unfetchable"
+  }
+ ],
+ "audit": {
+  "file": "SOURCE_AUDIT_2026-10-10.md",
+  "date": "2026-10-10",
+  "note": "canonical is derived from sat2026 while default_outline is design_bluecoast: main to check which the page draws"
+ }
 }

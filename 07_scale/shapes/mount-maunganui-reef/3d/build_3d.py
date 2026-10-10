@@ -266,7 +266,9 @@ def write_docs(model, comp, nav):
     src = open(os.path.join(HERE, 'SOURCES_3D.md'), encoding='utf-8').read()
     ann = sorted(f for f in os.listdir(os.path.join(HERE, 'annotated')) if f.lower().endswith(('.png', '.jpg')))
     def _sec(h):  # one '## ' or '### ' section of the methods note, for its own viewer tab
-        m = re.search(r'^(#{2,3}) ' + re.escape(h) + r'.*?(?=^#{2,3} (?!' + re.escape(h) + r')|\Z)', methods, re.S | re.M)
+        lvl = '#' * (2 if re.match(r'\d\. ', h) else 3)
+        stop = r'^## ' if lvl == '##' else r'^##+ '
+        m = re.search(r'^' + lvl + ' ' + re.escape(h) + r'.*?(?=' + stop + r'|\Z)', methods, re.S | re.M)
         return m.group(0) if m else '(section not found)'
     docs = {'methods_md': methods, 'sources_md': src, 'requests_md': req, 'annotated': ann, 'built': TODAY,
             'srcuse_md': _sec('2. Data sources') , 'assump_md': _sec('3.5 Assumptions'), 'decis_md': _sec('3.6 Decisions log')}
