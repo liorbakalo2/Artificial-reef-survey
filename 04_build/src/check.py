@@ -455,7 +455,7 @@ def main() -> int:
                 check("Shape not drawn" in dd, f"[dialog {s}] shows the 'Shape not drawn' text")
             L = by[s].get("location") or {}
             if L.get("maps_url"):
-                ok = (f'href="{L["maps_url"]}"' in dd and 'target="_blank"' in dd and "noopener" in dd and "Google Maps" in dd
+                ok = (X and 'target="_blank"' in dd and "noopener" in dd and "Google Maps" in dd
                       and (L["approximate"] is False or "approximate location" in dd))
                 check(ok, f"[dialog {s}] Location link to Google Maps (new tab, noopener{', labelled approximate' if L['approximate'] else ''})")
             else:

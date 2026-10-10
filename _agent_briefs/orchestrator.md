@@ -71,6 +71,7 @@
   Option 2 design. Open.
 - **Page tabs (Lior, 2026-10-10).** Only Gallery, Table and 3D models. The Map and Scale (2D) tabs are removed (code archived, reversible); traced outlines stay reachable through the 3D outline versions and reef files.
 - **Lior, 2026-10-10:** (1) "Don't show the shape of reefs you don't know": no outline on the page unless a real plan source exists (survey, scaled drawing, or clearly visible structure in a dated georeferenced image). Hidden: Mexico, Opunake, Burkitts (platform is not the reshaped zone), Kovalam (scale unknown). (2) Keep a Google Maps link per reef (location) on the page although the Map tab is gone. (3) D7 agreed: Narrowneck default = 2020 photo. (4) Pratte's J1: paper datum (MLLW) as now; J2 our call (+-150 m). (5) Depth/app readings: later; keep them in REQUESTS_FOR_LIOR.md "Later". (6) Bunbury/Albany: Zoom interview with Troy (Airwave founder), 8 Oct 2026, as a source.
+- **Source standard (Lior, 2026-10-10):** academic level: every statement sourced (full citation + location), each source says how it was used, methods explicit, assumptions (A#) and decisions (D#) listed, shown in each model viewer. Brief: `_agent_briefs/task_source_audit.md`.
 - **Network (cloud):** the container reaches package servers only; WebFetch/curl/downloads fail. The WebSearch tool DOES work (server-side): agents may use it for citations, contacts and facts.
 - **Navionics/Garmin.** Used without login. Their datum is inferred by RMS against an independent survey.
 - **Photo-match tolerance.** 2 m (or 10 % of length for reefs under 40 m); 4 m for georeferenced pictures. Set by the page agent;
@@ -141,7 +142,17 @@ All of them are in `REQUESTS_FOR_LIOR.md`:
 | 2026-10-10 | `trace_shape.md` / `verify_shape.md` / `model_3d.md` (queue 9) | `07_scale/shapes/kovalam-reef-india/` | `HANDOFF.md` | STOPPED 2026-10-10: low-confidence photo trace (one oblique photo, scale free: 640-1,681 m2); per Lior's rule NOT shown on the page. No 3D. Needs a vertical image (Wayback/Google Earth 2010-12) or ASR/CESS reports. P3/P8 card additions pending |
 | 2026-10-10 | `trace_shape.md` / `verify_shape.md` / `model_3d.md` (queue 9) | `07_scale/shapes/southern-ocean-surf-reef-albany/` | `HANDOFF.md` | DONE 2026-10-10: traced + verified (high; self-verified): default Bluecoast design outline 13,104 m2, toggle Esri 2026-01-20 visible reef 10,918 m2; length 157-165 m vs City 165 m. No 3D (no seabed/pile height/slopes): FEASIBILITY. img-10 volume corrected 54,000 -> 34,000 m3. Restart 3D with network Full or Lior's Navionics/Bluecoast report |
 | 2026-10-10 | `trace_shape.md` / `verify_shape.md` / `model_3d.md` (queue 9) | `07_scale/shapes/burkitts-reef-bargara/` | `HANDOFF.md` | DONE 2026-10-10: traced + self-verified (low): visible rock platform, Esri 2025-09-05, 31,485 m2 (south edge cut); NOT the moved-boulder zone (no source locates it). No 3D (no crest/seabed/datum). Restart with network Full |
-| 2026-10-10 | `trace_shape.md` / `verify_shape.md` / `model_3d.md` (queue 9) | `07_scale/shapes/mexico-reef-2026-unnamed/` | `HANDOFF.md` | DONE 2026-10-10: FEASIBILITY only (no coordinates, size or plan; 2 underwater photos). Needs: coordinates / design plan / Xala MIA, or network. Lior: show the analogy envelope or no shape? |
+| 2026-10-10 | `trace_shape.md` / `verify_shape.md` / `model_3d.md` (queue 9) | `07_scale/shapes/mexico-reef-2026-unnamed/` | `HANDOFF.md` | DONE 2026-10-10: FEASIBILITY only (no coordinates, size or plan; 2 underwater photos). Needs: coordinates / design plan / Xala MIA, or network. Lior: show the analogy envelope or no shape? || 2026-10-10 | `_agent_briefs/task_source_audit.md` | `07_scale/shapes/borth-coastal-defence-reef/` | `SOURCE_AUDIT_2026-10-10.md` | RUNNING |
+| 2026-10-10 | `_agent_briefs/task_source_audit.md` | `07_scale/shapes/boscombe-surf-reef/` | `SOURCE_AUDIT_2026-10-10.md` | RUNNING |
+| 2026-10-10 | `_agent_briefs/task_source_audit.md` | `07_scale/shapes/bunbury-airwave/` | `SOURCE_AUDIT_2026-10-10.md` | RUNNING |
+| 2026-10-10 | `_agent_briefs/task_source_audit.md` | `07_scale/shapes/mount-maunganui-reef/` | `SOURCE_AUDIT_2026-10-10.md` | RUNNING |
+| 2026-10-10 | `_agent_briefs/task_source_audit.md` | `07_scale/shapes/palm-beach-gold-coast/` | `SOURCE_AUDIT_2026-10-10.md` | RUNNING |
+| 2026-10-10 | `_agent_briefs/task_source_audit.md` | `07_scale/shapes/prattes-reef-el-segundo/` | `SOURCE_AUDIT_2026-10-10.md` | RUNNING |
+| 2026-10-10 | `_agent_briefs/task_source_audit.md` | `07_scale/shapes/narrowneck-gold-coast/` | `SOURCE_AUDIT_2026-10-10.md` | RUNNING |
+| 2026-10-10 | `_agent_briefs/task_source_audit.md` | `07_scale/shapes/cables-reef-wa/` | `SOURCE_AUDIT_2026-10-10.md` | RUNNING |
+| 2026-10-10 | `_agent_briefs/task_source_audit.md` | non-3D shapes: albany, burkitts, kovalam, opunake, mexico | `SOURCE_AUDIT_2026-10-10.md` | RUNNING |
+| 2026-10-10 | `_agent_briefs/task_source_audit.md` | cards group A (7 cards with models) | `SOURCE_AUDIT_2026-10-10.md` | RUNNING |
+| 2026-10-10 | `_agent_briefs/task_source_audit.md` | cards group B (6 other cards) | `SOURCE_AUDIT_2026-10-10.md` | RUNNING |
 **When an agent finishes:**
 - save its report from the hand-back;
 - refresh the page: `python src/update_page.py` from `04_build`, after the model agents. Check the SUMMARY and FAIL lines;

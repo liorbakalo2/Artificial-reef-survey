@@ -2,7 +2,15 @@
 
 Nothing blocks the work: every model is built with stated assumptions and each item below would replace one. Claude never sends e-mail; you send. Old version: `archive/REQUESTS_FOR_LIOR_before_2026-10-10.md`. Ids (P, E, W, D, G) are kept so other files still point here. Per-reef files with the full point tables: `07_scale/shapes/<slug>/3d/REQUESTS_FOR_LIOR.md`.
 
+## 0. Cloud network access (N1) - lets agents open websites, satellite images, charts and papers themselves
+- Why: the cloud environment used by our sessions is called **"Default"** (description "Default - trusted network access"). Its network level is limited: it reaches package servers only. Web pages, Esri/Google satellite tiles, EMODnet, Navionics, LINZ, publishers' PDFs are all refused. The agents' web *search* works, but they cannot open the pages it finds. (Checked 2026-10-10.)
+- What to change: environment **Default** -> Edit -> **Network access** -> **Full** (or keep Limited and add the needed domains under "Allowed domains", with "Allow package managers" left ticked).
+- Where (as of 2026-10-10): in the session's title bar, the cloud environment menu -> Edit. On claude.ai/code it is the environment selector next to the repository name when you start a new session; if your sidebar shows **groups** instead of environments, the environment selector appears when you start a NEW session (the environment of an existing session cannot be changed; this session shows "Other"). Official steps: https://code.claude.com/docs/en/cloud-environments#network-access
+- Network access is set per environment (no single switch for all of them). Simplest: set **Default** to Full; new sessions then use it. Or add a new environment with Full access and pick it when you start the next session.
+- If it is still not findable: tell me what you see, and I will check the current docs again. Until then agents work from local files and web search.
+
 ## Do next (in order of value)
+0. **N1** (above) if you can find the setting - it unblocks the most work.
 1. **E3** e-mail to the City of Gold Coast (Narrowneck + Palm Beach as-built data). Biggest gain: closes the Narrowneck crest datum and gives the real footprints.
 2. **E9** e-mail to the City of Albany (as-built survey / Bluecoast report with cross-sections). Unlocks a 3D model for Albany.
 3. **E10** e-mail to Bournemouth (BCP Council) and **E8** to the Channel Coastal Observatory (Boscombe survey data).
@@ -55,6 +63,7 @@ Sender line for every draft: *Lior Bakalo, independent researcher studying artif
 
 ### E9 - City of Albany (WA), Southern Ocean Surf Reef project team (new id)
 - Contact: CONFIRMED general: staff@albany.wa.gov.au, tel (08) 6820 3000 (from the City's customer-service request form dated 2023-10-19; check it is current) and the customer service request form https://albany.wa.gov.au/documents/313/customer-service-request-form . Project page: https://www.albany.wa.gov.au/council/projects/current-projects/southern-ocean-surf-reef-sosr.aspx . No project-specific officer address found. Designer Bluecoast Consulting Engineers: contact NOT CONFIRMED (CEO Andrew Sharpe is named in the City's 2019 tender news); ask via the City.
+- Search first (maybe it is public): Google `"P19024" Bluecoast Albany detailed design report` and `site:albany.wa.gov.au surf reef detailed design report`; the public executive summary is https://albany.wa.gov.au/documents/801/albany-artificial-surf-reef-executive-summary-detailed-design . Send the e-mail with subject "Southern Ocean Surf Reef - request for design report and as-built survey (research)", addressed "Attention: Southern Ocean Surf Reef project team".
 - Ask for: (1) Bluecoast Detailed Design Report P19024_DetailedDesign_R2.00 (2 Sept 2020) with cross-sections and the 2017 bathymetry; (2) any as-built survey after practical completion (March 2025) - plan, cross-sections, or xyz/CSV; (3) the design coordinates (CAD/DXF or shapefile) of the reef footprint; (4) the vertical datum used (AHD?).
 - Draft: "Dear Southern Ocean Surf Reef project team, I am Lior Bakalo, an independent researcher studying artificial surf reefs to inform a planned reef at Haifa, Israel. I have traced the SOSR from your public design figure and satellite imagery. To model it correctly I would be grateful for (1) the Bluecoast Detailed Design Report (P19024, Sept 2020) with cross-sections and bathymetry, or the sections you are able to release; (2) any post-construction (as-built) survey from March 2025 onward; (3) the footprint coordinates (CAD or shapefile) and the datum. PDF or CSV is fine. I will cite the City of Albany and Bluecoast, and share nothing publicly without your permission. Thank you, Lior Bakalo"
 

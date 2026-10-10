@@ -573,6 +573,13 @@ def process_reviews(card, references, slug, problems):
         rid = by_url.get(_norm_url(rev.get("url")))
         if rid:
             r["ref_id"] = rid
+        elif not rev.get("url") and str(rev.get("outlet") or "").lower().startswith("personal communication"):
+            # 2026-10-10: an interview has no URL; its source pop-up is the card's "personal communication" reference
+            pc = [ref["id"] for ref in references if "personal communication" in str(ref.get("type") or "").lower() or "personal communication" in str(ref.get("citation") or "").lower()]
+            if len(pc) == 1:
+                r["ref_id"] = pc[0]
+            else:
+                problems.append(f"[{slug}] personal-communication review by {rev.get('who')!r}: {len(pc)} candidate references, none linked")
         elif rev.get("url"):
             problems.append(f"[{slug}] review by {rev.get('who')!r}: URL matches no reference (shown as a plain link)")
         out.append(r)
