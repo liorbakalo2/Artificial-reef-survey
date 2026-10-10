@@ -1,6 +1,6 @@
 {
  "boscombe-surf-reef": {
-  "sig": "f6e29bdefe8ff685aefe91669c705cbfa1c6a39c",
+  "sig": "0f9237e8cf998a6b6dac2652807baedd829f2aad",
   "result": {
    "slug": "boscombe-surf-reef",
    "status": "ok",
@@ -59,9 +59,9 @@
     },
     {
      "name": "seabed falls away offshore (+z)",
-     "got": -3.728188691516216,
+     "got": -3.7281886915162175,
      "ref": 0.0,
-     "err": 3.728188691516216,
+     "err": 3.7281886915162175,
      "tol": 20,
      "unit": "deg",
      "ok": true
@@ -196,18 +196,18 @@
   }
  },
  "mount-maunganui-reef": {
-  "sig": "83800a9a12c6160ee4ebae3eebb05436632dd456",
+  "sig": "7fae99976181aba2ac644448b5e40532f2bf21ce",
   "result": {
    "slug": "mount-maunganui-reef",
    "status": "ok",
    "reason": "",
    "ok": true,
    "metrics": {
-    "area_m2": 1903.5,
-    "area_ref_m2": 1788.0,
+    "area_m2": 1766.25,
+    "area_ref_m2": 1652.0,
     "centroid": [
-     -0.707184134489099,
-     310.93413448909905
+     -0.5611818825194621,
+     310.6877211606511
     ],
     "centroid_ref": [
      0.0011650504654849793,
@@ -222,9 +222,9 @@
    "checks": [
     {
      "name": "footprint area vs model.js footprint at the bed (the default version has a 1:1 skirt from the -2.0 m contour to the bed)",
-     "got": 1903.5,
-     "ref": 1788.0,
-     "err": 0.06459731543624161,
+     "got": 1766.25,
+     "ref": 1652.0,
+     "err": 0.06915859564164649,
      "tol": 0.25,
      "unit": "relative",
      "ok": true
@@ -232,14 +232,14 @@
     {
      "name": "footprint centroid vs polygon centroid",
      "got": [
-      -0.707184134489099,
-      310.93413448909905
+      -0.5611818825194621,
+      310.6877211606511
      ],
      "ref": [
       0.0011650504654849793,
       307.7139715831004
      ],
-     "err": 3.2971514537545388,
+     "err": 3.0264534727995978,
      "tol": 6.0,
      "unit": "m",
      "ok": true
@@ -255,9 +255,9 @@
     },
     {
      "name": "seabed falls away offshore (+z)",
-     "got": -2.2842516601886206e-16,
+     "got": 1.1491472974348912e-17,
      "ref": 0.0,
-     "err": 2.2842516601886206e-16,
+     "err": 1.1491472974348912e-17,
      "tol": 20,
      "unit": "deg",
      "ok": true
@@ -272,9 +272,9 @@
      "ok": true
     }
    ],
-   "area_m2": 1903.5,
-   "area_ref_m2": 1788.0,
-   "area_rel_err": 0.06459731543624161,
+   "area_m2": 1766.25,
+   "area_ref_m2": 1652.0,
+   "area_rel_err": 0.06915859564164649,
    "crest_z_m": -2.0149998664855957,
    "crest_ref_m": -2.03,
    "crest_err_m": 0.015000133514404101,
@@ -283,7 +283,7 @@
     74.0
    ],
    "file": "3d/combined/mount-maunganui-reef.js",
-   "size_kb": 388,
+   "size_kb": 379,
    "note": {
     "rotation_deg": 0.0,
     "skirt_ignored": 1,

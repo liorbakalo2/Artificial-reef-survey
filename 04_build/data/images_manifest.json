@@ -243,7 +243,7 @@ true
 },
 "3d/boscombe-surf-reef/annotated/cco_profile_lines_plan": {
 "res": {
-"bytes": 108574,
+"bytes": 118193,
 "h": 884,
 "scale": 1.0,
 "src_h": 884,
@@ -253,8 +253,8 @@ true
 },
 "sig": [
 "/home/user/artificial-reef-survey/07_scale/shapes/boscombe-surf-reef/3d/annotated/cco_profile_lines_plan.png",
-100676,
-1791662845,
+121071,
+1791665147,
 1200,
 400,
 false,
@@ -265,7 +265,7 @@ false
 },
 "3d/boscombe-surf-reef/annotated/cco_profiles_cross_sections": {
 "res": {
-"bytes": 148947,
+"bytes": 158192,
 "h": 676,
 "scale": 1.0,
 "src_h": 676,
@@ -275,8 +275,8 @@ false
 },
 "sig": [
 "/home/user/artificial-reef-survey/07_scale/shapes/boscombe-surf-reef/3d/annotated/cco_profiles_cross_sections.png",
-139558,
-1791662845,
+158874,
+1791665147,
 1200,
 400,
 false,
@@ -397,7 +397,7 @@ false
 },
 "3d/boscombe-surf-reef/annotated/navionics_nauticalchart_z16_offshore_soundings_annotated": {
 "res": {
-"bytes": 180639,
+"bytes": 165553,
 "h": 356,
 "scale": 0.5,
 "src_h": 713,
@@ -407,8 +407,8 @@ false
 },
 "sig": [
 "/home/user/artificial-reef-survey/07_scale/shapes/boscombe-surf-reef/3d/annotated/navionics_nauticalchart_z16_offshore_soundings_annotated.png",
-402486,
-1791662845,
+401518,
+1791665156,
 1200,
 400,
 false,
@@ -507,7 +507,7 @@ false
 },
 "3d/boscombe-surf-reef/annotated/seabed_zone_map": {
 "res": {
-"bytes": 135287,
+"bytes": 138975,
 "h": 1200,
 "scale": 0.96154,
 "src_h": 1248,
@@ -517,8 +517,8 @@ false
 },
 "sig": [
 "/home/user/artificial-reef-survey/07_scale/shapes/boscombe-surf-reef/3d/annotated/seabed_zone_map.png",
-63421,
-1791662845,
+83909,
+1791665147,
 1200,
 400,
 false,
@@ -639,7 +639,7 @@ false
 },
 "3d/boscombe-surf-reef/poster": {
 "res": {
-"bytes": 120888,
+"bytes": 116563,
 "h": 579,
 "scale": 0.64286,
 "src_h": 900,
@@ -649,8 +649,8 @@ false
 },
 "sig": [
 "/home/user/artificial-reef-survey/07_scale/shapes/boscombe-surf-reef/3d/preview_oblique.png",
-315028,
-1791662846,
+462180,
+1791665331,
 900,
 400,
 false,
@@ -991,7 +991,7 @@ false
 },
 "3d/mount-maunganui-reef/poster": {
 "res": {
-"bytes": 113533,
+"bytes": 113145,
 "h": 579,
 "scale": 0.64286,
 "src_h": 900,
@@ -1001,8 +1001,8 @@ false
 },
 "sig": [
 "/home/user/artificial-reef-survey/07_scale/shapes/mount-maunganui-reef/3d/preview_oblique.png",
-311336,
-1791662846,
+450488,
+1791665270,
 900,
 400,
 false,
@@ -3193,7 +3193,7 @@ false
 },
 "assets/images/boscombe-surf-reef/boscombe-surf-reef-img-14_ann2": {
 "res": {
-"bytes": 272171,
+"bytes": 251050,
 "h": 475,
 "scale": 0.66667,
 "src_h": 713,
@@ -3203,8 +3203,8 @@ false
 },
 "sig": [
 "/home/user/artificial-reef-survey/07_scale/shapes/boscombe-surf-reef/3d/annotated/navionics_nauticalchart_z16_offshore_soundings_annotated.png",
-402486,
-1791662845,
+401518,
+1791665156,
 1600,
 400,
 false,
@@ -3700,7 +3700,7 @@ false
 },
 "assets/images/boscombe-surf-reef/boscombe-surf-reef-img-30": {
 "res": {
-"bytes": 108574,
+"bytes": 118193,
 "h": 884,
 "scale": 1.0,
 "src_h": 884,
@@ -3713,8 +3713,8 @@ false
 },
 "sig": [
 "/home/user/artificial-reef-survey/07_scale/shapes/boscombe-surf-reef/3d/annotated/cco_profile_lines_plan.png",
-100676,
-1791662845,
+121071,
+1791665147,
 1600,
 400,
 true,
@@ -3725,7 +3725,7 @@ false
 },
 "assets/images/boscombe-surf-reef/boscombe-surf-reef-img-31": {
 "res": {
-"bytes": 148947,
+"bytes": 158192,
 "h": 676,
 "scale": 1.0,
 "src_h": 676,
@@ -3738,8 +3738,8 @@ false
 },
 "sig": [
 "/home/user/artificial-reef-survey/07_scale/shapes/boscombe-surf-reef/3d/annotated/cco_profiles_cross_sections.png",
-139558,
-1791662845,
+158874,
+1791665147,
 1600,
 400,
 true,
@@ -3750,7 +3750,7 @@ false
 },
 "assets/images/boscombe-surf-reef/boscombe-surf-reef-img-32": {
 "res": {
-"bytes": 69549,
+"bytes": 81460,
 "h": 1248,
 "scale": 1.0,
 "src_h": 1248,
@@ -3763,8 +3763,8 @@ false
 },
 "sig": [
 "/home/user/artificial-reef-survey/07_scale/shapes/boscombe-surf-reef/3d/annotated/seabed_zone_map.png",
-63421,
-1791662845,
+83909,
+1791665147,
 1600,
 400,
 true,
@@ -4664,6 +4664,450 @@ false
 "/home/user/artificial-reef-survey/07_scale/shapes/mount-maunganui-reef/src/navionics/naut_z18_shade00.0.png",
 15476,
 1791662847,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/mount-maunganui-reef/mount-maunganui-reef-img-23": {
+"res": {
+"bytes": 43070,
+"h": 211,
+"scale": 1.0,
+"src_h": 211,
+"src_w": 205,
+"th": 211,
+"thumb": "assets/images/mount-maunganui-reef/mount-maunganui-reef-img-23_400.jpg",
+"tw": 205,
+"w": 205,
+"web": "assets/images/mount-maunganui-reef/mount-maunganui-reef-img-23.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/mount-maunganui-reef/3d/src/mmr_meadborrero2011_fig3b_asbuilt-survey-2800m3.png",
+72264,
+1791662846,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/mount-maunganui-reef/mount-maunganui-reef-img-23_ann1": {
+"res": {
+"bytes": 307324,
+"h": 844,
+"scale": 1.0,
+"src_h": 844,
+"src_w": 820,
+"w": 820,
+"web": "assets/images/mount-maunganui-reef/mount-maunganui-reef-img-23_ann1.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/mount-maunganui-reef/3d/annotated/mmr_meadborrero2011_fig3b_layout_check.png",
+327379,
+1791662846,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/mount-maunganui-reef/mount-maunganui-reef-img-24": {
+"res": {
+"bytes": 69675,
+"h": 182,
+"scale": 1.0,
+"src_h": 182,
+"src_w": 242,
+"th": 182,
+"thumb": "assets/images/mount-maunganui-reef/mount-maunganui-reef-img-24_400.jpg",
+"tw": 242,
+"w": 242,
+"web": "assets/images/mount-maunganui-reef/mount-maunganui-reef-img-24.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/mount-maunganui-reef/3d/src/mmr_meadborrero2011_fig3a_design-6500m3.png",
+83273,
+1791662846,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/mount-maunganui-reef/mount-maunganui-reef-img-25": {
+"res": {
+"bytes": 82527,
+"h": 213,
+"scale": 1.0,
+"src_h": 213,
+"src_w": 422,
+"th": 202,
+"thumb": "assets/images/mount-maunganui-reef/mount-maunganui-reef-img-25_400.jpg",
+"tw": 400,
+"w": 422,
+"web": "assets/images/mount-maunganui-reef/mount-maunganui-reef-img-25.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/mount-maunganui-reef/3d/src/mmr_meadborrero2011_fig4_surfing-late-summer-2007.png",
+122702,
+1791662846,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/mount-maunganui-reef/mount-maunganui-reef-img-26": {
+"res": {
+"bytes": 293904,
+"h": 642,
+"scale": 1.0,
+"src_h": 642,
+"src_w": 925,
+"th": 278,
+"thumb": "assets/images/mount-maunganui-reef/mount-maunganui-reef-img-26_400.jpg",
+"tw": 400,
+"w": 925,
+"web": "assets/images/mount-maunganui-reef/mount-maunganui-reef-img-26.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/mount-maunganui-reef/3d/src/mmr_mead2007_fig1_location-map.png",
+309538,
+1791662846,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/mount-maunganui-reef/mount-maunganui-reef-img-27": {
+"res": {
+"bytes": 220333,
+"h": 725,
+"scale": 1.0,
+"src_h": 725,
+"src_w": 954,
+"th": 304,
+"thumb": "assets/images/mount-maunganui-reef/mount-maunganui-reef-img-27_400.jpg",
+"tw": 400,
+"w": 954,
+"web": "assets/images/mount-maunganui-reef/mount-maunganui-reef-img-27.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/mount-maunganui-reef/3d/src/mmr_mead2007_fig2_design-bathymetry-delta.png",
+233161,
+1791662846,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/mount-maunganui-reef/mount-maunganui-reef-img-28": {
+"res": {
+"bytes": 170681,
+"h": 1571,
+"scale": 1.0,
+"src_h": 1571,
+"src_w": 908,
+"th": 400,
+"thumb": "assets/images/mount-maunganui-reef/mount-maunganui-reef-img-28_400.jpg",
+"tw": 231,
+"w": 908,
+"web": "assets/images/mount-maunganui-reef/mount-maunganui-reef-img-28.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/mount-maunganui-reef/3d/src/mmr_mead2007_fig3_design-plan-drawing-and-plywood-model.png",
+910931,
+1791662846,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/mount-maunganui-reef/mount-maunganui-reef-img-29": {
+"res": {
+"bytes": 83631,
+"h": 1259,
+"scale": 1.0,
+"src_h": 1259,
+"src_w": 846,
+"th": 400,
+"thumb": "assets/images/mount-maunganui-reef/mount-maunganui-reef-img-29_400.jpg",
+"tw": 269,
+"w": 846,
+"web": "assets/images/mount-maunganui-reef/mount-maunganui-reef-img-29.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/mount-maunganui-reef/3d/src/mmr_mead2007_fig4_model-breaking-waves-modified-design.png",
+763064,
+1791662846,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/mount-maunganui-reef/mount-maunganui-reef-img-30": {
+"res": {
+"bytes": 232904,
+"h": 438,
+"scale": 1.0,
+"src_h": 438,
+"src_w": 584,
+"th": 300,
+"thumb": "assets/images/mount-maunganui-reef/mount-maunganui-reef-img-30_400.jpg",
+"tw": 400,
+"w": 584,
+"web": "assets/images/mount-maunganui-reef/mount-maunganui-reef-img-30.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/mount-maunganui-reef/3d/src/mmr_mead2007_fig5_mega-container-model-v2.png",
+238185,
+1791662846,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/mount-maunganui-reef/mount-maunganui-reef-img-31": {
+"res": {
+"bytes": 67485,
+"h": 592,
+"scale": 1.0,
+"src_h": 592,
+"src_w": 967,
+"th": 245,
+"thumb": "assets/images/mount-maunganui-reef/mount-maunganui-reef-img-31_400.jpg",
+"tw": 400,
+"w": 967,
+"web": "assets/images/mount-maunganui-reef/mount-maunganui-reef-img-31.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/mount-maunganui-reef/3d/src/mmr_mead2007_fig6_model-clean-breaking-wave.png",
+531839,
+1791662846,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/mount-maunganui-reef/mount-maunganui-reef-img-32": {
+"res": {
+"bytes": 15860,
+"h": 567,
+"scale": 1.0,
+"src_h": 567,
+"src_w": 950,
+"th": 239,
+"thumb": "assets/images/mount-maunganui-reef/mount-maunganui-reef-img-32_400.jpg",
+"tw": 400,
+"w": 950,
+"web": "assets/images/mount-maunganui-reef/mount-maunganui-reef-img-32.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/mount-maunganui-reef/3d/src/mmr_mead2007_fig7_wave-rating-chart.png",
+16497,
+1791662846,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/mount-maunganui-reef/mount-maunganui-reef-img-33": {
+"res": {
+"bytes": 336695,
+"h": 709,
+"scale": 1.0,
+"src_h": 709,
+"src_w": 929,
+"th": 305,
+"thumb": "assets/images/mount-maunganui-reef/mount-maunganui-reef-img-33_400.jpg",
+"tw": 400,
+"w": 929,
+"web": "assets/images/mount-maunganui-reef/mount-maunganui-reef-img-33.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/mount-maunganui-reef/3d/src/mmr_mead2007_fig8_final-mega-container-layout.png",
+335443,
+1791662846,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/mount-maunganui-reef/mount-maunganui-reef-img-34": {
+"res": {
+"bytes": 83573,
+"h": 600,
+"scale": 1.0,
+"src_h": 600,
+"src_w": 895,
+"th": 268,
+"thumb": "assets/images/mount-maunganui-reef/mount-maunganui-reef-img-34_400.jpg",
+"tw": 400,
+"w": 895,
+"web": "assets/images/mount-maunganui-reef/mount-maunganui-reef-img-34.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/mount-maunganui-reef/3d/src/mmr_mead2007_fig9_cranes-first-half-onshore.png",
+650426,
+1791662846,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/mount-maunganui-reef/mount-maunganui-reef-img-35": {
+"res": {
+"bytes": 78953,
+"h": 829,
+"scale": 1.0,
+"src_h": 829,
+"src_w": 891,
+"th": 372,
+"thumb": "assets/images/mount-maunganui-reef/mount-maunganui-reef-img-35_400.jpg",
+"tw": 400,
+"w": 891,
+"web": "assets/images/mount-maunganui-reef/mount-maunganui-reef-img-35.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/mount-maunganui-reef/3d/src/mmr_mead2007_fig10_barge-route-google-earth-2006.png",
+611818,
+1791662846,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/mount-maunganui-reef/mount-maunganui-reef-img-36": {
+"res": {
+"bytes": 86444,
+"h": 1163,
+"scale": 1.0,
+"src_h": 1163,
+"src_w": 750,
+"th": 400,
+"thumb": "assets/images/mount-maunganui-reef/mount-maunganui-reef-img-36_400.jpg",
+"tw": 258,
+"w": 750,
+"web": "assets/images/mount-maunganui-reef/mount-maunganui-reef-img-36.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/mount-maunganui-reef/3d/src/mmr_mead2007_fig11_surf-photos-2006-2007.png",
+679596,
+1791662846,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/mount-maunganui-reef/mount-maunganui-reef-img-37": {
+"res": {
+"bytes": 382547,
+"h": 600,
+"scale": 1.0,
+"src_h": 600,
+"src_w": 854,
+"th": 281,
+"thumb": "assets/images/mount-maunganui-reef/mount-maunganui-reef-img-37_400.jpg",
+"tw": 400,
+"w": 854,
+"web": "assets/images/mount-maunganui-reef/mount-maunganui-reef-img-37.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/mount-maunganui-reef/3d/src/mmr_mead2007_fig12a_oct2006-bathymetry-survey.png",
+413692,
+1791662846,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/mount-maunganui-reef/mount-maunganui-reef-img-37_ann1": {
+"res": {
+"bytes": 94968,
+"h": 562,
+"scale": 0.93677,
+"src_h": 600,
+"src_w": 1708,
+"w": 1600,
+"web": "assets/images/mount-maunganui-reef/mount-maunganui-reef-img-37_ann1.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/mount-maunganui-reef/3d/annotated/mmr_mead2007_fig12a_depth_classes.png",
+475433,
+1791662846,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/mount-maunganui-reef/mount-maunganui-reef-img-38": {
+"res": {
+"bytes": 136687,
+"h": 1208,
+"scale": 1.0,
+"src_h": 1208,
+"src_w": 854,
+"th": 400,
+"thumb": "assets/images/mount-maunganui-reef/mount-maunganui-reef-img-38_400.jpg",
+"tw": 283,
+"w": 854,
+"web": "assets/images/mount-maunganui-reef/mount-maunganui-reef-img-38.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/mount-maunganui-reef/3d/src/mmr_mead2007_fig12bc_gap-model-and-photo.png",
+1083601,
+1791662846,
 1600,
 400,
 true,

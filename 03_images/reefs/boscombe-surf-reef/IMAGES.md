@@ -2,7 +2,7 @@
 
 Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_registry.md`; overview: `03_images/reefs/README.md`). This file is generated from it.
 
-32 images registered, 32 with a file, 25 used for the model (any use other than context/not_used).
+40 images registered, 40 with a file, 32 used for the model (any use other than context/not_used).
 
 ## boscombe-surf-reef-img-01 - Dry sand heap behind a beach safety fence with the 'Surf reef' safety sign (Flickr 'Bournemouth', Karen, 2009)
 
@@ -878,3 +878,227 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **rights**: Private research copy; reuse rights to be checked before any public release.
 - **display in HTML**: True
 - **added by**: 3D re-check agent (seabed extension), 2026-10-07
+
+
+![boscombe-surf-reef-img-33](boscombe-surf-reef_bag-layout-asr-design_2006-12.png)
+
+### boscombe-surf-reef-img-33 - Fig. 5.3 - bag layout of the geotextile containers (ASR Ltd design drawing, 18 Dec 2006)
+
+- **file**: 03_images/reefs/boscombe-surf-reef/boscombe-surf-reef_bag-layout-asr-design_2006-12.png
+- **kind**: design_drawing
+- **shows**: Plan of the bag (container) layout with labels A1-A10, B1-B8, C1-C18, D1-D10 (about 46 labelled bags, resolution too low to count exactly), colour = bag type T0.5-T4/T3flat; notes block: footprint area 4474 m2, tide range 2.1 m, crest height 0.3 m CD, volume bags 10450 m3, volume fill 1750 m3, 'reef settlement of 0.3-0.5 m is expected'. Length dimensions arbitrary (no scale).
+- **structure visible**: True
+- **state shown**: design (ASR Ltd 2006-12-18; as-built differs: bags missing, text p. 122)
+- **image date**: 2006-12-18 (drawing date on title block)
+- **citation**: Rendle, E.J. (2016). The Environmental, Social and Economic Impacts of an Artificial Surf Reef - The UK Experience. PhD thesis, School of Biological and Marine Sciences, University of Plymouth. https://pearl.plymouth.ac.uk/bms-theses/412/ (paper P5, PDF in papers/, received 2026-10-07, read 2026-10-10). p. 95 (PDF p. 98), Figure 5.3. Figure source: ASR Ltd (Marine Consulting and Research, Raglan NZ), drawing by C.B. & K.B. & S.M., reproduced by Rendle.
+- **image URL**: https://pearl.plymouth.ac.uk/bms-theses/412/
+- **source page**: https://pearl.plymouth.ac.uk/bms-theses/412/
+- **page / figure**: p. 95 (PDF p. 98), Figure 5.3
+- **credit**: ASR Ltd (Marine Consulting and Research, Raglan NZ), drawing by C.B. & K.B. & S.M., reproduced by Rendle
+- **licence**: Not stated on the figure. Thesis in PEARL carries a copyright statement (rights assigned to the University of Plymouth / author); third-party original: ASR Ltd drawing
+- **retrieved**: 2026-10-10
+- **How used for the model**: Read: footprint 4474 m2 (model outline 4,042 m2 from the satellite trace), crest 0.3 m CD (model uses 0.5 m CD), settlement 0.3-0.5 m expected (explains built crest +0.5). Bag arrangement only sketched (no scale, no coordinates), so no vertices were taken. Not used to change the model; recorded in P5_RENDLE2016_NOTES.md.
+- **used for**: cross_check, context
+- **3D check pending**: YES - footprint 4474 m2 design vs shape.json 4,042 m2 (as-built trace); design crest 0.3 m CD vs model +0.5 m ACD; bag count (46 labels here, 32 in text p. 68, 54 in Mead 2010)
+- **linked records**: 07_scale/shapes/boscombe-surf-reef/P5_RENDLE2016_NOTES.md
+- **size**: 0.25 MB, 921x631 px
+- **sha256**: 1fe9570a676c07c89c3bab93e82db6d0aeb82cbba2cf64d12c9b4b2a85da0b51
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: P5 Rendle 2016 extraction (queue item 4), 2026-10-10
+
+
+![boscombe-surf-reef-img-34](boscombe-surf-reef_cross-sections-asr-design_2006-12.png)
+
+### boscombe-surf-reef-img-34 - Fig. 5.4 - example cross sections A-A (along) and B-B (across) of the bag layout (ASR Ltd drawing, 18 Dec 2006)
+
+- **file**: 03_images/reefs/boscombe-surf-reef/boscombe-surf-reef_cross-sections-asr-design_2006-12.png
+- **kind**: cross_section
+- **shows**: Two schematic sections through the layered bags (rounded ovals in colours by bag type; sand fill hatched between the lower bags in A-A). Same notes block (crest 0.3 m CD, settlement 0.3-0.5 m expected). No dimensions on the axes.
+- **structure visible**: True
+- **state shown**: design (2006-12-18)
+- **image date**: 2006-12-18
+- **citation**: Rendle, E.J. (2016). The Environmental, Social and Economic Impacts of an Artificial Surf Reef - The UK Experience. PhD thesis, School of Biological and Marine Sciences, University of Plymouth. https://pearl.plymouth.ac.uk/bms-theses/412/ (paper P5, PDF in papers/, received 2026-10-07, read 2026-10-10). p. 95 (PDF p. 98), Figure 5.4. Figure source: ASR Ltd drawing reproduced by Rendle.
+- **image URL**: https://pearl.plymouth.ac.uk/bms-theses/412/
+- **source page**: https://pearl.plymouth.ac.uk/bms-theses/412/
+- **page / figure**: p. 95 (PDF p. 98), Figure 5.4
+- **credit**: ASR Ltd drawing reproduced by Rendle
+- **licence**: Not stated on the figure. Thesis in PEARL carries a copyright statement (rights assigned to the University of Plymouth / author); third-party original: ASR Ltd drawing
+- **retrieved**: 2026-10-10
+- **How used for the model**: Shows that the design is two layers of rounded bags with a fill between them, i.e. flanks are bag-shaped, not a smooth 1:3 slope. No numbers readable, so the 1:3 flank assumption (A7) is neither confirmed nor changed.
+- **used for**: 3d_height_slopes, context
+- **3D check pending**: no - none: schematic without dimensions; qualitative support for the layered-bag loft
+- **linked records**: 07_scale/shapes/boscombe-surf-reef/P5_RENDLE2016_NOTES.md
+- **size**: 0.12 MB, 853x585 px
+- **sha256**: b619931d65cb7506ebe108c0261b34fac03d69cf0346c8310eec264fe0a96076
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: P5 Rendle 2016 extraction (queue item 4), 2026-10-10
+
+
+![boscombe-surf-reef-img-35](boscombe-surf-reef_surveys-4-dates-3d-surface_2009-2011.png)
+
+### boscombe-surf-reef-img-35 - Fig. 5.6 - 3D surface plots of the reef from four council surveys (Oct 2009, May 2010, Sep 2010, Apr 2011)
+
+- **file**: 03_images/reefs/boscombe-surf-reef/boscombe-surf-reef_surveys-4-dates-3d-surface_2009-2011.png
+- **kind**: survey_plot
+- **shows**: Four oblique surface plots (z axis -6..+2 m, colour bar 'relative to MSL' per caption) of the seabed and reef; Oct 2009 shows the smooth as-built crest, Apr 2011 the loss of the container; crest tops near 0 to +0.5 m (colour bar 0 to +1 m).
+- **structure visible**: True
+- **state shown**: as-built (Oct 2009) and damaged (May 2010 - Apr 2011)
+- **image date**: 2009-10, 2010-05, 2010-09, 2011-04 (survey dates)
+- **citation**: Rendle, E.J. (2016). The Environmental, Social and Economic Impacts of an Artificial Surf Reef - The UK Experience. PhD thesis, School of Biological and Marine Sciences, University of Plymouth. https://pearl.plymouth.ac.uk/bms-theses/412/ (paper P5, PDF in papers/, received 2026-10-07, read 2026-10-10). p. 99 (PDF p. 102), Figure 5.6. Figure source: Surveys by / for Bournemouth Borough Council (DGPS/echo-sounder; supplied to Rendle); plot by Rendle (Matlab).
+- **image URL**: https://pearl.plymouth.ac.uk/bms-theses/412/
+- **source page**: https://pearl.plymouth.ac.uk/bms-theses/412/
+- **page / figure**: p. 99 (PDF p. 102), Figure 5.6
+- **credit**: Surveys by / for Bournemouth Borough Council (DGPS/echo-sounder; supplied to Rendle); plot by Rendle (Matlab)
+- **licence**: Not stated on the figure. Thesis in PEARL carries a copyright statement (rights assigned to the University of Plymouth / author); third-party original: Bournemouth Borough Council surveys, plotted by Rendle
+- **retrieved**: 2026-10-10
+- **How used for the model**: Oblique view, no usable plan geometry. Used for the datum question: caption says 'relative to MSL' but crest tops (about 0 to +0.5) and seabed (-3 to -5.5) match the same survey read as chart datum in the model (A3); the thesis itself says 'MSL is equivalent to Chart Datum' (Fig. 5.11 caption, p. 106), which is wrong in general. Logged as datum evidence in P5_RENDLE2016_NOTES.md.
+- **used for**: cross_check, 3d_crest, 3d_seabed
+- **3D check pending**: YES - survey zero: caption says MSL, content looks like chart datum (A3); would shift all survey-derived heights by 1.40 m if literally MSL
+- **linked records**: 07_scale/shapes/boscombe-surf-reef/P5_RENDLE2016_NOTES.md
+- **size**: 0.05 MB, 1367x652 px
+- **sha256**: f3f5045b8e15d5667b6f6dc14f6440a91bfd25bd4b3291b254a3aff159f7f025
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: P5 Rendle 2016 extraction (queue item 4), 2026-10-10
+
+
+![boscombe-surf-reef-img-36](boscombe-surf-reef_survey-april-2011-plan-osgb_2011-04.png)
+
+### boscombe-surf-reef-img-36 - Fig. 5.7 - April 2011 survey plan with OS grid axes and the two transects (across and along the reef)
+
+- **file**: 03_images/reefs/boscombe-surf-reef/boscombe-surf-reef_survey-april-2011-plan-osgb_2011-04.png
+- **kind**: survey_plot
+- **shows**: Two copies of the April 2011 bathymetry plan (colour bar -5 to +1 m) with Eastings (about 411,400-411,540) and Northings (about 90,800-91,000) axes; the black bars mark transect (a) across and (b) along the reef, drawn on the damaged reef (red/orange mound, about 120 m long).
+- **structure visible**: True
+- **state shown**: damaged (April 2011, after the container loss)
+- **image date**: 2011-04 (survey)
+- **citation**: Rendle, E.J. (2016). The Environmental, Social and Economic Impacts of an Artificial Surf Reef - The UK Experience. PhD thesis, School of Biological and Marine Sciences, University of Plymouth. https://pearl.plymouth.ac.uk/bms-theses/412/ (paper P5, PDF in papers/, received 2026-10-07, read 2026-10-10). p. 100 (PDF p. 103), Figure 5.7. Figure source: Bournemouth Borough Council survey, plotted by Rendle.
+- **image URL**: https://pearl.plymouth.ac.uk/bms-theses/412/
+- **source page**: https://pearl.plymouth.ac.uk/bms-theses/412/
+- **page / figure**: p. 100 (PDF p. 103), Figure 5.7
+- **credit**: Bournemouth Borough Council survey, plotted by Rendle
+- **licence**: Not stated on the figure. Thesis in PEARL carries a copyright statement (rights assigned to the University of Plymouth / author); third-party original: Bournemouth Borough Council survey, plotted by Rendle
+- **retrieved**: 2026-10-10
+- **How used for the model**: First georeferenced plan of the measured survey (OS grid, EPSG:27700 assumed). A colour-class read (nearest colour-bar colour, axis box 628 x 856 px = 140 x 200 m) gives the relief above -2.0 m ~3,200 m2 over E 411,437-411,519, N 90,857-90,942 (about 82 x 85 m extent, same axis scales); not used for the model (the model already uses the same survey from Rendle & Davidson 2012 Fig. 9) but it allows georeferencing the model frame.
+- **used for**: cross_check, plan_trace
+- **3D check pending**: YES - OS grid position of the reef (centre about E 411,478 N 90,900 = 50.7176 N, 1.8388 W) vs shape.json lat/lon; relief area above -2 m vs outline 4,042 m2
+- **linked records**: 07_scale/shapes/boscombe-surf-reef/P5_RENDLE2016_NOTES.md
+- **size**: 0.08 MB, 1001x636 px
+- **sha256**: 68621f3b534ebe71c52d35f59ef62ffc215015013b907c5f5359b9168b9c0b69
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: P5 Rendle 2016 extraction (queue item 4), 2026-10-10
+
+
+![boscombe-surf-reef-img-37](boscombe-surf-reef_profiles-across-along_2009-2011.png)
+
+### boscombe-surf-reef-img-37 - Fig. 5.8 - elevation profiles along the two transects for the four surveys (a) across the dissipating section, (b) along the structure
+
+- **file**: 03_images/reefs/boscombe-surf-reef/boscombe-surf-reef_profiles-across-along_2009-2011.png
+- **kind**: cross_section
+- **shows**: Profile (a) across: seabed -2.5 to -3.5, reef peaks about +0.6 (Oct 2009) and +0.85 (Apr 2011) m, with dips between bag crests; profile (b) along: crest rises from -2.5 m at the seaward end to about +0.5 m (Oct 2009) over the shoreward half, April 2011 shows the 2 m dip (crest at about -1 to -2 m) where the container was lost. Y axis 'Elevation (m)'; X axis Eastings (labels printed as 4.21xx e5 here, 4.11xx e5 in Fig. 5.7: a typo in the thesis).
+- **structure visible**: True
+- **state shown**: as-built (Oct 2009) to damaged (Apr 2011)
+- **image date**: 2009-10 to 2011-04
+- **citation**: Rendle, E.J. (2016). The Environmental, Social and Economic Impacts of an Artificial Surf Reef - The UK Experience. PhD thesis, School of Biological and Marine Sciences, University of Plymouth. https://pearl.plymouth.ac.uk/bms-theses/412/ (paper P5, PDF in papers/, received 2026-10-07, read 2026-10-10). p. 101 (PDF p. 104), Figure 5.8. Figure source: Bournemouth Borough Council surveys, plotted by Rendle.
+- **image URL**: https://pearl.plymouth.ac.uk/bms-theses/412/
+- **source page**: https://pearl.plymouth.ac.uk/bms-theses/412/
+- **page / figure**: p. 101 (PDF p. 104), Figure 5.8
+- **credit**: Bournemouth Borough Council surveys, plotted by Rendle
+- **licence**: Not stated on the figure. Thesis in PEARL carries a copyright statement (rights assigned to the University of Plymouth / author); third-party original: Bournemouth Borough Council surveys, plotted by Rendle
+- **retrieved**: 2026-10-10
+- **How used for the model**: Crest tops read by eye (+-0.1 m): Oct 2009 about +0.6 across and +0.5 along; Apr 2011 +0.85 across. The model records +0.45 / +0.65 (Oct 2009) from the same survey as drawn in Rendle & Davidson 2012; difference <= 0.15 m, inside the +-0.3 m crest uncertainty. No change proposed.
+- **used for**: 3d_crest, 3d_height_slopes, cross_check
+- **3D check pending**: YES - Oct 2009 crest tops +0.6 across / +0.5 along (this figure) vs +0.45 / +0.65 used in A6; datum of y axis
+- **linked records**: 07_scale/shapes/boscombe-surf-reef/P5_RENDLE2016_NOTES.md
+- **size**: 0.05 MB, 1174x1214 px
+- **sha256**: ef85cf40d022da86e2b12707fd3c9d531e8508d4d1f6655ddac6b03c4ebe7454
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: P5 Rendle 2016 extraction (queue item 4), 2026-10-10
+
+
+![boscombe-surf-reef-img-38](boscombe-surf-reef_aerial-completed-reef_2009.png)
+
+### boscombe-surf-reef-img-38 - Fig. 4.2 - aerial photo of the completed Boscombe ASR
+
+- **file**: 03_images/reefs/boscombe-surf-reef/boscombe-surf-reef_aerial-completed-reef_2009.png
+- **kind**: aerial
+- **shows**: Oblique aerial photo of the submerged reef: the long bag rows (dark bands running along the axis) are visible under clear water with waves breaking over the shoreward crest; swell from the left.
+- **structure visible**: True
+- **state shown**: as-built (completed, undamaged; date not stated)
+- **image date**: unknown (completed reef, between Oct 2009 and Mar 2011; source not credited in the thesis)
+- **citation**: Rendle, E.J. (2016). The Environmental, Social and Economic Impacts of an Artificial Surf Reef - The UK Experience. PhD thesis, School of Biological and Marine Sciences, University of Plymouth. https://pearl.plymouth.ac.uk/bms-theses/412/ (paper P5, PDF in papers/, received 2026-10-07, read 2026-10-10). p. 69 (PDF p. 72), Figure 4.2. Figure source: not credited in the thesis.
+- **image URL**: https://pearl.plymouth.ac.uk/bms-theses/412/
+- **source page**: https://pearl.plymouth.ac.uk/bms-theses/412/
+- **page / figure**: p. 69 (PDF p. 72), Figure 4.2
+- **credit**: not credited in the thesis
+- **licence**: Not stated on the figure. Thesis in PEARL carries a copyright statement (rights assigned to the University of Plymouth / author); third-party original: not stated
+- **retrieved**: 2026-10-10
+- **How used for the model**: Oblique, no scale: context only. Shows long bag rows parallel to the reef axis and breaking over the shoreward (higher) end, consistent with the crest-higher-inshore finding (p. 94).
+- **used for**: context, plan_trace
+- **3D check pending**: no - none: oblique, unscaled; context
+- **linked records**: 07_scale/shapes/boscombe-surf-reef/P5_RENDLE2016_NOTES.md
+- **size**: 1.05 MB, 1130x753 px
+- **sha256**: c8a4987c58b8054cdb5ddc27fa6e87d319c27016b52781eeae3e7e5a7f59ac97
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: P5 Rendle 2016 extraction (queue item 4), 2026-10-10
+
+
+![boscombe-surf-reef-img-39](boscombe-surf-reef_satellite-google-earth-4-dates_2002-2012.png)
+
+### boscombe-surf-reef-img-39 - Fig. 4.7 - Google Earth images of Boscombe frontage: Dec 2002, Apr 2007, Dec 2009 (reef completed), Jan 2012
+
+- **file**: 03_images/reefs/boscombe-surf-reef/boscombe-surf-reef_satellite-google-earth-4-dates_2002-2012.png
+- **kind**: satellite
+- **shows**: Four low-resolution (362 x 893 px) satellite strips of the pier and beach; the Dec 2009 frame shows the finished reef as a pale rectangular shoal east of the pier, the Jan 2012 frame shows no clear reef (white surf).
+- **structure visible**: True
+- **state shown**: pre-construction (2002, 2007), as-built (Dec 2009), damaged (Jan 2012)
+- **image date**: 2002-12, 2007-04, 2009-12, 2012-01
+- **citation**: Rendle, E.J. (2016). The Environmental, Social and Economic Impacts of an Artificial Surf Reef - The UK Experience. PhD thesis, School of Biological and Marine Sciences, University of Plymouth. https://pearl.plymouth.ac.uk/bms-theses/412/ (paper P5, PDF in papers/, received 2026-10-07, read 2026-10-10). p. 75 (PDF p. 78), Figure 4.7. Figure source: Google Earth imagery (Google; Landsat/Copernicus-type providers not stated), assembled by Rendle.
+- **image URL**: https://pearl.plymouth.ac.uk/bms-theses/412/
+- **source page**: https://pearl.plymouth.ac.uk/bms-theses/412/
+- **page / figure**: p. 75 (PDF p. 78), Figure 4.7
+- **credit**: Google Earth imagery (Google; Landsat/Copernicus-type providers not stated), assembled by Rendle
+- **licence**: Not stated on the figure. Thesis in PEARL carries a copyright statement (rights assigned to the University of Plymouth / author); third-party original: Google Earth imagery as reproduced by Rendle
+- **retrieved**: 2026-10-10
+- **How used for the model**: Gives a dated as-built satellite view (Dec 2009), but resolution is too low to trace; the model's plan outline uses Esri Wayback 28 Sep 2011. Context only.
+- **used for**: context, cross_check
+- **3D check pending**: no - none: too coarse to trace; the Wayback 2011 trace stays the default
+- **linked records**: 07_scale/shapes/boscombe-surf-reef/P5_RENDLE2016_NOTES.md
+- **size**: 0.71 MB, 362x893 px
+- **sha256**: 0485df99cf894fc757994c5d4846aff091823d28c11c810544276d661bdc2b16
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: P5 Rendle 2016 extraction (queue item 4), 2026-10-10
+
+
+![boscombe-surf-reef-img-40](boscombe-surf-reef_container-failure-photos_2010-2012.png)
+
+### boscombe-surf-reef-img-40 - Fig. 5.5 - photographs of the upper (dissipating) section: pillowing (spring 2010), container lost (2011), second container lost (2012)
+
+- **file**: 03_images/reefs/boscombe-surf-reef/boscombe-surf-reef_container-failure-photos_2010-2012.png
+- **kind**: report_photo
+- **shows**: Three stacked photos of the shoreward end of the reef: (a) misshapen 'pillowed' containers in spring 2010, (b) a 5 m gap in 2011 after one container lost sand, (c) a gap about 10 m wide in 2012.
+- **structure visible**: True
+- **state shown**: damaged (2010, 2011, 2012)
+- **image date**: 2010-04, 2011, 2012
+- **citation**: Rendle, E.J. (2016). The Environmental, Social and Economic Impacts of an Artificial Surf Reef - The UK Experience. PhD thesis, School of Biological and Marine Sciences, University of Plymouth. https://pearl.plymouth.ac.uk/bms-theses/412/ (paper P5, PDF in papers/, received 2026-10-07, read 2026-10-10). p. 97 (PDF p. 100), Figure 5.5. Figure source: not credited in the thesis.
+- **image URL**: https://pearl.plymouth.ac.uk/bms-theses/412/
+- **source page**: https://pearl.plymouth.ac.uk/bms-theses/412/
+- **page / figure**: p. 97 (PDF p. 100), Figure 5.5
+- **credit**: not credited in the thesis
+- **licence**: Not stated on the figure. Thesis in PEARL carries a copyright statement (rights assigned to the University of Plymouth / author); third-party original: not stated
+- **retrieved**: 2026-10-10
+- **How used for the model**: Evidence for the failure sequence on the reef card (container T4 'A4' lost 2011, 'A5' 2012); not used for geometry.
+- **used for**: context
+- **3D check pending**: no - none: failure photos, context
+- **linked records**: 07_scale/shapes/boscombe-surf-reef/P5_RENDLE2016_NOTES.md
+- **size**: 0.43 MB, 355x638 px
+- **sha256**: 50d7924d8a3afb6a45eca77b18e59f6a8432d628e623ce2e70a5b89084ff5b0f
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: P5 Rendle 2016 extraction (queue item 4), 2026-10-10

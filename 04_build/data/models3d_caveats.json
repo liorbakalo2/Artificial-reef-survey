@@ -384,9 +384,9 @@
    "model": "{{versions/multibeam_2013_m2p0/volume_m3_default|n0}} m3 default / {{versions/asr_installed_toe_2008/volume_m3_default|n0}} m3 toe loft at the default bed {{seabed/bed_default_cd|d1}} m CD",
    "stated": "2,800 m3 built volume (Raised Water Research, BoPRC p28); Installed grid 2,835-2,861 m3",
    "diff": "{{= (P('versions/multibeam_2013_m2p0/volume_m3_default') / P('stated_volume_m3') - 1) * 100 |s0}} % / {{= (P('versions/asr_installed_toe_2008/volume_m3_default') / P('stated_volume_m3') - 1) * 100 |s0}} % vs 2,800 m3; reproduced at a bed of {{versions/multibeam_2013_m2p0/bed_for_2800_m3|d2}} / {{versions/asr_installed_toe_2008/bed_for_2800_m3|d2}} m CD",
-   "reason": "Volume = sum of crest-to-bed height over the footprint. The bed under the reef in 2008-09 is not measured; every later source reads it shallower than -4.0 m CD, and even vertical flanks on the -2.0 m outline hold more than 2,800 m3 at -4.0 m. At a bed of -4.0 m CD the model was +15 % (toe) to +29 % (survey outline) over the stated figure (METHODS_3D 4.3). Decision of Lior, 2026-10-07: the default as-built bed is -3.6 m CD, labelled an assumption, with a 'later seabed' option; this page reads the bed and the volumes from model.js, so it shows the new values as soon as the model is rebuilt.",
+   "reason": "Volume = sum of crest-to-bed height over the footprint. The bed under the reef in 2008-09 is not measured; every later source reads it shallower than -4.0 m CD (at -4.0 the model was +15 % (toe) to +29 % (survey outline) over the stated figure). Decision D1 of Lior (2026-10-07), applied 2026-10-10: default bed -3.6 m CD, labelled an ASSUMPTION; option 'later seabed' -2.8 m CD (about 1,750 m3, 37 % below 2,800 m3; P2 Fig 12, Oct 2006, reads the bed beside the reef at 2.0-3.7 m). P3 (Mead & Borrero 2011) Fig 3: 2,800 m3 of the 6,500 m3 design volume was in place (METHODS_3D 4.3).",
    "status": "unresolved",
-   "resolve": "As-built bed survey or the Mead, Black & Moores (2007) / Mead (2011) sections; Lior's decision on the default bed (REQUESTS_FOR_LIOR 1).",
+   "resolve": "An as-built bed survey, or the datum of the ASR 'Installed' image or a scaled as-built section (REQUESTS_FOR_LIOR).",
    "section": "4.3",
    "ids": "R3; R1; img3",
    "ev": [
@@ -401,7 +401,7 @@
    "diff": "{{= abs(P('seabed/bed_default_cd') - P('seabed/z_nav_at_reef_cd')) |d2}} m from the 2026 chart at the centre",
    "reason": "No source measured the 2008-09 bed at the reef; the ASR Installed image shows it but its datum is unstated. The default is a labelled assumption, not a finding; height, flank width and volume all follow it (+-0.5 m of bed = about +-19 % of volume).",
    "status": "unresolved",
-   "resolve": "Bed decision and REQUESTS_FOR_LIOR 1 and 3 (Mead section, datum of the ASR image).",
+   "resolve": "D1 applied 2026-10-10 (default -3.6 m CD ASSUMPTION, option -2.8 m CD). Settled only by the datum of the ASR 'Installed' image or a scaled as-built section (REQUESTS_FOR_LIOR).",
    "section": "3.3; 7",
    "ids": "R1; R4; R9; N1; img3",
    "ev": []

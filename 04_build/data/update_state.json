@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-10 20:32",
+ "updated": "2026-10-10 20:52",
  "sig": {
   "models": {
    "borth-coastal-defence-reef": {
@@ -12,13 +12,13 @@
     "config": "ef26b489de2476f0"
    },
    "boscombe-surf-reef": {
-    "viewer": "852fc4a4694d2dbe",
-    "model.js": "c9861120fb9045c7",
-    "annotated": "75ba56d0cb183a8b",
+    "viewer": "c4fe2d19eb72bc0b",
+    "model.js": "cb6ad1508e6be7b4",
+    "annotated": "8b89d8089762e706",
     "shape.json": "b6b5a73f1edb3bb3",
-    "registry": "7f418b01a570527f",
+    "registry": "64a6b78afcc4d78f",
     "card": "cb6d4f12b45a54fa",
-    "config": "0d41e6d42122f005"
+    "config": "855b46a314bd2787"
    },
    "bunbury-airwave": {
     "viewer": "5c12c267d2f00f91",
@@ -30,13 +30,13 @@
     "config": "30a18b5efbc83d0b"
    },
    "mount-maunganui-reef": {
-    "viewer": "b9de8364493b088f",
-    "model.js": "42860ea45fbf54b2",
+    "viewer": "63064539340d1c4d",
+    "model.js": "53545e7e4d76a1ce",
     "annotated": "66b0e754f7a2b3af",
-    "shape.json": "503941b10795c22d",
-    "registry": "9a4d017aaf1fae56",
-    "card": "3b72ac72353b2095",
-    "config": "688689c7b98d7503"
+    "shape.json": "8aa8b021b629ce7a",
+    "registry": "5849793ff42a4aab",
+    "card": "8f33e980757dfa94",
+    "config": "658e76c3543aef4a"
    },
    "palm-beach-gold-coast": {
     "viewer": "3811e3d6d4caa5fe",
@@ -57,8 +57,8 @@
     "config": "036d108ce91351d3"
    }
   },
-  "hold": "498ea894054eb75f",
-  "src": "426293d9a52fbd50"
+  "hold": "fe8e4651b85ae9e1",
+  "src": "1a5b839520bbd596"
  },
  "snapshot": {
   "borth-coastal-defence-reef": {
@@ -143,28 +143,28 @@
    "versions": {
     "multibeam_2013_m2p0": {
      "area_m2": 1071.0,
-     "volume_m3": 3620.0
+     "volume_m3": 2945.0
     },
     "asr_installed_toe_2008": {
      "area_m2": 1423.8,
-     "volume_m3": 3212.0
+     "volume_m3": 2727.0
     }
    },
    "key_numbers": {
     "Footprint (plan outline)": "1,071 m2 default (67.9 x 60.4 m, 5 bag polygons, -2.0 m CD contour of the 2013 survey); 1,424 m2 as-built toe (73.9 x 62.5 m)",
-    "Reef volume versus bed level": "3,620 m3 default / 3,212 m3 toe loft at the default bed -4.0 m CD",
-    "As-built bed at the reef centre (ASSUMPTION)": "-4.0 m CD = -5.13 m MSL (selector: -3.0, -3.5, -4.0, -4.5 m CD)",
+    "Reef volume versus bed level": "2,945 m3 default / 2,727 m3 toe loft at the default bed -3.6 m CD",
+    "As-built bed at the reef centre (ASSUMPTION)": "-3.6 m CD = -4.73 m MSL (selector: -3.6, -2.8, -3.0, -3.5, -4.0, -4.5 m CD)",
     "Crest level": "-0.9 m CD = -2.03 m MSL (selector -0.8 / -1.0 m CD)",
-    "Reef height above the bed": "maximum 3.25 m (default version, crest to bed at the default bed)",
+    "Reef height above the bed": "maximum 2.85 m (default version, crest to bed at the default bed)",
     "Distance from the shoreline": "reef centroid 307.7 m from the wet/dry-sand shoreline (Esri 2011-01-15)",
     "Vertical datum": "z = 0 at present mean sea level = Chart Datum + 1.13 m (LINZ Tauranga); Chart Datum = z -1.13 m; MVD-53 = z -0.168 m"
    },
-   "pictures": 8,
+   "pictures": 24,
    "match_buttons": 7,
    "combined": {
     "status": "ok",
     "ok": true,
-    "area_m2": 1903.5,
+    "area_m2": 1766.25,
     "crest_z_m": -2.0149998664855957
    }
   },
