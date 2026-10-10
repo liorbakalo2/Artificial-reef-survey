@@ -290,7 +290,7 @@
   "id": "opunake-reef-img-08",
   "file": "07_scale/shapes/opunake-reef/src/opunake_sat_mid.png",
   "annotated_files": [
-   "07_scale/shapes/opunake-reef/overlays/mid_zoom_nw.png"
+   "07_scale/shapes/opunake-reef/overlays/archive_unverified_2026-10-04/mid_zoom_nw.png"
   ],
   "kind": "satellite",
   "title": "Esri World Imagery, Opunake, centre -39.4595, 173.8565, z19, r=500 m, 4338 x 4338 px, 0.2305 m/px",
@@ -334,8 +334,8 @@
   "id": "opunake-reef-img-09",
   "file": "07_scale/shapes/opunake-reef/src/opunake_sat_wide.png",
   "annotated_files": [
-   "07_scale/shapes/opunake-reef/overlays/wide_zoom_beach.png",
-   "07_scale/shapes/opunake-reef/overlays/wide_zoom_pier.png"
+   "07_scale/shapes/opunake-reef/overlays/archive_unverified_2026-10-04/wide_zoom_beach.png",
+   "07_scale/shapes/opunake-reef/overlays/archive_unverified_2026-10-04/wide_zoom_pier.png"
   ],
   "kind": "satellite",
   "title": "Esri World Imagery, Opunake, centre -39.46, 173.86, z17, r=900 m, 1953 x 1952 px, 0.922 m/px",

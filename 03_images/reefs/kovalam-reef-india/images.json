@@ -807,7 +807,7 @@
   "image_url": "https://wayback.maptiles.arcgis.com/arcgis/rest/services/World_Imagery/WMTS/1.0.0/default028mm/MapServer/tile/{release}/17/{y}/{x} (releases 10, 23383, 31026, 2168, 11351, 20753; tiles x 93560-93562, y 2 rows around 62471)",
   "source_page": "Esri World Imagery Wayback https://livingatlas.arcgis.com/wayback/",
   "page_or_figure": "z17 tiles around 8.3872 N 76.9757 E",
-  "image_date": "2011-02-28 (release 10, from earlier agent); other captures dated only by release date (2014-12-03 to 2020-11-18), capture dates not read",
+  "image_date": "Captures (Esri metadata SRC_DATE2, 0.5 m source): 2011-02-28 (releases 10 and 2014-12-03, same image), 2017-02-24 (release 2018-09-06), 2019-01-26 (release 2019-10-09), 2020-01-31 (release 2020-11-18); release 2017-02-27 returned no metadata (date not read)",
   "credit": "Esri, Maxar, Earthstar Geographics, and the GIS User Community",
   "license": "Esri/Maxar imagery terms (not an open licence); private research copy only",
   "retrieved": "2026-10-10",
