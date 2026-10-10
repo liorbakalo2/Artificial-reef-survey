@@ -50,7 +50,7 @@
   "unit": "m",
   "source_id": "design_plan",
   "method": "offset of the outline edge; design plan contours are dense along that edge (A6)",
-  "uncertainty": "+-5 m offset = +-0.8k m3",
+  "uncertainty": "+-5 m offset = +-1.2k m3",
   "estimated": true
  },
  {
@@ -85,8 +85,8 @@
   "value": "34,000",
   "unit": "m3",
   "source_id": "design_table",
-  "method": "stated by the City ('based on 2017 bathymetry'); the model shape exponent N = 2.48 is FITTED to it (A9)",
-  "uncertainty": "bed +-1 m = +8.3k / -8.2k m3 (+-24 %)",
+  "method": "stated by the City ('based on 2017 bathymetry'); the model shape exponent N = 2.73 is FITTED to it (A9)",
+  "uncertainty": "bed +-1 m = +7.7k / -7.9k m3 (+-23 %)",
   "estimated": false
  },
  {

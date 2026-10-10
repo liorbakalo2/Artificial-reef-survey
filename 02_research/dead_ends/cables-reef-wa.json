@@ -180,6 +180,16 @@
       "result": "not found",
       "detail": "EMODnet covers European seas only; the REST service returns HTTP 204 (empty) at this reef's coordinate (Australia), so the site is outside the grid. Only two of the 13 reefs are covered (Boscombe, Borth). Do not retry EMODnet for this reef.",
       "might_work": "Local sources instead: national or state bathymetry, a council or authority survey, Navionics / Google Earth readings (see REQUESTS_FOR_LIOR.md section 5)"
+    },
+    {
+      "what": "Bancroft (1999) thesis PDF listed at data-ww3.ifremer.fr/BIB/Bancroft_BATHESIS1999.pdf (card R19, 'identified, not read')",
+      "kind": "paper",
+      "where": "https://data-ww3.ifremer.fr/BIB/Bancroft_BATHESIS1999.pdf (http:// form: host does not resolve)",
+      "checked": "2026-10-10",
+      "by": "agent: dead-ends compilation (curl check, cloud)",
+      "result": "other: HTTP 403 from the origin server",
+      "detail": "The citations audit (05_qa/source_audit, Cables R19) found the thesis only as a listing at this IFREMER URL and did not read it. A direct request on 2026-10-10 (browser user-agent, https) returns 403 Forbidden from the Apache origin with the page text 'Server unable to read htaccess file, denying access to be safe' (a server misconfiguration, not a bot check); the plain http:// form does not resolve. The directory index /BIB/ gives the same 403. So the PDF is not retrievable from there; it is the possible source of the as-built levels and monitoring surveys (Bancroft 1999, UWA BEng thesis).",
+      "might_work": "Lior in a browser (the 403 may be temporary); UWA Library / Centre for Water Research archive; Wayback copy of the IFREMER URL"
     }
   ]
 }

@@ -100,6 +100,16 @@
       "result": "not found",
       "detail": "EMODnet covers European seas only; the REST service returns HTTP 204 (empty) at this reef's coordinate (Australia), so the site is outside the grid. Only two of the 13 reefs are covered (Boscombe, Borth). Do not retry EMODnet for this reef.",
       "might_work": "Local sources instead: national or state bathymetry, a council or authority survey, Navionics / Google Earth readings (see REQUESTS_FOR_LIOR.md section 5)"
+    },
+    {
+      "what": "YouTube video xWPl70kPFug 'A GLORIOUS Day On Palm Beach Reef' (Riko Fisho, 2024-02-23)",
+      "kind": "video",
+      "where": "https://www.youtube.com/watch?v=xWPl70kPFug",
+      "checked": "2026-09-25",
+      "by": "agent: Palm Beach media re-check (cloud)",
+      "result": "other: video not about the structure",
+      "detail": "The description (re-fetched with yt-dlp) is 'back on Palm Beach reef as QLD ends the seasonal closure for Spanish Mackerel': the reef is named only as the fishing location; the subject is tackle and technique. No frames were extracted for any Palm Beach video and the other two (City of Gold Coast 2019-05-21; The Surf Eye 2022-06-27, auto-captions only music) are 'about the reef'.",
+      "might_work": ""
     }
   ]
 }

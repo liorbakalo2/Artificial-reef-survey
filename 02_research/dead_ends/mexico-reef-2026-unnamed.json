@@ -12,34 +12,14 @@
       "might_work": "Lior: W4 / P14 (Google `Xala arrecife artificial surf Costalegre Mortensen DHI`; SEMARNAT MIA documents; RWR follow-up posts); contacts E6 (RWR)"
     },
     {
-      "what": "Raised Water Research post 'Unveiling the new reef in Mexico' (2026-03-31) and RWR site search for newer Xala posts",
+      "what": "Six Senses Xala page (sixsenses.com) and the surfer.com article 'artificial reefs making comeback'",
       "kind": "web page",
-      "where": "https://raisedwaterresearch.com/unveiling-the-new-reef-in-mexico/",
-      "checked": "2026-10-10",
-      "by": "agent: Mexico shape agent and source audit (cloud)",
-      "result": "other: HTTP 403 to the fetch tool (post not re-fetched)",
-      "detail": "raisedwaterresearch.com returned HTTP 403 from the container, and WebFetch does not resolve it, so the post was not re-fetched in the shape run or the audit; its two images (registry img-01 surfer, img-02 drone shot of a peeling left) were read earlier and show no scale, coastline or structure. Other agents in the Opunake and Kovalam network passes did fetch RWR pages with curl, so a curl retry may work.",
-      "might_work": "Retry with curl; Lior: W4 (open the RWR page and look for plan graphics, coordinates, event recap)"
-    },
-    {
-      "what": "Six Senses Xala page, surfer.com articles ('artificial reefs making comeback', 'artificial surf reefs Australia Palm Beach')",
-      "kind": "web page",
-      "where": "https://www.sixsenses.com/en/new-openings/xala/ ; https://www.surfer.com/news/artificial-reefs-making-comeback ; https://www.surfer.com/news/artificial-surf-reefs-australia-palm-beach",
+      "where": "https://www.sixsenses.com/en/new-openings/xala/ ; https://www.surfer.com/news/artificial-reefs-making-comeback",
       "checked": "2026-09-24",
       "by": "agent: Mexico card research (cloud)",
       "result": "bot check (not bypassed)",
-      "detail": "All three returned HTTP 403 to WebFetch and were not read. The Six Senses page would only give location / opening context (opening year is itself unresolved: 2027 per THR vs 2026 per Hospitality Net); none is expected to hold a plan.",
+      "detail": "Both returned HTTP 403 to WebFetch (2026-09-24) and were not read. The Six Senses page would only give location / opening context (opening year is itself unresolved: 2027 per THR vs 2026 per Hospitality Net); the Xala press pages were read later (see the Xala developer pages entry). The surfer.com Palm Beach article is covered by its own entry.",
       "might_work": "Lior in a browser if the opening date or any reef text is wanted"
-    },
-    {
-      "what": "The Hollywood Reporter, Romeyn, 2025-04-22 'With Xala, Richard Gere has Co-Founded a Luxury Mexican Paradise' (original URL) and its web.archive.org / archive.ph copies",
-      "kind": "web page",
-      "where": "Hollywood Reporter URL (card R3); web.archive.org and archive.ph mirrors",
-      "checked": "2026-09-25",
-      "by": "agent: Mexico card research and verification re-check",
-      "result": "paywalled",
-      "detail": "The original URL serves a tollbit paywall redirect and the archive mirrors were blocked for the fetch tool. The article text was read through its Yahoo syndication (https://www.yahoo.com/lifestyle/richard-gere-next-great-role-130000544.html), which gave only the '3,000 truckloads of boulders from a nearby quarry' line: no length, width, depth, offshore distance or shape (that part failed).",
-      "might_work": ""
     },
     {
       "what": "RWR and California Surf Club social-media captions (Instagram raisedwater, Facebook raisedwater, Instagram casurfclub) and the 16 Apr 2026 reveal event",
@@ -50,16 +30,6 @@
       "result": "login needed",
       "detail": "Captions are not renderable via WebFetch and Facebook typically blocks it. No source seen reports that the 16 Apr 2026 event actually took place (the card wording 'unveiled' was corrected on 2026-10-10 as unsupported). The California Surf Club events page (californiasurfclub.clients.peoplevine.com/events) was not checked.",
       "might_work": "Lior: check the social posts and event recap for coordinates, plan graphics or video (REQUESTS W4)"
-    },
-    {
-      "what": "DHI Seaport company / case-study page for the Xala reef (designer Simon B. Mortensen)",
-      "kind": "web page",
-      "where": "https://dhigroup.com/it/seaport ; https://dhiseaport.com",
-      "checked": "2026-09-25",
-      "by": "agent: Mexico verification re-check",
-      "result": "wrong site",
-      "detail": "Two guessed URLs: dhigroup.com/it/seaport returned 404 and dhiseaport.com resolves to an unrelated maritime-software company. Neither is a verified page for Mortensen's employer, so neither is used; no further URL guessing was done. A proper search of dhigroup.com for 'Xala' / 'Mortensen' is still untried.",
-      "might_work": "Search dhigroup.com case studies for 'Xala' or 'artificial surf reef'; Lior: W4"
     },
     {
       "what": "Google Maps area pin 19.71861, -105.23222 (near Chalacatepec airport) as the reef location",
@@ -90,16 +60,6 @@
       "result": "not found",
       "detail": "The 140 x 75 m size has no source in Gemini's own data and no CAD entry; the cited sources could not be matched to any figure. Our independent re-check of the same sources did not confirm it. Gemini lead not confirmed; not used (rule 2).",
       "might_work": ""
-    },
-    {
-      "what": "papers/ folder: any mention or plan of the Xala / Costalegre (Jalisco) reef in Lior's 5 PDFs",
-      "kind": "paper",
-      "where": "papers/ folder (PyMuPDF text-layer grep for Xala, Costalegre, Jalisco, Nayarit, Chalacatepec, Mexic, Mortensen, 2026-10-10)",
-      "checked": "2026-10-10",
-      "by": "agent: dead-ends compilation (papers/ scan, cloud)",
-      "result": "not found",
-      "detail": "No mention of Xala or Costalegre. Mexico appears only for the Yucatan geotextile reefs (Rendle thesis p.38, 124, 278-280; Blacka et al. 2013 Tables p.75-79, ref p.96), a different project and type. Blacka p.68 and p.100 cite Mortensen (2010) 'Detailed Investigation of Surfing Amenity using CFD' (the same designer), which is not about Xala. Mount Maunganui 2007 has no text layer; the reef was unveiled in 2026, after all five papers.",
-      "might_work": "Not in papers/; possibly a future DHI / Mortensen paper (Lior: P14)"
     },
     {
       "what": "RWR 'Unveiling the new reef in Mexico' (2026-03-31): location / plan",
@@ -138,7 +98,7 @@
       "checked": "2026-10-10",
       "by": "agent: Burkitts+Mexico network pass (cloud, 2026-10-10)",
       "result": "no plan or figure",
-      "detail": "Partial yield (already R3): '3,000 truckloads of boulders from a nearby quarry'; no size, location or plan.",
+      "detail": "Partial yield (already R3): '3,000 truckloads of boulders from a nearby quarry'; no size, location or plan. Earlier (2026-09-25) the same URL served a tollbit paywall redirect and the archive.org / archive.ph mirrors were blocked; the text was then read through its Yahoo syndication (https://www.yahoo.com/lifestyle/richard-gere-next-great-role-130000544.html), which gave the same single physical line.",
       "might_work": ""
     },
     {
@@ -158,7 +118,7 @@
       "checked": "2026-10-10",
       "by": "agent: Burkitts+Mexico network pass (cloud, 2026-10-10)",
       "result": "not found",
-      "detail": "No DHI page, case study or conference abstract mentions Xala.",
+      "detail": "No DHI page, case study or conference abstract mentions Xala. Earlier guessed URLs (2026-09-25): dhigroup.com/it/seaport returned 404 and dhiseaport.com resolves to an unrelated maritime-software company; neither is a page for Mortensen's employer.",
       "might_work": "DHI Seaport (Mortensen) directly, via Lior."
     },
     {
@@ -188,7 +148,7 @@
       "checked": "2026-10-10",
       "by": "agent: Burkitts+Mexico network pass (cloud, 2026-10-10)",
       "result": "wrong site",
-      "detail": "Only the NSW 2013 review cites Mortensen (2010) CFD surfing paper (p.68, 100); nothing on Xala.",
+      "detail": "Only the NSW 2013 review cites Mortensen (2010) CFD surfing paper (p.68, 100); nothing on Xala. Mexico appears in the PDFs only for the Yucatan geotextile reefs (Rendle thesis p.38, 124, 278-280; Blacka et al. 2013 Tables p.75-79, reference p.96), a different project and type; the 2007 Mount Maunganui paper has no text layer; the reef was unveiled in 2026, after all five papers.",
       "might_work": ""
     },
     {

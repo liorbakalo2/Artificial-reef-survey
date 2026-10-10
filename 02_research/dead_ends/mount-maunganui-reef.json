@@ -70,6 +70,16 @@
       "result": "not found",
       "detail": "EMODnet covers European seas only; the REST service returns HTTP 204 (empty) at this reef's coordinate (New Zealand), so the site is outside the grid. Only two of the 13 reefs are covered (Boscombe, Borth). Do not retry EMODnet for this reef.",
       "might_work": "Local sources instead: national or state bathymetry, a council or authority survey, Navionics / Google Earth readings (see REQUESTS_FOR_LIOR.md section 5)"
+    },
+    {
+      "what": "The 2008 as-completed multibeam survey of Mount Reef (north-arm base bags, seabed depth at completion)",
+      "kind": "database",
+      "where": "BoPRC / Focus RMG (Dec 2013) 'Assessment of Management Options' pp.23-25 (refers to it); Scarfe (2008) thesis (Jan 2007 survey only); ASR 'Mount Reef Installed' image",
+      "checked": "2026-10-06",
+      "by": "agent: Mount Maunganui verifier and 2026-09-25 verification (cloud)",
+      "result": "not found",
+      "detail": "BoPRC says the deepest north-arm bags and seabed depths of 3.0-4.0 m were 'evident in the 2008 survey' but not in the July 2013 survey (2.25-2.75 m; the small edge bags are 'most likely still intact but buried'), yet the 2008 survey itself is not published in any source found. What exists is the Jan 2007 survey of the 70 % complete reef (Scarfe 2008, Fig 4.22) and the July 2013 survey (BoPRC Fig 3 and 5, the traced default), plus the ASR 'Installed' colour-coded image with no scale or stated datum. So the as-built seabed at the reef is an assumption (-3.6 m CD) and the 2013 outline is a post-deflation state.",
+      "might_work": "Google Earth Pro imagery 2008-2010 on a calm clear day (Lior: G5); ASR Ltd / Raised Water Research (Lior: E6); University of Waikato (Scarfe, Discovery Marine Ltd) survey archive"
     }
   ]
 }

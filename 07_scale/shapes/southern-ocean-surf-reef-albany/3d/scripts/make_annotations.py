@@ -84,7 +84,7 @@ a.axhline(-0.74, color='gray', lw=0.6, ls='--'); a.text(-55, -0.6, 'LAT (derived
 a.axvspan(67, 234, color='orange', alpha=0.15, label='reef footprint, y = 67 ... 234 m')
 a.set_xlabel('y offshore from the beach-face line (m)'); a.set_ylabel('z (m AHD)'); a.set_title('Seabed profile: contours read from the RHDHV 2015 plan vs BMT 2018 soundings'); a.legend(fontsize=7.5, loc='lower left'); a.grid(alpha=0.3)
 a = ax[1]
-G = B.reef_grid(ver['design_bluecoast']['polygons_m'][0], 8, 2.481)
+G = B.reef_grid(ver['design_bluecoast']['polygons_m'][0], 8, json.load(open(os.path.join(HERE, '..', 'src', 'build_metrics.json')))['N_shape_exponent'])
 rid = G['ridge']; s = np.concatenate([[0], np.cumsum(np.hypot(*np.diff(rid, axis=0).T))]); sE = s[-1] - s
 zc = np.interp(sE, [0, 15, 40, s[-1] + 1], [-1, -1, -2, -2]); bed = B.zb(rid[:, 1])
 a.plot(sE, zc, 'r-', lw=2, label='crest ridge level (design table, assumption A7)'); a.plot(sE, bed, 'k-', lw=2, label='seabed under the ridge'); a.fill_between(sE, bed, zc, color='tab:orange', alpha=0.3)

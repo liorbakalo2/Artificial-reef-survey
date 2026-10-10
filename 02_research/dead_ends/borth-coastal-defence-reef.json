@@ -2,13 +2,13 @@
   "slug": "borth-coastal-defence-reef",
   "entries": [
     {
-      "what": "Borth feasibility study of May 2004 (ResearchGate, card R10) and its authors",
+      "what": "ResearchGate record 'Borth Multi-Purpose reef for Coastal Protection and Amenity' (card R10; the original Borth feasibility study, May 2004) and the study's authors",
       "kind": "report",
-      "where": "researchgate.net page cited as card R10; Borth Community website (R4)",
+      "where": "https://www.researchgate.net/publication/273133799_Borth_Multi-Purpose_reef_for_Coastal_Protection_and_Amenity ; Borth Community website (card R4)",
       "checked": "2026-09-24",
       "by": "agent: Borth card research (cloud)",
       "result": "bot check (not bypassed)",
-      "detail": "HTTP 403 via both WebFetch and direct curl, and no Wayback snapshot exists. Title, date and purpose of the study were corroborated through the Borth Community website instead; the authors of the May 2004 study are still unknown (card gap).",
+      "detail": "HTTP 403 via both WebFetch and direct curl, and no Wayback snapshot exists, so only a web-search snippet of the record was seen (existence and title). The May 2004 date, evaluation criteria and purpose were corroborated through the Borth Community website (R4) instead; the authors of the May 2004 study are still unknown (card gap).",
       "might_work": "Lior in a browser; Ceredigion County Council"
     },
     {
@@ -89,6 +89,16 @@
       "by": "agent: Borth media re-check (cloud)",
       "result": "imagery shows no structure",
       "detail": "The geograph photo shows a chain-link fence and 'Construction Operations KEEP OUT' sign with the beach behind and no reef visible offshore; the Wikimedia photo shows a barge delivering rock armour (the works, not the reef in place). Site context only. A video frame (QUB6s_F9dZc_0007) shows onshore stockpiling of rock, not the offshore reef.",
+      "might_work": ""
+    },
+    {
+      "what": "YouTube videos QUB6s_F9dZc 'Borth Beach Sea Defence Works August 2011' and dQieZVQUDEI 'borth sea defence 2012' as footage of the reef",
+      "kind": "video",
+      "where": "https://www.youtube.com/watch?v=QUB6s_F9dZc ; https://www.youtube.com/watch?v=dQieZVQUDEI",
+      "checked": "2026-09-25",
+      "by": "agent: Borth media re-check (cloud)",
+      "result": "other: video shows the works, not the reef",
+      "detail": "Silent amateur construction b-roll. The saved frame QUB6s_F9dZc_0007 shows houses, plant and a stockpile of quarried rock on the seafront (onshore works, not the offshore reef); dQieZVQUDEI is a Komatsu 450 separating rock and shingle (material preparation), judged on its description only (embed not possible, no download). The other two Borth videos (c4J6hfvynr4, AJXnUqQObJM) do show the reef under construction.",
       "might_work": ""
     }
   ]

@@ -110,6 +110,16 @@
       "result": "not found",
       "detail": "The ASR construction manual with individual bag capacities was not seen (card gap; only container totals such as T4 746.7 m3 from Rendle Table 5.3). The Fig 9 profile panels use an 'Eastings' axis around 4.21e5 that does not match the plan Eastings (4.11e5) and their scale could not be reconciled with the profile lines (88 units vs a 135 m line), so they were not used; only the plan survey panel was read.",
       "might_work": "ASR Ltd (Raglan NZ) or Raised Water Research (Lior: E6)"
+    },
+    {
+      "what": "YouTube video HeiYPXt85LM 'Boscombe Surf Reef - the regeneration of Boscombe' as a description of the reef structure",
+      "kind": "video",
+      "where": "https://www.youtube.com/watch?v=HeiYPXt85LM",
+      "checked": "2026-09-25",
+      "by": "agent: Boscombe media re-check (cloud)",
+      "result": "other: video not about the structure",
+      "detail": "Full transcript read: a regeneration and interview piece about the town (run-down history, Overstrand development, beach pods, pier refit). The reef is credited as the catalyst ('it was a catalyst for all of this investment') but the structure is never described or shown. Downgraded to 'mentions the reef briefly'. Another video, 7xMwL09a1TI 'the construction story so far', was classified from its title alone (no description, not transcribed).",
+      "might_work": ""
     }
   ]
 }

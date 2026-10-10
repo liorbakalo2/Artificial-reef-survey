@@ -32,13 +32,13 @@
       "might_work": "Google Earth Pro historical imagery Feb 2010-2012 (Lior: G9)"
     },
     {
-      "what": "surfer.com article 'India's first artificial reef... works' (Sean Collins) and web.archive.org copies of it and of the ASR Kovalam brochure",
+      "what": "surfer.com 'India's First Artificial Surfing Reef... Works.' (SURFER Admin, 2010-05-06, card R4): any plan, photo with scale or measurements; and web.archive.org copies of it and of the ASR Kovalam brochure",
       "kind": "web page",
-      "where": "https://www.surfer.com/features/india%E2%80%99s-first-artificial-reef%E2%80%A6works/ ; http://web.archive.org/web/2011*/asrltd.com/media/project-pdf/kovalam-coastal-protection.pdf",
+      "where": "https://www.surfer.com/features/india%E2%80%99s-first-artificial-reef%E2%80%A6works/ ; https://web.archive.org/web/20170520135959/http://www.surfer.com:80/features/india%E2%80%99s-first-artificial-reef%E2%80%A6works/ ; http://web.archive.org/web/2011*/asrltd.com/media/project-pdf/kovalam-coastal-protection.pdf",
       "checked": "2026-10-10",
       "by": "agent: Kovalam network pass (fresh agent, cloud)",
       "result": "bot check (not bypassed)",
-      "detail": "surfer.com returned HTTP 403 to a plain request (not bypassed). web.archive.org was not reachable from the cloud sandbox (connection reset by the proxy; WebFetch refuses the host), and the archive.org availability API showed no snapshot for surfingindia.net or the ASR PDF. An earlier PC run did fetch the ASR brochure from web.archive.org (registry img-06 / img-07), so the PDF is already held; the 2010 article text and any other contemporaneous photos are not.",
+      "detail": "The live surfer.com URL returns HTTP 403 (2026-09-24 and again in the 2026-10-10 network pass; not bypassed). The article text was read on 2026-09-24 through a Wayback snapshot of 2017-05-20 and is card reference R4: quotes from an ASR employee, a surf-club contact who had not yet visited the reef and an unnamed relay, with no measurements. In the 2026-10-10 pass web.archive.org was not reachable from the cloud sandbox (connection reset by the proxy; WebFetch refuses the host) and the archive.org availability API showed no snapshot for surfingindia.net or the ASR PDF, so the article's photos could not be checked for a vertical view or a scale. An earlier PC run did fetch the ASR brochure from web.archive.org (registry img-06 / img-07), so the PDF is already held.",
       "might_work": "Lior in a normal browser (Wayback copy of the surfer.com article); retry web.archive.org if the environment's network has changed"
     },
     {

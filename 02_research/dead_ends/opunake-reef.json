@@ -150,6 +150,16 @@
       "result": "not found",
       "detail": "EMODnet covers European seas only; the REST service returns HTTP 204 (empty) at this reef's coordinate (New Zealand), so the site is outside the grid. Only two of the 13 reefs are covered (Boscombe, Borth). Do not retry EMODnet for this reef.",
       "might_work": "Local sources instead: national or state bathymetry, a council or authority survey, Navionics / Google Earth readings (see REQUESTS_FOR_LIOR.md section 5)"
+    },
+    {
+      "what": "SurferToday 'The history of artificial surf reefs' (card R4; source of the '90 m long and 20 m wide' wording)",
+      "kind": "web page",
+      "where": "https://www.surfertoday.com/surfing/the-history-of-artificial-surf-reefs ; its web.archive.org snapshot",
+      "checked": "2026-10-10",
+      "by": "agent: Opunake citations audit and source audit (cloud)",
+      "result": "bot check (not bypassed)",
+      "detail": "Cloudflare HTTP 403, also on the Wayback copy (the same page is card R5 in the Cables card, where it was never read). The 2026-09-25 verification reported re-fetching it by curl and confirming '90 meters long and 20 meters wide', but the 2026-10-10 citations audit could not reproduce that and removed all 31 [R4] tags (each sat beside R2, which carries the same 90 x 20 m); R4 is now recorded as NOT READ with supports 'nothing'. The two runs disagree, so the 90 x 20 m figure rests on R1 (Newsroom) and R2 (Raised Water Research) only, one lineage.",
+      "might_work": "Lior in a browser: read the page and confirm the sentence; else leave R4 uncited"
     }
   ]
 }

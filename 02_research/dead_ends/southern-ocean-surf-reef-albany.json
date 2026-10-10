@@ -90,6 +90,56 @@
       "result": "not found",
       "detail": "EMODnet covers European seas only; the REST service returns HTTP 204 (empty) at this reef's coordinate (Australia), so the site is outside the grid. Only two of the 13 reefs are covered (Boscombe, Borth). Do not retry EMODnet for this reef.",
       "might_work": "Local sources instead: national or state bathymetry, a council or authority survey, Navionics / Google Earth readings (see REQUESTS_FOR_LIOR.md section 5)"
+    },
+    {
+      "what": "Raised Water Research Albany gallery images: granite quarry stockpiles, vessel-track map, surf photos and construction barge (registry img-08 and img-09 and others)",
+      "kind": "imagery",
+      "where": "https://raisedwaterresearch.com/spot/artificial-reef/australia/western-australia/albany-artificial-surf-reef/ (e.g. .../2025/05/Southern-Ocean-Surf-Reef-Granite-Boulder-Source.jpg, .../Southern-Ocean-Surf-Reef-Albany-Middleton-Beach-Sourcing.png)",
+      "checked": "2026-10-10",
+      "by": "agent: Albany shape agent (queue item 9, cloud)",
+      "result": "no plan or figure",
+      "detail": "The quarry photo shows only the rock source, the vessel-track map (AIS tracks of P.T. MONTO between Port Albany and Middleton Beach) only the rock-carrying route, and the surf photos (01, 02, 04, 07) and barge photo (06) carry no plan information; they were registered with display false or as context and not used for geometry. The two construction overviews (May 2025, ABC 'Supplied' vessels photo) are oblique with no scale and partly built, so not traced. The usable plan sources are the Bluecoast design plan (via RWR) and the City design table.",
+      "might_work": ""
+    },
+    {
+      "what": "Garmin / Navionics Marine Maps viewer at the Albany reef for depths (SonarChart and Nautical layers)",
+      "kind": "chart",
+      "where": "https://maps.garmin.com/en-US/marine at -35.018005, 117.920991",
+      "checked": "2026-10-10",
+      "by": "agent: Albany 3D agent (cloud, network Full); compiled from its SOURCES_3D.md / METHODS_3D.md",
+      "result": "other: viewer rendered no map in headless Chrome",
+      "detail": "The Garmin viewer (successor of webapp.navionics.com) showed no map tiles in the agent's own headless Chrome; no login or CAPTCHA was involved and nothing was bypassed. No depth was read, so the seabed under the reef and the pile height are untested by any chart.",
+      "might_work": "Lior: Navionics app readings at the points in the Albany 3D REQUESTS_FOR_LIOR.md (reef centroid, apex, tips, four shore-normal points); or Garmin Marine Maps in a normal browser"
+    },
+    {
+      "what": "AusSeabed / Geoscience Australia bathymetry services for King George Sound and Middleton Beach",
+      "kind": "database",
+      "where": "Geoscience Australia ArcGIS services; https://portal.ga.gov.au/persona/marine (AusSeabed)",
+      "checked": "2026-10-10",
+      "by": "agent: Albany 3D agent (cloud, network Full); compiled from its SOURCES_3D.md / METHODS_3D.md",
+      "result": "other: HTTP 403 to this environment",
+      "detail": "The GA ArcGIS services returned 403, so no AusSeabed grid or soundings were obtained for the reef site; the shape agent earlier also listed Navionics, EMODnet and AusSeabed as blocked.",
+      "might_work": "Lior: AusSeabed portal map query at -35.018, 117.921 (W8)"
+    },
+    {
+      "what": "Seabed levels at the Albany reef: the City's 2017 bathymetry, and a datum for the 2015 Royal HaskoningDHV Option B contour plot",
+      "kind": "database",
+      "where": "City of Albany documents (executive summary of the Detailed Design Report 2020, FAQs 2023, project profile 2024, 2015 feasibility summary, project page); RWR copy of the RHDHV 2015 Option B plan; BMT (2018) EIA Fig 6.9",
+      "checked": "2026-10-10",
+      "by": "agent: Albany 3D agent (cloud, network Full); compiled from its METHODS_3D.md",
+      "result": "not found",
+      "detail": "The 2017 City bathymetry (on which the 34,000 m3 volume is 'based') is not published, and none of the fetched City documents gives a seabed depth. The seabed therefore uses a 2015 design contour plot of unstated datum (georeferenced by hand, +-5 m) and the BMT 2018 spot soundings in m CD, which conflict: the 2.7 m CD sounding near the shore is 1.6 m (CD = AHD) or 2.3 m (CD = LAT) deeper than the profile, unresolved. 3D confidence is LOW; pile height and side slopes are not sourced.",
+      "might_work": "Lior: E9 (Bluecoast Detailed Design Report P19024 with the 2017 bathymetry, and the March 2025 as-built survey)"
+    },
+    {
+      "what": "Esri Wayback captures of the Albany reef between 2025-01-16 and 2026-01-20 (construction sequence)",
+      "kind": "imagery",
+      "where": "Esri Wayback releases (19 tested) at -35.018, 117.9207, z18",
+      "checked": "2026-10-10",
+      "by": "agent: Albany 3D agent (cloud, network Full); compiled from its METHODS_3D.md",
+      "result": "imagery shows no structure",
+      "detail": "All 19 releases repeat one of only three captures (2022-12-19, 2025-01-16, 2026-01-20), so there is no construction-sequence image and no second dated image of the finished reef; the 2025-01-16 frame is before construction and shows no reef.",
+      "might_work": "Google Earth Pro historical imagery after 2025-01-16 (Lior: G11)"
     }
   ]
 }

@@ -369,3 +369,315 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **3D check result (2026-10-10)**: Traced (20 vertices): area 10,918 m2; along-crest length 157 m (text 165 m, -4.7 %), across 117 m (text up to 110 m); crest edge bearing 281.5 deg (design 270-305). Nearest edge 71 m from the dry-sand beach-face line (about 150 m from the vegetation edge; text 140 m from landward toe, reference undefined). No depth information in the image.
 - **How used (update 2026-10-10)**: TRACED 2026-10-10: source sat2026 (primary as-built visible outline), outline version sat_2026 (METHOD.md 2a).
 - **annotated versions (added 2026-10-10)**: 07_scale/shapes/southern-ocean-surf-reef-albany/overlays/sat2026-01-20_trace.png, 07_scale/shapes/southern-ocean-surf-reef-albany/overlays/shoreline_fit.png, 07_scale/shapes/southern-ocean-surf-reef-albany/overlays/before_after_2025-01-16_vs_2026-01-20.png
+
+
+## southern-ocean-surf-reef-albany-img-14 - BMT 2018 EIA Figure 6.9: Option B and development footprint with depth contours (spot soundings in m CD), Middleton Beach
+- **file**: 07_scale/shapes/southern-ocean-surf-reef-albany/src/epa/EIA_page42_fig6-9_render130dpi.png
+- **kind**: survey_plot
+- **shows**: Aerial of Middleton Beach with spot depths in metres below chart datum (2.7, 3.4, 5, 5.7, 7.2, 7.3, 8.4), a thin 5 m line, MHW/MLW lines, the 2018 development area (red) and the concept Option B footprint (green), UTM50 GDA94 grid.
+- **state**: pre-construction (2014 imagery, 2018 figure)
+- **image date**: Produced 13 Aug 2018 (BMT); imagery Landgate Dec 2014
+- **citation**: BMT Western Australia Pty Ltd (2018). Middleton Beach Artificial Surf Reef Environmental Impact Assessment. Report 1345_001/1_Rev2, September 2018, prepared for City of Albany. EPA WA referral documentation, https://epa.wa.gov.au/sites/default/files/Referral_Documentation/Environmental%20Impact%20Assessment_0.pdf. Accessed 2026-10-10. Page 32 (PDF p. 42), Figure 6.9 (raster also saved as src/epa/EIA_fig6-9_embedded_raster.png).
+- **image URL**: https://epa.wa.gov.au/sites/default/files/Referral_Documentation/Environmental%20Impact%20Assessment_0.pdf
+- **source page**: https://www.epa.wa.gov.au/proposals/albany-artificial-surf-reef
+- **page / figure**: p. 32, Fig 6.9
+- **credit**: BMT / City of Albany; imagery Landgate
+- **licence**: not stated
+- **retrieved**: 2026-10-10
+- **used for**: 3d_seabed, cross_check
+- **How used for the model**: Soundings read at the printed labels and georeferenced with the UTM grid labels (annotated A3). 8.4 m CD at (x 188, y 315) agrees with the seabed profile (-8.0 m AHD); the 2.7 m near shore (x -53, y 32) is 1.6 m deeper than the profile: unresolved (METHODS_3D 4). Not used for the profile.
+- **annotated versions**: 07_scale/shapes/southern-ocean-surf-reef-albany/3d/annotated/A3_bmt2018_fig6-9_soundings_georeferenced.png
+- **3D check**: pending False - result 2026-10-10: far-field agrees, near-shore conflicts by 1.6 m (open).
+- **size**: 0.95 MB, [1075, 1521] px
+- **sha256**: 1629ed99d6ac42e93cafff27bc2d8fe2590b1c6b1e264df6bc4df52ac119dc67
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: 3D network run (fresh agent), 2026-10-10
+
+
+## southern-ocean-surf-reef-albany-img-15 - RHDHV 2018 appendix Figure 29: interpolated bathymetry of the base case (2016 survey) and four layouts, Middleton Beach
+- **file**: 07_scale/shapes/southern-ocean-surf-reef-albany/src/epa/EIA_appendix_page140_fig29_bathymetry_150dpi.png
+- **kind**: survey_plot
+- **shows**: Regional bathymetry colour map in 1 m bins (above 2 ... below -12 m, datum not stated) for the whole bay and close-ups of the model mesh with four candidate reef layouts.
+- **state**: pre-construction (2016 survey)
+- **image date**: bathymetry: 2016 survey
+- **citation**: BMT Western Australia Pty Ltd (2018). Middleton Beach Artificial Surf Reef Environmental Impact Assessment. Report 1345_001/1_Rev2, September 2018, prepared for City of Albany. EPA WA referral documentation, https://epa.wa.gov.au/sites/default/files/Referral_Documentation/Environmental%20Impact%20Assessment_0.pdf. Accessed 2026-10-10. Appendix: Royal HaskoningDHV (2018) AASR Shoreline Modelling, M&APA1805R001F0.0, 27 Jun 2018, page 40, Figure 29 (PDF p. 140).
+- **image URL**: https://epa.wa.gov.au/sites/default/files/Referral_Documentation/Environmental%20Impact%20Assessment_0.pdf
+- **source page**: https://www.epa.wa.gov.au/proposals/albany-artificial-surf-reef
+- **page / figure**: appendix p. 40, Fig 29
+- **credit**: Royal HaskoningDHV / City of Albany
+- **licence**: not stated
+- **retrieved**: 2026-10-10
+- **used for**: context, not_used
+- **How used for the model**: Registered for the record: source pixels are about 10 m and the datum is not stated, so it was not used for values. A future agent could digitise it to cross-check the -3 to -6 m bands (about 100-150 m offshore).
+- **annotated versions**: -
+- **3D check**: pending False - not used (resolution)
+- **size**: 2.14 MB, [1241, 1754] px
+- **sha256**: c67264805e62c15f695ba6be13ee6087e209c7fc6ee1c7f14a2fbf471cdae8d8
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: 3D network run (fresh agent), 2026-10-10
+
+
+## southern-ocean-surf-reef-albany-img-16 - RHDHV 2015 Option B "Long Right" plan with depth contours over Google Earth, Middleton Beach (Raised Water Research gallery)
+- **file**: 07_scale/shapes/southern-ocean-surf-reef-albany/src/rwr_images/rwr_RHDHV_optionB_contours_plan_2015.jpg
+- **kind**: plan_figure
+- **shows**: Plan view of the beach and surf zone with coloured seabed contours (legend -0.5, -1 ... -8 m) and the 2015 concept reef (crest -0.75 m, 46,620 m3, 120 m crest, toe slope 1:15), about 180-375 m offshore.
+- **state**: pre-construction concept (2015)
+- **image date**: 2015 (RHDHV feasibility)
+- **citation**: Royal HaskoningDHV (2015). Option B "Long Right" artificial surf reef, depth contours -0.5 to -8 m on Google Earth imagery (c) 2015 Google, DigitalGlobe; as reproduced by Raised Water Research (2019 upload) on its Albany spot page. Accessed 2026-10-10. Original report figure not located (City document 435 is the executive summary only).
+- **image URL**: https://raisedwaterresearch.com/wp-content/uploads/2019/12/Albany-Model2.jpg
+- **source page**: https://raisedwaterresearch.com/spot/artificial-reef/australia/western-australia/albany-artificial-surf-reef/
+- **page / figure**: gallery image Albany-Model2
+- **credit**: Royal HaskoningDHV; imagery Google / DigitalGlobe
+- **licence**: not stated
+- **retrieved**: 2026-10-10
+- **used for**: 3d_seabed
+- **How used for the model**: SEABED SOURCE: contour crossings -1 ... -7 m read along 8 shore-normal transects after georeferencing on Esri 2025-01-16 (4 control points, residual 3-6 m); medians give the profile in model.js (annotated A1). Datum not printed; read as AHD (assumption A3). The concept structure drawn here is not the built reef.
+- **annotated versions**: 07_scale/shapes/southern-ocean-surf-reef-albany/3d/annotated/A1_rhdhv_2015_contours_read_on_plan.png
+- **3D check**: pending False - used 2026-10-10: seabed profile; datum assumed AHD
+- **size**: 0.29 MB, [609, 354] px
+- **sha256**: 5278ae892368be056c8c6d7bcf2ca701bdf8e20fefd8a43cac19081d7a14b1a4
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: 3D network run (fresh agent), 2026-10-10
+
+
+## southern-ocean-surf-reef-albany-img-17 - RHDHV 2015 Option B concept, oblique Google Earth view with depth contours and legend (Raised Water Research gallery)
+- **file**: 07_scale/shapes/southern-ocean-surf-reef-albany/src/rwr_images/rwr_RHDHV_optionB_contours_oblique_2015.jpg
+- **kind**: plan_figure
+- **shows**: Oblique view of the concept reef mound on the 2015 seabed contours with the colour legend (-0.5 ... -8 m, 0, +1).
+- **state**: pre-construction concept (2015)
+- **image date**: 2015
+- **citation**: Royal HaskoningDHV (2015). Option B "Long Right" (46,620 m3, crest -0.75 m, crest length 120 m, toe slope 1:15), depth contours over Google Earth (c) 2015 Google, Image (c) 2015 DigitalGlobe; as reproduced by Raised Water Research. Accessed 2026-10-10.
+- **image URL**: https://raisedwaterresearch.com/wp-content/uploads/2019/12/Albany-Model1.jpg
+- **source page**: https://raisedwaterresearch.com/spot/artificial-reef/australia/western-australia/albany-artificial-surf-reef/
+- **page / figure**: gallery image Albany-Model1
+- **credit**: Royal HaskoningDHV; imagery Google / DigitalGlobe
+- **licence**: not stated
+- **retrieved**: 2026-10-10
+- **used for**: 3d_seabed, context
+- **How used for the model**: Legend source for the contour colours (read from this image) and a visual check that the contours run parallel to the beach about 100-150 m wide for -1 to -5 m. No measurement taken from it.
+- **annotated versions**: -
+- **3D check**: pending False - context 2026-10-10
+- **size**: 0.30 MB, [645, 363] px
+- **sha256**: 2b25f22a257ca15c67b6e0330dc6d3437c040e47b446c610adeb9c3061690466
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: 3D network run (fresh agent), 2026-10-10
+
+
+## southern-ocean-surf-reef-albany-img-18 - Artist rendering of the Albany reef and Middleton Beach with inset of a breaking wave (Raised Water Research)
+- **file**: 07_scale/shapes/southern-ocean-surf-reef-albany/src/rwr_images/rwr_albany_reef_rendering.jpg
+- **kind**: diagram
+- **shows**: Artist impression of the bay with a wave on the future reef.
+- **state**: design (rendering)
+- **image date**: 2019 upload (design stage)
+- **citation**: Raised Water Research (2019). Albany Artificial Surf Reef, rendering. https://raisedwaterresearch.com/spot/artificial-reef/australia/western-australia/albany-artificial-surf-reef/. Accessed 2026-10-10.
+- **image URL**: https://raisedwaterresearch.com/wp-content/uploads/2019/12/Albany-Reef-Rendering.jpg
+- **source page**: https://raisedwaterresearch.com/spot/artificial-reef/australia/western-australia/albany-artificial-surf-reef/
+- **page / figure**: gallery
+- **credit**: Raised Water Research / City of Albany
+- **licence**: not stated
+- **retrieved**: 2026-10-10
+- **used for**: context
+- **How used for the model**: Context only; not to scale.
+- **annotated versions**: -
+- **3D check**: pending False - not used
+- **size**: 0.42 MB, [842, 474] px
+- **sha256**: 90408c7a1403adfa396b7a519ab142685fdc0f30fec4240dd1113e492b5da654
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: 3D network run (fresh agent), 2026-10-10
+
+
+## southern-ocean-surf-reef-albany-img-19 - Aerial rendering of the submerged reef off Middleton Beach (Raised Water Research)
+- **file**: 07_scale/shapes/southern-ocean-surf-reef-albany/src/rwr_images/rwr_albany_rendering_aerial.jpg
+- **kind**: diagram
+- **shows**: Rendered dark footprint of the reef offshore of the beach and car park.
+- **state**: design (rendering)
+- **image date**: 2019 upload (design stage)
+- **citation**: Raised Water Research (2019). Albany Artificial Surf Reef, aerial rendering. https://raisedwaterresearch.com/spot/artificial-reef/australia/western-australia/albany-artificial-surf-reef/. Accessed 2026-10-10.
+- **image URL**: https://raisedwaterresearch.com/wp-content/uploads/2019/12/Albany-Rendering.jpg
+- **source page**: https://raisedwaterresearch.com/spot/artificial-reef/australia/western-australia/albany-artificial-surf-reef/
+- **page / figure**: gallery
+- **credit**: Raised Water Research / City of Albany
+- **licence**: not stated
+- **retrieved**: 2026-10-10
+- **used for**: context
+- **How used for the model**: Context only; not to scale.
+- **annotated versions**: -
+- **3D check**: pending False - not used
+- **size**: 0.21 MB, [641, 373] px
+- **sha256**: 3502adca74199f9136c86f6c8a938998d83d4e675a28f1854ea08f2f2a6c8981
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: 3D network run (fresh agent), 2026-10-10
+
+
+## southern-ocean-surf-reef-albany-img-20 - Early render of the Albany reef from the air (Raised Water Research)
+- **file**: 07_scale/shapes/southern-ocean-surf-reef-albany/src/rwr_images/rwr_albany_artificial_surfing_reef_render.jpg
+- **kind**: diagram
+- **shows**: Conceptual render with rock mound and waves.
+- **state**: concept (rendering)
+- **image date**: 2019 upload (concept)
+- **citation**: Raised Water Research (2019). Albany Artificial Surfing Reef render. https://raisedwaterresearch.com/spot/artificial-reef/australia/western-australia/albany-artificial-surf-reef/. Accessed 2026-10-10.
+- **image URL**: https://raisedwaterresearch.com/wp-content/uploads/2019/12/Albany-Artificial-Surfing-Reef.jpg
+- **source page**: https://raisedwaterresearch.com/spot/artificial-reef/australia/western-australia/albany-artificial-surf-reef/
+- **page / figure**: gallery
+- **credit**: Raised Water Research
+- **licence**: not stated
+- **retrieved**: 2026-10-10
+- **used for**: context
+- **How used for the model**: Context only.
+- **annotated versions**: -
+- **3D check**: pending False - not used
+- **size**: 0.04 MB, [619, 464] px
+- **sha256**: 669febb987a5b4ab1da8ad115552db92bda3bf87361e9b7a3cc8c7c839512c4e
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: 3D network run (fresh agent), 2026-10-10
+
+
+## southern-ocean-surf-reef-albany-img-21 - Still from a video titled "Midds Reef": wave breaking on the reef with the Albany coast behind (Raised Water Research gallery)
+- **file**: 07_scale/shapes/southern-ocean-surf-reef-albany/src/rwr_images/rwr_midds_reef_title_screenshot_2026-04-02.png
+- **kind**: video_frame
+- **shows**: Title card "Midds Reef - Western Australian Man Made Wave" over a clean left-hand wave breaking on the reef; headland and ship in the background.
+- **state**: as-built, in service
+- **image date**: about 2026 (video)
+- **citation**: Raised Water Research gallery still, uploaded 2026-04-02 (screenshot of a video; the video itself was not identified). https://raisedwaterresearch.com/spot/artificial-reef/australia/western-australia/albany-artificial-surf-reef/. Accessed 2026-10-10.
+- **image URL**: https://raisedwaterresearch.com/wp-content/uploads/2019/12/Screenshot-2026-04-02-at-4.03.07-PM.png
+- **source page**: https://raisedwaterresearch.com/spot/artificial-reef/australia/western-australia/albany-artificial-surf-reef/
+- **page / figure**: gallery
+- **credit**: Raised Water Research (video credit not stated)
+- **licence**: not stated
+- **retrieved**: 2026-10-10
+- **used for**: context, camera_match
+- **How used for the model**: Not measured. Possible camera-match candidate (wave breaking over the crest), no camera data.
+- **annotated versions**: -
+- **3D check**: pending False - not used
+- **size**: 7.05 MB, [2390, 1392] px
+- **sha256**: 104399bab168eaab71ff04693480ad7d79e60fa3450b25cee2433fe054937aea
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: 3D network run (fresh agent), 2026-10-10
+
+
+## southern-ocean-surf-reef-albany-img-22 - Still of a physical model test of the reef in the Queensland Government Hydraulics Laboratory (Raised Water Research gallery)
+- **file**: 07_scale/shapes/southern-ocean-surf-reef-albany/src/rwr_images/rwr_physical_model_QLD_hydraulics_lab_screenshot_2026-04-02.png
+- **kind**: video_frame
+- **shows**: Two technicians surveying a gravel mock-up of a reef in a wave basin (physical modelling mentioned in the Detailed Design Report).
+- **state**: design (physical model)
+- **image date**: design stage (about 2019-2020)
+- **citation**: Raised Water Research gallery still, uploaded 2026-04-02 (video screenshot). https://raisedwaterresearch.com/spot/artificial-reef/australia/western-australia/albany-artificial-surf-reef/. Accessed 2026-10-10.
+- **image URL**: https://raisedwaterresearch.com/wp-content/uploads/2019/12/Screenshot-2026-04-02-at-4.50.30-PM.png
+- **source page**: https://raisedwaterresearch.com/spot/artificial-reef/australia/western-australia/albany-artificial-surf-reef/
+- **page / figure**: gallery
+- **credit**: Raised Water Research / Queensland Government Hydraulics Laboratory
+- **licence**: not stated
+- **retrieved**: 2026-10-10
+- **used for**: context
+- **How used for the model**: Context only: confirms physical model testing; no dimensions legible.
+- **annotated versions**: -
+- **3D check**: pending False - not used
+- **size**: 3.76 MB, [2518, 1414] px
+- **sha256**: adf5ad05de3f31531162e516316dcde336fd0070f48b62ff1ab8e10566f11e9b
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: 3D network run (fresh agent), 2026-10-10
+
+
+## southern-ocean-surf-reef-albany-img-23 - Esri World Imagery Wayback release 6543, Middleton Beach, z18, r=250 m (captured 2022-12-19)
+- **file**: 07_scale/shapes/southern-ocean-surf-reef-albany/src/esri_wayback6543_2022-12-19_z18.png
+- **kind**: satellite
+- **shows**: The site before construction: surf zone and bar, no rock. Identical in 8 Wayback releases (2024-10 ... 2025-09).
+- **state**: pre-construction (2022-12-19)
+- **image date**: 2022-12-19
+- **citation**: Esri, Maxar, Earthstar Geographics, and the GIS User Community (2022). World Imagery Wayback release 6543, image captured 2022-12-19. https://wayback.maptiles.arcgis.com/arcgis/rest/services/World_Imagery/WMTS/1.0.0/default028mm/MapServer/tile/6543/{z}/{y}/{x}. Retrieved 2026-10-10.
+- **image URL**: https://wayback.maptiles.arcgis.com/arcgis/rest/services/World_Imagery/WMTS/1.0.0/default028mm/MapServer/tile/6543/{z}/{y}/{x}
+- **source page**: Esri Wayback (metadata layer SRC_DATE2)
+- **page / figure**: centre -35.018, 117.9207, r=250 m, z18, 1022 x 1022 px; sidecar .geo.json
+- **credit**: Esri, Maxar, Earthstar Geographics, and the GIS User Community
+- **licence**: Esri/Maxar imagery terms (not an open licence); private research copy only
+- **retrieved**: 2026-10-10
+- **used for**: context, cross_check
+- **How used for the model**: Shows the pre-construction bar and water colour; confirms no earlier structure. No values taken. The Wayback survey of 2024-10 ... 2026-09 found only three distinct captures (2022-12-19, 2025-01-16, 2026-01-20).
+- **annotated versions**: -
+- **3D check**: pending False - context
+- **size**: 1.55 MB, [1022, 1022] px
+- **sha256**: 7b07f0ff1a789734602be107ff31d2fea8e1bcb6e51ab436a91819cf89453300
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: 3D network run (fresh agent), 2026-10-10
+
+
+## southern-ocean-surf-reef-albany-img-24 - Albany 3D model: seabed profile (contour crossings, BMT soundings) and crest-ridge section
+- **file**: 07_scale/shapes/southern-ocean-surf-reef-albany/3d/annotated/A2_seabed_profile_and_crest_section.png
+- **kind**: diagram
+- **shows**: Profile used in the model against the contour crossings (median, IQR) and the two BMT soundings under both datum readings; section along the ridge.
+- **state**: model (LOW confidence)
+- **image date**: 2026-10-10
+- **citation**: Own figure from RHDHV (2015), BMT (2018) and City of Albany design values; generated by 3d/scripts/make_annotations.py, 2026-10-10.
+- **image URL**: 
+- **source page**: 
+- **page / figure**: A2
+- **credit**: this project
+- **licence**: private
+- **retrieved**: 2026-10-10
+- **used for**: 3d_seabed, 3d_crest, cross_check
+- **How used for the model**: Documents the seabed profile and the unresolved near-shore conflict.
+- **annotated versions**: -
+- **3D check**: pending False - made 2026-10-10
+- **size**: 0.14 MB, [1540, 572] px
+- **sha256**: 50609013df1b6d13a1c29f2de35fb192fe8c076c3ec680eff5fda20a92a416ed
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: 3D network run (fresh agent), 2026-10-10
+
+
+## southern-ocean-surf-reef-albany-img-25 - Albany 3D model: plan view preview (design outline, 0 m AHD)
+- **file**: 07_scale/shapes/southern-ocean-surf-reef-albany/3d/preview_plan.png
+- **kind**: diagram
+- **shows**: Plan view of the modelled reef on the modelled seabed with grid and scale bars.
+- **state**: model
+- **image date**: 2026-10-10
+- **citation**: Own render of 3d/index.html (three.js), 2026-10-10.
+- **image URL**: 
+- **source page**: 
+- **page / figure**: preview
+- **credit**: this project
+- **licence**: private
+- **retrieved**: 2026-10-10
+- **used for**: context
+- **How used for the model**: Model preview.
+- **annotated versions**: -
+- **3D check**: pending False - made 2026-10-10
+- **size**: 0.35 MB, [1400, 900] px
+- **sha256**: d7aaf9c493dc7ac80e244376965e66aea5ca3d93788e8b8bce93131464a234d7
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: 3D network run (fresh agent), 2026-10-10
+
+
+## southern-ocean-surf-reef-albany-img-26 - Albany 3D model: oblique view from the sea, vertical exaggeration x2
+- **file**: 07_scale/shapes/southern-ocean-surf-reef-albany/3d/preview_oblique.png
+- **kind**: diagram
+- **shows**: Oblique view of the modelled reef under a translucent water surface at 0 m AHD.
+- **state**: model
+- **image date**: 2026-10-10
+- **citation**: Own render of 3d/index.html (three.js), 2026-10-10.
+- **image URL**: 
+- **source page**: 
+- **page / figure**: preview
+- **credit**: this project
+- **licence**: private
+- **retrieved**: 2026-10-10
+- **used for**: context
+- **How used for the model**: Model preview.
+- **annotated versions**: -
+- **3D check**: pending False - made 2026-10-10
+- **size**: 0.42 MB, [1400, 900] px
+- **sha256**: 68d81dbf2230a57784bc05ce73a94ec393f333f66c25adff0ae89a02ce985341
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: 3D network run (fresh agent), 2026-10-10

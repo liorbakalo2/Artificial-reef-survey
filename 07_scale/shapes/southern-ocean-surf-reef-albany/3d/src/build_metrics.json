@@ -1,27 +1,27 @@
 {
- "N_shape_exponent": 2.481,
+ "N_shape_exponent": 2.734,
  "density_t_m3": 1.847,
  "LAT_AHD": -0.74,
  "HAT_pred_AHD": 0.66,
  "design_bluecoast": {
   "area_m2": 13105,
   "volume_m3": 34000,
-  "volume_unc_m3": 8293,
+  "volume_unc_m3": 7855,
   "tonnes_est": 62800,
-  "max_height_m": 6.12,
+  "max_height_m": 5.96,
   "mean_height_m": 2.59,
-  "volume_unfitted_loft_N1": 21106,
+  "volume_unfitted_loft_N1": 20826,
   "sensitivities_m3": {
-   "bed_deeper_1m": 42293,
-   "bed_shallower_1m": 25815,
-   "bed_deeper_0.74m_if_LAT": 40137,
-   "crest_all_-1.0": 40588,
-   "crest_all_-2.0": 32296,
-   "ridge_offset_5m": 33169,
-   "ridge_offset_14m": 34770
+   "bed_deeper_1m": 41677,
+   "bed_shallower_1m": 26145,
+   "bed_deeper_0.74m_if_LAT": 39712,
+   "crest_all_-1.0": 40377,
+   "crest_all_-2.0": 32605,
+   "ridge_offset_5m": 32821,
+   "ridge_offset_14m": 35220
   },
   "ridge_length_m": 143.4,
-  "area_above_minus2_m2": 962,
+  "area_above_minus2_m2": 860,
   "bed_at_outline_y_min_max": [
    -2.12,
    -7.39
@@ -29,23 +29,23 @@
  },
  "sat_2026": {
   "area_m2": 10919,
-  "volume_m3": 30226,
-  "volume_unc_m3": 6795,
-  "tonnes_est": 55829,
-  "max_height_m": 6.05,
+  "volume_m3": 30273,
+  "volume_unc_m3": 6471,
+  "tonnes_est": 55916,
+  "max_height_m": 5.9,
   "mean_height_m": 2.77,
-  "volume_unfitted_loft_N1": 18623,
+  "volume_unfitted_loft_N1": 18374,
   "sensitivities_m3": {
-   "bed_deeper_1m": 37021,
-   "bed_shallower_1m": 23451,
-   "bed_deeper_0.74m_if_LAT": 35254,
-   "crest_all_-1.0": 34992,
-   "crest_all_-2.0": 28197,
-   "ridge_offset_5m": 29456,
-   "ridge_offset_14m": 30933
+   "bed_deeper_1m": 36456,
+   "bed_shallower_1m": 23802,
+   "bed_deeper_0.74m_if_LAT": 34883,
+   "crest_all_-1.0": 34799,
+   "crest_all_-2.0": 28520,
+   "ridge_offset_5m": 29206,
+   "ridge_offset_14m": 31350
   },
   "ridge_length_m": 134.6,
-  "area_above_minus2_m2": 1049,
+  "area_above_minus2_m2": 1011,
   "bed_at_outline_y_min_max": [
    -2.31,
    -7.32

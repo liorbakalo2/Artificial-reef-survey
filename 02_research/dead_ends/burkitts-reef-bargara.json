@@ -2,16 +2,6 @@
   "slug": "burkitts-reef-bargara",
   "entries": [
     {
-      "what": "Jackson and Corbett (2007) 'Review of Existing Multi-Functional Artificial Reefs', Coasts and Ports 2007 (for Burkitts dimensions or plan)",
-      "kind": "paper",
-      "where": "ICCE / Griffith / International Coastal Management copies; Coastal Restoration Trust of NZ copy https://ref.coastalrestorationtrust.org.nz/site/assets/files/7954/2007_cp-review_mfar.pdf",
-      "checked": "2026-09-24",
-      "by": "agent: Burkitts card research (cloud/PC); lead found by 2026-10-10 web search",
-      "result": "other: access blocked, not read",
-      "detail": "Card gap: the paper could not be fetched directly (access blocked), so it is not read. A 2026-10-10 web search found a PDF on the Coastal Restoration Trust of NZ reference site, but the container network was blocked at that time, so the PDF was not opened. Not in papers/. Unknown whether it holds any Burkitts plan; it may only repeat the ~300 m3 / A$10,000 facts.",
-      "might_work": "Retry fetching the Coastal Restoration Trust PDF now that the network is Full; else Lior: P10 / W9"
-    },
-    {
       "what": "Swellnet forum thread 'An actual functioning man-made reef. Burkitts Reef, Bargara' (Dicky Roberts); Swellnet comment thread 540429 (truebluebasher)",
       "kind": "web page",
       "where": "https://www.swellnet.com/forums/surfing-reef-designs/577692 ; https://www.swellnet.com (comment 540429)",
@@ -58,8 +48,8 @@
       "checked": "2026-10-10",
       "by": "agent: Burkitts shape agent (queue item 9, cloud)",
       "result": "imagery shows no structure",
-      "detail": "The natural basalt rock platform is visible (traced, 31,485 m2 in frame, LOW confidence) but the sub-zone where about 12 boulders (about 300 m3) were moved in 1997 cannot be identified in it, and no source locates it. Tide state of the image is unknown (the waterline edge could shift tens of metres) and the frame cuts the platform at its south end. Drawing the platform would present the stage as the reef, so the shape is hidden.",
-      "might_work": "Dated low-tide imagery (Esri Wayback 2014+, Google Earth Pro history: Lior G10), 1997-98 aerials, or an account from Redgard / Bargara Boardriders (E12)"
+      "detail": "The natural basalt rock platform is visible (traced, 31,485 m2 in frame, LOW confidence) but the sub-zone where about 12 boulders (about 300 m3) were moved in 1997 cannot be identified in this image by eye. Tide state of the image is unknown (the waterline edge could shift tens of metres) and the frame cuts the platform at its south end. Later the same day the network pass located Redgard's Phase 3 work zones from Jackson and Corbett (2007) Fig 1 (oblique aerial) and georeferenced them on the Esri Wayback image of 2016-07-31 (low confidence, +-25 m); that is not a survey of the 1997 works, so drawing the whole platform would still present the stage as the reef.",
+      "might_work": "Dated low-tide imagery (Google Earth Pro history: Lior G10), 1997-98 aerials (QImagery needs a token), or an account from Redgard / Bargara Boardriders (E12)"
     },
     {
       "what": "YouTube videos 'Diving Bargara, Burkitt's Reef Marine Park' (wuJ__7Js-cY) and 'Surfing at Bargara Beach, QLD' (O3bEn8029XQ), and their extracted frames",
@@ -70,16 +60,6 @@
       "result": "wrong site",
       "detail": "Lior (2026-09-25) found that neither shows the artificial reef. The first is shore-dive footage at the Burkitts Reef Marine Park dive site (sandy / rocky bottom, hard coral bommies, fish) sharing the name; the second is generic Bargara Beach surf-tourism footage with no mention of Burkitts Reef. Frames wuJ__7Js-cY_0025 and _0205 were rejected (registry img-06, img-07, display false). The dive site's depth to about 9 m is therefore not used as seabed for the reef.",
       "might_work": ""
-    },
-    {
-      "what": "papers/ folder: any mention or plan of Burkitts Reef (Bargara) in Lior's 5 PDFs",
-      "kind": "paper",
-      "where": "papers/ folder (PyMuPDF text-layer grep for Burkitt, Bargara, Bundaberg, Hervey / Harvey Bay, 2026-10-10)",
-      "checked": "2026-10-10",
-      "by": "agent: dead-ends compilation (papers/ scan, cloud)",
-      "result": "no plan or figure",
-      "detail": "Only one mention in the five PDFs: Rendle (2016) thesis Table 2.1, p.41, one row 'Bargara 1997, Harvey [Hervey] Bay QLD, 300 m3, rock, A$10,000' (same facts as the card). No plan, dimensions or location anywhere. Mead and Borrero 2011, Blacka et al. 2013 and the Narrowneck 2023 paper have no Burkitts or Bargara text. The Mount Maunganui 2007 paper has no text layer (image pages, not OCR'd).",
-      "might_work": "Not in papers/; see P10 entry above"
     },
     {
       "what": "Queensland historical aerial photos 1990s (QImagery archive, before/after Feb 1997)",
@@ -240,6 +220,16 @@
       "result": "not found",
       "detail": "EMODnet covers European seas only; the REST service returns HTTP 204 (empty) at this reef's coordinate (Australia), so the site is outside the grid. Only two of the 13 reefs are covered (Boscombe, Borth). Do not retry EMODnet for this reef.",
       "might_work": "Local sources instead: national or state bathymetry, a council or authority survey, Navionics / Google Earth readings (see REQUESTS_FOR_LIOR.md section 5)"
+    },
+    {
+      "what": "Instagram post @abcbrisbane C2n6UcWvcGV (2024-01-27/28) about the ABC story (card R14)",
+      "kind": "web page",
+      "where": "https://www.instagram.com/abcbrisbane/p/C2n6UcWvcGV/",
+      "checked": "2026-10-10",
+      "by": "agent: Burkitts source audit (cloud)",
+      "result": "login needed",
+      "detail": "Social-media post, not read in full; lead only. It corroborates the quote text of R13 (the X post, HTTP 402) and was the independent corroboration that kept that quote in the card. No location or dimension information expected.",
+      "might_work": ""
     }
   ]
 }

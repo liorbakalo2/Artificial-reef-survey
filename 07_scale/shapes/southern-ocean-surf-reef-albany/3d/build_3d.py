@@ -46,7 +46,10 @@ def ridge_line(pts, nchain, offset):
     raise RuntimeError('ridge offset failed')
 
 
-def reef_grid(pts, nchain, N, shift=0.0, crest=CREST, step=1.0, x0=-80.0, y0=50.0, nx=160, ny=200, smooth=1.2):
+SLOPE_MAX = 0.5      # A8: no toe slope steeper than 1:2 (H <= 0.5 * distance to the toe line)
+
+
+def reef_grid(pts, nchain, N, shift=0.0, crest=CREST, step=1.0, x0=-80.0, y0=50.0, nx=160, ny=200, smooth=1.2, slope_max=SLOPE_MAX):
     P, Li = ridge_line(pts, nchain, crest['offset'])
     Ls = Li.length
     xs = x0 + (np.arange(nx) + 0.5) * step; ys = y0 + (np.arange(ny) + 0.5) * step
@@ -59,7 +62,8 @@ def reef_grid(pts, nchain, N, shift=0.0, crest=CREST, step=1.0, x0=-80.0, y0=50.
     b = zb(Y[inside], shift)
     z = zc + (b - zc) * (dc / (dc + dt + 1e-9)) ** N
     z = np.maximum(z, b)
-    H = np.zeros_like(X); H[inside] = z - b[:]            # height above bed
+    hh = np.minimum(z - b, slope_max * dt) if slope_max else z - b
+    H = np.zeros_like(X); H[inside] = hh            # height above bed
     if smooth:
         w = gaussian_filter(inside.astype(float), smooth); Hs = gaussian_filter(H, smooth) / np.maximum(w, 1e-6)
         H = np.where(inside, Hs, 0.0); H = np.minimum(H, np.where(inside, 99, 0))
@@ -69,7 +73,7 @@ def reef_grid(pts, nchain, N, shift=0.0, crest=CREST, step=1.0, x0=-80.0, y0=50.
 
 
 def calibrate_N(pts, nchain, target=34000.0):
-    lo, hi = 0.8, 6.0
+    lo, hi = 0.8, 12.0
     for _ in range(40):
         mid = (lo + hi) / 2
         v = reef_grid(pts, nchain, mid)['vol']

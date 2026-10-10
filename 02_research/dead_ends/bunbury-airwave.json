@@ -32,13 +32,13 @@
       "might_work": "Wayback copies or the podcast host's own page (not tried)"
     },
     {
-      "what": "Swellnet forum single post https://www.swellnet.com/comment/625653 and Swellnet / The Inertia / BeachGrit opinion pieces on the Airwave",
+      "what": "Swellnet forum single post https://www.swellnet.com/comment/625653 and The Inertia 2019-12-18 'The Inflatable Artificial Reef in Australia Popped During Installation' (a Gemini citation)",
       "kind": "web page",
-      "where": "https://www.swellnet.com/comment/625653 ; theinertia.com; beachgrit.com",
+      "where": "https://www.swellnet.com/comment/625653 ; theinertia.com (2019-12-18 article named by Gemini)",
       "checked": "2026-10-05",
       "by": "agent: Bunbury card research and verification (cloud)",
       "result": "bot check (not bypassed)",
-      "detail": "The single-post URL still fails (connection reset); the parent thread https://www.swellnet.com/forums/surfing-reef-designs/472884 (pages 1-2) loaded on 2026-10-05 and is cited as R15 (secondary, anonymous forum posts). Several Swellnet, The Inertia and BeachGrit pieces returned HTTP 403 and could not be read in full, so primary surfer voices on the Airwave are missing from the card. The Inertia 2019-12-18 'Inflatable Artificial Reef in Australia Popped' (a Gemini citation) also gives 403.",
+      "detail": "The single-post URL still fails (connection reset); the parent thread https://www.swellnet.com/forums/surfing-reef-designs/472884 (pages 1-2) loaded on 2026-10-05 and is cited as R15 (secondary, anonymous forum posts). The Inertia 2019-12-18 article named by Gemini returns 403 to scripts (the real Inertia article, R6, has a different title and was read). Several Swellnet, The Inertia, SurferToday and BeachGrit pages were first blocked (HTTP 403) but were later read (BeachGrit R17 with a standard browser user-agent, HTTP 200) and are card references; the card's 'surfers' view' paragraph still says primary surfer voices were not found in detail, so surfer commentary on the Airwave remains thin.",
       "might_work": "Lior in a normal browser for surfer commentary"
     },
     {
