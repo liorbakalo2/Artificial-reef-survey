@@ -118,12 +118,11 @@ def main():
         Z = G['Zs']; above2 = float(np.nansum(Z > -2.0) * 1.0)
         v = dict(id=vid, name=name, date=date, kind='design_drawing' if vid.startswith('design') else 'satellite_trace', source_ids=srcs, method=method,
                  level='toe = seabed (z_b); crest ridge -1.0 / -2.0 m AHD (design table)', edge_level_MSL=None, area_m2=round(G['area']), volume_m3=round(vol), volume_unc_m3=round(unc),
-                 tonnes_est=round(vol * dens), tonnes_range=[round((vol - unc) * dens), round((vol + unc) * dens)], max_height_m=round(G['hmax'], 2), mean_height_m=round(G['hmean'], 2),
+                 tonnes_est=round(vol * dens), tonnes_range=[round((vol - unc) * dens), round((vol + unc) * dens)], max_height_m=round(G['hmax'], 2), note=('DEFAULT. Design drawing of the built version; volume fitted to the stated 34,000 m3.' if vid.startswith('design') else 'Result, not a fit: same seabed, crest rule and exponent as the design version.'), mean_height_m=round(G['hmean'], 2),
                  volume_unfitted_loft_N1=round(G1['vol']), sensitivities_m3=sens, area_above_minus2_m2=round(above2),
                  ridge_xy=[[round(float(a), 2), round(float(b), 2)] for a, b in G['ridge']], ridge_length_m=round(G['Ls'], 1),
                  bbox_m=[round(float(np.ptp([p[0] for p in pts])), 1), round(float(np.ptp([p[1] for p in pts])), 1)], outline_m=[poly_o],
                  grid=dict(x0=-80.0, y0=50.0, step=1.0, nx=160, ny=200, h_cm_b64=b64(Hcm, np.int16), zone_b64=b64(np.where(G['inside'], 1, 0), np.uint8)))
-        note = ver[vid].get('note')
         versions.append(v)
         metrics[vid] = {k: v[k] for k in ('area_m2', 'volume_m3', 'volume_unc_m3', 'tonnes_est', 'max_height_m', 'mean_height_m', 'volume_unfitted_loft_N1', 'sensitivities_m3', 'ridge_length_m', 'area_above_minus2_m2')}
         # bed depth at key points of the outline (m AHD)
