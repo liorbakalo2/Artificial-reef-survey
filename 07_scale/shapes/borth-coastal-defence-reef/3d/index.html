@@ -335,7 +335,7 @@ $('cap').innerHTML = `<b>${M.name}</b><br>z = 0 at MSL (z_MSL = z_ODN − 0.31).
 (function mkSources() {
   const rows = M.provenance.map(p => `<tr><td>${p.parameter}</td><td>${p.value} ${p.unit && p.unit !== '-' ? '' : ''}</td><td>${p.source_id}</td><td>${p.method}</td><td class="${p.estimated ? 'est' : ''}">${p.uncertainty}${p.estimated ? ' (estimated)' : ''}</td></tr>`).join('');
   $('t3').innerHTML = `<h3>3D confidence: <span class="badge b-${C.level}">${C.level.toUpperCase()}</span></h3><p>${C.reason}</p>
-  <h3>Provenance (every model value)</h3><table><tr><th>Parameter</th><th>Value</th><th>Source</th><th>Method</th><th>Uncertainty</th></tr>${rows}</table>
+  <p class="small">Source register (what was read off each source and how), methods, assumptions A1-A14, decisions DEC1-DEC14 and confidence per element: <b>Methods tab, button &ldquo;Sources, assumptions, decisions&rdquo;</b>.</p><h3>Provenance (every model value)</h3><table><tr><th>Parameter</th><th>Value</th><th>Source</th><th>Method</th><th>Uncertainty</th></tr>${rows}</table>
   <h3>Datum levels (mODN to model z)</h3><table><tr><th>Level</th><th>mODN</th><th>m MSL</th><th>Source</th></tr>${allLevels.map(l => `<tr><td>${l.name}</td><td>${fmt(l.z_ODN)}</td><td>${fmt(l.z)}</td><td class="${l.estimated ? 'est' : ''}">${l.source}</td></tr>`).join('')}</table>`;
 })();
 
