@@ -1,4 +1,4 @@
-PASS file size 2111 KB < 3 MB
+PASS file size 2136 KB < 3 MB
 PASS HTML parses with balanced tags (errors=[], unclosed=[])
 PASS title is 'Artificial Surf Reefs Survey'
 PASS data has exactly the 13 slugs (missing=set(), extra=set())
@@ -85,10 +85,10 @@ PASS [3D] combined viewer 3d/combined/index.html exists and uses no CDN / import
 PASS [3D] every script of the combined viewer exists (missing=[])
 PASS [3D] every exported model has its data file and is loaded by the combined viewer (['borth-coastal-defence-reef', 'boscombe-surf-reef', 'bunbury-airwave', 'mount-maunganui-reef', 'palm-beach-gold-coast', 'prattes-reef-el-segundo'])
 PASS [3D] every model is either in the comparison or listed as 'not in comparison' with a reason ([])
-PASS [3D] combined export borth-coastal-defence-reef: footprint area vs model.js area including the toe berm and blanket (the mesh includes them): err 0.0351 relative (tolerance 0.25)
-PASS [3D] combined export borth-coastal-defence-reef: footprint centroid vs polygon centroid: err 2.05 m (tolerance 6)
+PASS [3D] combined export borth-coastal-defence-reef: footprint area vs model.js area including the toe berm and blanket (the mesh includes them): err 0.0353 relative (tolerance 0.25)
+PASS [3D] combined export borth-coastal-defence-reef: footprint centroid vs polygon centroid: err 2.09 m (tolerance 6)
 PASS [3D] combined export borth-coastal-defence-reef: crest level vs model.js: err 0.06 m (tolerance 0.2)
-PASS [3D] combined export borth-coastal-defence-reef: seabed falls away offshore (+z): err 6 deg (tolerance 20)
+PASS [3D] combined export borth-coastal-defence-reef: seabed falls away offshore (+z): err 6.01 deg (tolerance 20)
 PASS [3D] combined export borth-coastal-defence-reef: seabed crosses 0 m MSL on a beach inside the patch (waterline at offshore 80 m; the frame's y = 0 is not the shoreline): err 0 m (tolerance 1.5)
 PASS [3D] combined export boscombe-surf-reef: footprint area vs model.js toe polygon: err 0.204 relative (tolerance 0.25)
 PASS [3D] combined export boscombe-surf-reef: footprint centroid vs polygon centroid: err 0.257 m (tolerance 6)
@@ -116,7 +116,7 @@ PASS [3D] combined export prattes-reef-el-segundo: crest level vs model.js: err 
 PASS [3D] combined export prattes-reef-el-segundo: seabed falls away offshore (+z): err 7.94e-16 deg (tolerance 20)
 PASS [3D] combined export prattes-reef-el-segundo: seabed at the shoreline is near 0 m MSL: err 0.438 m (tolerance 1.5)
 INFO [3D] combined scene: borth-coastal-defence-reef ok; boscombe-surf-reef ok; bunbury-airwave ok; mount-maunganui-reef ok; palm-beach-gold-coast ok; prattes-reef-el-segundo ok; tolerances {'area_rel': 0.25, 'crest_m': 0.2, 'centroid_m': 6.0, 'shore_m': 1.5, 'offshore_deg': 20}
-INFO [3D] folder sizes: assets/images 37.1 MB, 3d/ 23.8 MB (page itself 2.06 MB)
+INFO [3D] folder sizes: assets/images 37.3 MB, 3d/ 24.2 MB (page itself 2.08 MB)
 PASS [3D] DOM: tab is the visible view
 PASS [3D] DOM: URL hash follows the selector: default = first built model
 PASS [3D] DOM: selector has one button per model + 'All (compare)' (7), exactly one pressed

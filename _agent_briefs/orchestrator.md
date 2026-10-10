@@ -122,7 +122,7 @@ All of them are in `REQUESTS_FOR_LIOR.md`:
 |---|---|---|---|---|
 | 2026-10-07 | `_agent_briefs/task_mm_update.md` | `07_scale/shapes/mount-maunganui-reef/` | `HANDOFF.md` section 0 + `3d/SOURCES_3D.md` CHECKPOINT | STOPPED 2026-10-07 (clean). Done: P2 OCR + figures, P3 read, Fig 3 check (not traced: corroborates the toe version), Oct 2006 bed read. NEXT (fresh agent): D1 in code (bed selector, bed_scenarios), volume table version x bed, register the 16 saved figures (img-23..38), card [Rn] refs, previews - from `3d/SOURCES_3D.md` "CHECKPOINT (2026-10-07 b ...)" |
 | 2026-10-07 | `_agent_briefs/task_narrowneck_verify.md` | `07_scale/shapes/narrowneck-gold-coast/` | `VERIFY.md` CHECKPOINT + `HANDOFF.md` | CUT OFF by the usage limit 2026-10-07 (no new checkpoint written). Fresh agent: start from the old `VERIFY.md` CHECKPOINT, but first list files in the folder changed on 2026-10-07 after it (partial work of the cut-off run) |
-| 2026-10-07 | `_agent_briefs/task_seabed_fixes.md` | Borth and Boscombe `3d/` | each reef's `HANDOFF.md` (Borth first) | Borth D6 DONE 2026-10-07 (option B; volumes now 30,119 / 28,919 / 25,504 m³). NEXT: (a) main/page agent: apply the typed-text edits in Borth `HANDOFF.md` section 7 item 1 to `04_build/data/models3d_caveats.json` + `models3d_curated.json`, then `python src/update_page.py --full`; (b) Boscombe D2 not started: fresh agent, Boscombe part of the task file |
+| 2026-10-07 | `_agent_briefs/task_seabed_fixes.md` | Borth and Boscombe `3d/` | each reef's `HANDOFF.md` (Borth first) | Borth D6 DONE 2026-10-07; Borth page texts + `update_page.py --full` DONE 2026-10-10 (cloud). Boscombe D2: see the 2026-10-10 row below |
 
 **When an agent finishes:**
 - save its report from the hand-back;

@@ -476,8 +476,8 @@
    "q": "Volume (rock)",
    "model": "{{versions/lidar_2022/volume_m3|n0}} m3 laser edge / {{versions/design_1020/volume_m3|n0}} m3 design foot / {{versions/sat_2024/volume_m3|n0}} m3 photo edge (+-4,600 m3 for 0.4 m of bed)",
    "stated": "no reef-only quantity at a primary source; Type 4 for the whole Phase 1: 42,000 t (NCE)",
-   "diff": "default Type 4 layer about 36,600 t, below 42,000 t",
-   "reason": "Volume = crest surface minus the modelled seabed. Only the bed under the rock matters, and it is a design level (-4.0 mODN derived); the three outline versions differ by up to 16 %.",
+   "diff": "default Type 4 layer about 36,100 t, below 42,000 t",
+   "reason": "Volume = crest surface minus the modelled seabed. Only the bed under the rock matters, and it is a design level (-4.0 mODN derived); the three outline versions differ by up to 15 %.",
    "status": "unresolved",
    "resolve": "A reef-only rock quantity from the contractor; a low-tide multibeam or imagery of the flanks below -2.3 mODN.",
    "section": "3.4; 4",
@@ -486,17 +486,17 @@
   },
   {
    "slug": "borth-coastal-defence-reef",
-   "q": "Offshore seabed (y > 335 m) deeper than the Fig 2 -4.0 m contour",
-   "model": "-4.7 m at y = 400 m and -5.1 m at y = 440 m (mODN)",
-   "stated": "HRPP576 Fig 2: -4.0 m contour at y 410-450 m; EMODnet cells 1.5 m shallower; Navionics chart zero -3.58 mODN",
-   "diff": "0.89 m deeper than Fig 2 (sd 0.14 m, n = 13)",
-   "reason": "Only the -3.0 m contour and the assumed anchor of -4.0 m at y = 335 m (plus the EMODnet gradient) were used offshore. The volumes under the rock are unaffected. A fix is proposed and will be rebuilt by the model agent; this page then follows model.js.",
-   "status": "open",
-   "resolve": "Add the Fig 2 -4.0 m contour as seabed nodes and start the EMODnet gradient from it (REQUESTS D6).",
+   "q": "Offshore seabed (y > 335 m) versus the Fig 2 -4.0 m contour",
+   "model": "follows the Fig 2 -4.0 m contour (traced nodes, plus assumed bridge and extension nodes); beyond it the EMODnet gradient -1.1 % (mODN)",
+   "stated": "HRPP576 Fig 2: -4.0 m contour at y 410-460 m; EMODnet cells 0.7-1.2 m shallower; Navionics chart zero -3.58 mODN",
+   "diff": "0.00 m at the 13 traced points (was 0.89 m deeper before the D6 fix of 2026-10-07)",
+   "reason": "The first build evaluated the seabed fit at y <= 335 m only and used an assumed -4.0 m anchor there, so it ignored the Fig 2 -4.0 m contour and the design bed nodes under the arm head. The D6 fix (option B) makes the contour a control; the bed under the arm head rose up to 0.7 m and the rock volumes fell 3.4-3.9 %.",
+   "status": "resolved",
+   "resolve": "Done (D6, 2026-10-07). Remaining: the -4.0 m level is bridged / extended by assumption at x -104..170 and x > 170; a sounding line or multibeam seaward of the reef would test it.",
    "section": "3.3; 4.4; 7",
    "ids": "hrpp576f2; N1",
    "ev": [
-    "0.89 m deeper than the -4"
+    "0.00 m (sd 0.00, n 13) for -4.0"
    ]
   },
   {

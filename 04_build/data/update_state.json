@@ -1,20 +1,20 @@
 {
- "updated": "2026-10-07 09:05",
+ "updated": "2026-10-10 20:32",
  "sig": {
   "models": {
    "borth-coastal-defence-reef": {
-    "viewer": "867c5e7cc16cfe26",
-    "model.js": "cac59596f051eb94",
-    "annotated": "0a0510b8b4f00a3a",
-    "shape.json": "e93aa9df4b66fca2",
-    "registry": "d7d06a5e9b1e2e82",
+    "viewer": "84bc947a9110391f",
+    "model.js": "3bd7b9a87acbe4ee",
+    "annotated": "826aa18903896b1f",
+    "shape.json": "cff033f702d25918",
+    "registry": "78a9900df2afc363",
     "card": "40c17c55df1bb4ce",
-    "config": "2450866ca854f8f9"
+    "config": "ef26b489de2476f0"
    },
    "boscombe-surf-reef": {
     "viewer": "852fc4a4694d2dbe",
     "model.js": "c9861120fb9045c7",
-    "annotated": "da159c02ffd04535",
+    "annotated": "75ba56d0cb183a8b",
     "shape.json": "b6b5a73f1edb3bb3",
     "registry": "7f418b01a570527f",
     "card": "cb6d4f12b45a54fa",
@@ -23,7 +23,7 @@
    "bunbury-airwave": {
     "viewer": "5c12c267d2f00f91",
     "model.js": "1895211668613000",
-    "annotated": "6f46188da55d114c",
+    "annotated": "5f6ffe80757bc223",
     "shape.json": "f78f81e31007f34e",
     "registry": "5b81179d65f3abd3",
     "card": "93a0e60c9449647a",
@@ -32,7 +32,7 @@
    "mount-maunganui-reef": {
     "viewer": "b9de8364493b088f",
     "model.js": "42860ea45fbf54b2",
-    "annotated": "9059e371a227efa9",
+    "annotated": "66b0e754f7a2b3af",
     "shape.json": "503941b10795c22d",
     "registry": "9a4d017aaf1fae56",
     "card": "3b72ac72353b2095",
@@ -41,7 +41,7 @@
    "palm-beach-gold-coast": {
     "viewer": "3811e3d6d4caa5fe",
     "model.js": "0ab22fe8e7b0710d",
-    "annotated": "a4f1c2f523565aab",
+    "annotated": "6a1b78da17cf9d64",
     "shape.json": "9d74d332271d31bb",
     "registry": "ef70a84962615af7",
     "card": "ce501df9e7b36401",
@@ -50,7 +50,7 @@
    "prattes-reef-el-segundo": {
     "viewer": "1b23230d2ecbf6f7",
     "model.js": "39b9a34a88b79b48",
-    "annotated": "40609f4deb584b6e",
+    "annotated": "c3f4f1239e62c46a",
     "shape.json": "caf79e64c4de25f0",
     "registry": "b5cec27e7ef7914c",
     "card": "326ef4bb8e12e8d6",
@@ -58,7 +58,7 @@
    }
   },
   "hold": "498ea894054eb75f",
-  "src": "08467b728bb719f1"
+  "src": "426293d9a52fbd50"
  },
  "snapshot": {
   "borth-coastal-defence-reef": {
@@ -66,24 +66,24 @@
    "versions": {
     "lidar_2022": {
      "area_m2": 8675.0,
-     "volume_m3": 31336.0
+     "volume_m3": 30119.0
     },
     "design_1020": {
      "area_m2": 6989.0,
-     "volume_m3": 30091.0
+     "volume_m3": 28919.0
     },
     "sat_2024": {
      "area_m2": 5743.0,
-     "volume_m3": 26400.0
+     "volume_m3": 25504.0
     }
    },
    "key_numbers": {
     "Footprint (plan outline)": "8,675 m2 laser-survey edge (default, about -2.3 mODN); 6,989 m2 design rock foot; 5,743 m2 visible rock in the 2024 photo",
-    "Rock volume": "31,336 m3 (laser edge, default); 30,091 m3 (design foot); 26,400 m3 (photo edge); +-4,600 m3 for a bed error of 0.4 m",
+    "Rock volume": "30,119 m3 (laser edge, default); 28,919 m3 (design foot); 25,504 m3 (photo edge); +-4,600 m3 for a bed error of 0.4 m",
     "Crest levels": "north arm +0.50 mODN (+0.19 m MSL), tail +1.00, head edge +0.00 rising to +0.50; oval breakwater +1.50 mODN (+1.19 m MSL)",
     "Height above the seabed": "north arm about 4.5 m, oval about 5.5 m (+-0.5 m)",
-    "Seabed under the rock": "north foot -4.04 mODN mean (-4.72 to -2.51); oval -3.95 (-4.21 to -3.62)",
-    "Seabed seaward of the reef (y > 335 m)": "0.89 m deeper than the HRPP576 Fig 2 -4.0 m contour (sd 0.14 m, n = 13)",
+    "Seabed under the rock": "north foot -3.86 mODN mean (-4.05 to -2.51); oval -3.95 (-4.21 to -3.62)",
+    "Seabed seaward of the reef (y > 335 m)": "0.00 m against the HRPP576 Fig 2 -4.0 m contour (n = 13; the contour is a control since D6)",
     "Datum and tides": "z = 0 at mean sea level = +0.31 mODN (+-0.15 m, a 4-level mean); tide slider LAT to MHWS (+2.25 m MSL)",
     "Length of the oval breakwater": "38 m between the crest ends (setting-out table of drawing 1020)",
     "Distance offshore": "centroid of both mounds 330.5 m offshore (nearest edge 257 m, farthest 397 m)"
@@ -93,7 +93,7 @@
    "combined": {
     "status": "ok",
     "ok": true,
-    "area_m2": 11922.0,
+    "area_m2": 11793.0,
     "crest_z_m": 1.5
    }
   },

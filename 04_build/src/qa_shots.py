@@ -29,7 +29,7 @@ def browsers():
         if p and p not in found:
             found.append(p)
     # Playwright's own Chromium on Linux (python -m playwright install chromium)
-    found += [str(h) for h in sorted(Path.home().glob(".cache/ms-playwright/chromium-*/chrome-linux*/chrome"))[-1:]]
+    found += [str(h) for h in (sorted(Path.home().glob(".cache/ms-playwright/chromium-*/chrome-linux*/chrome")) + sorted(Path("/opt/pw-browsers").glob("chromium-*/chrome-linux*/chrome")))[-1:]]  # + cloud image
     if not found:
         sys.exit("No Chrome/Edge found for headless QA.")
     return found
@@ -39,6 +39,8 @@ def run(exe, args, url, profile, timeout=90):
     cmd = [exe, "--headless=new", "--disable-gpu", "--hide-scrollbars", "--no-first-run",
            "--no-default-browser-check", "--allow-file-access-from-files",
            f"--user-data-dir={profile}", "--virtual-time-budget=8000", *args, url]
+    if hasattr(os, "geteuid") and os.geteuid() == 0:   # cloud container runs as root: Chrome needs this there
+        cmd.insert(1, "--no-sandbox")
     return subprocess.run(cmd, capture_output=True, timeout=timeout)
 
 

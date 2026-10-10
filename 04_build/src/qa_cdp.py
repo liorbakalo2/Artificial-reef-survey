@@ -52,7 +52,7 @@ def find_chrome() -> str:
     p = next((shutil.which(n) for n in ("chrome", "google-chrome", "google-chrome-stable", "chromium",
                                          "chromium-browser") if shutil.which(n)), None)
     if not p:  # Playwright's own Chromium (python -m playwright install chromium)
-        hits = sorted(Path.home().glob(".cache/ms-playwright/chromium-*/chrome-linux*/chrome"))
+        hits = sorted(Path.home().glob(".cache/ms-playwright/chromium-*/chrome-linux*/chrome")) + sorted(Path("/opt/pw-browsers").glob("chromium-*/chrome-linux*/chrome"))  # cloud image
         p = str(hits[-1]) if hits else None
     if not p:
         raise SystemExit("No Chrome found")
@@ -72,6 +72,10 @@ class Chrome:
                 "--remote-allow-origins=*"]
         if allow_file_access:
             args.append("--allow-file-access-from-files")
+        if hasattr(os, "geteuid") and os.geteuid() == 0:   # cloud container runs as root: Chrome needs this there
+            args.append("--no-sandbox")
+        if os.name != "nt" and not mobile:   # Linux headless Chrome reports no mouse (hover: none); give it the PC's mouse
+            args.append("--blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4")
         args += extra_args or []
         args.append("about:blank")
         self.proc = subprocess.Popen(args, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
