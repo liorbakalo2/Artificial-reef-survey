@@ -23,10 +23,8 @@ Text only: ~90 x 20 m footprint, 27 bags (2009), north reef only (card R1-R4). z
 METHOD.md (log), sources.md, VERIFY.md, shape.json (no_source), FEASIBILITY.md (what is missing), overlays/search_frame_z20_no_structure.png, src/ (4 Esri PNGs 6-28 MB, not worth opening; registry has 3000 px copies in 03_images/reefs/opunake-reef/).
 
 ## 5. Open issues / needs network
-- LINZ Basemaps / Data Service Taranaki aerials, chart, bathymetry (position, visibility, seabed).
-- Esri Wayback releases 2008-2025 around -39.457, 173.854 (z18-20): look for the bag field when new.
-- NZ Geographic 078 article (R3) figure; RWR Opunake gallery; STDC / TRC consent files.
-- Papers/Lior: Black et al. 2004 resource-consent study (ResearchGate 273133845); Google Earth Pro history; Navionics soundings.
+- Network pass 2026-10-10 done (section 9): LINZ aerials 2011-12 and 2021-22, Esri Wayback 2015-2024: reef NOT visible. Still no plan source.
+- Still needed (browser or library): NZ Geographic 078 figure (nzgeo.com, Cloudflare check), TRC Technical Report 2009-33 (trc.govt.nz, Cloudflare check), Black et al. 2004 (ResearchGate, login), STDC consent plans, Google Earth Pro history 2007-2010, Navionics soundings, LINZ chart (login).
 
 ## 6. Next steps
 1. When network or papers arrive: locate reef (consent plan or historical aerial), georeference, trace (METHOD.md steps), set outline_versions (design drawing vs photo trace).
@@ -41,3 +39,8 @@ Next: only when TRC 2009-33, Black et al. 2004 or dated imagery arrive (see FEAS
 
 ## Source audit 2026-10-10
 SOURCE_AUDIT_2026-10-10.md in this folder holds the sources-with-how-used, statement check, assumptions (A#), decisions (D#), confidence and consistency tables. FEASIBILITY.md / shape.json now carry the why / checked / assumed text (page_status for hidden reefs). Open mismatches are listed in the audit section 2. If kovalam build_shape_json.py is re-run it overwrites the audit additions in shape.json: re-apply from the audit.
+
+## 9. NETWORK PASS 2026-10-10 (fresh agent)
+- Open public data works: LINZ imagery on AWS (s3://nz-imagery/taranaki/..., COG tiles read by HTTP range, no login), Esri Wayback config https://s3-us-west-2.amazonaws.com/config.maptiles.arcgis.com/waybackconfig.json. WebFetch does not resolve these hosts; use curl. LINZ Basemaps tiles need an API key (not used); nzgeo.com and trc.govt.nz return a Cloudflare challenge (not bypassed).
+- Result: no structure visible in LINZ 2011-12 (clear water, 0.4 m) or 2021-22 (0.25 m), nor in 4 distinct Wayback versions. Saved to src/ (linz_aerial_*, esri_wayback_*; .geo.json sidecars) and registered as opunake-reef-img-11..16 (structure_visible false). shape.json untouched (no_source, hidden). Card: R16, R17 and md section. Details: FEASIBILITY.md, sources.md (search log), METHOD.md.
+- Next: only a document (P9, P15, P16) or Google Earth history can give a shape; then trace using the LINZ crops as georeferenced base (2011-12 crop: EPSG:2193, 0.4 m/px, top-left 1672970.8 E / 5632659.2 N).

@@ -415,5 +415,245 @@
   "other_resolutions": [
    "03_images/reefs/opunake-reef/opunake-reef_esri-sat_z20_3000px.jpg"
   ]
+ },
+ {
+  "id": "opunake-reef-img-11",
+  "file": "07_scale/shapes/opunake-reef/src/linz_aerial_2011-12_0.4m_crop.png",
+  "annotated_files": [],
+  "kind": "aerial",
+  "title": "LINZ Taranaki 0.4 m rural aerial photos 2011-2012, Opunake cove (crop 1000 x 1000 m, 2500 px, 0.4 m/px, NZTM)",
+  "citation": "Toitu Te Whenua Land Information New Zealand, New Zealand Aerial Mapping, Taranaki Regional Consortium (2012). Taranaki 0.4m Rural Aerial Photos (2011-2012), tile BJ28_5000_0806. LINZ open imagery (AWS Open Data nz-imagery). Accessed 2026-10-10.",
+  "image_url": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/taranaki/taranaki_2011-2012_0.4m/rgb/2193/BJ28_5000_0806.tiff",
+  "source_page": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/taranaki/taranaki_2011-2012_0.4m/rgb/2193/collection.json",
+  "page_or_figure": "tile BJ28_5000_0806 (73 MB COG, only a crop read by HTTP range requests and saved)",
+  "image_date": "flown 2011-11-30 to 2012-03-30 (exact day of this tile not stated)",
+  "credit": "(c) LINZ / NZ Aerial Mapping / Taranaki Regional Consortium",
+  "license": "CC BY 4.0",
+  "retrieved": "2026-10-10",
+  "shows": "Clear-water vertical aerial of Opunake cove, 3-6 years after the bags (2006-2009): waves breaking in curved lines from the north headland; no bag field, rock or other structure visible; georeferenced (EPSG:2193, sidecar .geo.json).",
+  "structure_visible": false,
+  "state_shown": "as-built period (state unknown); structure not visible",
+  "used_for": [
+   "plan_trace",
+   "context"
+  ],
+  "how_used": "Looked at once (downscaled and contrast-stretched): no outline could be traced. Negative finding for the plan search; position context only.",
+  "linked_records": [
+   "07_scale/shapes/opunake-reef/FEASIBILITY.md; sources.md L1"
+  ],
+  "bytes": 11529378,
+  "px": [
+   2500,
+   2500
+  ],
+  "sha256": "41c2e6854a6af5c0c8b9021237f83d716b4f820fec9041a505cdc0a82677b097",
+  "rights_note": "Private research copy; reuse rights to be checked before any public release.",
+  "display": true,
+  "for_3d_check": {
+   "pending": false,
+   "what_to_check": "Searched for the reef planform: not visible; no model value affected.",
+   "model_values_affected": []
+  },
+  "added_by": "opunake network pass, 2026-10-10"
+ },
+ {
+  "id": "opunake-reef-img-12",
+  "file": "07_scale/shapes/opunake-reef/src/linz_aerial_2021-22_0.25m_crop.jpg",
+  "annotated_files": [],
+  "kind": "aerial",
+  "title": "LINZ Taranaki 0.25 m rural aerial photos 2021-2022, Opunake cove (crop 1000 x 1000 m, 4000 px, 0.25 m/px, NZTM)",
+  "citation": "Toitu Te Whenua Land Information New Zealand, Aerial Surveys, Taranaki Regional Council (2022). Taranaki 0.25m Rural Aerial Photos (2021-2022), tile BJ28_5000_0806. LINZ open imagery. Accessed 2026-10-10. Saved as JPEG q93 from a lossless crop of the WebP source tiles.",
+  "image_url": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/taranaki/taranaki_2021-2022_0.25m/rgb/2193/BJ28_5000_0806.tiff",
+  "source_page": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/taranaki/taranaki_2021-2022_0.25m/rgb/2193/collection.json",
+  "page_or_figure": "tile BJ28_5000_0806 (208 MB COG, crop only)",
+  "image_date": "flown 2021-11-23 to 2022-01-07 (exact day not stated)",
+  "credit": "(c) LINZ / Aerial Surveys / Taranaki Regional Council",
+  "license": "CC BY 4.0",
+  "retrieved": "2026-10-10",
+  "shows": "Vertical aerial of the cove, rougher dark water; surf lines only on the south-east side; no structure visible.",
+  "structure_visible": false,
+  "state_shown": "unknown; structure not visible",
+  "used_for": [
+   "plan_trace",
+   "context"
+  ],
+  "how_used": "Looked at once (contrast-stretched crop): nothing traceable. Negative finding.",
+  "linked_records": [
+   "07_scale/shapes/opunake-reef/FEASIBILITY.md; sources.md L2"
+  ],
+  "bytes": 5125185,
+  "px": [
+   4000,
+   4000
+  ],
+  "sha256": "7f839988e10e410b42bddc6c9699e37c7fd043eed273948edea14c5c36f6e7d6",
+  "rights_note": "Private research copy; reuse rights to be checked before any public release.",
+  "display": true,
+  "for_3d_check": {
+   "pending": false,
+   "what_to_check": "Searched for the reef planform: not visible; no model value affected.",
+   "model_values_affected": []
+  },
+  "added_by": "opunake network pass, 2026-10-10"
+ },
+ {
+  "id": "opunake-reef-img-13",
+  "file": "07_scale/shapes/opunake-reef/src/esri_wayback_2015-08-19_z19.png",
+  "annotated_files": [],
+  "kind": "satellite",
+  "title": "Esri World Imagery Wayback release 2015-08-19, z19 mosaic 9 x 9 tiles around -39.457, 173.854 (2304 px, about 0.23 m/px)",
+  "citation": "Esri, Maxar, Earthstar Geographics and the GIS User Community (release 2015-08-19). World Imagery (Wayback 2015-08-19). https://wayback.maptiles.arcgis.com. Accessed 2026-10-10.",
+  "image_url": "https://wayback.maptiles.arcgis.com/arcgis/rest/services/World_Imagery/WMTS/1.0.0/default028mm/MapServer/tile/{release}/19/{row}/{col} (config https://s3-us-west-2.amazonaws.com/config.maptiles.arcgis.com/waybackconfig.json)",
+  "source_page": "https://livingatlas.arcgis.com/wayback/",
+  "page_or_figure": "z19 tiles x 515333-515341, y 324771-324779",
+  "image_date": "release date 2015-08-19; capture date of the underlying image not retrieved",
+  "credit": "Esri / Maxar / Earthstar Geographics",
+  "license": "Esri World Imagery terms (not cleared for reuse)",
+  "retrieved": "2026-10-10",
+  "shows": "Cove and north headland; waves breaking; no reef structure visible. Only 4 distinct versions exist among 197 Wayback releases at this tile (2014-2026); earlier releases have no tile here.",
+  "structure_visible": false,
+  "state_shown": "unknown; structure not visible",
+  "used_for": [
+   "plan_trace",
+   "context"
+  ],
+  "how_used": "Searched for a bag field or linear feature: none. Negative finding; georeference in sidecar .geo.json (EPSG:3857 tile bounds).",
+  "linked_records": [
+   "07_scale/shapes/opunake-reef/FEASIBILITY.md; sources.md W1"
+  ],
+  "bytes": 6989345,
+  "px": [
+   2304,
+   2304
+  ],
+  "sha256": "13f2653b2f46b730bb42d9b4f575647eb978503f912e06bd1abc8085db6877cc",
+  "rights_note": "Private research copy; reuse rights to be checked before any public release.",
+  "display": true,
+  "for_3d_check": {
+   "pending": false,
+   "what_to_check": "Searched for the reef planform: not visible; no model value affected.",
+   "model_values_affected": []
+  },
+  "added_by": "opunake network pass, 2026-10-10"
+ },
+ {
+  "id": "opunake-reef-img-14",
+  "file": "07_scale/shapes/opunake-reef/src/esri_wayback_2019-05-15_z19.png",
+  "annotated_files": [],
+  "kind": "satellite",
+  "title": "Esri World Imagery Wayback release 2019-05-15, z19 mosaic 9 x 9 tiles around -39.457, 173.854 (2304 px, about 0.23 m/px)",
+  "citation": "Esri, Maxar, Earthstar Geographics and the GIS User Community (release 2019-05-15). World Imagery (Wayback 2019-05-15). https://wayback.maptiles.arcgis.com. Accessed 2026-10-10.",
+  "image_url": "https://wayback.maptiles.arcgis.com/arcgis/rest/services/World_Imagery/WMTS/1.0.0/default028mm/MapServer/tile/{release}/19/{row}/{col} (config https://s3-us-west-2.amazonaws.com/config.maptiles.arcgis.com/waybackconfig.json)",
+  "source_page": "https://livingatlas.arcgis.com/wayback/",
+  "page_or_figure": "z19 tiles x 515333-515341, y 324771-324779",
+  "image_date": "release date 2019-05-15; capture date of the underlying image not retrieved",
+  "credit": "Esri / Maxar / Earthstar Geographics",
+  "license": "Esri World Imagery terms (not cleared for reuse)",
+  "retrieved": "2026-10-10",
+  "shows": "Cove and north headland; waves breaking; no reef structure visible. Only 4 distinct versions exist among 197 Wayback releases at this tile (2014-2026); earlier releases have no tile here.",
+  "structure_visible": false,
+  "state_shown": "unknown; structure not visible",
+  "used_for": [
+   "plan_trace",
+   "context"
+  ],
+  "how_used": "Searched for a bag field or linear feature: none. Negative finding; georeference in sidecar .geo.json (EPSG:3857 tile bounds).",
+  "linked_records": [
+   "07_scale/shapes/opunake-reef/FEASIBILITY.md; sources.md W2"
+  ],
+  "bytes": 7421233,
+  "px": [
+   2304,
+   2304
+  ],
+  "sha256": "784b554c0121e65808bbd34e826d8ac8301f64c460599a6a8e4ba22fb720abfe",
+  "rights_note": "Private research copy; reuse rights to be checked before any public release.",
+  "display": true,
+  "for_3d_check": {
+   "pending": false,
+   "what_to_check": "Searched for the reef planform: not visible; no model value affected.",
+   "model_values_affected": []
+  },
+  "added_by": "opunake network pass, 2026-10-10"
+ },
+ {
+  "id": "opunake-reef-img-15",
+  "file": "07_scale/shapes/opunake-reef/src/esri_wayback_2023-08-31_z19.png",
+  "annotated_files": [],
+  "kind": "satellite",
+  "title": "Esri World Imagery Wayback release 2023-08-31, z19 mosaic 9 x 9 tiles around -39.457, 173.854 (2304 px, about 0.23 m/px)",
+  "citation": "Esri, Maxar, Earthstar Geographics and the GIS User Community (release 2023-08-31). World Imagery (Wayback 2023-08-31). https://wayback.maptiles.arcgis.com. Accessed 2026-10-10.",
+  "image_url": "https://wayback.maptiles.arcgis.com/arcgis/rest/services/World_Imagery/WMTS/1.0.0/default028mm/MapServer/tile/{release}/19/{row}/{col} (config https://s3-us-west-2.amazonaws.com/config.maptiles.arcgis.com/waybackconfig.json)",
+  "source_page": "https://livingatlas.arcgis.com/wayback/",
+  "page_or_figure": "z19 tiles x 515333-515341, y 324771-324779",
+  "image_date": "release date 2023-08-31; capture date of the underlying image not retrieved",
+  "credit": "Esri / Maxar / Earthstar Geographics",
+  "license": "Esri World Imagery terms (not cleared for reuse)",
+  "retrieved": "2026-10-10",
+  "shows": "Cove and north headland; waves breaking; no reef structure visible. Only 4 distinct versions exist among 197 Wayback releases at this tile (2014-2026); earlier releases have no tile here.",
+  "structure_visible": false,
+  "state_shown": "unknown; structure not visible",
+  "used_for": [
+   "plan_trace",
+   "context"
+  ],
+  "how_used": "Searched for a bag field or linear feature: none. Negative finding; georeference in sidecar .geo.json (EPSG:3857 tile bounds).",
+  "linked_records": [
+   "07_scale/shapes/opunake-reef/FEASIBILITY.md; sources.md W3"
+  ],
+  "bytes": 7473484,
+  "px": [
+   2304,
+   2304
+  ],
+  "sha256": "2a55a1259dc026c1a0356eb9a7f6ed533c5105d40273126edc202f6aebd92bed",
+  "rights_note": "Private research copy; reuse rights to be checked before any public release.",
+  "display": true,
+  "for_3d_check": {
+   "pending": false,
+   "what_to_check": "Searched for the reef planform: not visible; no model value affected.",
+   "model_values_affected": []
+  },
+  "added_by": "opunake network pass, 2026-10-10"
+ },
+ {
+  "id": "opunake-reef-img-16",
+  "file": "07_scale/shapes/opunake-reef/src/esri_wayback_2024-05-09_z19.png",
+  "annotated_files": [],
+  "kind": "satellite",
+  "title": "Esri World Imagery Wayback release 2024-05-09, z19 mosaic 9 x 9 tiles around -39.457, 173.854 (2304 px, about 0.23 m/px)",
+  "citation": "Esri, Maxar, Earthstar Geographics and the GIS User Community (release 2024-05-09). World Imagery (Wayback 2024-05-09). https://wayback.maptiles.arcgis.com. Accessed 2026-10-10.",
+  "image_url": "https://wayback.maptiles.arcgis.com/arcgis/rest/services/World_Imagery/WMTS/1.0.0/default028mm/MapServer/tile/{release}/19/{row}/{col} (config https://s3-us-west-2.amazonaws.com/config.maptiles.arcgis.com/waybackconfig.json)",
+  "source_page": "https://livingatlas.arcgis.com/wayback/",
+  "page_or_figure": "z19 tiles x 515333-515341, y 324771-324779",
+  "image_date": "release date 2024-05-09; capture date of the underlying image not retrieved",
+  "credit": "Esri / Maxar / Earthstar Geographics",
+  "license": "Esri World Imagery terms (not cleared for reuse)",
+  "retrieved": "2026-10-10",
+  "shows": "Cove and north headland; waves breaking; no reef structure visible. Only 4 distinct versions exist among 197 Wayback releases at this tile (2014-2026); earlier releases have no tile here.",
+  "structure_visible": false,
+  "state_shown": "unknown; structure not visible",
+  "used_for": [
+   "plan_trace",
+   "context"
+  ],
+  "how_used": "Searched for a bag field or linear feature: none. Negative finding; georeference in sidecar .geo.json (EPSG:3857 tile bounds).",
+  "linked_records": [
+   "07_scale/shapes/opunake-reef/FEASIBILITY.md; sources.md W4"
+  ],
+  "bytes": 8622133,
+  "px": [
+   2304,
+   2304
+  ],
+  "sha256": "815e9b32668b97884c68a9e8fa4238293b0605a19f1504318c7c81d953eb7914",
+  "rights_note": "Private research copy; reuse rights to be checked before any public release.",
+  "display": true,
+  "for_3d_check": {
+   "pending": false,
+   "what_to_check": "Searched for the reef planform: not visible; no model value affected.",
+   "model_values_affected": []
+  },
+  "added_by": "opunake network pass, 2026-10-10"
  }
 ]

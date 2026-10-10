@@ -308,6 +308,20 @@
       "url": "",
       "accessed": "2026-10-10",
       "supports": "Table 2.1: Opunake 2006 (construction start; not officially completed), 4,800 m3 sand-filled containers, total A$760,000 (US$494,682, 103 per m3 as printed), adapted from Jackson and Corbett (2007); cites Taranaki Regional Council (2009) Opunake Artificial Reef Monitoring Programme 2005-2009"
+    },
+    {
+      "id": "R16",
+      "citation": "Toitu Te Whenua Land Information New Zealand (2012). Taranaki 0.4m Rural Aerial Photos (2011-2012). LINZ open imagery (flown 2011-11-30 to 2012-03-30; provider New Zealand Aerial Mapping / Taranaki Regional Consortium), CC BY 4.0, tile BJ28_5000_0806; and Toitu Te Whenua LINZ (2022). Taranaki 0.25m Rural Aerial Photos (2021-2022), flown 2021-11-23 to 2022-01-07, CC BY 4.0, same tile. https://nz-imagery.s3.ap-southeast-2.amazonaws.com/taranaki/ . Accessed 2026-10-10.",
+      "url": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/taranaki/taranaki_2011-2012_0.4m/rgb/2193/BJ28_5000_0806.tiff",
+      "accessed": "2026-10-10",
+      "supports": "Negative finding: no reef structure (bag field, rock, linear feature) is visible in the Opunake cove in clear-water 0.4 m (2011-12) and 0.25 m (2021-22) orthophotos; breaking waves only. Crops saved in 07_scale/shapes/opunake-reef/src/."
+    },
+    {
+      "id": "R17",
+      "citation": "Esri (2026). World Imagery Wayback releases 2015-08-19, 2019-05-15, 2023-08-31, 2024-05-09 (the only distinct imagery versions among 197 releases at this location), z19 mosaics. https://wayback.maptiles.arcgis.com . Accessed 2026-10-10.",
+      "url": "https://s3-us-west-2.amazonaws.com/config.maptiles.arcgis.com/waybackconfig.json",
+      "accessed": "2026-10-10",
+      "supports": "Negative finding: no reef structure visible in any of the four versions."
     }
   ],
   "blocked_sources": [

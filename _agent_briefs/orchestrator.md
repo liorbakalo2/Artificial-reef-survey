@@ -156,7 +156,7 @@ All of them are in `REQUESTS_FOR_LIOR.md`:
 | 2026-10-10 | Albany 3D with network | `07_scale/shapes/southern-ocean-surf-reef-albany/` | `HANDOFF.md` | RUNNING |
 | 2026-10-10 | Cables imagery verification | `07_scale/shapes/cables-reef-wa/` | `HANDOFF.md` | RUNNING |
 | 2026-10-10 | Kovalam with imagery | `07_scale/shapes/kovalam-reef-india/` | `HANDOFF.md` | DONE (HANDOFF_STOP): no usable image (Wayback has nothing 2010-13; z17 2011-20 shows no reef); stays hidden, no 3D. Needs Lior: Google Earth Pro 2010-12, Navionics, ASR/CESS report |
-| 2026-10-10 | Opunake with imagery | `07_scale/shapes/opunake-reef/` | `HANDOFF.md` | RUNNING |
+| 2026-10-10 | Opunake with imagery | `07_scale/shapes/opunake-reef/` | `HANDOFF.md` | DONE: LINZ 2011-12/2021-22 and Wayback 2015-24 show no reef; stays hidden (no_source); 6 images registered. Needs Lior: NZ Geographic figure, TRC 2009-33, Black 2004, GE Pro 2007-10 |
 | 2026-10-10 | Burkitts + Mexico with network | their `07_scale/shapes/` folders | `HANDOFF.md` | RUNNING |
 **When an agent finishes:**
 - save its report from the hand-back;

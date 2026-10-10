@@ -23,3 +23,9 @@ Plan shape not traceable: no plan figure, no georeferenced position, no visible 
 
 ## Step 4 - Gemini
 Card enrichment (2026-09-25) already rejected Gemini's quotes. Gemini footprint extract (07_scale/00_gemini_footprints_extract.*) not opened in this run; its cited "Mead & Black 2007 Design Dossier" and "Taranaki Regional Council Monitoring Records 2010" were found inaccessible by the 2026-09-25 verification (footprint file, orientation_notes). Verdict: unverifiable, not used.
+
+## Network pass 2026-10-10 (agent: opunake network pass)
+1. LINZ aerials: listed s3://nz-imagery/taranaki; Opunake (-39.457, 173.854 = NZTM 1673472 E, 5632160 N via pyproj) lies in tile BJ28_5000_0806 of 2011-12 (0.4 m) and 2021-22 (0.25 m). Tiles are 73 / 208 MB WebP COGs; read only a 1 km square by HTTP range requests (tile offsets from the TIFF, decoded with PIL), georeference from ModelTiepoint/PixelScale (sidecar .geo.json).
+2. Viewed each once downscaled (and a contrast-stretched crop of the water): 2011-12 shows clear water, curved breaking-wave lines peeling from the north headland and one isolated whitewater patch off the headland; no bag field, no pale rectangle, no rock. 2021-22: darker rough water, no structure. Breaking waves are not a structure outline.
+3. Esri Wayback: all 197 releases queried for the z19 tile; MD5 de-duplication gave 4 versions; 9 x 9 mosaics saved and compared at once (contrast-stretched water crop): no structure.
+4. Result: still NO plan source (no scaled drawing, survey, or visible structure). shape.json unchanged (no_source); reef stays hidden.

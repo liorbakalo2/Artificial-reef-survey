@@ -627,3 +627,6 @@ Report: 05_qa/source_audit/cards_citations_2026-10-10.md. Scan of every narrativ
 
 ## 2026-10-10 - kovalam-reef-india network pass (fresh agent)
 Fetched Esri Wayback (197 releases; z19 blank before 2022, z17 shows no strips 2011-2020), surfingindia/Vimeo/RWR pages, searched for ASR 2010a and CESS reports: no vertical or scaled image, no design plan. Wayback web and ASR site unreachable from the sandbox, surfer.com 403, Navionics needs a browser (none here). Registered 4 images (img-17 to -20). Shape stays hidden, LOW, no 3D. Files: 07_scale/shapes/kovalam-reef-india/METHOD.md s.6, FEASIBILITY.md, HANDOFF.md s.10.
+
+## 2026-10-10 - opunake-reef network pass (fresh agent)
+Network works for curl (not WebFetch DNS). Fetched LINZ open aerials 2011-12 (0.4 m) and 2021-22 (0.25 m) from the public AWS bucket (crops only; tiles are 73/208 MB), Esri Wayback (197 releases, 4 distinct versions 2015-2024), RWR Opunake page text. Reef NOT visible in any image: no plan source; shape stays no_source and hidden. Blocked by bot checks (not bypassed): NZ Geographic, trc.govt.nz; TRC 2009-33 and Black et al. 2004 not found openly. 6 images registered (opunake-reef-img-11..16), card got R16/R17 + md section, FEASIBILITY/HANDOFF/sources/METHOD updated. No bathymetry for Opunake in open LINZ buckets; LINZ chart layers need login.

@@ -283,3 +283,59 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **rights**: Private research copy; reuse rights to be checked before any public release.
 - **display in HTML**: True
 - **added by**: image-registry backfill, 2026-10-06
+
+## Network pass 2026-10-10 (LINZ aerials and Esri Wayback; reef NOT visible in any)
+
+### opunake-reef-img-11 - LINZ Taranaki 0.4 m rural aerial photos 2011-2012, Opunake cove (crop 1000 x 1000 m, 2500 px, 0.4 m/px, NZTM)
+- File: 07_scale/shapes/opunake-reef/src/linz_aerial_2011-12_0.4m_crop.png (2500 x 2500 px, 11529378 bytes)
+- Citation: Toitu Te Whenua Land Information New Zealand, New Zealand Aerial Mapping, Taranaki Regional Consortium (2012). Taranaki 0.4m Rural Aerial Photos (2011-2012), tile BJ28_5000_0806. LINZ open imagery (AWS Open Data nz-imagery). Accessed 2026-10-10.
+- Link: https://nz-imagery.s3.ap-southeast-2.amazonaws.com/taranaki/taranaki_2011-2012_0.4m/rgb/2193/BJ28_5000_0806.tiff
+- Date: flown 2011-11-30 to 2012-03-30 (exact day of this tile not stated); credit (c) LINZ / NZ Aerial Mapping / Taranaki Regional Consortium; licence CC BY 4.0; retrieved 2026-10-10
+- Shows: Clear-water vertical aerial of Opunake cove, 3-6 years after the bags (2006-2009): waves breaking in curved lines from the north headland; no bag field, rock or other structure visible; georeferenced (EPSG:2193, sidecar .geo.json).
+- How used: Looked at once (downscaled and contrast-stretched): no outline could be traced. Negative finding for the plan search; position context only.
+- Private research copy; reuse rights to be checked before any public release.
+
+### opunake-reef-img-12 - LINZ Taranaki 0.25 m rural aerial photos 2021-2022, Opunake cove (crop 1000 x 1000 m, 4000 px, 0.25 m/px, NZTM)
+- File: 07_scale/shapes/opunake-reef/src/linz_aerial_2021-22_0.25m_crop.jpg (4000 x 4000 px, 5125185 bytes)
+- Citation: Toitu Te Whenua Land Information New Zealand, Aerial Surveys, Taranaki Regional Council (2022). Taranaki 0.25m Rural Aerial Photos (2021-2022), tile BJ28_5000_0806. LINZ open imagery. Accessed 2026-10-10. Saved as JPEG q93 from a lossless crop of the WebP source tiles.
+- Link: https://nz-imagery.s3.ap-southeast-2.amazonaws.com/taranaki/taranaki_2021-2022_0.25m/rgb/2193/BJ28_5000_0806.tiff
+- Date: flown 2021-11-23 to 2022-01-07 (exact day not stated); credit (c) LINZ / Aerial Surveys / Taranaki Regional Council; licence CC BY 4.0; retrieved 2026-10-10
+- Shows: Vertical aerial of the cove, rougher dark water; surf lines only on the south-east side; no structure visible.
+- How used: Looked at once (contrast-stretched crop): nothing traceable. Negative finding.
+- Private research copy; reuse rights to be checked before any public release.
+
+### opunake-reef-img-13 - Esri World Imagery Wayback release 2015-08-19, z19 mosaic 9 x 9 tiles around -39.457, 173.854 (2304 px, about 0.23 m/px)
+- File: 07_scale/shapes/opunake-reef/src/esri_wayback_2015-08-19_z19.png (2304 x 2304 px, 6989345 bytes)
+- Citation: Esri, Maxar, Earthstar Geographics and the GIS User Community (release 2015-08-19). World Imagery (Wayback 2015-08-19). https://wayback.maptiles.arcgis.com. Accessed 2026-10-10.
+- Link: https://wayback.maptiles.arcgis.com/arcgis/rest/services/World_Imagery/WMTS/1.0.0/default028mm/MapServer/tile/{release}/19/{row}/{col} (config https://s3-us-west-2.amazonaws.com/config.maptiles.arcgis.com/waybackconfig.json)
+- Date: release date 2015-08-19; capture date of the underlying image not retrieved; credit Esri / Maxar / Earthstar Geographics; licence Esri World Imagery terms (not cleared for reuse); retrieved 2026-10-10
+- Shows: Cove and north headland; waves breaking; no reef structure visible. Only 4 distinct versions exist among 197 Wayback releases at this tile (2014-2026); earlier releases have no tile here.
+- How used: Searched for a bag field or linear feature: none. Negative finding; georeference in sidecar .geo.json (EPSG:3857 tile bounds).
+- Private research copy; reuse rights to be checked before any public release.
+
+### opunake-reef-img-14 - Esri World Imagery Wayback release 2019-05-15, z19 mosaic 9 x 9 tiles around -39.457, 173.854 (2304 px, about 0.23 m/px)
+- File: 07_scale/shapes/opunake-reef/src/esri_wayback_2019-05-15_z19.png (2304 x 2304 px, 7421233 bytes)
+- Citation: Esri, Maxar, Earthstar Geographics and the GIS User Community (release 2019-05-15). World Imagery (Wayback 2019-05-15). https://wayback.maptiles.arcgis.com. Accessed 2026-10-10.
+- Link: https://wayback.maptiles.arcgis.com/arcgis/rest/services/World_Imagery/WMTS/1.0.0/default028mm/MapServer/tile/{release}/19/{row}/{col} (config https://s3-us-west-2.amazonaws.com/config.maptiles.arcgis.com/waybackconfig.json)
+- Date: release date 2019-05-15; capture date of the underlying image not retrieved; credit Esri / Maxar / Earthstar Geographics; licence Esri World Imagery terms (not cleared for reuse); retrieved 2026-10-10
+- Shows: Cove and north headland; waves breaking; no reef structure visible. Only 4 distinct versions exist among 197 Wayback releases at this tile (2014-2026); earlier releases have no tile here.
+- How used: Searched for a bag field or linear feature: none. Negative finding; georeference in sidecar .geo.json (EPSG:3857 tile bounds).
+- Private research copy; reuse rights to be checked before any public release.
+
+### opunake-reef-img-15 - Esri World Imagery Wayback release 2023-08-31, z19 mosaic 9 x 9 tiles around -39.457, 173.854 (2304 px, about 0.23 m/px)
+- File: 07_scale/shapes/opunake-reef/src/esri_wayback_2023-08-31_z19.png (2304 x 2304 px, 7473484 bytes)
+- Citation: Esri, Maxar, Earthstar Geographics and the GIS User Community (release 2023-08-31). World Imagery (Wayback 2023-08-31). https://wayback.maptiles.arcgis.com. Accessed 2026-10-10.
+- Link: https://wayback.maptiles.arcgis.com/arcgis/rest/services/World_Imagery/WMTS/1.0.0/default028mm/MapServer/tile/{release}/19/{row}/{col} (config https://s3-us-west-2.amazonaws.com/config.maptiles.arcgis.com/waybackconfig.json)
+- Date: release date 2023-08-31; capture date of the underlying image not retrieved; credit Esri / Maxar / Earthstar Geographics; licence Esri World Imagery terms (not cleared for reuse); retrieved 2026-10-10
+- Shows: Cove and north headland; waves breaking; no reef structure visible. Only 4 distinct versions exist among 197 Wayback releases at this tile (2014-2026); earlier releases have no tile here.
+- How used: Searched for a bag field or linear feature: none. Negative finding; georeference in sidecar .geo.json (EPSG:3857 tile bounds).
+- Private research copy; reuse rights to be checked before any public release.
+
+### opunake-reef-img-16 - Esri World Imagery Wayback release 2024-05-09, z19 mosaic 9 x 9 tiles around -39.457, 173.854 (2304 px, about 0.23 m/px)
+- File: 07_scale/shapes/opunake-reef/src/esri_wayback_2024-05-09_z19.png (2304 x 2304 px, 8622133 bytes)
+- Citation: Esri, Maxar, Earthstar Geographics and the GIS User Community (release 2024-05-09). World Imagery (Wayback 2024-05-09). https://wayback.maptiles.arcgis.com. Accessed 2026-10-10.
+- Link: https://wayback.maptiles.arcgis.com/arcgis/rest/services/World_Imagery/WMTS/1.0.0/default028mm/MapServer/tile/{release}/19/{row}/{col} (config https://s3-us-west-2.amazonaws.com/config.maptiles.arcgis.com/waybackconfig.json)
+- Date: release date 2024-05-09; capture date of the underlying image not retrieved; credit Esri / Maxar / Earthstar Geographics; licence Esri World Imagery terms (not cleared for reuse); retrieved 2026-10-10
+- Shows: Cove and north headland; waves breaking; no reef structure visible. Only 4 distinct versions exist among 197 Wayback releases at this tile (2014-2026); earlier releases have no tile here.
+- How used: Searched for a bag field or linear feature: none. Negative finding; georeference in sidecar .geo.json (EPSG:3857 tile bounds).
+- Private research copy; reuse rights to be checked before any public release.

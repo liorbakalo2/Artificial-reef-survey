@@ -33,3 +33,19 @@ WebSearch (standard unless noted), all 2026-10-10; none returned a plan, coordin
 8. "researchcommons.waikato.ac.nz 10289/12221 Opunake" -> handle not identified.
 9. (extended) "Opunake Artificial Surf Reef Trust STDC reef survey plan crest chart datum bags layout" -> stuff.co.nz/taranaki-daily-news/news/5456452/Money-for-surf-reef-a-wipeout (NZ$400k write-off), surfertoday, ausleisure ASR liquidation; text only.
 Candidate leads found (not fetched; downloads blocked): https://www.stuff.co.nz/taranaki-daily-news/news/5456452/Money-for-surf-reef-a-wipeout ; https://www.ausleisure.com.au/news/asr-liquidation-cast-doubts-over-future-of-artificial-surf-reefs ; https://geosyntheticsmagazine.com/2023/06/07/why-have-most-geotextile-artificial-reefs-never-really-worked/ . None expected to hold a plan.
+
+## Network pass 2026-10-10 (all private research copies; reuse rights not cleared; none shows the reef)
+| id | kind | title / tile | url | image date | credit / licence | local file | registry | role |
+|---|---|---|---|---|---|---|---|---|
+| L1 | aerial | LINZ Taranaki 0.4 m rural aerials 2011-2012, tile BJ28_5000_0806 (crop 1 km, 0.4 m/px) | https://nz-imagery.s3.ap-southeast-2.amazonaws.com/taranaki/taranaki_2011-2012_0.4m/rgb/2193/BJ28_5000_0806.tiff | flown 2011-11-30 to 2012-03-30 | LINZ / NZ Aerial Mapping / Taranaki Regional Consortium, CC BY 4.0 | src/linz_aerial_2011-12_0.4m_crop.png (+.geo.json) | img-11 | search; structure not visible |
+| L2 | aerial | LINZ Taranaki 0.25 m rural aerials 2021-2022, same tile (crop 1 km, 0.25 m/px; JPEG q93) | .../taranaki_2021-2022_0.25m/rgb/2193/BJ28_5000_0806.tiff | flown 2021-11-23 to 2022-01-07 | LINZ / Aerial Surveys / TRC, CC BY 4.0 | src/linz_aerial_2021-22_0.25m_crop.jpg (+.geo.json) | img-12 | search; structure not visible |
+| W1-W4 | satellite | Esri Wayback releases 2015-08-19, 2019-05-15, 2023-08-31, 2024-05-09, z19 9 x 9 tile mosaics | https://wayback.maptiles.arcgis.com (config s3-us-west-2.amazonaws.com/config.maptiles.arcgis.com/waybackconfig.json) | release dates (capture dates not retrieved) | Esri / Maxar / Earthstar | src/esri_wayback_<date>_z19.png (+.geo.json) | img-13 to img-16 | search; structure not visible |
+
+Other LINZ imagery for Taranaki exists (1976-2002 film scans, 2016-18 0.3 m, 2022-23 0.1 m / 0.05 m urban) but its tiles for this site were not found or are other tile schemes; the 2022-23 0.1 m set has BJ28_500_* tiles (not fetched: same cove, later than L2).
+
+### Search log (network pass 2026-10-10)
+- LINZ Basemaps tiles need an API key; not used (a key seen in the data.linz.govt.nz page source belongs to that site and was not borrowed). LINZ open imagery read from the public AWS bucket instead (no login).
+- data.linz.govt.nz chart/bathymetry layers need login/export key: not used. AWS nz-coastal / nz-elevation buckets hold no Opunake bathymetry (coastal LiDAR only Awakino and Urenui-Oakura 2025; land DEM 2021).
+- Esri Wayback: 197 releases scanned at z19 tile 515337/324775; 173 have a tile here, 4 distinct versions (2015-08-19, 2019-05-15, 2023-08-31, 2024-05-09).
+- Raised Water Research Opunake page: fetched with curl (the 3 gallery images were already registered as img-01..06 era files); text facts added to the card.
+- NZ Geographic (nzgeo.com, ?p=5057), Taranaki Regional Council (trc.govt.nz) pages: HTTP 403 Cloudflare challenge; not bypassed. WebSearch for TRC Technical Report 2009-33, STDC consent plan, Black et al. 2004: nothing openly available. ResearchGate skipped (login).
