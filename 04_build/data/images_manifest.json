@@ -857,6 +857,116 @@ false,
 true
 ]
 },
+"3d/cables-reef-wa/annotated/A1_A2_scale_and_contours_read": {
+"res": {
+"bytes": 229522,
+"h": 682,
+"scale": 1.0,
+"src_h": 682,
+"src_w": 917,
+"w": 917,
+"web": "3d/cables-reef-wa/annotated/A1_A2_scale_and_contours_read.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/cables-reef-wa/3d/annotated/A1_A2_scale_and_contours_read.png",
+236041,
+1791668274,
+1200,
+400,
+false,
+null,
+true,
+false
+]
+},
+"3d/cables-reef-wa/annotated/A2_centreline_section": {
+"res": {
+"bytes": 83049,
+"h": 495,
+"scale": 1.0,
+"src_h": 495,
+"src_w": 1100,
+"w": 1100,
+"web": "3d/cables-reef-wa/annotated/A2_centreline_section.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/cables-reef-wa/3d/annotated/A2_centreline_section.png",
+84911,
+1791668274,
+1200,
+400,
+false,
+null,
+true,
+false
+]
+},
+"3d/cables-reef-wa/annotated/A3_bed_level_vs_volume": {
+"res": {
+"bytes": 59709,
+"h": 495,
+"scale": 1.0,
+"src_h": 495,
+"src_w": 825,
+"w": 825,
+"web": "3d/cables-reef-wa/annotated/A3_bed_level_vs_volume.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/cables-reef-wa/3d/annotated/A3_bed_level_vs_volume.png",
+61707,
+1791668275,
+1200,
+400,
+false,
+null,
+true,
+false
+]
+},
+"3d/cables-reef-wa/annotated/A4_pitt_sketch_bed_gradient_read": {
+"res": {
+"bytes": 435963,
+"h": 969,
+"scale": 1.0,
+"src_h": 969,
+"src_w": 963,
+"w": 963,
+"web": "3d/cables-reef-wa/annotated/A4_pitt_sketch_bed_gradient_read.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/cables-reef-wa/3d/annotated/A4_pitt_sketch_bed_gradient_read.png",
+835631,
+1791668275,
+1200,
+400,
+false,
+null,
+true,
+false
+]
+},
+"3d/cables-reef-wa/poster": {
+"res": {
+"bytes": 74474,
+"h": 579,
+"scale": 0.64286,
+"src_h": 900,
+"src_w": 1400,
+"w": 900,
+"web": "3d/cables-reef-wa/poster.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/cables-reef-wa/3d/preview_oblique.png",
+424059,
+1791670810,
+900,
+400,
+false,
+400000,
+false,
+true
+]
+},
 "3d/mount-maunganui-reef/annotated/mmr_mead2007_fig12a_depth_classes": {
 "res": {
 "bytes": 134775,
@@ -1861,6 +1971,94 @@ false
 "/home/user/artificial-reef-survey/07_scale/shapes/prattes-reef-el-segundo/3d/preview_oblique.png",
 266960,
 1791662848,
+900,
+400,
+false,
+400000,
+false,
+true
+]
+},
+"3d/southern-ocean-surf-reef-albany/annotated/A1_rhdhv_2015_contours_read_on_plan": {
+"res": {
+"bytes": 546836,
+"h": 788,
+"scale": 0.98522,
+"src_h": 800,
+"src_w": 1218,
+"w": 1200,
+"web": "3d/southern-ocean-surf-reef-albany/annotated/A1_rhdhv_2015_contours_read_on_plan.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/southern-ocean-surf-reef-albany/3d/annotated/A1_rhdhv_2015_contours_read_on_plan.png",
+1218494,
+1791671188,
+1200,
+400,
+false,
+null,
+true,
+false
+]
+},
+"3d/southern-ocean-surf-reef-albany/annotated/A2_seabed_profile_and_crest_section": {
+"res": {
+"bytes": 156082,
+"h": 446,
+"scale": 0.77922,
+"src_h": 572,
+"src_w": 1540,
+"w": 1200,
+"web": "3d/southern-ocean-surf-reef-albany/annotated/A2_seabed_profile_and_crest_section.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/southern-ocean-surf-reef-albany/3d/annotated/A2_seabed_profile_and_crest_section.png",
+142051,
+1791671189,
+1200,
+400,
+false,
+null,
+true,
+false
+]
+},
+"3d/southern-ocean-surf-reef-albany/annotated/A3_bmt2018_fig6-9_soundings_georeferenced": {
+"res": {
+"bytes": 690083,
+"h": 1200,
+"scale": 0.982,
+"src_h": 1222,
+"src_w": 1150,
+"w": 1129,
+"web": "3d/southern-ocean-surf-reef-albany/annotated/A3_bmt2018_fig6-9_soundings_georeferenced.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/southern-ocean-surf-reef-albany/3d/annotated/A3_bmt2018_fig6-9_soundings_georeferenced.png",
+1388944,
+1791671188,
+1200,
+400,
+false,
+null,
+true,
+false
+]
+},
+"3d/southern-ocean-surf-reef-albany/poster": {
+"res": {
+"bytes": 77646,
+"h": 579,
+"scale": 0.64286,
+"src_h": 900,
+"src_w": 1400,
+"w": 900,
+"web": "3d/southern-ocean-surf-reef-albany/poster.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/southern-ocean-surf-reef-albany/3d/preview_oblique.png",
+418664,
+1791671261,
 900,
 400,
 false,
@@ -4689,6 +4887,870 @@ false
 "/home/user/artificial-reef-survey/07_scale/shapes/bunbury-airwave/3d/annotated/N2_navionics_datum_rms_test.png",
 163300,
 1791662846,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/cables-reef-wa/cables-reef-wa-img-05": {
+"res": {
+"bytes": 17588,
+"h": 339,
+"scale": 1.0,
+"src_h": 339,
+"src_w": 478,
+"th": 284,
+"thumb": "assets/images/cables-reef-wa/cables-reef-wa-img-05_400.jpg",
+"tw": 400,
+"w": 478,
+"web": "assets/images/cables-reef-wa/cables-reef-wa-img-05.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/03_images/reefs/cables-reef-wa/cables-reef-wa_rwr-original-design-plan_1990s.jpg",
+63863,
+1791662843,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/cables-reef-wa/cables-reef-wa-img-05_ann1": {
+"res": {
+"bytes": 310959,
+"h": 847,
+"scale": 1.0,
+"src_h": 847,
+"src_w": 1195,
+"w": 1195,
+"web": "assets/images/cables-reef-wa/cables-reef-wa-img-05_ann1.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/cables-reef-wa/overlays/cables-reef-wa-img-05_retrace_outer_foot.png",
+327306,
+1791667065,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/cables-reef-wa/cables-reef-wa-img-06": {
+"res": {
+"bytes": 11635,
+"h": 296,
+"scale": 1.0,
+"src_h": 296,
+"src_w": 417,
+"th": 284,
+"thumb": "assets/images/cables-reef-wa/cables-reef-wa-img-06_400.jpg",
+"tw": 400,
+"w": 417,
+"web": "assets/images/cables-reef-wa/cables-reef-wa-img-06.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/03_images/reefs/cables-reef-wa/cables-reef-wa_rwr-additional-fill-area-plan_1990s.jpg",
+17609,
+1791662843,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/cables-reef-wa/cables-reef-wa-img-06_ann1": {
+"res": {
+"bytes": 178907,
+"h": 740,
+"scale": 1.0,
+"src_h": 740,
+"src_w": 1042,
+"w": 1042,
+"web": "assets/images/cables-reef-wa/cables-reef-wa-img-06_ann1.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/cables-reef-wa/overlays/cables-reef-wa-img-06_extension_triangle.png",
+188269,
+1791667065,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/cables-reef-wa/cables-reef-wa-img-07": {
+"res": {
+"bytes": 23077,
+"h": 323,
+"scale": 1.0,
+"src_h": 323,
+"src_w": 321,
+"th": 323,
+"thumb": "assets/images/cables-reef-wa/cables-reef-wa-img-07_400.jpg",
+"tw": 321,
+"w": 321,
+"web": "assets/images/cables-reef-wa/cables-reef-wa-img-07.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/03_images/reefs/cables-reef-wa/cables-reef-wa_rwr-pitt-sketch-plan_1990s.jpg",
+22938,
+1791662843,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/cables-reef-wa/cables-reef-wa-img-07_ann1": {
+"res": {
+"bytes": 93032,
+"h": 807,
+"scale": 1.0,
+"src_h": 807,
+"src_w": 802,
+"w": 802,
+"web": "assets/images/cables-reef-wa/cables-reef-wa-img-07_ann1.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/cables-reef-wa/overlays/cables-reef-wa-img-07_pitt_concept_outline.png",
+628506,
+1791667065,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/cables-reef-wa/cables-reef-wa-img-07_ann2": {
+"res": {
+"bytes": 123865,
+"h": 969,
+"scale": 1.0,
+"src_h": 969,
+"src_w": 963,
+"w": 963,
+"web": "assets/images/cables-reef-wa/cables-reef-wa-img-07_ann2.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/cables-reef-wa/3d/annotated/A4_pitt_sketch_bed_gradient_read.png",
+835631,
+1791668275,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/cables-reef-wa/cables-reef-wa-img-10": {
+"res": {
+"bytes": 9392,
+"h": 226,
+"scale": 1.0,
+"src_h": 226,
+"src_w": 573,
+"th": 158,
+"thumb": "assets/images/cables-reef-wa/cables-reef-wa-img-10_400.jpg",
+"tw": 400,
+"w": 573,
+"web": "assets/images/cables-reef-wa/cables-reef-wa-img-10.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/03_images/reefs/cables-reef-wa/cables-reef-wa_rwr-side-view-section_1990s.jpg",
+26874,
+1791662843,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/cables-reef-wa/cables-reef-wa-img-16": {
+"res": {
+"bytes": 14506,
+"h": 119,
+"scale": 1.0,
+"src_h": 119,
+"src_w": 225,
+"th": 119,
+"thumb": "assets/images/cables-reef-wa/cables-reef-wa-img-16_400.jpg",
+"tw": 225,
+"w": 225,
+"web": "assets/images/cables-reef-wa/cables-reef-wa-img-16.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/03_images/reefs/cables-reef-wa/cables-reef-wa_pattiaratchi1999-fig3-conceptual-cross-section_1999.png",
+7608,
+1791662843,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/cables-reef-wa/cables-reef-wa-img-17": {
+"res": {
+"bytes": 27200,
+"h": 145,
+"scale": 1.0,
+"src_h": 145,
+"src_w": 226,
+"th": 145,
+"thumb": "assets/images/cables-reef-wa/cables-reef-wa-img-17_400.jpg",
+"tw": 226,
+"w": 226,
+"web": "assets/images/cables-reef-wa/cables-reef-wa-img-17.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/03_images/reefs/cables-reef-wa/cables-reef-wa_pattiaratchi1999-fig4-final-design-wave-basin_1999.png",
+11722,
+1791662843,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/cables-reef-wa/cables-reef-wa-img-20": {
+"res": {
+"bytes": 74844,
+"h": 367,
+"scale": 1.0,
+"src_h": 367,
+"src_w": 226,
+"th": 367,
+"thumb": "assets/images/cables-reef-wa/cables-reef-wa-img-20_400.jpg",
+"tw": 226,
+"w": 226,
+"web": "assets/images/cables-reef-wa/cables-reef-wa-img-20.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/03_images/reefs/cables-reef-wa/cables-reef-wa_pattiaratchi1999-fig7-geographic-location_1999.png",
+35103,
+1791662843,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/cables-reef-wa/cables-reef-wa-img-20_ann1": {
+"res": {
+"bytes": 377643,
+"h": 723,
+"scale": 1.0,
+"src_h": 723,
+"src_w": 1174,
+"w": 1174,
+"web": "assets/images/cables-reef-wa/cables-reef-wa-img-20_ann1.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/cables-reef-wa/overlays/cables-reef-wa-img-20_fig7_V_outline_rotated.png",
+407729,
+1791667065,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/cables-reef-wa/cables-reef-wa-img-22": {
+"res": {
+"bytes": 344521,
+"h": 1600,
+"scale": 0.45597,
+"src_h": 3509,
+"src_w": 2480,
+"th": 400,
+"thumb": "assets/images/cables-reef-wa/cables-reef-wa-img-22_400.jpg",
+"tw": 283,
+"w": 1131,
+"web": "assets/images/cables-reef-wa/cables-reef-wa-img-22.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/cables-reef-wa/src/S1_fig4_wavebasin_full_page.png",
+876423,
+1791662846,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/cables-reef-wa/cables-reef-wa-img-23": {
+"res": {
+"bytes": 148020,
+"h": 1600,
+"scale": 0.41026,
+"src_h": 3900,
+"src_w": 2409,
+"th": 400,
+"thumb": "assets/images/cables-reef-wa/cables-reef-wa-img-23_400.jpg",
+"tw": 247,
+"w": 988,
+"web": "assets/images/cables-reef-wa/cables-reef-wa-img-23.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/cables-reef-wa/src/S1_fig7_location_map.png",
+244108,
+1791662846,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/cables-reef-wa/cables-reef-wa-img-26": {
+"res": {
+"bytes": 207474,
+"h": 682,
+"scale": 1.0,
+"src_h": 682,
+"src_w": 917,
+"th": 297,
+"thumb": "assets/images/cables-reef-wa/cables-reef-wa-img-26_400.jpg",
+"tw": 400,
+"w": 917,
+"web": "assets/images/cables-reef-wa/cables-reef-wa-img-26.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/03_images/reefs/cables-reef-wa/cables-reef-wa_p8-figA2-design-lyons-1992_1992.png",
+184564,
+1791666389,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/cables-reef-wa/cables-reef-wa-img-26_ann1": {
+"res": {
+"bytes": 357780,
+"h": 886,
+"scale": 1.0,
+"src_h": 886,
+"src_w": 1192,
+"w": 1192,
+"web": "assets/images/cables-reef-wa/cables-reef-wa-img-26_ann1.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/cables-reef-wa/overlays/cables-reef-wa-img-26_A2_outline_ramp_scale.png",
+367426,
+1791667065,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/cables-reef-wa/cables-reef-wa-img-26_ann2": {
+"res": {
+"bytes": 229522,
+"h": 682,
+"scale": 1.0,
+"src_h": 682,
+"src_w": 917,
+"w": 917,
+"web": "assets/images/cables-reef-wa/cables-reef-wa-img-26_ann2.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/cables-reef-wa/3d/annotated/A1_A2_scale_and_contours_read.png",
+236041,
+1791668274,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/cables-reef-wa/cables-reef-wa-img-27": {
+"res": {
+"bytes": 119279,
+"h": 715,
+"scale": 1.0,
+"src_h": 715,
+"src_w": 990,
+"th": 289,
+"thumb": "assets/images/cables-reef-wa/cables-reef-wa-img-27_400.jpg",
+"tw": 400,
+"w": 990,
+"web": "assets/images/cables-reef-wa/cables-reef-wa-img-27.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/cables-reef-wa/overlays/cables-reef-wa_versions_compare_m.png",
+123039,
+1791667066,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/cables-reef-wa/cables-reef-wa-img-28": {
+"res": {
+"bytes": 83049,
+"h": 495,
+"scale": 1.0,
+"src_h": 495,
+"src_w": 1100,
+"th": 180,
+"thumb": "assets/images/cables-reef-wa/cables-reef-wa-img-28_400.jpg",
+"tw": 400,
+"w": 1100,
+"web": "assets/images/cables-reef-wa/cables-reef-wa-img-28.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/cables-reef-wa/3d/annotated/A2_centreline_section.png",
+84911,
+1791668274,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/cables-reef-wa/cables-reef-wa-img-29": {
+"res": {
+"bytes": 59709,
+"h": 495,
+"scale": 1.0,
+"src_h": 495,
+"src_w": 825,
+"th": 240,
+"thumb": "assets/images/cables-reef-wa/cables-reef-wa-img-29_400.jpg",
+"tw": 400,
+"w": 825,
+"web": "assets/images/cables-reef-wa/cables-reef-wa-img-29.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/cables-reef-wa/3d/annotated/A3_bed_level_vs_volume.png",
+61707,
+1791668275,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/cables-reef-wa/cables-reef-wa-img-30": {
+"res": {
+"bytes": 393933,
+"h": 900,
+"scale": 1.0,
+"src_h": 900,
+"src_w": 1400,
+"th": 257,
+"thumb": "assets/images/cables-reef-wa/cables-reef-wa-img-30_400.jpg",
+"tw": 400,
+"w": 1400,
+"web": "assets/images/cables-reef-wa/cables-reef-wa-img-30.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/cables-reef-wa/3d/preview_plan.png",
+404222,
+1791670805,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/cables-reef-wa/cables-reef-wa-img-31": {
+"res": {
+"bytes": 165853,
+"h": 900,
+"scale": 1.0,
+"src_h": 900,
+"src_w": 1400,
+"th": 257,
+"thumb": "assets/images/cables-reef-wa/cables-reef-wa-img-31_400.jpg",
+"tw": 400,
+"w": 1400,
+"web": "assets/images/cables-reef-wa/cables-reef-wa-img-31.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/cables-reef-wa/3d/preview_oblique.png",
+424059,
+1791670810,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/cables-reef-wa/cables-reef-wa-img-32": {
+"res": {
+"bytes": 395400,
+"h": 1580,
+"scale": 1.0,
+"src_h": 1580,
+"src_w": 1580,
+"th": 400,
+"thumb": "assets/images/cables-reef-wa/cables-reef-wa-img-32_400.jpg",
+"tw": 400,
+"w": 1580,
+"web": "assets/images/cables-reef-wa/cables-reef-wa-img-32.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/cables-reef-wa/src/imagery/esri_world_imagery_2025-12-06_z19.png",
+3425366,
+1791670486,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/cables-reef-wa/cables-reef-wa-img-32_ann1": {
+"res": {
+"bytes": 267909,
+"h": 900,
+"scale": 1.0,
+"src_h": 900,
+"src_w": 900,
+"w": 900,
+"web": "assets/images/cables-reef-wa/cables-reef-wa-img-32_ann1.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/cables-reef-wa/src/imagery/annotated/overlay_esri_world_imagery_2025-12-06_z19.png",
+1709897,
+1791670531,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/cables-reef-wa/cables-reef-wa-img-33": {
+"res": {
+"bytes": 241390,
+"h": 1580,
+"scale": 1.0,
+"src_h": 1580,
+"src_w": 1580,
+"th": 400,
+"thumb": "assets/images/cables-reef-wa/cables-reef-wa-img-33_400.jpg",
+"tw": 400,
+"w": 1580,
+"web": "assets/images/cables-reef-wa/cables-reef-wa-img-33.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/cables-reef-wa/src/imagery/esri_wayback_2020-03-23_z19.png",
+1892866,
+1791670486,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/cables-reef-wa/cables-reef-wa-img-33_ann1": {
+"res": {
+"bytes": 161073,
+"h": 900,
+"scale": 1.0,
+"src_h": 900,
+"src_w": 900,
+"w": 900,
+"web": "assets/images/cables-reef-wa/cables-reef-wa-img-33_ann1.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/cables-reef-wa/src/imagery/annotated/overlay_esri_wayback_2020-03-23_z19.png",
+1273758,
+1791670531,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/cables-reef-wa/cables-reef-wa-img-34": {
+"res": {
+"bytes": 335684,
+"h": 1580,
+"scale": 1.0,
+"src_h": 1580,
+"src_w": 1580,
+"th": 400,
+"thumb": "assets/images/cables-reef-wa/cables-reef-wa-img-34_400.jpg",
+"tw": 400,
+"w": 1580,
+"web": "assets/images/cables-reef-wa/cables-reef-wa-img-34.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/cables-reef-wa/src/imagery/esri_wayback_2022-06-08_z19.png",
+3030744,
+1791670486,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/cables-reef-wa/cables-reef-wa-img-34_ann1": {
+"res": {
+"bytes": 367518,
+"h": 900,
+"scale": 1.0,
+"src_h": 900,
+"src_w": 900,
+"w": 900,
+"web": "assets/images/cables-reef-wa/cables-reef-wa-img-34_ann1.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/cables-reef-wa/src/imagery/annotated/overlay_esri_wayback_2022-06-08_z19.png",
+2080480,
+1791670531,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/cables-reef-wa/cables-reef-wa-img-35": {
+"res": {
+"bytes": 274105,
+"h": 1580,
+"scale": 1.0,
+"src_h": 1580,
+"src_w": 1580,
+"th": 400,
+"thumb": "assets/images/cables-reef-wa/cables-reef-wa-img-35_400.jpg",
+"tw": 400,
+"w": 1580,
+"web": "assets/images/cables-reef-wa/cables-reef-wa-img-35.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/cables-reef-wa/src/imagery/esri_wayback_2014-12-03_z19.png",
+1883568,
+1791670486,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/cables-reef-wa/cables-reef-wa-img-35_ann1": {
+"res": {
+"bytes": 233197,
+"h": 900,
+"scale": 1.0,
+"src_h": 900,
+"src_w": 900,
+"w": 900,
+"web": "assets/images/cables-reef-wa/cables-reef-wa-img-35_ann1.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/cables-reef-wa/src/imagery/annotated/overlay_esri_wayback_2014-12-03_z19.png",
+1644914,
+1791670530,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/cables-reef-wa/cables-reef-wa-img-36": {
+"res": {
+"bytes": 102471,
+"h": 1580,
+"scale": 1.0,
+"src_h": 1580,
+"src_w": 1580,
+"th": 400,
+"thumb": "assets/images/cables-reef-wa/cables-reef-wa-img-36_400.jpg",
+"tw": 400,
+"w": 1580,
+"web": "assets/images/cables-reef-wa/cables-reef-wa-img-36.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/cables-reef-wa/src/imagery/esri_wayback_2024-08-15_z19.png",
+893118,
+1791670486,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/cables-reef-wa/cables-reef-wa-img-36_ann1": {
+"res": {
+"bytes": 195450,
+"h": 900,
+"scale": 1.0,
+"src_h": 900,
+"src_w": 900,
+"w": 900,
+"web": "assets/images/cables-reef-wa/cables-reef-wa-img-36_ann1.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/cables-reef-wa/src/imagery/annotated/overlay_esri_wayback_2024-08-15_z19.png",
+989995,
+1791670531,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/cables-reef-wa/cables-reef-wa-img-37": {
+"res": {
+"bytes": 507176,
+"h": 1200,
+"scale": 1.0,
+"src_h": 1200,
+"src_w": 1200,
+"th": 400,
+"thumb": "assets/images/cables-reef-wa/cables-reef-wa-img-37_400.jpg",
+"tw": 400,
+"w": 1200,
+"web": "assets/images/cables-reef-wa/cables-reef-wa-img-37.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/cables-reef-wa/src/imagery/annotated/overlay_montage_4dates.png",
+3332802,
+1791670532,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/cables-reef-wa/cables-reef-wa-img-38": {
+"res": {
+"bytes": 147733,
+"h": 880,
+"scale": 1.0,
+"src_h": 880,
+"src_w": 880,
+"th": 400,
+"thumb": "assets/images/cables-reef-wa/cables-reef-wa-img-38_400.jpg",
+"tw": 400,
+"w": 880,
+"web": "assets/images/cables-reef-wa/cables-reef-wa-img-38.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/cables-reef-wa/src/bathymetry/figures/survey_1999_thickness.png",
+151555,
+1791670532,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/cables-reef-wa/cables-reef-wa-img-39": {
+"res": {
+"bytes": 315850,
+"h": 880,
+"scale": 1.0,
+"src_h": 880,
+"src_w": 880,
+"th": 400,
+"thumb": "assets/images/cables-reef-wa/cables-reef-wa-img-39_400.jpg",
+"tw": 400,
+"w": 880,
+"web": "assets/images/cables-reef-wa/cables-reef-wa-img-39.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/cables-reef-wa/src/bathymetry/figures/survey_2002_thickness.png",
+321130,
+1791670533,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/cables-reef-wa/cables-reef-wa-img-40": {
+"res": {
+"bytes": 123790,
+"h": 880,
+"scale": 1.0,
+"src_h": 880,
+"src_w": 880,
+"th": 400,
+"thumb": "assets/images/cables-reef-wa/cables-reef-wa-img-40_400.jpg",
+"tw": 400,
+"w": 880,
+"web": "assets/images/cables-reef-wa/cables-reef-wa-img-40.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/cables-reef-wa/src/bathymetry/figures/bed_perth5m_contours.png",
+128739,
+1791670533,
 1600,
 400,
 true,
@@ -9328,6 +10390,582 @@ false
 1600,
 400,
 false,
+400000,
+false,
+false
+]
+},
+"assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-01": {
+"res": {
+"bytes": 173959,
+"h": 1068,
+"scale": 0.57803,
+"src_h": 1848,
+"src_w": 2768,
+"th": 267,
+"thumb": "assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-01_400.jpg",
+"tw": 400,
+"w": 1600,
+"web": "assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-01.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/03_images/reefs/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany_abc-wide-wave-ship_2025.jpg",
+649750,
+1791662843,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-05": {
+"res": {
+"bytes": 27384,
+"h": 456,
+"scale": 1.0,
+"src_h": 456,
+"src_w": 810,
+"th": 225,
+"thumb": "assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-05_400.jpg",
+"tw": 400,
+"w": 810,
+"web": "assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-05.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/03_images/reefs/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany_rwr-construction-overview_2025.jpg",
+27060,
+1791662843,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-07": {
+"res": {
+"bytes": 88462,
+"h": 1192,
+"scale": 1.0,
+"src_h": 1192,
+"src_w": 948,
+"th": 400,
+"thumb": "assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-07_400.jpg",
+"tw": 318,
+"w": 948,
+"web": "assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-07.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/03_images/reefs/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany_rwr-construction-2_2025.png",
+987038,
+1791662843,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-10": {
+"res": {
+"bytes": 98581,
+"h": 521,
+"scale": 1.0,
+"src_h": 521,
+"src_w": 1026,
+"th": 203,
+"thumb": "assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-10_400.jpg",
+"tw": 400,
+"w": 1026,
+"web": "assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-10.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/southern-ocean-surf-reef-albany/src/design.jpg",
+102447,
+1791662848,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-11": {
+"res": {
+"bytes": 91392,
+"h": 702,
+"scale": 1.0,
+"src_h": 702,
+"src_w": 984,
+"th": 285,
+"thumb": "assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-11_400.jpg",
+"tw": 400,
+"w": 984,
+"web": "assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-11.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/southern-ocean-surf-reef-albany/src/rwr_bluecoast_design_diagram.png",
+996956,
+1791662848,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-11_ann1": {
+"res": {
+"bytes": 70880,
+"h": 944,
+"scale": 1.0,
+"src_h": 944,
+"src_w": 760,
+"w": 760,
+"web": "assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-11_ann1.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/southern-ocean-surf-reef-albany/overlays/design_diagram_trace.png",
+474483,
+1791666540,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-11_ann2": {
+"res": {
+"bytes": 74746,
+"h": 770,
+"scale": 1.0,
+"src_h": 770,
+"src_w": 935,
+"w": 935,
+"web": "assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-11_ann2.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/southern-ocean-surf-reef-albany/overlays/canonical_versions_m.png",
+77203,
+1791666540,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-12": {
+"res": {
+"bytes": 238747,
+"h": 1022,
+"scale": 1.0,
+"src_h": 1022,
+"src_w": 1022,
+"th": 400,
+"thumb": "assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-12_400.jpg",
+"tw": 400,
+"w": 1022,
+"web": "assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-12.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/southern-ocean-surf-reef-albany/src/esri_wayback13192_2025-01-16_z18.png",
+1616075,
+1791662848,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-12_ann1": {
+"res": {
+"bytes": 90511,
+"h": 380,
+"scale": 1.0,
+"src_h": 380,
+"src_w": 920,
+"w": 920,
+"web": "assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-12_ann1.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/southern-ocean-surf-reef-albany/overlays/before_after_2025-01-16_vs_2026-01-20.png",
+574547,
+1791666540,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-13": {
+"res": {
+"bytes": 226690,
+"h": 1022,
+"scale": 1.0,
+"src_h": 1022,
+"src_w": 1022,
+"th": 400,
+"thumb": "assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-13_400.jpg",
+"tw": 400,
+"w": 1022,
+"web": "assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-13.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/southern-ocean-surf-reef-albany/src/esri_current_2026-01-20_z18.png",
+1559141,
+1791662848,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-13_ann1": {
+"res": {
+"bytes": 130393,
+"h": 740,
+"scale": 1.0,
+"src_h": 740,
+"src_w": 1000,
+"w": 1000,
+"web": "assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-13_ann1.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/southern-ocean-surf-reef-albany/overlays/sat2026-01-20_trace.png",
+947507,
+1791666540,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-13_ann2": {
+"res": {
+"bytes": 161176,
+"h": 800,
+"scale": 1.0,
+"src_h": 800,
+"src_w": 800,
+"w": 800,
+"web": "assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-13_ann2.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/southern-ocean-surf-reef-albany/overlays/shoreline_fit.png",
+1188447,
+1791666540,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-13_ann3": {
+"res": {
+"bytes": 90511,
+"h": 380,
+"scale": 1.0,
+"src_h": 380,
+"src_w": 920,
+"w": 920,
+"web": "assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-13_ann3.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/southern-ocean-surf-reef-albany/overlays/before_after_2025-01-16_vs_2026-01-20.png",
+574547,
+1791666540,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-14": {
+"res": {
+"bytes": 267346,
+"h": 1521,
+"scale": 1.0,
+"src_h": 1521,
+"src_w": 1075,
+"th": 400,
+"thumb": "assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-14_400.jpg",
+"tw": 283,
+"w": 1075,
+"web": "assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-14.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/southern-ocean-surf-reef-albany/src/epa/EIA_page42_fig6-9_render130dpi.png",
+946172,
+1791670226,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-14_ann1": {
+"res": {
+"bytes": 218753,
+"h": 1222,
+"scale": 1.0,
+"src_h": 1222,
+"src_w": 1150,
+"w": 1150,
+"web": "assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-14_ann1.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/southern-ocean-surf-reef-albany/3d/annotated/A3_bmt2018_fig6-9_soundings_georeferenced.png",
+1388944,
+1791671188,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-15": {
+"res": {
+"bytes": 231606,
+"h": 1600,
+"scale": 0.9122,
+"src_h": 1754,
+"src_w": 1241,
+"th": 400,
+"thumb": "assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-15_400.jpg",
+"tw": 283,
+"w": 1132,
+"web": "assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-15.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/southern-ocean-surf-reef-albany/src/epa/EIA_appendix_page140_fig29_bathymetry_150dpi.png",
+2140922,
+1791670226,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-16": {
+"res": {
+"bytes": 48056,
+"h": 354,
+"scale": 1.0,
+"src_h": 354,
+"src_w": 609,
+"th": 233,
+"thumb": "assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-16_400.jpg",
+"tw": 400,
+"w": 609,
+"web": "assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-16.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/southern-ocean-surf-reef-albany/src/rwr_images/rwr_RHDHV_optionB_contours_plan_2015.jpg",
+286336,
+1791670226,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-16_ann1": {
+"res": {
+"bytes": 185003,
+"h": 800,
+"scale": 1.0,
+"src_h": 800,
+"src_w": 1218,
+"w": 1218,
+"web": "assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-16_ann1.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/southern-ocean-surf-reef-albany/3d/annotated/A1_rhdhv_2015_contours_read_on_plan.png",
+1218494,
+1791671188,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-17": {
+"res": {
+"bytes": 51612,
+"h": 363,
+"scale": 1.0,
+"src_h": 363,
+"src_w": 645,
+"th": 225,
+"thumb": "assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-17_400.jpg",
+"tw": 400,
+"w": 645,
+"web": "assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-17.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/southern-ocean-surf-reef-albany/src/rwr_images/rwr_RHDHV_optionB_contours_oblique_2015.jpg",
+301809,
+1791670226,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-21": {
+"res": {
+"bytes": 298738,
+"h": 932,
+"scale": 0.66946,
+"src_h": 1392,
+"src_w": 2390,
+"th": 233,
+"thumb": "assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-21_400.jpg",
+"tw": 400,
+"w": 1600,
+"web": "assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-21.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/southern-ocean-surf-reef-albany/src/rwr_images/rwr_midds_reef_title_screenshot_2026-04-02.png",
+7046558,
+1791670226,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-23": {
+"res": {
+"bytes": 228541,
+"h": 1022,
+"scale": 1.0,
+"src_h": 1022,
+"src_w": 1022,
+"th": 400,
+"thumb": "assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-23_400.jpg",
+"tw": 400,
+"w": 1022,
+"web": "assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-23.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/southern-ocean-surf-reef-albany/src/esri_wayback6543_2022-12-19_z18.png",
+1551428,
+1791670374,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-24": {
+"res": {
+"bytes": 138758,
+"h": 572,
+"scale": 1.0,
+"src_h": 572,
+"src_w": 1540,
+"th": 149,
+"thumb": "assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-24_400.jpg",
+"tw": 400,
+"w": 1540,
+"web": "assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-24.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/southern-ocean-surf-reef-albany/3d/annotated/A2_seabed_profile_and_crest_section.png",
+142051,
+1791671189,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-27": {
+"res": {
+"bytes": 103097,
+"h": 669,
+"scale": 1.0,
+"src_h": 669,
+"src_w": 950,
+"th": 282,
+"thumb": "assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-27_400.jpg",
+"tw": 400,
+"w": 950,
+"web": "assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-27.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/southern-ocean-surf-reef-albany/src/epa/EIA_fig6-9_embedded_raster.png",
+707410,
+1791670226,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-28": {
+"res": {
+"bytes": 649742,
+"h": 1599,
+"scale": 0.652,
+"src_h": 2453,
+"src_w": 2454,
+"th": 400,
+"thumb": "assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-28_400.jpg",
+"tw": 400,
+"w": 1600,
+"web": "assets/images/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany-img-28.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/southern-ocean-surf-reef-albany/3d/src/esri_wayback13192_2025-01-16_z18_wide1200m.png",
+9382577,
+1791670411,
+1600,
+400,
+true,
 400000,
 false,
 false

@@ -50,3 +50,6 @@ x = (u - u_c)/6.51 (north = sheet right); y = 270 + (v_c - v)/6.51 (offshore = s
 
 ### Step 9 - Results
 Default (design plan + extension): 4,355 m2, 121 x 89 m. Original: 4,049 m2, 121 x 76 m. Area range for +-3% scale: 4,105-4,629 m2. Confidence MEDIUM (reason in shape.json). Gemini: folder not in this repo, nothing used or checked.
+
+== 2026-10-10 imagery + bathymetry run (network open) ==
+The outline was georeferenced and verified against DoT WA soundings and Esri imagery (scripts/georef_fit.py, make_imagery_figs.py; VERIFY.md R1-R11). No vertex of the trace changed. Default outline is now the original plan (extension demoted: not confirmed); shape.json carries geo, verification, confidence high. Methods and decisions: 3d/METHODS_3D.md sections 3 and 10; sources: 3d/SOURCES_3D.md.

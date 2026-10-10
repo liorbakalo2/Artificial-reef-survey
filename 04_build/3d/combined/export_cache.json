@@ -1,6 +1,6 @@
 {
  "boscombe-surf-reef": {
-  "sig": "9fffa235d41f5f3db8601d068edfc6cf739752b6",
+  "sig": "8c1f525e39c31a03094c3a2b562558f6ef5d4ee4",
   "result": {
    "slug": "boscombe-surf-reef",
    "status": "ok",
@@ -98,7 +98,7 @@
   }
  },
  "bunbury-airwave": {
-  "sig": "9d3895bf58c0006de585f6227b2b0bcda7c4c0b1",
+  "sig": "dc7038a7899cea4af0df4067fcd3ee9fff40ef4e",
   "result": {
    "slug": "bunbury-airwave",
    "status": "ok",
@@ -196,7 +196,7 @@
   }
  },
  "mount-maunganui-reef": {
-  "sig": "733b4309bff44b3239fb876155afb9f8cc6b208e",
+  "sig": "c1fe26e3856b953ec41e55ba72a262ecfeb0c16f",
   "result": {
    "slug": "mount-maunganui-reef",
    "status": "ok",
@@ -294,7 +294,7 @@
   }
  },
  "palm-beach-gold-coast": {
-  "sig": "251556114bf3e344aab834fc425a85b2f1d58f71",
+  "sig": "edcb1db51537fb133d1858cbfa7e76b996976193",
   "result": {
    "slug": "palm-beach-gold-coast",
    "status": "ok",
@@ -392,7 +392,7 @@
   }
  },
  "prattes-reef-el-segundo": {
-  "sig": "d82bb1c00b0d48ac8c02b80e7778b3493c81e644",
+  "sig": "466fb5aff43cc26e0c6d6623a60233689268dc5d",
   "result": {
    "slug": "prattes-reef-el-segundo",
    "status": "ok",
@@ -490,7 +490,7 @@
   }
  },
  "borth-coastal-defence-reef": {
-  "sig": "056d50a8c1a7b802a753f9311ae93c3b3ea2fc4b",
+  "sig": "d343fcdc2e5ae2099dbf1320df71a8a7bb5d9196",
   "result": {
    "slug": "borth-coastal-defence-reef",
    "status": "ok",
@@ -588,7 +588,7 @@
   }
  },
  "narrowneck-gold-coast": {
-  "sig": "a296b52ba44e25655f31acd60f719ac644316dbe",
+  "sig": "47a7c79867da1e2f3525aaf5ff6ebf534d010fd3",
   "result": {
    "slug": "narrowneck-gold-coast",
    "status": "ok",
@@ -682,6 +682,202 @@
     "reef_meshes": 1,
     "seabed_vertices": 11413,
     "reef_vertices": 51051
+   }
+  }
+ },
+ "cables-reef-wa": {
+  "sig": "28f7b622b3d784ec217e07916437d450453bd965",
+  "result": {
+   "slug": "cables-reef-wa",
+   "status": "ok",
+   "reason": "",
+   "ok": true,
+   "metrics": {
+    "area_m2": 4152.5,
+    "area_ref_m2": 4048.513749999997,
+    "centroid": [
+     -3.379349789283564,
+     272.44256472004815
+    ],
+    "centroid_ref": [
+     -3.4623247292910952,
+     272.5011562990658
+    ],
+    "crest_z_m": -1.5499999523162842,
+    "bbox_alongshore_m": 150.0,
+    "bbox_offshore_m": 130.0,
+    "n_reef_meshes": 1,
+    "n_skirt_ignored": 0
+   },
+   "checks": [
+    {
+     "name": "footprint area vs model.js toe polygon",
+     "got": 4152.5,
+     "ref": 4048.513749999997,
+     "err": 0.025685043060556034,
+     "tol": 0.25,
+     "unit": "relative",
+     "ok": true
+    },
+    {
+     "name": "footprint centroid vs polygon centroid",
+     "got": [
+      -3.379349789283564,
+      272.44256472004815
+     ],
+     "ref": [
+      -3.4623247292910952,
+      272.5011562990658
+     ],
+     "err": 0.10157664003616955,
+     "tol": 6.0,
+     "unit": "m",
+     "ok": true
+    },
+    {
+     "name": "crest level vs model.js",
+     "got": -1.5499999523162842,
+     "ref": -1.55,
+     "err": 4.768371586472142e-08,
+     "tol": 0.2,
+     "unit": "m",
+     "ok": true
+    },
+    {
+     "name": "seabed falls away offshore (+z)",
+     "got": -10.291060603786628,
+     "ref": 0.0,
+     "err": 10.291060603786628,
+     "tol": 20,
+     "unit": "deg",
+     "ok": true
+    },
+    {
+     "name": "shoreline is outside the exported seabed patch (patch starts at offshore 190 m): shoreline check not applicable",
+     "got": 0.0,
+     "ref": 0.0,
+     "err": 0.0,
+     "tol": 1.5,
+     "unit": "m",
+     "ok": true
+    }
+   ],
+   "area_m2": 4152.5,
+   "area_ref_m2": 4048.513749999997,
+   "area_rel_err": 0.025685043060556034,
+   "crest_z_m": -1.5499999523162842,
+   "crest_ref_m": -1.55,
+   "crest_err_m": 4.768371586472142e-08,
+   "bbox_m": [
+    150.0,
+    130.0
+   ],
+   "file": "3d/combined/cables-reef-wa.js",
+   "size_kb": 1201,
+   "note": {
+    "rotation_deg": 0.0,
+    "skirt_ignored": 0,
+    "reef_meshes": 1,
+    "seabed_vertices": 2867,
+    "reef_vertices": 78561
+   }
+  }
+ },
+ "southern-ocean-surf-reef-albany": {
+  "sig": "df4ecb6a600eca51398e04660e5d18cfd08dd705",
+  "result": {
+   "slug": "southern-ocean-surf-reef-albany",
+   "status": "ok",
+   "reason": "",
+   "ok": true,
+   "metrics": {
+    "area_m2": 13399.0,
+    "area_ref_m2": 13104.671550000001,
+    "centroid": [
+     -1.99055899694007,
+     159.40208224494364
+    ],
+    "centroid_ref": [
+     -1.5012657656930541,
+     159.95835953107115
+    ],
+    "crest_z_m": -1.1640000343322754,
+    "bbox_alongshore_m": 159.0,
+    "bbox_offshore_m": 199.0,
+    "n_reef_meshes": 1,
+    "n_skirt_ignored": 0
+   },
+   "checks": [
+    {
+     "name": "footprint area vs model.js toe polygon",
+     "got": 13399.0,
+     "ref": 13104.671550000001,
+     "err": 0.022459811287677718,
+     "tol": 0.25,
+     "unit": "relative",
+     "ok": true
+    },
+    {
+     "name": "footprint centroid vs polygon centroid",
+     "got": [
+      -1.99055899694007,
+      159.40208224494364
+     ],
+     "ref": [
+      -1.5012657656930541,
+      159.95835953107115
+     ],
+     "err": 0.7408456554543155,
+     "tol": 6.0,
+     "unit": "m",
+     "ok": true
+    },
+    {
+     "name": "crest level vs model.js",
+     "got": -1.1640000343322754,
+     "ref": -1.0,
+     "err": 0.1640000343322754,
+     "tol": 0.2,
+     "unit": "m",
+     "ok": true
+    },
+    {
+     "name": "seabed falls away offshore (+z)",
+     "got": -2.563186387458938e-16,
+     "ref": 0.0,
+     "err": 2.563186387458938e-16,
+     "tol": 20,
+     "unit": "deg",
+     "ok": true
+    },
+    {
+     "name": "seabed at the shoreline is near 0 m MSL",
+     "got": 0.21666666182378927,
+     "ref": 0.0,
+     "err": 0.21666666182378927,
+     "tol": 1.5,
+     "unit": "m",
+     "ok": true
+    }
+   ],
+   "area_m2": 13399.0,
+   "area_ref_m2": 13104.671550000001,
+   "area_rel_err": 0.022459811287677718,
+   "crest_z_m": -1.1640000343322754,
+   "crest_ref_m": -1.0,
+   "crest_err_m": 0.1640000343322754,
+   "bbox_m": [
+    159.0,
+    199.0
+   ],
+   "file": "3d/combined/southern-ocean-surf-reef-albany.js",
+   "size_kb": 696,
+   "note": {
+    "rotation_deg": 0.0,
+    "skirt_ignored": 0,
+    "reef_meshes": 1,
+    "seabed_vertices": 10185,
+    "reef_vertices": 32000
    }
   }
  }

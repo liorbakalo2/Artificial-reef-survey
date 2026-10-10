@@ -7,16 +7,19 @@ Lior's to-do list: `REQUESTS_FOR_LIOR.md` (✅ = done/received).
 ## State on 2026-10-11
 - Page tabs: Gallery, Table, 3D only (Map/Scale removed 2026-10-10, archived in `archive/04_build_removed_2026-10-10/`).
 - 3D models: Borth, Boscombe, Bunbury, Mount Maunganui, Narrowneck, Palm Beach, Pratte's on the page; Cables (verified on
-  WA DoT surveys, 3D medium) and Albany (3D LOW) were being added by the last page agent.
+  WA DoT surveys, 3D medium) and Albany (3D LOW) added 2026-10-11.
 - Hidden shapes (no plan source; Lior: "don't show shapes you don't know"): Opunake, Kovalam, Mexico, Burkitts.
 - Every reef dialog: Google Maps link; "Checked, nothing useful" section from `02_research/dead_ends/<slug>.json`.
 - Network: environment set to Full on 2026-10-10 (web pages, imagery, PDFs reachable; login and bot-check sites still are not).
 
-## FIRST: check the last page agent finished
-`04_build/HANDOFF.md` section 0c should exist and `05_qa/00_STATUS.md` should have its entry. If not, finish its jobs:
-the brief is the 2026-10-10 "final page agent" row in orchestrator.md section 7 (pending edits in `05_qa/pending_page_edits/`,
-Cables + Albany from their `3d/PAGE_TEXTS_FOR_MAIN.json`, remove both from `04_build/data/models3d_hold.json`, render the
-dead-ends section, then `python src/update_page.py --full` from `04_build/` until "state saved").
+## Last page build: 2026-10-11, `update_page.py --full` state saved (check.py 247 PASS, qa_models3d 191 PASS). 9 models on the
+page incl. Cables and Albany; dead-ends sections rendered. Details: `04_build/HANDOFF.md` section 0c.
+
+## Small fixes left (quick, do first)
+- Cables `3d/model.js` labels version `design_plan_original_1999` "(default)" but the default is `survey_surface_1999_11` (fix in its build_3d.py, rebuild).
+- Cables and Albany `3d/METHODS_3D.md`: the 'References' section is a one-line pointer; make it a real list (the page currently takes them from REGISTER_3D.md).
+- Kovalam card: add Rendle 4,300 m3 and the bbox mismatch 43x24 vs 38x29 m.
+- Albany viewer fixed in `07_scale` 2026-10-11 (pile height is above the seabed); `VIEWER_FIXES` in `04_build/src/compile_models3d.py` is now a no-op and can be removed.
 
 ## Queue (in order of value; one agent each, brief = the task file named)
 1. **Lior's new uploads** (`new uploads from lior/`; Lior's folder like `papers/`: never move or rename). Not yet read by any agent.
@@ -37,7 +40,6 @@ dead-ends section, then `python src/update_page.py --full` from `04_build/` unti
 5. **Cables**: Fremantle chart datum (LWD) to AHD offset (Transport WA), closes the 0.2-0.3 m datum gap (A12 in its METHODS_3D.md).
 6. **OCR**: the Mount Maunganui 2007 PDF in `papers/` has no text layer. Orchestrator installs tesseract quietly (CLAUDE.md), an
    agent writes the text to `05_qa/papers_intake/` (never into `papers/`).
-7. Albany dead-ends file: remove duplicates (two agents wrote it).
 8. Optional: photo-match buttons for Narrowneck, Cables, Albany (`04_build/src/photo_match.py` model_rings / scene_map).
 9. Mexico: nothing to do until coordinates or a plan appear.
 

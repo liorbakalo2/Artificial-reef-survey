@@ -1649,6 +1649,11 @@
    "reason": "Navionics/Garmin screenshots (6) not offered: no geo (lat/lon <-> canonical) in shape.json"
   },
   {
+   "slug": "cables-reef-wa",
+   "source_id": "-",
+   "reason": "model frame not yet supported by photo_match.py (model_rings / scene_map)"
+  },
+  {
    "slug": "narrowneck-gold-coast",
    "source_id": "-",
    "reason": "model frame not yet supported by photo_match.py (model_rings / scene_map)"
@@ -1691,6 +1696,11 @@
    "slug": "prattes-reef-el-segundo",
    "source_id": "navionics",
    "reason": "Navionics/Garmin screenshots (10) not offered: no geo (lat/lon <-> canonical) in shape.json"
+  },
+  {
+   "slug": "southern-ocean-surf-reef-albany",
+   "source_id": "-",
+   "reason": "model frame not yet supported by photo_match.py (model_rings / scene_map)"
   }
  ],
  "summary": {
@@ -1706,5 +1716,5 @@
   "max_residual_m": 3.25,
   "max_residual_m_all_kinds": 3.25
  },
- "signature": "0cc94bd0f6f3f41893ce"
+ "signature": "a565af7a7b37e1a1ad0e"
 }

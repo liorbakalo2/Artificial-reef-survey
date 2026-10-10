@@ -254,7 +254,7 @@ def export_one(c, slug: str, cfg: dict, tol: dict) -> dict:
         crest_ref = float("nan")
     # seabed checks: slope falls away offshore (direction), and z = 0 along the shoreline
     sel = (spos[:, 2] > 20) & (spos[:, 2] < 260)
-    if sel.sum() < 30:
+    if sel.sum() < 30 or mc.get("shore_mode") == "none":     # shore_mode 'none' (Cables): the patch starts at 190 m, its strip 190-260 m is the natural reef bump, so use the whole window
         sel = np.ones(len(spos), dtype=bool)
     Amat = np.c_[spos[sel][:, 0], spos[sel][:, 2], np.ones(sel.sum())]
     gx, gz, _g = np.linalg.lstsq(Amat, spos[sel][:, 1], rcond=None)[0]

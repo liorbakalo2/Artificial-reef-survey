@@ -329,7 +329,18 @@ def main() -> int:
             card = json.loads(cp.read_text(encoding="utf-8"))
             for v in card.get("videos_rejected") or []:
                 rejected += [x for x in (v.get("video_id"), v.get("url"), v.get("title")) if x]
-    leaked = [x for x in rejected if x in raw]
+    # 2026-10-10: the collapsed 'Checked, nothing useful' section may NAME a rejected video / image as a source that gave nothing (text + link, never an embed or a reference),
+    # so the leak tests below look at the page without the dead_ends data
+    raw_nd = raw
+    try:
+        _dnd = json.loads(p.data_json)
+        for _r in _dnd["reefs"]:
+            _r.pop("dead_ends", None)
+        raw_nd = raw.replace(p.data_json, json.dumps(_dnd, ensure_ascii=False)) if p.data_json in raw else raw
+    except (ValueError, KeyError):
+        pass
+    out.append(f"INFO leak tests run on the page without the dead-ends data ({len(raw) - len(raw_nd):,} characters removed)")
+    leaked = [x for x in rejected if x in raw_nd]
     check("videos_rejected" not in p.data_json and not leaked,
           f"no videos_rejected content rendered ({len(rejected)} rejected ids/urls/titles checked; leaked={leaked})")
     bk = next((r for r in reefs if r["slug"] == "burkitts-reef-bargara"), {})
@@ -469,7 +480,8 @@ def main() -> int:
                       and (L["approximate"] is False or "approximate location" in dd))
                 check(ok, f"[dialog {s}] Location link to Google Maps (new tab, noopener{', labelled approximate' if L['approximate'] else ''})")
             else:
-                check("location: not published" in dd.lower() and "google.com/maps" not in dd, f"[dialog {s}] says location not published and has no map link")
+                dd_main = re.sub(r'<details class="acc acc-de".*?</details>', "", dd, flags=re.S)       # the dead-ends section may link a Google Maps page it checked
+                check("location: not published" in dd.lower() and "google.com/maps" not in dd_main, f"[dialog {s}] says location not published and has no map link (outside the dead-ends section)")
             # 2026-10-10 (Lior): "Checked, nothing useful (N)" = last section of the dialog, closed by default, not part of References, N = entries in the file
             n_de = len(de_files.get(s, []))
             art_m = re.search(r'<article class="detail">.*?</article>', dd, re.S)
@@ -521,7 +533,7 @@ def main() -> int:
         if cp.is_file():
             card = json.loads(cp.read_text(encoding="utf-8"))
             rej_img += [x["url"] for x in card.get("images_rejected") or [] if x.get("url")]
-    leaked_img = [u for u in rej_img if u in raw or u.split("?")[0] in raw]
+    leaked_img = [u for u in rej_img if u in raw_nd or u.split("?")[0] in raw_nd]
     check("images_rejected" not in p.data_json and not leaked_img,
           f"no images_rejected URL rendered anywhere, incl. the Scale tab ({len(rej_img)} checked; leaked={leaked_img})")
 

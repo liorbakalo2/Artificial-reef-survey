@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-10 22:02",
+ "updated": "2026-10-10 23:24",
  "sig": {
   "models": {
    "borth-coastal-defence-reef": {
@@ -18,7 +18,7 @@
     "shape.json": "b6b5a73f1edb3bb3",
     "registry": "a40b657771c032b1",
     "card": "cd96d3f53021fb58",
-    "config": "855b46a314bd2787"
+    "config": "314597db2694400b"
    },
    "bunbury-airwave": {
     "viewer": "4c6898620d8f6ec2",
@@ -27,16 +27,16 @@
     "shape.json": "f78f81e31007f34e",
     "registry": "5b81179d65f3abd3",
     "card": "5c0a81c0405264de",
-    "config": "30a18b5efbc83d0b"
+    "config": "8f4511caba80610f"
    },
    "cables-reef-wa": {
-    "viewer": "20ac782e575d8179",
-    "model.js": "dd06c5d0eb5f708d",
+    "viewer": "e768843aef618e3e",
+    "model.js": "21023e3bc5f17b0d",
     "annotated": "56f7d4835b9c905f",
-    "shape.json": "bf6677659593fbeb",
-    "registry": "fe54b791d9e97215",
-    "card": "5bf09dbd4cecd336",
-    "config": "1502d661d52d949f"
+    "shape.json": "b83ef2a938544c47",
+    "registry": "f919a627121c6005",
+    "card": "909cd144ed042e8c",
+    "config": "f5ac26da2a5b22c7"
    },
    "mount-maunganui-reef": {
     "viewer": "af8c47045781463f",
@@ -45,7 +45,7 @@
     "shape.json": "15800bc56c7ef000",
     "registry": "3aec3e0e7b50f400",
     "card": "72dec5fb6b430483",
-    "config": "98c7333c432d85c7"
+    "config": "b82c4001e5c55272"
    },
    "narrowneck-gold-coast": {
     "viewer": "68afb38ea1c7e86e",
@@ -54,7 +54,7 @@
     "shape.json": "99350be6db10ba96",
     "registry": "6abbd57482eba0ed",
     "card": "2193da5c22166fa2",
-    "config": "1709cf2feca47555"
+    "config": "b8bc5884a392ca6b"
    },
    "palm-beach-gold-coast": {
     "viewer": "088e823963f565f4",
@@ -63,7 +63,7 @@
     "shape.json": "9d74d332271d31bb",
     "registry": "a0f9ca0e8bc26a39",
     "card": "4ffd984dc5b3061b",
-    "config": "d8cb510848afe857"
+    "config": "6cc3935c10b7789f"
    },
    "prattes-reef-el-segundo": {
     "viewer": "1494ade17bcb001c",
@@ -72,11 +72,20 @@
     "shape.json": "6d61b893baf8be08",
     "registry": "2dcfd7a4cd326fed",
     "card": "d732dbd9bd08cbad",
-    "config": "909750bab74d1feb"
+    "config": "0f6abe26168fdcb7"
+   },
+   "southern-ocean-surf-reef-albany": {
+    "viewer": "964b454fbcde0bfa",
+    "model.js": "5dc762e62c41f18c",
+    "annotated": "24b1d72dcfa452c5",
+    "shape.json": "57031b438df2c099",
+    "registry": "e6468537a151b296",
+    "card": "666e1422461e3b43",
+    "config": "4d6ee6b96177c3d6"
    }
   },
-  "hold": "566321fd01cc2f2d",
-  "src": "1719b1c874a21195"
+  "hold": "199b9c8e89ba5ae4",
+  "src": "96ebe17965c9b07d"
  },
  "snapshot": {
   "borth-coastal-defence-reef": {
@@ -154,6 +163,50 @@
     "ok": true,
     "area_m2": 111.97799657793803,
     "crest_z_m": -0.6502518057823181
+   }
+  },
+  "cables-reef-wa": {
+   "default_version": "survey_surface_1999_11",
+   "versions": {
+    "design_plan_plus_extension_1999": {
+     "area_m2": 4355.0,
+     "volume_m3": 4249.0
+    },
+    "design_plan_original_1999": {
+     "area_m2": 4049.0,
+     "volume_m3": 3920.0
+    },
+    "paper_fig7_site_plan_1999": {
+     "area_m2": 4586.0,
+     "volume_m3": null
+    },
+    "pitt_concept_sketch": {
+     "area_m2": 10619.0,
+     "volume_m3": null
+    },
+    "survey_surface_1999_11": {
+     "area_m2": 4049.0,
+     "volume_m3": 4671.0
+    },
+    "survey_surface_2002_02": {
+     "area_m2": 4049.0,
+     "volume_m3": 5219.0
+    }
+   },
+   "key_numbers": {
+    "Footprint (plan outline)": "4,049 m2 (original design plan, 121 x 76 m; position and orientation fitted to the Nov 1999 soundings: 91 % of rock soundings inside); with ",
+    "Rock volume": "4,671 m3 surveyed Nov 1999 (+-1,000); 5,219 m3 surveyed Feb 2002; design surface on the measured bed 3,920 m3 (original) / 4,249 m3 (with ex",
+    "Crest level": "highest surveyed surface point -1.55 m AHD (Nov 1999), -1.71 m (Feb 2002); AHD taken as MSL (ASSUMPTION, +-0.1-0.3 m)",
+    "Water depth at the reef": "measured bed (DoT 1998 soundings, AHD) 2.8-6.6 m below MSL along the outline; 254-263 m from the reef centre to the 0 m AHD line",
+    "Tide (local, Fremantle gauge)": "range 0.8 m, low / high water MSL -0.4 / +0.4 m (symmetry is an estimate); datum 0.78 m below MSL"
+   },
+   "pictures": 24,
+   "match_buttons": 0,
+   "combined": {
+    "status": "ok",
+    "ok": true,
+    "area_m2": 4152.5,
+    "crest_z_m": -1.5499999523162842
    }
   },
   "mount-maunganui-reef": {
@@ -236,7 +289,7 @@
     "Reef height above the seabed": "3.89 m at the crest (3.51 m Navionics-only seabed); maximum 4.17 m",
     "Side slopes": "1:12 (north flank, outer east end), 1:4.9 (south flank), 1:25 (near-crest platform, east end)",
     "Footprint": "toe 11,972 m2 (162.3 x 91.3 m; 11,989 m2 on the 1 m grid)",
-    "Volume (rock envelope)": "22,000 m3 (22,020; voids included)"
+    "Volume (rock envelope)": "about 22,000 m3 envelope in the 3D model (22,020; voids included; inferred)"
    },
    "pictures": 27,
    "match_buttons": 6,
@@ -267,6 +320,35 @@
     "ok": true,
     "area_m2": 478.2399520849692,
     "crest_z_m": -1.818428874015808
+   }
+  },
+  "southern-ocean-surf-reef-albany": {
+   "default_version": "design_bluecoast",
+   "versions": {
+    "design_bluecoast": {
+     "area_m2": 13105.0,
+     "volume_m3": 34000.0
+    },
+    "sat_2026": {
+     "area_m2": 10919.0,
+     "volume_m3": 30273.0
+    }
+   },
+   "key_numbers": {
+    "Crest, shallowest": "-1.0 m AHD (first 15 m of the ridge from its offshore end), -2.0 m AHD beyond 40 m",
+    "Seabed under the footprint": "-2.1 m AHD at the shoreward apex to -7.4 m AHD at the offshore toe",
+    "Rock volume, design outline": "34,000 m3 (FITTED, N = 2.73); unfitted loft 20,826 m3",
+    "Pile height above the seabed": "mean 2.59 m, maximum 6.0 m (design outline)",
+    "LAT and mean level": "LAT = -0.74 m AHD; MLLW -0.26, MHHW +0.34 m AHD",
+    "Plan, default outline": "13,104 m2 (toggle: 10,918 m2)"
+   },
+   "pictures": 16,
+   "match_buttons": 0,
+   "combined": {
+    "status": "ok",
+    "ok": true,
+    "area_m2": 13399.0,
+    "crest_z_m": -1.1640000343322754
    }
   }
  }

@@ -1,10 +1,10 @@
 PASS  tab is the visible view
 PASS  URL hash follows the selector: default = first built model
-PASS  selector has one button per model + 'All (compare)' (8), exactly one pressed
+PASS  selector has one button per model + 'All (compare)' (10), exactly one pressed
 PASS  selector buttons show the 3D-confidence dot of each reef
 PASS  ONE model section visible (one at a time)
-PASS  7 model sections rendered (others hidden)
-PASS  200 thumbnails rendered (one per selected picture)
+PASS  9 model sections rendered (others hidden)
+PASS  240 thumbnails rendered (one per selected picture)
 PASS  header: badge + one-line reason + state + vertical-exaggeration note
 PASS  every model has the full vertical-exaggeration text behind its (i)
 PASS  text at the top is short: tab intro <= 260 chars, page intro <= 260 chars (the rest sits behind (i))
@@ -61,7 +61,7 @@ PASS  combined viewer starts in its stage; comparison panel lists every model wi
 PASS  comparison panel: footprint and crest read back from the meshes, all checks pass
 PASS  method + check table of the combined scene are on the page
 PASS  combined viewer (standalone, file://) renders a frame without errors
-PASS  combined scene holds all 7 exported reefs, each with seabed + reef mesh
+PASS  combined scene holds all 9 exported reefs, each with seabed + reef mesh
 PASS  combined: every reef is positioned side by side at one scale (no overlap of the seabed patches)
 PASS  combined: z = 0 is each site's own MSL (water plane at y = 0; the exported crest level is the reef mesh's top)
 PASS  combined: vertical exaggeration is always shown, default 1x
@@ -79,9 +79,9 @@ PASS  mobile: photos sit directly under the viewer (stacked, no side-by-side)
 PASS  mobile: tapping a thumbnail shows it in the panel
 PASS  combined: Boscombe seabed reaches the beach (y from about -66 m, land above MSL) and offshore (y to 650 m)
 PASS  combined: Boscombe is in the scene (all exported models present)
-PASS  combined 1440x900 oblique: reef labels do not overlap and sit inside the canvas, clear of the panel (7 labels)
+PASS  combined 1440x900 oblique: reef labels do not overlap and sit inside the canvas, clear of the panel (9 labels)
 PASS  combined 1440x900 oblique: exactly one scale bar (one label '100 m')
-PASS  combined 1440x900 plan: reef labels do not overlap and sit inside the canvas, clear of the panel (7 labels)
+PASS  combined 1440x900 plan: reef labels do not overlap and sit inside the canvas, clear of the panel (9 labels)
 PASS  combined 1440x900 plan: exactly one scale bar (one label '100 m')
 PASS  combined overlay: labels do not overlap, inside the canvas, one scale bar
 PASS  combined panel: open by default (Hide button visible, Layout button hidden)
@@ -89,9 +89,9 @@ PASS  combined panel: Hide collapses the panel and shows a labelled 'Layout' but
 PASS  combined panel collapsed: labels still do not overlap and stay inside
 PASS  combined panel: the Layout button opens it again
 PASS  combined: no page errors
-PASS  combined 1000x700 oblique: reef labels do not overlap and sit inside the canvas, clear of the panel (7 labels)
+PASS  combined 1000x700 oblique: reef labels do not overlap and sit inside the canvas, clear of the panel (9 labels)
 PASS  combined 1000x700 oblique: exactly one scale bar (one label '100 m')
-PASS  combined 1000x700 plan: reef labels do not overlap and sit inside the canvas, clear of the panel (7 labels)
+PASS  combined 1000x700 plan: reef labels do not overlap and sit inside the canvas, clear of the panel (9 labels)
 PASS  combined 1000x700 plan: exactly one scale bar (one label '100 m')
 PASS  page panel (All): open by default, 'Hide' in the panel, 'Reefs' button hidden
 PASS  full screen (All): the stage is full screen with the reefs panel and the viewer's layout panel both open
@@ -102,10 +102,12 @@ PASS  the 'Reefs' button opens the right-hand panel again
 PASS  borth-coastal-defence-reef: viewer's right panel is open by default and collapsible; the canvas then uses the full width; 'Controls' button at the edge
 PASS  boscombe-surf-reef: viewer's left panel is open by default and collapsible; the canvas then uses the full width; 'Layout' button at the edge
 PASS  bunbury-airwave: viewer's left panel is open by default and collapsible; the canvas then uses the full width; 'Layout' button at the edge
+PASS  cables-reef-wa: viewer's right panel is open by default and collapsible; the canvas then uses the full width; 'Controls' button at the edge
 PASS  mount-maunganui-reef: viewer's left panel is open by default and collapsible; the canvas then uses the full width; 'Layout' button at the edge
 PASS  narrowneck-gold-coast: viewer's right panel is open by default and collapsible; the canvas then uses the full width; 'Controls' button at the edge
 PASS  palm-beach-gold-coast: viewer's left panel is open by default and collapsible; the canvas then uses the full width; 'Layout' button at the edge
 PASS  prattes-reef-el-segundo: viewer's left panel is open by default and collapsible; the canvas then uses the full width; 'Layout' button at the edge
+PASS  southern-ocean-surf-reef-albany: viewer's right panel is open by default and collapsible; the canvas then uses the full width; 'Controls' button at the edge
 PASS  page: no errors while exercising panels
 PASS  borth-coastal-defence-reef: default version 'lidar_2022' is pressed on load, 3 versions offered
 PASS  borth-coastal-defence-reef: version 'design_1020' is really applied in the 3D viewer (its own version selector reads it after the switch)
@@ -113,6 +115,18 @@ PASS  borth-coastal-defence-reef: version 'design_1020' -> iframe hash, pressed 
 PASS  borth-coastal-defence-reef: version 'sat_2024' is really applied in the 3D viewer (its own version selector reads it after the switch)
 PASS  borth-coastal-defence-reef: version 'sat_2024' -> iframe hash, pressed state, 'Showing' line and key-number rows follow
 PASS  borth-coastal-defence-reef: the versions (i) dialog opens and lists every version
+PASS  cables-reef-wa: default version 'survey_surface_1999_11' is pressed on load, 6 versions offered
+PASS  cables-reef-wa: version 'design_plan_plus_extension_1999' is really applied in the 3D viewer (its own version selector reads it after the switch)
+PASS  cables-reef-wa: version 'design_plan_plus_extension_1999' -> iframe hash, pressed state, 'Showing' line and key-number rows follow
+PASS  cables-reef-wa: version 'design_plan_original_1999' is really applied in the 3D viewer (its own version selector reads it after the switch)
+PASS  cables-reef-wa: version 'design_plan_original_1999' -> iframe hash, pressed state, 'Showing' line and key-number rows follow
+PASS  cables-reef-wa: version 'paper_fig7_site_plan_1999' is really applied in the 3D viewer (its own version selector reads it after the switch)
+PASS  cables-reef-wa: version 'paper_fig7_site_plan_1999' -> iframe hash, pressed state, 'Showing' line and key-number rows follow
+PASS  cables-reef-wa: version 'pitt_concept_sketch' is really applied in the 3D viewer (its own version selector reads it after the switch)
+PASS  cables-reef-wa: version 'pitt_concept_sketch' -> iframe hash, pressed state, 'Showing' line and key-number rows follow
+PASS  cables-reef-wa: version 'survey_surface_2002_02' is really applied in the 3D viewer (its own version selector reads it after the switch)
+PASS  cables-reef-wa: version 'survey_surface_2002_02' -> iframe hash, pressed state, 'Showing' line and key-number rows follow
+PASS  cables-reef-wa: the versions (i) dialog opens and lists every version
 PASS  mount-maunganui-reef: default version 'multibeam_2013_m2p0' is pressed on load, 2 versions offered
 PASS  mount-maunganui-reef: version 'asr_installed_toe_2008' is really applied in the 3D viewer (its own version selector reads it after the switch)
 PASS  mount-maunganui-reef: version 'asr_installed_toe_2008' -> iframe hash, pressed state, 'Showing' line and key-number rows follow
@@ -127,6 +141,10 @@ PASS  narrowneck-gold-coast: version 'survey_2011-06-09' -> iframe hash, pressed
 PASS  narrowneck-gold-coast: version 'navionics_4.0m_shoals' is really applied in the 3D viewer (its own version selector reads it after the switch)
 PASS  narrowneck-gold-coast: version 'navionics_4.0m_shoals' -> iframe hash, pressed state, 'Showing' line and key-number rows follow
 PASS  narrowneck-gold-coast: the versions (i) dialog opens and lists every version
+PASS  southern-ocean-surf-reef-albany: default version 'design_bluecoast' is pressed on load, 2 versions offered
+PASS  southern-ocean-surf-reef-albany: version 'sat_2026' is really applied in the 3D viewer (its own version selector reads it after the switch)
+PASS  southern-ocean-surf-reef-albany: version 'sat_2026' -> iframe hash, pressed state, 'Showing' line and key-number rows follow
+PASS  southern-ocean-surf-reef-albany: the versions (i) dialog opens and lists every version
 PASS  page: no errors while exercising versions
 PASS  borth-coastal-defence-reef: every eligible picture of photo_match.json that is in the picture panel carries its transform (8 of 8; 0 not in the panel)
 PASS  borth-coastal-defence-reef: 'Match this photo' button appears on an eligible picture
@@ -202,6 +220,13 @@ shot  update_versions_borth_default.png
 shot  update_versions_borth_design_1020.png
 shot  update_versions_borth_sat_2024.png
 shot  update_versions_borth_dialog.png
+shot  update_versions_cables_default.png
+shot  update_versions_cables_design_plan_.png
+shot  update_versions_cables_design_plan_.png
+shot  update_versions_cables_paper_fig7_s.png
+shot  update_versions_cables_pitt_concept.png
+shot  update_versions_cables_survey_surfa.png
+shot  update_versions_cables_dialog.png
 shot  update_versions_mount_default.png
 shot  update_versions_mount_asr_installe.png
 shot  update_versions_mount_dialog.png
@@ -211,6 +236,9 @@ shot  update_versions_narrowneck_design_2004_.png
 shot  update_versions_narrowneck_survey_2011-.png
 shot  update_versions_narrowneck_navionics_4..png
 shot  update_versions_narrowneck_dialog.png
+shot  update_versions_southern_default.png
+shot  update_versions_southern_sat_2026.png
+shot  update_versions_southern_dialog.png
 shot  update_photomatch_borth.png
 shot  update_photomatch_boscombe.png
 shot  update_photomatch_bunbury.png
