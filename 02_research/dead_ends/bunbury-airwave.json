@@ -110,6 +110,16 @@
       "result": "not found",
       "detail": "None of the five PDFs mentions Bunbury or the Airwave (an inflatable sand-slurry bladder of 2019 is outside their scope). The Mount Maunganui 2007 paper has no text layer (image pages, not OCR'd) but is about another reef. Press, forum and developer pages are the only sources.",
       "might_work": "Not in papers/; see the entries above"
+    },
+    {
+      "what": "EMODnet Bathymetry DTM 2024 (viewer, REST, ERDDAP) for seabed depth at the reef",
+      "kind": "database",
+      "where": "https://emodnet.ec.europa.eu/geoviewer/ ; EMODnet Bathymetry REST depth_sample / ERDDAP bathymetry_dtm_2024 at -33.3276, 115.6284",
+      "checked": "2026-10-06",
+      "by": "agent: EMODnet bathymetry agent (cloud)",
+      "result": "not found",
+      "detail": "EMODnet covers European seas only; the REST service returns HTTP 204 (empty) at this reef's coordinate (Australia), so the site is outside the grid. Only two of the 13 reefs are covered (Boscombe, Borth). Do not retry EMODnet for this reef.",
+      "might_work": "Local sources instead: national or state bathymetry, a council or authority survey, Navionics / Google Earth readings (see REQUESTS_FOR_LIOR.md section 5)"
     }
   ]
 }

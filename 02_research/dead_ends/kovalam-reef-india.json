@@ -110,6 +110,16 @@
       "result": "other: video shows no reef; transcripts blocked",
       "detail": "Judged on title and description only: a silent 22 s GoPro clip whose description mentions the artificial reef but shows no structure; a social video with no confirmed reef footage; a Kerala tourism promo with no mention of the reef. One test frame was discarded (surfer selfie and whitewash); the frames folder is empty. Transcripts do not exist (yt-dlp --write-auto-subs was blocked by YouTube HTTP 429).",
       "might_work": "Transcription is paused (Lior's rule); none of these is likely to help"
+    },
+    {
+      "what": "EMODnet Bathymetry DTM 2024 (viewer, REST, ERDDAP) for seabed depth at the reef",
+      "kind": "database",
+      "where": "https://emodnet.ec.europa.eu/geoviewer/ ; EMODnet Bathymetry REST depth_sample / ERDDAP bathymetry_dtm_2024 at 8.4004, 76.9787",
+      "checked": "2026-10-06",
+      "by": "agent: EMODnet bathymetry agent (cloud)",
+      "result": "not found",
+      "detail": "EMODnet covers European seas only; the REST service returns HTTP 204 (empty) at this reef's coordinate (India), so the site is outside the grid. Only two of the 13 reefs are covered (Boscombe, Borth). Do not retry EMODnet for this reef.",
+      "might_work": "Local sources instead: national or state bathymetry, a council or authority survey, Navionics / Google Earth readings (see REQUESTS_FOR_LIOR.md section 5)"
     }
   ]
 }

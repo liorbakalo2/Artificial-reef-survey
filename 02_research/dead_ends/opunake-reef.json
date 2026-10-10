@@ -140,6 +140,16 @@
       "result": "no plan or figure",
       "detail": "Opunake appears only in text and tables: Mead and Borrero 2011 p.1 (Fig 1 world map) and p.3-4 (s.3.1.5: 4,800 m3, start 2006, last work May 2008, 1,400 m3 short, no drawing); Rendle 2016 thesis Table 2.1 (p.41) and references (p.298); Blacka et al. 2013 Tables 4.1-4.4 (30 m x 100 m, depth 1.8-3.0 m, about 300 m offshore, A$0.93M) and references. Those facts are card references; the plan, position and datum part failed. The 2007 Mount Maunganui paper has no usable text layer (image pages, not OCR'd) and the 2023 Narrowneck paper has no Opunake mention.",
       "might_work": "Not in these PDFs; see the P9, P15, P16 entries above"
+    },
+    {
+      "what": "EMODnet Bathymetry DTM 2024 (viewer, REST, ERDDAP) for seabed depth at the reef",
+      "kind": "database",
+      "where": "https://emodnet.ec.europa.eu/geoviewer/ ; EMODnet Bathymetry REST depth_sample / ERDDAP bathymetry_dtm_2024 at -39.4600, 173.8600",
+      "checked": "2026-10-06",
+      "by": "agent: EMODnet bathymetry agent (cloud)",
+      "result": "not found",
+      "detail": "EMODnet covers European seas only; the REST service returns HTTP 204 (empty) at this reef's coordinate (New Zealand), so the site is outside the grid. Only two of the 13 reefs are covered (Boscombe, Borth). Do not retry EMODnet for this reef.",
+      "might_work": "Local sources instead: national or state bathymetry, a council or authority survey, Navionics / Google Earth readings (see REQUESTS_FOR_LIOR.md section 5)"
     }
   ]
 }

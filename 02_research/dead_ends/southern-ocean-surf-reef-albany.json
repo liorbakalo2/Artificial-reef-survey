@@ -80,6 +80,16 @@
       "result": "not found",
       "detail": "None of the five PDFs mentions Albany or Middleton Beach (the reef was built 2024-25, after all of them). The Mount Maunganui 2007 paper has no text layer (image pages, not OCR'd) but is about another reef and 17 years older.",
       "might_work": "Not in papers/; the public City of Albany documents and the Bluecoast report (E9 / P12) are the source"
+    },
+    {
+      "what": "EMODnet Bathymetry DTM 2024 (viewer, REST, ERDDAP) for seabed depth at the reef",
+      "kind": "database",
+      "where": "https://emodnet.ec.europa.eu/geoviewer/ ; EMODnet Bathymetry REST depth_sample / ERDDAP bathymetry_dtm_2024 at -35.0236, 117.9136",
+      "checked": "2026-10-06",
+      "by": "agent: EMODnet bathymetry agent (cloud)",
+      "result": "not found",
+      "detail": "EMODnet covers European seas only; the REST service returns HTTP 204 (empty) at this reef's coordinate (Australia), so the site is outside the grid. Only two of the 13 reefs are covered (Boscombe, Borth). Do not retry EMODnet for this reef.",
+      "might_work": "Local sources instead: national or state bathymetry, a council or authority survey, Navionics / Google Earth readings (see REQUESTS_FOR_LIOR.md section 5)"
     }
   ]
 }
