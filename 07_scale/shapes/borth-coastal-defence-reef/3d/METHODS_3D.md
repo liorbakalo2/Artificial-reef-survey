@@ -8,6 +8,8 @@ The model shows the **as-built final layout of Borth Phase 1 (completed 8 March 
 
 ## 2. Data sources
 
+Source audit 2026-10-10: the full register (what was read off each source, how, accuracy, model element), the methods list, assumptions A1-A14 with effect and replacement, decisions DEC1-DEC14 and confidence per element are in `REGISTER_3D.md` (viewer: Methods tab, second button). The table below is the original source list; the registry now has 31 rows (img-31 = Blacka et al. 2013, Fig 4.1).
+
 Citations are author-year; "id" is the source id used in `model.js` provenance and `shape.json`. Registry ids refer to `03_images\reefs\borth-coastal-defence-reef\images.json`. All local copies are private research copies; reuse rights are to be checked before any public release.
 
 | id | citation | contributed | resolution / date |
@@ -224,10 +226,11 @@ Position: +-5 m (Esri), +-2-5 m (Helmert); horizontal seabed contours +-10 m. Th
 
 ## 8. References
 
+* Blacka, M.J., Shand, T.D., Carley, J.T. and Mariani, A. (2013). A Review of Artificial Reefs for Coastal Protection in NSW. WRL Technical Report 2012/08, UNSW Water Research Laboratory. https://doi.org/10.4225/53/58e1dc7368c7a, p. 60, Fig 4.1 (registry img-31; context only, not a model input).
 * Garmin Ltd / Navionics (2026). Marine Maps web viewer, SonarChart and Nautical Charts. https://maps.garmin.com/en-US/marine, accessed 2026-10-07. Not to be used for navigation.
 * EMODnet Bathymetry Consortium (2024). EMODnet Digital Bathymetry (DTM 2024). https://doi.org/10.12770/cf51df64-56f9-4a99-b1aa-36b8d7b743a1. CC BY 4.0.
 * Esri (2012-2024). World Imagery (Wayback dates 2012-10-27, 2013-06-04, 2022-08-25, 2024-09-17). https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer.
-* Hansford, M. (2011). Borth's Big Dig. New Civil Engineer, 15 September 2011. https://www.newcivilengineer.com/archive/borths-big-dig-15-09-2011/.
+* Hansford, M. (Mark) (2011). Borth's Big Dig. New Civil Engineer, 15 September 2011. https://www.newcivilengineer.com/archive/borths-big-dig-15-09-2011/.
 * Haskoning UK Ltd (2010-11). Borth Coastal Protection Scheme - Phase 1, drawings 9V5090/1001, 1020, 1021, 1022, 1023 rev C1. Ceredigion County Council; published at borthcommunity.info.
 * National Tidal and Sea Level Facility (n.d.). Chart datum and ordnance datum. https://ntslf.org/tides/datum.
 * RCAHMW (2020). Coflein, Coastal Defences, Borth, NPRN 424699. https://coflein.gov.uk/en/site/424699.
