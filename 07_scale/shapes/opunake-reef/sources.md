@@ -49,3 +49,5 @@ Other LINZ imagery for Taranaki exists (1976-2002 film scans, 2016-18 0.3 m, 202
 - Esri Wayback: 197 releases scanned at z19 tile 515337/324775; 173 have a tile here, 4 distinct versions (2015-08-19, 2019-05-15, 2023-08-31, 2024-05-09).
 - Raised Water Research Opunake page: fetched with curl (the 3 gallery images were already registered as img-01..06 era files); text facts added to the card.
 - NZ Geographic (nzgeo.com, ?p=5057), Taranaki Regional Council (trc.govt.nz) pages: HTTP 403 Cloudflare challenge; not bypassed. WebSearch for TRC Technical Report 2009-33, STDC consent plan, Black et al. 2004: nothing openly available. ResearchGate skipped (login).
+
+Wayback capture dates (Esri metadata service query, 2026-10-10): 2015-08-19 release - none returned; 2019-05-15 - Taranaki Rural 2018 (0.3 m, 2018-01-01 nominal); 2023-08-31 - TRC 2021 (0.25 m, 2021-11-24, same flight as L2); 2024-05-09 - TRC 2022 (0.1 m, 2022-12-28). The 2022-12 0.1 m image is not in the open LINZ BJ28_5000 set fetched here.

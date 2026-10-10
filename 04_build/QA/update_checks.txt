@@ -55,7 +55,7 @@ PASS  leaving the tab frees the viewers (no iframe left)
 PASS  tabs switch from every view (Table -> 3D models) and the tab re-opens on its model
 PASS  brand link 'Surf reefs survey' returns to the main page (Gallery)
 PASS  the gallery's page intro is 2 short lines with an (i)
-FAIL  no console errors (navigation session)  -> ['NETFAIL net::ERR_BLOCKED_BY_ORB blocked=None id=23045.303', 'NETFAIL net::ERR_BLOCKED_BY_ORB blocked=None id=23045.355']
+PASS  no console errors (navigation session)
 PASS  'All (compare)' selects the combined section (hash #view/models3d/all, one section visible)
 PASS  combined viewer starts in its stage; comparison panel lists every model with its check result
 PASS  comparison panel: footprint and crest read back from the meshes, all checks pass
@@ -217,4 +217,4 @@ shot  update_photomatch_bunbury.png
 shot  update_photomatch_mount.png
 shot  update_photomatch_palm.png
 shot  update_photomatch_prattes.png
-RESULT: FAIL
+RESULT: PASS

@@ -1,82 +1,82 @@
 {
- "updated": "2026-10-10 21:26",
+ "updated": "2026-10-10 22:02",
  "sig": {
   "models": {
    "borth-coastal-defence-reef": {
-    "viewer": "84bc947a9110391f",
+    "viewer": "b7c0a5256049da1f",
     "model.js": "3bd7b9a87acbe4ee",
     "annotated": "826aa18903896b1f",
-    "shape.json": "cff033f702d25918",
-    "registry": "160fda3c775212ae",
-    "card": "4beb10b4d82b1a0a",
+    "shape.json": "79f821bbbcbb8216",
+    "registry": "0c13db533771c544",
+    "card": "5e7c3fe695aed59e",
     "config": "ef26b489de2476f0"
    },
    "boscombe-surf-reef": {
-    "viewer": "a76ebba4f83f2428",
-    "model.js": "627667e606a0a679",
+    "viewer": "e8db33a945177645",
+    "model.js": "ac4af560e672f929",
     "annotated": "8b89d8089762e706",
     "shape.json": "b6b5a73f1edb3bb3",
     "registry": "a40b657771c032b1",
-    "card": "339d6b58c10f40ef",
+    "card": "cd96d3f53021fb58",
     "config": "855b46a314bd2787"
    },
    "bunbury-airwave": {
-    "viewer": "5c12c267d2f00f91",
-    "model.js": "1895211668613000",
+    "viewer": "4c6898620d8f6ec2",
+    "model.js": "5c097d70eca8905a",
     "annotated": "5f6ffe80757bc223",
     "shape.json": "f78f81e31007f34e",
     "registry": "5b81179d65f3abd3",
-    "card": "93a0e60c9449647a",
+    "card": "5c0a81c0405264de",
     "config": "30a18b5efbc83d0b"
    },
    "cables-reef-wa": {
-    "viewer": "71b06b1c4601cf61",
-    "model.js": "ea45b9a3a42eee4b",
-    "annotated": "e3b0c44298fc1c14",
+    "viewer": "20ac782e575d8179",
+    "model.js": "dd06c5d0eb5f708d",
+    "annotated": "56f7d4835b9c905f",
     "shape.json": "bf6677659593fbeb",
-    "registry": "b226186f0e6a40e9",
-    "card": "d097bb12c76d6e01",
+    "registry": "fe54b791d9e97215",
+    "card": "5bf09dbd4cecd336",
     "config": "1502d661d52d949f"
    },
    "mount-maunganui-reef": {
-    "viewer": "63064539340d1c4d",
-    "model.js": "53545e7e4d76a1ce",
+    "viewer": "af8c47045781463f",
+    "model.js": "0936289fa547af97",
     "annotated": "66b0e754f7a2b3af",
-    "shape.json": "8aa8b021b629ce7a",
-    "registry": "b32b43005aab177b",
-    "card": "70b7776e59eadb3e",
-    "config": "658e76c3543aef4a"
+    "shape.json": "15800bc56c7ef000",
+    "registry": "3aec3e0e7b50f400",
+    "card": "72dec5fb6b430483",
+    "config": "98c7333c432d85c7"
    },
    "narrowneck-gold-coast": {
-    "viewer": "9650f410fdb4954f",
-    "model.js": "4dc4c69b61ba35b4",
+    "viewer": "68afb38ea1c7e86e",
+    "model.js": "237d9e69cc2341cc",
     "annotated": "35ed980edd5d344c",
-    "shape.json": "db28a2ade0809e34",
-    "registry": "e8fcad05fb1e1baf",
-    "card": "c153b918380d7e69",
+    "shape.json": "99350be6db10ba96",
+    "registry": "6abbd57482eba0ed",
+    "card": "2193da5c22166fa2",
     "config": "1709cf2feca47555"
    },
    "palm-beach-gold-coast": {
-    "viewer": "9a141eaa93a23217",
+    "viewer": "088e823963f565f4",
     "model.js": "53be2c2ea726fe1b",
     "annotated": "708425714f0edd31",
     "shape.json": "9d74d332271d31bb",
     "registry": "a0f9ca0e8bc26a39",
-    "card": "ce501df9e7b36401",
+    "card": "4ffd984dc5b3061b",
     "config": "d8cb510848afe857"
    },
    "prattes-reef-el-segundo": {
-    "viewer": "acbd39f409ed4e10",
-    "model.js": "421c22dd69a8e142",
+    "viewer": "1494ade17bcb001c",
+    "model.js": "533d1757970106f8",
     "annotated": "c3f4f1239e62c46a",
-    "shape.json": "fd6eb2d4d5219f18",
+    "shape.json": "6d61b893baf8be08",
     "registry": "2dcfd7a4cd326fed",
-    "card": "5d4b548f094f06e0",
-    "config": "40425a7afda7425b"
+    "card": "d732dbd9bd08cbad",
+    "config": "909750bab74d1feb"
    }
   },
-  "hold": "a75b738cf3e87d9c",
-  "src": "39bd81639af4c08c"
+  "hold": "566321fd01cc2f2d",
+  "src": "1719b1c874a21195"
  },
  "snapshot": {
   "borth-coastal-defence-reef": {

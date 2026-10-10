@@ -142,6 +142,8 @@ V.append(survey_version('survey_surface_1999_11', 'Surveyed surface, Nov 1999 (D
 V.append(survey_version('survey_surface_2002_02', 'Surveyed surface, Feb 2002 (DoT WA singlebeam)', 'survey ending 1 Feb 2002 (FR20020201)', 'FR20020201_Single.txt',
         "Measured, 5,143 soundings in the window (about 5 m line spacing), 2.2 years after completion; the south-arm extension triangle is covered (mean +0.43 m) but not distinguishable from the surrounding bed.", 'DoT2002, DoT1998'))
 for v in V[-2:]: print(v['id'], v['area_m2'], v['volume_m3'], v['mean_thickness_m'], v['max_thickness_m'], v['crest_AHD_m'])
+GEO = _json.load(open(HERE + '/../scripts/georef.json'))['transform']; GEO_FIT = _json.load(open(HERE + '/../scripts/georef.json'))['fit']; SV2 = _json.load(open(HERE + '/../scripts/georef.json'))['survey_2002_vs_1998']
+SVOL = _json.load(open(HERE + '/../scripts/survey_volume.json')); SHDAT = _json.load(open(HERE + '/../scripts/shore_datum.json')); SHORE_BRG = SHDAT['shoreline_bearing_deg_T']
 dflt = [v for v in V if v['id'] == DEFAULT_VERSION][0]; orig = V[1]
 bed_range = [round(float(-bed_fn(0, y)), 2) for y in (min(p[1] for p in CO['v_asbuilt_m']), max(p[1] for p in CO['v_asbuilt_m']))]
 _ob = np.array(CO['v_orig_m']); _bu = -bed_fn(_ob[:, 0], _ob[:, 1])
@@ -151,6 +153,8 @@ validation = {"bed": "measured: DoT WA singlebeam 30 Mar 1998 (pre-construction)
   "bed_depth_at_outline_original_plan_below_MSL_A_m": {"min": round(float(_bu.min()) + OFF_A, 2), "max": round(float(_bu.max()) + OFF_A, 2), "mean": round(float(_bu.mean()) + OFF_A, 2), "text_water_depth": "3.0-6.0 m (Blacka Table 4.2, RWR)"},
   "S1_7m_contour_at_350m_model_depth_RL": round(float(-bed_fn(0, 350.0)), 2),
   "contour_check_centreline": chk, "contour_check_rms_m": rms, "contour_check_transects": tchk,
+  "bed_at_setout_line": {"RL_reading_A_m": round(float(np.mean([bed_fn(p[0], p[1]) for p in np.array(CO['v_orig_m'])[12:73]])), 2), "RL_reading_B_m": round(float(np.mean([bed_fn(p[0], p[1]) for p in np.array(CO['v_orig_m'])[12:73]])) - OFF_A, 2),
+     "note": "mean RL of the measured bed along the outer foot (vertices 12-72 of the traced outline); the design sets the outer line at RL -3.0 = 'the existing 3 m depth contour extended offshore' (S1 p.3): A fits, B (RL = AHD) would put the bed 0.8 m deeper"},
   "survey_check": svy,
   "volumes": {"default_model": dflt['volume_m3'], "original_model": orig['volume_m3'], "volume_with_extension_model": V[0]['volume_m3'], "stated_Blacka_A13": 5500, "stated_P3_ICM": 5000, "stated_Wikipedia": 3500, "extension_text_m3": 320,
               "implied_density_t_m3_if_10000_t": round(10000 / dflt['volume_m3'], 2), "first_model_before_survey": {"default_with_extension": 5500.0, "original": None}},
@@ -165,8 +169,8 @@ levels = [
 M = {
  "slug": "cables-reef-wa", "name": "Cable Station artificial surfing reef (Cables Reef, Cottesloe / Leighton, Perth, Western Australia)", "built": datetime.date.today().isoformat(),
  "state": "Design state of the 1999 reef: Lyons (1992) design plan with the southern-arm extension, drawn at its design levels (RL -1.0 crest to -3.0 outer edge). No survey of the built reef was found; later changes are notes only.",
- "frame": {"x": "alongshore, + toward SOUTH (x_model = -x_canonical)", "y": "offshore, + toward WEST", "z": "up, 0 = MSL (reading A)", "units": "m", "origin": "shoreline point nearest the reef centroid; shoreline assumed N-S; centroid of the default footprint 270 m offshore",
-           "bearing_x_deg": 180.0, "bearing_y_deg": 270.0, "north_xy": [-1.0, 0.0], "shoreline_y": 0.0},
+ "frame": {"x": "alongshore, + toward SOUTH (x_model = -x_canonical)", "y": "offshore, + toward WEST", "z": "up, 0 = MSL (reading A)", "units": "m", "origin": "the design drawing frame (x along the reef axis, y offshore) rotated %.1f deg from true north by the georeference; origin = canonical origin, centroid of the original footprint at y = 271 m" % GEO['theta_ccw_deg'],
+           "bearing_x_deg": round((GEO['canonical_plus_x_bearing_deg'] + 180.0) % 360, 1), "bearing_y_deg": GEO['canonical_plus_y_(offshore)_bearing_deg'], "north_xy": [round(-float(np.cos(np.radians(GEO['theta_ccw_deg']))), 4), round(-float(np.sin(np.radians(GEO['theta_ccw_deg']))), 4)], "shoreline_y": 0.0, "shoreline_bearing_deg": SHORE_BRG},
  "datum": {"zero": "MSL", "rl_minus_msl_A": OFF_A, "equation": "reading A (default): z_MSL = z_RL - 0.78 ; reading B (Blacka 2013 wording 'below MSL'): z_MSL = z_RL",
            "note": "The drawing's RL datum is not stated. Reading A: RL = tide-gauge / chart datum (Pitt note, S1 'datum'). Reading B: RL = MSL (Blacka 2013 A.1.1 'crest submergence of 1-2.5 m below MSL'). They differ by 0.78 m; the viewer has a switch."},
  "levels": levels, "extra_levels": [], "slider": {"min_id": "DATUM", "max_id": "HWt", "note": "HAT/LAT of Fremantle not found at a primary source; slider spans the tide-gauge datum to typical high water (range 0.8 m, Blacka 2013)."},
