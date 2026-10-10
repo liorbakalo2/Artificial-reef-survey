@@ -152,7 +152,7 @@ All of them are in `REQUESTS_FOR_LIOR.md`:
 | 2026-10-10 | `_agent_briefs/task_source_audit.md` | `07_scale/shapes/cables-reef-wa/` | `SOURCE_AUDIT_2026-10-10.md` | DONE: 45 checked, 6 fixed (max thickness text 2.9 -> 2.5 m); A1-A11, X1-X8, how-used table; PAGE_TEXTS_FOR_MAIN.json revised |
 | 2026-10-10 | `_agent_briefs/task_source_audit.md` | non-3D shapes: albany, burkitts, kovalam, opunake, mexico | `SOURCE_AUDIT_2026-10-10.md` | RUNNING |
 | 2026-10-10 | `_agent_briefs/task_source_audit.md` | cards group A (7 cards with models) | `SOURCE_AUDIT_2026-10-10.md` | RUNNING |
-| 2026-10-10 | `_agent_briefs/task_source_audit.md` | cards group B (6 other cards) | `SOURCE_AUDIT_2026-10-10.md` | RUNNING |
+| 2026-10-10 | `_agent_briefs/task_source_audit.md` | cards group B (6 other cards) | `05_qa/source_audit/cards_group_B_2026-10-10.md` | DONE: ~250 checked, ~75 fixed; unread SurferToday tags removed (Cables); Burkitts lat sign fixed. Follow-ups for main listed in the audit file (Opunake R4 unread, Albany 6-8 s attribution, Mexico 'unveiled' date, Burkitts/Bunbury coordinates, Kovalam cost check) |
 **When an agent finishes:**
 - save its report from the hand-back;
 - refresh the page: `python src/update_page.py` from `04_build`, after the model agents. Check the SUMMARY and FAIL lines;
