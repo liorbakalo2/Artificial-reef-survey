@@ -31,6 +31,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]          # .../Artificial reef
 CARDS_DIR = ROOT / "02_research" / "reefs"
+DEAD_ENDS_DIR = ROOT / "02_research" / "dead_ends"      # 2026-10-10 (Lior): sources that gave nothing, one file per reef
 BUILD_DIR = ROOT / "04_build"
 ASSETS_DIR = BUILD_DIR / "assets"
 DATA_DIR = BUILD_DIR / "data"
@@ -1002,6 +1003,39 @@ def merge_footprint_refs(slug, references, fp_refs, problems):
 # Main compile
 # ---------------------------------------------------------------------------
 
+DEAD_END_FIELDS = ("what", "kind", "where", "checked", "by", "result", "detail", "might_work")
+
+
+def load_dead_ends(slug, problems):
+    """02_research/dead_ends/<slug>.json -> list of entries for the collapsed 'Checked, nothing useful' section of the reef dialog.
+    Not references: nothing here is cited from the card text and nothing reaches the card's references list. File order is kept (append only)."""
+    path = DEAD_ENDS_DIR / f"{slug}.json"
+    if not path.is_file():
+        problems.append(f"[{slug}] dead-ends file not found at {path}")
+        return []
+    try:
+        d = json.loads(path.read_text(encoding="utf-8"))
+    except ValueError as e:
+        problems.append(f"[{slug}] dead-ends file is not valid JSON: {e}")
+        return []
+    entries = d.get("entries") if isinstance(d, dict) else d
+    if not isinstance(entries, list):
+        problems.append(f"[{slug}] dead-ends file has no 'entries' list")
+        return []
+    if isinstance(d, dict) and d.get("slug") not in (None, slug):
+        problems.append(f"[{slug}] dead-ends file says slug {d.get('slug')!r}")
+    out = []
+    for i, e in enumerate(entries):
+        if not isinstance(e, dict):
+            problems.append(f"[{slug}] dead end #{i + 1} is not an object")
+            continue
+        miss = [k for k in DEAD_END_FIELDS if k not in e]
+        if miss:
+            problems.append(f"[{slug}] dead end #{i + 1} lacks {miss}")
+        out.append({k: ("" if e.get(k) is None else str(e.get(k))) for k in DEAD_END_FIELDS})
+    return out
+
+
 def compile_card(slug, problems):
     path = CARDS_DIR / f"{slug}.json"
     if not path.is_file():
@@ -1086,6 +1120,7 @@ def compile_card(slug, problems):
         "facts_without_ref": facts_without_ref,
         "footprint": footprint,
         "location": location,
+        "dead_ends": load_dead_ends(slug, problems),
     })
     out.pop("hero_recommendation", None)
 

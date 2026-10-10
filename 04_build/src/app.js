@@ -539,11 +539,30 @@
     }).join('') + '</ol>';
   }
 
+  /* 2026-10-10 (Lior): "Checked, nothing useful (N)": sources we looked at that gave nothing (02_research/dead_ends/<slug>.json). NOT references:
+     it is the last section of the dialog, closed by default (also in print), so a later agent does not repeat the search. */
+  function deadEndsBody(r) {
+    var list = r.dead_ends || [];
+    if (!list.length) return '<p class="de-none">No dead ends recorded for this reef.</p>';
+    function whereHTML(w) {
+      var parts = String(w || '').split(/(https?:\/\/[^\s<>"')\]]+[^\s<>"')\].,;])/g);
+      return parts.map(function (t, i) { return i % 2 ? extLink(t, t.length > 70 ? t.slice(0, 67) + '…' : t) : esc(t); }).join('');
+    }
+    return '<p class="de-intro">Sources and searches that did not give what we needed. They are <b>not</b> references: no statement on this page rests on them. Listed so the same search is not repeated; the last line of each says what might still work.</p>' +
+      '<ol class="de-list">' + list.map(function (e) {
+        return '<li class="de-item"><p class="de-what">' + esc(e.what) + '</p>' +
+          '<p class="de-meta"><span class="de-kind">' + esc(e.kind) + '</span> <span class="de-res">' + esc(e.result) + '</span> <span>checked ' + esc(e.checked) + '</span> <span>by ' + esc(e.by) + '</span></p>' +
+          '<p class="de-where"><b>Where:</b> ' + whereHTML(e.where) + '</p>' +
+          (e.detail ? '<p class="de-detail">' + esc(e.detail) + '</p>' : '') +
+          (e.might_work ? '<p class="de-might"><b>Might still work:</b> ' + whereHTML(e.might_work) + '</p>' : '') + '</li>';
+      }).join('') + '</ol>';
+  }
+
   var OPEN_BY_DEFAULT = { 'quick-facts': true, 'outcome': true };
   function keyOf(title) { return String(title).toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); }
   function accHTML(pfx, key, title, body, opts) {
     opts = opts || {};
-    var open = opts.forPrint || OPEN_BY_DEFAULT[key];
+    var open = (opts.forPrint && !opts.closed) || OPEN_BY_DEFAULT[key];
     return '<details class="acc' + (opts.cls ? ' ' + opts.cls : '') + '" id="' + pfx + key + '"' + (open ? ' open' : '') + '>' +
       '<summary><h3>' + esc(title) + (opts.count != null ? ' <span class="acc-n">' + opts.count + '</span>' : '') + '</h3>' +
       (opts.peek ? '<span class="acc-peek">' + esc(opts.peek) + '</span>' : '') + '</summary>' +
@@ -556,7 +575,7 @@
     var nImg = (r.images || []).length, nVid = forPrint ? 0 : (r.videos || []).length, nFig = (r.lior_images || []).length;
     var nRev = (r.reviews || []).length, nRef = (r.references || []).length;
     var hasFp = !!(r.footprint && window.ReefScale);
-    var nDis = (r.sources_disagree || []).length;
+    var nDis = (r.sources_disagree || []).length, nDe = (r.dead_ends || []).length;
     var story = (r.sections || []).filter(function (s) { return s.html_or_text; }).map(function (s) {
       return accHTML(pfx, keyOf(s.title), s.title, paras(s.html_or_text, r),
         { forPrint: forPrint, peek: short(stripRefs(s.html_or_text), 140) });
@@ -570,6 +589,7 @@
       (nDis ? '<button type="button" data-jump="sources-disagree">Disagree <span class="n">' + nDis + '</span></button>' : '') +
       (hasFp ? '<button type="button" data-jump="scale">Footprint</button>' : '') +
       '<button type="button" data-jump="references">Sources <span class="n">' + nRef + '</span></button>' +
+      '<button type="button" data-jump="dead-ends">Dead ends <span class="n">' + nDe + '</span></button>' +
       '<button type="button" class="xall" data-expand-all aria-pressed="false">Expand all</button>' +
     '</nav>';
     return '<article class="detail">' +
@@ -595,6 +615,8 @@
         peek: r.footprint.display ? 'Traced plan drawing, and how we drew it: every number with its source' : 'Shape not drawn: no plan, survey or clear image of the reef found' }) : '') +
       accHTML(pfx, 'references', 'References', '<div class="refs">' + refsHTML(r, forPrint ? pfx + 'ref-' : 'ref-') + '</div>',
         { forPrint: forPrint, count: nRef, peek: 'Every [R#] above, with what each source supports and when it was checked' }) +
+      accHTML(pfx, 'dead-ends', 'Checked, nothing useful (' + nDe + ')', deadEndsBody(r), { forPrint: forPrint, closed: true, cls: 'acc-de',
+        peek: 'Not references: sources and searches that gave nothing, so nobody repeats them' }) +
     '</article>';
   }
 

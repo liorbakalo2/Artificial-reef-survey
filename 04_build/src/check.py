@@ -434,6 +434,16 @@ def main() -> int:
     check(all(by[s].get("location") for s in SLUGS) and set(no_loc) <= {"mexico-reef-2026-unnamed"},
           f"only reefs with no published coordinates have no link (no link: {no_loc}; expected only Mexico)")
     out.append("INFO locations: " + "; ".join(f"{s}={(by[s].get('location') or {}).get('status')}:{(by[s].get('location') or {}).get('lat')},{(by[s].get('location') or {}).get('lon')}" for s in SLUGS))
+    # dead ends (Lior 2026-10-10): the data of every reef equals its 02_research/dead_ends/<slug>.json
+    de_files = {}
+    for s in SLUGS:
+        dp = ROOT / "02_research" / "dead_ends" / f"{s}.json"
+        de_files[s] = json.loads(dp.read_text(encoding="utf-8")).get("entries", []) if dp.is_file() else []
+    bad_de = [s for s in SLUGS if len(by[s].get("dead_ends") or []) != len(de_files[s]) or not de_files[s]
+              or any(e.get("what") != d.get("what") or e.get("result") != d.get("result") for e, d in zip(by[s].get("dead_ends") or [], de_files[s]))]
+    check(not bad_de, f"dead ends: all 13 reefs carry their 02_research/dead_ends/<slug>.json entries in the page data, same count and order ({sum(len(v) for v in de_files.values())} entries; bad={bad_de})")
+    leak_de = [s for s in SLUGS if any(e["what"] in json.dumps(by[s].get("references") or [], ensure_ascii=False) for e in by[s].get("dead_ends") or [])]
+    check(not leak_de, f"dead ends are not in the references list (leaking={leak_de})")
     # DOM: open every reef dialog headlessly
     try:
         sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -460,6 +470,20 @@ def main() -> int:
                 check(ok, f"[dialog {s}] Location link to Google Maps (new tab, noopener{', labelled approximate' if L['approximate'] else ''})")
             else:
                 check("location: not published" in dd.lower() and "google.com/maps" not in dd, f"[dialog {s}] says location not published and has no map link")
+            # 2026-10-10 (Lior): "Checked, nothing useful (N)" = last section of the dialog, closed by default, not part of References, N = entries in the file
+            n_de = len(de_files.get(s, []))
+            art_m = re.search(r'<article class="detail">.*?</article>', dd, re.S)
+            art = art_m.group(0) if art_m else dd
+            m_de = re.search(r'<details class="acc acc-de"( open="")? id="d-dead-ends">(.*?)</details>', art, re.S) or re.search(r'<details class="acc acc-de" id="d-dead-ends"( open="")?>(.*?)</details>', art, re.S)
+            body_de = m_de.group(2) if m_de else ""
+            n_items = body_de.count('class="de-item"')
+            refs_m = re.search(r'<details class="acc" id="d-references"[^>]*>(.*?)</details>', art, re.S)
+            is_closed = bool(m_de) and not m_de.group(1)
+            is_last = art.rfind("<details") == art.find('<details class="acc acc-de"') and art.find('id="d-references"') < art.find('id="d-dead-ends"')
+            ok_de = (bool(m_de) and is_closed and f"Checked, nothing useful ({n_de})" in art and n_items == n_de
+                     and bool(refs_m) and "de-item" not in refs_m.group(1) and is_last)
+            check(ok_de, f"[dialog {s}] 'Checked, nothing useful ({n_de})' section: present, closed by default, last section, after (not inside) References, {n_de} entries as in dead_ends/{s}.json"
+                  + ("" if ok_de else f" (found={bool(m_de)}, closed={is_closed}, items={n_items}, last={is_last})"))
         else:
             tdom = qa_shots.dump_dom(HTML.as_uri() + "#view/table", exe0)[1]
             tb = qa_shots.strip_scripts(tdom)

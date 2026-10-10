@@ -80,6 +80,16 @@
       "result": "not found",
       "detail": "BoPRC says the deepest north-arm bags and seabed depths of 3.0-4.0 m were 'evident in the 2008 survey' but not in the July 2013 survey (2.25-2.75 m; the small edge bags are 'most likely still intact but buried'), yet the 2008 survey itself is not published in any source found. What exists is the Jan 2007 survey of the 70 % complete reef (Scarfe 2008, Fig 4.22) and the July 2013 survey (BoPRC Fig 3 and 5, the traced default), plus the ASR 'Installed' colour-coded image with no scale or stated datum. So the as-built seabed at the reef is an assumption (-3.6 m CD) and the 2013 outline is a post-deflation state.",
       "might_work": "Google Earth Pro imagery 2008-2010 on a calm clear day (Lior: G5); ASR Ltd / Raised Water Research (Lior: E6); University of Waikato (Scarfe, Discovery Marine Ltd) survey archive"
+    },
+    {
+      "what": "Black & Mead (2007) 'Sand bank responses to a multi-purpose reef...' Shore & Beach (P4, W9)",
+      "kind": "paper",
+      "where": "Google: \"Sand bank responses to a multi-purpose reef\" Black Mead Shore Beach",
+      "checked": "2026-10-11",
+      "by": "Lior (browser), recorded by main",
+      "result": "not found",
+      "detail": "Lior searched for it 2026-10-11 and found no such paper; volume/pages were never confirmed, the citation itself may be wrong.",
+      "might_work": "Ask ASR/eCoast (S. Mead) whether it exists"
     }
   ]
 }

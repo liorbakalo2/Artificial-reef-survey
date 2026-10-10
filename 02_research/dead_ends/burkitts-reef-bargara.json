@@ -230,6 +230,16 @@
       "result": "login needed",
       "detail": "Social-media post, not read in full; lead only. It corroborates the quote text of R13 (the X post, HTTP 402) and was the independent corroboration that kept that quote in the card. No location or dimension information expected.",
       "might_work": ""
+    },
+    {
+      "what": "W7 web searches (which boulders were moved; wide low-tide photos)",
+      "kind": "search",
+      "where": "Google searches + ABC 2024 article listed in REQUESTS_FOR_LIOR.md W7",
+      "checked": "2026-10-11",
+      "by": "Lior (browser), recorded by main",
+      "result": "other: nothing new",
+      "detail": "Lior ran the W7 searches; nothing beyond what agents already had, and nothing on which boulders were moved.",
+      "might_work": "E12 (Greg Redgard / Bargara Boardriders); QImagery 1996-98 aerials"
     }
   ]
 }

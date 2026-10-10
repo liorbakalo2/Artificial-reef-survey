@@ -170,6 +170,16 @@
       "result": "not found",
       "detail": "EMODnet covers European seas only; the REST service returns HTTP 204 (empty) at this reef's coordinate (Mexico (Pacific)), so the site is outside the grid. Only two of the 13 reefs are covered (Boscombe, Borth). Do not retry EMODnet for this reef.",
       "might_work": "Local sources instead: national or state bathymetry, a council or authority survey, Navionics / Google Earth readings (see REQUESTS_FOR_LIOR.md section 5)"
+    },
+    {
+      "what": "W4 web searches (Xala / Chalacatepec / Mortensen DHI / SEMARNAT MIA)",
+      "kind": "search",
+      "where": "Google searches listed in REQUESTS_FOR_LIOR.md W4",
+      "checked": "2026-10-11",
+      "by": "Lior (browser), recorded by main",
+      "result": "other: only wave photos",
+      "detail": "Lior ran the W4 searches in a normal browser; results were only wave photos, no coordinates, plan or MIA.",
+      "might_work": "Recording of the 16 Apr 2026 reveal event; Mortensen/DHI contact"
     }
   ]
 }

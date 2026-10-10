@@ -120,6 +120,16 @@
       "result": "not found",
       "detail": "EMODnet covers European seas only; the REST service returns HTTP 204 (empty) at this reef's coordinate (India), so the site is outside the grid. Only two of the 13 reefs are covered (Boscombe, Borth). Do not retry EMODnet for this reef.",
       "might_work": "Local sources instead: national or state bathymetry, a council or authority survey, Navionics / Google Earth readings (see REQUESTS_FOR_LIOR.md section 5)"
+    },
+    {
+      "what": "W6 web searches (Kovalam ASR report, CESS assessment, surfingindia.net)",
+      "kind": "search",
+      "where": "Google searches listed in REQUESTS_FOR_LIOR.md W6",
+      "checked": "2026-10-11",
+      "by": "Lior (browser), recorded by main",
+      "result": "no plan or figure",
+      "detail": "Lior ran the W6 searches; nothing useful, only a Google Maps location of the site.",
+      "might_work": "E13 e-mail (ASR / CESS); Google Earth Pro history 2010-12"
     }
   ]
 }

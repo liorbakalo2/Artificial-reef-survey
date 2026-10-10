@@ -353,6 +353,22 @@ figcaption { font-size: .85rem; margin-top: 8px; }
 .refs li .rsup { display: block; font-size: .82rem; color: var(--muted); }
 .refs li.hl, .refs li:target { background: var(--hl); }
 .refindex .refs li { margin: 0; }
+/* dead ends ("Checked, nothing useful"): compact, one column, readable on a phone */
+.de-intro { font-size: .86rem; color: var(--muted); margin: 0 0 10px; }
+.de-none { font-size: .9rem; color: var(--muted); margin: 0; }
+.de-list { list-style: none; margin: 0; padding: 0; counter-reset: de; }
+.de-item { counter-increment: de; padding: 9px 0 9px 26px; border-top: 1px solid var(--line); position: relative; font-size: .88rem; line-height: 1.45; min-width: 0; overflow-wrap: anywhere; }
+.de-item:first-child { border-top: 0; }
+.de-item::before { content: counter(de); position: absolute; left: 0; top: 9px; width: 20px; text-align: right; color: var(--muted); font-size: .76rem; font-weight: 600; }
+.de-item p { margin: 0 0 3px; }
+.de-what { font-weight: 600; }
+.de-meta { display: flex; flex-wrap: wrap; gap: 2px 10px; font-size: .78rem; color: var(--muted); }
+.de-meta .de-kind { text-transform: uppercase; letter-spacing: .04em; font-weight: 600; }
+.de-meta .de-res { color: var(--text); border: 1px solid var(--line); border-radius: 999px; padding: 0 8px; background: var(--surface-2); }
+.de-where, .de-detail, .de-might { color: var(--text); }
+.de-where b, .de-might b { color: var(--muted); font-weight: 600; }
+.de-might { color: var(--muted); }
+.acc-de > summary h3 { font-size: 1.05rem; }
 
 .lightbox { width: min(1200px, 96vw); max-height: 94dvh; border-radius: 10px; background: #0d1014; color: #e9ecef; }
 .lb-inner { padding: 12px; max-height: 94dvh; overflow: auto; }

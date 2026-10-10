@@ -308,14 +308,14 @@
   }
 
   function knNotesHTML(m) {
-    return info('How to read the key numbers', pp('Model value, the value stated in the sources, and the difference, for each quantity that fixes the shape. Hover a source id for its citation.') +
+    return info('How to read the key numbers', pp('Model value, the value stated in the sources, and the difference, for each quantity that fixes the shape. Hover a source id for its citation. The ids (R1, S3, img1, ...) are this model\'s own source numbers (METHODS_3D.md), not the numbers of the reef card\'s references.') +
       pp('Heights are metres relative to the model zero (mean sea level, MSL) unless a datum is named; &quot;below LAT&quot; means below lowest astronomical tide.') +
       (hasVers(m) ? pp('Shaded rows belong to the selected outline version; the other rows apply to every version unless a row says otherwise.') : '') +
       goLink('#m3d-caveats', 'Appendix C: caveats and discrepancies'));
   }
   function knInner(m) {
     var rows = rowsFor(m);
-    var head = '<table class="m3d-t m3d-kn"><thead><tr><th>Quantity</th><th>Model (this reconstruction)</th><th>Stated in sources</th><th>Difference (model - stated)</th><th>Source ids</th></tr></thead><tbody>';
+    var head = '<table class="m3d-t m3d-kn"><thead><tr><th>Quantity</th><th>Model (this reconstruction)</th><th>Stated in sources</th><th>Difference (model - stated)</th><th title="The model\'s own source numbers (METHODS_3D.md), not the reef card\'s R-numbers">Model source ids</th></tr></thead><tbody>';
     var body = rows.map(function (r) {
       return '<tr' + (r.ver ? ' class="ver"' : '') + '><td class="q">' + esc(r.q) + (r.note ? '<small>' + esc(r.note) + '</small>' : '') + '</td><td>' + esc(r.model) + '</td><td>' + esc(r.stated || '-') + '</td><td class="diff">' + esc(r.diff || '-') + '</td><td>' + sidChips(m.slug, r.ids) + '</td></tr>';
     }).join('');

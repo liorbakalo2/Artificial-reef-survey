@@ -7,6 +7,8 @@ levels). Purpose: inform a planned reef at Haifa, Israel, where the tidal range 
 section 3 (Haifa conclusions) and video transcription are PAUSED until Lior says otherwise.
 
 ## Where things are (open only what you need)
+- `NEXT_STEPS.md`: START HERE: current state, the work queue, open decisions (updated at the end of each session).
+- `new uploads from lior/`: files Lior supplied 2026-10-11 (like `papers/`: his folder, never move or rename).
 - `05_qa/00_STATUS.md`: dated log of all work. Read only the last 2-3 entries (`grep -n '^## '`, then print that range).
 - `REQUESTS_FOR_LIOR.md`: the single list of what Lior must supply or decide (papers, e-mails, browser pages, app readings, decisions D1-D6).
 - `_agent_briefs/`: task briefs. `common.md` holds the rules every agent follows; `orchestrator.md` holds the main session's

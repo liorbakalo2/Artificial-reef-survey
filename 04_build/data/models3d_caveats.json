@@ -157,15 +157,15 @@
    "slug": "boscombe-surf-reef",
    "q": "As-built crest height",
    "model": "flat +0.5 m ACD along the whole outline",
-   "stated": "Oct 2009 profile tops +0.05 to +0.65 m ACD (typically +0.2 to +0.3); April 2011 maximum +0.68 m; unverified snippet: final crest 0.5 m above the final design height",
-   "diff": "+-0.3 m (up to +0.5 m if the unverified snippet is right)",
+   "stated": "Rendle (2016, p. 70): built crest approximately 0.5 m CD, i.e. 0.5 m above the design (0 m CD, Table 4.4; 0.3 m CD, Fig. 5.3); Oct 2009 profile tops +0.05 to +0.65 m ACD (typically +0.2 to +0.3); April 2011 maximum +0.68 m",
+   "diff": "+-0.3 m against the 2009 profile tops",
    "reason": "The 'focus' and 'wedge' sections have different design heights and are not published; settlement 0.5 m or less; the model is an idealised flat crest.",
    "status": "open",
    "resolve": "Oct 2009 survey grid, Rendle thesis, CCO data request",
    "section": "3.8 A6; 7",
    "ids": "S2; S3",
    "ev": [
-    "The final crest height of Boscombe ASR was 0.5 m higher than the final design height"
+    "the BUILT crest, Rendle 2016 p. 70: \"built crest approximately 0.5 m CD\""
    ]
   },
   {
@@ -275,10 +275,25 @@
    ]
   },
   {
+   "slug": "bunbury-airwave",
+   "q": "Fill type: sources disagree",
+   "model": "no fill drawn (rigid spherical cap); label wording only",
+   "stated": "ABC 2019: 'air'; Tracks 2019: 'sand + air'; developer interview (Bakalo 2026, Troy): 'sand instead of air'",
+   "diff": "none for the geometry",
+   "reason": "Three accounts of what the 2019 bladder was filled with; the interview is a developer's unrecorded recollection of the 'final' design and may not describe the December 2019 installation. Nothing in the model changes.",
+   "status": "open",
+   "resolve": "The installation record, or a recorded / transcribed interview with Waveco",
+   "section": "2.2; 3.8 A14; 7 L12",
+   "ids": "S_ABC19; S_Tracks19; S_Troy",
+   "ev": [
+    "Source disagreement: what the bladder was filled with"
+   ]
+  },
+  {
    "slug": "palm-beach-gold-coast",
    "q": "Volume and height vs the council register",
    "model": "envelope 22,000 m3; crest height above the seabed 3.9 m (max 4.17 m)",
-   "stated": "City of Gold Coast asset register VOLUME 33,000 and HEIGHT_M 5 (units and reference not stated); 25,000 m3 'quarried rock' (ICM / Salyer 2024); 60,000 t placed (EPW 2020)",
+   "stated": "City of Gold Coast asset register VOLUME 33,000 and HEIGHT_M 5 (units unknown); about 25,000 m3 quarried rock (ICM / Salyer 2024); 60,000 t placed (EPW 2020)",
    "diff": "-11,000 m3 (-33 %) and -1.1 m (-22 %) vs the register",
    "reason": "Not explained: the register may carry design or pay-line quantities, rock below the original seabed (toe trench, settlement), or the contour interval may exceed 0.5 m on the crest side. The register volume is reproduced only with a seabed 1.0 m deeper than all independent seabed evidence. 60,000 t / 33,000 m3 = 1.82 t/m3 is a normal placed-rock bulk density.",
    "status": "unresolved",
@@ -341,7 +356,7 @@
    "model": "seabed from the Navionics SonarChart; surface from 10 unlabelled aerial contour lines at an assumed 0.5 m interval",
    "stated": "contour interval regressed 0.459 +- 0.003 m (formal); toe elevation vs chart seabed -0.27 m (sd 0.55 m); pre-reef City survey profile (Mortensen 2015 Fig. 6a) agrees with the chart to 0.2-0.3 m RMS after the LAT to AHD/MSL shift and with the model seabed to 0.33 m RMS (13 labels, AHD assumed); PBO3 buoy (Daniels 2022) 11.75 m vs model 12.37 m below LAT (+0.62 m, extrapolated beyond the 10 m line); City DTM has no open-coast seabed",
    "diff": "interval +9 % (assumed 0.5 vs 0.459); toe 0.27 m deeper than the chart",
-   "reason": "With a 1.0 m interval the seaward toe would be at -12.5 m, 5 m below the chart. Absolute depth and height are +-0.5 m; no surveyed depth value was read.",
+   "reason": "With a 1.0 m interval the seaward toe would be at -12.5 m, 5 m below the chart. Absolute depth and height are +-0.5 m; no surveyed depth value was read. Assumptions A12-A14 (aerial lines are as built; chart bed unchanged since the survey; Mortensen profile in AHD) and decisions DEC1-DEC15 are listed in the viewer's Methods tab, sections 3.8-3.9.",
    "status": "open",
    "resolve": "As-built multibeam (City of Gold Coast); Navionics app readings A1-A7",
    "section": "4.2-4.4; 4.9; 7; Gold Coast report 2, 5.2",
@@ -671,6 +686,186 @@
    "section": "3.2; 5",
    "ids": "cor23",
    "ev": []
+  },
+  {
+   "slug": "cables-reef-wa",
+   "q": "Datum link: RL / AHD / MSL",
+   "model": "reading A (RL = chart datum, MSL = RL + 0.78 m): design crest -1.78 m MSL; AHD taken as MSL",
+   "stated": "Blacka 2013: crest 1-2.5 m below MSL; soundings imply RL - AHD = 0.59 / 0.50 m (Nov 1999 / Feb 2002)",
+   "diff": "0.2-0.3 m between reading A (0.78) and the soundings (0.5-0.6)",
+   "reason": "The RL of the design drawing is not tied to AHD in any source found; the soundings favour reading A but the gap is unresolved.",
+   "status": "unresolved",
+   "resolve": "Transport WA (Fremantle chart datum to AHD offset, HAT / LAT); the Lyons (1992) drawing set",
+   "section": "3.1; 4; 7 L1",
+   "ids": "DoT1999; DoT2002; BoM; img26",
+   "ev": [
+    "unresolved gap 0.2-0.3 m (A12)"
+   ]
+  },
+  {
+   "slug": "cables-reef-wa",
+   "q": "Rock surface from single-beam soundings",
+   "model": "surveyed surface (default) interpolated from 840 soundings (Nov 1999), +-0.3 m vertical",
+   "stated": "no multibeam or lidar of the rock found; the DoT Perth_5m composite shows the reef only as a smoothed mound",
+   "diff": "narrow ridges smoothed; volume +-1,000 m3",
+   "reason": "Sounding lines are about 5 m apart and the surface between them is interpolated; DoT warns of issues inherent in its conversion of old survey datums to AHD.",
+   "status": "open",
+   "resolve": "A newer multibeam / lidar survey (DoT WA Bathymetry Portal, AusSeabed) or Navionics readings by Lior at the crest and apex",
+   "section": "3.4; 5; 7 L3",
+   "ids": "DoT1999; DoT5m",
+   "ev": [
+    "between lines (about 5 m) the surface is interpolated, narrow ridges are smoothed"
+   ]
+  },
+  {
+   "slug": "cables-reef-wa",
+   "q": "South-arm extension",
+   "model": "default outline = original plan, {{versions/design_plan_original_1999/area_m2|n0}} m2; the extension is a separate version ({{versions/design_plan_plus_extension_1999/area_m2|n0}} m2)",
+   "stated": "drawn on a low-resolution picture (img-06): 347 m2, 320 m3",
+   "diff": "2002 soundings +0.43 m (n = 23) against 0.92 m drawn: not confirmed",
+   "reason": "Neither the 2002 soundings nor the Esri imagery confirm that the extension was built.",
+   "status": "open",
+   "resolve": "A survey after 2002, or Pattiaratchi (2003, 2007) / Bancroft (1999), could say whether and how much was built",
+   "section": "3.5; 7 L2",
+   "ids": "img06; DoT2002; SAT",
+   "ev": [
+    "not confirmed (+0.43 m, n = 23)"
+   ]
+  },
+  {
+   "slug": "cables-reef-wa",
+   "q": "Design-surface versions are idealised",
+   "model": "design surface on the measured bed: {{versions/design_plan_original_1999/volume_m3|n0}} m3 (original) / {{versions/design_plan_plus_extension_1999/volume_m3|n0}} m3 (with extension)",
+   "stated": "surveyed {{versions/survey_surface_1999_11/volume_m3|n0}} m3 (Nov 1999) and {{versions/survey_surface_2002_02/volume_m3|n0}} m3 (Feb 2002)",
+   "diff": "16-25 % below the surveyed volume",
+   "reason": "The design surface is 0.3 m below the surveyed rock: 0.97 m thick as modelled against 1.15-1.29 m surveyed.",
+   "status": "by-design",
+   "resolve": "-",
+   "section": "3.3; 4",
+   "ids": "DoT1999; DoT2002; img26",
+   "ev": [
+    "thickness 0.97 m modelled vs 1.15-1.29 m surveyed"
+   ]
+  },
+  {
+   "slug": "cables-reef-wa",
+   "q": "No survey after February 2002",
+   "model": "latest surface Feb 2002, crest {{versions/survey_surface_2002_02/crest_AHD_m|n2}} m AHD",
+   "stated": "Pitt 2009: 'crest about 1.5 m below the lowest tide'",
+   "diff": "later settlement is not modelled",
+   "reason": "No later survey of the rock was found.",
+   "status": "open",
+   "resolve": "A newer multibeam / lidar survey (DoT WA Bathymetry Portal, AusSeabed)",
+   "section": "7 L3",
+   "ids": "DoT2002",
+   "ev": [
+    "after 2002 (settlement, Pitt 2009"
+   ]
+  },
+  {
+   "slug": "cables-reef-wa",
+   "q": "Shore line not drawn; frame rotated 9.7 deg",
+   "model": "seabed window starts at y = 190 m; frame x axis toward 170.3 deg true (rotated 9.7 deg from north by the georeference)",
+   "stated": "about 250 m offshore (Pattiaratchi 1999), about 275 m (Blacka 2013)",
+   "diff": "model: 254-263 m from the reef centre to the 0 m AHD line, between the two",
+   "reason": "The beach and shore line lie outside the modelled seabed patch; the frame follows the design drawing, fitted to the DoT soundings.",
+   "status": "by-design",
+   "resolve": "-",
+   "section": "3.1; 3.6; 4",
+   "ids": "DoT1998; BoM",
+   "ev": [
+    "254-263 m to the 0 m AHD line"
+   ]
+  },
+  {
+   "slug": "southern-ocean-surf-reef-albany",
+   "q": "Seabed source and datum",
+   "model": "profile from contours of a 2015 RHDHV plan, read as m AHD",
+   "stated": "datum not printed on the plan; same report family uses '-0.75 mAHD' for the crest",
+   "diff": "if CD = LAT the bed is 0.74 m deeper (+5.7k m3)",
+   "reason": "Only continuous contour source found; the full Detailed Design Report with the 2017 bathymetry is not public.",
+   "status": "unresolved",
+   "resolve": "Full Bluecoast report / 2017 bathymetry / March 2025 as-built survey from the City of Albany; Navionics readings by Lior",
+   "section": "3.2; 4; 7",
+   "ids": "S11; S12",
+   "ev": [
+    "Not on the City website (only the executive summary, 5 pages)"
+   ]
+  },
+  {
+   "slug": "southern-ocean-surf-reef-albany",
+   "q": "BMT 2018 near-shore sounding",
+   "model": "-1.1 m AHD at (x -53, y 32)",
+   "stated": "2.7 m below chart datum at that point",
+   "diff": "sounding 1.6 m (CD = AHD) or 2.3 m (CD = LAT) deeper",
+   "reason": "Different survey dates, label positions (+-11 m) or datum; far-field 8.4 m CD agrees within 0.4 m.",
+   "status": "unresolved",
+   "resolve": "as above",
+   "section": "4",
+   "ids": "S12",
+   "ev": [
+    "the sounding is 1.6 m (CD = AHD) or 2.3 m (CD = LAT) deeper. UNRESOLVED"
+   ]
+  },
+  {
+   "slug": "southern-ocean-surf-reef-albany",
+   "q": "Volume fitted",
+   "model": "34,000 m3 by construction (N = 2.73)",
+   "stated": "34,000 m3 (City)",
+   "diff": "unfitted loft gives 20,826 m3 (61 %)",
+   "reason": "Either a fuller pile or a deeper seabed (+1.5 m) is needed; the evidence cannot separate them. The broad plateau and steep toe of the model are an effect of the fit.",
+   "status": "unresolved",
+   "resolve": "design cross-sections or a survey",
+   "section": "3.3; 4",
+   "ids": "S5",
+   "ev": [
+    "the shortfall cannot be assigned to either (evidence: none)"
+   ]
+  },
+  {
+   "slug": "southern-ocean-surf-reef-albany",
+   "q": "Which end of the crest is shallowest",
+   "model": "-1.0 m AHD at the offshore (east) end, -2.0 m beyond 40 m",
+   "stated": "table: -1.00 m 'shallowest' and 110 m @ -2 m, no position",
+   "diff": "all -1.0 m: +6.4k m3; all -2.0 m: -1.4k m3",
+   "reason": "The design plan puts the take-off area at the east end; no section drawing.",
+   "status": "unresolved",
+   "resolve": "section drawing",
+   "section": "3.3",
+   "ids": "S5",
+   "ev": [
+    "Ridge level z_c: -1.0 m AHD over the first 15 m from the offshore (east) end"
+   ]
+  },
+  {
+   "slug": "southern-ocean-surf-reef-albany",
+   "q": "Eighteen rocks moved March 2026",
+   "model": "not modelled",
+   "stated": "Albany Advertiser 11 Mar 2026",
+   "diff": "note only",
+   "reason": "Positions and sizes not published.",
+   "status": "by-design",
+   "resolve": "",
+   "section": "1",
+   "ids": "card R11, R18",
+   "ev": [
+    "18 rocks moved in March 2026 are a note only"
+   ]
+  },
+  {
+   "slug": "southern-ocean-surf-reef-albany",
+   "q": "No as-built survey, no construction image",
+   "model": "design outline (default) positioned on the 2026 satellite image",
+   "stated": "no survey; 19 Wayback releases hold only three captures (2022-12-19, 2025-01-16, 2026-01-20)",
+   "diff": "area -30 %/+20 %",
+   "reason": "Practical-completion survey of March 2025 not public.",
+   "status": "open",
+   "resolve": "City of Albany; Google Earth Pro historical imagery (Lior)",
+   "section": "2; 7",
+   "ids": "S1; S2",
+   "ev": [
+    "so there is no construction-sequence image"
+   ]
   }
  ]
 }
