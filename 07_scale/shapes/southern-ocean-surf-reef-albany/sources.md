@@ -13,3 +13,6 @@ alongshore position 350 m north of the Big4 Middleton Beach Caravan Park; cross-
 crest level -1.00 m AHD; crest orientation curved 270 N - 305 N; peel angle 60 deg, rides up to 100 m / 12 s, breaking about 41 % of the year.
 Further numbers (62,800 t, layers D50 0.16 / 0.49 / 0.94 m, tide range) are from the City page via the card (02_research/reefs/southern-ocean-surf-reef-albany.md, R3, R5).
 Derived overlays in overlays/ are our own annotated copies of the above.
+
+## Added 2026-10-10 (3D network run; full citations in 3d/REGISTER_3D.md S1-S14)
+rhdhv2015 (RHDHV 2015 Option B plan with seabed contours, via Raised Water Research, img-16/17): seabed profile. eia2018 (BMT 2018 EIA Fig 6.9, img-14; Fig 29, img-15): soundings, tides. dot_tides (WA DoT/BoM 2024 Albany predictions): LAT. city_page / city_exec / city_faq / city_profile / feas2015 (City of Albany documents in src/city_docs/): dimensions, MLLW/MHHW, mass, concept history.

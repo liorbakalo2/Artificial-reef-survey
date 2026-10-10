@@ -1,4 +1,10 @@
-# FEASIBILITY (3D model) - southern-ocean-surf-reef-albany - 2026-10-10
+# FEASIBILITY (3D model) - southern-ocean-surf-reef-albany
+
+## UPDATE 2026-10-10 (network run): the 3D model IS now built, with LOW confidence
+Decision changed after fetching: seabed depths were found in two places - (1) the Royal HaskoningDHV 2015 "Option B" design plan, which draws coloured seabed contours (-0.5 ... -8 m) over the beach and surf zone, reproduced by Raised Water Research (registry img-16); (2) the BMT 2018 Environmental Impact Assessment, Fig 6.9, which prints spot soundings in m below chart datum (img-14). Contours were georeferenced on the Esri 2025-01-16 image and read along 8 shore-normal transects; the result is a seabed profile (-1 m at 36 m from the dry-sand edge, -3 m at 88 m, -5 m at 126 m, -7 m at 178 m, -8 m at 330 m). Plan (high), crest levels (City design values) and this seabed (low) satisfy the brief's build rule. Model in `3d/` (viewer `3d/index.html`; METHODS_3D.md, REGISTER_3D.md).
+What is still missing or weak: no as-built or bathymetric survey; the full Bluecoast Detailed Design Report is not public (only a 5-page executive summary without figures); the 2015 contour datum is unstated (read as AHD); the BMT sounding 2.7 m CD at (x -53, y 32) is 1.6 m deeper than the contours (unresolved); the pile height (mean 2.6 m, max 6.0 m) therefore has +-1 m; the volume of the design outline (34,000 m3) is fitted, not checked (unfitted loft 20,826 m3). Navionics did not render in headless Chrome (nothing bypassed); AusSeabed/GA returned 403; Esri Wayback has only three captures (2022-12-19, 2025-01-16, 2026-01-20), so no construction image. Lior's readings (Navionics, City e-mail) would raise the confidence: `3d/REQUESTS_FOR_LIOR.md`.
+Tables below are the offline-run text of 2026-10-10 (before the network run); the "Needs network" list is now done (see HANDOFF.md section 5) except Navionics.
+
 
 Decision: the 3D model is NOT built yet. The plan shape is traced and verified (confidence high), the crest level and the tides are sourced,
 but there is no source for the seabed depth at or around the reef, nor for the height and side slopes of the rock pile. The brief says to

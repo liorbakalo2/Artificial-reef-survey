@@ -681,3 +681,51 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **rights**: Private research copy; reuse rights to be checked before any public release.
 - **display in HTML**: True
 - **added by**: 3D network run (fresh agent), 2026-10-10
+
+
+## southern-ocean-surf-reef-albany-img-27 - BMT 2018 EIA Figure 6.9, embedded raster at original resolution (950 x 669 px)
+- **file**: 07_scale/shapes/southern-ocean-surf-reef-albany/src/epa/EIA_fig6-9_embedded_raster.png
+- **kind**: survey_plot
+- **shows**: Same figure as img-14 at the native resolution of the PDF; this raster was used for the georeferencing (UTM grid labels at x = 230, 499, 768 px and y = 265.5, 535.5 px).
+- **state**: pre-construction (2014 imagery, 2018 figure)
+- **image date**: Produced 13 Aug 2018 (BMT); imagery Landgate Dec 2014
+- **citation**: BMT Western Australia Pty Ltd (2018). Middleton Beach Artificial Surf Reef Environmental Impact Assessment. Report 1345_001/1_Rev2, September 2018, prepared for City of Albany. EPA WA referral documentation, https://epa.wa.gov.au/sites/default/files/Referral_Documentation/Environmental%20Impact%20Assessment_0.pdf. Accessed 2026-10-10. Page 32 (PDF p. 42), Figure 6.9; raster extracted with pdfimages.
+- **image URL**: https://epa.wa.gov.au/sites/default/files/Referral_Documentation/Environmental%20Impact%20Assessment_0.pdf
+- **source page**: https://www.epa.wa.gov.au/proposals/albany-artificial-surf-reef
+- **page / figure**: p. 32, Fig 6.9 (raster)
+- **credit**: BMT / City of Albany; imagery Landgate
+- **licence**: not stated
+- **retrieved**: 2026-10-10
+- **used for**: 3d_seabed, cross_check
+- **How used for the model**: Working copy for img-14 (annotated A3).
+- **annotated versions**: -
+- **3D check**: pending False - see img-14
+- **size**: 0.71 MB, [950, 669] px
+- **sha256**: 28b6b2182c54ac52d2d2a465f02ce10bba9e55871fef0b6ed947b1d9a9022b48
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: 3D network run (fresh agent), 2026-10-10
+
+
+## southern-ocean-surf-reef-albany-img-28 - Esri World Imagery Wayback release 13192, Middleton Beach, z18, 1200 m wide mosaic (captured 2025-01-16)
+- **file**: 07_scale/shapes/southern-ocean-surf-reef-albany/3d/src/esri_wayback13192_2025-01-16_z18_wide1200m.png
+- **kind**: satellite
+- **shows**: Wider view of the same pre-construction image as img-12: beach, car park, caravan park, golf course; no rock.
+- **state**: pre-construction (2025-01-16)
+- **image date**: 2025-01-16
+- **citation**: Esri, Maxar, Earthstar Geographics, and the GIS User Community (2025). World Imagery Wayback release 13192, image captured 2025-01-16 (identify date field). https://wayback.maptiles.arcgis.com/arcgis/rest/services/World_Imagery/WMTS/1.0.0/default028mm/MapServer/tile/13192/{z}/{y}/{x}. Retrieved 2026-10-10.
+- **image URL**: https://wayback.maptiles.arcgis.com/arcgis/rest/services/World_Imagery/WMTS/1.0.0/default028mm/MapServer/tile/13192/{z}/{y}/{x}
+- **source page**: Esri Wayback
+- **page / figure**: centre -35.0195, 117.9195, r=600 m, z18, 2454 x 2453 px, 0.489 m/px; sidecar .geo.json
+- **credit**: Esri, Maxar, Earthstar Geographics, and the GIS User Community
+- **licence**: Esri/Maxar imagery terms (not an open licence); private research copy only
+- **retrieved**: 2026-10-10
+- **used for**: 3d_seabed, cross_check
+- **How used for the model**: Base for georeferencing the RHDHV 2015 plan (4 control points) and for the water-colour check; frame as shape.json.
+- **annotated versions**: -
+- **3D check**: pending False - used 2026-10-10
+- **size**: 9.38 MB, [2454, 2453] px
+- **sha256**: 8430bec869a8906163e2f6b9749fa628b1b33ce4d64739cd53dcc601dc24ed02
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: 3D network run (fresh agent), 2026-10-10
