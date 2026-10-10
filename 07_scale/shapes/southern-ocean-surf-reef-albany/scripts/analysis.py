@@ -29,3 +29,9 @@ dd = np.array([765-520, -(335-300)]); res['design_dashed_line_bearing_east_to_we
 mk = Polygon(json.load(open('mask30_px.json'))).buffer(0); mn = Polygon(P)
 res['iou_mask30_vs_manual'] = round(mk.intersection(mn).area/mk.union(mn).area, 3); res['mask30_area_m2'] = round(mk.area*mpp**2,0); res['mask30_inside_manual_frac'] = round(mk.intersection(mn).area/mk.area,3)
 json.dump(res, open('analysis_out.json','w'), indent=1); print(json.dumps(res))
+# extents along / across the crest line (bearing 281.5 sat; 278.1 design): "length" and "width" in the sense of the City's 165 m x 110 m
+for key, brgk in (('sat', res['sat_crest_edge_bearing_east_to_apex_deg']), ('design', res['design_dashed_line_bearing_east_to_west_deg'])):
+    E = frame_to_enu(o[key]['polygon_m']); u = np.array([math.sin(math.radians(brgk)), math.cos(math.radians(brgk))]); v = np.array([-u[1], u[0]])
+    s, t = E@u, E@v
+    res[key]['extent_along_crest_m'] = round(float(s.max()-s.min()),1); res[key]['extent_across_crest_m'] = round(float(t.max()-t.min()),1)
+json.dump(res, open('analysis_out.json','w'), indent=1); print(res['sat'], res['design'])

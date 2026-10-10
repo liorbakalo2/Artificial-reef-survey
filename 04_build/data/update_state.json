@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-10 21:06",
+ "updated": "2026-10-10 21:07",
  "sig": {
   "models": {
    "borth-coastal-defence-reef": {
@@ -7,7 +7,7 @@
     "model.js": "3bd7b9a87acbe4ee",
     "annotated": "826aa18903896b1f",
     "shape.json": "cff033f702d25918",
-    "registry": "78a9900df2afc363",
+    "registry": "160fda3c775212ae",
     "card": "40c17c55df1bb4ce",
     "config": "ef26b489de2476f0"
    },
@@ -16,7 +16,7 @@
     "model.js": "cb6ad1508e6be7b4",
     "annotated": "8b89d8089762e706",
     "shape.json": "b6b5a73f1edb3bb3",
-    "registry": "56362d831fa05ef5",
+    "registry": "a40b657771c032b1",
     "card": "e1dc0421faf28b79",
     "config": "855b46a314bd2787"
    },
@@ -34,7 +34,7 @@
     "model.js": "53545e7e4d76a1ce",
     "annotated": "66b0e754f7a2b3af",
     "shape.json": "8aa8b021b629ce7a",
-    "registry": "5849793ff42a4aab",
+    "registry": "b32b43005aab177b",
     "card": "8f33e980757dfa94",
     "config": "658e76c3543aef4a"
    },
@@ -43,31 +43,31 @@
     "model.js": "4dc4c69b61ba35b4",
     "annotated": "35ed980edd5d344c",
     "shape.json": "db28a2ade0809e34",
-    "registry": "7051ccf92090049a",
+    "registry": "e01cda909cc76f70",
     "card": "8a1a99b0e8eef8e6",
     "config": "1502d661d52d949f"
    },
    "palm-beach-gold-coast": {
-    "viewer": "cc73c443b2125891",
+    "viewer": "9a141eaa93a23217",
     "model.js": "53be2c2ea726fe1b",
-    "annotated": "6a1b78da17cf9d64",
+    "annotated": "708425714f0edd31",
     "shape.json": "9d74d332271d31bb",
     "registry": "ef70a84962615af7",
     "card": "ce501df9e7b36401",
     "config": "08d80b1bf7d60e45"
    },
    "prattes-reef-el-segundo": {
-    "viewer": "1b23230d2ecbf6f7",
-    "model.js": "39b9a34a88b79b48",
+    "viewer": "b8334ffe12dc3f20",
+    "model.js": "ce9ea001604e021b",
     "annotated": "c3f4f1239e62c46a",
     "shape.json": "49729c41a3c44264",
-    "registry": "b5cec27e7ef7914c",
+    "registry": "2dcfd7a4cd326fed",
     "card": "326ef4bb8e12e8d6",
     "config": "036d108ce91351d3"
    }
   },
   "hold": "2be8613eb6870471",
-  "src": "ffb1e24168525fe2"
+  "src": "494ac5a7ec76f020"
  },
  "snapshot": {
   "borth-coastal-defence-reef": {
@@ -97,8 +97,8 @@
     "Length of the oval breakwater": "38 m between the crest ends (setting-out table of drawing 1020)",
     "Distance offshore": "centroid of both mounds 330.5 m offshore (nearest edge 257 m, farthest 397 m)"
    },
-   "pictures": 22,
-   "match_buttons": 0,
+   "pictures": 23,
+   "match_buttons": 8,
    "combined": {
     "status": "ok",
     "ok": true,
@@ -118,8 +118,8 @@
     "Footprint": "4,042 m2 (25 vertices; minimum rotated rectangle 121.1 x 45.0 m)",
     "Volume": "13,119 m3 (loft)"
    },
-   "pictures": 33,
-   "match_buttons": 0,
+   "pictures": 34,
+   "match_buttons": 6,
    "combined": {
     "status": "ok",
     "ok": true,
@@ -139,7 +139,7 @@
     "Volume (cap) vs fill": "cap 92.6-117.3 m3 (H = 1.6-2.0 m)"
    },
    "pictures": 13,
-   "match_buttons": 0,
+   "match_buttons": 1,
    "combined": {
     "status": "ok",
     "ok": true,
@@ -168,8 +168,8 @@
     "Distance from the shoreline": "reef centroid 307.7 m from the wet/dry-sand shoreline (Esri 2011-01-15)",
     "Vertical datum": "z = 0 at present mean sea level = Chart Datum + 1.13 m (LINZ Tauranga); Chart Datum = z -1.13 m; MVD-53 = z -0.168 m"
    },
-   "pictures": 24,
-   "match_buttons": 0,
+   "pictures": 25,
+   "match_buttons": 7,
    "combined": {
     "status": "ok",
     "ok": true,
@@ -189,7 +189,7 @@
     "Volume (rock envelope)": "22,000 m3 (22,020; voids included)"
    },
    "pictures": 27,
-   "match_buttons": 0,
+   "match_buttons": 6,
    "combined": {
     "status": "ok",
     "ok": true,
@@ -210,8 +210,8 @@
     "Footprint": "435.2 m2, 58.0 x 28.6 m (76 vertices)",
     "Volume": "443 m3 (state B); 550 m3 (state A)"
    },
-   "pictures": 0,
-   "match_buttons": 0,
+   "pictures": 32,
+   "match_buttons": 2,
    "combined": {
     "status": "ok",
     "ok": true,

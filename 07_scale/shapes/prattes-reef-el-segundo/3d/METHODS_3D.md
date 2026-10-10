@@ -85,7 +85,7 @@ A and B are the same number (6 ft) with different datum labels (the drawing says
 
 ### 3.3 Plan shape
 
-The toe polygon (76 vertices, 435.2 m2) is read unchanged from `shape.json` (status verified, verified 2026-10-04, md5 e072a3385bf7d502e7d2518e8c330c47); only the solid-outline bags of the drawing are included (the 30 dashed "optional" bags are excluded; including them would add an estimated 15-20 % area). It is the *design* layout of Phase I (assumption A9): the 2003 paper reprints it as Fig. 4 ("The design layout of Pratte's Reef", annotated figure A13) and shows no later layout; bags were crane-placed, moved, sank and were buried, so the real footprint differed from it by metres.
+The toe polygon (76 vertices, 435.2 m2) is read unchanged from `shape.json` (status verified, verified 2026-10-04, md5 c3ac282cb6a228d6f4bf86dd3f33f1d5); only the solid-outline bags of the drawing are included (the 30 dashed "optional" bags are excluded; including them would add an estimated 15-20 % area). It is the *design* layout of Phase I (assumption A9): the 2003 paper reprints it as Fig. 4 ("The design layout of Pratte's Reef", annotated figure A13) and shows no later layout; bags were crane-placed, moved, sank and were buried, so the real footprint differed from it by metres.
 
 ### 3.4 Seabed from the NOAA DEM (primary)
 
@@ -168,6 +168,9 @@ window: E 367449-367560, N 3754239-3754310  ->  centre (367505, 3754275) = 33.92
 ```
 
 The reef is not drawn in the figure and no contour shows a bag signature, but the paper says the offshore bathymetry has not changed "outside of the contours created by the reef bags themselves", and the window (about 112 x 71 m) is just large enough for the 58 x 29 m reef. Independent text evidence for the position: p.1 "approximately 200 m south of the Hyperion Sewage Treatment Plant's 1-mile outfall" and "within 500 m" of the outfall and the Grand Street jetty; Fig. 2 (aerial, range lines 550 m apart, scale 6.3 m per original pixel) places the reef chevron on range line 3, 325 m from the outfall and 672 m from the Grand Street jetty arrow. The outfall landfall was read on the Navionics chart (33.9231 N, 118.4337 W, +-20 m); 200 to 318 m south along 155 deg plus 91 m offshore gives 33.9202-33.9211 N, 118.4332-118.4337 W, within 35 m of the window centre. A jetty-based estimate (660 m north of the groin at 33.91685 N, 118.43030 W) gives 33.9219 N, 118.4342 W, 160 m further north. The three estimates span 190 m, so the hint is stated as +-100 m. The earlier text hint (33.9188 N, 118.4324 W, from the 1996-98 concept siting "300 yards north of the Grand Avenue jetty") lies 217 m away and is superseded. The survey is not a georeferenced outline of the reef, so `shape.json` keeps `geo = null`.
+
+
+**Re-verification note, 2026-10-10 (no model change).** Re-reading Fig. 2 of the paper (range lines 550 m apart, about 6.25 m per pixel) puts the reef chevron about 340 m from the outfall landfall and about 670 m from the Grand Street jetty arrow, whereas the text (p.1) says about 200 m and 'within 500 m'. The paper is therefore internally inconsistent by 140-170 m, and the realistic uncertainty of the position hint may be +-150 m instead of the +-100 m used here. The model keeps +-100 m (sigma_x); depths are barely affected (section 5), the position marker is. A judgement call for Lior; see `../VERIFY.md` (check 12). The size of the plan was also confirmed on the paper's Fig. 20 (29.0 x 58.5 m on its own 0-50 m bar vs 28.6 x 58.0 m; `../VERIFY.md` check 10).
 
 ### 3.11 Profiles through the reef after Phase II (new in revision 3)
 

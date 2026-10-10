@@ -23,7 +23,7 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **retrieved**: 2026-10-06
 - **used for**: plan_trace; 3d_crest; 3d_height_slopes; cross_check
 - **How used for the model**: Read the contour labels of the revised 2004 design: crest-top -2.50, then -3.00 ... -5.0 every 0.5 m, -6.0, outer limit -8.00; original design labels -2 ... -10 (datum not stated in the paper; AHD from other sources). Annotated copy: 07_scale/bathymetry/gold_coast/annotated/narrowneck_jackson2012_fig2_design_depth_labels_read.png. Goes to REPORT.md section 6 (Narrowneck integration plan) for the tracer; shape.json untouched.
-- **3D check pending**: YES - Tracer: compare the traced planform with the 2004 revised design (flared wings + central weir) in Fig 2 right; crest -2.50 vs adopted -2.5 AHD; confirm datum (AHD vs LAT) of the labels (values: planform, crest_z, seabed)
+- **3D check pending**: no - Tracer: compare the traced planform with the 2004 revised design (flared wings + central weir) in Fig 2 right; crest -2.50 vs adopted -2.5 AHD; confirm datum (AHD vs LAT) of the labels (values: planform, crest_z, seabed)
 - **annotated / overlay files**: `07_scale/bathymetry/gold_coast/annotated/narrowneck_jackson2012_fig2_design_depth_labels_read.png`
 - **linked records**: 07_scale/bathymetry/gold_coast/SOURCES.md GC-N01; 07_scale/bathymetry/gold_coast/REPORT.md
 - **size**: 0.53 MB, 1654x2339 px
@@ -33,6 +33,12 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **added by**: gold_coast_gov_reports_bathymetry, 2026-10-06
 - **3D / planform check result (2026-10-06)**: Planform checked 2026-10-06: Fig 2 right = 2004 revised design: two arms + central channel + flared wings at the shoreward ends (the 2004 revised design) = the topology of our trace (shape.json, s3 Esri 2020-08-08). The -2.50 m crest wedge covers only the shoreward ~60 m of each arm, contours -3.0 ... -6.0 deepen seaward (outer -8.0); the visible 2020 container field (113 x 157 m, arms 134 m and 111 m long) corresponds to the design out to about the -6 m contour. Crest -2.50 vs RL -2.5 m AHD adopted: consistent (Jackson 2007 p.7); datum of these labels still unstated here. STILL PENDING for the 3D agent: crest/datum and seabed only.
 - **How used (update 2026-10-06)**: Planform result written by the Narrowneck tracer: topology and arm length agree with shape.json (METHOD.md Steps 2d, 3, 6).
+- **3D / planform check result (2026-10-10)**: Read 2026-10-10: revised design contours -2.50, -3.00, -3.50, -4.00, -4.50, -5.00, -6.00, outer -8.00; crest wedge -2.50 at the shoreward end of each arm; datum not printed (AHD assumed). Used as the surface rule (crest loops + -6 envelope, linear in distance rank); check vs multibeam tops: mean offset +0.26 m, sd 0.66 m (METHODS_3D 4.2).
+- **annotated versions**: 07_scale/bathymetry/gold_coast/annotated/narrowneck_jackson2012_fig2_design_depth_labels_read.png, 07_scale/shapes/narrowneck-gold-coast/3d/annotated/A4_jackson2012_fig2_contours_read.png
+- **3D / planform check result (2026-10-10)**: 2026-10-10: page render of Jackson 2012 p.3; the same Fig 2 as img-04 (see its result); crest -2.50 consistent with -2.5 m AHD design; datum not printed.
+- **3D / planform check result (2026-10-10)**: Read 2026-10-10: revised design contours -2.50, -3.00, -3.50, -4.00, -4.50, -5.00, -6.00, outer -8.00; crest wedge -2.50 at the shoreward end of each arm; datum not printed (AHD assumed). Used as the surface rule (crest loops + -6 envelope, linear in distance rank); check vs multibeam tops: mean offset +0.26 m, sd 0.66 m (METHODS_3D 4.2).
+- **annotated versions**: 07_scale/bathymetry/gold_coast/annotated/narrowneck_jackson2012_fig2_design_depth_labels_read.png, 07_scale/shapes/narrowneck-gold-coast/3d/annotated/A4_jackson2012_fig2_contours_read.png
+- **3D / planform check result (2026-10-10)**: 2026-10-10: page render of Jackson 2012 p.3; the same Fig 2 as img-04 (see its result); crest -2.50 consistent with -2.5 m AHD design; datum not printed.
 
 ## narrowneck-gold-coast-img-02 - Jackson et al. 2012 p.4 (page render): Fig 4 maintenance placement plans 2002-2006, Fig 5 survey 9 June 2011 and isopach 2008-2011
 
@@ -112,7 +118,7 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **retrieved**: 2026-10-06
 - **used for**: plan_trace; 3d_crest; 3d_height_slopes; cross_check
 - **How used for the model**: Depth labels read and boxed in annotated/narrowneck_jackson2012_fig2_design_depth_labels_read.png: revised crest -2.50 (both arms), side contours every 0.5 m to -5.0, then -6.0 and -8.00 outer limit; datum not stated in the paper. Goes to REPORT.md section 6.
-- **3D check pending**: YES - Revised-design planform (flared wings, weir) vs the traced shape; crest -2.50 vs 'adopted -1.5 AHD' claim in a search snippet; datum of labels (values: planform, crest_z, seabed)
+- **3D check pending**: no - Revised-design planform (flared wings, weir) vs the traced shape; crest -2.50 vs 'adopted -1.5 AHD' claim in a search snippet; datum of labels (values: planform, crest_z, seabed)
 - **annotated / overlay files**: `07_scale/bathymetry/gold_coast/annotated/narrowneck_jackson2012_fig2_design_depth_labels_read.png`
 - **linked records**: 07_scale/bathymetry/gold_coast/SOURCES.md GC-N04; 07_scale/bathymetry/gold_coast/REPORT.md
 - **size**: 0.29 MB, 1731x570 px
@@ -124,6 +130,10 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **How used (update 2026-10-06)**: Levels and topology used for INPUTS FOR 3D (crest variation along the arms).
 - **How used (update 2026-10-10)**: 2026-10-10: Fig 2-right design placed in the canonical frame as outline version design_2004_revised (-6 m envelope 13,631 m2, crest loops 1,044/1,083 m2).
 - **annotated versions**: 07_scale/bathymetry/gold_coast/annotated/narrowneck_jackson2012_fig2_design_depth_labels_read.png, 07_scale/shapes/narrowneck-gold-coast/overlays/design_2004_minus6_on_s3.png
+- **3D / planform check result (2026-10-10)**: Read 2026-10-10: revised design contours -2.50, -3.00, -3.50, -4.00, -4.50, -5.00, -6.00, outer -8.00; crest wedge -2.50 at the shoreward end of each arm; datum not printed (AHD assumed). Used as the surface rule (crest loops + -6 envelope, linear in distance rank); check vs multibeam tops: mean offset +0.26 m, sd 0.66 m (METHODS_3D 4.2).
+- **annotated versions**: 07_scale/bathymetry/gold_coast/annotated/narrowneck_jackson2012_fig2_design_depth_labels_read.png, 07_scale/shapes/narrowneck-gold-coast/overlays/design_2004_minus6_on_s3.png, 07_scale/shapes/narrowneck-gold-coast/3d/annotated/A4_jackson2012_fig2_contours_read.png
+- **3D / planform check result (2026-10-10)**: Read 2026-10-10: revised design contours -2.50, -3.00, -3.50, -4.00, -4.50, -5.00, -6.00, outer -8.00; crest wedge -2.50 at the shoreward end of each arm; datum not printed (AHD assumed). Used as the surface rule (crest loops + -6 envelope, linear in distance rank); check vs multibeam tops: mean offset +0.26 m, sd 0.66 m (METHODS_3D 4.2).
+- **annotated versions**: 07_scale/bathymetry/gold_coast/annotated/narrowneck_jackson2012_fig2_design_depth_labels_read.png, 07_scale/shapes/narrowneck-gold-coast/overlays/design_2004_minus6_on_s3.png, 07_scale/shapes/narrowneck-gold-coast/3d/annotated/A4_jackson2012_fig2_contours_read.png
 
 ## narrowneck-gold-coast-img-05 - Jackson et al. 2012 Fig 4: placement of containers for reef maintenance (2002/03, 2004, 2006)
 
@@ -399,7 +409,7 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **retrieved**: 2026-10-06
 - **used for**: context
 - **How used for the model**: Shows the layered stacking (T2 on T4 containers) that the tracer should know about; no dimensions here (container sizes must come from another source).
-- **3D check pending**: YES - Container layer stacking (T2 on 2 x T4) for the renewal's added layer: reef height above seabed (values: height)
+- **3D check pending**: no - Container layer stacking (T2 on 2 x T4) for the renewal's added layer: reef height above seabed (values: height)
 - **linked records**: 07_scale/bathymetry/gold_coast/SOURCES.md GC-N14; 07_scale/bathymetry/gold_coast/REPORT.md
 - **size**: 0.01 MB, 723x168 px
 - **sha256**: dd9a005b8152656e8083e0045e63e2f2ffc094d260ac9c8e659486c4feea0f1c
@@ -408,6 +418,8 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **added by**: gold_coast_gov_reports_bathymetry, 2026-10-06
 - **3D / planform check result (2026-10-06)**: Checked 2026-10-06 (planform not applicable): the sketch shows a crest container (T2) resting on two base containers (T4): two layers at the crest, which supports a reef height of about 2-3 m above the seabed at the shoreward crest and 4-6 m at the toe (estimate, METHOD.md INPUTS FOR 3D). STILL PENDING for the 3D agent (height and slopes).
 - **How used (update 2026-10-06)**: Stacking input for INPUTS FOR 3D.
+- **3D / planform check result (2026-10-10)**: 2026-10-10: sketch of T2 on 2 x T4 (two layers at the crest); no dimensions, so no height read from it; the model height comes from the 2017 multibeam relief (1-2.5 m).
+- **3D / planform check result (2026-10-10)**: 2026-10-10: sketch of T2 on 2 x T4 (two layers at the crest); no dimensions, so no height read from it; the model height comes from the 2017 multibeam relief (1-2.5 m).
 
 ## narrowneck-gold-coast-img-15 - Jackson et al. 2012 Fig 10: container with evidence of propeller damage (dive photo)
 
@@ -673,7 +685,7 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **retrieved**: 2026-10-06
 - **used for**: plan_trace; cross_check; context
 - **How used for the model**: Qualitative view of the renewed reef planform and of wave breaking over the crest; no scale. Goes to REPORT.md section 6 (tracer: renewed state).
-- **3D check pending**: YES - Planform of the renewed reef vs shape.json; crest depth consistency (waves break over the crest at low tide) (values: planform, crest_z)
+- **3D check pending**: no - Planform of the renewed reef vs shape.json; crest depth consistency (waves break over the crest at low tide) (values: planform, crest_z)
 - **linked records**: 07_scale/bathymetry/gold_coast/SOURCES.md GC-N23; 07_scale/bathymetry/gold_coast/REPORT.md
 - **size**: 0.19 MB, 1965x1450 px
 - **sha256**: 68b61cfe5a92fde2b6a422731908033f980c01dfc2c228d4f921901f0bb9d2d0
@@ -682,6 +694,8 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **added by**: gold_coast_gov_reports_bathymetry, 2026-10-06
 - **3D / planform check result (2026-10-06)**: Planform checked 2026-10-06: oblique drone view with two surfers and the buoy: the reef shows only as diffuse, low-contrast dark patches, the two arms cannot be separated; no scale. No planform contradiction; crest depth cannot be read from this photo. STILL PENDING for the 3D agent: crest-depth consistency only.
 - **How used (update 2026-10-06)**: Qualitative planform check (METHOD.md Step 6).
+- **3D / planform check result (2026-10-10)**: 2026-10-10: planform (arms converging seaward, channel between) and surf peeling from the north arm are consistent with the model; no number read (oblique, unscaled). Candidate for the photo-match mode.
+- **3D / planform check result (2026-10-10)**: 2026-10-10: planform (arms converging seaward, channel between) and surf peeling from the north arm are consistent with the model; no number read (oblique, unscaled). Candidate for the photo-match mode.
 
 ## narrowneck-gold-coast-img-25 - Narrowneck and Surfers Paradise looking north: the narrow strip between the ocean and the Nerang River (ICM 2023 article)
 
@@ -869,7 +883,7 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **retrieved**: 2026-10-06
 - **used for**: 3d_seabed; cross_check; scale
 - **How used for the model**: Contour labels read for survey 1 (annotated copy): inshore trough -2/-3, reef inner edge -4/-5, reef body -6 to -8, seaward -9/-10 m (AHD per the text). The only published depth picture of the renewed reef's seabed; the survey is single-beam (not multibeam) and the reef is blurred.
-- **3D check pending**: YES - Seabed around the reef and crest/toe depths: inner edge about -4/-5 m and reef body -6 to -8 m AHD (+-1 m, read by eye); compare with the tracer's/3D model's depth if one is built (values: seabed, crest_z)
+- **3D check pending**: no - Seabed around the reef and crest/toe depths: inner edge about -4/-5 m and reef body -6 to -8 m AHD (+-1 m, read by eye); compare with the tracer's/3D model's depth if one is built (values: seabed, crest_z)
 - **annotated / overlay files**: `07_scale/bathymetry/gold_coast/annotated/narrowneck_vieira2021_fig3_survey1_2018-07-19_depth_labels_read.png`
 - **linked records**: 07_scale/bathymetry/gold_coast/SOURCES.md GC-N30; 07_scale/bathymetry/gold_coast/REPORT.md
 - **size**: 0.50 MB, 1331x1599 px
@@ -879,6 +893,12 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **added by**: gold_coast_gov_reports_bathymetry, 2026-10-06
 - **3D / planform check result (2026-10-06)**: Planform not applicable; depth read-out unchanged. Cross-check added 2026-10-06 with the Garmin Navionics SonarChart: 4.0-4.5 m over the arms, 5.5-6 m around, 7-10 m seaward (datum LAT assumed) = 5.3-6.8 m AHD around the arms with AHD = LAT + 0.76, consistent with the -4/-5, -6 to -8, -9/-10 m AHD read here (+-1 m). STILL PENDING for the 3D agent (seabed grid and crest).
 - **How used (update 2026-10-06)**: Seabed values for INPUTS FOR 3D.
+- **3D / planform check result (2026-10-10)**: Read 2026-10-10 (survey 1, 19 Jul 2018, AHD): bed at the reef cyan about -4 to -6, seaward blue -7 to -9, nearshore -1 to -2 within ~100 m: consistent with the model bed (-3.9..-5.1 at y 235-265, -5.8..-7.3 under the reef, -9.6 at 460 m) within +-1 m.
+- **How used (update 2026-10-10)**: 3D (2026-10-10): cross-check of the seabed profile and the nearshore control point (-1.8 m at y 100); METHODS_3D 4.4.
+- **annotated versions**: 07_scale/bathymetry/gold_coast/annotated/narrowneck_vieira2021_fig3_survey1_2018-07-19_depth_labels_read.png, 07_scale/shapes/narrowneck-gold-coast/3d/annotated/A3_vieira_fig3_reef_bed_read.png
+- **3D / planform check result (2026-10-10)**: Read 2026-10-10 (survey 1, 19 Jul 2018, AHD): bed at the reef cyan about -4 to -6, seaward blue -7 to -9, nearshore -1 to -2 within ~100 m: consistent with the model bed (-3.9..-5.1 at y 235-265, -5.8..-7.3 under the reef, -9.6 at 460 m) within +-1 m.
+- **How used (update 2026-10-10)**: 3D (2026-10-10): cross-check of the seabed profile and the nearshore control point (-1.8 m at y 100); METHODS_3D 4.4.
+- **annotated versions**: 07_scale/bathymetry/gold_coast/annotated/narrowneck_vieira2021_fig3_survey1_2018-07-19_depth_labels_read.png, 07_scale/shapes/narrowneck-gold-coast/3d/annotated/A3_vieira_fig3_reef_bed_read.png
 
 ## narrowneck-gold-coast-img-32 - City of Gold Coast Narrowneck Reef Renewal page: split-hull dredger FAUCON over the reef, drone view (200 px thumbnail)
 
@@ -1398,7 +1418,7 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **retrieved**: 2026-10-06
 - **used for**: 3d_seabed, 3d_crest, cross_check, scale
 - **How used for the model**: Seabed and shoal read-out for the 3D stage and a position check of the trace: the s3 arms laid on the chart (map centre = reef centroid) fall on the 4.0/4.5 m shoal loops (METHOD.md Step 5; overlays navionics_sonar_*). Depth datum is not stated by the app (assumed LAT, supported by REPORT.md 5.2); the chart shows the arms only as 1.5-2 m shoals above 5.5-6 m seabed, not the crest.
-- **3D check pending**: YES - 3D agent: use the contour values (4.0/4.5 over arms, 5.5-6 around, 7-10 seaward) as an extra seabed check against Vieira da Silva 2021 Fig 3 (-4/-5 inner, -6 to -8 reef body, -9/-10 seaward, AHD; convert LAT->AHD with +0.76)
+- **3D check pending**: no - 3D agent: use the contour values (4.0/4.5 over arms, 5.5-6 around, 7-10 seaward) as an extra seabed check against Vieira da Silva 2021 Fig 3 (-4/-5 inner, -6 to -8 reef body, -9/-10 seaward, AHD; convert LAT->AHD with +0.76)
 - **linked records**: 07_scale/shapes/narrowneck-gold-coast/sources.md s12; 07_scale/shapes/narrowneck-gold-coast/METHOD.md Step 5
 - **size**: 42478 bytes, 982x655 px
 - **sha256**: 5e75721d394a102b8e472aa38c10031351d61d8d963ed31bedb7ac54ac58dc67
@@ -1407,6 +1427,10 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **added by**: narrowneck-gold-coast plan-shape trace (resume), 2026-10-06
 - **How used (update 2026-10-10)**: 2026-10-10: 4.0 m closed loops (138 + 399 m2) = outline version navionics_4.0m_shoals (indicative only).
 - **annotated versions**: 07_scale/shapes/narrowneck-gold-coast/overlays/navionics_sonar_z18_shade0_with_trace_and_readings.png, 07_scale/shapes/narrowneck-gold-coast/overlays/navionics_sonar_z18_shade5_with_trace_and_readings.png, 07_scale/shapes/narrowneck-gold-coast/overlays/navionics_shoals_on_s3.png
+- **3D / planform check result (2026-10-10)**: Read 2026-10-10: labels 7, 8, 9, 10 m (LAT assumed) at y ~402, 411, 474, 514 m used for the seaward bed (AHD = -(depth) - 0.76); 4.0-4.5 over the arms is a smoothed shoal (crest -2.2 AHD = 1.44 m below LAT), not used for the crest; chart land edge is ~80 m seaward of our 2020 waterline so its nearshore contours are not used.
+- **annotated versions**: 07_scale/shapes/narrowneck-gold-coast/overlays/navionics_sonar_z18_shade0_with_trace_and_readings.png, 07_scale/shapes/narrowneck-gold-coast/overlays/navionics_sonar_z18_shade5_with_trace_and_readings.png, 07_scale/shapes/narrowneck-gold-coast/overlays/navionics_shoals_on_s3.png, 07_scale/shapes/narrowneck-gold-coast/3d/annotated/A2_navionics_readings_used.png
+- **3D / planform check result (2026-10-10)**: Read 2026-10-10: labels 7, 8, 9, 10 m (LAT assumed) at y ~402, 411, 474, 514 m used for the seaward bed (AHD = -(depth) - 0.76); 4.0-4.5 over the arms is a smoothed shoal (crest -2.2 AHD = 1.44 m below LAT), not used for the crest; chart land edge is ~80 m seaward of our 2020 waterline so its nearshore contours are not used.
+- **annotated versions**: 07_scale/shapes/narrowneck-gold-coast/overlays/navionics_sonar_z18_shade0_with_trace_and_readings.png, 07_scale/shapes/narrowneck-gold-coast/overlays/navionics_sonar_z18_shade5_with_trace_and_readings.png, 07_scale/shapes/narrowneck-gold-coast/overlays/navionics_shoals_on_s3.png, 07_scale/shapes/narrowneck-gold-coast/3d/annotated/A2_navionics_readings_used.png
 
 ## narrowneck-gold-coast-img-51 - Garmin Navionics Nautical Chart, Narrowneck Reef, zoom 18, shallow shading 0 m (series of 9 screenshots 0-8 m)
 
@@ -1427,13 +1451,15 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **retrieved**: 2026-10-06
 - **used for**: 3d_crest, cross_check
 - **How used for the model**: Crest cross-check only: the single shallow spot depth 0.9 m (datum unstated, assumed LAT) is the shallowest value any chart shows at the reef; it is 0.5 m shallower than the post-2018 multibeam crest (-2.2 m AHD = 1.44 m below LAT by MSQ) and close to the 1.0 m below LAT of the 2007-2012 papers, so it probably carries an older state. METHOD.md Step 5.
-- **3D check pending**: YES - 3D agent: decide whether the 0.9 m spot depth is used at all (older crest state); ask Lior to read the Navionics app label (obstruction symbol) at -27.9866, 153.4341
+- **3D check pending**: no - 3D agent: decide whether the 0.9 m spot depth is used at all (older crest state); ask Lior to read the Navionics app label (obstruction symbol) at -27.9866, 153.4341
 - **linked records**: 07_scale/shapes/narrowneck-gold-coast/sources.md s12; 07_scale/shapes/narrowneck-gold-coast/METHOD.md Step 5
 - **size**: 26205 bytes, 982x655 px
 - **sha256**: 543d7d1af6ec01fec67ea3d031ba552f9a5bc17e3c066b1dd73628a1402c4fe7
 - **rights**: Private research copy; reuse rights to be checked before any public release.
 - **display in HTML**: True
 - **added by**: narrowneck-gold-coast plan-shape trace (resume), 2026-10-06
+- **3D / planform check result (2026-10-10)**: 2026-10-10: the 0.9 spot depth is NOT used (older crest state, 2001-2012 about -1.0 m LAT; Jackson 2007 p.9). Lior asked to read the label in the app (3d/REQUESTS_FOR_LIOR.md).
+- **3D / planform check result (2026-10-10)**: 2026-10-10: the 0.9 spot depth is NOT used (older crest state, 2001-2012 about -1.0 m LAT; Jackson 2007 p.9). Lior asked to read the label in the app (3d/REQUESTS_FOR_LIOR.md).
 
 ## narrowneck-gold-coast-img-52 - Garmin Navionics SonarChart, Narrowneck Reef, zoom 17 base view
 
@@ -1535,13 +1561,19 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **retrieved**: 2026-10-10
 - **used for**: 3d_seabed, 3d_height_slopes, cross_check
 - **How used for the model**: Not yet digitised. Container length vs 20 m bar checked (17-20 m, consistent). For the 3D stage: toe/extent, container heights and seabed depths (red/orange crest -3..-4, blue -6..-9).
-- **3D check pending**: YES - read crest/seabed depth colours and container stacking height from the colour scale; check toe depth vs planned 3D seabed (-6 to -8 AHD)
+- **3D check pending**: no - read crest/seabed depth colours and container stacking height from the colour scale; check toe depth vs planned 3D seabed (-6 to -8 AHD)
 - **linked records**: 07_scale/shapes/narrowneck-gold-coast/VERIFY.md; 07_scale/shapes/narrowneck-gold-coast/sources.md s13
 - **size**: 327385 bytes, 460x312 px
 - **sha256**: e6ae8e348a8048faec1379cde7324643b16d3413bd016af68f3638fc8bae91cb
 - **rights**: Private research copy; reuse rights to be checked before any public release.
 - **display in HTML**: True
 - **added by**: narrowneck-gold-coast verification (stage 1), 2026-10-10
+- **3D / planform check result (2026-10-10)**: DIGITISED 2026-10-10 (3d/prep_multibeam.py): scale 0.4651 m/px; hue -> depth via the colour bar; bed (containers removed) -4 m at the arm ends to -7 m at the toe; relief p90 0.9-1.2 m, p99 1.8-2.2 m; shallowest tops -1.8 (S arm) / -2.5 (N arm) m vs measured crest -2.2 m AHD (datum AHD supported). Placed at (x -5, y 290) m +-10 m.
+- **How used (update 2026-10-10)**: 3D (2026-10-10): digitised into 3d/src/multibeam_fig3.npz; gives the seabed in a 164 x 145 m window and container relief; METHODS_3D 3.2-3.3, 4.2-4.3.
+- **annotated versions**: 07_scale/shapes/narrowneck-gold-coast/3d/annotated/A1_corbett_fig3_digitised.png
+- **3D / planform check result (2026-10-10)**: DIGITISED 2026-10-10 (3d/prep_multibeam.py): scale 0.4651 m/px; hue -> depth via the colour bar; bed (containers removed) -4 m at the arm ends to -7 m at the toe; relief p90 0.9-1.2 m, p99 1.8-2.2 m; shallowest tops -1.8 (S arm) / -2.5 (N arm) m vs measured crest -2.2 m AHD (datum AHD supported). Placed at (x -5, y 290) m +-10 m.
+- **How used (update 2026-10-10)**: 3D (2026-10-10): digitised into 3d/src/multibeam_fig3.npz; gives the seabed in a 164 x 145 m window and container relief; METHODS_3D 3.2-3.3, 4.2-4.3.
+- **annotated versions**: 07_scale/shapes/narrowneck-gold-coast/3d/annotated/A1_corbett_fig3_digitised.png
 
 ## narrowneck-gold-coast-img-56 - Corbett et al. 2023 Fig 1: Narrowneck Artificial Reef (2001) on the Gold Coast coastline (oblique aerial)
 
@@ -1908,6 +1940,7 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **rights**: Private research copy; reuse rights to be checked before any public release.
 - **display in HTML**: True
 - **added by**: papers intake P3/P8, 2026-10-10
+- **3D / planform check result (2026-10-10)**: 2026-10-10: a surfer stands on the crest in a wave trough with ankle-deep water (date, tide and wave height unknown, before 2013 = pre-renewal crest): qualitatively consistent with a crest 1.2-1.7 m below LAT (wave-trough drawdown, Corbett 2023 p.4-5 critical flow at RL -2.5 AHD); no number read, not used for geometry.
 
 ## narrowneck-gold-coast-img-70 - Blacka et al. (2013) Fig. A.3: location of Narrowneck MPR (satellite)
 - **file**: `03_images/reefs/narrowneck-gold-coast/narrowneck-gold-coast_p8-figA3-location_2013.png`
@@ -2028,3 +2061,111 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **rights**: Private research copy; reuse rights to be checked before any public release.
 - **display in HTML**: True
 - **added by**: papers intake P3/P8, 2026-10-10
+
+## narrowneck-gold-coast-img-75 - Narrowneck 3D: model seabed and reef top vs the sources along the shore-normal
+
+![narrowneck-gold-coast-img-75](../../../07_scale/shapes/narrowneck-gold-coast/3d/annotated/A5_profile_model_vs_sources.png)
+
+- **file**: `07_scale/shapes/narrowneck-gold-coast/3d/annotated/A5_profile_model_vs_sources.png`
+- **kind**: diagram
+- **shows**: Profile y = -40..550 m: model seabed (x = 0), multibeam bed band, shallowest multibeam tops, model reef top (default version), Navionics labels 7-10 m, Vieira da Silva ranges and the MSQ tide planes in m AHD.
+- **structure visible**: True
+- **state shown**: renewed (June 2018) as modelled
+- **image date**: 2026-10-10
+- **citation**: This project (2026). Narrowneck Reef 3D model, 07_scale/shapes/narrowneck-gold-coast/3d (build_3d.py, make_annotations.py, make_previews.py), generated 2026-10-10 from the sources cited in METHODS_3D.md.
+- **image URL**: not online (generated)
+- **source page**: this project
+- **page / figure**: figure
+- **credit**: Claude (3D agent) for Lior; underlying data credited in METHODS_3D.md
+- **licence**: Own figure from third-party data (Esri, Corbett et al. 2023, Garmin Navionics, MSQ); private research copy.
+- **retrieved**: 2026-10-10
+- **used for**: cross_check, 3d_seabed
+- **How used for the model**: Validation of the seabed and crest levels (METHODS_3D 4.3-4.4).
+- **3D check pending**: no - none: derived figure
+- **linked records**: 07_scale/shapes/narrowneck-gold-coast/3d/SOURCES_3D.md; 07_scale/shapes/narrowneck-gold-coast/3d/METHODS_3D.md
+- **size**: 113402 bytes, 1210x572 px
+- **sha256**: 11263c0dbc8a6d1593fbe47869c7b449836f619bc442c9e10e434b071e674f72
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: narrowneck-gold-coast 3D model (stage 2), 2026-10-10
+
+## narrowneck-gold-coast-img-76 - Narrowneck 3D: the five outline versions on the model seabed
+
+![narrowneck-gold-coast-img-76](../../../07_scale/shapes/narrowneck-gold-coast/3d/annotated/A6_versions_on_seabed.png)
+
+- **file**: `07_scale/shapes/narrowneck-gold-coast/3d/annotated/A6_versions_on_seabed.png`
+- **kind**: diagram
+- **shows**: Plan of the five outlines (photo 2020 default, Option 2 2017, 2004 design, 2011 survey zone, Navionics shoals), the 24 faint patches and the multibeam window on the model seabed.
+- **structure visible**: True
+- **state shown**: renewed (June 2018) as modelled
+- **image date**: 2026-10-10
+- **citation**: This project (2026). Narrowneck Reef 3D model, 07_scale/shapes/narrowneck-gold-coast/3d (build_3d.py, make_annotations.py, make_previews.py), generated 2026-10-10 from the sources cited in METHODS_3D.md.
+- **image URL**: not online (generated)
+- **source page**: this project
+- **page / figure**: figure
+- **credit**: Claude (3D agent) for Lior; underlying data credited in METHODS_3D.md
+- **licence**: Own figure from third-party data (Esri, Corbett et al. 2023, Garmin Navionics, MSQ); private research copy.
+- **retrieved**: 2026-10-10
+- **used for**: cross_check, 3d_seabed
+- **How used for the model**: Compares the versions (METHODS_3D 4.1).
+- **3D check pending**: no - none: derived figure
+- **linked records**: 07_scale/shapes/narrowneck-gold-coast/3d/SOURCES_3D.md; 07_scale/shapes/narrowneck-gold-coast/3d/METHODS_3D.md
+- **size**: 190962 bytes, 990x880 px
+- **sha256**: ebeeaafe5e82b10a8d7291cb94f18afbca5743acf2c16e2ecd21a879469336a7
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: narrowneck-gold-coast 3D model (stage 2), 2026-10-10
+
+## narrowneck-gold-coast-img-77 - Narrowneck 3D viewer: oblique view from the sea at MSL
+
+![narrowneck-gold-coast-img-77](../../../07_scale/shapes/narrowneck-gold-coast/3d/preview_oblique.png)
+
+- **file**: `07_scale/shapes/narrowneck-gold-coast/3d/preview_oblique.png`
+- **kind**: diagram
+- **shows**: Screenshot of the three.js viewer: two container arms and the paddle channel on the model seabed under a translucent MSL water plane, with grid and labels.
+- **structure visible**: True
+- **state shown**: renewed (June 2018) as modelled
+- **image date**: 2026-10-10
+- **citation**: This project (2026). Narrowneck Reef 3D model, 07_scale/shapes/narrowneck-gold-coast/3d (build_3d.py, make_annotations.py, make_previews.py), generated 2026-10-10 from the sources cited in METHODS_3D.md.
+- **image URL**: not online (generated)
+- **source page**: this project
+- **page / figure**: figure
+- **credit**: Claude (3D agent) for Lior; underlying data credited in METHODS_3D.md
+- **licence**: Own figure from third-party data (Esri, Corbett et al. 2023, Garmin Navionics, MSQ); private research copy.
+- **retrieved**: 2026-10-10
+- **used for**: context
+- **How used for the model**: Visual check of the model (scale, orientation, labels).
+- **3D check pending**: no - none: derived figure
+- **linked records**: 07_scale/shapes/narrowneck-gold-coast/3d/SOURCES_3D.md; 07_scale/shapes/narrowneck-gold-coast/3d/METHODS_3D.md
+- **size**: 380772 bytes, 1400x900 px
+- **sha256**: 724a8bdec804e0d538dd5fa3657678e21763f87fa16dc5adfabd21765320f615
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: narrowneck-gold-coast 3D model (stage 2), 2026-10-10
+
+## narrowneck-gold-coast-img-78 - Narrowneck 3D viewer: plan view at LAT
+
+![narrowneck-gold-coast-img-78](../../../07_scale/shapes/narrowneck-gold-coast/3d/preview_plan.png)
+
+- **file**: `07_scale/shapes/narrowneck-gold-coast/3d/preview_plan.png`
+- **kind**: diagram
+- **shows**: Screenshot of the viewer in plan (north = right, shore = top): arms converging seaward, grid 10 m, scale bars.
+- **structure visible**: True
+- **state shown**: renewed (June 2018) as modelled
+- **image date**: 2026-10-10
+- **citation**: This project (2026). Narrowneck Reef 3D model, 07_scale/shapes/narrowneck-gold-coast/3d (build_3d.py, make_annotations.py, make_previews.py), generated 2026-10-10 from the sources cited in METHODS_3D.md.
+- **image URL**: not online (generated)
+- **source page**: this project
+- **page / figure**: figure
+- **credit**: Claude (3D agent) for Lior; underlying data credited in METHODS_3D.md
+- **licence**: Own figure from third-party data (Esri, Corbett et al. 2023, Garmin Navionics, MSQ); private research copy.
+- **retrieved**: 2026-10-10
+- **used for**: context
+- **How used for the model**: Visual check of the plan and scale.
+- **3D check pending**: no - none: derived figure
+- **linked records**: 07_scale/shapes/narrowneck-gold-coast/3d/SOURCES_3D.md; 07_scale/shapes/narrowneck-gold-coast/3d/METHODS_3D.md
+- **size**: 309233 bytes, 1400x900 px
+- **sha256**: 1465f3af7d5406395d5636a3037a91bffcbdfe803359fcd4142fdfdcb7d94634
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: narrowneck-gold-coast 3D model (stage 2), 2026-10-10

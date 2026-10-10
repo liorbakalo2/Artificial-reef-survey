@@ -31,7 +31,7 @@ State and history (not modelled, notes only): 408 containers placed Aug 1999 - D
 2. **Registration.** Assumed north-up with no rotation. Translation chosen by maximum overlap of relief > 0.6 m with the traced 2020 arm polygons (soft mask): image centre at canonical (x -5, y 290) m, +-10 m (the score maximum is broad, 0.52 against 0.51 at 5 m offsets; the south arm fits best; the container field in 2017 differs from 2020 by the 84 added containers). See A1.
 3. **Design surface (`nn_lib.design_top`).** Each design (Option 2, 2004) has crest loops (-2.5 m AHD contour) and an outer envelope (-6 m AHD). Inside the envelope the top level is `z = -2.5 - 3.5 f`, `f = d_in / (d_in + d_out)` with `d_in` the distance to the crest loops and `d_out` the distance to the envelope boundary (1 m raster, Euclidean distance transform). The contours between (-3 ... -5) are NOT digitised; they are replaced by this linear rule (check in 4.2).
 4. **Default version (photo).** Top = Option 2 design surface lowered to the measured crest (-2.2 m AHD, i.e. +0.3 m), at least 1.0 m above the bed (the containers are visible, so at least one layer; multibeam relief 1-2 m), isolated containers (channel containers, wing patches) 1.8 m above the bed, no top shallower than -1.8 m AHD (the shallowest multibeam value). Footprint = the 7 traced polygons. Side slope: height rises 0.67 m per m inward from the polygon edge (+0.3 m at the edge), i.e. 1.5 H : 1 V (assumption A5).
-5. **Design versions.** Same rule at the design crest -2.5 m AHD with the Option 2 loops and envelope (version 2), the 2004 loops and envelope (version 3), and the 2004 surface cut to the 2011 relief zone (version 4, an assumption). Heights are the design surface minus nothing (no minimum height): where the surface lies below the bed the mound height is zero.
+5. **Design versions.** Same rule at the design crest -2.5 m AHD with the Option 2 loops and envelope (version 2), the 2004 loops and envelope (version 3), and the 2004 surface cut to the 2011 relief zone (version 4, an assumption). No minimum height is applied: where the design surface lies below the bed the mound height is zero.
 6. **Navionics shoals** (version 5): outline only, no solid, because the chart shoals are smoothed (4.0 m over a reef whose crest is -2.2 m AHD = 1.44 m below LAT) and are not a footprint.
 7. **Grid.** Reef grid 1 m (x -110..110, y 190..420), stored in cm as int16 relative to MSL.
 
@@ -115,7 +115,6 @@ Combined reef height at the crest: sqrt(0.25^2 + 0.5^2) = 0.56 m (about +-0.6 m)
 | design contours -3..-5 not digitised | linear surface rule, +-0.7 m | digitise Jackson 2012 Fig 2 / Corbett Fig 2 contour by contour | no |
 
 ## 8. References
-- Alvarez et al. not used.
 - City of Gold Coast (2020) Narrowneck Reef Renewal. Project page, archived 2020-08-04, web.archive.org/web/20200804025419/https://www.goldcoast.qld.gov.au/narrowneck-reef-renewal-39934.html. Licence not stated.
 - Corbett, B.B., Mulcahy, M.G., Elliott-Perkins, Z. and Hunt, S. (2023) Narrowneck Artificial Reef Renewal. Australasian Coasts & Ports 2023 Conference, Sunshine Coast, 15-18 Aug 2023, pp. 663-669.
 - Garmin Navionics (2026) SonarChart and Nautical Chart, Narrowneck Reef, maps.garmin.com/en-US/marine, accessed 2026-10-06. Not for navigation.

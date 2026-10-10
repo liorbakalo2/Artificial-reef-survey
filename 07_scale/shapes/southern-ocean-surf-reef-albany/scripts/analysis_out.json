@@ -5,7 +5,9 @@
   "long_axis_bearing_deg": 154.7,
   "long_axis_vs_shoreline_deg": 55.5,
   "area_m2": 10918.5,
-  "rect_fill": 0.66
+  "rect_fill": 0.66,
+  "extent_along_crest_m": 157.2,
+  "extent_across_crest_m": 116.7
  },
  "design": {
   "rect_length_m": 164.0,
@@ -13,7 +15,9 @@
   "long_axis_bearing_deg": 95.8,
   "long_axis_vs_shoreline_deg": 65.6,
   "area_m2": 13104.7,
-  "rect_fill": 0.66
+  "rect_fill": 0.66,
+  "extent_along_crest_m": 164.6,
+  "extent_across_crest_m": 121.2
  },
  "sat_crest_edge_bearing_apex_to_east_deg": 101.5,
  "sat_crest_edge_bearing_east_to_apex_deg": 281.5,

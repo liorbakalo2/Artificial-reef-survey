@@ -69,8 +69,8 @@ window.REEF_MODEL = {
   "status": "verified",
   "verified_on": "2026-10-04",
   "shape_json_updated": "2026-10-10",
-  "shape_json_md5": "e072a3385bf7d502e7d2518e8c330c47",
-  "shape_json_mtime": "2026-10-10T21:05:18",
+  "shape_json_md5": "c3ac282cb6a228d6f4bf86dd3f33f1d5",
+  "shape_json_mtime": "2026-10-10T21:07:21",
   "confidence_plan": "medium",
   "area_m2": 435.2,
   "bbox_m": {

@@ -269,7 +269,7 @@ function setWater(z) { state.wl = z; water.position.y = z; gridG.position.y = z;
 function setVE(v) { state.ve = v; world.scale.y = v; $('ve').textContent = 'Vertical exaggeration ×' + v.toFixed(1) + (v > 1 ? '  (heights stretched, plan true)' : '  (true scale)'); if ($('ve_s')) { $('ve_s').value = v; $('ve_o').textContent = '×' + v.toFixed(1); } writeHash(); }
 function refreshWL() {
   const z = state.wl; if ($('wl')) { $('wl').value = z; }
-  if ($('wlo')) $('wlo').innerHTML = `<b>${fmt(z)} m MSL</b> = ${fmt(z + 0.88)} m above LAT = ${fmt(z + A0)} m AHD (${state.datum === 'icm' ? 'AHD zero 0.12 m above' : 'AHD zero 0.12 m below'} MSL by the selected datum rule)`;
+  if ($('wlo')) $('wlo').innerHTML = `<b>${fmt(z)} m MSL</b> = ${fmt(z + 0.88)} m above LAT = ${fmt(z + A0 - gshift)} m AHD (${state.datum === 'icm' ? 'AHD zero 0.12 m above' : 'AHD zero 0.12 m below'} MSL by the selected datum rule)`;
 }
 function setDatum(k) {
   state.datum = k; gshift = k === 'icm' ? M.datum.alt[1].geom_shift : 0; geom.position.y = gshift; refreshWL(); writeHash();
@@ -328,7 +328,7 @@ function mkControls() {
   $('oth').onchange = e => { const id = e.target.dataset && e.target.dataset.o; if (!id) return; state.others[id] = e.target.checked; applyOthers(); };
   $('oinfo').onclick = () => $('info').click();
   $('wl').oninput = e => setWater(parseFloat(e.target.value));
-  $('wlb').onclick = e => { const id = e.target.dataset && e.target.dataset.id; if (!id) return; const l = allLevels.find(x => x.id === id); setWater(Math.min(wlMax, Math.max(wlMin, l.z))); };
+  $('wlb').onclick = e => { const id = e.target.dataset && e.target.dataset.id; if (!id) return; const l = allLevels.find(x => x.id === id); setWater(Math.min(wlMax, Math.max(wlMin, id === 'AHD' ? gshift - A0 : l.z))); };
   $('ve_s').oninput = e => setVE(parseFloat(e.target.value));
   const tg = $('tg'); [['water', 'Water'], ['seabed', 'Seabed'], ['reef', 'Reef'], ['outline', 'Outline'], ['faint', 'Faint patches'], ['labels', 'Labels'], ['grid', 'Grid + scale']].forEach(([k, n]) => {
     const b = document.createElement('button'); b.textContent = n; b.className = state.show[k] ? 'on' : ''; b.onclick = () => { state.show[k] = !state.show[k]; b.classList.toggle('on', state.show[k]); applyToggles(); }; tg.appendChild(b);
@@ -430,7 +430,7 @@ function camState() {
   const vfov = camera.fov, hfov = 2 * Math.atan(Math.tan(vfov * D2R / 2) * camera.aspect) / D2R;
   return { x: camera.position.x, y: camera.position.z, z: camera.position.y / ve, hdg, pitch, vfov, hfov };
 }
-function camJSON() { const c = camState(); return { model: 'narrowneck-gold-coast', version: state.ver, frame: 'canonical x north (bearing 356.2), y offshore (east, bearing 86.2), metres', x_m: +c.x.toFixed(2), y_m: +c.y.toFixed(2), z_m_MSL: +c.z.toFixed(2), z_m_AHD: +(c.z + A0).toFixed(2), datum_rule: state.datum, heading_true_deg: +c.hdg.toFixed(1), pitch_deg: +c.pitch.toFixed(1), hfov_deg: +c.hfov.toFixed(1), vfov_deg: +c.vfov.toFixed(1), aspect: +camera.aspect.toFixed(3), water_level_m_MSL: state.wl, vertical_exaggeration: state.ve }; }
+function camJSON() { const c = camState(); return { model: 'narrowneck-gold-coast', version: state.ver, frame: 'canonical x north (bearing 356.2), y offshore (east, bearing 86.2), metres', x_m: +c.x.toFixed(2), y_m: +c.y.toFixed(2), z_m_MSL: +c.z.toFixed(2), z_m_AHD: +(c.z + A0 - gshift).toFixed(2), datum_rule: state.datum, heading_true_deg: +c.hdg.toFixed(1), pitch_deg: +c.pitch.toFixed(1), hfov_deg: +c.hfov.toFixed(1), vfov_deg: +c.vfov.toFixed(1), aspect: +camera.aspect.toFixed(3), water_level_m_MSL: state.wl, vertical_exaggeration: state.ve }; }
 function syncFromCamera() { const c = camState(); Object.assign(ph, { x: c.x, y: c.y, z: c.z, h: (c.hdg + 360) % 360, p: c.pitch, fov: c.hfov }); ['x', 'y', 'z', 'h', 'p', 'fov'].forEach(k => { $('ps_' + k).value = ph[k]; $('pn_' + k).value = +ph[k].toFixed(2); }); }
 function applyPhotoCam() {
   if (!state.photoMode) return;
@@ -463,7 +463,7 @@ canvas.addEventListener('mousemove', e => {
 });
 function hud() {
   const c = camState();
-  $('hud').textContent = `camera x ${c.x.toFixed(1)}  y ${c.y.toFixed(1)}  z ${fmt(c.z, 1)} m MSL (${fmt(c.z + A0, 1)} AHD)\nheading ${c.hdg.toFixed(0)}° (true)  pitch ${c.pitch.toFixed(0)}°  FOV ${c.vfov.toFixed(0)}° v / ${c.hfov.toFixed(0)}° h\n` + curTxt;
+  $('hud').textContent = `camera x ${c.x.toFixed(1)}  y ${c.y.toFixed(1)}  z ${fmt(c.z, 1)} m MSL (${fmt(c.z + A0 - gshift, 1)} AHD)\nheading ${c.hdg.toFixed(0)}° (true)  pitch ${c.pitch.toFixed(0)}°  FOV ${c.vfov.toFixed(0)}° v / ${c.hfov.toFixed(0)}° h\n` + curTxt;
   const cr = $('camro'); if (cr) cr.textContent = `view: ${VIEWS[curView] ? VIEWS[curView].label : 'free'}`;
 }
 function loop() {

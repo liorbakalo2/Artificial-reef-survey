@@ -84,6 +84,7 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **rights**: Private research copy; reuse rights to be checked before any public release.
 - **display in HTML**: True
 - **added by**: gold_coast_gov_reports_bathymetry, 2026-10-06
+- **3D re-check 2026-10-10**: qualitatively consistent: one peeling wave breaks beyond the shore-break, as expected for a reef 225-374 m out; no camera position or scale, so no value compared (3d/METHODS_3D.md 4.9). for_3d_check.pending = false.
 
 ## palm-beach-gold-coast-img-04 - Prenzler et al. 2022 Fig 1 (top): CCTV camera view of the reef with the camera field of view drawn on an aerial
 
@@ -111,6 +112,7 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **rights**: Private research copy; reuse rights to be checked before any public release.
 - **display in HTML**: True
 - **added by**: gold_coast_gov_reports_bathymetry, 2026-10-06
+- **3D re-check 2026-10-10**: patch long axis about 102 deg (+-5) vs slot axis 104.8 / outline 109.6 deg: within error; camera wedge is a camera-match candidate (camera on the beach SSW of the reef) (3d/METHODS_3D.md 4.9). for_3d_check.pending = false.
 
 ## palm-beach-gold-coast-img-05 - Daniels et al. 2022 Fig 1: wave buoy locations PBO1-4 at the natural Palm Beach reef
 
@@ -138,6 +140,7 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **rights**: Private research copy; reuse rights to be checked before any public release.
 - **display in HTML**: True
 - **added by**: gold_coast_gov_reports_bathymetry, 2026-10-06
+- **3D re-check 2026-10-10**: PBO3 11.75 m (datum, accuracy not stated) vs model 12.37 m below LAT (13.25 m below MSL) at canonical (-110.7, 571.2) m: +0.62 m (LAT) / +1.50 m (MSL), seabed there is extrapolated beyond the 10 m line; marginal, no change, recorded as a validation row (3d/METHODS_3D.md 4.9). for_3d_check.pending = false.
 
 ## palm-beach-gold-coast-img-06 - Daniels et al. 2022 Fig 2: natural Palm Beach reef outlined on an aerial photograph
 
@@ -247,6 +250,7 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **rights**: Private research copy; reuse rights to be checked before any public release.
 - **display in HTML**: True
 - **added by**: gold_coast_gov_reports_bathymetry, 2026-10-06
+- **3D re-check 2026-10-10**: model seabed profile vs 13 labels 3.5-11.5 m (datum assumed AHD): RMS 0.33 m, mean -0.07 m, max 0.52 m (0.89 m at the 3.5 m surf-zone label): within +-0.5 m, no change (3d/METHODS_3D.md 4.9). for_3d_check.pending = false.
 
 ## palm-beach-gold-coast-img-10 - Mortensen et al. 2015 Fig 6 (bottom): seabed contours with the concept SCS in place
 
@@ -328,6 +332,7 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **rights**: Private research copy; reuse rights to be checked before any public release.
 - **display in HTML**: True
 - **added by**: gold_coast_gov_reports_bathymetry, 2026-10-06
+- **3D re-check 2026-10-10**: 160 x 80 m / 1.5 m below average water level / about 270 m offshore vs model 162.3 x 91.3 m (mean width 73.8), crest -1.5 m MSL, nearest toe 225 m (waterline) or 279 m (OSM coast): within tolerance against the council GIS polygon (Hausdorff 0.55 m); text figures are nominal (3d/METHODS_3D.md 4.9). for_3d_check.pending = false.
 
 ## palm-beach-gold-coast-img-13 - City of Gold Coast 2020 brochure p.9: plan aerial with the reef icon and the 270 m offshore distance
 
@@ -355,6 +360,7 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **rights**: Private research copy; reuse rights to be checked before any public release.
 - **display in HTML**: True
 - **added by**: gold_coast_gov_reports_bathymetry, 2026-10-06
+- **3D re-check 2026-10-10**: no scale bar and no icon/arrow in the native raster, so the 270 m cannot be re-measured here; same verdict as img-12 (earlier ICCE-copy measurement 255 m, -5 %) (3d/METHODS_3D.md 4.9). for_3d_check.pending = false.
 
 ## palm-beach-gold-coast-img-14 - City of Gold Coast 2020 brochure p.9: section view of the artificial reef (not to scale), crest 1.5 m below average water level
 
@@ -382,6 +388,7 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **rights**: Private research copy; reuse rights to be checked before any public release.
 - **display in HTML**: True
 - **added by**: gold_coast_gov_reports_bathymetry, 2026-10-06
+- **3D re-check 2026-10-10**: crest 1.5 m below average water level vs model -1.5 m MSL: difference 0 (0.12 m if AHD), within +-0.2 m; shoreward slope steeper than seaward matches the model qualitatively (3d/METHODS_3D.md 4.9). for_3d_check.pending = false.
 
 ## palm-beach-gold-coast-img-15 - Palm Beach reef and inshore sandbank: two satellite views (ICM 2023 article)
 
@@ -409,6 +416,7 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **rights**: Private research copy; reuse rights to be checked before any public release.
 - **display in HTML**: True
 - **added by**: gold_coast_gov_reports_bathymetry, 2026-10-06
+- **3D re-check 2026-10-10**: dark mound still present at both dates; axis 108.3 / 108.8 deg vs model 109.6 deg: within tolerance; supports no later change (A2) (3d/METHODS_3D.md 4.9). for_3d_check.pending = false.
 
 ## palm-beach-gold-coast-img-16 - Aerial of Palm Beach with a backhoe dredger working over the artificial reef (City of Gold Coast via ABC, 2019)
 
@@ -436,6 +444,7 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **rights**: Private research copy; reuse rights to be checked before any public release.
 - **display in HTML**: True
 - **added by**: image-registry backfill, 2026-10-06
+- **3D re-check 2026-10-10**: qualitative only (oblique, no scale, dredger length unknown): patch well offshore of the groynes and partly built, consistent with the model; no value compared (3d/METHODS_3D.md 4.9). for_3d_check.pending = false.
 
 ## palm-beach-gold-coast-img-17 - Cru Collective: labelled aerial of Palm Beach - artificial reef, natural reef, groynes, benefit area, Currumbin Creek
 

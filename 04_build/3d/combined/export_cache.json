@@ -1,6 +1,6 @@
 {
  "boscombe-surf-reef": {
-  "sig": "20d2b382d770acb1b377e7dd598e4841d80c78ee",
+  "sig": "57a0f8eb8ccff41ef738bf27b10abc6ecb8e5ebb",
   "result": {
    "slug": "boscombe-surf-reef",
    "status": "ok",
@@ -98,7 +98,7 @@
   }
  },
  "bunbury-airwave": {
-  "sig": "a5d38b91f6fe7531f0edeeb2eddb5bef7fbca5d3",
+  "sig": "2303559edb8343b6ef45ef8079e726137f54baf9",
   "result": {
    "slug": "bunbury-airwave",
    "status": "ok",
@@ -196,7 +196,7 @@
   }
  },
  "mount-maunganui-reef": {
-  "sig": "7820dfcf96d9ac179c5504e484d40d4982ba20ab",
+  "sig": "9957e804703be51873a32be27f96e990eb873b91",
   "result": {
    "slug": "mount-maunganui-reef",
    "status": "ok",
@@ -294,7 +294,7 @@
   }
  },
  "palm-beach-gold-coast": {
-  "sig": "47710bda524b15b5959658ebbbd8e0603735015f",
+  "sig": "251556114bf3e344aab834fc425a85b2f1d58f71",
   "result": {
    "slug": "palm-beach-gold-coast",
    "status": "ok",
@@ -392,7 +392,7 @@
   }
  },
  "prattes-reef-el-segundo": {
-  "sig": "df3ed490bdb2d7fafb84ea991bd2767a41009c8e",
+  "sig": "68e4a52dd745cae6660a3cc1bd866bfbde50ca02",
   "result": {
    "slug": "prattes-reef-el-segundo",
    "status": "ok",
@@ -490,7 +490,7 @@
   }
  },
  "borth-coastal-defence-reef": {
-  "sig": "bc4e84482d2bd96bcd9cef8a5547ec485afff8bc",
+  "sig": "62e983c2fd13e51c3f250523a9ee36a6e1c16470",
   "result": {
    "slug": "borth-coastal-defence-reef",
    "status": "ok",

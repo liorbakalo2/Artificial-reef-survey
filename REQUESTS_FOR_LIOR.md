@@ -18,7 +18,7 @@ exact coordinates live in the per-topic files linked below; this page is the sin
 ## 2. E-mails (Claude never sends e-mail; drafts can be prepared on request)
 | # | To | Ask for | Detail file |
 |---|---|---|---|
-| E1 | J.C. Borrero (USC / eCoast) and C. Nelsen (Surfrider Foundation) - addresses on p.1 of their 2003 Pratte's paper | datum/units of Figs 5-9, horizontal datum of Fig. 9 UTM, raw survey files, number of bag courses | 07_scale\shapes\prattes-reef-el-segundo\3d\REQUESTS_FOR_LIOR.md (A5) |
+| E1 | J.C. Borrero (USC / eCoast) and C. Nelsen (Surfrider Foundation) - addresses on p.1 of their 2003 Pratte's paper | datum/units of Figs 5-9, horizontal datum of Fig. 9 UTM, raw survey files, number of bag courses; also (2026-10-10 re-verification): which datum the '-6 ft' crest really has (paper p.2 MLLW vs drawing MSL, 0.85 m apart) and the true reef-to-outfall distance (text 200 m vs about 340 m on Fig. 2) | 07_scale\shapes\prattes-reef-el-segundo\3d\REQUESTS_FOR_LIOR.md (A5) |
 | E2 | Surfrider Foundation LA / Coastal Frontiers Corp. | Pratte's 2000-2008 monitoring surveys and the 2008 removal mapping | same file (C1) |
 | E3 | City of Gold Coast (beaches@goldcoast.qld.gov.au) | Narrowneck 2018 renewal drawings + as-built multibeam (and the datum offset behind -2.2 m AHD); Palm Beach as-built survey + Design Reference Report; meaning/units of HEIGHT_M and VOLUME | 07_scale\bathymetry\gold_coast\REPORT.md section 8 |
 | E4 | Queensland DETSI | will the Gold Coast stage of the State-wide Nearshore Bathymetry Survey (2025, AHD) be public? | same |

@@ -1143,6 +1143,28 @@ true,
 false
 ]
 },
+"3d/palm-beach-gold-coast/annotated/recheck_orientation_img04_img15": {
+"res": {
+"bytes": 241034,
+"h": 305,
+"scale": 1.0,
+"src_h": 305,
+"src_w": 1200,
+"w": 1200,
+"web": "3d/palm-beach-gold-coast/annotated/recheck_orientation_img04_img15.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/palm-beach-gold-coast/3d/annotated/recheck_orientation_img04_img15.png",
+254201,
+1791666423,
+1200,
+400,
+false,
+null,
+true,
+false
+]
+},
 "3d/palm-beach-gold-coast/annotated/s4_icce_fig1_distance_and_icon": {
 "res": {
 "bytes": 399854,
@@ -2683,6 +2705,31 @@ false,
 false
 ]
 },
+"assets/images/borth-coastal-defence-reef/borth-coastal-defence-reef-img-31": {
+"res": {
+"bytes": 107248,
+"h": 751,
+"scale": 1.0,
+"src_h": 751,
+"src_w": 1112,
+"th": 270,
+"thumb": "assets/images/borth-coastal-defence-reef/borth-coastal-defence-reef-img-31_400.jpg",
+"tw": 400,
+"w": 1112,
+"web": "assets/images/borth-coastal-defence-reef/borth-coastal-defence-reef-img-31.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/03_images/reefs/borth-coastal-defence-reef/borth-coastal-defence-reef_p8-fig4-1-borth-june-2012_2012-06.png",
+987018,
+1791666389,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
 "assets/images/boscombe-surf-reef/boscombe-surf-reef-img-02": {
 "res": {
 "bytes": 91721,
@@ -3940,6 +3987,31 @@ false
 "/home/user/artificial-reef-survey/03_images/reefs/boscombe-surf-reef/boscombe-surf-reef_satellite-google-earth-4-dates_2002-2012.png",
 705718,
 1791665744,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/boscombe-surf-reef/boscombe-surf-reef-img-42": {
+"res": {
+"bytes": 171536,
+"h": 501,
+"scale": 1.0,
+"src_h": 501,
+"src_w": 695,
+"th": 288,
+"thumb": "assets/images/boscombe-surf-reef/boscombe-surf-reef-img-42_400.jpg",
+"tw": 400,
+"w": 695,
+"web": "assets/images/boscombe-surf-reef/boscombe-surf-reef-img-42.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/03_images/reefs/boscombe-surf-reef/boscombe-surf-reef_p3-fig6-poole-bay-aerial_2010.png",
+253720,
+1791666389,
 1600,
 400,
 true,
@@ -5291,6 +5363,31 @@ false,
 false
 ]
 },
+"assets/images/mount-maunganui-reef/mount-maunganui-reef-img-39": {
+"res": {
+"bytes": 210212,
+"h": 1348,
+"scale": 1.0,
+"src_h": 1348,
+"src_w": 1417,
+"th": 381,
+"thumb": "assets/images/mount-maunganui-reef/mount-maunganui-reef-img-39_400.jpg",
+"tw": 400,
+"w": 1417,
+"web": "assets/images/mount-maunganui-reef/mount-maunganui-reef-img-39.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/03_images/reefs/mount-maunganui-reef/mount-maunganui-reef_p8-fig2-16-RAD-method_2005-2008.png",
+1896368,
+1791666389,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
 "assets/images/palm-beach-gold-coast/palm-beach-gold-coast-img-02": {
 "res": {
 "bytes": 18732,
@@ -5361,6 +5458,28 @@ false
 1600,
 400,
 true,
+400000,
+false,
+false
+]
+},
+"assets/images/palm-beach-gold-coast/palm-beach-gold-coast-img-04_ann1": {
+"res": {
+"bytes": 241034,
+"h": 305,
+"scale": 1.0,
+"src_h": 305,
+"src_w": 1200,
+"w": 1200,
+"web": "assets/images/palm-beach-gold-coast/palm-beach-gold-coast-img-04_ann1.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/palm-beach-gold-coast/3d/annotated/recheck_orientation_img04_img15.png",
+254201,
+1791666423,
+1600,
+400,
+false,
 400000,
 false,
 false
@@ -5583,6 +5702,28 @@ false
 1600,
 400,
 true,
+400000,
+false,
+false
+]
+},
+"assets/images/palm-beach-gold-coast/palm-beach-gold-coast-img-15_ann1": {
+"res": {
+"bytes": 241034,
+"h": 305,
+"scale": 1.0,
+"src_h": 305,
+"src_w": 1200,
+"w": 1200,
+"web": "assets/images/palm-beach-gold-coast/palm-beach-gold-coast-img-15_ann1.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/palm-beach-gold-coast/3d/annotated/recheck_orientation_img04_img15.png",
+254201,
+1791666423,
+1600,
+400,
+false,
 400000,
 false,
 false
@@ -6269,6 +6410,1092 @@ false
 1600,
 400,
 true,
+400000,
+false,
+false
+]
+},
+"assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-04": {
+"res": {
+"bytes": 38627,
+"h": 385,
+"scale": 1.0,
+"src_h": 385,
+"src_w": 308,
+"th": 385,
+"thumb": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-04_400.jpg",
+"tw": 308,
+"w": 308,
+"web": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-04.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/prattes-reef-el-segundo/src/img1_skelly_diagram.png",
+35931,
+1791662848,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-04_ann1": {
+"res": {
+"bytes": 155304,
+"h": 1600,
+"scale": 0.91954,
+"src_h": 1740,
+"src_w": 1232,
+"w": 1133,
+"web": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-04_ann1.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/prattes-reef-el-segundo/3d/annotated/A1_skelly_drawing_crest_labels_and_scale.png",
+547715,
+1791662848,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-04_ann2": {
+"res": {
+"bytes": 120735,
+"h": 1540,
+"scale": 1.0,
+"src_h": 1540,
+"src_w": 1232,
+"w": 1232,
+"web": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-04_ann2.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/prattes-reef-el-segundo/overlays/img1_final.png",
+503233,
+1791662848,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-04_ann3": {
+"res": {
+"bytes": 128883,
+"h": 1540,
+"scale": 1.0,
+"src_h": 1540,
+"src_w": 1232,
+"w": 1232,
+"web": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-04_ann3.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/prattes-reef-el-segundo/overlays/img1_correction_red_new_cyan_old.png",
+519760,
+1791662848,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-04_ann4": {
+"res": {
+"bytes": 123141,
+"h": 1540,
+"scale": 1.0,
+"src_h": 1540,
+"src_w": 1232,
+"w": 1232,
+"web": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-04_ann4.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/prattes-reef-el-segundo/overlays/_pre_verification/img1_final.png",
+514732,
+1791662848,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-05": {
+"res": {
+"bytes": 33865,
+"h": 450,
+"scale": 1.0,
+"src_h": 450,
+"src_w": 640,
+"th": 281,
+"thumb": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-05_400.jpg",
+"tw": 400,
+"w": 640,
+"web": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-05.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/prattes-reef-el-segundo/src/img2_bag_size.jpg",
+35408,
+1791662848,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-06": {
+"res": {
+"bytes": 65534,
+"h": 472,
+"scale": 1.0,
+"src_h": 472,
+"src_w": 720,
+"th": 262,
+"thumb": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-06_400.jpg",
+"tw": 400,
+"w": 720,
+"web": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-06.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/prattes-reef-el-segundo/src/img3_building.jpg",
+79141,
+1791662848,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-08": {
+"res": {
+"bytes": 61801,
+"h": 420,
+"scale": 1.0,
+"src_h": 420,
+"src_w": 371,
+"th": 400,
+"thumb": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-08_400.jpg",
+"tw": 353,
+"w": 371,
+"web": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-08.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/prattes-reef-el-segundo/src/img5_henriquez_fig2-10_raster.png",
+50161,
+1791662848,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-08_ann1": {
+"res": {
+"bytes": 107635,
+"h": 1600,
+"scale": 0.95238,
+"src_h": 1680,
+"src_w": 1484,
+"w": 1413,
+"web": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-08_ann1.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/prattes-reef-el-segundo/overlays/img5_final.png",
+483841,
+1791662848,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-08_ann2": {
+"res": {
+"bytes": 337277,
+"h": 1260,
+"scale": 1.0,
+"src_h": 1260,
+"src_w": 1113,
+"w": 1113,
+"web": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-08_ann2.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/prattes-reef-el-segundo/overlays/_pre_verification/img5_final.png",
+332710,
+1791662848,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-09": {
+"res": {
+"bytes": 389577,
+"h": 1304,
+"scale": 0.67969,
+"src_h": 1919,
+"src_w": 2354,
+"th": 326,
+"thumb": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-09_400.jpg",
+"tw": 400,
+"w": 1600,
+"web": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-09.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/prattes-reef-el-segundo/src/img6_ccc_exhibit3_concept_plan.png",
+60895,
+1791662848,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-09_ann1": {
+"res": {
+"bytes": 315125,
+"h": 1179,
+"scale": 1.0,
+"src_h": 1179,
+"src_w": 1177,
+"w": 1177,
+"web": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-09_ann1.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/prattes-reef-el-segundo/3d/annotated/A3_ccc_exhibit3_contours_section_AA.png",
+313254,
+1791662848,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-09_ann2": {
+"res": {
+"bytes": 98529,
+"h": 528,
+"scale": 1.0,
+"src_h": 528,
+"src_w": 564,
+"w": 564,
+"web": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-09_ann2.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/prattes-reef-el-segundo/overlays/img6_final.png",
+97162,
+1791662848,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-09_ann3": {
+"res": {
+"bytes": 98529,
+"h": 528,
+"scale": 1.0,
+"src_h": 528,
+"src_w": 564,
+"w": 564,
+"web": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-09_ann3.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/prattes-reef-el-segundo/overlays/_pre_verification/img6_final.png",
+97162,
+1791662848,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-10": {
+"res": {
+"bytes": 224835,
+"h": 900,
+"scale": 1.0,
+"src_h": 900,
+"src_w": 1400,
+"th": 257,
+"thumb": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-10_400.jpg",
+"tw": 400,
+"w": 1400,
+"web": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-10.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/prattes-reef-el-segundo/3d/src/navionics/app_options_sonarchart_feet.png",
+222480,
+1791662848,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-11": {
+"res": {
+"bytes": 52206,
+"h": 751,
+"scale": 1.0,
+"src_h": 751,
+"src_w": 985,
+"th": 305,
+"thumb": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-11_400.jpg",
+"tw": 400,
+"w": 985,
+"web": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-11.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/prattes-reef-el-segundo/3d/src/navionics/sonar_ft_z17_map.png",
+53345,
+1791662848,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-12": {
+"res": {
+"bytes": 44415,
+"h": 751,
+"scale": 1.0,
+"src_h": 751,
+"src_w": 985,
+"th": 305,
+"thumb": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-12_400.jpg",
+"tw": 400,
+"w": 985,
+"web": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-12.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/prattes-reef-el-segundo/3d/src/navionics/sonar_ft_z18_map.png",
+46744,
+1791662848,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-12_ann1": {
+"res": {
+"bytes": 144544,
+"h": 1113,
+"scale": 1.0,
+"src_h": 1113,
+"src_w": 985,
+"w": 985,
+"web": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-12_ann1.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/prattes-reef-el-segundo/3d/annotated/A9_navionics_sonarchart_contours_transect.png",
+147203,
+1791662848,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-13": {
+"res": {
+"bytes": 32780,
+"h": 751,
+"scale": 1.0,
+"src_h": 751,
+"src_w": 985,
+"th": 305,
+"thumb": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-13_400.jpg",
+"tw": 400,
+"w": 985,
+"web": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-13.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/prattes-reef-el-segundo/3d/src/navionics/nautical_ft_z17_map.png",
+32915,
+1791662848,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-14": {
+"res": {
+"bytes": 28891,
+"h": 751,
+"scale": 1.0,
+"src_h": 751,
+"src_w": 985,
+"th": 305,
+"thumb": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-14_400.jpg",
+"tw": 400,
+"w": 985,
+"web": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-14.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/prattes-reef-el-segundo/3d/src/navionics/nautical_ft_z18_map.png",
+29932,
+1791662848,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-14_ann1": {
+"res": {
+"bytes": 72223,
+"h": 933,
+"scale": 1.0,
+"src_h": 933,
+"src_w": 985,
+"w": 985,
+"web": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-14_ann1.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/prattes-reef-el-segundo/3d/annotated/A10_navionics_nautical_chart_soundings.png",
+73244,
+1791662848,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-15": {
+"res": {
+"bytes": 136021,
+"h": 900,
+"scale": 1.0,
+"src_h": 900,
+"src_w": 1400,
+"th": 257,
+"thumb": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-15_400.jpg",
+"tw": 400,
+"w": 1400,
+"web": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-15.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/prattes-reef-el-segundo/3d/src/navionics/hint1_33.9188_-118.4324/app_options_sonarchart_feet.png",
+133402,
+1791662848,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-16": {
+"res": {
+"bytes": 55446,
+"h": 751,
+"scale": 1.0,
+"src_h": 751,
+"src_w": 985,
+"th": 305,
+"thumb": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-16_400.jpg",
+"tw": 400,
+"w": 985,
+"web": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-16.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/prattes-reef-el-segundo/3d/src/navionics/hint1_33.9188_-118.4324/sonar_ft_z17_map.png",
+57078,
+1791662848,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-17": {
+"res": {
+"bytes": 48582,
+"h": 751,
+"scale": 1.0,
+"src_h": 751,
+"src_w": 985,
+"th": 305,
+"thumb": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-17_400.jpg",
+"tw": 400,
+"w": 985,
+"web": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-17.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/prattes-reef-el-segundo/3d/src/navionics/hint1_33.9188_-118.4324/sonar_ft_z18_map.png",
+50805,
+1791662848,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-18": {
+"res": {
+"bytes": 36514,
+"h": 751,
+"scale": 1.0,
+"src_h": 751,
+"src_w": 985,
+"th": 305,
+"thumb": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-18_400.jpg",
+"tw": 400,
+"w": 985,
+"web": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-18.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/prattes-reef-el-segundo/3d/src/navionics/hint1_33.9188_-118.4324/nautical_ft_z17_map.png",
+36776,
+1791662848,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-19": {
+"res": {
+"bytes": 33986,
+"h": 751,
+"scale": 1.0,
+"src_h": 751,
+"src_w": 985,
+"th": 305,
+"thumb": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-19_400.jpg",
+"tw": 400,
+"w": 985,
+"web": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-19.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/prattes-reef-el-segundo/3d/src/navionics/hint1_33.9188_-118.4324/nautical_ft_z18_map.png",
+34661,
+1791662848,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-20": {
+"res": {
+"bytes": 205824,
+"h": 1600,
+"scale": 0.85561,
+"src_h": 1870,
+"src_w": 1276,
+"th": 400,
+"thumb": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-20_400.jpg",
+"tw": 273,
+"w": 1092,
+"web": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-20.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/prattes-reef-el-segundo/3d/annotated/A2_ccc_exhibit2_profile_datums.png",
+370151,
+1791662848,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-21": {
+"res": {
+"bytes": 314257,
+"h": 1556,
+"scale": 1.0,
+"src_h": 1556,
+"src_w": 992,
+"th": 400,
+"thumb": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-21_400.jpg",
+"tw": 255,
+"w": 992,
+"web": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-21.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/prattes-reef-el-segundo/3d/annotated/A4_icce2010_p7_pratte_text_highlighted.png",
+425324,
+1791662848,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-22": {
+"res": {
+"bytes": 97428,
+"h": 583,
+"scale": 1.0,
+"src_h": 583,
+"src_w": 973,
+"th": 240,
+"thumb": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-22_400.jpg",
+"tw": 400,
+"w": 973,
+"web": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-22.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/prattes-reef-el-segundo/3d/annotated/A5_icce2010_fig1_pratte_bag_size.png",
+98460,
+1791662848,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-23": {
+"res": {
+"bytes": 287855,
+"h": 1435,
+"scale": 1.0,
+"src_h": 1435,
+"src_w": 1020,
+"th": 400,
+"thumb": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-23_400.jpg",
+"tw": 284,
+"w": 1020,
+"web": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-23.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/prattes-reef-el-segundo/3d/annotated/A6_ccc_p11_project_description_highlighted.png",
+607725,
+1791662848,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-24": {
+"res": {
+"bytes": 208188,
+"h": 874,
+"scale": 0.9697,
+"src_h": 901,
+"src_w": 1650,
+"th": 218,
+"thumb": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-24_400.jpg",
+"tw": 400,
+"w": 1600,
+"web": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-24.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/prattes-reef-el-segundo/3d/annotated/A7_noaa_dem_map_and_seabed_profile.png",
+350637,
+1791662848,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-25": {
+"res": {
+"bytes": 87584,
+"h": 715,
+"scale": 1.0,
+"src_h": 715,
+"src_w": 990,
+"th": 289,
+"thumb": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-25_400.jpg",
+"tw": 400,
+"w": 990,
+"web": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-25.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/prattes-reef-el-segundo/3d/annotated/A8_noaa_tidal_datums_and_crest_states.png",
+74612,
+1791662848,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-26": {
+"res": {
+"bytes": 155662,
+"h": 616,
+"scale": 1.0,
+"src_h": 616,
+"src_w": 1540,
+"th": 160,
+"thumb": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-26_400.jpg",
+"tw": 400,
+"w": 1540,
+"web": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-26.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/prattes-reef-el-segundo/3d/annotated/A11_navionics_vs_noaa_dem_profile.png",
+131325,
+1791662848,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-27": {
+"res": {
+"bytes": 234749,
+"h": 853,
+"scale": 0.6449,
+"src_h": 1323,
+"src_w": 2481,
+"th": 213,
+"thumb": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-27_400.jpg",
+"tw": 400,
+"w": 1600,
+"web": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-27.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/prattes-reef-el-segundo/3d/annotated/A12_bn2003_p1-3_text_highlighted.png",
+1168303,
+1791662848,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-28": {
+"res": {
+"bytes": 168076,
+"h": 1104,
+"scale": 0.70609,
+"src_h": 1564,
+"src_w": 2266,
+"th": 276,
+"thumb": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-28_400.jpg",
+"tw": 400,
+"w": 1600,
+"web": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-28.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/prattes-reef-el-segundo/3d/annotated/A13_bn2003_fig4_vs_skelly_img1.png",
+952932,
+1791662848,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-29": {
+"res": {
+"bytes": 224045,
+"h": 941,
+"scale": 1.0,
+"src_h": 941,
+"src_w": 1296,
+"th": 290,
+"thumb": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-29_400.jpg",
+"tw": 400,
+"w": 1296,
+"web": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-29.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/prattes-reef-el-segundo/3d/annotated/A14_bn2003_fig2_aerial_position.png",
+1069862,
+1791662848,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-30": {
+"res": {
+"bytes": 198878,
+"h": 1013,
+"scale": 0.9697,
+"src_h": 1045,
+"src_w": 1650,
+"th": 253,
+"thumb": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-30_400.jpg",
+"tw": 400,
+"w": 1600,
+"web": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-30.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/prattes-reef-el-segundo/3d/annotated/A15_bn2003_fig5-8_reef_profiles_digitised.png",
+206049,
+1791662848,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-31": {
+"res": {
+"bytes": 365638,
+"h": 768,
+"scale": 0.9697,
+"src_h": 792,
+"src_w": 1650,
+"th": 192,
+"thumb": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-31_400.jpg",
+"tw": 400,
+"w": 1600,
+"web": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-31.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/prattes-reef-el-segundo/3d/annotated/A16_bn2003_fig9_bathymetry_utm.png",
+215186,
+1791662848,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-32": {
+"res": {
+"bytes": 325502,
+"h": 1243,
+"scale": 0.96735,
+"src_h": 1285,
+"src_w": 1654,
+"th": 311,
+"thumb": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-32_400.jpg",
+"tw": 400,
+"w": 1600,
+"web": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-32.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/prattes-reef-el-segundo/3d/annotated/A17_bn2003_p14_p16_text_highlighted.png",
+500209,
+1791662848,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-33": {
+"res": {
+"bytes": 148712,
+"h": 1115,
+"scale": 1.0,
+"src_h": 1115,
+"src_w": 1348,
+"th": 331,
+"thumb": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-33_400.jpg",
+"tw": 400,
+"w": 1348,
+"web": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-33.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/03_images/reefs/prattes-reef-el-segundo/prattes-reef-el-segundo_p8-fig2-19-bags-sling_2000.png",
+1752429,
+1791666389,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-35": {
+"res": {
+"bytes": 154780,
+"h": 1001,
+"scale": 1.0,
+"src_h": 1001,
+"src_w": 834,
+"th": 400,
+"thumb": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-35_400.jpg",
+"tw": 333,
+"w": 834,
+"web": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-35.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/03_images/reefs/prattes-reef-el-segundo/prattes-reef-el-segundo_p8-figA17-design-leidersdorf_2000.png",
+136031,
+1791666389,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-37": {
+"res": {
+"bytes": 83618,
+"h": 468,
+"scale": 1.0,
+"src_h": 468,
+"src_w": 371,
+"th": 400,
+"thumb": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-37_400.jpg",
+"tw": 317,
+"w": 371,
+"web": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-37.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/prattes-reef-el-segundo/src/bn2003_fig4_design_layout_raster.png",
+65287,
+1791666272,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-37_ann1": {
+"res": {
+"bytes": 123609,
+"h": 1404,
+"scale": 1.0,
+"src_h": 1404,
+"src_w": 1113,
+"w": 1113,
+"web": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-37_ann1.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/prattes-reef-el-segundo/overlays/bn2003_fig4_with_img5_outline_2026-10-10.png",
+483129,
+1791666273,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-38": {
+"res": {
+"bytes": 142931,
+"h": 282,
+"scale": 1.0,
+"src_h": 282,
+"src_w": 576,
+"th": 196,
+"thumb": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-38_400.jpg",
+"tw": 400,
+"w": 576,
+"web": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-38.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/prattes-reef-el-segundo/src/bn2003_fig20_pratte_vs_narrowneck_raster.png",
+113357,
+1791666272,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-38_ann1": {
+"res": {
+"bytes": 192063,
+"h": 783,
+"scale": 0.69444,
+"src_h": 1128,
+"src_w": 2304,
+"w": 1600,
+"web": "assets/images/prattes-reef-el-segundo/prattes-reef-el-segundo-img-38_ann1.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/prattes-reef-el-segundo/overlays/bn2003_fig20_pratte_scale_check_2026-10-10.png",
+1431529,
+1791666283,
+1600,
+400,
+false,
 400000,
 false,
 false

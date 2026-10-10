@@ -85,7 +85,7 @@ METHODS_3D.md (from METHODS_3D.template.md, numbers filled by build_3d.py): 1 su
 
 <!-- BUILD-AUTO-START -->
 ## Plan shape at build time (written by build_3d.py on 2026-10-10)
-- shape.json status = **verified**, verified_on = 2026-10-04, updated = 2026-10-10, plan confidence = medium; file md5 e072a3385bf7d502e7d2518e8c330c47, modified 2026-10-10T21:05:18.
+- shape.json status = **verified**, verified_on = 2026-10-04, updated = 2026-10-10, plan confidence = medium; file md5 c3ac282cb6a228d6f4bf86dd3f33f1d5, modified 2026-10-10T21:07:21.
 - Outline used: 76 vertices, area 435.2 m2, bbox 58.0 x 28.6 m (alongshore x cross-shore), y from 74.7 to 103.3 m, centroid distance offshore 91.44 m. geo = null.
 - Drawn state: Phase I design, fall 2000: 110 solid-outline geotextile bags (about 3.0 m x 2.2 m x 1.2 m each) in a V of two arms at 45 deg to the wave direction, with a 5 x 5 bag spine block at the apex. The 30 dashed 'optional' bags on the drawing are not part of the outline. This is NOT the final reef: Phase II (April 2001) put 90 more bags on top of these and widened the crest.
 <!-- BUILD-AUTO-END -->

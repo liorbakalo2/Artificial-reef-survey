@@ -1,10 +1,10 @@
-PASS file size 2125 KB < 3 MB
+PASS file size 2217 KB < 3 MB
 PASS HTML parses with balanced tags (errors=[], unclosed=[])
 PASS title is 'Artificial Surf Reefs Survey'
 PASS data has exactly the 13 slugs (missing=set(), extra=set())
 PASS all 13 slugs appear in the HTML
-PASS 322 referenced assets/ paths exist on disk (missing=[])
-PASS no unreferenced files in assets/ (322 files; unused=[])
+PASS 407 referenced assets/ paths exist on disk (missing=[])
+PASS no unreferenced files in assets/ (407 files; unused=[])
 PASS every [R#] token resolves to its reef's references (unresolved=[])
 PASS source pop-up #ref-pop exists inside the reef <dialog> (renders in the top layer)
 PASS markers are rendered as pop-up buttons (ref-mark / data-ref / aria-controls=ref-pop, openPop, positionPop)
@@ -62,7 +62,7 @@ PASS [3D] prattes-reef-el-segundo: viewer copy 3d/prattes-reef-el-segundo/index.
 PASS [3D] prattes-reef-el-segundo: poster 3d/prattes-reef-el-segundo/poster.jpg exists
 PASS [3D] vendored three.js present (['three.module.js', 'three.bundle.js', 'OrbitControls.js']; vendor holds 6 files)
 PASS [3D] no copied viewer uses a CDN / import map and every script it loads exists (bad=[])
-PASS [3D] all gallery files exist on disk (119 pictures; web copy, thumbnail, annotated copies; missing=[])
+PASS [3D] all gallery files exist on disk (154 pictures; web copy, thumbnail, annotated copies; missing=[])
 PASS [3D] every gallery picture has a non-empty how_used + citation for its tooltip and a group (bad=[])
 PASS [3D] every model has confidence badge data, state, vertical-exaggeration note, key numbers, caveats and references (bad=[])
 PASS [3D] mandated caveat rows present (lacking=[])
@@ -71,7 +71,7 @@ PASS [3D] curated quotes / evidence snippets verified against the documents at b
 PASS [3D] project-wide methods text rendered
 PASS [3D] every relied-on quotation is <= 25 words
 PASS [3D] outline-version contract for the 2 model(s) with versions (bad=[])
-INFO [3D] 6 models ['borth-coastal-defence-reef - medium', 'boscombe-surf-reef - medium', 'bunbury-airwave - medium', 'mount-maunganui-reef - medium', 'palm-beach-gold-coast - medium', 'prattes-reef-el-segundo - low']; pictures 119; caveat rows 47; references 97; with versions 2; not yet modelled ['burkitts-reef-bargara', 'cables-reef-wa', 'narrowneck-gold-coast', 'opunake-reef', 'kovalam-reef-india', 'southern-ocean-surf-reef-albany', 'mexico-reef-2026-unnamed']
+INFO [3D] 6 models ['borth-coastal-defence-reef - medium', 'boscombe-surf-reef - medium', 'bunbury-airwave - medium', 'mount-maunganui-reef - medium', 'palm-beach-gold-coast - medium', 'prattes-reef-el-segundo - low']; pictures 154; caveat rows 47; references 97; with versions 2; not yet modelled ['burkitts-reef-bargara', 'cables-reef-wa', 'narrowneck-gold-coast', 'opunake-reef', 'kovalam-reef-india', 'southern-ocean-surf-reef-albany', 'mexico-reef-2026-unnamed']
 PASS [3D] sticky top navigation (#topnav) holds the view buttons and comes before the site header
 PASS [3D] back-to-top control present
 PASS [3D] every copied viewer (and the combined viewer) has the injected 'Back to the page' bar, hidden when framed (missing=[])
@@ -111,5 +111,5 @@ PASS [3D] combined export prattes-reef-el-segundo: crest level vs model.js: err 
 PASS [3D] combined export prattes-reef-el-segundo: seabed falls away offshore (+z): err 1.92e-17 deg (tolerance 20)
 PASS [3D] combined export prattes-reef-el-segundo: seabed at the shoreline is near 0 m MSL: err 0.438 m (tolerance 1.5)
 INFO [3D] combined scene: borth-coastal-defence-reef ok; boscombe-surf-reef ok; bunbury-airwave ok; mount-maunganui-reef ok; palm-beach-gold-coast ok; prattes-reef-el-segundo ok; tolerances {'area_rel': 0.25, 'crest_m': 0.2, 'centroid_m': 6.0, 'shore_m': 1.5, 'offshore_deg': 20}
-INFO [3D] folder sizes: assets/images 34.9 MB, 3d/ 24.2 MB (page itself 2.07 MB)
+INFO [3D] folder sizes: assets/images 42.9 MB, 3d/ 24.5 MB (page itself 2.16 MB)
 INFO [3D] DOM checks skipped (--no-dom)

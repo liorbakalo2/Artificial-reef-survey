@@ -14,7 +14,7 @@ P = json.load(open('polys_px.json'))
 sat = np.array(P['sat2026_trace']); des = np.array(P['design_diagram_trace'])
 def enu(px):  # px -> east, north metres about image centre
     px = np.asarray(px, float); return np.c_[(px[:,0]-cx)*mpp, -(px[:,1]-cy)*mpp]
-# ---- shoreline (swash/dry-sand edge): rightmost bright-sand pixel of the first sand run, rows 40-320 and 440-720
+# ---- shoreline (swash/dry-sand edge): seaward end of the first bright (R>165) dry-sand run = 'beach-face line' (the true swash line is ~10-15 m further seaward, foam makes it unmeasurable by threshold), rows 40-320 and 440-720
 a = np.asarray(Image.open(f'{H}/src/esri_current_2026-01-20_z18.png').convert('RGB')).astype(float)
 R = gaussian_filter(a[...,0], 2); pts = []
 for y in list(range(40, 321, 20)) + list(range(440, 721, 20)):
