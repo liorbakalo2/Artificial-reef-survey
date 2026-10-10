@@ -133,7 +133,7 @@ All of them are in `REQUESTS_FOR_LIOR.md`:
 | 2026-10-10 | housekeeping (queue 8 + Boscombe P5 wording) | Bunbury, `07_scale/bathymetry/*`, Boscombe METHODS wording | `HANDOFF.md` | RUNNING (fresh cloud agent) |
 | 2026-10-10 | papers intake P3 + P8 (queue 5) | `05_qa/papers_intake/` + image registries (cards: main applies later) | `HANDOFF.md` | RUNNING (fresh cloud agent) |
 | 2026-10-10 | `trace_shape.md` / `verify_shape.md` / `model_3d.md` (queue 9) | `07_scale/shapes/cables-reef-wa/` | `HANDOFF.md` | RUNNING (fresh cloud agent) |
-| 2026-10-10 | `trace_shape.md` / `verify_shape.md` / `model_3d.md` (queue 9) | `07_scale/shapes/opunake-reef/` | `HANDOFF.md` | RUNNING (fresh cloud agent) |
+| 2026-10-10 | `trace_shape.md` / `verify_shape.md` / `model_3d.md` (queue 9) | `07_scale/shapes/opunake-reef/` | `HANDOFF.md` | STOPPED 2026-10-10: feasibility only (text size ~90 x 20 m, 27 bags; not visible on Esri 2025 z20; no plan/survey). Not yet checked: papers/ and the Gemini footprint extract. Restart when the network is Full (LINZ, Esri Wayback) or Lior supplies Black et al. 2004 |
 | 2026-10-10 | `trace_shape.md` / `verify_shape.md` / `model_3d.md` (queue 9) | `07_scale/shapes/kovalam-reef-india/` | `HANDOFF.md` | RUNNING (fresh cloud agent) |
 | 2026-10-10 | `trace_shape.md` / `verify_shape.md` / `model_3d.md` (queue 9) | `07_scale/shapes/southern-ocean-surf-reef-albany/` | `HANDOFF.md` | RUNNING (fresh cloud agent) |
 | 2026-10-10 | `trace_shape.md` / `verify_shape.md` / `model_3d.md` (queue 9) | `07_scale/shapes/burkitts-reef-bargara/` | `HANDOFF.md` | RUNNING (fresh cloud agent) |

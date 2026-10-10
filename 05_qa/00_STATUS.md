@@ -495,3 +495,8 @@ Shape tracing continues for all 13 reefs.
 
 ## 2026-10-10 (opunake-reef agent, queue item 9) - feasibility only, no shape, no 3D
 - No plan figure, no position, reef not visible on Esri 2025-01-16 z20 (viewed once); only text 90 x 20 m, 27 bags. shape.json status no_source (LOW), FEASIBILITY.md lists what is missing; old wedge schematic not used; 3 undocumented overlays archived. Esri/LINZ/nzgeo refused by proxy (needs-network list in HANDOFF.md). img-10 annotated overlay registered. 04_build untouched.
+
+## 2026-10-10 - housekeeping run (queue item 8 + Boscombe wording)
+- Written: 07_scale/shapes/bunbury-airwave/HANDOFF.md (verdict FAILED kept, developer's "2018 / not a failure" claim recorded as contradicted); 07_scale/bathymetry/emodnet/HANDOFF.md and 07_scale/bathymetry/gold_coast/HANDOFF.md. emodnet/REPORT.md exists (403 lines, sections 0-11, appears complete).
+- Boscombe: 3d/METHODS_3D.md relabels the +0.5 m CD crest as the BUILT crest (Rendle 2016 p70) in A6/E10, adds P5 footprint/volume/bag-count/MSL 1.66-vs-1.40 notes to validation 2-4; provenance-row label in 3d/build_3d.py changed (no rebuild, no value change, model.js/shape.json/04_build untouched). Boscombe HANDOFF section 11 added.
+- Open: rebuild/copy Boscombe docs.js into 04_build at the next page update.
