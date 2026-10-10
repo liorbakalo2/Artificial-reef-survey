@@ -138,6 +138,8 @@ All of them are in `REQUESTS_FOR_LIOR.md`:
 - Each agent edits only its own reef folders. Shared root files (`05_qa/00_STATUS.md`, `REQUESTS_FOR_LIOR.md`, `03_images/reefs/NEW_IMAGES_LOG.md`) get short appends only.
 
 ## 8. Transfer protocol: Lior's PC to a cloud session
+Repo: https://github.com/liorbakalo2/Artificial-reef-survey (PRIVATE; pushed by Lior with GitHub Desktop 2026-10-10). The cloud environment
+has no setup script (Lior's choice): the cloud orchestrator runs the install steps in CLAUDE.md "Cloud session start".
 **On the PC (the orchestrator, when Lior says "hand over"):**
 1. Tell every running agent (SendMessage) to finish its current step, write its checkpoint (the file in the section 7 table) and stop.
    Wait for the hand-backs; use TaskStop only for an agent that does not respond.
@@ -155,6 +157,16 @@ All of them are in `REQUESTS_FOR_LIOR.md`:
 3. For each section 7 row marked stopped or running: start a FRESH agent with the same task file and the checkpoint named in the
    row. Never try to resume PC agents; they do not exist in the cloud.
 4. Continue the queue (section 5) only as far as Lior has given the go. On 2026-10-07 he gave it for the queue in order.
-   Commit after each finished agent. Push the session branch so Lior can pull and view the page on his PC.
+   Commit after each finished agent and push. Prefer pushing to `main`. If the session must use its own branch, tell Lior the
+   branch name each time. He views it in GitHub Desktop: Fetch origin → Current branch → that branch. Or merge it into main
+   when a step is accepted.
+5. First jobs in the cloud, in this order:
+   1. Borth page refresh. Apply the typed-text edits listed in Borth `HANDOFF.md` section 7 item 1, then run
+      `python src/update_page.py --full`.
+   2. Then up to 3 fresh agents, using the section 7 rows:
+      - Mount Maunganui D1 in code;
+      - Narrowneck stage 1;
+      - Boscombe D2.
+   3. Lior's open decisions D7 and D8 are in REQUESTS_FOR_LIOR.md. Ask him briefly; do not block on them.
 
 **Back to the PC:** Lior runs `git pull` in the project folder before any local session works there. Work in one place at a time.
