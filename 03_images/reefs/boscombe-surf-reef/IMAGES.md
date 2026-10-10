@@ -1102,3 +1102,75 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **rights**: Private research copy; reuse rights to be checked before any public release.
 - **display in HTML**: True
 - **added by**: P5 Rendle 2016 extraction (queue item 4), 2026-10-10
+
+## boscombe-surf-reef-img-41 - Mead & Borrero (2011) Fig. 2: sea squirts and encrusting algae on the Boscombe reef containers 6 months after placement
+- **file**: `03_images/reefs/boscombe-surf-reef/boscombe-surf-reef_p3-fig2-ascidians-on-bags_2009-10.png`
+- **kind**: photo
+- **shows**: Underwater close-up of the sand-filled geotextile container surface covered in ascidians and algae, with crabs; no reef geometry visible.
+- **structure visible**: True
+- **state shown**: as-built (6 months after placement)
+- **image date**: unknown; caption: 6 months after placement of the containers (2008-2009 construction)
+- **citation**: Mead, S.T. and Borrero, J.C. (2011). Multi-Purpose Reefs - A Decade of Applications. Proceedings of the 20th Australasian Coastal and Ocean Engineering Conference (Coasts and Ports 2011), ASR Ltd, Raglan NZ. p.2, Figure 2. https://search.informit.org/doi/10.3316/informit.715072832934166 (Lior's copy: papers/Multi-Purpose Reefs - A Decade of Applications 2011.pdf). Accessed 2026-10-07.
+- **image URL**: https://search.informit.org/doi/10.3316/informit.715072832934166
+- **source page**: https://search.informit.org/doi/10.3316/informit.715072832934166
+- **page / figure**: PDF p.2, Figure 2 (clip, 200 dpi)
+- **credit**: ASR Ltd / Mead & Borrero (photographer not stated)
+- **licence**: not stated (conference paper, (c) Coasts and Ports 2011); private research copy
+- **retrieved**: 2026-10-10
+- **used for**: context
+- **How used for the model**: Not used for geometry. Evidence that the geotextile surface was colonised within months (ecology section of the card); no scale or depth can be read.
+- **3D check pending**: no - none: close-up, no geometry
+- **linked records**: 05_qa/papers_intake/P3_mead_borrero_2011.md
+- **size**: 0.54 MB, 695x534 px
+- **sha256**: 07cfcf9429caa0666eae083c6eaddb2854939003622c10cc1d0bf6c21cf7c867
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: papers intake P3/P8, 2026-10-10
+
+## boscombe-surf-reef-img-42 - Mead & Borrero (2011) Fig. 6: aerial view of Poole Bay at Boscombe Pier showing the reef and the salient in its lee
+- **file**: `03_images/reefs/boscombe-surf-reef/boscombe-surf-reef_p3-fig6-poole-bay-aerial_2010.png`
+- **kind**: aerial
+- **shows**: Low oblique aerial photo of the beach and pier with the reef as a dark patch offshore and the beach bulge (salient) to the west; groynes about every 180 m per caption.
+- **structure visible**: True
+- **state shown**: as-built
+- **image date**: unknown; after reef completion (Sept 2009), before the paper (2011)
+- **citation**: Mead, S.T. and Borrero, J.C. (2011). Multi-Purpose Reefs - A Decade of Applications. Proceedings of the 20th Australasian Coastal and Ocean Engineering Conference (Coasts and Ports 2011), ASR Ltd, Raglan NZ. p.5, Figure 6. https://search.informit.org/doi/10.3316/informit.715072832934166 (Lior's copy: papers/Multi-Purpose Reefs - A Decade of Applications 2011.pdf). Accessed 2026-10-07.
+- **image URL**: https://search.informit.org/doi/10.3316/informit.715072832934166
+- **source page**: https://search.informit.org/doi/10.3316/informit.715072832934166
+- **page / figure**: PDF p.5, Figure 6 (clip, 200 dpi)
+- **credit**: ASR Ltd / Mead & Borrero (photographer not stated)
+- **licence**: not stated (conference paper, (c) Coasts and Ports 2011); private research copy
+- **retrieved**: 2026-10-10
+- **used for**: context, cross_check
+- **How used for the model**: Not traced (oblique, no scale). Supports the paper claim of up to 60 m extra beach width over >500 m within 6 months (p.5 text); later monitoring (Blacka 2013 p.70) found no lasting 0 m contour change, so treat the salient as contested.
+- **3D check pending**: no - none: oblique photo without scale
+- **linked records**: 05_qa/papers_intake/P3_mead_borrero_2011.md
+- **size**: 0.25 MB, 695x501 px
+- **sha256**: 344e52d8782f24b4d2d8f9992dbba62e09dee04a2f4a4e8defe5154b0b131c7c
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: papers intake P3/P8, 2026-10-10
+
+## boscombe-surf-reef-img-43 - Blacka et al. (2013) Fig. 2.17: construction of the Boscombe MPR (a) panel lifted, (b) panel at beach, (c) containers on the seabed
+- **file**: `03_images/reefs/boscombe-surf-reef/boscombe-surf-reef_p8-fig2-17-construction_2008-2009.png`
+- **kind**: report_photo
+- **shows**: Three construction photos: a pre-assembled panel of bags lifted by a crane from a lorry, a marker line at the beach, and underwater bags in place on the seabed in clear water.
+- **structure visible**: True
+- **state shown**: as-built (under construction)
+- **image date**: 2008-2009 (construction); exact dates not stated
+- **citation**: Blacka, M.J., Shand, T.D., Carley, J.T. and Mariani, A. (2013). A Review of Artificial Reefs for Coastal Protection in NSW. WRL Technical Report 2012/08 (Final, 11 June 2013), UNSW Water Research Laboratory, for the NSW Office of Environment and Heritage. p.34 (PDF p.46), Figure 2.17. https://doi.org/10.4225/53/58e1dc7368c7a. Accessed 2026-10-07.
+- **image URL**: https://doi.org/10.4225/53/58e1dc7368c7a
+- **source page**: https://doi.org/10.4225/53/58e1dc7368c7a
+- **page / figure**: report p.34 (PDF p.46), Figure 2.17 (clip, 200 dpi); original credit: Mead et al. (2010)
+- **credit**: Mead et al. (2010) via Blacka et al. (2013)
+- **licence**: CC BY-NC-ND 3.0 AU (as recorded in REQUESTS_FOR_LIOR.md P8; not re-checked on the PDF)
+- **retrieved**: 2026-10-10
+- **used for**: context
+- **How used for the model**: Context for the in-situ filled, pre-assembled bag method (Rapid Accurate Deployment) used at Boscombe. No geometry read.
+- **3D check pending**: no - none
+- **linked records**: 05_qa/papers_intake/P8_blacka_2013.md
+- **size**: 0.60 MB, 1362x423 px
+- **sha256**: baec9da963569f4cc2410ca75c355c850f626258e2aaf77d3f3acca8e7cc342e
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: papers intake P3/P8, 2026-10-10

@@ -47,10 +47,14 @@ def seabed(mb):
     Z = np.load(os.path.join(SRC, 'multibeam_fig3.npz'))
     bed = Z['bed'].astype(float); xs_w, ys_w = Z['xs'], Z['ys']
     from scipy.ndimage import map_coordinates
-    ok = np.isfinite(bed); bedf = np.where(ok, bed, np.nanmedian(bed)); bedf = ndi.gaussian_filter(bedf, 3)
+    ok = np.isfinite(bed)
+    idx = ndi.distance_transform_edt(~ok, return_distances=False, return_indices=True)
+    bedf = ndi.gaussian_filter(bed[tuple(idx)], 3)                       # NaN cells filled by the nearest valid cell before smoothing
+    dist_in = ndi.distance_transform_edt(ok)                             # distance to the edge of the valid map area (px = m)
     u = (SX - xs_w[0]); v = (SY - ys_w[0])
-    inside = (u >= 0) & (u <= len(xs_w) - 1) & (v >= 0) & (v <= len(ys_w) - 1)
-    w_edge = np.minimum.reduce([u, len(xs_w) - 1 - u, v, len(ys_w) - 1 - v]); w = np.clip(w_edge / 15.0, 0, 1) * inside
+    uu = np.clip(np.round(u).astype(int), 0, len(xs_w) - 1); vv = np.clip(np.round(v).astype(int), 0, len(ys_w) - 1)
+    inside = (u >= 0) & (u <= len(xs_w) - 1) & (v >= 0) & (v <= len(ys_w) - 1) & ok[vv, uu]
+    w = np.clip(dist_in[vv, uu] / 15.0, 0, 1) * inside
     s = map_coordinates(bedf, [np.clip(v, 0, len(ys_w) - 1), np.clip(u, 0, len(xs_w) - 1)], order=1)
     Zs = np.where(inside, w * s + (1 - w) * base, base)
     return sx, sy, Zs, prof, ctrl

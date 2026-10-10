@@ -1,7 +1,75 @@
-NOTE: photo_match unavailable ('narrowneck-gold-coast'): no 'Match this photo' buttons
+NOTE: photo_match unavailable (Expecting value: line 1 column 1 (char 0)): no 'Match this photo' buttons
 NOTE: burkitts-reef-bargara: HELD by data/models3d_hold.json (trace/verify/3D agent running (started 2026-10-10))
 NOTE: cables-reef-wa: HELD by data/models3d_hold.json (trace/verify/3D agent running (started 2026-10-10))
 NOTE: narrowneck-gold-coast: HELD by data/models3d_hold.json (3D model being built by the stage-2 agent (started 2026-10-10))
+NOTE: prattes-reef-el-segundo: no readable registry (Expecting value: line 1 column 1 (char 0))
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-10_400.jpg
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-08.png
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-04_ann3.jpg
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-14_400.jpg
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-24_400.jpg
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-08_ann2.png
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-16.png
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-08_400.jpg
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-06_400.jpg
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-29.jpg
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-11.png
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-16_400.jpg
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-04_ann1.jpg
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-19.png
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-09_ann2.png
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-17_400.jpg
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-05.jpg
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-30.jpg
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-20.jpg
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-04_400.jpg
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-08_ann1.jpg
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-20_400.jpg
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-09_ann3.png
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-12.png
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-25.png
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-04_ann2.jpg
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-23.jpg
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-14.png
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-32_400.jpg
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-09_ann1.png
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-05_400.jpg
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-15.png
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-22_400.jpg
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-31.png
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-19_400.jpg
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-09.png
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-32.jpg
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-21.jpg
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-25_400.jpg
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-27_400.jpg
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-15_400.jpg
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-27.jpg
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-13_400.jpg
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-26.png
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-04.png
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-29_400.jpg
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-06.jpg
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-04_ann4.jpg
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-21_400.jpg
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-24.jpg
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-22.png
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-18.png
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-26_400.jpg
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-18_400.jpg
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-13.png
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-14_ann1.png
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-09_400.jpg
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-12_400.jpg
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-10.png
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-23_400.jpg
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-17.png
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-12_ann1.png
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-28.jpg
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-30_400.jpg
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-28_400.jpg
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-11_400.jpg
+NOTE: prattes-reef-el-segundo: pruned stale generated copy prattes-reef-el-segundo-img-31_400.jpg
 NOTE: opunake-reef: HELD by data/models3d_hold.json (trace/verify/3D agent running (started 2026-10-10))
 NOTE: kovalam-reef-india: HELD by data/models3d_hold.json (trace/verify/3D agent running (started 2026-10-10))
 NOTE: southern-ocean-surf-reef-albany: HELD by data/models3d_hold.json (trace/verify/3D agent running (started 2026-10-10))
@@ -11,7 +79,7 @@ combined: boscombe-surf-reef: ok ok=True (7 s)
 combined: bunbury-airwave: ok ok=True (7 s)
 combined: mount-maunganui-reef: ok ok=True (7 s)
 combined: palm-beach-gold-coast: ok ok=True (7 s)
-combined: prattes-reef-el-segundo: ok ok=True (7 s)
-models3d: 6 models, 0 feasibility, 7 not yet; pictures {'borth-coastal-defence-reef': 22, 'boscombe-surf-reef': 33, 'bunbury-airwave': 13, 'mount-maunganui-reef': 24, 'palm-beach-gold-coast': 27, 'prattes-reef-el-segundo': 28}; 97 references (from 138); caveat rows 47; verify 119 checked, 0 failed; json 1085 KB; 47.4s
-wrote /home/user/artificial-reef-survey/04_build/artificial_reefs.html (2170 KB)
+combined: prattes-reef-el-segundo: ok ok=True (6 s)
+models3d: 6 models, 0 feasibility, 7 not yet; pictures {'borth-coastal-defence-reef': 22, 'boscombe-surf-reef': 33, 'bunbury-airwave': 13, 'mount-maunganui-reef': 24, 'palm-beach-gold-coast': 27, 'prattes-reef-el-segundo': 0}; 97 references (from 138); caveat rows 47; verify 119 checked, 0 failed; json 1039 KB; 45.1s
+wrote /home/user/artificial-reef-survey/04_build/artificial_reefs.html (2125 KB)
 reefs: 13; with USD cost: 12; total ~US$47,406,500-50,457,500

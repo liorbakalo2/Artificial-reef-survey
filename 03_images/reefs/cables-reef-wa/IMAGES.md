@@ -639,3 +639,75 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **rights**: Private research copy; reuse rights to be checked before any public release.
 - **display in HTML**: True
 - **added by**: image-registry backfill, 2026-10-06
+
+## cables-reef-wa-img-24 - Blacka et al. (2013) Fig. 2.14: placing rock on the Cable Station reef by barge-mounted excavator
+- **file**: `03_images/reefs/cables-reef-wa/cables-reef-wa_p8-fig2-14-rock-placement_1999.png`
+- **kind**: report_photo
+- **shows**: Excavator on a barge placing granite boulders at sea.
+- **structure visible**: False
+- **state shown**: as-built (construction)
+- **image date**: 1999 (construction); date not stated
+- **citation**: Blacka, M.J., Shand, T.D., Carley, J.T. and Mariani, A. (2013). A Review of Artificial Reefs for Coastal Protection in NSW. WRL Technical Report 2012/08 (Final, 11 June 2013), UNSW Water Research Laboratory, for the NSW Office of Environment and Heritage. p.31 (PDF p.43), Figure 2.14; credit Jackson and Corbett (2007). https://doi.org/10.4225/53/58e1dc7368c7a. Accessed 2026-10-07.
+- **image URL**: https://doi.org/10.4225/53/58e1dc7368c7a
+- **source page**: https://doi.org/10.4225/53/58e1dc7368c7a
+- **page / figure**: report p.31 (PDF p.43), Figure 2.14 (clip, 200 dpi)
+- **credit**: Jackson and Corbett (2007) as reproduced in Blacka et al. (2013)
+- **licence**: CC BY-NC-ND 3.0 AU (as recorded in REQUESTS_FOR_LIOR.md P8; not re-checked on the PDF)
+- **retrieved**: 2026-10-10
+- **used for**: context
+- **How used for the model**: Context for the construction method (1.5 t body stones with a 3.0 t keyed perimeter, from a barge; p.93). No geometry read.
+- **3D check pending**: no - none
+- **linked records**: 05_qa/papers_intake/P8_blacka_2013.md
+- **size**: 0.40 MB, 1098x487 px
+- **sha256**: 8e1c65a27ed5949ba204d2912a65846c4d99260529403028f92460316afcb014
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: papers intake P3/P8, 2026-10-10
+
+## cables-reef-wa-img-25 - Blacka et al. (2013) Fig. A.1: location of Cable Station ASR (satellite)
+- **file**: `03_images/reefs/cables-reef-wa/cables-reef-wa_p8-figA1-location_2013.png`
+- **kind**: satellite
+- **shows**: Satellite map of Perth coast with Rottnest Island offshore and the reef marker south of Cottesloe; 5 km scale bar.
+- **structure visible**: False
+- **state shown**: context (location)
+- **image date**: unknown (imagery before 2013)
+- **citation**: Blacka, M.J., Shand, T.D., Carley, J.T. and Mariani, A. (2013). A Review of Artificial Reefs for Coastal Protection in NSW. WRL Technical Report 2012/08 (Final, 11 June 2013), UNSW Water Research Laboratory, for the NSW Office of Environment and Heritage. p.92 (PDF p.104), Figure A.1. https://doi.org/10.4225/53/58e1dc7368c7a. Accessed 2026-10-07.
+- **image URL**: https://doi.org/10.4225/53/58e1dc7368c7a
+- **source page**: https://doi.org/10.4225/53/58e1dc7368c7a
+- **page / figure**: report p.92 (PDF p.104), Figure A.1 (clip, 200 dpi)
+- **credit**: Blacka et al. (2013) over satellite imagery (provider not stated)
+- **licence**: CC BY-NC-ND 3.0 AU (as recorded in REQUESTS_FOR_LIOR.md P8; not re-checked on the PDF)
+- **retrieved**: 2026-10-10
+- **used for**: context
+- **How used for the model**: Location context; shows the sheltering by Rottnest Island noted in P3 p.2.
+- **3D check pending**: no - none
+- **linked records**: 05_qa/papers_intake/P8_blacka_2013.md
+- **size**: 1.08 MB, 1209x723 px
+- **sha256**: 80e59359528cfafde18f140adbe1fa82e2fa45e98d331cf148325a2d0723ce40
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: papers intake P3/P8, 2026-10-10
+
+## cables-reef-wa-img-26 - Blacka et al. (2013) Fig. A.2: Cable Station ASR design (after Lyons, 1992), plan with contours
+- **file**: `03_images/reefs/cables-reef-wa/cables-reef-wa_p8-figA2-design-lyons-1992_1992.png`
+- **kind**: design_drawing
+- **shows**: Line plan of the V-shaped reef with design contour and perimeter lines and labelled points; no scale readable at this size.
+- **structure visible**: True
+- **state shown**: design (1992 concept; the built reef was extended at the south end per card)
+- **image date**: 1992 (design drawing, pre-construction)
+- **citation**: Blacka, M.J., Shand, T.D., Carley, J.T. and Mariani, A. (2013). A Review of Artificial Reefs for Coastal Protection in NSW. WRL Technical Report 2012/08 (Final, 11 June 2013), UNSW Water Research Laboratory, for the NSW Office of Environment and Heritage. p.93 (PDF p.105), Figure A.2. https://doi.org/10.4225/53/58e1dc7368c7a. Accessed 2026-10-07.
+- **image URL**: https://doi.org/10.4225/53/58e1dc7368c7a
+- **source page**: https://doi.org/10.4225/53/58e1dc7368c7a
+- **page / figure**: report p.93 (PDF p.105), Figure A.2 (clip, 200 dpi); original Lyons (1992) BEng thesis, UWA
+- **credit**: Lyons (1992) as reproduced in Blacka et al. (2013)
+- **licence**: CC BY-NC-ND 3.0 AU (as recorded in REQUESTS_FOR_LIOR.md P8; not re-checked on the PDF)
+- **retrieved**: 2026-10-10
+- **used for**: plan_trace, cross_check
+- **How used for the model**: Not traced: low resolution, no legible scale. Candidate for cross-checking the planform vs the traced shape (V, ~140 m long x ~70 m wide per p.92).
+- **3D check pending**: yes - Compare the V planform and arm proportions with the traced shape.json; built reef later extended at the south end.
+- **linked records**: 05_qa/papers_intake/P8_blacka_2013.md
+- **size**: 0.18 MB, 917x682 px
+- **sha256**: 3c860197ca9ff1a86341733107a2f8d2d257f55d9b77bae1ec1bf659466d3061
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: papers intake P3/P8, 2026-10-10

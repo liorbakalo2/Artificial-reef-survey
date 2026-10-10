@@ -852,3 +852,27 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **display in HTML**: True
 - **added by**: Borth 3D model, finish run, 2026-10-07
 - **How used (update 2026-10-07)**: Regenerated 2026-10-07 after the D6 seabed fix (Fig 2 -4.0 contour nodes replace the anchor line; the pre-fix figure is in 07_scale/shapes/borth-coastal-defence-reef/3d/archive/pre_D6/annotated/).
+
+## borth-coastal-defence-reef-img-31 - Blacka et al. (2013) Fig. 4.1: Borth MPR, June 2012, Wales (source: eCoast 2012)
+- **file**: `03_images/reefs/borth-coastal-defence-reef/borth-coastal-defence-reef_p8-fig4-1-borth-june-2012_2012-06.png`
+- **kind**: aerial
+- **shows**: Oblique view from the hill down the Borth beach and village with the offshore reef visible as a dark structure at the water surface (tide state not stated).
+- **structure visible**: True
+- **state shown**: as-built (just after completion, June 2012)
+- **image date**: June 2012
+- **citation**: Blacka, M.J., Shand, T.D., Carley, J.T. and Mariani, A. (2013). A Review of Artificial Reefs for Coastal Protection in NSW. WRL Technical Report 2012/08 (Final, 11 June 2013), UNSW Water Research Laboratory, for the NSW Office of Environment and Heritage. p.60 (PDF p.72), Figure 4.1. https://doi.org/10.4225/53/58e1dc7368c7a. Accessed 2026-10-07.
+- **image URL**: https://doi.org/10.4225/53/58e1dc7368c7a
+- **source page**: https://doi.org/10.4225/53/58e1dc7368c7a
+- **page / figure**: report p.60 (PDF p.72), Figure 4.1 (clip, 200 dpi)
+- **credit**: eCoast (2012), as credited in Blacka et al. (2013)
+- **licence**: CC BY-NC-ND 3.0 AU (as recorded in REQUESTS_FOR_LIOR.md P8; not re-checked on the PDF)
+- **retrieved**: 2026-10-10
+- **used for**: camera_match, cross_check
+- **How used for the model**: Not traced (oblique, no scale). Dated evidence (June 2012) that part of the reef is at or near the surface; tide state not stated.
+- **3D check pending**: yes - Which part of the reef is at the surface in this view (tide unknown); compare with crest levels (about MSL per P8 Table 4.2) and planform of the two reefs.
+- **linked records**: 05_qa/papers_intake/P8_blacka_2013.md
+- **size**: 0.99 MB, 1112x751 px
+- **sha256**: 905e5203bc651560b8759b711bdc6058e60cf83bb60415b2f718dc0ba70d9d73
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: papers intake P3/P8, 2026-10-10

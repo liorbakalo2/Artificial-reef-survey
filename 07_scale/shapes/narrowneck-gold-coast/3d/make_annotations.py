@@ -70,7 +70,7 @@ def a3():
     im = Image.open(os.path.join(GOV, 'narrowneck-gold-coast_vieira_da_silva2021_fig3_ten_topo_bathymetric_surveys_2018-2020_native.jpeg')).convert('RGB')
     cr = im.crop((0, 20, 275, 680)).resize((550, 1320), Image.LANCZOS); d = ImageDraw.Draw(cr)
     tag(d, (10, 10), 'Vieira da Silva 2021 Fig 3, survey 1 (19 Jul 2018), m AHD', sz=18)
-    d.ellipse((60, 480, 230, 580), outline=(255, 255, 255), width=3)
+    d.ellipse((280, 440, 440, 545), outline=(255, 255, 255), width=4)
     tag(d, (12, 600), 'MPAR circle = reef: bed cyan, about -4 to -6 m', fill=(255, 255, 0), sz=18)
     tag(d, (250, 700), 'seaward: blue -7 to -9', fill=(255, 255, 0), sz=18)
     tag(d, (12, 800), 'nearshore within ~100 m of beach:\nyellow-green -1 to -2', fill=(255, 255, 0), sz=18)
@@ -80,9 +80,9 @@ def a3():
 
 def a4():
     im = Image.open(os.path.join(GOV, 'narrowneck-gold-coast_jackson2012_fig2_reef_levels_original_and_revised_design_300dpi_crop.png')).convert('RGB'); k = im.width / 1200.0; d = ImageDraw.Draw(im)
-    for (x, y), t in (((835, 100), 'crest wedge -2.50 (shoreward)'), (((880, 150)), '-3.00 -3.50 -4.00 -4.50 -5.00: dense, 10-15 m'), ((1000, 80), '-6.00 envelope'), ((1130, 185), '-8.00 outer')):
-        X, Y = x * k, y * k; d.ellipse((X - 12, Y - 12, X + 12, Y + 12), outline=(255, 0, 0), width=4); tag(d, (X + 16, Y - 30), t, fill=(255, 255, 0), sz=26)
-    tag(d, (20, im.height - 60), 'Jackson et al. 2012 Fig 2 right (img-04): contour labels read; datum not printed on the figure (AHD in the text of the papers)', sz=26)
+    for (x, y), t, dx in (((835, 100), 'crest wedge -2.50', 16), ((880, 150), '-3.0 to -5.0 dense', 16), ((1000, 80), 'envelope -6.00', -20), ((1130, 185), 'outer -8.00', -230)):
+        X, Y = x * k, y * k; d.ellipse((X - 12, Y - 12, X + 12, Y + 12), outline=(255, 0, 0), width=4); tag(d, (X + dx, Y - 36), t, fill=(255, 255, 0), sz=24)
+    tag(d, (20, im.height - 50), 'Fig 2 right (img-04) contour labels read; datum not printed (AHD in the papers)', sz=22)
     im.save(os.path.join(ANN, 'A4_jackson2012_fig2_contours_read.png'))
 
 
@@ -96,7 +96,7 @@ def a5():
     fig, ax = plt.subplots(figsize=(11, 5.2))
     ys = mb['ys']; B = mb['bed']; med = np.nanmedian(B, axis=1); lo = np.nanpercentile(B, 10, axis=1); hi = np.nanpercentile(B, 90, axis=1)
     ax.fill_between(ys, lo, hi, color='tab:blue', alpha=.25, label='multibeam bed, p10-p90 over x (Corbett Fig 3)'); ax.plot(ys, med, color='tab:blue', lw=1, label='multibeam bed, median')
-    D = mb['D']; ax.plot(ys, np.nanmax(np.where(np.isfinite(D), D, -99), axis=1), color='tab:red', lw=.8, label='shallowest multibeam top (pre-works)')
+    D = mb['D']; top = np.array([np.nanmax(r) if np.isfinite(r).any() else np.nan for r in D]); ax.plot(ys, top, color='tab:red', lw=.8, label='shallowest multibeam top (pre-works)')
     ax.plot(sy, SB[:, np.argmin(abs(sx))], 'k', lw=2, label='model seabed (x = 0)')
     g = V['photo_2020-08-08']['grid']; H = decode(g) + A; yy = g['y0'] + np.arange(g['ny'])
     ax.plot(yy, np.nanmax(H, axis=1), color='tab:orange', lw=1.5, label='model reef top, default version (max over x)')

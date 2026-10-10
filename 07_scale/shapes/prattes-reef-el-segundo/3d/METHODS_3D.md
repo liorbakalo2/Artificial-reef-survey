@@ -1,6 +1,6 @@
 # METHODS_3D - Pratte's Reef (El Segundo, California): three-dimensional model
 
-Built 2026-10-05 by `build_3d.py` (numbers in this note are filled in by that script from `shape.json`, the NOAA files in `src/`, `src/navionics/nav_transect.json` and `src/bn2003_digitised.json`; edit `METHODS_3D.template.md`, not this file). Companion notes: `SOURCES_3D.md` (running log of what was read where), `REQUESTS_FOR_LIOR.md` (what could not be read), `annotated/A1-A17` (the sources with the readings marked). Revision 3: the 2003 monitoring paper of Borrero & Nelsen, supplied by Lior, is now used (sections 3.10, 3.11).
+Built 2026-10-10 by `build_3d.py` (numbers in this note are filled in by that script from `shape.json`, the NOAA files in `src/`, `src/navionics/nav_transect.json` and `src/bn2003_digitised.json`; edit `METHODS_3D.template.md`, not this file). Companion notes: `SOURCES_3D.md` (running log of what was read where), `REQUESTS_FOR_LIOR.md` (what could not be read), `annotated/A1-A17` (the sources with the readings marked). Revision 3: the 2003 monitoring paper of Borrero & Nelsen, supplied by Lior, is now used (sections 3.10, 3.11).
 
 ## 1. Summary
 
@@ -85,7 +85,7 @@ A and B are the same number (6 ft) with different datum labels (the drawing says
 
 ### 3.3 Plan shape
 
-The toe polygon (76 vertices, 435.2 m2) is read unchanged from `shape.json` (status verified, verified 2026-10-04, md5 2ce341598d22b61dac771292388e8935); only the solid-outline bags of the drawing are included (the 30 dashed "optional" bags are excluded; including them would add an estimated 15-20 % area). It is the *design* layout of Phase I (assumption A9): the 2003 paper reprints it as Fig. 4 ("The design layout of Pratte's Reef", annotated figure A13) and shows no later layout; bags were crane-placed, moved, sank and were buried, so the real footprint differed from it by metres.
+The toe polygon (76 vertices, 435.2 m2) is read unchanged from `shape.json` (status verified, verified 2026-10-04, md5 e072a3385bf7d502e7d2518e8c330c47); only the solid-outline bags of the drawing are included (the 30 dashed "optional" bags are excluded; including them would add an estimated 15-20 % area). It is the *design* layout of Phase I (assumption A9): the 2003 paper reprints it as Fig. 4 ("The design layout of Pratte's Reef", annotated figure A13) and shows no later layout; bags were crane-placed, moved, sank and were buried, so the real footprint differed from it by metres.
 
 ### 3.4 Seabed from the NOAA DEM (primary)
 

@@ -2805,5 +2805,360 @@
    "model_values_affected": []
   },
   "added_by": "narrowneck-gold-coast verification (stage 1), 2026-10-10"
+ },
+ {
+  "id": "narrowneck-gold-coast-img-66",
+  "file": "03_images/reefs/narrowneck-gold-coast/narrowneck-gold-coast_p3-fig5-shoreline-1999-2008_2008.png",
+  "annotated_files": [],
+  "kind": "survey_plot",
+  "title": "Mead & Borrero (2011) Fig. 5: shoreline (beach width) envelope near Narrowneck Reef, Aug 1999 - Jan 2008",
+  "citation": "Mead, S.T. and Borrero, J.C. (2011). Multi-Purpose Reefs - A Decade of Applications. Proceedings of the 20th Australasian Coastal and Ocean Engineering Conference (Coasts and Ports 2011), ASR Ltd, Raglan NZ. p.5, Figure 5. https://search.informit.org/doi/10.3316/informit.715072832934166 (Lior's copy: papers/Multi-Purpose Reefs - A Decade of Applications 2011.pdf). Accessed 2026-10-07.",
+  "image_url": "https://search.informit.org/doi/10.3316/informit.715072832934166",
+  "source_page": "https://search.informit.org/doi/10.3316/informit.715072832934166",
+  "page_or_figure": "PDF p.5, Figure 5 (clip, 200 dpi)",
+  "image_date": "Aug 1999 - Jan 2008 (ARGUS monitoring)",
+  "credit": "ASR Ltd / WRL ARGUS data as shown by Mead & Borrero",
+  "license": "not stated (conference paper, (c) Coasts and Ports 2011); private research copy",
+  "retrieved": "2026-10-10",
+  "shows": "Chart of cross-shore distance from a dune line versus alongshore position, black envelope of all measured beach widths over 8.5 years, red mean lines, reef location marked, salient widths 50-100 m annotated.",
+  "structure_visible": false,
+  "state_shown": "as-built (monitoring chart)",
+  "used_for": [
+   "cross_check"
+  ],
+  "how_used": "Source of the claim that the reef widened the beach by 30-50 m over ~2 km (p.4). Blacka et al. (2013, p.98) says published widths of 20-50 m were an artefact of an arbitrary reference line; not used for the model.",
+  "linked_records": [
+   "05_qa/papers_intake/P3_mead_borrero_2011.md"
+  ],
+  "bytes": 174536,
+  "px": [
+   695,
+   510
+  ],
+  "sha256": "d0f5c1e6b80287f361df84f9dbf092d85e65efc9acb673e3daf04be345f883f2",
+  "rights_note": "Private research copy; reuse rights to be checked before any public release.",
+  "display": true,
+  "for_3d_check": {
+   "pending": false,
+   "what_to_check": "none: chart, no reef geometry",
+   "model_values_affected": []
+  },
+  "added_by": "papers intake P3/P8, 2026-10-10"
+ },
+ {
+  "id": "narrowneck-gold-coast-img-67",
+  "file": "03_images/reefs/narrowneck-gold-coast/narrowneck-gold-coast_p8-fig2-15-split-hull-placement_1999-2000.png",
+  "annotated_files": [],
+  "kind": "report_photo",
+  "title": "Blacka et al. (2013) Fig. 2.15: placement of a geotextile tube by dropping from a split-hull vessel",
+  "citation": "Blacka, M.J., Shand, T.D., Carley, J.T. and Mariani, A. (2013). A Review of Artificial Reefs for Coastal Protection in NSW. WRL Technical Report 2012/08 (Final, 11 June 2013), UNSW Water Research Laboratory, for the NSW Office of Environment and Heritage. p.33 (PDF p.45), Figure 2.15. https://doi.org/10.4225/53/58e1dc7368c7a. Accessed 2026-10-07.",
+  "image_url": "https://doi.org/10.4225/53/58e1dc7368c7a",
+  "source_page": "https://doi.org/10.4225/53/58e1dc7368c7a",
+  "page_or_figure": "report p.33 (PDF p.45), Figure 2.15 (clip, 200 dpi)",
+  "image_date": "1999-2000 (construction); exact date not stated",
+  "credit": "as credited in the report (Narrowneck photos; source not given on the figure)",
+  "license": "CC BY-NC-ND 3.0 AU (as recorded in REQUESTS_FOR_LIOR.md P8; not re-checked on the PDF)",
+  "retrieved": "2026-10-10",
+  "shows": "Four photos of the split-hull hopper vessel: bag open in the hull, deck view, hull opening and bag released.",
+  "structure_visible": false,
+  "state_shown": "as-built (construction)",
+  "used_for": [
+   "context"
+  ],
+  "how_used": "Context for the construction method (about 20 m long containers filled in the hopper, dropped, positioned by GPS); explains non-uniform as-built geometry. No dimensions read.",
+  "linked_records": [
+   "05_qa/papers_intake/P8_blacka_2013.md"
+  ],
+  "bytes": 1072943,
+  "px": [
+   1321,
+   514
+  ],
+  "sha256": "a6e00a9aade9c6c41b7f59b54f7e6ce9ff8cf5f85146e0714bd9b231eacbb172",
+  "rights_note": "Private research copy; reuse rights to be checked before any public release.",
+  "display": true,
+  "for_3d_check": {
+   "pending": false,
+   "what_to_check": "none",
+   "model_values_affected": []
+  },
+  "added_by": "papers intake P3/P8, 2026-10-10"
+ },
+ {
+  "id": "narrowneck-gold-coast-img-68",
+  "file": "03_images/reefs/narrowneck-gold-coast/narrowneck-gold-coast_p8-fig3-4-physical-model-shoreline_2000.png",
+  "annotated_files": [],
+  "kind": "report_photo",
+  "title": "Blacka et al. (2013) Fig. 3.4 (= Fig. A.4): mobile-shoreline physical model of Narrowneck Reef at the UNSW WRL",
+  "citation": "Blacka, M.J., Shand, T.D., Carley, J.T. and Mariani, A. (2013). A Review of Artificial Reefs for Coastal Protection in NSW. WRL Technical Report 2012/08 (Final, 11 June 2013), UNSW Water Research Laboratory, for the NSW Office of Environment and Heritage. p.45 (PDF p.57), Figure 3.4; repeated as Figure A.4 on p.97 (PDF p.109). https://doi.org/10.4225/53/58e1dc7368c7a. Accessed 2026-10-07.",
+  "image_url": "https://doi.org/10.4225/53/58e1dc7368c7a",
+  "source_page": "https://doi.org/10.4225/53/58e1dc7368c7a",
+  "page_or_figure": "report p.45 (PDF p.57), Figure 3.4 (clip, 200 dpi)",
+  "image_date": "c.2000 (Turner et al. 2001 study); not dated on the figure",
+  "credit": "WRL (Turner et al. 2001) as reproduced in Blacka et al. (2013)",
+  "license": "CC BY-NC-ND 3.0 AU (as recorded in REQUESTS_FOR_LIOR.md P8; not re-checked on the PDF)",
+  "retrieved": "2026-10-10",
+  "shows": "Photo of the wave-basin model with the V-shaped reef, the model beach and tracer particles; the reef is the pale mound running diagonally.",
+  "structure_visible": true,
+  "state_shown": "design (physical model, crest -1.0 m AHD original design)",
+  "used_for": [
+   "context"
+  ],
+  "how_used": "Context only: shows the planform shape tested (V/split V). Not used for dimensions; the paper states the tested crest was the original -1.0 m AHD, not the built -1.5 m AHD (p.95).",
+  "linked_records": [
+   "05_qa/papers_intake/P8_blacka_2013.md"
+  ],
+  "bytes": 1310411,
+  "px": [
+   1084,
+   676
+  ],
+  "sha256": "96f749de3320d23eaffe93c0ebe4cf376d4516851264ba13c8e9d1069fe02de6",
+  "rights_note": "Private research copy; reuse rights to be checked before any public release.",
+  "display": true,
+  "for_3d_check": {
+   "pending": false,
+   "what_to_check": "none: model photo",
+   "model_values_affected": []
+  },
+  "added_by": "papers intake P3/P8, 2026-10-10"
+ },
+ {
+  "id": "narrowneck-gold-coast-img-69",
+  "file": "03_images/reefs/narrowneck-gold-coast/narrowneck-gold-coast_p8-fig5-1-sucking-dry_unknown.png",
+  "annotated_files": [],
+  "kind": "photo",
+  "title": "Blacka et al. (2013) Fig. 5.1: Narrowneck Reef sucking dry during a wave trough",
+  "citation": "Blacka, M.J., Shand, T.D., Carley, J.T. and Mariani, A. (2013). A Review of Artificial Reefs for Coastal Protection in NSW. WRL Technical Report 2012/08 (Final, 11 June 2013), UNSW Water Research Laboratory, for the NSW Office of Environment and Heritage. p.78 (PDF p.90), Figure 5.1. https://doi.org/10.4225/53/58e1dc7368c7a. Accessed 2026-10-07.",
+  "image_url": "https://doi.org/10.4225/53/58e1dc7368c7a",
+  "source_page": "https://doi.org/10.4225/53/58e1dc7368c7a",
+  "page_or_figure": "report p.78 (PDF p.90), Figure 5.1 (clip, 200 dpi); credit International Coastal Management",
+  "image_date": "unknown (before 2013)",
+  "credit": "International Coastal Management (ICM), via Blacka et al. (2013)",
+  "license": "CC BY-NC-ND 3.0 AU (as recorded in REQUESTS_FOR_LIOR.md P8; not re-checked on the PDF)",
+  "retrieved": "2026-10-10",
+  "shows": "A surfer stands on the exposed top of the reef in a wave trough with a breaking wave behind and the Surfers Paradise skyline; the reef crest is at or just below the surface here.",
+  "structure_visible": true,
+  "state_shown": "as-built (crest after settling; date unknown)",
+  "used_for": [
+   "3d_crest",
+   "cross_check"
+  ],
+  "how_used": "Evidence that in a trough the crest nearly dries: supports a shallow crest and the paper safety argument for keeping the crest at -1.5 m AHD (p.77-78). Depth not readable from the image.",
+  "linked_records": [
+   "05_qa/papers_intake/P8_blacka_2013.md"
+  ],
+  "bytes": 925064,
+  "px": [
+   1140,
+   835
+  ],
+  "sha256": "38a2c92b45b7e1b042045afb9f01593cb7ec3c8d7489784b48d17c3aae9db6ae",
+  "rights_note": "Private research copy; reuse rights to be checked before any public release.",
+  "display": true,
+  "for_3d_check": {
+   "pending": true,
+   "what_to_check": "Crest depth: a person standing means water over crest roughly 0-1 m at wave trough/low tide; compare with model crest z (about -1.5 m AHD design, deeper after settling).",
+   "model_values_affected": [
+    "crest_z"
+   ]
+  },
+  "added_by": "papers intake P3/P8, 2026-10-10"
+ },
+ {
+  "id": "narrowneck-gold-coast-img-70",
+  "file": "03_images/reefs/narrowneck-gold-coast/narrowneck-gold-coast_p8-figA3-location_2013.png",
+  "annotated_files": [],
+  "kind": "satellite",
+  "title": "Blacka et al. (2013) Fig. A.3: location of Narrowneck MPR (satellite)",
+  "citation": "Blacka, M.J., Shand, T.D., Carley, J.T. and Mariani, A. (2013). A Review of Artificial Reefs for Coastal Protection in NSW. WRL Technical Report 2012/08 (Final, 11 June 2013), UNSW Water Research Laboratory, for the NSW Office of Environment and Heritage. p.95 (PDF p.107), Figure A.3. https://doi.org/10.4225/53/58e1dc7368c7a. Accessed 2026-10-07.",
+  "image_url": "https://doi.org/10.4225/53/58e1dc7368c7a",
+  "source_page": "https://doi.org/10.4225/53/58e1dc7368c7a",
+  "page_or_figure": "report p.95 (PDF p.107), Figure A.3 (clip, 200 dpi)",
+  "image_date": "unknown (imagery before 2013)",
+  "credit": "Blacka et al. (2013) over satellite imagery (provider not stated)",
+  "license": "CC BY-NC-ND 3.0 AU (as recorded in REQUESTS_FOR_LIOR.md P8; not re-checked on the PDF)",
+  "retrieved": "2026-10-10",
+  "shows": "Satellite map of the Gold Coast with the Seaway to the north and Surfers Paradise to the south and a marker at the reef position; 2 km scale bar.",
+  "structure_visible": false,
+  "state_shown": "context (location)",
+  "used_for": [
+   "context"
+  ],
+  "how_used": "Location context only; reef itself not resolved. Positional scale only.",
+  "linked_records": [
+   "05_qa/papers_intake/P8_blacka_2013.md"
+  ],
+  "bytes": 1333833,
+  "px": [
+   1209,
+   724
+  ],
+  "sha256": "c59fa6eca98a7915a5c5b3e0df5ec953e4b9bc16b145a4ce65466fd756855e4a",
+  "rights_note": "Private research copy; reuse rights to be checked before any public release.",
+  "display": true,
+  "for_3d_check": {
+   "pending": false,
+   "what_to_check": "none",
+   "model_values_affected": []
+  },
+  "added_by": "papers intake P3/P8, 2026-10-10"
+ },
+ {
+  "id": "narrowneck-gold-coast-img-71",
+  "file": "03_images/reefs/narrowneck-gold-coast/narrowneck-gold-coast_p8-figA5-container-schedule_2007.png",
+  "annotated_files": [],
+  "kind": "chart_screenshot",
+  "title": "Blacka et al. (2013) Fig. A.5: container placement schedule 1998-2007 (after Jackson et al. 2007)",
+  "citation": "Blacka, M.J., Shand, T.D., Carley, J.T. and Mariani, A. (2013). A Review of Artificial Reefs for Coastal Protection in NSW. WRL Technical Report 2012/08 (Final, 11 June 2013), UNSW Water Research Laboratory, for the NSW Office of Environment and Heritage. p.97 (PDF p.109), Figure A.5. https://doi.org/10.4225/53/58e1dc7368c7a. Accessed 2026-10-07.",
+  "image_url": "https://doi.org/10.4225/53/58e1dc7368c7a",
+  "source_page": "https://doi.org/10.4225/53/58e1dc7368c7a",
+  "page_or_figure": "report p.97 (PDF p.109), Figure A.5 (clip, 200 dpi)",
+  "image_date": "1998-2007",
+  "credit": "Jackson et al. (2007) as reproduced in Blacka et al. (2013)",
+  "license": "CC BY-NC-ND 3.0 AU (as recorded in REQUESTS_FOR_LIOR.md P8; not re-checked on the PDF)",
+  "retrieved": "2026-10-10",
+  "shows": "Bar chart of containers placed per year with cumulative line: about 230 in 1999, 160 in 2000, then top-ups of 16, 10, 8 and 17 in 2001, 2002, 2004, 2006 (roughly 400 + 50 total).",
+  "structure_visible": false,
+  "state_shown": "as-built (construction history)",
+  "used_for": [
+   "cross_check"
+  ],
+  "how_used": "Gives the placement history (just over 400 containers, about 50 more 2001-2007; text p.97). Not used for geometry.",
+  "linked_records": [
+   "05_qa/papers_intake/P8_blacka_2013.md"
+  ],
+  "bytes": 199746,
+  "px": [
+   1001,
+   675
+  ],
+  "sha256": "c36c56602c05f35b52c59fd955b90931dbf0138cafabe9f0587fcb63842d559d",
+  "rights_note": "Private research copy; reuse rights to be checked before any public release.",
+  "display": true,
+  "for_3d_check": {
+   "pending": false,
+   "what_to_check": "none",
+   "model_values_affected": []
+  },
+  "added_by": "papers intake P3/P8, 2026-10-10"
+ },
+ {
+  "id": "narrowneck-gold-coast-img-72",
+  "file": "03_images/reefs/narrowneck-gold-coast/narrowneck-gold-coast_p8-figA6-peak-placement_2002.png",
+  "annotated_files": [],
+  "kind": "chart_screenshot",
+  "title": "Blacka et al. (2013) Fig. A.6: peak container placement schedule (after Turner et al. 2000)",
+  "citation": "Blacka, M.J., Shand, T.D., Carley, J.T. and Mariani, A. (2013). A Review of Artificial Reefs for Coastal Protection in NSW. WRL Technical Report 2012/08 (Final, 11 June 2013), UNSW Water Research Laboratory, for the NSW Office of Environment and Heritage. p.98 (PDF p.110), Figure A.6. https://doi.org/10.4225/53/58e1dc7368c7a. Accessed 2026-10-07.",
+  "image_url": "https://doi.org/10.4225/53/58e1dc7368c7a",
+  "source_page": "https://doi.org/10.4225/53/58e1dc7368c7a",
+  "page_or_figure": "report p.98 (PDF p.110), Figure A.6 (clip, 200 dpi)",
+  "image_date": "1999-2000 (left), 2002-2003 (right)",
+  "credit": "Turner et al. (2000) as reproduced in Blacka et al. (2013)",
+  "license": "CC BY-NC-ND 3.0 AU (as recorded in REQUESTS_FOR_LIOR.md P8; not re-checked on the PDF)",
+  "retrieved": "2026-10-10",
+  "shows": "Two bar charts: bags per month at peak construction (about 90-100 in Sep-Oct 1999) and a cumulative bag count (dashed line marks an approximate total); year labels not fully legible.",
+  "structure_visible": false,
+  "state_shown": "as-built (construction history)",
+  "used_for": [
+   "cross_check"
+  ],
+  "how_used": "Supports the statement of 90-100 containers placed per month at peak. Not used for geometry.",
+  "linked_records": [
+   "05_qa/papers_intake/P8_blacka_2013.md"
+  ],
+  "bytes": 76352,
+  "px": [
+   1362,
+   584
+  ],
+  "sha256": "3a1f5c21e220cfb2599294312eaf1bc56144d55f96d06de8e05bd67240288e53",
+  "rights_note": "Private research copy; reuse rights to be checked before any public release.",
+  "display": true,
+  "for_3d_check": {
+   "pending": false,
+   "what_to_check": "none",
+   "model_values_affected": []
+  },
+  "added_by": "papers intake P3/P8, 2026-10-10"
+ },
+ {
+  "id": "narrowneck-gold-coast-img-73",
+  "file": "03_images/reefs/narrowneck-gold-coast/narrowneck-gold-coast_p8-figA7-beach-position_2008.png",
+  "annotated_files": [],
+  "kind": "chart_screenshot",
+  "title": "Blacka et al. (2013) Fig. A.7: beach position relative to August 2000 (Narrowneck, north, south), 2004-2008",
+  "citation": "Blacka, M.J., Shand, T.D., Carley, J.T. and Mariani, A. (2013). A Review of Artificial Reefs for Coastal Protection in NSW. WRL Technical Report 2012/08 (Final, 11 June 2013), UNSW Water Research Laboratory, for the NSW Office of Environment and Heritage. p.99 (PDF p.111), Figure A.7. https://doi.org/10.4225/53/58e1dc7368c7a. Accessed 2026-10-07.",
+  "image_url": "https://doi.org/10.4225/53/58e1dc7368c7a",
+  "source_page": "https://doi.org/10.4225/53/58e1dc7368c7a",
+  "page_or_figure": "report p.99 (PDF p.111), Figure A.7 (clip, 200 dpi); the chart is cut off at the top in the PDF itself",
+  "image_date": "Jan 2004 - Jul 2008",
+  "credit": "WRL monitoring (Blacka et al. 2008) as reproduced in Blacka et al. (2013)",
+  "license": "CC BY-NC-ND 3.0 AU (as recorded in REQUESTS_FOR_LIOR.md P8; not re-checked on the PDF)",
+  "retrieved": "2026-10-10",
+  "shows": "Line chart of beach position relative to August 2000 (Jan 2004 - Jul 2008): the three lines end between about -22 m and -35 m by mid-2008; the legend is cut off in the PDF, so the lines cannot be assigned to Narrowneck, North or South.",
+  "structure_visible": false,
+  "state_shown": "as-built (monitoring chart)",
+  "used_for": [
+   "cross_check"
+  ],
+  "how_used": "Supports the P8 text (p.99) that by 2008 no lasting widening remained in the lee of the reef (about 15 m more recession than the neighbouring beach; 4.3 m/yr versus 2.8 m/yr). Not used for the model.",
+  "linked_records": [
+   "05_qa/papers_intake/P8_blacka_2013.md"
+  ],
+  "bytes": 65975,
+  "px": [
+   1362,
+   764
+  ],
+  "sha256": "f7894e85edca5fec1730d131c1aab4b759a65ec1a1c07ffbe5518f636643a9b8",
+  "rights_note": "Private research copy; reuse rights to be checked before any public release.",
+  "display": true,
+  "for_3d_check": {
+   "pending": false,
+   "what_to_check": "none",
+   "model_values_affected": []
+  },
+  "added_by": "papers intake P3/P8, 2026-10-10"
+ },
+ {
+  "id": "narrowneck-gold-coast-img-74",
+  "file": "03_images/reefs/narrowneck-gold-coast/narrowneck-gold-coast_p8-figA8-monthly-shorelines_2007.png",
+  "annotated_files": [],
+  "kind": "aerial",
+  "title": "Blacka et al. (2013) Fig. A.8: monthly shorelines at Narrowneck 2000-2007 over an aerial image",
+  "citation": "Blacka, M.J., Shand, T.D., Carley, J.T. and Mariani, A. (2013). A Review of Artificial Reefs for Coastal Protection in NSW. WRL Technical Report 2012/08 (Final, 11 June 2013), UNSW Water Research Laboratory, for the NSW Office of Environment and Heritage. p.100 (PDF p.112), Figure A.8. https://doi.org/10.4225/53/58e1dc7368c7a. Accessed 2026-10-07.",
+  "image_url": "https://doi.org/10.4225/53/58e1dc7368c7a",
+  "source_page": "https://doi.org/10.4225/53/58e1dc7368c7a",
+  "page_or_figure": "report p.100 (PDF p.112), Figure A.8 (clip, 200 dpi)",
+  "image_date": "shorelines 2000-2007; aerial date not stated",
+  "credit": "WRL / Blacka et al. (2013)",
+  "license": "CC BY-NC-ND 3.0 AU (as recorded in REQUESTS_FOR_LIOR.md P8; not re-checked on the PDF)",
+  "retrieved": "2026-10-10",
+  "shows": "Aerial image with monthly shoreline lines (black) running north-south and the reef position marked in red offshore.",
+  "structure_visible": true,
+  "state_shown": "as-built",
+  "used_for": [
+   "context",
+   "cross_check"
+  ],
+  "how_used": "Used to judge the planform disturbance of the shoreline lee of the reef (about 10 m by eye, p.99). Reef marker is too small to trace.",
+  "linked_records": [
+   "05_qa/papers_intake/P8_blacka_2013.md"
+  ],
+  "bytes": 1418135,
+  "px": [
+   1209,
+   932
+  ],
+  "sha256": "85b7b10b6ce56eeffeb8a2399a5e186f08a664e1637d4a0739b8944cab5a9c2e",
+  "rights_note": "Private research copy; reuse rights to be checked before any public release.",
+  "display": true,
+  "for_3d_check": {
+   "pending": false,
+   "what_to_check": "none: reef marked too coarsely to trace",
+   "model_values_affected": []
+  },
+  "added_by": "papers intake P3/P8, 2026-10-10"
  }
 ]

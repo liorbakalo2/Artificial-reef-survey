@@ -23,7 +23,7 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **retrieved**: 2026-10-06
 - **used for**: context
 - **How used for the model**: Page illustration of the original proposal (rocks to be removed to improve the wave). Hand sketch with no scale or north arrow, so not traced; it is evidence of the rock-field layout before reshaping.
-- **3D check pending**: YES - Rock-field layout before the 1997 works (the black-circle boulder field, the surf line over it) vs any planform of the reshaped reef; qualitative only (values: planform)
+- **3D check pending**: no - 2026-10-10: qualitative match only with img-08 (boulder mass at the point, linear rock rows at the beach side, surf over the north side); no scale or north
 - **linked records**: 02_research/reefs/burkitts-reef-bargara.json images[0]; 05_qa/reef/burkitts-reef-bargara_media_recheck.json images[0]
 - **size**: 0.28 MB, 1171x775 px
 - **sha256**: 4093fcb78a82b7c2f307db13653781e1c2ec307e10c2df2e910f40676ad608f9
@@ -212,9 +212,9 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **credit**: Esri, Maxar, Earthstar Geographics, and the GIS User Community
 - **licence**: Esri/Maxar imagery terms (not an open licence); private research copy only
 - **retrieved**: 2026-10-04
-- **used for**: context
-- **How used for the model**: Fetched 2026-10-04 for a shape trace that was not completed (no sources.md / shape.json for Burkitts); nothing traced or measured from it yet. 
-- **3D check pending**: YES - Trace the rock reef / headland planform on this frame (the reef is the reshaped boulder field at the headland; its limits are not defined in any source) before any 3D model (values: planform, position)
+- **used for**: plan_trace, scale
+- **How used for the model**: 2026-10-10: georeferenced via sidecar bounds (0.2710 m/px); outline of the visible basalt rock platform traced (38 vertices, 31,485 m2 in frame, south edge cut by the frame) -> shape.json img1, METHOD.md section 3. Not the reshaped zone (no source locates it). Low confidence. Overlay: 07_scale/shapes/burkitts-reef-bargara/overlays/img08_esri_2025-09-05_rock_platform_trace_v1.png
+- **3D check pending**: no - planform traced 2026-10-10 (visible platform only); no 3D built (FEASIBILITY.md)
 - **linked records**: 07_scale/shapes/burkitts-reef-bargara/src/burkitts_esri_2025-09-05_z19.png.geo.json
 - **size**: 4.77 MB, 1992x1992 px
 - **sha256**: ff110e6408c49123148033727bf7ad86f49e3de9e23b0f7958fb86937eb2707a

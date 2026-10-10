@@ -577,5 +577,86 @@
    "model_values_affected": []
   },
   "added_by": "image-registry backfill, 2026-10-06"
+ },
+ {
+  "id": "kovalam-reef-india-img-15",
+  "file": "03_images/reefs/kovalam-reef-india/kovalam-reef-india_p3-fig7-shoreline-monsoon_2010.png",
+  "annotated_files": [],
+  "kind": "aerial",
+  "title": "Mead & Borrero (2011) Fig. 7: Kovalam Beach shoreline response during monsoon, pre-reef (red) versus after (yellow)",
+  "citation": "Mead, S.T. and Borrero, J.C. (2011). Multi-Purpose Reefs - A Decade of Applications. Proceedings of the 20th Australasian Coastal and Ocean Engineering Conference (Coasts and Ports 2011), ASR Ltd, Raglan NZ. p.5, Figure 7. https://search.informit.org/doi/10.3316/informit.715072832934166 (Lior's copy: papers/Multi-Purpose Reefs - A Decade of Applications 2011.pdf). Accessed 2026-10-07.",
+  "image_url": "https://search.informit.org/doi/10.3316/informit.715072832934166",
+  "source_page": "https://search.informit.org/doi/10.3316/informit.715072832934166",
+  "page_or_figure": "PDF p.5, Figure 7 (clip, 200 dpi)",
+  "image_date": "overlay appears to read 10/08/2010 (low resolution); monsoon season",
+  "credit": "ASR Ltd (Kovalam Reef beach monitoring camera, lighthouse platform)",
+  "license": "not stated (conference paper, (c) Coasts and Ports 2011); private research copy",
+  "retrieved": "2026-10-10",
+  "shows": "Rectified frame from the lighthouse camera with the pre-reef shoreline (red dashed) and the post-reef shoreline (yellow dashed) along the promenade; inset average beach width chart.",
+  "structure_visible": false,
+  "state_shown": "as-built (after Feb 2010 completion)",
+  "used_for": [
+   "cross_check"
+  ],
+  "how_used": "Source of the claim that the beach is 10-15 m wider in monsoon and up to 30 m wider in the non-monsoon season. Not used for geometry.",
+  "linked_records": [
+   "05_qa/papers_intake/P3_mead_borrero_2011.md"
+  ],
+  "bytes": 605362,
+  "px": [
+   695,
+   667
+  ],
+  "sha256": "501cecd33f06e982e658ce2cd0f324b0468c072f4bf7c3611ec450ba2b8ae023",
+  "rights_note": "Private research copy; reuse rights to be checked before any public release.",
+  "display": true,
+  "for_3d_check": {
+   "pending": false,
+   "what_to_check": "none",
+   "model_values_affected": []
+  },
+  "added_by": "papers intake P3/P8, 2026-10-10"
+ },
+ {
+  "id": "kovalam-reef-india-img-16",
+  "file": "03_images/reefs/kovalam-reef-india/kovalam-reef-india_p8-fig4-5-kovalam-mpr_2012.png",
+  "annotated_files": [],
+  "kind": "photo",
+  "title": "Blacka et al. (2013) Fig. 4.5: Kovalam MPR, Kerala, India (source: ASR 2012)",
+  "citation": "Blacka, M.J., Shand, T.D., Carley, J.T. and Mariani, A. (2013). A Review of Artificial Reefs for Coastal Protection in NSW. WRL Technical Report 2012/08 (Final, 11 June 2013), UNSW Water Research Laboratory, for the NSW Office of Environment and Heritage. p.71 (PDF p.83), Figure 4.5. https://doi.org/10.4225/53/58e1dc7368c7a. Accessed 2026-10-07.",
+  "image_url": "https://doi.org/10.4225/53/58e1dc7368c7a",
+  "source_page": "https://doi.org/10.4225/53/58e1dc7368c7a",
+  "page_or_figure": "report p.71 (PDF p.83), Figure 4.5 (clip, 200 dpi)",
+  "image_date": "2010-2012 (not dated on the figure)",
+  "credit": "ASR (2012), as credited in Blacka et al. (2013)",
+  "license": "CC BY-NC-ND 3.0 AU (as recorded in REQUESTS_FOR_LIOR.md P8; not re-checked on the PDF)",
+  "retrieved": "2026-10-10",
+  "shows": "Oblique photo over Lighthouse Beach with the reef breaking as a white patch offshore and the rocky headland behind.",
+  "structure_visible": true,
+  "state_shown": "as-built (after 2010; damage reported by 2013)",
+  "used_for": [
+   "context",
+   "camera_match"
+  ],
+  "how_used": "Not traced (oblique). Shows the break position relative to the headland and beach.",
+  "linked_records": [
+   "05_qa/papers_intake/P8_blacka_2013.md"
+  ],
+  "bytes": 1175817,
+  "px": [
+   1112,
+   737
+  ],
+  "sha256": "167636e20b88ed4278fd4e5d9a2966302bc236c912c953c1871fffe6971d4ea1",
+  "rights_note": "Private research copy; reuse rights to be checked before any public release.",
+  "display": true,
+  "for_3d_check": {
+   "pending": true,
+   "what_to_check": "Break position relative to the headland versus the planform in the shape work.",
+   "model_values_affected": [
+    "planform"
+   ]
+  },
+  "added_by": "papers intake P3/P8, 2026-10-10"
  }
 ]

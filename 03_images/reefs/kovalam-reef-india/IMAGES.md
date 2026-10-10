@@ -384,3 +384,51 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **rights**: Private research copy; reuse rights to be checked before any public release.
 - **display in HTML**: True
 - **added by**: image-registry backfill, 2026-10-06
+
+## kovalam-reef-india-img-15 - Mead & Borrero (2011) Fig. 7: Kovalam Beach shoreline response during monsoon, pre-reef (red) versus after (yellow)
+- **file**: `03_images/reefs/kovalam-reef-india/kovalam-reef-india_p3-fig7-shoreline-monsoon_2010.png`
+- **kind**: aerial
+- **shows**: Rectified frame from the lighthouse camera with the pre-reef shoreline (red dashed) and the post-reef shoreline (yellow dashed) along the promenade; inset average beach width chart.
+- **structure visible**: False
+- **state shown**: as-built (after Feb 2010 completion)
+- **image date**: overlay appears to read 10/08/2010 (low resolution); monsoon season
+- **citation**: Mead, S.T. and Borrero, J.C. (2011). Multi-Purpose Reefs - A Decade of Applications. Proceedings of the 20th Australasian Coastal and Ocean Engineering Conference (Coasts and Ports 2011), ASR Ltd, Raglan NZ. p.5, Figure 7. https://search.informit.org/doi/10.3316/informit.715072832934166 (Lior's copy: papers/Multi-Purpose Reefs - A Decade of Applications 2011.pdf). Accessed 2026-10-07.
+- **image URL**: https://search.informit.org/doi/10.3316/informit.715072832934166
+- **source page**: https://search.informit.org/doi/10.3316/informit.715072832934166
+- **page / figure**: PDF p.5, Figure 7 (clip, 200 dpi)
+- **credit**: ASR Ltd (Kovalam Reef beach monitoring camera, lighthouse platform)
+- **licence**: not stated (conference paper, (c) Coasts and Ports 2011); private research copy
+- **retrieved**: 2026-10-10
+- **used for**: cross_check
+- **How used for the model**: Source of the claim that the beach is 10-15 m wider in monsoon and up to 30 m wider in the non-monsoon season. Not used for geometry.
+- **3D check pending**: no - none
+- **linked records**: 05_qa/papers_intake/P3_mead_borrero_2011.md
+- **size**: 0.61 MB, 695x667 px
+- **sha256**: 501cecd33f06e982e658ce2cd0f324b0468c072f4bf7c3611ec450ba2b8ae023
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: papers intake P3/P8, 2026-10-10
+
+## kovalam-reef-india-img-16 - Blacka et al. (2013) Fig. 4.5: Kovalam MPR, Kerala, India (source: ASR 2012)
+- **file**: `03_images/reefs/kovalam-reef-india/kovalam-reef-india_p8-fig4-5-kovalam-mpr_2012.png`
+- **kind**: photo
+- **shows**: Oblique photo over Lighthouse Beach with the reef breaking as a white patch offshore and the rocky headland behind.
+- **structure visible**: True
+- **state shown**: as-built (after 2010; damage reported by 2013)
+- **image date**: 2010-2012 (not dated on the figure)
+- **citation**: Blacka, M.J., Shand, T.D., Carley, J.T. and Mariani, A. (2013). A Review of Artificial Reefs for Coastal Protection in NSW. WRL Technical Report 2012/08 (Final, 11 June 2013), UNSW Water Research Laboratory, for the NSW Office of Environment and Heritage. p.71 (PDF p.83), Figure 4.5. https://doi.org/10.4225/53/58e1dc7368c7a. Accessed 2026-10-07.
+- **image URL**: https://doi.org/10.4225/53/58e1dc7368c7a
+- **source page**: https://doi.org/10.4225/53/58e1dc7368c7a
+- **page / figure**: report p.71 (PDF p.83), Figure 4.5 (clip, 200 dpi)
+- **credit**: ASR (2012), as credited in Blacka et al. (2013)
+- **licence**: CC BY-NC-ND 3.0 AU (as recorded in REQUESTS_FOR_LIOR.md P8; not re-checked on the PDF)
+- **retrieved**: 2026-10-10
+- **used for**: context, camera_match
+- **How used for the model**: Not traced (oblique). Shows the break position relative to the headland and beach.
+- **3D check pending**: yes - Break position relative to the headland versus the planform in the shape work.
+- **linked records**: 05_qa/papers_intake/P8_blacka_2013.md
+- **size**: 1.18 MB, 1112x737 px
+- **sha256**: 167636e20b88ed4278fd4e5d9a2966302bc236c912c953c1871fffe6971d4ea1
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: papers intake P3/P8, 2026-10-10

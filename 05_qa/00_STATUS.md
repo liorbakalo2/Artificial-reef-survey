@@ -500,3 +500,7 @@ Shape tracing continues for all 13 reefs.
 - Written: 07_scale/shapes/bunbury-airwave/HANDOFF.md (verdict FAILED kept, developer's "2018 / not a failure" claim recorded as contradicted); 07_scale/bathymetry/emodnet/HANDOFF.md and 07_scale/bathymetry/gold_coast/HANDOFF.md. emodnet/REPORT.md exists (403 lines, sections 0-11, appears complete).
 - Boscombe: 3d/METHODS_3D.md relabels the +0.5 m CD crest as the BUILT crest (Rendle 2016 p70) in A6/E10, adds P5 footprint/volume/bag-count/MSL 1.66-vs-1.40 notes to validation 2-4; provenance-row label in 3d/build_3d.py changed (no rebuild, no value change, model.js/shape.json/04_build untouched). Boscombe HANDOFF section 11 added.
 - Open: rebuild/copy Boscombe docs.js into 04_build at the next page update.
+
+## 2026-10-10 (burkitts-reef-bargara, queue item 9) - traced + self-verified (LOW), 3D feasibility only
+- 07_scale/shapes/burkitts-reef-bargara/: shape.json, METHOD.md, sources.md, VERIFY.md, FEASIBILITY.md, HANDOFF.md, overlays/, scripts/. Outline = visible basalt rock platform on Esri 2025-09-05 (img-08), 31,485 m2 in frame (south edge cut by the frame), 321 x 377 m bbox, confidence LOW: the reshaped boulder zone (the real reef) is located by no source.
+- 3D not built: no crest, seabed, datum, reef height (only ~2.5 m tide swing, ~300 m3 moved). Network blocked: needs-network list in HANDOFF section 7. Registry img-08/img-01 updated; no new images. 04_build untouched; slug should go on models3d_hold.json.

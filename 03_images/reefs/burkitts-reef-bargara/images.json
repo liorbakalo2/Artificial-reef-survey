@@ -19,7 +19,7 @@
   "used_for": [
    "context"
   ],
-  "how_used": "Page illustration of the original proposal (rocks to be removed to improve the wave). Hand sketch with no scale or north arrow, so not traced; it is evidence of the rock-field layout before reshaping.",
+  "how_used": "Page illustration of the original proposal (rocks to be removed to improve the wave). Hand sketch with no scale or north arrow, so not traced; it is evidence of the rock-field layout before reshaping. 2026-10-10: compared with img-08 qualitatively (shape.json source img2, role context).",
   "linked_records": [
    "02_research/reefs/burkitts-reef-bargara.json images[0]",
    "05_qa/reef/burkitts-reef-bargara_media_recheck.json images[0]"
@@ -33,11 +33,12 @@
   "rights_note": "Private research copy; reuse rights to be checked before any public release.",
   "display": true,
   "for_3d_check": {
-   "pending": true,
+   "pending": false,
    "what_to_check": "Rock-field layout before the 1997 works (the black-circle boulder field, the surf line over it) vs any planform of the reshaped reef; qualitative only",
    "model_values_affected": [
     "planform"
-   ]
+   ],
+   "result": "2026-10-10: qualitative match only: boulder mass at the point, linear rock rows at the beach side (= dark ridges at the NW of img-08), surf over the north side. No scale or north, nothing georeferenced; reshaped zone still not locatable."
   },
   "added_by": "image-registry backfill, 2026-10-06"
  },
@@ -288,7 +289,9 @@
  {
   "id": "burkitts-reef-bargara-img-08",
   "file": "07_scale/shapes/burkitts-reef-bargara/src/burkitts_esri_2025-09-05_z19.png",
-  "annotated_files": [],
+  "annotated_files": [
+   "07_scale/shapes/burkitts-reef-bargara/overlays/img08_esri_2025-09-05_rock_platform_trace_v1.png"
+  ],
   "kind": "satellite",
   "title": "Esri World Imagery current, Burkitts Reef headland, Bargara, z19, r=270 m (2025-09-05)",
   "citation": "Esri, Maxar, Earthstar Geographics, and the GIS User Community (2025). World Imagery (current layer), image captured 2025-09-05. Esri World Imagery tile service, https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer. Accessed 2026-10-04.",
@@ -303,10 +306,13 @@
   "structure_visible": true,
   "state_shown": "as-built, current (2025; reshaped natural rock reef)",
   "used_for": [
-   "context"
+   "plan_trace",
+   "scale"
   ],
-  "how_used": "Fetched 2026-10-04 for a shape trace that was not completed (no sources.md / shape.json for Burkitts); nothing traced or measured from it yet. ",
+  "how_used": "2026-10-10: georeferenced via sidecar bounds (0.2710 m/px); outline of the visible basalt rock platform traced (38 vertices, 31,485 m2 in frame, south edge cut by the frame) -> shape.json source img1, METHOD.md section 3. Not the reshaped zone, which no source locates. Low confidence.",
   "linked_records": [
+   "07_scale/shapes/burkitts-reef-bargara/sources.md img1",
+   "07_scale/shapes/burkitts-reef-bargara/METHOD.md",
    "07_scale/shapes/burkitts-reef-bargara/src/burkitts_esri_2025-09-05_z19.png.geo.json"
   ],
   "bytes": 4999759,
@@ -318,12 +324,13 @@
   "rights_note": "Private research copy; reuse rights to be checked before any public release.",
   "display": true,
   "for_3d_check": {
-   "pending": true,
+   "pending": false,
    "what_to_check": "Trace the rock reef / headland planform on this frame (the reef is the reshaped boulder field at the headland; its limits are not defined in any source) before any 3D model",
    "model_values_affected": [
     "planform",
     "position"
-   ]
+   ],
+   "result": "2026-10-10: planform traced (visible platform only); reef limits still undefined; no 3D built (FEASIBILITY.md)."
   },
   "added_by": "image-registry backfill, 2026-10-06"
  }

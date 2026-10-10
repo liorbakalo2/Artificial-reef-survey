@@ -1027,3 +1027,75 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **rights**: Private research copy; reuse rights to be checked before any public release.
 - **display in HTML**: True
 - **added by**: task_mm_update (agent 3), 2026-10-10
+
+## mount-maunganui-reef-img-39 - Blacka et al. (2013) Fig. 2.16: Rapid Accurate Deployment (RAD) reef construction method at Mount Maunganui (ASR 2008a)
+- **file**: `03_images/reefs/mount-maunganui-reef/mount-maunganui-reef_p8-fig2-16-RAD-method_2005-2008.png`
+- **kind**: diagram
+- **shows**: Six panels: bag layout drawing (V of tubes), webbing and bag assembly on the beach, loading a panel on a barge, deployment, diver securing the anchor, filling the tubes.
+- **structure visible**: True
+- **state shown**: as-built (construction method)
+- **image date**: 2005-2008 (construction)
+- **citation**: Blacka, M.J., Shand, T.D., Carley, J.T. and Mariani, A. (2013). A Review of Artificial Reefs for Coastal Protection in NSW. WRL Technical Report 2012/08 (Final, 11 June 2013), UNSW Water Research Laboratory, for the NSW Office of Environment and Heritage. p.34 (PDF p.46), Figure 2.16. https://doi.org/10.4225/53/58e1dc7368c7a. Accessed 2026-10-07.
+- **image URL**: https://doi.org/10.4225/53/58e1dc7368c7a
+- **source page**: https://doi.org/10.4225/53/58e1dc7368c7a
+- **page / figure**: report p.34 (PDF p.46), Figure 2.16 (clip, 200 dpi)
+- **credit**: ASR (2008a) as reproduced in Blacka et al. (2013)
+- **licence**: CC BY-NC-ND 3.0 AU (as recorded in REQUESTS_FOR_LIOR.md P8; not re-checked on the PDF)
+- **retrieved**: 2026-10-10
+- **used for**: context, cross_check
+- **How used for the model**: Shows the V-shaped bag layout drawing (too small to read). Context for construction method and why built volume fell short; no geometry read.
+- **3D check pending**: no - none: layout drawing illegible at this size
+- **linked records**: 05_qa/papers_intake/P8_blacka_2013.md
+- **size**: 1.90 MB, 1417x1348 px
+- **sha256**: b63025ab7b4bf7b71724ff4ca7412161267a8dd581265f4c4bc8a91f41f274d3
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: papers intake P3/P8, 2026-10-10
+
+## mount-maunganui-reef-img-40 - Blacka et al. (2013) Fig. 3.1: physical modelling of wave breaking on the Mount Maunganui MPR (Black and Mead 2009)
+- **file**: `03_images/reefs/mount-maunganui-reef/mount-maunganui-reef_p8-fig3-1-physical-model-waves_2007.png`
+- **kind**: photo
+- **shows**: Two close-up photos of a wave breaking over the model reef in the flume.
+- **structure visible**: False
+- **state shown**: design (physical model)
+- **image date**: not dated (physical model, before 2009)
+- **citation**: Blacka, M.J., Shand, T.D., Carley, J.T. and Mariani, A. (2013). A Review of Artificial Reefs for Coastal Protection in NSW. WRL Technical Report 2012/08 (Final, 11 June 2013), UNSW Water Research Laboratory, for the NSW Office of Environment and Heritage. p.42 (PDF p.54), Figure 3.1. https://doi.org/10.4225/53/58e1dc7368c7a. Accessed 2026-10-07.
+- **image URL**: https://doi.org/10.4225/53/58e1dc7368c7a
+- **source page**: https://doi.org/10.4225/53/58e1dc7368c7a
+- **page / figure**: report p.42 (PDF p.54), Figure 3.1 (clip, 200 dpi)
+- **credit**: Black and Mead (2009) as reproduced in Blacka et al. (2013)
+- **licence**: CC BY-NC-ND 3.0 AU (as recorded in REQUESTS_FOR_LIOR.md P8; not re-checked on the PDF)
+- **retrieved**: 2026-10-10
+- **used for**: context
+- **How used for the model**: Context only; the registered Mead et al. (2007) physical-model photos (img-29, img-30) cover the same test.
+- **3D check pending**: no - none
+- **linked records**: 05_qa/papers_intake/P8_blacka_2013.md
+- **size**: 0.79 MB, 1307x542 px
+- **sha256**: 66d6d423c0b63fbb2c034de2ebaad753da8758958bbdee29a031a73cdf8c1df6
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: papers intake P3/P8, 2026-10-10
+
+## mount-maunganui-reef-img-41 - Blacka et al. (2013) Fig. A.9: location of Mount MPR (satellite)
+- **file**: `03_images/reefs/mount-maunganui-reef/mount-maunganui-reef_p8-figA9-location_2013.png`
+- **kind**: satellite
+- **shows**: Satellite map of Tauranga Harbour entrance, Motuotau Island and Mount Maunganui beach with a reef marker offshore; 1 km scale bar.
+- **structure visible**: False
+- **state shown**: context (location)
+- **image date**: unknown (imagery before 2013)
+- **citation**: Blacka, M.J., Shand, T.D., Carley, J.T. and Mariani, A. (2013). A Review of Artificial Reefs for Coastal Protection in NSW. WRL Technical Report 2012/08 (Final, 11 June 2013), UNSW Water Research Laboratory, for the NSW Office of Environment and Heritage. p.101 (PDF p.113), Figure A.9. https://doi.org/10.4225/53/58e1dc7368c7a. Accessed 2026-10-07.
+- **image URL**: https://doi.org/10.4225/53/58e1dc7368c7a
+- **source page**: https://doi.org/10.4225/53/58e1dc7368c7a
+- **page / figure**: report p.101 (PDF p.113), Figure A.9 (clip, 200 dpi)
+- **credit**: Blacka et al. (2013) over satellite imagery (provider not stated)
+- **licence**: CC BY-NC-ND 3.0 AU (as recorded in REQUESTS_FOR_LIOR.md P8; not re-checked on the PDF)
+- **retrieved**: 2026-10-10
+- **used for**: context
+- **How used for the model**: Location context only.
+- **3D check pending**: no - none
+- **linked records**: 05_qa/papers_intake/P8_blacka_2013.md
+- **size**: 1.02 MB, 1209x715 px
+- **sha256**: 71827bf3b94ce88e300c2979f899a740c55de6fcd83c121e2ffa3708672d1548
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: papers intake P3/P8, 2026-10-10

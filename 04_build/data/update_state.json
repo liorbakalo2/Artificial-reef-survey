@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-10 20:52",
+ "updated": "2026-10-10 21:06",
  "sig": {
   "models": {
    "borth-coastal-defence-reef": {
@@ -16,8 +16,8 @@
     "model.js": "cb6ad1508e6be7b4",
     "annotated": "8b89d8089762e706",
     "shape.json": "b6b5a73f1edb3bb3",
-    "registry": "64a6b78afcc4d78f",
-    "card": "cb6d4f12b45a54fa",
+    "registry": "56362d831fa05ef5",
+    "card": "e1dc0421faf28b79",
     "config": "855b46a314bd2787"
    },
    "bunbury-airwave": {
@@ -38,9 +38,18 @@
     "card": "8f33e980757dfa94",
     "config": "658e76c3543aef4a"
    },
+   "narrowneck-gold-coast": {
+    "viewer": "8832b0daaff15b3d",
+    "model.js": "4dc4c69b61ba35b4",
+    "annotated": "35ed980edd5d344c",
+    "shape.json": "db28a2ade0809e34",
+    "registry": "7051ccf92090049a",
+    "card": "8a1a99b0e8eef8e6",
+    "config": "1502d661d52d949f"
+   },
    "palm-beach-gold-coast": {
-    "viewer": "3811e3d6d4caa5fe",
-    "model.js": "0ab22fe8e7b0710d",
+    "viewer": "cc73c443b2125891",
+    "model.js": "53be2c2ea726fe1b",
     "annotated": "6a1b78da17cf9d64",
     "shape.json": "9d74d332271d31bb",
     "registry": "ef70a84962615af7",
@@ -51,14 +60,14 @@
     "viewer": "1b23230d2ecbf6f7",
     "model.js": "39b9a34a88b79b48",
     "annotated": "c3f4f1239e62c46a",
-    "shape.json": "caf79e64c4de25f0",
+    "shape.json": "49729c41a3c44264",
     "registry": "b5cec27e7ef7914c",
     "card": "326ef4bb8e12e8d6",
     "config": "036d108ce91351d3"
    }
   },
-  "hold": "fe8e4651b85ae9e1",
-  "src": "1a5b839520bbd596"
+  "hold": "2be8613eb6870471",
+  "src": "ffb1e24168525fe2"
  },
  "snapshot": {
   "borth-coastal-defence-reef": {
@@ -89,7 +98,7 @@
     "Distance offshore": "centroid of both mounds 330.5 m offshore (nearest edge 257 m, farthest 397 m)"
    },
    "pictures": 22,
-   "match_buttons": 8,
+   "match_buttons": 0,
    "combined": {
     "status": "ok",
     "ok": true,
@@ -109,8 +118,8 @@
     "Footprint": "4,042 m2 (25 vertices; minimum rotated rectangle 121.1 x 45.0 m)",
     "Volume": "13,119 m3 (loft)"
    },
-   "pictures": 26,
-   "match_buttons": 6,
+   "pictures": 33,
+   "match_buttons": 0,
    "combined": {
     "status": "ok",
     "ok": true,
@@ -130,7 +139,7 @@
     "Volume (cap) vs fill": "cap 92.6-117.3 m3 (H = 1.6-2.0 m)"
    },
    "pictures": 13,
-   "match_buttons": 1,
+   "match_buttons": 0,
    "combined": {
     "status": "ok",
     "ok": true,
@@ -160,7 +169,7 @@
     "Vertical datum": "z = 0 at present mean sea level = Chart Datum + 1.13 m (LINZ Tauranga); Chart Datum = z -1.13 m; MVD-53 = z -0.168 m"
    },
    "pictures": 24,
-   "match_buttons": 7,
+   "match_buttons": 0,
    "combined": {
     "status": "ok",
     "ok": true,
@@ -180,7 +189,7 @@
     "Volume (rock envelope)": "22,000 m3 (22,020; voids included)"
    },
    "pictures": 27,
-   "match_buttons": 6,
+   "match_buttons": 0,
    "combined": {
     "status": "ok",
     "ok": true,
@@ -201,8 +210,8 @@
     "Footprint": "435.2 m2, 58.0 x 28.6 m (76 vertices)",
     "Volume": "443 m3 (state B); 550 m3 (state A)"
    },
-   "pictures": 28,
-   "match_buttons": 2,
+   "pictures": 0,
+   "match_buttons": 0,
    "combined": {
     "status": "ok",
     "ok": true,

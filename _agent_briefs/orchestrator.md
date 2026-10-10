@@ -136,7 +136,7 @@ All of them are in `REQUESTS_FOR_LIOR.md`:
 | 2026-10-10 | `trace_shape.md` / `verify_shape.md` / `model_3d.md` (queue 9) | `07_scale/shapes/opunake-reef/` | `HANDOFF.md` | STOPPED 2026-10-10: feasibility only (text size ~90 x 20 m, 27 bags; not visible on Esri 2025 z20; no plan/survey). Not yet checked: papers/ and the Gemini footprint extract. Restart when the network is Full (LINZ, Esri Wayback) or Lior supplies Black et al. 2004 |
 | 2026-10-10 | `trace_shape.md` / `verify_shape.md` / `model_3d.md` (queue 9) | `07_scale/shapes/kovalam-reef-india/` | `HANDOFF.md` | RUNNING (fresh cloud agent) |
 | 2026-10-10 | `trace_shape.md` / `verify_shape.md` / `model_3d.md` (queue 9) | `07_scale/shapes/southern-ocean-surf-reef-albany/` | `HANDOFF.md` | RUNNING (fresh cloud agent) |
-| 2026-10-10 | `trace_shape.md` / `verify_shape.md` / `model_3d.md` (queue 9) | `07_scale/shapes/burkitts-reef-bargara/` | `HANDOFF.md` | RUNNING (fresh cloud agent) |
+| 2026-10-10 | `trace_shape.md` / `verify_shape.md` / `model_3d.md` (queue 9) | `07_scale/shapes/burkitts-reef-bargara/` | `HANDOFF.md` | DONE 2026-10-10: traced + self-verified (low): visible rock platform, Esri 2025-09-05, 31,485 m2 (south edge cut); NOT the moved-boulder zone (no source locates it). No 3D (no crest/seabed/datum). Restart with network Full |
 | 2026-10-10 | `trace_shape.md` / `verify_shape.md` / `model_3d.md` (queue 9) | `07_scale/shapes/mexico-reef-2026-unnamed/` | `HANDOFF.md` | DONE 2026-10-10: FEASIBILITY only (no coordinates, size or plan; 2 underwater photos). Needs: coordinates / design plan / Xala MIA, or network. Lior: show the analogy envelope or no shape? |
 **When an agent finishes:**
 - save its report from the hand-back;
