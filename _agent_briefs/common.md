@@ -62,3 +62,11 @@ RULES
 9. REQUESTS FOR LIOR (2026-10-07): the single list is REQUESTS_FOR_LIOR.md at the PROJECT ROOT. Whenever you add a request to a
    per-folder REQUESTS_FOR_LIOR.md (or a report), also add/update one line in the root file (right section: papers with FULL
    citation, e-mails, browser pages, Navionics / Google Earth readings, decisions, media review) and mark items you resolve as done.
+10. PAPERS FIRST (2026-10-10, Lior): before any web search for a paper or report, check papers/ (Lior's PDFs; grep their text,
+    e.g. python with pymupdf, for the author, reef name and year). Say in your notes which papers/ files you checked and what
+    they gave. Never move or rename anything in papers/.
+11. DEAD ENDS (2026-10-10, Lior): every source you checked that gave nothing useful (not found, paywalled, login or bot check,
+    no plan/figure, wrong place, imagery showing nothing) gets one entry in 02_research/dead_ends/<slug>.json, append only
+    (format in 02_research/dead_ends/README.md): what, url or search string, date checked, by whom, result, what might
+    still work. Dead ends are NOT references: keep them out of the card's references list. The page shows them in a
+    collapsed 'Checked, nothing useful' section so future agents do not repeat the search.
