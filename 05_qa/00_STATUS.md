@@ -492,3 +492,6 @@ Shape tracing continues for all 13 reefs.
 ## 2026-10-10 (mexico-reef-2026-unnamed, queue item 9) - FEASIBILITY only
 - No image shows the structure, no dimensions/coordinates exist (card gaps, 2 context images); raisedwaterresearch.com 403 from the container. No trace, verify or 3D made.
 - Wrote 07_scale/shapes/mexico-reef-2026-unnamed/FEASIBILITY.md + HANDOFF.md (needs-network list in section 7). Registry unchanged.
+
+## 2026-10-10 (opunake-reef agent, queue item 9) - feasibility only, no shape, no 3D
+- No plan figure, no position, reef not visible on Esri 2025-01-16 z20 (viewed once); only text 90 x 20 m, 27 bags. shape.json status no_source (LOW), FEASIBILITY.md lists what is missing; old wedge schematic not used; 3 undocumented overlays archived. Esri/LINZ/nzgeo refused by proxy (needs-network list in HANDOFF.md). img-10 annotated overlay registered. 04_build untouched.

@@ -375,7 +375,9 @@
  {
   "id": "opunake-reef-img-10",
   "file": "07_scale/shapes/opunake-reef/src/opunake_sat_z20.png",
-  "annotated_files": [],
+  "annotated_files": [
+   "07_scale/shapes/opunake-reef/overlays/search_frame_z20_no_structure.png"
+  ],
   "kind": "satellite",
   "title": "Esri World Imagery, Opunake, centre -39.4577, 173.8545, z20, r=250 m, 4338 x 4338 px, 0.1153 m/px",
   "citation": "Esri, Maxar, Earthstar Geographics, and the GIS User Community (2025). World Imagery (current layer), image captured 2025-01-16. Esri World Imagery tile service, https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer. Accessed 2026-10-04.",
@@ -392,7 +394,7 @@
   "used_for": [
    "context"
   ],
-  "how_used": "Fetched 2026-10-04 for the shape trace; the trace was not completed (no sources.md / shape.json for Opunake), so nothing was traced or measured from it. Original is 23.5 MB: a <=3000 px JPEG copy is registered as other_resolutions.",
+  "how_used": "Fetched 2026-10-04 for the shape trace; the trace was not completed (no sources.md / shape.json for Opunake), so nothing was traced or measured from it. Original is 23.5 MB: a <=3000 px JPEG copy is registered as other_resolutions. Item-9 run 2026-10-10: viewed once downscaled; reef not visible; annotated copy documents the negative finding in FEASIBILITY.md. Not used for any measurement.",
   "linked_records": [
    "07_scale/shapes/opunake-reef/src/opunake_sat_z20.png.geo.json"
   ],

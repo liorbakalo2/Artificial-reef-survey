@@ -68,3 +68,4 @@ exact coordinates live in the per-topic files linked below; this page is the sin
 - Open 04_build\artificial_reefs.html in your own browser once (layout was tuned in headless Chrome only) and send screenshots of
   anything wrong.
 - Mexico/Xala reef (item 9): shape not traceable. Please supply any of: reef coordinates, DHI/Mortensen design plan or paper, SEMARNAT MIA for Xala, or widen network for the URLs in 07_scale/shapes/mexico-reef-2026-unnamed/HANDOFF.md section 7.
+- Opunake (2026-10-10): paper Black et al. 2004 "Studies for Resource Consent: Opunake Surfing Reef" (ResearchGate 273133845); Google Earth Pro historical imagery 2007-2012 at -39.457, 173.853 (pale ~90 x 20 m bag field? give dates + end coordinates); Navionics soundings off the beach. See 07_scale/shapes/opunake-reef/FEASIBILITY.md.
