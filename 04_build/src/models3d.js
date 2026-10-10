@@ -80,7 +80,7 @@
     if (!hasVers(m)) return '';
     var act = activeVer(m), s = esc(m.slug);
     var btns = m.versions.length > 1 ? '<div class="m3d-vgroup" role="group" aria-labelledby="m3d-vlbl-' + s + '">' + m.versions.map(function (v) {
-      return '<button type="button" class="m3d-vbtn" data-m3d-ver="' + s + '|' + esc(v.id) + '" aria-pressed="' + (v.id === act) + '"><span class="n">' + esc(v.name) + '</span>' +
+      return '<button type="button" class="m3d-vbtn" data-m3d-ver="' + s + '|' + esc(v.id) + '" title="' + esc(v.name) + '" aria-pressed="' + (v.id === act) + '"><span class="n">' + esc(v.name) + '</span>' +
         '<span class="d">' + esc(v.date) + (v.id === m.default_version ? ' &middot; default' : '') + '</span></button>';
     }).join('') + '</div>' : '';
     return '<div class="m3d-versions" data-vbar="' + s + '"><div class="m3d-vrow"><span class="lbl" id="m3d-vlbl-' + s + '">Outline version</span>' + btns +

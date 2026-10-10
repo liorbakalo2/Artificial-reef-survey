@@ -24,14 +24,15 @@ for y in list(range(40, 321, 20)) + list(range(440, 721, 20)):
         run = x
     pts.append((run, y))
 pts = np.array(pts, float); E = enu(pts)
-# fit east = k*north + c  (shoreline runs roughly N-S)
-k, c = np.polyfit(E[:,1], E[:,0], 1); res = E[:,0] - (k*E[:,1] + c)
-beta = math.degrees(math.atan2(k, 1)) % 360        # bearing of shoreline direction (toward north-ish)
-# also fit separately each section for the uncertainty
-def bear(sel):
-    kk, _ = np.polyfit(E[sel,1], E[sel,0], 1); return math.degrees(math.atan2(kk,1))
+# robust (Theil-Sen) fit east = k*north + c on the section beside the reef (rows 440-720); whole-beach and northern-section bearings kept for the uncertainty
+from scipy.stats import theilslopes
 n1 = len(list(range(40,321,20)))
-beta_n, beta_s = bear(slice(0,n1)), bear(slice(n1,None))
+def ts(sel):
+    s_, i_, lo_, hi_ = theilslopes(E[sel,0], E[sel,1]); return s_, i_, math.degrees(math.atan(s_)), math.degrees(math.atan(lo_)), math.degrees(math.atan(hi_))
+k, c, beta, blo, bhi = ts(slice(n1, None))
+beta_all = ts(slice(None))[2]; beta_n = ts(slice(0, n1))[2]; beta_s = beta
+res = E[n1:,0] - (k*E[n1:,1] + c)
+beta = beta % 360
 u_al = np.array([math.sin(math.radians(beta)), math.cos(math.radians(beta))])      # +x alongshore (east,north)
 u_of = np.array([math.sin(math.radians(beta+90)), math.cos(math.radians(beta+90))]) # +y offshore
 # shoreline point: line through (east=c, north=0) direction u_al
@@ -46,8 +47,7 @@ def stats(m):
     return dict(area_m2=round(pg.area,1), x_range=[round(b[0],1), round(b[2],1)], y_range=[round(b[1],1), round(b[3],1)],
                 alongshore=round(b[2]-b[0],1), crossshore=round(b[3]-b[1],1),
                 centroid=[round(pg.centroid.x,1), round(pg.centroid.y,1)])
-out = dict(mpp=mpp, shoreline=dict(points_px=pts.tolist(), bearing_deg=round(beta,2), bearing_north_section=round(beta_n,2),
-           bearing_south_section=round(beta_s,2), resid_rms_m=round(float(np.sqrt((res**2).mean())),2),
+out = dict(mpp=mpp, shoreline=dict(points_px=pts.tolist(), bearing_deg=round(beta,2), bearing_north_section_rows40_320=round(beta_n,2), bearing_whole_beach=round(beta_all,2), bearing_ci95_rows440_720=[round(blo,1),round(bhi,1)], resid_rms_m=round(float(np.sqrt((res**2).mean())),2), resid_median_abs_m=round(float(np.median(abs(res))),2),
            shore_normal_bearing_deg=round((beta+90)%360,2)),
            origin_enu_from_centre=foot.tolist())
 out['sat'] = stats(sat_m); out['sat']['polygon_m'] = np.round(sat_m,2).tolist()

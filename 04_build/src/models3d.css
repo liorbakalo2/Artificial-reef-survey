@@ -229,8 +229,11 @@ button.m3d-vinfo:hover { background: var(--accent); color: var(--accent-ink); }
 .m3d-versions { margin: 6px 0 4px; padding: 6px 10px; }
 /* 2026-10-10: compact version block so the viewer is not pushed below the fold at 900 px height (Borth: 203 -> about 110 px) */
 .m3d-vrow { gap: 4px 8px; }
-.m3d-vgroup { gap: 4px; }
-button.m3d-vbtn { padding: 2px 8px; gap: 0 6px; }
+.m3d-vgroup { gap: 4px; flex: 1 1 420px; flex-wrap: nowrap; min-width: 0; }
+button.m3d-vbtn { padding: 2px 8px; gap: 0 6px; flex: 1 1 0; min-width: 0; flex-wrap: nowrap; }
+button.m3d-vbtn .n { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+button.m3d-vbtn .d { white-space: nowrap; flex: 0 0 auto; }
+@media (max-width: 760px) { .m3d-vgroup { flex-wrap: wrap; } button.m3d-vbtn { flex: 1 1 100%; flex-wrap: wrap; } button.m3d-vbtn .n { white-space: normal; } }
 button.m3d-vbtn .n { font-size: .84rem; }
 button.m3d-vbtn .d { font-size: .72rem; }
 .m3d-vnow { margin-top: 4px; font-size: .84rem; -webkit-line-clamp: 1; }
