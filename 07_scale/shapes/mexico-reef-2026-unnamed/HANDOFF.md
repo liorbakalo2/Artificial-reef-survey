@@ -12,7 +12,7 @@ Read this first. Verdict and reasons: FEASIBILITY.md in this folder.
 - Gemini's "~140 x 75 m" has no source: not used.
 
 ## 3. Key numbers (all from the card, source ids R#)
-- Rock/boulder reef, "3,000 truckloads" (R3 Hollywood Reporter 2025-04-22); designer S. B. Mortensen, DHI Seaport (R1 RWR 2026-03-31); unveiled 2026-04-16.
+- Rock/boulder reef, "3,000 truckloads" (R3 Hollywood Reporter 2025-04-22); designer S. B. Mortensen, DHI Seaport (R1 RWR 2026-03-31); announced 2026-03-31 by RWR [R1] with a reveal event billed for 2026-04-16 (no source seen reports that it took place; wording corrected 2026-10-10, 'unveiled' was unsupported).
 - Not disclosed: coordinates, length, width, crest depth, volume, cost, contractor, build dates. Area pin 19.71861, -105.23222 is NOT the reef.
 
 ## 4. File map

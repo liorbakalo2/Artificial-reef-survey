@@ -134,6 +134,22 @@ R19. Esri World Imagery (capture 2024-09-17) and Esri Wayback releases (2012-10-
 
 R20. CIA World Factbook via IndexMundi, 'United Kingdom - Exchange rates': British pounds per US dollar, 2013 = 0.6391 (2014 = 0.607). https://www.indexmundi.com/united_kingdom/exchange_rates.html — accessed 2026-10-10 — supports: only the 2013 value was seen (WebSearch result text; page not opened); basis of the corrected USD conversion in cost_usd_approx
 
+R21. Tide-Forecast.com (live data). "Haifa, Israel tide times." Web tide table (not a primary tide source). https://www.tide-forecast.com/locations/Haifa/tides/latest — accessed 2026-09-24 — supports: Haifa tidal range of tens of centimetres (the same page is R13 in the Pratte's card, which quotes ~0.3-0.4 m). LOCATION: live tide page, access day only.
+
 ## Source audit 2026-10-10
 
 See 05_qa/source_audit/cards_group_A_2026-10-10.md. Changes: Type row clarified ('submerged' only at high water) with design crest levels [R16][R18][R19]; project-traced size added; USD conversion corrected [R20]; SMP2 spring range added to Relevance [R18]; verdict reason (who/why): Verdict 'mixed' was assigned by the research agent that wrote this card (verified_on 2026-09-24), not by Lior; no Lior ruling on this verdict is recorded. Basis: coastal protection worked in the first months (two high tides did not flood properties, Dec 2011) [R2][R3]; surfing performance is undocumented: 'unknown (insufficient monitoring)' in Blacka et al. Table 4.1 [R14] and a 'proposed' site in Stormrider [R7]. Re-checked in the 2026-10-10 source audit; unchanged.; references R16-R20 added, LOCATION notes added to R1-R12. The BBC News item in the Reviews list above has no entry in the JSON reviews list (known mismatch).
+
+## Citations audit 2026-10-10 (cards_citations)
+
+See 05_qa/source_audit/cards_citations_2026-10-10.md. R21 (Haifa tide table) added; Blacka dimensions marked as the superseded design; tags and negative-result labels added.
+- **type** (JSON wording; the dossier prose differs): ...AUDIT NOTE 2026-10-10: 'submerged' holds only at high water [R16][R18][R19]....
+- **unexpected_results** (JSON wording; the dossier prose differs): ...specifically tied to the Borth reef (negative search result of this card, not a sourced statement; treated as a genuine gap...
+- **could_be_better** (JSON wording; the dossier prose differs): ...No source located (negative search result of this card, not a sourced statement) offers...
+- **relevance_to_israel** (JSON wording; the dossier prose differs): ...which is effectively microtidal, with a tidal range on the order of tens of centimetres [R21] (a web tide table, not a primary source)....
+- **size** (JSON wording; the dossier prose differs): ...which are maximum dimensions of an unspecified outline; per the shape audit they describe the SUPERSEDED two-reef design (a north truncated delta 180 x 65 m, 4.0 m high, and a south reef), not the final layout traced above (07_scale/shapes/borth-coastal-defence-reef/SOURCE_AUDIT_2026-10-10.md row 29 and HANDOFF.md item 3; the Blacka figures are therefore not comparable with the as-built mounds)....
+
+## Position check 2026-10-10 (cards_citations)
+
+lat/lon checked against the reef's shape/HANDOFF position; see gaps (last item) and 05_qa/source_audit/cards_citations_2026-10-10.md.
+- **gaps** (added): Position (citations audit 2026-10-10): lat/lon changed from 52.48533, -4.05103 to 52.48346, -4.05621, the area-weighted centroid of the two traced mounds (07_scale/shapes/borth-coastal-defence-reef/shape.json geo.polygons_latlon, Esri image of 2024-09-17 [R19]; position accuracy about +-5 m per HANDOFF.md); the old point was 408 m away. The page's Google Maps link uses this value.

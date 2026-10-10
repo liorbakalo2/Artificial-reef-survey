@@ -23,7 +23,7 @@ Boscombe was a rundown 20th-century seaside suburb of Bournemouth in need of reg
 
 ## Design as planned
 
-The reef was designed as a submerged, angled ramp of stacked geotextile sand containers that would intercept the dominant swell direction and reshape it into rideable peeling waves, rather than "creating" waves from nothing. ASR director Shaw Mead described the mechanism directly: "The reef doesn't actually create waves. It's angled to catch the mean wave direction, and it acts as a ramp which changes the way the waves break" [R10]. The design target was a "Grade 5" wave (on ASR's own in-house surf-quality scale) under good swell conditions, producing rides of roughly 75 m to the right and 35 m to the left, suited to bodyboarders and surfers [R10]. Eleven specific design/performance objectives were set for the project, including materially increasing surf-day frequency (from ~77 to ~154 good surf days/yr) and beach-visit numbers (from ~5,000 to ~10,000/yr) [R1][R2].
+The reef was designed as a submerged, angled ramp of stacked geotextile sand containers that would intercept the dominant swell direction and reshape it into rideable peeling waves, rather than "creating" waves from nothing [R10]. ASR director Shaw Mead described the mechanism directly: "The reef doesn't actually create waves. It's angled to catch the mean wave direction, and it acts as a ramp which changes the way the waves break" [R10]. The design target was a "Grade 5" wave (on ASR's own in-house surf-quality scale) under good swell conditions, producing rides of roughly 75 m to the right and 35 m to the left, suited to bodyboarders and surfers [R10]. Eleven specific design/performance objectives were set for the project, including materially increasing surf-day frequency (from ~77 to ~154 good surf days/yr) and beach-visit numbers (from ~5,000 to ~10,000/yr) [R1][R2].
 
 ## What was actually built, and how it differed from the design
 
@@ -184,3 +184,17 @@ See 05_qa/source_audit/cards_group_A_2026-10-10.md. Additions to the JSON card (
 - **cost_usd_approx**: labelled ASSUMPTION (rates unsourced)
 - **verdict_reason**: Verdict 'failed' was assigned by the research agent that wrote this card (verified_on 2026-09-24, enriched 2026-10-10), not by Lior; no Lior ruling on it is recorded. Basis: closed to surfing since 31 March 2011 after the reef lost sand/changed shape [R1][R17]; Plymouth University evaluation met 4 of 11 objectives (Rendle p.70-71 [R17]; Mead & Borrero count 7 of 11 [R18], an interested party); ASR Ltd liquidated 2012 [R1]; rebranded as non-surf park [R1][R6]. Re-checked 2026-10-10; unchanged.
 - References R20-R22 added; R14 re-cited (Shikmona readings are Lior's); LOCATION notes added to all references.
+
+## Citations audit 2026-10-10 (cards_citations)
+
+See 05_qa/source_audit/cards_citations_2026-10-10.md. Tags [R17]/[R10] added; lat/lon checked (see coordinates in the report). images[0] wording already corrected to the registry (sand heap, not an exposed mound).
+- **size** (JSON wording; the dossier prose differs): ...eight T4 containers about 4 m diameter, 65-70 m long, 746.7 m3 each (Table 5.3, p. 98; p. 121) [R17]....
+- **size** (JSON wording; the dossier prose differs): ...Rendle's thesis [R17] (primary): 32 containers...
+- **gaps[0]** (JSON wording; the dossier prose differs): ...design 0 m CD) [R17];...
+- **gaps[0]** (JSON wording; the dossier prose differs): ...(T4 containers 746.7 m3, Table 5.3, p. 98 [R17];...
+- **gaps[4]** (JSON wording; the dossier prose differs): ...Rendle (2016) [R17] and earlier sources [R1][R4] disagree on the container count (32 / about 46 on the design drawing / 54-55) and on the construction start (30 Aug 2008 vs June 2008) and opening date (2 Oct 2009 vs 19 Nov 2009); not resolved....
+
+## Position check 2026-10-10 (cards_citations)
+
+lat/lon checked against the reef's shape/HANDOFF position; see gaps (last item) and 05_qa/source_audit/cards_citations_2026-10-10.md.
+- **gaps** (added): Position (citations audit 2026-10-10): lat/lon changed from 50.7185, -1.8417 to 50.717532, -1.838909, the centroid of the traced reef outline (07_scale/shapes/boscombe-surf-reef/shape.json geo.centroid_latlon, traced on the Esri Wayback image of 2011-09-28 [R22]; HANDOFF.md); the old point was 224 m away (town/pier area). The page's Google Maps link uses this value.

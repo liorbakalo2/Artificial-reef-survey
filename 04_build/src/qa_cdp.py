@@ -130,8 +130,11 @@ class Chrome:
         elif m == "Network.responseReceived":
             r = p.get("response", {})
             self.requests.append({"url": r.get("url"), "status": r.get("status")})
+        elif m == "Network.requestWillBeSent":
+            self._urls = getattr(self, "_urls", {})
+            self._urls[p.get("requestId")] = (p.get("request") or {}).get("url", "")[:140]
         elif m == "Network.loadingFailed":
-            self.errors.append(f"NETFAIL {p.get('errorText')} blocked={p.get('blockedReason')} id={p.get('requestId')}")
+            self.errors.append(f"NETFAIL {p.get('errorText')} blocked={p.get('blockedReason')} id={p.get('requestId')} url={getattr(self, '_urls', {}).get(p.get('requestId'), '?')}")
 
     def call(self, method: str, **params):
         async def go():

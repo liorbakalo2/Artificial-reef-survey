@@ -1,4 +1,4 @@
-PASS file size 2537 KB < 3 MB
+PASS file size 2571 KB < 3 MB
 PASS HTML parses with balanced tags (errors=[], unclosed=[])
 PASS title is 'Artificial Surf Reefs Survey'
 PASS data has exactly the 13 slugs (missing=set(), extra=set())
@@ -8,8 +8,8 @@ PASS no unreferenced files in assets/ (523 files; unused=[])
 PASS every [R#] token resolves to its reef's references (unresolved=[])
 PASS source pop-up #ref-pop exists inside the reef <dialog> (renders in the top layer)
 PASS markers are rendered as pop-up buttons (ref-mark / data-ref / aria-controls=ref-pop, openPop, positionPop)
-PASS every one of 2346 [R#] markers has a pop-up target with citation text (missing=[])
-INFO references without a URL (pop-up shows 'internal note — no URL'): 35
+PASS every one of 2431 [R#] markers has a pop-up target with citation text (missing=[])
+INFO references without a URL (pop-up shows 'internal note — no URL'): 34
 PASS every review has a source link or a reference pop-up (none=[])
 PASS no videos_rejected content rendered (6 rejected ids/urls/titles checked; leaked=[])
 PASS Burkitts shows 0 videos (videos=0, hero=https://live-production.wcms.abc-cdn.net.au/a6112bacdcff4864)
@@ -104,7 +104,7 @@ PASS [3D] every gallery picture has a non-empty how_used + citation for its tool
 PASS [3D] every model has confidence badge data, state, vertical-exaggeration note, key numbers, caveats and references (bad=[])
 PASS [3D] mandated caveat rows present (lacking=[])
 PASS [3D] merged reference list: 102 entries, each with id and text
-FAIL [3D] curated quotes / evidence snippets verified against the documents at build time (119 checked, failed=["prattes-reef-el-segundo | caveat 'Reef position' | The three estimates span 190 m, so the hint is stated as +-100 m.", "mount-maunganui-reef | key number 'Reef height above the bed' | largest bags 3.5 m high x 50 m long (660 m3)"])
+PASS [3D] curated quotes / evidence snippets verified against the documents at build time (119 checked, failed=[])
 PASS [3D] project-wide methods text rendered
 PASS [3D] every relied-on quotation is <= 25 words
 PASS [3D] outline-version contract for the 3 model(s) with versions (bad=[])
@@ -153,7 +153,7 @@ PASS [3D] combined export prattes-reef-el-segundo: crest level vs model.js: err 
 PASS [3D] combined export prattes-reef-el-segundo: seabed falls away offshore (+z): err 1.92e-17 deg (tolerance 20)
 PASS [3D] combined export prattes-reef-el-segundo: seabed at the shoreline is near 0 m MSL: err 0.438 m (tolerance 1.5)
 INFO [3D] combined scene: borth-coastal-defence-reef ok; boscombe-surf-reef ok; bunbury-airwave ok; mount-maunganui-reef ok; narrowneck-gold-coast ok; palm-beach-gold-coast ok; prattes-reef-el-segundo ok; tolerances {'area_rel': 0.25, 'crest_m': 0.2, 'centroid_m': 6.0, 'shore_m': 1.5, 'offshore_deg': 20}
-INFO [3D] folder sizes: assets/images 57.1 MB, 3d/ 27.3 MB (page itself 2.48 MB)
+INFO [3D] folder sizes: assets/images 57.1 MB, 3d/ 27.3 MB (page itself 2.51 MB)
 PASS [3D] DOM: tab is the visible view
 PASS [3D] DOM: URL hash follows the selector: default = first built model
 PASS [3D] DOM: selector has one button per model + 'All (compare)' (8), exactly one pressed
@@ -211,7 +211,7 @@ PASS [3D] DOM: leaving the tab frees the viewers (no iframe left)
 PASS [3D] DOM: tabs switch from every view (Table -> 3D models) and the tab re-opens on its model
 PASS [3D] DOM: brand link 'Surf reefs survey' returns to the main page (Gallery)
 PASS [3D] DOM: the gallery's page intro is 2 short lines with an (i)
-PASS [3D] DOM: no console errors (navigation session)
+FAIL [3D] DOM: no console errors (navigation session)  -> ['NETFAIL net::ERR_BLOCKED_BY_ORB blocked=None id=27282.303', 'NETFAIL net::ERR_BLOCKED_BY_ORB blocked=None id=27282.355']
 PASS [3D] DOM: 'All (compare)' selects the combined section (hash #view/models3d/all, one section visible)
 PASS [3D] DOM: combined viewer starts in its stage; comparison panel lists every model with its check result
 PASS [3D] DOM: comparison panel: footprint and crest read back from the meshes, all checks pass
