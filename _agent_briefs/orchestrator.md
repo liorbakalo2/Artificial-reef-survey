@@ -126,7 +126,7 @@ All of them are in `REQUESTS_FOR_LIOR.md`:
 | 2026-10-10 | `_agent_briefs/task_mm_update.md` | `07_scale/shapes/mount-maunganui-reef/` | `3d/SOURCES_3D.md` CHECKPOINT (2026-10-07 b) + `HANDOFF.md` section 0 | RUNNING (fresh cloud agent): D1 in code, volume table, register img-23..38, card refs, previews |
 | 2026-10-10 | `_agent_briefs/task_narrowneck_verify.md` | `07_scale/shapes/narrowneck-gold-coast/` | `VERIFY.md` CHECKPOINT + `HANDOFF.md` | DONE 2026-10-10: verified with issues; scale conflict resolved (none); 5 outline versions, default 2020 photo; img-54..65 registered. Report: `REPORT_stage1_2026-10-10.md`. Page refresh not needed (no 3D yet) |
 | 2026-10-10 | `_agent_briefs/task_seabed_fixes.md` (Boscombe part) | `07_scale/shapes/boscombe-surf-reef/3d/` | `HANDOFF.md` | DONE 2026-10-10: D2 applied; Navionics rms 1.20 -> 0.51 m, reef unchanged. Report `3d/REPORT_D2_2026-10-10.md`. Page texts edited; page refresh pending (after the MM agent) |
-| 2026-10-10 | `_agent_briefs/model_3d.md` (Narrowneck stage 2) | `07_scale/shapes/narrowneck-gold-coast/3d/` | `HANDOFF.md` 3D plan | RUNNING (fresh cloud agent) |
+| 2026-10-10 | `_agent_briefs/model_3d.md` (Narrowneck stage 2) | `07_scale/shapes/narrowneck-gold-coast/3d/` | `HANDOFF.md` 3D plan | RUNNING (fresh cloud agent) || 2026-10-10 | queue item 4 (Boscombe from Rendle 2016, P5; prompt only, no task file) | `07_scale/shapes/boscombe-surf-reef/` (notes, card, images; model NOT changed) | `HANDOFF.md` | RUNNING (fresh cloud agent) |
 **When an agent finishes:**
 - save its report from the hand-back;
 - refresh the page: `python src/update_page.py` from `04_build`, after the model agents. Check the SUMMARY and FAIL lines;
