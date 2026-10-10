@@ -18,3 +18,11 @@ Why not "assume and build": a model with an invented platform height and an inve
 3. The reshaped zone: where the ~12 boulders / ~300 m3 were moved. Needs a local account (Redgard, Bargara Boardriders, ABC gallery, Jackson and Corbett 2007) or before/after aerials.
 4. A larger south frame (platform continues beyond the current image).
 Then the platform could be modelled as a natural shelf (bed -> platform -> reshaped sub-zone) with outline version "photo trace 2025" as default.
+
+## Why this reef is hidden on the page, what was checked, what is assumed (source audit 2026-10-10)
+Rule (Lior, 2026-10-10): shapes we do not know are not shown. Burkitts is hidden (footprint.json display:false).
+- Why: the only outline we can trace is the natural basalt platform (31,485 m2, a minimum because the image frame cuts it). The reef is the boulder sub-zone moved in 1997 (about 300 m3, about 12 boulders; card R1, R3, R4) and no source says where on the platform it is. Drawing the platform would present the stage as the reef.
+- What was checked (with sources): Esri World Imagery 2025-09-05 (img-08, georeferenced; platform visible, sub-zone not); card and dossier (no footprint figure); Redgard petition sketch 7 Sept 1980 (img-01; no scale, no north); registry images 02-05 (no scale); registry 06-07 rejected (a dive video at a marine-park reef that shares the name); earlier Google Maps estimate 120 x 46 m (not reproducible); Gemini 80 x 40 m (uncited, dead links); WebSearch 2026-10-10 for tide levels (Maritime Safety Queensland tidal planes for Burnett Heads exist, values not retrieved).
+- Assumed: A1-A8 in shape.json (platform = stage; edge = breaker line at unknown tide; no change since 1997; tide swing ~2.5 m, single source, no datum).
+- The "dive depth to ~9 m" (R10) is not used as seabed: the card calls the dive site the same headland, the registry rejected the dive video as another place. Unresolved.
+- Confidence: platform outline LOW; reef zone, crest, seabed: none. Full tables: SOURCE_AUDIT_2026-10-10.md.

@@ -1003,6 +1003,27 @@
    "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer",
    "accessed": "2026-10-04",
    "supports": "planform trace"
+  },
+  {
+   "id": "R3",
+   "citation": "Coastal Management / ICM (Jackson, A.) (2026). Building Artificial Surf Reefs: Worldwide Lessons & Applications.",
+   "url": "https://www.coastalmanagement.com.au/artificial-surf-reefs",
+   "accessed": "2026-09-24 (card)",
+   "supports": "~300 m3, basalt boulders, excavator at low tide"
+  },
+  {
+   "id": "R10",
+   "citation": "DivePlanit (2026). From macro to megafauna: shore diving the Bundaberg coast.",
+   "url": "https://www.diveplanit.com/diving/dive-bundaberg/",
+   "accessed": "2026-09-24 (card)",
+   "supports": "dive depth to ~9 m; NOT used as platform seabed (the dive site may be a different place from the surf platform, see SOURCE_AUDIT item 9)"
+  },
+  {
+   "id": "MSQ",
+   "citation": "Maritime Safety Queensland. 2026 semidiurnal tidal planes (Burnett Heads).",
+   "url": "https://www.msq.qld.gov.au/_/media/tmronline/msqinternet/msqfiles/home/tides/tidal-planes/2026-semidiurnal-tidal-planes.pdf",
+   "accessed": "not read (URL found by WebSearch 2026-10-10)",
+   "supports": "would give HAT/MHWS/MSL/LAT for the nearest port; requested"
   }
  ],
  "verification": [
@@ -1035,6 +1056,110 @@
    "check": "confidence",
    "verdict": "low, honest",
    "evidence": "Reef zone undefined; truncated polygon; single image."
+  }
+ ],
+ "page_status": {
+  "shown_on_page": false,
+  "rule": "Lior 2026-10-10: shapes we do not know are not shown (footprint.json display:false)",
+  "why": "The only traced outline is the natural basalt platform (31,485 m2, minimum, cut by the image frame). The reef is the boulder sub-zone moved in 1997 (about 300 m3, about 12 boulders) and no source says where it is, so the reef's own shape is unknown.",
+  "checked": [
+   "card and dossier (no footprint, no coordinates for the reef): card R1, R3, R4, R10",
+   "Esri World Imagery 2025-09-05 saved locally (shows the platform, not the sub-zone)",
+   "registry images 01-07 (sketch, construction photo, surf photos: no scale; 06-07 are another dive site)",
+   "earlier Google Maps estimate 120 x 46 m: not reproducible",
+   "Gemini 80 x 40 m: uncited, dead links",
+   "WebSearch 2026-10-10 for tide planes: Maritime Safety Queensland publishes Burnett Heads values, not retrieved"
+  ],
+  "assumed": [
+   "A1-A8 below"
+  ],
+  "audit": "SOURCE_AUDIT_2026-10-10.md"
+ },
+ "assumptions": [
+  {
+   "id": "A1",
+   "assumption": "The visible platform is the stage the reef sits on; the reef lies somewhere inside it",
+   "effect": "outline is NOT the reef",
+   "replaced_by": "local account, 1990s aerials"
+  },
+  {
+   "id": "A2",
+   "assumption": "Platform edge = outer edge of dark rock on the breaker line; tide state at capture unknown",
+   "effect": "edge may move tens of metres",
+   "replaced_by": "dated low-tide imagery + tide at capture"
+  },
+  {
+   "id": "A3",
+   "assumption": "Landward edge judged by eye (+-5 m)",
+   "effect": "+-5 m",
+   "replaced_by": "LiDAR"
+  },
+  {
+   "id": "A4",
+   "assumption": "North-up frame, origin at centroid",
+   "effect": "presentation only",
+   "replaced_by": "-"
+  },
+  {
+   "id": "A5",
+   "assumption": "No change to the platform since 1997",
+   "effect": "unknown (absence of evidence)",
+   "replaced_by": "1997-98 vs 2025 aerials"
+  },
+  {
+   "id": "A6",
+   "assumption": "Distance offshore 0 m (attached headland)",
+   "effect": "none",
+   "replaced_by": "-"
+  },
+  {
+   "id": "A7",
+   "assumption": "Tide swing ~2.5 m (RWR, no datum) is typical",
+   "effect": "not used in geometry",
+   "replaced_by": "MSQ tidal planes Burnett Heads"
+  },
+  {
+   "id": "A8",
+   "assumption": "Petition sketch date 7/9/1980 read as 7 Sept 1980",
+   "effect": "context only",
+   "replaced_by": "original"
+  }
+ ],
+ "decisions": [
+  {
+   "id": "D1",
+   "decision": "Trace the whole visible platform",
+   "options": "platform / earlier 120 x 46 m estimate",
+   "who": "agent 2026-10-10",
+   "reason": "estimate not reproducible; sub-zone unlocated"
+  },
+  {
+   "id": "D2",
+   "decision": "One version, photo trace, default by necessity",
+   "options": "-",
+   "who": "agent 2026-10-10",
+   "reason": "no survey or design drawing"
+  },
+  {
+   "id": "D3",
+   "decision": "Keep the polygon cut at the image frame (south)",
+   "options": "extend (needs network)",
+   "who": "agent 2026-10-10",
+   "reason": "area/bbox are minimums"
+  },
+  {
+   "id": "D4",
+   "decision": "Shape hidden on the page; 3D not built",
+   "options": "draw with caveat / hide",
+   "who": "Lior 2026-10-10",
+   "reason": "outline would show the platform, not the reef"
+  },
+  {
+   "id": "D5",
+   "decision": "Gemini and the 9 m dive depth not used",
+   "options": "-",
+   "who": "agent",
+   "reason": "unverifiable; dive site identity unclear"
   }
  ]
 }
