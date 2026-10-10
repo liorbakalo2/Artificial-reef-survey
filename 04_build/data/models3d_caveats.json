@@ -352,17 +352,17 @@
   },
   {
    "slug": "boscombe-surf-reef",
-   "q": "Offshore seabed (y 380-650 m): alongshore tilt",
-   "model": "row y = 380 copied offshore: +0.76 m per 100 m of x (spline extrapolation); r.m.s. 1.2 m against 11 Navionics soundings",
-   "stated": "EMODnet DTM 2024: no alongshore gradient; Navionics soundings: model -1.2 m per 100 m of x too deep at x < 0 and too shallow at x > 0 (up to +-1.7 m)",
-   "diff": "r.m.s. 1.20 m; flattening the row would give 0.51 m",
-   "reason": "The extension kept the specified formula (slope from EMODnet, level continued from the model's own row y = 380). The zone is context for the shoreline and does not touch the reef or the survey cells.",
-   "status": "open",
-   "resolve": "Decision for Lior: flatten the offshore row alongshore (yes / no); needs only a re-run of the model build.",
+   "q": "Offshore seabed (y 380-650 m): alongshore tilt (D2 applied)",
+   "model": "row y = 380 and everything seaward flat alongshore (alongshore mean -7.78 m MSL, EMODnet cross-shore gradient 0.0141); r.m.s. 0.51 m against 11 Navionics soundings (was 1.20 m)",
+   "stated": "Before D2: EMODnet DTM 2024: no alongshore gradient; Navionics soundings: model -1.2 m per 100 m of x too deep at x < 0 and too shallow at x > 0 (up to +-1.7 m)",
+   "diff": "r.m.s. 1.20 m before, 0.51 m after D2 (2026-10-10)",
+   "reason": "Before D2 the extension copied the spline row y = 380 (tilt +0.76 m per 100 m of x) to y = 650. D2 flattened it. The zone is context for the shoreline and does not touch the reef or the survey cells. The step between rows 378 and 380 at the x edges is 1.13 m; the 11 hand-read soundings still show -0.44 m per 100 m of x.",
+   "status": "resolved",
+   "resolve": "Applied 2026-10-10 (D2); reversible with 3d/archive/pre_D2/.",
    "section": "3.4; 4 items 11-12",
    "ids": "S13; S4",
    "ev": [
-    "Replacing row 380 by its alongshore mean would give mean -0.17 m, sd 0.51 m"
+    "Since D2 (2026-10-10) row y = 380 and all rows seaward are set to the alongshore mean"
    ]
   },
   {

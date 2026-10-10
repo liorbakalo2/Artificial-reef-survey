@@ -185,11 +185,11 @@
     },
     {
      "q": "Seabed extent (shoreline to offshore, since 2026-10-07)",
-     "model": "grid 161 x 359 cells of 2 m: x -160..160 m, y -66..650 m, so the beach and the shoreline are inside the model; beach and nearshore from CCO profiles of 2010-04-20 (+-0.36 m), survey blend +-0.5 m, offshore y > 380 m = EMODnet slope only (+-1.2 m)",
+     "model": "grid 161 x 359 cells of 2 m: x -160..160 m, y -66..650 m, so the beach and the shoreline are inside the model; beach and nearshore from CCO profiles of 2010-04-20 (+-0.36 m), survey blend +-0.5 m, offshore y >= 380 m = EMODnet slope only, flat alongshore since D2 (+-0.5 m)",
      "stated": "the 2011 survey (Fig. 9) ends at y about 312 m and has no beach; EMODnet DTM 2024 cells read 1.1-3.1 m deeper than the survey",
      "diff": "reef and survey cells unchanged (0 of 4,295 + 1,580 cells differ from the previous model)",
      "ids": "S13; S2",
-     "note": "Offshore y > 380 m is context only: it carries a known alongshore tilt (see the caveat)."
+     "note": "Offshore y >= 380 m is context only: flat alongshore since D2 (2026-10-10), Navionics r.m.s. 0.51 m (see the caveat)."
     },
     {
      "q": "Reef height above the seabed",

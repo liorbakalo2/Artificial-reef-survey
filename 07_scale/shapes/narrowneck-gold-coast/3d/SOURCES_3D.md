@@ -1,0 +1,6 @@
+# SOURCES_3D - Narrowneck Reef 3D model: step log
+
+Run started 2026-10-10 (stage 2, fresh agent, Sonnet 5.5). Inputs read: CLAUDE.md, _agent_briefs/common.md + model_3d.md, HANDOFF.md (stage 2 plan, sections 3 and 6), METHOD.md "INPUTS FOR 3D", VERIFY.md steps 6-9. Template: borth-coastal-defence-reef/3d (format only).
+
+## CHECKPOINT 0 (2026-10-10) - plan
+Frame = shape.json canonical (x alongshore bearing 356.2, y offshore bearing 86.2). z = 0 at MSL. Datum: z_MSL = z_AHD - 0.12 (MSQ). Versions: 5 from shape.json outline_versions, default photo_2020-08-08. Next: STEP 0 image checks (img-55 first), then seabed + reef surface build.
