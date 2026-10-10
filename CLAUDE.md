@@ -24,6 +24,15 @@ Briefs, HANDOFFs and logs were written on Lior's Windows PC. Read
 `C:\Users\lior\Documents\Claude\Projects\Artificial reef\X\Y` as `<repo root>/X/Y`, with backslashes as forward slashes.
 Gemini's folder (`C:\Users\lior\Documents\Gemini\AG\artifical reef`) is NOT in this repo; see `_agent_briefs/orchestrator.md`.
 
+## Cloud session start (the environment has no setup script, by Lior's choice)
+In a cloud (Linux) session, the orchestrator runs these once, before any build, QA or OCR step. Agents then reuse them.
+1. `pip install -r requirements.txt playwright && python -m playwright install --with-deps chromium`
+   This gives Python packages plus a headless Chromium, which the page scripts find automatically.
+2. Only when a scanned paper needs OCR: `apt-get install -y tesseract-ocr` (prefix `sudo` if needed).
+3. Check: `python src/update_page.py --dry`, run from `04_build/`, must finish without errors.
+If an install fails with a network error, tell Lior that the environment's network access must allow it (Full).
+Details: `_agent_briefs/orchestrator.md` section 3.
+
 ## Standing rules (Lior's)
 1. Traceability, academic level. Every number and every drawn vertex has:
    - a source (URL, page or figure, date);
