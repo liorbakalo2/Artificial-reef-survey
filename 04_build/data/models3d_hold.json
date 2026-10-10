@@ -1,11 +1,11 @@
 {
   "_comment": "Round 11: slugs listed here are NOT built into the 3D tab even if their 3d folder has index.html + model.js (another agent is still writing them). Remove the entry when the model's agent has finished (its HANDOFF.md has a 3D section and 05_qa/00_STATUS.md has a '<reef> 3D DONE' entry).",
   "hold": {
-    "burkitts-reef-bargara": "trace/verify/3D agent running (started 2026-10-10)",
+    "burkitts-reef-bargara": "Not yet modelled",
     "cables-reef-wa": "trace/verify/3D agent running (started 2026-10-10)",
-    "kovalam-reef-india": "trace/verify/3D agent running (started 2026-10-10)",
-    "mexico-reef-2026-unnamed": "trace/verify/3D agent running (started 2026-10-10)",
-    "opunake-reef": "trace/verify/3D agent running (started 2026-10-10)",
-    "southern-ocean-surf-reef-albany": "trace/verify/3D agent running (started 2026-10-10)"
+    "kovalam-reef-india": "Not yet modelled",
+    "mexico-reef-2026-unnamed": "Not yet modelled",
+    "opunake-reef": "Not yet modelled",
+    "southern-ocean-surf-reef-albany": "Not yet modelled"
   }
 }

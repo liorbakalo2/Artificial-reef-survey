@@ -452,7 +452,7 @@ body.dlg-open { overflow: hidden; }
 .loc-link { white-space: nowrap; }
 .loc-none { color: var(--muted); }
 td.loc { white-space: nowrap; }
-.tile-loc { position: relative; z-index: 2; }
+.tile-loc { position: relative; z-index: 3; }
 .sc-hidden { border: 1px dashed var(--line); border-radius: 8px; padding: 10px 14px; }
 .sc-nodraw { margin-top: 0; }
 .sc-tr { border-style: solid; }
