@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Artificial Surf Reefs Survey</title>
-<meta name="description" content="Survey of 13 built artificial surf reefs worldwide (1997–2025): what was built, what it cost, how it ended. Every fact linked to a source, shown in a pop-up next to the claim. Includes a Scale view comparing every reef footprint at one common scale.">
+<meta name="description" content="Survey of 13 built artificial surf reefs worldwide (1997–2025): what was built, what it cost, how it ended. Every fact linked to a source, shown in a pop-up next to the claim. Gallery, table and interactive 3D models of the built reefs, with traced outlines and their methods.">
 <meta name="color-scheme" content="light dark">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,9 +22,7 @@
     <a class="topnav-brand" href="#" data-home title="Back to the main page (Gallery)">Surf reefs survey</a>
     <div class="views" role="group" aria-label="View">
       <button type="button" data-view="gallery" aria-pressed="true">Gallery</button>
-      <button type="button" data-view="map" aria-pressed="false">Map</button>
       <button type="button" data-view="table" aria-pressed="false">Table</button>
-      <button type="button" data-view="scale" aria-pressed="false">Scale</button>
       <button type="button" data-view="models3d" aria-pressed="false">3D models</button>
     </div>
   </div>
@@ -69,17 +67,8 @@
     <div class="grid" id="grid"></div>
   </section>
 
-  <section id="view-map" class="view" aria-label="Map" hidden>
-    <div id="map" class="map" role="region" aria-label="Map of reefs"></div>
-    <p class="map-note" id="map-note"></p>
-  </section>
-
   <section id="view-table" class="view" aria-label="Table" hidden>
     <div class="table-wrap"><table class="data" id="table"></table></div>
-  </section>
-
-  <section id="view-scale" class="view" aria-label="Scale: reef footprints at one common scale" hidden>
-    <div id="scale-root"></div>
   </section>
 
   <section id="view-models3d" class="view" aria-label="3D models of the built reefs" hidden>
@@ -131,7 +120,7 @@
 <script id="data" type="application/json">__DATA__</script>
 <script id="data3d" type="application/json">__DATA3D__</script>
 <script>
-/*__SCALE_JS__*/
+/*__FOOTPRINT_JS__*/
 </script>
 <script>
 /*__M3D_JS__*/

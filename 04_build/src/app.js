@@ -17,8 +17,6 @@
   ];
   var V_BY_KEY = {};
   VERDICTS.forEach(function (v, i) { v.order = i; V_BY_KEY[v.key] = v; });
-  var LEAFLET_CSS = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css';
-  var LEAFLET_JS = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js';
   var VERDICT_COLOR = { 'worked': '#1e7a46', 'partly worked': '#6fbf7e', 'mixed': '#c98a12', 'failed': '#9b1c1c', 'n-a': '#9aa0a8' };
 
   // ---------------------------------------------------------------- helpers
@@ -320,97 +318,17 @@
     $('#table').innerHTML = '<caption class="sr">Artificial surf reefs — click a row for details</caption>' + head + body;
   }
 
-  // -------------------------------------------------------------------- map
-  var leafletState = 'idle', map = null, markerLayer = null, tileFails = 0, usingFallbackTiles = false;
-  function loadLeaflet() {
-    if (window.L) return Promise.resolve(window.L);
-    if (leafletState === 'failed') return Promise.reject(new Error('failed'));
-    return new Promise(function (resolve, reject) {
-      var done = false;
-      var link = document.createElement('link');
-      link.rel = 'stylesheet'; link.href = LEAFLET_CSS; link.crossOrigin = 'anonymous';
-      document.head.appendChild(link);
-      var s = document.createElement('script');
-      s.src = LEAFLET_JS; s.async = true; s.crossOrigin = 'anonymous';
-      var timer = setTimeout(function () { if (!done) { done = true; leafletState = 'failed'; reject(new Error('timeout')); } }, 10000);
-      s.onload = function () { if (done) return; done = true; clearTimeout(timer); if (window.L) { leafletState = 'ok'; resolve(window.L); } else { leafletState = 'failed'; reject(new Error('no L')); } };
-      s.onerror = function () { if (done) return; done = true; clearTimeout(timer); leafletState = 'failed'; reject(new Error('error')); };
-      document.head.appendChild(s);
-    });
-  }
-  function miniHTML(r) {
-    var h = r.hero_image;
-    return '<div class="mini"><div class="mini-img">' +
-      (h && safeUrl(h.url) ? imgTag(h.url, stripRefs(h.depicts) || r.name) + fallbackBox(h.source_page, true) : fallbackBox(h && h.source_page, false)) +
-      '</div><strong>' + esc(r.name) + '</strong>' +
-      '<div class="muted">' + flag(r) + esc(r.place_short) + ' · ' + esc(r.year_short) + '</div>' +
-      '<div style="margin-top:4px">' + badge(r) + '</div>' +
-      '<button type="button" class="open-btn" data-open="' + esc(r.slug) + '">Open details</button></div>';
-  }
-  function renderMap(list) {
-    var skipped = REEFS.filter(function (r) { return !r.map_ok; });
-    $('#map-note').innerHTML = skipped.length
-      ? 'Not on the map (' + skipped.length + '): ' + skipped.map(function (r) {
-          return '<button type="button" class="linkish" data-open="' + esc(r.slug) + '">' + esc(r.name) + '</button> — ' + esc(r.map_note);
-        }).join('; ') + '. Pin positions are the coordinates given in each card and may mark the town rather than the reef itself.'
-      : '';
-    loadLeaflet().then(function (L) {
-      var el = $('#map');
-      if (!map) {
-        el.innerHTML = '';
-        map = L.map(el, { scrollWheelZoom: false, worldCopyJump: true }).setView([0, 60], 2);
-        var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-          maxZoom: 18, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        });
-        osm.on('tileerror', function () {
-          tileFails++;
-          if (tileFails > 6 && !usingFallbackTiles) {       // OSM may refuse tiles without a Referer (file://)
-            usingFallbackTiles = true;
-            map.removeLayer(osm);
-            L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-              maxZoom: 18, subdomains: 'abcd',
-              attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
-            }).addTo(map);
-          }
-        });
-        osm.addTo(map);
-        markerLayer = L.layerGroup().addTo(map);
-        map.on('popupopen', function (e) {
-          var btn = e.popup.getElement() && e.popup.getElement().querySelector('[data-open]');
-          if (btn) btn.focus({ preventScroll: true });
-        });
-      }
-      markerLayer.clearLayers();
-      var pts = [];
-      list.filter(function (r) { return r.map_ok; }).forEach(function (r) {
-        var m = L.circleMarker([r.lat, r.lon], {
-          radius: 9, weight: 2, color: '#ffffff', fillColor: VERDICT_COLOR[r.verdict] || '#888', fillOpacity: 1
-        }).bindPopup(miniHTML(r), { maxWidth: 240, minWidth: 220 }).bindTooltip(r.name);
-        markerLayer.addLayer(m);
-        pts.push([r.lat, r.lon]);
-      });
-      setTimeout(function () {
-        map.invalidateSize();
-        if (pts.length === 1) map.setView(pts[0], 8);
-        else if (pts.length) map.fitBounds(pts, { padding: [40, 40], maxZoom: 8 });
-      }, 30);
-    }).catch(function () {
-      showNotice('The map could not load (no internet connection, or the map library was blocked). Showing the gallery instead.');
-      setView('gallery');
-    });
-  }
-
   // ------------------------------------------------------------------ views
   function showNotice(msg) { var n = $('#notice'); n.textContent = msg; n.hidden = !msg; }
   function setView(v) {
     state.view = v;
     $all('.views button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.view === v)); });
-    ['gallery', 'map', 'table', 'scale', 'models3d'].forEach(function (k) { $('#view-' + k).hidden = k !== v; });
+    ['gallery', 'table', 'models3d'].forEach(function (k) { $('#view-' + k).hidden = k !== v; });
     document.body.setAttribute('data-view', v);     // lets CSS hide the reef filters on the 3D models tab
     var vh = v === 'gallery' ? '' : '#view/' + v;
     var keepHash = /^#reef\//.test(location.hash) || (v === 'models3d' && /^#view\/models3d\//.test(location.hash));
     if (!keepHash && location.hash !== vh) history.replaceState(null, '', vh || (location.pathname + location.search));
-    if (v !== 'map' && v !== 'gallery') showNotice('');
+    if (v !== 'gallery') showNotice('');
     if (v !== 'models3d' && window.ReefModels3D && window.ReefModels3D.unloadAll) window.ReefModels3D.unloadAll();   // free the WebGL viewers when the tab is left
     render();
   }
@@ -420,8 +338,6 @@
     $('#empty').hidden = list.length > 0;
     if (state.view === 'gallery') renderGallery(list);
     else if (state.view === 'table') renderTable(list);
-    else if (state.view === 'map') renderMap(list);
-    else if (state.view === 'scale' && window.ReefScale) window.ReefScale.render(list);
     else if (state.view === 'models3d' && window.ReefModels3D) window.ReefModels3D.render();   // src/models3d.js
     var sel = $('#sort'), val = state.sort + ':' + state.dir;
     if ($all('option', sel).some(function (o) { return o.value === val; })) sel.value = val;
@@ -619,7 +535,7 @@
       (firstSec ? '<button type="button" data-jump="' + keyOf(firstSec.title) + '">Story</button>' : '') +
       (nRev ? '<button type="button" data-jump="reviews">Reviews <span class="n">' + nRev + '</span></button>' : '') +
       (nImg + nVid + nFig ? '<button type="button" data-jump="' + (nImg ? 'images' : nVid ? 'videos' : 'figures') + '">Media <span class="n">' + (nImg + nVid + nFig) + '</span></button>' : '') +
-      (hasFp ? '<button type="button" data-jump="scale">Scale</button>' : '') +
+      (hasFp ? '<button type="button" data-jump="scale">Footprint</button>' : '') +
       '<button type="button" data-jump="references">Sources <span class="n">' + nRef + '</span></button>' +
       '<button type="button" class="xall" data-expand-all aria-pressed="false">Expand all</button>' +
     '</nav>';
@@ -639,8 +555,8 @@
       (nImg ? accHTML(pfx, 'images', 'Images', imagesBody(r), { forPrint: forPrint, count: nImg }) : '') +
       (nVid ? accHTML(pfx, 'videos', 'Videos', videosBody(r), { forPrint: forPrint, count: nVid }) : '') +
       (nFig ? accHTML(pfx, 'figures', 'Lior\'s figures', liorBody(r), { forPrint: forPrint, count: nFig }) : '') +
-      (hasFp ? accHTML(pfx, 'scale', 'Scale & footprint', window.ReefScale.detailSection(r, forPrint), { forPrint: forPrint,
-        peek: 'Plan drawing at a common scale, and how we drew it: every number with its source' }) : '') +
+      (hasFp ? accHTML(pfx, 'scale', 'Footprint & how we drew it', window.ReefScale.detailSection(r, forPrint), { forPrint: forPrint,
+        peek: 'Traced plan drawing, and how we drew it: every number with its source' }) : '') +
       accHTML(pfx, 'references', 'References', '<div class="refs">' + refsHTML(r, forPrint ? pfx + 'ref-' : 'ref-') + '</div>',
         { forPrint: forPrint, count: nRef, peek: 'Every [R#] above, with what each source supports and when it was checked' }) +
     '</article>';
@@ -669,7 +585,6 @@
      and on hover after a short delay for mouse users. Dismiss: Esc, click outside, × button,
      or opening another marker. */
   var pop = $('#ref-pop');
-  var scaleRoot = $('#view-scale');
   var SHEET_MQ = window.matchMedia ? window.matchMedia('(max-width: 599px)') : { matches: false };
   var HOVER_MQ = window.matchMedia ? window.matchMedia('(hover: hover) and (pointer: fine)') : { matches: false };
   var P = { open: false, anchor: null, id: null, pinned: false, hoverT: 0, leaveT: 0, closedAt: -1e9, raf: 0 };
@@ -887,8 +802,9 @@
 
   function routeFromHash() {
     var m = /^#reef\/([a-z0-9-]+)(?:\/([RS]\d+))?$/i.exec(location.hash);
-    var vm = /^#view\/(gallery|map|table|scale|models3d)(?:\/[a-z0-9-]+)?$/.exec(location.hash);
+    var vm = /^#view\/(gallery|table|models3d)(?:\/[a-z0-9-]+)?$/.exec(location.hash);
     if (vm && state.view !== vm[1]) setView(vm[1]);
+    else if (!vm && /^#view\//.test(location.hash) && state.view !== 'gallery') setView('gallery');   // retired #view/map, #view/scale (2026-10-10) -> gallery
     if (m && BY_SLUG[m[1]]) openReef(m[1], m[2], true);
     else if (dlg.open && !/^#reef\//.test(location.hash)) closeReef();
   }
@@ -909,7 +825,7 @@
       'Only facts carrying a reference tag [R#] are shown; conflicts between sources are stated, not resolved. Dollar conversions marked approximate are rough, mostly unsourced estimates.</p>' +
       '<p>Some reviews and references were first spotted in a parallel survey made with another AI (Gemini). None was taken on trust: each was re-fetched from its original source and checked by our own agents before being added, and is tagged <span class="tag tag-gem">via Gemini survey, verified 2026-09-25</span>.</p>' +
       '<p>Compiled ' + esc(META.compiled_on) + ' · <a href="#references">References index</a> · Sections 2 and 3 in preparation.</p>' +
-      '<p>Images are hotlinked from their sources and remain the property of their owners; credits are shown on each. Video embeds are served by YouTube (privacy-enhanced mode). Map data © OpenStreetMap contributors.</p>';
+      '<p>Images are hotlinked from their sources and remain the property of their owners; credits are shown on each. Video embeds are served by YouTube (privacy-enhanced mode).</p>';
   }
 
   // ---------------------------------------------------------------- print
@@ -953,7 +869,7 @@
       var t = e.target;
       // --- source pop-up: marker, controls inside it, and click-outside dismissal
       var mark = t.closest('.ref-mark');
-      if (mark && (dlg.contains(mark) || scaleRoot.contains(mark))) {
+      if (mark && dlg.contains(mark)) {
         e.preventDefault();
         if (P.open && P.anchor === mark && P.pinned) closePop(true);
         else openPop(mark, e.detail === 0 ? 'key' : 'click');
@@ -1014,7 +930,6 @@
       if (t.closest('a')) return;                  // let real links work (source links inside tiles etc.)
       var opener = t.closest('[data-open]');
       if (opener) {
-        if (map && opener.classList.contains('open-btn')) map.closePopup();
         openReef(opener.dataset.open);
       }
     });
@@ -1041,12 +956,10 @@
       clearTimeout(P.hoverT);
       if (P.open && !P.pinned) { clearTimeout(P.leaveT); P.leaveT = setTimeout(function () { if (!P.pinned) closePop(false); }, 260); }
     }
-    // hover preview works inside the reef dialog and in the Scale view; the pop-up itself
+    // hover preview works inside the reef dialog; the pop-up itself
     // (which may live in <body>) keeps itself open while hovered
     dlg.addEventListener('mouseover', onMarkOver);
     dlg.addEventListener('mouseout', onMarkOut);
-    scaleRoot.addEventListener('mouseover', onMarkOver);
-    scaleRoot.addEventListener('mouseout', onMarkOut);
     pop.addEventListener('mouseover', onMarkOver);
     pop.addEventListener('mouseout', onMarkOut);
     window.addEventListener('scroll', schedulePos, { passive: true });
@@ -1099,12 +1012,11 @@
 
   window.ReefInfo = { html: infoHTML };       // (i) pop-over markup for the 3D tab (src/models3d.js)
 
-  // ------------------------------------------------- API for scale.js (Scale view)
+  // ------------------------------------------------- API for footprint.js (reef-dialog footprint section)
   window.ReefApp = {
     REEFS: REEFS, BY_SLUG: BY_SLUG, VERDICT_COLOR: VERDICT_COLOR, V_BY_KEY: V_BY_KEY,
     esc: esc, safeUrl: safeUrl, extLink: extLink, refById: refById, markBtn: markBtn, badge: badge,
-    imgTag: imgTag, short: short, flag: flag, openReef: openReef, closeReef: closeReef, closePop: closePop, setView: setView,
-    rerender: function () { if (state.view === 'scale') render(); }
+    imgTag: imgTag, short: short, flag: flag, openReef: openReef, closeReef: closeReef, closePop: closePop, setView: setView
   };
 
   // ----------------------------------------------------------------- init
@@ -1113,7 +1025,7 @@
   renderRefIndex();
   renderFooter();
   bind();
-  var initView = /^#view\/(gallery|map|table|scale|models3d)(?:\/[a-z0-9-]+)?$/.exec(location.hash);
+  var initView = /^#view\/(gallery|table|models3d)(?:\/[a-z0-9-]+)?$/.exec(location.hash);
   setView(initView ? initView[1] : 'gallery');
   routeFromHash();
 })();

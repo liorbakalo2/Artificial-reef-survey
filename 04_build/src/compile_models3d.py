@@ -309,7 +309,7 @@ BUNDLE_NAMES = {"THREE", "OrbitControls", "CSS2DRenderer", "CSS2DObject"}
 # --- round 10: chrome injected into the COPY of every viewer (never into 07_scale) -----------------------------------------
 # 1. a slim top bar on the standalone page: "<- Back to the page" + the page's main tabs (hidden when the viewer is framed by the page);
 # 2. a compact layout for the framed viewer (the stage next to the photo panel gives it only ~60 % of the page width).
-BAR_TABS = [("Gallery", ""), ("Map", "#view/map"), ("Table", "#view/table"), ("Scale", "#view/scale"), ("3D models", "#view/models3d/{slug}")]
+BAR_TABS = [("Gallery", ""), ("Table", "#view/table"), ("3D models", "#view/models3d/{slug}")]   # Map and Scale tabs removed 2026-10-10
 BAR_CSS = """<style id="m3d-bar-css">
 /* injected by 04_build/src/compile_models3d.py (round 10); the original viewer is in 07_scale and is untouched */
 html:not(.m3d-embedded) { position: relative; top: 34px; height: calc(100% - 34px); }

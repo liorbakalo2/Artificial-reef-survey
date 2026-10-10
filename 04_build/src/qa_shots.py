@@ -49,21 +49,16 @@ def strip_scripts(dom):
     return re.sub(r"<script\b[^>]*>.*?</script>", "", dom, flags=re.S)
 
 
-def scale_view_checks(dom, n_reefs=13):
-    """Checks on a DOM dump of <page>#view/scale. Returns {name: bool}."""
+def retired_view_checks(dom):
+    """Checks on a DOM dump of <page>#view/scale (or #view/map): the Map and Scale tabs were removed 2026-10-10,
+    so the route must fall back to the gallery and no trace of the two views may remain. Returns {name: bool}."""
     body = strip_scripts(dom)
-    root = re.search(r'id="view-scale"([^>]*)>(.*?)</section>', body, re.S)
-    part = root.group(2) if root else ""
+    g = re.search(r'<section id="view-gallery"([^>]*)>', body)
     return {
-        "scale view is the visible view": bool(root) and "hidden" not in root.group(1),
-        f"{n_reefs} per-reef scale drawings (svg.sc-svg)": part.count('class="sc-svg"') == n_reefs,
-        f"{n_reefs} reef polygons groups in the drawings": part.count('class="sc-reef"') == n_reefs,
-        "overlay svg rendered": part.count('class="sc-ov-svg"') == 1,
-        f"overlay has {n_reefs} reef outlines": part.count('class="sc-ov-reef"') == n_reefs,
-        f"{n_reefs} 'How we drew this' blocks": part.count('class="sc-how"') == n_reefs,
-        f"comparison table has {n_reefs} rows": len(re.findall(r'<table class="data sc-cmp">.*?</table>', part, re.S)) == 1
-            and re.search(r'<table class="data sc-cmp">(.*?)</table>', part, re.S).group(1).count("<tr data-open") == n_reefs,
-        "source markers rendered in the Scale view": part.count('class="ref-mark"') > 50,
+        "retired route falls back to the gallery (visible)": bool(g) and "hidden" not in g.group(1),
+        "no Map / Scale view section or button": 'id="view-scale"' not in body and 'id="view-map"' not in body
+            and 'data-view="scale"' not in body and 'data-view="map"' not in body,
+        "top navigation is exactly Gallery, Table, 3D models": re.findall(r'<button type="button" data-view="([a-z0-9]+)"', body) == ["gallery", "table", "models3d"],
     }
 
 
@@ -126,12 +121,12 @@ def main():
             report.append(f"{'PASS' if v else 'FAIL'}  {k}")
             ok &= v
 
-        # 1b) the Scale view (opened through its #view/scale route)
+        # 1b) the retired Scale route (#view/scale must fall back to the gallery)
         r2 = run(exe, ["--dump-dom"], url + "#view/scale", prof)
         sdom = r2.stdout.decode("utf-8", "replace")
-        (QA / f"{a.prefix}_scale_dom.html").write_text(sdom, encoding="utf-8")
-        for k, v in scale_view_checks(sdom, len(reefs) or 13).items():
-            report.append(f"{'PASS' if v else 'FAIL'}  scale: {k}")
+        (QA / f"{a.prefix}_retired_dom.html").write_text(sdom, encoding="utf-8")
+        for k, v in retired_view_checks(sdom).items():
+            report.append(f"{'PASS' if v else 'FAIL'}  retired route: {k}")
             ok &= v
 
         # 2) saved screenshots
@@ -139,15 +134,14 @@ def main():
             ("desktop", "1440,900", url),
             ("desktop_full", "1440,4000", url),
             ("mobile", "390,844", url),
-            ("scale", "1440,900", url + "#view/scale"),
-            ("scale_full", "1440,9000", url + "#view/scale"),
-            ("scale_mobile", "390,2400", url + "#view/scale"),
+            ("table", "1440,900", url + "#view/table"),
+            ("models3d", "1440,900", url + "#view/models3d"),
         ]
         if slug:
             shots += [("detail", "1440,900", f"{url}#reef/{slug}"),
                       ("detail_ref", "1440,900", f"{url}#reef/{slug}/R1"),
                       ("detail_mobile", "390,844", f"{url}#reef/{slug}/R1")]
-        shots += [("scale_detail_S1", "1440,900", f"{url}#reef/borth-coastal-defence-reef/S1")]
+        shots += [("footprint_detail_S1", "1440,900", f"{url}#reef/borth-coastal-defence-reef/S1")]
         for name, size, u in shots:
             out = QA / f"{a.prefix}_{name}.png"
             if out.exists():

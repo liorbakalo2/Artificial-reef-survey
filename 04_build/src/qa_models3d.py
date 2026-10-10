@@ -236,9 +236,9 @@ def dom_checks(page: Path = PAGE, shots_prefix: str | None = None) -> dict[str, 
         c.click_selector("#topnav .views button[data-view=gallery]", 0, 1.0)
         res["from deep inside the tab one click on 'Gallery' shows the main page from its top"] = c.eval("!document.getElementById('view-gallery').hidden&&document.getElementById('view-models3d').hidden&&document.body.getAttribute('data-view')==='gallery'&&window.scrollY<5") is True
         res["leaving the tab frees the viewers (no iframe left)"] = c.eval("document.querySelectorAll('.m3d-viewer iframe').length") == 0
-        c.click_selector("#topnav .views button[data-view=map]", 0, 1.0)
+        c.click_selector("#topnav .views button[data-view=table]", 0, 1.0)
         c.click_selector("#topnav .views button[data-view=models3d]", 0, 1.5)
-        res["tabs switch from every view (Map -> 3D models) and the tab re-opens on its model"] = c.eval("!document.getElementById('view-models3d').hidden&&/^#view\\/models3d\\/[a-z0-9-]+$/.test(location.hash)&&document.querySelectorAll('section.m3d-model:not([hidden])').length===1") is True
+        res["tabs switch from every view (Table -> 3D models) and the tab re-opens on its model"] = c.eval("!document.getElementById('view-models3d').hidden&&/^#view\\/models3d\\/[a-z0-9-]+$/.test(location.hash)&&document.querySelectorAll('section.m3d-model:not([hidden])').length===1") is True
         c.eval("window.scrollTo(0, 2500)")
         c.click_selector("a[data-home]", 0, 1.0)
         res["brand link 'Surf reefs survey' returns to the main page (Gallery)"] = c.eval("document.body.getAttribute('data-view')==='gallery'&&window.scrollY<5") is True
@@ -301,7 +301,7 @@ def dom_checks(page: Path = PAGE, shots_prefix: str | None = None) -> dict[str, 
         c.goto(vp.as_uri(), 3)
         bar = c.eval(rect_js(".m3d-topbar"))
         res["standalone viewer page has a slim top bar (visible) with '<- Back to the page' and the main tabs"] = bool(bar and bar["h"] > 20 and bar["y"] == 0 and c.eval(
-            "(()=>{const a=[...document.querySelectorAll('.m3d-topbar a')].map(x=>x.textContent.trim());return a.some(t=>/Back to the page/.test(t))&&['Gallery','Map','Table','Scale','3D models'].every(t=>a.includes(t))})()") is True) or bar
+            "(()=>{const a=[...document.querySelectorAll('.m3d-topbar a')].map(x=>x.textContent.trim());return a.some(t=>/Back to the page/.test(t))&&['Gallery','Table','3D models'].every(t=>a.includes(t))})()") is True) or bar
         res["the bar does not cover the viewer (content starts below it)"] = c.eval("(()=>{const e=document.querySelector('#app,#main,#view,#stage');if(!e)return true;return e.getBoundingClientRect().top>=33})()") is True
         shot(c, "standalone_bar")
         c.click_selector(".m3d-topbar a.back", 0, 2.0)

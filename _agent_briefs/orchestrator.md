@@ -11,7 +11,7 @@
   - `REQUESTS_FOR_LIOR.md`.
 
 ## 2. Agents
-- **Spawning.** Use Sonnet agents (general-purpose, model sonnet, in the background), at most 3 at a time. Spawn only work Lior
+- **Spawning.** Use Sonnet agents (general-purpose, model sonnet, in the background). In the cloud there is NO cap (Lior, 2026-10-10: "we have a lot of credits, run all agents simultaneously"); the old 3-agent cap was for the PC. Parallel agents: one agent per folder; shared root files get appends only; new 3D models are listed in `04_build/data/models3d_hold.json` until their agent finishes; only one agent edits `04_build` at a time. Spawn only work Lior
   has given the go for.
 - **Prompts.** Each prompt names:
   - the files to read: `CLAUDE.md`, `_agent_briefs/common.md`, the task brief, and the folder's `HANDOFF.md`;
@@ -69,6 +69,7 @@
 - **Bunbury.** Verdict FAILED, despite the developer's claim.
 - **Narrowneck default outline.** The 2020 photo (Esri Wayback r9812, 2020-08-08), unless Lior chooses the Corbett 2023
   Option 2 design. Open.
+- **Page tabs (Lior, 2026-10-10).** Only Gallery, Table and 3D models. The Map and Scale (2D) tabs are removed (code archived, reversible); traced outlines stay reachable through the 3D outline versions and reef files.
 - **Navionics/Garmin.** Used without login. Their datum is inferred by RMS against an independent survey.
 - **Photo-match tolerance.** 2 m (or 10 % of length for reefs under 40 m); 4 m for georeferenced pictures. Set by the page agent;
   not yet confirmed by Lior.
@@ -126,7 +127,17 @@ All of them are in `REQUESTS_FOR_LIOR.md`:
 | 2026-10-10 | `_agent_briefs/task_mm_update.md` | `07_scale/shapes/mount-maunganui-reef/` | `3d/SOURCES_3D.md` CHECKPOINT (2026-10-07 b) + `HANDOFF.md` section 0 | DONE 2026-10-10: D1 in code (bed -3.6 ASSUMPTION / -2.8), volume table, img-23..38, card R16-R17; page refreshed. Report `3d/REPORT_D1_2026-10-10.md`. D8 open |
 | 2026-10-10 | `_agent_briefs/task_narrowneck_verify.md` | `07_scale/shapes/narrowneck-gold-coast/` | `VERIFY.md` CHECKPOINT + `HANDOFF.md` | DONE 2026-10-10: verified with issues; scale conflict resolved (none); 5 outline versions, default 2020 photo; img-54..65 registered. Report: `REPORT_stage1_2026-10-10.md`. Page refresh not needed (no 3D yet) |
 | 2026-10-10 | `_agent_briefs/task_seabed_fixes.md` (Boscombe part) | `07_scale/shapes/boscombe-surf-reef/3d/` | `HANDOFF.md` | DONE 2026-10-10: D2 applied; Navionics rms 1.20 -> 0.51 m, reef unchanged. Report `3d/REPORT_D2_2026-10-10.md`. Page texts edited; page refresh pending (after the MM agent) |
-| 2026-10-10 | `_agent_briefs/model_3d.md` (Narrowneck stage 2) | `07_scale/shapes/narrowneck-gold-coast/3d/` | `HANDOFF.md` 3D plan | RUNNING (fresh cloud agent) || 2026-10-10 | queue item 4 (Boscombe from Rendle 2016, P5; prompt only, no task file) | `07_scale/shapes/boscombe-surf-reef/` (notes, card, images; model NOT changed) | `HANDOFF.md` | DONE 2026-10-10: no model change needed; img-33..40, card R17. Report `REPORT_P5_2026-10-10.md`. Follow-up: METHODS wording (built crest) |
+| 2026-10-10 | `_agent_briefs/model_3d.md` (Narrowneck stage 2) | `07_scale/shapes/narrowneck-gold-coast/3d/` | `HANDOFF.md` 3D plan | RUNNING (fresh cloud agent) || 2026-10-10 | queue item 4 (Boscombe from Rendle 2016, P5; prompt only, no task file) | `07_scale/shapes/boscombe-surf-reef/` (notes, card, images; model NOT changed) | `HANDOFF.md` | DONE 2026-10-10: no model change needed; img-33..40, card R17. Report `REPORT_P5_2026-10-10.md`. Follow-up: METHODS wording (built crest) || 2026-10-10 | page agent (prompt only) | `04_build/` (remove Map + Scale tabs; small page fixes) | `HANDOFF.md` | RUNNING (fresh cloud agent) |
+| 2026-10-10 | `model_3d.md` STEP 0 (queue 6) + HANDOFF (queue 8) | `07_scale/shapes/palm-beach-gold-coast/` | `HANDOFF.md` | RUNNING (fresh cloud agent) |
+| 2026-10-10 | `verify_shape.md` (queue 7) + HANDOFF (queue 8) | `07_scale/shapes/prattes-reef-el-segundo/` | `HANDOFF.md` | RUNNING (fresh cloud agent) |
+| 2026-10-10 | housekeeping (queue 8 + Boscombe P5 wording) | Bunbury, `07_scale/bathymetry/*`, Boscombe METHODS wording | `HANDOFF.md` | RUNNING (fresh cloud agent) |
+| 2026-10-10 | papers intake P3 + P8 (queue 5) | `05_qa/papers_intake/` + image registries (cards: main applies later) | `HANDOFF.md` | RUNNING (fresh cloud agent) |
+| 2026-10-10 | `trace_shape.md` / `verify_shape.md` / `model_3d.md` (queue 9) | `07_scale/shapes/cables-reef-wa/` | `HANDOFF.md` | RUNNING (fresh cloud agent) |
+| 2026-10-10 | `trace_shape.md` / `verify_shape.md` / `model_3d.md` (queue 9) | `07_scale/shapes/opunake-reef/` | `HANDOFF.md` | RUNNING (fresh cloud agent) |
+| 2026-10-10 | `trace_shape.md` / `verify_shape.md` / `model_3d.md` (queue 9) | `07_scale/shapes/kovalam-reef-india/` | `HANDOFF.md` | RUNNING (fresh cloud agent) |
+| 2026-10-10 | `trace_shape.md` / `verify_shape.md` / `model_3d.md` (queue 9) | `07_scale/shapes/southern-ocean-surf-reef-albany/` | `HANDOFF.md` | RUNNING (fresh cloud agent) |
+| 2026-10-10 | `trace_shape.md` / `verify_shape.md` / `model_3d.md` (queue 9) | `07_scale/shapes/burkitts-reef-bargara/` | `HANDOFF.md` | RUNNING (fresh cloud agent) |
+| 2026-10-10 | `trace_shape.md` / `verify_shape.md` / `model_3d.md` (queue 9) | `07_scale/shapes/mexico-reef-2026-unnamed/` | `HANDOFF.md` | RUNNING (fresh cloud agent) |
 **When an agent finishes:**
 - save its report from the hand-back;
 - refresh the page: `python src/update_page.py` from `04_build`, after the model agents. Check the SUMMARY and FAIL lines;

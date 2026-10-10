@@ -7,7 +7,7 @@ in the data resolves to a reference of its own reef; no web image is copied loca
 every [R#] marker has a source pop-up target; no rejected video is rendered; Burkitts has 0 videos.
 Scale tab (2026-09-25): 13 footprints present; every polygon closed and its shoelace area within 15 %
 of area_m2; every R#/S# used in a footprint derivation has a pop-up target; provenance md copied
-next to the page; the Scale view renders (headless DOM dump via qa_shots.dump_dom); media rules
+next to the page; the retired #view/scale route falls back to the gallery (headless DOM dump via qa_shots.dump_dom); media rules
 (labels on images, site-only videos link-only, hero preference, nothing from *_rejected rendered).
 3D models tab (round 9, 2026-10-06; function check_models3d): every model discovered in 07_scale/shapes/*/3d has a section / viewer copy /
 poster; every gallery picture has its web copy, thumbnail, annotated copies on disk and a non-empty how_used + citation (the tooltip); vendored
@@ -377,19 +377,22 @@ def main() -> int:
     check(not no_target_fp, f"every one of {n_ids} R#/S# ids used in footprint derivations has a pop-up target (missing={no_target_fp})")
     docs_missing = [s for s, f in fps.items() if f and not (BUILD / (f.get("provenance_md") or "x")).is_file()]
     check(not docs_missing, f"provenance md for every footprint copied to docs/scale/ (missing={docs_missing})")
-    check("function linkRefs" in raw and 'id="view-scale"' in raw and 'data-view="scale"' in raw,
-          "Scale view code, view section and view toggle button are in the page")
+    # 2026-10-10: Map and Scale tabs removed; the footprint section of the reef dialog (footprint.js) stays = rule 1 traceability
+    check("function linkRefs" in raw and "window.ReefScale" in raw and "function detailSection" in raw,
+          "footprint detail code (reef dialog 'Footprint & how we drew it') is in the page")
+    check(all(x not in raw.lower() for x in ('id="view-scale"', 'id="view-map"', 'data-view="scale"', 'data-view="map"', "leaflet", "tile.openstreetmap")),
+          "no Map / Scale view, button, Leaflet or map-tile code remains in the page")
     try:
         sys.path.insert(0, str(Path(__file__).resolve().parent))
         import qa_shots
         exe, sdom = qa_shots.dump_dom(HTML.as_uri() + "#view/scale")
         if not sdom:
-            out.append("INFO no headless browser available: Scale view render check skipped")
+            out.append("INFO no headless browser available: retired-route check skipped")
         else:
-            for k, v in qa_shots.scale_view_checks(sdom, len(reefs)).items():
-                check(v, f"Scale view renders (headless DOM dump): {k}")
+            for k, v in qa_shots.retired_view_checks(sdom).items():
+                check(v, f"retired #view/scale route (headless DOM dump): {k}")
     except Exception as e:  # noqa: BLE001
-        check(False, f"Scale view render check crashed: {e!r}")
+        check(False, f"retired-route check crashed: {e!r}")
 
     # --- media rules (2026-09-25 media re-check) -------------------------------------------
     unlabelled = [f"{r['slug']}:{i}" for r in reefs for i, im in enumerate(r.get("images", [])) if im.get("shows") and not im.get("shows_label")]
@@ -425,8 +428,6 @@ def main() -> int:
 
     hero_null = [r["slug"] for r in reefs if not r.get("hero_image")]
     check(not hero_null, f"every reef has a hero image (null={hero_null})")
-    no_map = [f"{r['slug']} ({r['map_note']})" for r in reefs if not r.get("map_ok")]
-    out.append(f"INFO not plotted on map: {no_map}")
     m = data["meta"]
     out.append(f"INFO total documented cost ~US${m['usd_total_mid']:,.0f} (range {m['usd_total_low']:,.0f}-{m['usd_total_high']:,.0f}) of {m['n_with_cost']} with cost data")
     ext = sorted(set(re.findall(r"(?:src|href)=\"(https?://[^\"]+)\"", raw)))
