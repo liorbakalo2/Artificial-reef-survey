@@ -1,31 +1,46 @@
 {
- "_about": "Cables agent hand-back 2026-10-10: what the page agent needs to add cables-reef-wa to the 3D tab (per 04_build/UPDATE_PROTOCOL.md). Saved verbatim in substance by the orchestrator.",
+ "_about": "Cables agent hand-back 2026-10-10, REVISED 2026-10-10 (imagery + DoT bathymetry run): what the page agent needs to add cables-reef-wa to the 3D tab (per 04_build/UPDATE_PROTOCOL.md). The first version (design drawing only) is in archive/pre_imagery_2026-10-10/PAGE_TEXTS_FOR_MAIN.json; 'old_to_new' lists the changes.",
  "steps": "(1) remove cables-reef-wa from 04_build/data/models3d_hold.json; (2) add entries to data/models3d_combined.json, models3d_curated.json, models3d_caveats.json; (3) run python src/update_page.py --full",
  "combined": {
-  "frame_note": "model.js frame: x alongshore toward SOUTH (bearing 180), y offshore toward WEST (bearing 270); viewer maps (X = x, Y = z, Z = y); default outline version (design plan + extension)",
-  "offshore_scene_xz": [0, 1], "hand": 1,
+  "frame_note": "model.js frame: x along the design-drawing axis toward SOUTH-SOUTH-EAST (bearing 170.3 deg T, M.frame.bearing_x_deg), y offshore toward WEST-SOUTH-WEST (bearing 260.3 deg T); the frame is rotated 9.7 deg from true north (georeferenced, DoT soundings); viewer maps (X = x, Y = z, Z = y); default version = Nov 1999 surveyed surface on the original-plan footprint (M.default_version = survey_surface_1999_11)",
+  "offshore_scene_xz": [
+   0,
+   1
+  ],
+  "hand": 1,
   "polygon": "M.versions.filter(function(v){return v.id===M.default_version;})[0].outline_m",
-  "crest_z": "-1.0 - M.datum.rl_minus_msl_A (= -1.78 m MSL)",
-  "crest_note": "design crest line RL -1.0 under datum reading A (RL = chart datum, MSL = RL + 0.78); under reading B it would be -1.0 m MSL",
+  "crest_z": "M.versions.filter(function(v){return v.id===M.default_version;})[0].crest_AHD_m (= -1.55 m, highest point of the surveyed surface, AHD taken as MSL); design crest RL -1.0 = -1.78 m MSL under reading A",
+  "crest_note": "surveyed (Nov 1999) highest surface point -1.55 m AHD (highest single sounding -1.40 m); design crest line RL -1.0 = -1.78 m MSL under datum reading A (RL = chart datum, MSL = RL + 0.78) or -1.0 m under reading B; the soundings imply an RL-AHD offset of 0.5-0.6 m (nearer to A)",
   "shore_mode": "the seabed window starts at y = 190 m and the shore line (y = 0) is not modelled, so the 'seabed near 0 m MSL along y = 0' check cannot apply; use whatever mode skips it",
   "sublabels": "M.roles.south and M.roles.north (centroid, label)"
  },
  "curated": {
-  "state_short": "Design state of the 1999 reef: V-shaped granite mound (Lyons 1992 design plan) with the drawn southern-arm extension, at design levels RL -1.0 (crest line) to -3.0 (outer edge). No survey of the built reef; default outline = design plan + extension, three more outlines offered.",
+  "state_short": "Default: rock surface surveyed by WA Department of Transport in Nov 1999 (840 soundings, month before completion) on the Lyons (1992) design footprint, georeferenced by those soundings, over the measured 1998 seabed. Also: Feb 2002 surveyed surface, design surface with and without the drawn south-arm extension (not confirmed), two plan-only outlines.",
   "ve_note": "At VE = 5 the 2 m ramp looks 10 m high; slopes of 1:13 to 1:20 look like 1:2.6 to 1:4 (plan is true).",
   "key_numbers": [
-   "Footprint: {{versions/design_plan_plus_extension_1999/area_m2|n0}} m2 default (design plan + extension), {{versions/design_plan_original_1999/area_m2|n0}} m2 original plan; text 140 x 70 m (Blacka 2013 Table 4.2), traced 121 x 76 m from Blacka 2013 Fig A.2 (scale from its printed dimensions, +-3 %); extension 347 m2 from the RWR drawing (low resolution)",
-   "Rock volume: {{versions/design_plan_plus_extension_1999/volume_m3|n0}} m3 (bed level FITTED so the volume equals Blacka's 5,500 m3, A.1.3; other stated values 5,000 (Mead and Borrero 2011) and 3,500 (Wikipedia))",
-   "Crest: RL -1.0 = 1.78 m below MSL (reading A) or 1.0 m (reading B); ramp to RL -3.0 at the outer edge (Blacka 2013 Fig A.2); datum reading A is an ASSUMPTION",
-   "Water depth: modelled bed (ASSUMED plane, gradient 1:30 from the Pitt sketch) 2.8-5.8 m at MSL vs stated 3.0-6.0 m (Blacka Table 4.2)",
-   "Tide: range 0.8 m (Blacka 2013 Table 4.3); mean tide level 0.78 m above datum (Pattiaratchi 1999 p.3); HW/LW = MSL +-0.4 m is an estimate"
+   "Footprint: {{versions/survey_surface_1999_11/area_m2|n0}} m2 (original design plan, 121 x 76 m; position and orientation fitted to the Nov 1999 soundings: 91 % of rock soundings inside; Lyons 1992 plan as reproduced in Blacka 2013 Fig A.2); text says 140 x 70 m (Blacka Table 4.2); drawn south-arm extension adds {{versions/design_plan_plus_extension_1999/area_m2|n0}} - {{versions/design_plan_original_1999/area_m2|n0}} = 306 m2 net of overlap (347 m2 drawn), NOT confirmed by the 2002 soundings or imagery",
+   "Rock volume: {{versions/survey_surface_1999_11/volume_m3|n0}} m3 surveyed (Nov 1999, +-1,000) and {{versions/survey_surface_2002_02/volume_m3|n0}} m3 (Feb 2002); design surface on the measured bed {{versions/design_plan_original_1999/volume_m3|n0}} m3 (original) / {{versions/design_plan_plus_extension_1999/volume_m3|n0}} m3 (with extension); stated 5,500 (Blacka 2013 A.1.3), 5,000 (Rendle; Mead and Borrero 2011), 3,500 (Wikipedia)",
+   "Crest: highest surveyed surface point {{versions/survey_surface_1999_11/crest_AHD_m|n2}} m AHD (Nov 1999), {{versions/survey_surface_2002_02/crest_AHD_m|n2}} m (Feb 2002); design crest RL -1.0 = 1.78 m below MSL (reading A) or 1.0 m (reading B); the soundings imply RL - AHD = 0.5-0.6 m (A = 0.78, B = 0); AHD taken as MSL (ASSUMPTION, +-0.1-0.3 m)",
+   "Water depth: measured bed (DoT 1998 soundings, AHD) 2.8-6.6 m below MSL along the outline vs stated 3.0-6.0 m (Blacka Table 4.2); 254-263 m from the reef centre to the 0 m AHD line (stated 250 / 275 m)",
+   "Tide: range 0.8 m (Blacka 2013 Table 4.3); mean tide level 0.78 m above datum (Pattiaratchi 1999 p.3), BoM Fremantle gauge MSL 0.773 m above gauge zero (1992-2011); HW/LW = MSL +-0.4 m is an estimate; HAT / LAT not found"
   ]
  },
  "caveat_rows": [
-  "RL datum not stated on the drawing (0.78 m; reading A/B switch)",
-  "bed under and around the reef is modelled, not measured",
-  "extension size from a low-resolution drawing",
-  "built extent / levels unverified (no imagery or survey)",
-  "shore line and nearshore profile not modelled"
- ]
+  "datum link RL / AHD / MSL: reading A nearer to the soundings, 0.2-0.3 m gap unresolved (Transport WA offset not found)",
+  "rock surface from single-beam soundings (+-0.3 m, about 5 m line spacing), interpolated between lines; no multibeam or lidar of the rock",
+  "south-arm extension drawn (347 m2, 320 m3) but not confirmed by the 2002 soundings (+0.43 m, n = 23) or by imagery",
+  "design-surface versions are idealised: volume 3,920 / 4,249 m3, below the surveyed 4,671 - 5,219 m3",
+  "no survey after Feb 2002; later settlement (Pitt 2009) not modelled",
+  "shore line not drawn (0 m AHD line 254-263 m east); frame rotated 9.7 deg from true north"
+ ],
+ "old_to_new": {
+  "state_short": "old: 'Design state of the 1999 reef: V-shaped granite mound (Lyons 1992 design plan) with the drawn southern-arm extension ... No survey of the built reef; default outline = design plan + extension' -> new: see curated.state_short",
+  "footprint_default": "old: 4,355 m2 (design plan + extension, 121 x 89 m) -> new: 4,049 m2 (original plan, 121 x 76 m; default is now the surveyed surface on it)",
+  "rock_volume": "old: 5,500 m3 (bed FITTED to Blacka) -> new: 4,671 m3 surveyed Nov 1999 (5,219 Feb 2002); design surface 3,920 / 4,249 m3",
+  "water_depth": "old: modelled plane bed 2.8-5.8 m -> new: measured 2.8-6.6 m below MSL along the outline",
+  "crest": "old: design RL -1.0 only -> new: surveyed top -1.55 m AHD plus the design crest and the datum test",
+  "default_version": "old: design_plan_plus_extension_1999 -> new: survey_surface_1999_11 (model.js M.default_version); crest_z and frame_note changed; polygon expression unchanged",
+  "caveat_rows": "old rows 'bed modelled', 'built extent unverified (no imagery or survey)', 'extension from low-res drawing' -> replaced by the six rows above",
+  "model.js": "1.3 MB (was 0.67 MB): two extra surveyed-surface grids"
+ }
 }

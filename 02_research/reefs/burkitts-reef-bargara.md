@@ -171,3 +171,11 @@ See 05_qa/source_audit/cards_citations_2026-10-10.md. lat/lon = traced platform 
 - **gaps[1]** (JSON wording; the dossier prose differs): ...([R4][R8]) vs 'within weeks' ([R1])...
 - **gaps[2]** (JSON wording; the dossier prose differs): ...between [R4][R8] (specific year) and [R1][R6]...
 - **gaps[0]** (JSON wording; the dossier prose differs): ...Precise reef coordinates: not found in any text source. Citations audit 2026-10-10: lat/lon now = the traced rock-platform point -24.8157, 152.4675 (mean of the traced platform polygon, 07_scale/shapes/burkitts-reef-bargara/shape.json geo and HANDOFF.md section 3, Esri image 2025-09-05, LOW confidence: the platform that carries the reef, not the reshaped boulder zone itself); the old value was the Bargara town centre (-24.8205, 152.4625 [R11])...
+
+
+## Network pass 2026-10-10 (shape agent; facts side by side)
+- Reef zone: Redgard's Phase 3 work zones are marked on an oblique aerial in Jackson and Corbett (2007) Fig. 1 (also on the RWR page): 'reprofile several surface rocks', 'remove to lengthen break' (ellipse), 'improve shore break', 'reprofile dangerous rocks'. Georeferenced ellipse ~1,750 m2, +-20-30 m, low confidence [R19]. These are the later designed (Phase 3) works, not the Feb 1997 first works, which no source locates.
+- Tide: RWR 2.5 m swing [R4]; J&C text spring range ~2.5 m and Table 1 3.7 m [R19]; MSQ Burnett Heads MHWS-MLWS 2.33 m, HAT-LAT 3.68 m, MSL 1.78 m above LAT [R20].
+- Duration: RWR two days (8 hours) vs ABC/Swellnet 'within weeks' [R4 vs R1].
+- Dive depths 2-8 m 'along the headland' [R22].
+- Not found (dead ends): 02_research/dead_ends/burkitts-reef-bargara.json.

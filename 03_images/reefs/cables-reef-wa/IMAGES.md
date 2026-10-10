@@ -796,3 +796,78 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **rights**: Private research copy; reuse rights to be checked before any public release.
 - **display in HTML**: True
 - **added by**: cables-reef-wa shape + 3D task, 2026-10-10
+
+
+## Added 2026-10-10 (imagery + bathymetry run)
+
+### cables-reef-wa-img-32 - Esri World Imagery (current), Cable Station reef site, zoom 19
+- file: 07_scale/shapes/cables-reef-wa/src/imagery/esri_world_imagery_2025-12-06_z19.png
+- kind: satellite; date: 2025-12-06 (capture date from the service identify DATE field)
+- citation: Esri, Maxar, Earthstar Geographics, and the GIS User Community (2026). World Imagery current layer, tile mosaic around 32.0155 S 115.7478 E. Esri. https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/19/{y}/{x} Accessed 2026-10-10.
+- licence: Esri / Maxar imagery terms, not cleared for redistribution
+- shows: Dark rock patch of the V-shaped reef 250 m off the beach in clear water, seagrass and sand around it; no waves breaking.
+- how used for the model: Independent check of the outline georeferenced from the DoT soundings (position, orientation, extent, south-arm extension): outline drawn on the image by scripts/make_imagery_figs.py; no image information entered the fit. Result in VERIFY.md and METHODS_3D 3.7.
+
+### cables-reef-wa-img-33 - Esri Wayback release 2020-03-23, Cable Station reef, zoom 19
+- file: 07_scale/shapes/cables-reef-wa/src/imagery/esri_wayback_2020-03-23_z19.png
+- kind: satellite; date: release 2020-03-23; capture date not available (earlier than the release)
+- citation: Esri, Maxar, Earthstar Geographics, and the GIS User Community (2026). World Imagery Wayback release 2020-03-23 (release id 16062). Esri. https://wayback.maptiles.arcgis.com/arcgis/rest/services/World_Imagery/WMTS/1.0.0/default028mm/MapServer/tile/16062/19/{y}/{x} Accessed 2026-10-10.
+- licence: Esri / Maxar imagery terms, not cleared for redistribution
+- shows: Reef patch with a wave breaking on its north-east arm; clearest view of the structure in the series.
+- how used for the model: Independent check of the outline georeferenced from the DoT soundings (position, orientation, extent, south-arm extension): outline drawn on the image by scripts/make_imagery_figs.py; no image information entered the fit. Result in VERIFY.md and METHODS_3D 3.7.
+
+### cables-reef-wa-img-34 - Esri Wayback release 2022-06-08, Cable Station reef, zoom 19
+- file: 07_scale/shapes/cables-reef-wa/src/imagery/esri_wayback_2022-06-08_z19.png
+- kind: satellite; date: release 2022-06-08; capture date not available
+- citation: Esri, Maxar, Earthstar Geographics, and the GIS User Community (2026). World Imagery Wayback release 2022-06-08 (release id 44710). Esri. https://wayback.maptiles.arcgis.com/arcgis/rest/services/World_Imagery/WMTS/1.0.0/default028mm/MapServer/tile/44710/19/{y}/{x} Accessed 2026-10-10.
+- licence: Esri / Maxar imagery terms, not cleared for redistribution
+- shows: Dark, sharp-edged reef patch; the best contrast between rock and the surrounding sand.
+- how used for the model: Independent check of the outline georeferenced from the DoT soundings (position, orientation, extent, south-arm extension): outline drawn on the image by scripts/make_imagery_figs.py; no image information entered the fit. Result in VERIFY.md and METHODS_3D 3.7.
+
+### cables-reef-wa-img-35 - Esri Wayback release 2014-12-03, Cable Station reef, zoom 19
+- file: 07_scale/shapes/cables-reef-wa/src/imagery/esri_wayback_2014-12-03_z19.png
+- kind: satellite; date: release 2014-12-03; capture date not available
+- citation: Esri, Maxar, Earthstar Geographics, and the GIS User Community (2026). World Imagery Wayback release 2014-12-03 (release id 23383). Esri. https://wayback.maptiles.arcgis.com/arcgis/rest/services/World_Imagery/WMTS/1.0.0/default028mm/MapServer/tile/23383/19/{y}/{x} Accessed 2026-10-10.
+- licence: Esri / Maxar imagery terms, not cleared for redistribution
+- shows: Reef patch (dark, reddish in this version) on the seagrass terrace; oldest release at zoom 19.
+- how used for the model: Independent check of the outline georeferenced from the DoT soundings (position, orientation, extent, south-arm extension): outline drawn on the image by scripts/make_imagery_figs.py; no image information entered the fit. Result in VERIFY.md and METHODS_3D 3.7.
+
+### cables-reef-wa-img-36 - Esri Wayback release 2024-08-15, Cable Station reef, zoom 19
+- file: 07_scale/shapes/cables-reef-wa/src/imagery/esri_wayback_2024-08-15_z19.png
+- kind: satellite; date: release 2024-08-15; capture date not available
+- citation: Esri, Maxar, Earthstar Geographics, and the GIS User Community (2026). World Imagery Wayback release 2024-08-15 (release id 32553). Esri. https://wayback.maptiles.arcgis.com/arcgis/rest/services/World_Imagery/WMTS/1.0.0/default028mm/MapServer/tile/32553/19/{y}/{x} Accessed 2026-10-10.
+- licence: Esri / Maxar imagery terms, not cleared for redistribution
+- shows: Dark water, reef patch faint; kept for completeness of the series.
+- how used for the model: Independent check of the outline georeferenced from the DoT soundings (position, orientation, extent, south-arm extension): outline drawn on the image by scripts/make_imagery_figs.py; no image information entered the fit. Result in VERIFY.md and METHODS_3D 3.7.
+
+### cables-reef-wa-img-37 - Georeferenced outline on four Esri images (2014, 2020, 2022, 2025)
+- file: 07_scale/shapes/cables-reef-wa/src/imagery/annotated/overlay_montage_4dates.png
+- kind: diagram; date: 2026-10-10
+- citation: Own figure made for this project (cables-reef-wa imagery + bathymetry run, 2026-10-10), derived from the sources named in 3d/SOURCES_3D.md (Esri imagery; DoT WA bathymetry, CC BY 4.0).
+- licence: own work; derived from sources whose reuse rights are not cleared
+- shows: Four contrast-stretched crops of the reef with the georeferenced original-plan outline (magenta) and the extension triangle (yellow).
+- how used for the model: Visual verification of position, orientation and extent; the extension triangle is not distinguishable from the surroundings.
+
+### cables-reef-wa-img-38 - DoT WA soundings Nov 1999: rock thickness over the 1998 bed, with the fitted outline
+- file: 07_scale/shapes/cables-reef-wa/src/bathymetry/figures/survey_1999_thickness.png
+- kind: survey_plot; date: 2026-10-10
+- citation: Own figure made for this project (cables-reef-wa imagery + bathymetry run, 2026-10-10), derived from the sources named in 3d/SOURCES_3D.md (Esri imagery; DoT WA bathymetry, CC BY 4.0).
+- licence: own work; derived from sources whose reuse rights are not cleared
+- shows: 840 soundings coloured by thickness above the pre-construction bed; the V of the reef with the fitted design outline.
+- how used for the model: Georeference fit and default 3D surface (version survey_surface_1999_11); thickness values read as sounding minus bed.
+
+### cables-reef-wa-img-39 - DoT WA soundings Feb 2002: thickness over the 1998 bed, with the fitted outlines
+- file: 07_scale/shapes/cables-reef-wa/src/bathymetry/figures/survey_2002_thickness.png
+- kind: survey_plot; date: 2026-10-10
+- citation: Own figure made for this project (cables-reef-wa imagery + bathymetry run, 2026-10-10), derived from the sources named in 3d/SOURCES_3D.md (Esri imagery; DoT WA bathymetry, CC BY 4.0).
+- licence: own work; derived from sources whose reuse rights are not cleared
+- shows: Singlebeam lines (about 5 m apart) coloured by thickness above the 1998 bed; the south-arm extension triangle (SE) shows little rock.
+- how used for the model: Surveyed surface version survey_surface_2002_02; extension test (+0.43 m, n = 23).
+
+### cables-reef-wa-img-40 - DoT WA composite surface Perth_5m around the reef (m AHD) with the reef outline
+- file: 07_scale/shapes/cables-reef-wa/src/bathymetry/figures/bed_perth5m_contours.png
+- kind: survey_plot; date: 2026-10-10
+- citation: Own figure made for this project (cables-reef-wa imagery + bathymetry run, 2026-10-10), derived from the sources named in 3d/SOURCES_3D.md (Esri imagery; DoT WA bathymetry, CC BY 4.0).
+- licence: own work; derived from sources whose reuse rights are not cleared
+- shows: Seabed contours every 1 m from the 0 m AHD shoreline to 9 m, with the reef as a smoothed shallow mound.
+- how used for the model: Seabed beyond the 1998 survey coverage; shoreline bearing (7.8 deg T) and offshore distance (254-263 m).

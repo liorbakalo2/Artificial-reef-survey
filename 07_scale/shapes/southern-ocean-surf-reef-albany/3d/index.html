@@ -57,6 +57,7 @@ th{background:#1d2a37}
 .small{font-size:11px;color:var(--mut)}
 @media(max-width:900px){#app{grid-template-columns:minmax(0,1fr);grid-template-rows:58% 42%}#top{grid-template-columns:minmax(0,1fr);grid-template-areas:'h' 'v' 'c' 's'}#ver{max-width:100%}#conf,#state{white-space:normal}}
 </style>
+<script>window.addEventListener("error",function(e){window.__err=(window.__err||"")+e.message+" @"+e.lineno+":"+e.colno+"\n"});window.addEventListener("unhandledrejection",function(e){window.__err=(window.__err||"")+String(e.reason)+"\n"});</script>
 </head>
 <body>
 <div id="top">
@@ -91,7 +92,7 @@ const ZODN = 0;                                       // model z is metres AHD (
 const LATZ = M.datum.lat_AHD;                          // z of LAT (m AHD), derived
 const FR = M.frame, BX = FR.bearing_x_deg * D2R, BY = FR.bearing_y_deg * D2R;
 const fmt = (v, d = 2) => (v >= 0 ? '+' : '−') + Math.abs(v).toFixed(d);
-const m2s = (x, y, z) => new THREE.Vector3(x, z, y);          // canonical (x alongshore NNE, y offshore ESE, z up) -> scene (X, Y, Z)
+const m2s = (x, y, z) => new THREE.Vector3(x, z, y);          // canonical (x south, y offshore, z up) -> scene (X, Y, Z)
 const bearing = (dx, dy) => { const E = dx * Math.sin(BX) + dy * Math.sin(BY), N = dx * Math.cos(BX) + dy * Math.cos(BY); return (Math.atan2(E, N) / D2R + 360) % 360; };
 const dirFromBearing = h => { const E = Math.sin(h * D2R), N = Math.cos(h * D2R); return [E * Math.sin(BX) + N * Math.cos(BX), E * Math.sin(BY) + N * Math.cos(BY)]; };
 
@@ -298,7 +299,7 @@ function mkControls() {
   <div class="small">Rock surface (one colour; the three rock grades are not modelled separately). Yellow line = toe outline of the selected version. Seabed colour = depth. <b>The seabed under and around the reef is read from a 2015 design contour plot (LOW confidence): the heights of the rock pile above the bed are therefore uncertain by about &plusmn;1 m.</b></div>
   <h3>Selected version</h3><div id="vinfo" class="small"></div>
   <h3>Seabed in this model</h3>
-  <div class="small">Seabed = one cross-shore profile (alongshore uniform): contour crossings -1 to -7 m read from the Royal HaskoningDHV 2015 Option B plan (depth datum not stated, assumed AHD), landward of -0.5 m and seaward of -7 m assumed. Details: Methods and Sources tabs.</div>
+  <div class="small">Seabed = one cross-shore profile (alongshore uniform): contour crossings -1 to -7 m read from the Royal HaskoningDHV 2015 Option B plan (depth datum not stated, assumed AHD), landward of -0.5 m and seaward of -7 m assumed. Details: Methods and Sources tabs.</div>`;
   $('wl').oninput = e => setWater(parseFloat(e.target.value));
   $('wlb').onclick = e => { const id = e.target.dataset && e.target.dataset.id; if (!id) return; const l = allLevels.find(x => x.id === id); setWater(Math.min(wlMax, Math.max(wlMin, l.z))); };
   $('ve_s').oninput = e => setVE(parseFloat(e.target.value));

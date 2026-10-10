@@ -14,7 +14,7 @@ def one(x):
     return res
 if __name__=='__main__':
     R={}
-    for x in range(-160,41,20): R[x]=one(x)
+    for x in range(-160,1,20): R[x]=one(x)
     json.dump({str(k):v for k,v in R.items()},open(os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','src','levels2_raw.json'),'w'))
     for L in [-1]+[s[0] for s in spec]:
         v=[R[x][L] for x in R if R[x] and R[x].get(L) is not None]

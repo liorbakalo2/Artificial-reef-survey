@@ -60,3 +60,16 @@ Statements checked 9; ok 7; fixed 1; open 1 (build year gap); missing: every pla
 
 ## 9. Image registry check (03_images/reefs/mexico-reef-2026-unnamed/)
 2 rows checked by script: every row has citation, image_url, source_page, page_or_figure, image_date, credit, license, retrieved, shows, how_used and file; every file exists on disk. Licences are "not cleared" private copies as recorded. IMAGES.md not rewritten.
+
+## 10. Addendum - network pass 2026-10-10 (full access)
+The earlier statement "the RWR post was not re-fetched / RWR returned 403" is now superseded: the post was fetched (HTTP 200) and its text saved in src/web_text/rwr_unveiling-the-new-reef-in-mexico_2026-03-31_text.txt.
+| # | statement | source | location | how used | status |
+|---|---|---|---|---|---|
+| N1 | Reef location to be revealed 16 April 2026, 6:30 PM, California Surf Club, Redondo Waterfront; designer Simon Brandi Mortensen; reef "newly completed" | Indelicato, P. (2026-03-31). Unveiling the new reef in Mexico. Raised Water Research. https://raisedwaterresearch.com/unveiling-the-new-reef-in-mexico/ , accessed 2026-10-10 | post text | card R1 re-verified from the page | ok (re-fetched) |
+| N2 | Xala: 3,000 acres, five miles of coastline, ~65 miles south of Puerto Vallarta, 10 min from the Costalegre airport, two Ramsar estuaries | Xala (n.d.). Xala Community: Life on Mexico's Costalegre. https://xala.com/community/ ; Beachfront Real Estate in Costalegre, Jalisco. https://xala.com/real-estate/ ; both accessed 2026-10-10 | page text (saved in src/web_text) | location context only | ok (developer marketing, not independent) |
+| N3 | "construction of a new coastal protection reef to create a consistently great wave to surf while safeguarding the marine habitat" | Six Senses Xala press page, https://xala.com/press/six-senses-xala/ , accessed 2026-10-10 | page text | purpose | ok (marketing text) |
+| N4 | Mortensen designed "three additional surfing reefs globally, most recent in the Americas" | WSCC 2026 speaker bio, https://www.wscc2026.com.au/key-speakers/simon-brandi-mortensen/ , accessed 2026-10-10 | bio | supports A1 weakly (does not name Xala) | ok |
+| N5 | Chalacatepec airstrip at about 19.719,-105.231; Xola-Paraman lagoon mouth about 19.731,-105.291 | read off Esri World Imagery 2025-05-23 (registry img-03) via satellite.py pix2ll, by eye | src/imagery | location context | ok (by eye, +-100 m) |
+| N6 | No artificial rock works visible on the coast or at a rocky point (19.679,-105.262) | Esri imagery 2025-05-23, registry img-03, img-04 | viewed once each | none (no geometry) | ok; A3 (submerged reef invisible) still untested |
+| N7 | No MIA / DHI case study / paper found | dead_ends/mexico-reef-2026-unnamed.json | - | verdict | ok |
+New assumption A5: the Xala reef lies on the ~5-mile Xala coast (developer text); the exact stretch is unknown, so the images img-03/04 are not shown. No decision changes (D1-D4 stand). Counts of this addendum: statements 7, ok 7.

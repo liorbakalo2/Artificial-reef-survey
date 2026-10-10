@@ -2,7 +2,7 @@
  "slug": "burkitts-reef-bargara",
  "name": "Burkitts Reef (\"Greg's Reef\"), Bargara, Queensland",
  "status": "verified",
- "updated": "2026-10-10",
+ "updated": "2026-10-10 (network pass)",
  "verified_on": "2026-10-10",
  "confidence": {
   "level": "low",
@@ -254,6 +254,48 @@
    "traced_what": "nothing traced (no scale or north)",
    "match_notes": "qualitative comparison only",
    "role": "context"
+  },
+  {
+   "id": "img3",
+   "kind": "aerial (oblique, annotated)",
+   "title": "Bargara Reef Phase 3 (Redgard aerial with work zones marked), Fig. 1 of Jackson and Corbett 2007",
+   "url": "https://ref.coastalrestorationtrust.org.nz/site/assets/files/7954/2007_cp-review_mfar.pdf",
+   "source_page": "https://ref.coastalrestorationtrust.org.nz/site/assets/files/7954/2007_cp-review_mfar.pdf",
+   "page_or_figure": "p.1 Figure 1 (embedded image 465x285 px; render 300 dpi crop)",
+   "image_date": "unknown (before the Phase 3 works; paper 2007)",
+   "credit": "Greg Redgard, in Jackson and Corbett 2007",
+   "license": "not stated; private research copy",
+   "local_file": "03_images/reefs/burkitts-reef-bargara/burkitts-reef-bargara_jc2007-fig1-phase3-aerial_p1.png",
+   "registry_id": "burkitts-reef-bargara-img-09",
+   "role": "primary for the reef-zone position (qualitative, georeferenced by 3 GCPs)"
+  },
+  {
+   "id": "img4",
+   "kind": "aerial (oblique, annotated)",
+   "title": "RWR copy of the same Redgard aerial (Burkitts.jpg)",
+   "url": "https://raisedwaterresearch.com/wp-content/uploads/2019/11/Burkitts.jpg",
+   "source_page": "https://raisedwaterresearch.com/spot/artificial-reef/australia/queensland/burkitts-reef/",
+   "page_or_figure": "gallery image 1",
+   "image_date": "unknown",
+   "credit": "Image: Redgard (RWR)",
+   "license": "all rights reserved by RWR; private copy",
+   "local_file": "03_images/reefs/burkitts-reef-bargara/burkitts-reef-bargara_phase3-annotated-aerial_rwr.jpg",
+   "registry_id": "burkitts-reef-bargara-img-10",
+   "role": "cross-check (identical content)"
+  },
+  {
+   "id": "img5",
+   "kind": "satellite",
+   "title": "Esri Wayback release 23264, north part of the headland, z18, image captured 2016-07-31 (DigitalGlobe Vivid, 0.5 m)",
+   "url": "https://wayback.maptiles.arcgis.com/arcgis/rest/services/World_Imagery/WMTS/1.0.0/default028mm/MapServer/tile/23264/{z}/{y}/{x}",
+   "source_page": "Esri World Imagery Wayback; capture date from metadata layer World_Imagery_Metadata_2017_r18 layer 5 (SRC_DATE 20160731)",
+   "page_or_figure": "centre -24.8150, 152.4668, r=160 m; 591x591 px, 0.542 m/px",
+   "image_date": "2016-07-31",
+   "credit": "Esri, Maxar/DigitalGlobe, Earthstar Geographics, GIS User Community",
+   "license": "Esri/Maxar terms; private copy",
+   "local_file": "07_scale/shapes/burkitts-reef-bargara/src/wayback/burkitts_esri_wayback-rel23264_img2016-07-31_z18_north.png",
+   "registry_id": "burkitts-reef-bargara-img-16",
+   "role": "base for georeferencing img3"
   }
  ],
  "canonical": {
@@ -929,6 +971,629 @@
     ]
    ],
    "note": "South edge cut by the image frame; real platform is larger. Low confidence."
+  },
+  {
+   "id": "phase3_work_zone_ellipse_esri2016",
+   "name": "Work zone 'Remove to lengthen break' of Redgard's Phase 3 plan, georeferenced from an oblique aerial (J&C 2007 Fig 1) onto Esri imagery 2016-07-31",
+   "date": "Phase 3 plan (c. 2006-07, Redgard 2006 cited by J&C 2007); base image 2016-07-31",
+   "kind": "design_drawing_georeferenced",
+   "source_ids": [
+    "img3",
+    "img5"
+   ],
+   "method": "Affine map from 3 ground control points (outer tip of rock wall B, its south root, outer tip of groyne A) read on both images; the ellipse drawn by Redgard on the oblique was mapped point by point (72 vertices). scripts/phase3_zone_georef.py, results in scripts/phase3_zone_v1.json.",
+   "level": "inner rock flat just seaward of the rock pool, at the start of the break; NOT the 1997 first works (not located by any source) and not a survey: a designed/marked zone",
+   "area_m2": 1750,
+   "bbox_m": [
+    43,
+    52
+   ],
+   "polygons_m": [
+    [
+     [
+      -86.01,
+      92.14
+     ],
+     [
+      -84.61,
+      90.8
+     ],
+     [
+      -83.31,
+      89.29
+     ],
+     [
+      -82.14,
+      87.65
+     ],
+     [
+      -81.11,
+      85.87
+     ],
+     [
+      -80.21,
+      83.98
+     ],
+     [
+      -79.45,
+      81.98
+     ],
+     [
+      -78.85,
+      79.89
+     ],
+     [
+      -78.41,
+      77.73
+     ],
+     [
+      -78.12,
+      75.51
+     ],
+     [
+      -78.0,
+      73.25
+     ],
+     [
+      -78.04,
+      70.97
+     ],
+     [
+      -78.24,
+      68.69
+     ],
+     [
+      -78.6,
+      66.42
+     ],
+     [
+      -79.12,
+      64.18
+     ],
+     [
+      -79.79,
+      61.99
+     ],
+     [
+      -80.62,
+      59.86
+     ],
+     [
+      -81.58,
+      57.81
+     ],
+     [
+      -82.68,
+      55.85
+     ],
+     [
+      -83.91,
+      54.01
+     ],
+     [
+      -85.26,
+      52.29
+     ],
+     [
+      -86.71,
+      50.7
+     ],
+     [
+      -88.26,
+      49.27
+     ],
+     [
+      -89.9,
+      48.0
+     ],
+     [
+      -91.6,
+      46.89
+     ],
+     [
+      -93.37,
+      45.97
+     ],
+     [
+      -95.18,
+      45.23
+     ],
+     [
+      -97.03,
+      44.68
+     ],
+     [
+      -98.89,
+      44.33
+     ],
+     [
+      -100.75,
+      44.18
+     ],
+     [
+      -102.61,
+      44.22
+     ],
+     [
+      -104.44,
+      44.46
+     ],
+     [
+      -106.23,
+      44.91
+     ],
+     [
+      -107.97,
+      45.54
+     ],
+     [
+      -109.64,
+      46.36
+     ],
+     [
+      -111.24,
+      47.37
+     ],
+     [
+      -112.74,
+      48.55
+     ],
+     [
+      -114.15,
+      49.89
+     ],
+     [
+      -115.44,
+      51.4
+     ],
+     [
+      -116.61,
+      53.04
+     ],
+     [
+      -117.65,
+      54.82
+     ],
+     [
+      -118.55,
+      56.72
+     ],
+     [
+      -119.3,
+      58.72
+     ],
+     [
+      -119.9,
+      60.8
+     ],
+     [
+      -120.35,
+      62.96
+     ],
+     [
+      -120.63,
+      65.18
+     ],
+     [
+      -120.76,
+      67.44
+     ],
+     [
+      -120.72,
+      69.72
+     ],
+     [
+      -120.52,
+      72.0
+     ],
+     [
+      -120.16,
+      74.27
+     ],
+     [
+      -119.64,
+      76.51
+     ],
+     [
+      -118.96,
+      78.7
+     ],
+     [
+      -118.14,
+      80.84
+     ],
+     [
+      -117.17,
+      82.89
+     ],
+     [
+      -116.07,
+      84.84
+     ],
+     [
+      -114.84,
+      86.68
+     ],
+     [
+      -113.5,
+      88.41
+     ],
+     [
+      -112.04,
+      89.99
+     ],
+     [
+      -110.49,
+      91.42
+     ],
+     [
+      -108.86,
+      92.69
+     ],
+     [
+      -107.15,
+      93.8
+     ],
+     [
+      -105.38,
+      94.72
+     ],
+     [
+      -103.57,
+      95.46
+     ],
+     [
+      -101.73,
+      96.01
+     ],
+     [
+      -99.87,
+      96.36
+     ],
+     [
+      -98.0,
+      96.51
+     ],
+     [
+      -96.15,
+      96.47
+     ],
+     [
+      -94.32,
+      96.23
+     ],
+     [
+      -92.52,
+      95.79
+     ],
+     [
+      -90.79,
+      95.15
+     ],
+     [
+      -89.11,
+      94.33
+     ],
+     [
+      -87.51,
+      93.32
+     ]
+    ]
+   ],
+   "polygons_latlon": [
+    [
+     [
+      -24.8149048,
+      152.4666525
+     ],
+     [
+      -24.814917,
+      152.4666664
+     ],
+     [
+      -24.8149306,
+      152.4666791
+     ],
+     [
+      -24.8149456,
+      152.4666906
+     ],
+     [
+      -24.8149616,
+      152.4667008
+     ],
+     [
+      -24.8149788,
+      152.4667096
+     ],
+     [
+      -24.8149969,
+      152.466717
+     ],
+     [
+      -24.8150158,
+      152.4667229
+     ],
+     [
+      -24.8150353,
+      152.4667272
+     ],
+     [
+      -24.8150553,
+      152.4667299
+     ],
+     [
+      -24.8150757,
+      152.4667311
+     ],
+     [
+      -24.8150963,
+      152.4667306
+     ],
+     [
+      -24.8151169,
+      152.4667285
+     ],
+     [
+      -24.8151374,
+      152.4667249
+     ],
+     [
+      -24.8151576,
+      152.4667196
+     ],
+     [
+      -24.8151774,
+      152.4667129
+     ],
+     [
+      -24.8151966,
+      152.4667046
+     ],
+     [
+      -24.8152151,
+      152.466695
+     ],
+     [
+      -24.8152327,
+      152.466684
+     ],
+     [
+      -24.8152493,
+      152.4666718
+     ],
+     [
+      -24.8152648,
+      152.4666584
+     ],
+     [
+      -24.815279,
+      152.466644
+     ],
+     [
+      -24.8152919,
+      152.4666286
+     ],
+     [
+      -24.8153034,
+      152.4666123
+     ],
+     [
+      -24.8153133,
+      152.4665954
+     ],
+     [
+      -24.8153216,
+      152.4665779
+     ],
+     [
+      -24.8153282,
+      152.46656
+     ],
+     [
+      -24.8153331,
+      152.4665417
+     ],
+     [
+      -24.8153362,
+      152.4665233
+     ],
+     [
+      -24.8153375,
+      152.4665048
+     ],
+     [
+      -24.815337,
+      152.4664864
+     ],
+     [
+      -24.8153348,
+      152.4664683
+     ],
+     [
+      -24.8153307,
+      152.4664506
+     ],
+     [
+      -24.8153249,
+      152.4664334
+     ],
+     [
+      -24.8153174,
+      152.4664169
+     ],
+     [
+      -24.8153083,
+      152.4664012
+     ],
+     [
+      -24.8152976,
+      152.4663863
+     ],
+     [
+      -24.8152854,
+      152.4663725
+     ],
+     [
+      -24.8152718,
+      152.4663597
+     ],
+     [
+      -24.8152569,
+      152.4663482
+     ],
+     [
+      -24.8152408,
+      152.466338
+     ],
+     [
+      -24.8152236,
+      152.4663292
+     ],
+     [
+      -24.8152055,
+      152.4663218
+     ],
+     [
+      -24.8151867,
+      152.466316
+     ],
+     [
+      -24.8151671,
+      152.4663116
+     ],
+     [
+      -24.8151471,
+      152.4663089
+     ],
+     [
+      -24.8151267,
+      152.4663077
+     ],
+     [
+      -24.8151061,
+      152.4663082
+     ],
+     [
+      -24.8150855,
+      152.4663103
+     ],
+     [
+      -24.815065,
+      152.466314
+     ],
+     [
+      -24.8150448,
+      152.4663192
+     ],
+     [
+      -24.815025,
+      152.466326
+     ],
+     [
+      -24.8150058,
+      152.4663342
+     ],
+     [
+      -24.8149873,
+      152.4663438
+     ],
+     [
+      -24.8149697,
+      152.4663548
+     ],
+     [
+      -24.8149531,
+      152.466367
+     ],
+     [
+      -24.8149376,
+      152.4663804
+     ],
+     [
+      -24.8149234,
+      152.4663949
+     ],
+     [
+      -24.8149105,
+      152.4664103
+     ],
+     [
+      -24.814899,
+      152.4664265
+     ],
+     [
+      -24.8148891,
+      152.4664434
+     ],
+     [
+      -24.8148809,
+      152.4664609
+     ],
+     [
+      -24.8148743,
+      152.4664789
+     ],
+     [
+      -24.8148694,
+      152.4664971
+     ],
+     [
+      -24.8148663,
+      152.4665156
+     ],
+     [
+      -24.8148649,
+      152.466534
+     ],
+     [
+      -24.8148654,
+      152.4665524
+     ],
+     [
+      -24.8148677,
+      152.4665705
+     ],
+     [
+      -24.8148717,
+      152.4665882
+     ],
+     [
+      -24.8148775,
+      152.4666054
+     ],
+     [
+      -24.814885,
+      152.4666219
+     ],
+     [
+      -24.8148941,
+      152.4666377
+     ]
+    ]
+   ],
+   "frame_note": "same N-up metres frame as the platform outline (origin -24.81574, 152.46750)",
+   "confidence": "low",
+   "position_uncertainty_m": "+-20 to 30 (pick noise alone gives +-13 m 1 sigma at the zone centre; affine-for-perspective error not quantified; arrow-tip checks 5-15 m on white-water patches)",
+   "arrow_tips_latlon": {
+    "Reprofile several surface rocks": [
+     -24.814686231816168,
+     152.46611535738086
+    ],
+    "Remove to lengthen break (arrow tip at ellipse end)": [
+     -24.814899971717217,
+     152.46667626926907
+    ],
+    "Improve shore break": [
+     -24.815339799184564,
+     152.46735725147204
+    ],
+    "Reprofile dangerous rocks": [
+     -24.8159609627309,
+     152.46834175531677
+    ]
+   },
+   "note": "The other three marks (reprofile several surface rocks / improve shore break / reprofile dangerous rocks) are arrows, not areas: only their tip positions are given."
   }
  ],
  "default_outline": "photo_trace_esri_2025",
@@ -949,6 +1614,13 @@
    "drawing_value": "not derivable",
    "diff_pct": null,
    "comment": "300 m3 spread over 31,500 m2 would be ~1 cm; confirms the reshaped zone is a small sub-area of the platform."
+  },
+  {
+   "quantity": "tidal range",
+   "text_value": "RWR/card 2.5 m swing; J&C 2007 text 'spring tidal range of about 2.5 m'; J&C 2007 Table 1 '3.7 m'",
+   "measured_value": "MSQ Burnett Heads 2026: MHWS-MLWS 2.33 m; HAT-LAT 3.68 m",
+   "verdict": "consistent: 2.5 m ~ spring range (2.33 m), 3.7 m ~ HAT-LAT (3.68 m); values kept side by side",
+   "source": "R19, R20"
   }
  ],
  "gemini": {
@@ -976,7 +1648,13 @@
    "card + dossier (no footprint figure)",
    "earlier footprint pass (Google Maps visual estimate)",
    "Esri World Imagery current (saved locally)",
-   "registry images 01-07"
+   "registry images 01-07",
+   "J&C 2007 (found; Fig 1 used)",
+   "Esri Wayback 197 releases",
+   "QImagery (token needed)",
+   "BRC 2016 DEM",
+   "MSQ tide planes",
+   "SurfingRamps (unreachable)"
   ],
   "gemini_sources": "dead link + 3 homepages",
   "why_insufficient": "No source defines the reshaped zone, a crest or any depth; only the natural platform's visible limits could be traced.",
@@ -1031,6 +1709,34 @@
    "url": "not confirmed",
    "accessed": "2026-10-10 (Lior's PDF in papers/)",
    "supports": "~300 m3 and AUD 10,000 (corroboration; independence from R3/R4 not established)"
+  },
+  {
+   "id": "R19",
+   "citation": "Jackson, L.A. and Corbett, B. (2007). Review of Existing Multi-Functional Artificial Reefs. Australasian Conference on Coasts and Ports 2007, International Coastal Management, Queensland (place of the conference not stated in the PDF). Section 2 'Bargara Reef', pp. 1-2, Figures 1-3, Table 1 (p. 6).",
+   "url": "https://ref.coastalrestorationtrust.org.nz/site/assets/files/7954/2007_cp-review_mfar.pdf",
+   "accessed": "2026-10-10",
+   "supports": "Phase 3 work-zone figure; tide statements (spring range ~2.5 m in text; 3.7 m in Table 1); ~300 m3, ~A$10,000; no monitoring done; works on the north side of the headland (a half V)"
+  },
+  {
+   "id": "R20",
+   "citation": "Maritime Safety Queensland (2026). Semidiurnal Tidal Planes - 2026, height above Queensland Port Datum (LAT 1992), epoch 2010-2029, page 8: Bundaberg (Burnett Heads) 24 46 S 152 23 E, standard port: MHWS 2.94, MHWN 2.35, MLWN 1.20, MLWS 0.61, MSL 1.78, HAT 3.68 m; mark PSM 3853 level 6.061.",
+   "url": "https://www.msq.qld.gov.au/_/media/tmronline/msqinternet/msqfiles/home/tides/tidal-planes/2026-semidiurnal-tidal-planes.pdf",
+   "accessed": "2026-10-10",
+   "supports": "tide levels (datum LAT) for Burnett Heads, the nearest standard port; spring range MHWS-MLWS 2.33 m; HAT-LAT 3.68 m"
+  },
+  {
+   "id": "R21",
+   "citation": "Bundaberg Regional Council (2016). BRC Elevation Basemap 2016, 1 m DEM, ArcGIS MapServer layer 0 (REST identify, 8 m grid).",
+   "url": "https://mappingdata.bundaberg.qld.gov.au/arcgis/rest/services/BRC_2016_DEM_1m/MapServer",
+   "accessed": "2026-10-10",
+   "supports": "context: platform and zone are NoData; lowest valid cell 0.58 m (datum not stated)"
+  },
+  {
+   "id": "R22",
+   "citation": "Bundaberg Region / Tourism and Events Queensland (n.d.). Burkitts Reef Dive Site. 'Stretching along the headland in depths of two to eight metres'.",
+   "url": "https://www.bundabergregion.org/?p=5180",
+   "accessed": "2026-10-10",
+   "supports": "dive-site depth range along the headland 2-8 m (context; supports card R10 on location: same headland)"
   }
  ],
  "verification": [
@@ -1075,12 +1781,21 @@
    "registry images 01-07 (sketch, construction photo, surf photos: no scale; 06-07 are another dive site)",
    "earlier Google Maps estimate 120 x 46 m: not reproducible",
    "Gemini 80 x 40 m: uncited, dead links",
-   "WebSearch 2026-10-10 for tide planes: Maritime Safety Queensland publishes Burnett Heads values, not retrieved"
+   "WebSearch 2026-10-10 for tide planes: Maritime Safety Queensland publishes Burnett Heads values, not retrieved",
+   "J&C 2007 PDF fetched 2026-10-10: Fig 1 'Bargara Reef Phase 3' = annotated oblique aerial (USED)",
+   "RWR spot page re-fetched: same figure, text 'relocated them to gaps in the reef where the wave would break at higher tides' (no location)",
+   "ABC article 2024-01-28 re-fetched: 5 photos, none locates the zone",
+   "Esri Wayback: 197 releases scanned, 6 distinct images at z18 (2016-07-31 .. 2025-09-05) + 2010-09-11 at z17; no pre-2010 imagery",
+   "QImagery archive aerials: ImageServer needs a token (not bypassed)",
+   "BRC 2016 1 m DEM (public REST): platform and zone are NoData (below the LiDAR floor, lowest valid 0.58 m)",
+   "MSQ 2026 tidal planes, Burnett Heads (retrieved)",
+   "SurfingRamps host unreachable; Wikimedia Commons: nothing found; AusSeabed/GA: no Bargara survey found"
   ],
   "assumed": [
    "A1-A8 below"
   ],
-  "audit": "SOURCE_AUDIT_2026-10-10.md"
+  "audit": "SOURCE_AUDIT_2026-10-10.md",
+  "status_2026_10_10_network_pass": "reef_zone.located=True (low): Phase 3 work zones from J&C 2007 Fig 1; displayable as a labelled secondary layer once main/Lior flips footprint.json; the 1997 zone is still unlocated"
  },
  "assumptions": [
   {
@@ -1130,6 +1845,36 @@
    "assumption": "Petition sketch date 7/9/1980 read as 7 Sept 1980",
    "effect": "context only",
    "replaced_by": "original"
+  },
+  {
+   "id": "A9",
+   "assumption": "The Phase 3 marks (J&C Fig 1) lie on the same natural platform surface as the 1997 works and are a fair indication of where the reshaping effort is concentrated",
+   "effect": "the reef zone is NOT the 1997 first works; only the Phase 3 plan is located; if Phase 3 was never built, the zones are a plan, not a built state",
+   "replaced_by": "Redgard / Bargara Boardriders account of what was built when"
+  },
+  {
+   "id": "A10",
+   "assumption": "Ground is a plane at sea level for the oblique-to-plan map (affine from 3 GCPs); the camera looks WNW from over the sea east of the point",
+   "effect": "perspective error not removed; zone position +-20-30 m; extrapolation south of the GCP strip is the weakest part",
+   "replaced_by": "a 4th and 5th GCP on the southern platform from a second oblique, or Redgard's original sketch plan"
+  },
+  {
+   "id": "A11",
+   "assumption": "The rock walls A and B and the pool in the oblique are the same structures as in the 2016 satellite frame (no change between the photo date and 2016)",
+   "effect": "GCPs are wrong if the walls were changed; the photo date is unknown",
+   "replaced_by": "dated copy of the photo"
+  },
+  {
+   "id": "A12",
+   "assumption": "The Esri 2016-07-31 image is a valid base for a feature drawn on a photo of unknown earlier date (platform unchanged, A5)",
+   "effect": "none beyond A5",
+   "replaced_by": "1990s aerial (QImagery, request form)"
+  },
+  {
+   "id": "A13",
+   "assumption": "BRC DEM datum is AHD (service text does not state it) and NoData over the platform = water or below the LiDAR floor at capture",
+   "effect": "only used to say no platform level can be taken from it",
+   "replaced_by": "metadata from Bundaberg Regional Council"
   }
  ],
  "decisions": [
@@ -1167,6 +1912,57 @@
    "options": "-",
    "who": "agent",
    "reason": "unverifiable; dive site identity unclear"
+  },
+  {
+   "id": "D6",
+   "decision": "Mark the reef zone as LOCATED (low) and displayable only as a labelled Phase 3 layer; keep the platform outline as default",
+   "options": "keep hidden / show ellipse as the reef / show as labelled secondary layer",
+   "who": "agent 2026-10-10 (brief: displayable only if a real source locates it); final display switch left to main/Lior",
+   "reason": "J&C Fig 1 is a real, published (Redgard) marking of work areas; but it is the Phase 3 plan and approximate"
+  },
+  {
+   "id": "D7",
+   "decision": "Affine (3 GCP) rather than homography",
+   "options": "homography needs >=4 well spread GCPs; only the north strip had crisp features",
+   "who": "agent 2026-10-10",
+   "reason": "avoid an ill-conditioned fit; checked by arrow tips falling on white-water patches / the platform edge (5-15 m)"
+  },
+  {
+   "id": "D8",
+   "decision": "Platform outline not re-traced on the larger south frame",
+   "options": "re-trace / leave",
+   "who": "agent 2026-10-10",
+   "reason": "platform is not the reef; shape hidden; the wide frames are saved (img-15) for a later trace"
   }
- ]
+ ],
+ "reef_zone": {
+  "located": true,
+  "confidence": "low",
+  "what_is_located": "Redgard's Phase 3 work zones (later, designed additional works), NOT the Feb 1997 first works",
+  "source": "J&C 2007 Fig 1 (img3, registry img-09; RWR copy img4, img-10)",
+  "primary_zone": "outline_versions[phase3_work_zone_ellipse_esri2016]",
+  "arrow_tips_latlon": {
+   "Reprofile several surface rocks": [
+    -24.814686231816168,
+    152.46611535738086
+   ],
+   "Remove to lengthen break (arrow tip at ellipse end)": [
+    -24.814899971717217,
+    152.46667626926907
+   ],
+   "Improve shore break": [
+    -24.815339799184564,
+    152.46735725147204
+   ],
+   "Reprofile dangerous rocks": [
+    -24.8159609627309,
+    152.46834175531677
+   ]
+  },
+  "reading": "Zones lie on the NORTH and EAST seaward side of the platform, from just seaward of the rock pool (start of the break) along the breaking edge towards the east flank; the south and the inner platform are not marked.",
+  "displayable": true,
+  "display_conditions": "show only as a separate labelled layer 'Phase 3 work zones (Redgard, via Jackson and Corbett 2007), position approximate +-25 m, not the 1997 works'; do not draw it as the reef outline; the 1997 reshaped zone remains unlocated",
+  "not_located": "the ~12 boulders / ~300 m3 of Feb 1997: RWR says 'relocated them to gaps in the reef where the wave would break at higher tides', J&C: 'relocate / break boulders observed to be adversely impacting the break ... also used to fill holes'; no coordinates or plan",
+  "decision_needed": "Lior/main: set footprint.json display (07_scale/reefs/burkitts-reef-bargara.footprint.json is outside this agent's scope) - see REQUESTS_FOR_LIOR.md"
+ }
 }

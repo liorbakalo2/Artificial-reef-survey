@@ -1,55 +1,52 @@
-# HANDOFF - cables-reef-wa (fresh agent 2026-10-10, queue item 9: traced + 3D built; verification partial, needs network)
+# HANDOFF - cables-reef-wa (imagery + bathymetry run 2026-10-10, network open; supersedes the first run's handoff, archived in 3d/archive/pre_imagery_2026-10-10/HANDOFF.md)
 
 ## 1. Status per stage
 | stage | state | confidence and why |
 |---|---|---|
-| trace | done 2026-10-10 (shape.json status "traced") | MEDIUM: design plan (Lyons 1992, reproduced in Blacka 2013 Fig A.2) traced; scale from its own printed dimensions (6.51 px/m, +-3%); 121 x 76 m vs text 140 x 70 (-13% / +9%); no survey or imagery of the built reef |
-| verify | PARTIAL (VERIFY.md): internal checks pass; no satellite / aerial / bathymetry (network blocked) | not marked "verified" |
-| 3D | built 2026-10-10 (3d/) | LOW: plan medium, design levels exact but datum of RL not stated (0.78 m), bed modelled, nothing surveyed after construction |
-| registry | done: 8 existing rows given results / annotated files, 5 own-figure rows added (img-27..31); NEW_IMAGES_LOG lines added | - |
-| page | NOT done (main adds the model, see section 6) | - |
+| trace | done; shape.json status "verified" (2026-10-10), georeferenced ("geo") | HIGH for the original design plan (DoT WA soundings Nov 1999: 91.0 % of rock soundings inside, free scale 0.979; 5 Esri images), LOW for the drawn south-arm extension (not confirmed) |
+| verify | DONE (VERIFY.md: R1-R11, before/after table) | overlay match good; extension not confirmed; design volume low vs survey |
+| 3D | REBUILT 2026-10-10 (3d/): 6 versions, default = Nov 1999 surveyed surface, measured bed | MEDIUM: surveyed single-beam surface (+-0.3 m, interpolated between ~5 m lines), measured bed, datum link RL/AHD unresolved by 0.2-0.3 m |
+| registry | done: img-01..40 (new: 32-36 Esri tiles, 37 overlay montage, 38-40 survey figures); NEW_IMAGES_LOG lines added; img-30/31 refreshed | check_registry: cables ok (40 rows) |
+| source audit | first audit 2026-10-10 + Addendum 1 (rows 28-37 etc.) in SOURCE_AUDIT_2026-10-10.md; METHODS_3D A1-A17, X1-X13, section 11 (changes) | - |
+| page | NOT done (main adds the model; texts in 3d/PAGE_TEXTS_FOR_MAIN.json, revised, with old_to_new) | - |
 
-## 2. Key decisions and why
-- PRIMARY source = Blacka et al. (2013) Fig A.2 (registry img-26, added by the papers-intake agent): same CAD drawing as the RWR 'original design' but legible (labels RL -1.00..-2.50, slopes 1:20/1:15/~1:13, dimensions 40.0/26.0/30.0 m). Scale from four printed dimensions, not from an assumption.
-- DEFAULT outline = design plan (outer foot / 'interface line') + the drawn southern-arm extension (img-06, 320 m3): measured survey > design drawing of the built version > photo trace; no survey exists. Other versions: original plan without extension, paper Fig 7 V (assumed 100 m grid, plan only), Pitt concept sketch (plan only).
-- Orientation: apex offshore (west), north = drawing right; arms 42.7 / 44.7 deg to the shore = the 45 deg design peel angle. Shoreline assumed N-S.
-- Model frame (model.js): x SOUTH (= -x of shape.json), y WEST, z up, z = 0 at MSL under datum reading A (z_MSL = RL - 0.78). Reading B (RL = MSL, Blacka's wording) is a switch in the viewer (moves the water 0.78 m).
-- Bed = plane, gradient 1:30 (Pitt sketch), level fitted so modelled rock volume = 5,500 m3 (Blacka A.1.3): RL -3.50 m at y = 270 m; 5,000 m3 -> 3.36 m; 3,500 m3 -> 2.92 m. A calibration, flagged estimated.
-- Only the two Lyons-plan versions have a 3D mesh; Fig 7 and Pitt outlines are plan-only (no design levels).
-- 3D viewer derived from the Borth viewer (aux/make_index.py patches it); previews use the vendored three.js (aux/preview.py).
+## 2. Key decisions and why (details METHODS_3D section 10)
+- X2 (revised): DEFAULT = Nov 1999 DoT surveyed surface on the original-plan footprint (standing rule 4: measured survey > design drawing). Design plan with the extension is a toggle labelled "not confirmed".
+- X3: datum reading A kept as the default for design versions (survey-implied RL - AHD = 0.5-0.6 m vs A 0.78, B 0); surveyed versions are AHD (= MSL, A12) and ignore the A/B switch.
+- X4 (revised): seabed = measured (DoT 1998 soundings + Perth_5m); no volume is fitted.
+- X9: Nov 1999 rather than Feb 2002 as default surveyed surface (closest to completion). X10: extension demoted. X11: georeference by fitting to soundings, imagery only as a check. X12: bed sources. X13: frame keeps the drawing's axes (9.7 deg from true north).
+- Primary plan source remains Blacka (2013) Fig A.2 (img-26); RWR originals re-downloaded: identical files (no higher resolution exists).
 
-## 3. Key numbers (units, datum, source id)
-- Footprint (A2 trace, scale 6.51 px/m): original 4,049 m2, 121.2 x 76.3 m; with extension 4,355 m2, 121 x 89 m; ramp (between the rock bands) 3,113 m2; extension 347 m2 (320 m3 stated, 0.92 m mean) [img-26, img-06]. Scale-range area 4,105-4,629 m2.
-- Design levels RL: crest line -1.0, set-out line -3.0, contours -1.5/-2.0/-2.5; slopes 1:20 (apex), 1:15 (north arm), ~1:13 (south arm) [img-26]; model vs drawing rms 0.14 m (centreline), crossings within 0.1-1.4 m on the transects.
-- Datum: MTL 0.78 m above datum [S1 p.3]; tide range 0.8 m [Blacka Table 4.3]; typical HW/LW MSL +-0.4 (estimate). Crest depth below MSL: 1.78 m (A) or 1.00 m (B). HAT/LAT not found.
-- Rock volume: 5,500 (Blacka A.1.3), 5,000 (P3/ICM), 3,500 (Wikipedia), >10,000 t (card): density 1.82 t/m3 at 5,500. Mean thickness 1.26 m, max 2.5 m.
-- Offshore position: centroid 270 m (Fig 7 measurement 271 m with a 100 m grid assumption; text 250 m S1 / 275 m RWR, Blacka).
-- Water depth 3.0-6.0 m [Blacka Table 4.2, RWR]; modelled bed under the footprint RL -2.0 to -5.0 (2.8-5.8 m at MSL under reading A).
+## 3. Key numbers (units, datum, source)
+- Georeference: anchor (vertex mean of the original plan, canonical x 3.738, y 271.446 m) at 32.015644 S, 115.748462 E (MGA50 E 381801.49 N 6457145.86, GDA94); canonical +x bearing 350.3 deg T, apex pointing 260.3 deg T; theta 9.74 deg ccw [scripts/georef.json; DoT1999, DoT1998].
+- Footprint: 4,049 m2, 121 x 76 m (original plan); 4,355 m2, 121 x 89 m with the drawn extension (347 m2 triangle, 320 m3 drawn) [img-26, img-06].
+- Rock volume (m3): surveyed 4,671 (Nov 1999) and 5,219 (Feb 2002), +-1,000; design surface on the measured bed 3,920 (original) / 4,249 (with extension); stated 5,500 (Blacka A.1.3), 5,000 (Rendle p.41; Mead and Borrero 2011), 3,500 (Wikipedia). Mean thickness 1.15 / 1.29 m surveyed, 0.97 m design; max 2.76 / 2.69 / 2.30 m.
+- Crest: design RL -1.0 = -1.78 m MSL (A) / -1.00 (B); surveyed highest sounding -1.40 m (Nov 1999), -1.67 m (Feb 2002) AHD; surveyed surface top -1.55 / -1.71 m.
+- Datum: design ramp RL minus surveyed AHD 0.59 (Nov 1999, n 454) / 0.50 m (Feb 2002, n 236), sd 0.58; BoM Fremantle MSL 0.773 m above gauge zero (= Fremantle LWD), 1992-2011; highest recorded 1.947 m (16 May 2003), lowest -0.100 m (1 Jan 1987) above gauge zero; HAT / LAT not found.
+- Seabed: -3.68 m AHD at the anchor; along the original outline 2.84-6.63 m below MSL (A) (stated 3.0-6.0 m); 1995 vs 1998 surveys mean 0.09, sd 0.29 m; Perth_5m bias +0.085 m (reef excluded).
+- Shoreline bearing 7.8 deg T; anchor to the 0 m AHD line 254 m (090) - 263 m (080/100). Arm bearings 35 / 128 deg T, 27 / 60 deg to the shoreline.
+- Extension test: Feb 2002 +0.43 m (n 23) in the triangle vs +1.29 m in the plan, +0.19 m ring.
 
 ## 4. File map (07_scale/shapes/cables-reef-wa/)
-- shape.json: traced outlines (4 versions), sources, design_surface ramp polygon, dimensions_check; open for the page / any viewer.
-- METHOD.md (trace log; the older 2026-10-05 text at the top is superseded by the 2026-10-10 section), sources.md, VERIFY.md.
-- scripts/: trace_a2.py -> compute_shape.py -> make_overlays.py -> make_shape_json.py (re-runnable); a2_trace.json, computed.json (numbers), p05_toe_pixels.json.
-- overlays/: annotated traces (6 PNG); src/: paper PDF + page renders from the earlier run (kept; registered as img-21..23).
-- 3d/: index.html (viewer; versions + (i), water slider, VE 1-5x, views, photo match, sources, methods tabs), model.js (672 KB), docs.js, build_3d.py (+ b3d_lib.py, provenance.py), make_annotations.py, register_images.py, aux/ (make_index.py, preview.py), METHODS_3D.md, SOURCES_3D.md, REQUESTS_FOR_LIOR.md, annotated/ (A1-A4), previews (plan, oblique, crest x3, versions pop-up, methods panel, low water x2).
-- Bulky: model.js, preview PNGs. Not worth opening: b3d_lib.py unless the surface changes.
+- shape.json (verified, geo, versions, confidence); VERIFY.md; METHOD.md (first-run trace log + 2026-10-10 note); sources.md; SOURCE_AUDIT_2026-10-10.md (+ Addendum 1).
+- scripts/: first-run chain trace_a2.py -> compute_shape.py -> make_overlays.py -> make_shape_json.py; NEW chain: georef_fit.py -> georef.json; make_bed.py -> bed_measured.json (+ 3d/bed_measured_canonical.npz); survey_volume.py -> survey_volume.json; shore_and_datum.py -> shore_datum.json; add_geo_to_shape.py (run once on the archived shape.json); make_imagery_figs.py; register_imagery_images.py (run once).
+- src/: paper PDF + renders (first run); imagery/ (Esri z19 tiles + .geo.json, annotated/ overlays); bathymetry/ (DoT FR.zip, FR_selected/ the four surveys + ReadMe, DoT_Perth_5m_clip_reef.npz/.json, figures/); datum/ (BoM metadata PDF, monthly sea levels HTML). Total src about 17 MB.
+- 3d/: index.html (viewer; patched for survey versions), model.js (1.3 MB, bulky, do not open), docs.js, build_3d.py (+ b3d_lib.py, provenance.py), METHODS_3D.md, SOURCES_3D.md, PAGE_TEXTS_FOR_MAIN.json, REQUESTS_FOR_LIOR.md, bed_measured_canonical.npz, annotated/, previews, aux/ (make_index.py is the one-off generator of the first index.html; index.html was patched by hand afterwards: surveyVer(), contours, water plane, labels), archive/pre_imagery_2026-10-10/ (first-run model.js, docs.js, md, build files, shape.json, previews, handoff).
+- Not worth opening: model.js, the preview PNGs, DoT zip.
 
-## 5. Open issues, discrepancies, pending checks, needs network
-Discrepancies: (1) RL datum 0.78 m (S1/Pitt = chart datum vs Blacka 'below MSL'); (2) text length 140 m vs 121 m traced (-13%); (3) volume 3,500 / 5,000 / 5,500; (4) Pitt 2009 'crest ~1.5 m below the lowest tide' vs design RL -1.0; (5) card says 275 m offshore vs S1 250 m; (6) extension size from a low-resolution drawing; (7) ride-length check inconclusive (crest arms 49 / 52 m vs ride 50-80 / 30-40 m).
-NEEDS NETWORK (blocked all run: curl code 000 to raisedwaterresearch.com, services.arcgisonline.com, google.com):
-1. Esri World Imagery and Wayback tiles of the reef, zoom 19, about -32.01..-31.99 N, 115.735..115.760 E (run 07_scale/tools/satellite.py fetch; the reef is a V pointing west about 275 m off the Cable Station / McCall Centre waterline, Leighton Beach). Why: georeference and verify the outline, the extension, the arm angles; upgrades the shape to verified and the plan to high confidence if visible.
-2. Higher-resolution originals of the RWR drawings: https://raisedwaterresearch.com/wp-content/uploads/2019/11/Cables-Design.jpg and ...Cables-Additional-Fill-Area.jpg (only if larger than 478 / 417 px): extension geometry.
-3. Perth coastal bathymetry: WA Department of Transport / Landgate LiDAR bathymetry and AusSeabed (https://portal.ga.gov.au/persona/marine), EMODnet is not applicable: bed under and around the reef, nearshore profile.
-4. Navionics https://webapp.navionics.com (redirects to https://maps.garmin.com/en-US/marine/): reef obstruction symbol and depths; or Lior's app readings (3d/REQUESTS_FOR_LIOR.md).
-5. Tide datum: Transport WA / BoM Fremantle tide station sheet: LAT, MSL, HAT, chart datum vs AHD (decides reading A vs B).
-6. Papers (not local): Lyons (1992) UWA design report; Ranasinghe et al. (2001); Pattiaratchi (2003) video monitoring; Bancroft (1999): extension size, as-built levels.
+## 5. Open issues
+1. Fremantle chart-datum to AHD offset and HAT / LAT: Transport WA (Tides@transport.wa.gov.au); the 0.2-0.3 m gap between survey and reading A is unresolved (A12).
+2. Extension: not confirmed (23 soundings); needs a later survey or Pattiaratchi (2003, 2007) / Bancroft (1999).
+3. Papers not obtained (dead ends logged in 02_research/dead_ends/cables-reef-wa.json): Bancroft 1999, Ranasinghe 2001, Pattiaratchi 2003 (ResearchGate / UWA repository 403), Pattiaratchi 2007 Shore and Beach 75(4):80-92.
+4. No survey after Feb 2002; Pitt 2009 'crest ~1.5 m below the lowest tide' untested. Wayback capture dates unavailable (Google Earth Pro history by Lior).
+5. Reef card (02_research/reefs/cables-reef-wa.json; not edited here): 275 m offshore, 5,500 m3, coordinates if rounded 32 00 S 115 45 E (true 32.0156 S 115.7485 E): main to update. Granite (Blacka) vs limestone (Mead and Borrero 2011).
+6. check_registry.py reports errors for other reefs (albany, mexico), not for cables.
 
 ## 6. Next steps (in order)
-1. Main: add the model per 04_build/UPDATE_PROTOCOL.md: edit data/models3d_combined.json (copy a similar entry: frame note 'x south, y west', polygon expression, crest, hand), data/models3d_curated.json (key numbers, state_short), data/models3d_caveats.json; then remove cables-reef-wa from data/models3d_hold.json if present; run python src/update_page.py. Texts are in the final JSON of the agent report.
-2. When the network opens: items 1-3, 5 of section 5; rerun scripts/trace_a2.py only if a better drawing arrives; georeference with satellite.py, add "geo" to shape.json, rerun 3d/build_3d.py, re-view previews (aux/preview.py), set shape.json status verified and rewrite VERIFY.md.
-3. Resolve the datum with Transport WA (E7): then set READ default in index.html (aux/make_index.py) and the levels in build_3d.py.
-4. If Lior supplies Navionics readings: replace the fitted bed (3d/build_3d.py: D0, G_BED) by a read bed and update METHODS_3D sections 3.4 and 4.
+1. Main: add the model per 04_build/UPDATE_PROTOCOL.md using 3d/PAGE_TEXTS_FOR_MAIN.json (revised; default version survey_surface_1999_11); remove cables-reef-wa from data/models3d_hold.json if present; python src/update_page.py --full; also add the 'Checked, nothing useful' dead ends from 02_research/dead_ends/cables-reef-wa.json.
+2. If a higher-quality survey (multibeam / lidar) or Navionics readings arrive: replace the surveyed surface (build_3d.py survey_version) and recheck A15-A17.
+3. If Transport WA gives the CD-AHD offset: set A12 / the reading default and update METHODS_3D 3.1.
+4. If Pattiaratchi 2003/2007 or Bancroft 1999 arrive: extension size and date; as-built levels.
 
-## 7. CHECKPOINT 2026-10-10 (end of run)
-All stages above finished except network-dependent verification (HANDOFF_STOP: network). No stage is half-written. The 'Fresh-agent run' part of METHOD.md describes the run; scripts reproduce every number.
-- Source audit 2026-10-10 done: see SOURCE_AUDIT_2026-10-10.md. METHODS_3D.md now has assumptions A1-A11 and decisions X1-X8; SOURCES_3D.md has a "how used" table; docs.js rebuilt (values unchanged); max thickness corrected to 2.5 m in text.
+## 7. CHECKPOINT 2026-10-10 (end of imagery + bathymetry run)
+All stages complete except the items in section 5. Values in model.js, shape.json, METHODS_3D, SOURCES_3D, VERIFY, PAGE_TEXTS agree (checked by the final consistency script in the run). No stage is half-written.

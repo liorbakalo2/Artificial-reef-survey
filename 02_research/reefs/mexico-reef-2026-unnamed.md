@@ -147,3 +147,7 @@ See 05_qa/source_audit/cards_citations_2026-10-10.md. 'Publicly unveiled 16 Apri
 
 lat/lon checked against the reef's shape/HANDOFF position; see gaps (last item) and 05_qa/source_audit/cards_citations_2026-10-10.md.
 - **gaps** (added): Position (citations audit 2026-10-10): lat/lon stay null: no source gives coordinates (07_scale/shapes/mexico-reef-2026-unnamed/HANDOFF.md); only the region (Costalegre, Jalisco) is known [R3][R5].
+
+
+## Network pass 2026-10-10 (shape agent)
+No plan, coordinates or dimensions found with full network access (RWR post, xala.com, Hollywood Reporter, WSCC bio, DHI, SEMARNAT search, Esri imagery). Context only: Xala has about 5 miles (8 km) of coast near the Xola-Paraman lagoon, ~65 miles south of Puerto Vallarta and 10 min from the Costalegre airport [R13]. Dead ends: 02_research/dead_ends/mexico-reef-2026-unnamed.json.

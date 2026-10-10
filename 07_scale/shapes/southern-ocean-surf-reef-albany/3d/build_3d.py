@@ -21,8 +21,8 @@ BETA = 30.26                       # bearing of +x (deg true), shape.json geo.sh
 # ---------------------------------------------------------------------------------------------- seabed profile (y from the beach-face line -> z m AHD)
 # nodes -1..-7 from the contour crossings (src/levels2_raw.json, medians over 10 shore-normal transects, deeper ones adjusted by eye, see METHODS 3.2);
 # landward of the -0.5 contour and seaward of -7: ASSUMED (A4, A5)
-PROFILE = [(-60, 2.0), (-30, 1.0), (7, -0.5), (33, -1.0), (48, -1.5), (61, -2.0), (73, -2.5), (86, -3.0), (97, -3.5), (104, -4.0), (117, -4.5), (126, -5.0),
-           (150, -6.0), (180, -7.0), (250, -7.5), (330, -8.0), (420, -8.3)]
+PROFILE = [(-60, 2.0), (-30, 1.0), (7, -0.5), (36, -1.0), (50, -1.5), (64, -2.0), (75, -2.5), (88, -3.0), (98, -3.5), (105, -4.0), (118, -4.5), (126, -5.0),
+           (150, -6.0), (178, -7.0), (250, -7.5), (330, -8.0), (420, -8.3)]
 PY = np.array([p[0] for p in PROFILE], float); PZ = np.array([p[1] for p in PROFILE], float)
 BED_SHIFT = 0.0                    # + = bed deeper (sensitivity runs only)
 

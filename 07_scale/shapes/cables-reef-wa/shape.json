@@ -1,18 +1,17 @@
 {
  "slug": "cables-reef-wa",
  "name": "Cable Station Reef (Cables Reef)",
- "status": "traced",
+ "status": "verified",
  "updated": "2026-10-10",
  "confidence": {
-  "level": "medium",
-  "reason": "Outline traced on a high-resolution copy of the design plan whose printed dimensions (26 m, 30 m, 40 m, 1:20 contours) give the scale to +-3%; size agrees with the text 140 x 70 m within 14% / 9%. It is a design drawing, not a survey, the extension is read from a low-resolution drawing, and no aerial or satellite image could be checked.",
+  "level": "high",
+  "reason": "Footprint position, orientation and scale are confirmed by an as-built-era survey with coordinates (DoT WA soundings, Nov 1999: 91.0 % of rock soundings inside the outline, free scale fit 0.979) and by four georeferenced Esri images on which the rock patch coincides with the outline. Dimensions 121 x 76 m differ from the text 140 x 70 m by -13 % / +9 %; the survey and the printed dimensions agree with each other, the text is rounded. The south-arm extension is NOT confirmed (low confidence, separate version).",
   "factors": [
-   "design plan (Lyons 1992) reproduced in Blacka 2013, not an as-built survey",
-   "scale from four printed dimensions, sd 0.7%",
-   "A2 and the independent RWR copy (img05) agree on area within 4%; the V on paper Fig 7 agrees on dimensions within 1-2% (assumed 100 m grid)",
-   "arm angles 43 / 45 deg match the 45 deg design peel angle",
-   "orientation (apex offshore, north = sheet right) inferred from Fig 7 labels and the Pitt north arrow",
-   "built extent / extension size unknown; satellite and aerial checks need the network"
+   "DoT WA singlebeam soundings Nov 1999 (840) and Feb 2002 (5,143 in the window) over the 1998 pre-construction bed",
+   "rigid fit; scale freed gives 0.979",
+   "Esri World Imagery and Wayback z19, 4 dates, outline on the dark rock patch",
+   "scale from four printed dimensions of the design plan, sd 0.7 %",
+   "extension: 23 soundings, +0.43 m mean, image not darker: not confirmed"
   ]
  },
  "design_version": {
@@ -1804,7 +1803,7 @@
  "outline_versions": [
   {
    "id": "design_plan_plus_extension_1999",
-   "name": "Construction design plan + southern-arm extension (design drawings, built 1999)",
+   "name": "Design plan + drawn southern-arm extension (not confirmed by soundings or imagery)",
    "date": "1992 design (Lyons) / extension 1999; built Feb-Dec 1999",
    "kind": "design_drawing",
    "source_ids": [
@@ -2230,11 +2229,11 @@
      ]
     ]
    ],
-   "note": "Default: the design drawing of the built reef plus the extension the dossier says was added at the southern end. Not a survey: the built extent is unknown (no aerial or survey image found yet). Extension size is read from a low-resolution drawing."
+   "note": "Default: the design drawing of the built reef plus the extension the dossier says was added at the southern end. Not a survey: the built extent is unknown (no aerial or survey image found yet). Extension size is read from a low-resolution drawing. NOT CONFIRMED (2026-10-10): Feb 2002 soundings in the triangle show 0.43 m of rock (n=23) against 1.29 m inside the original plan and 0.19 m in the 25 m ring outside; the triangle is not darker than its surroundings on Esri imagery."
   },
   {
    "id": "design_plan_original_1999",
-   "name": "Design plan (Lyons 1992 / Fig A.2), before the southern extension",
+   "name": "Design plan footprint (Lyons 1992 / Blacka 2013 Fig A.2), georeferenced and confirmed by DoT soundings (default)",
    "date": "1992 design drawing, reproduced 2013",
    "kind": "design_drawing",
    "source_ids": [
@@ -2695,7 +2694,7 @@
      ]
     ]
    ],
-   "note": "canonical.polygons_m is this polygon. Footprint 4,049 m2; the ramp (area between the set-out line and the crest line) is 3,113 m2."
+   "note": "canonical.polygons_m is this polygon. Footprint 4,049 m2; the ramp (area between the set-out line and the crest line) is 3,113 m2. Georeferenced and confirmed 2026-10-10: 91.0 % of the Nov 1999 rock soundings lie inside, scale within 2 %; the dark rock patch on four Esri images coincides with it."
   },
   {
    "id": "paper_fig7_site_plan_1999",
@@ -2904,8 +2903,8 @@
    "note": "Concept only: a larger (170 x 159 m), symmetric V drawn 100 m off the shore; not the built design."
   }
  ],
- "default_outline": "design_plan_plus_extension_1999",
- "versions_info": "The default outline is the construction design plan (outer foot of the rock mound, traced on Blacka et al. 2013 Fig A.2 after Lyons 1992 and scaled from its printed dimensions) plus the drawn southern-arm extension (320 m3). No survey of the built reef was found, so it is a design drawing, not a measurement. The same plan without the extension, the V printed on the paper's site plan (Fig 7) and an early concept sketch are shown for comparison.",
+ "default_outline": "design_plan_original_1999",
+ "versions_info": "The default outline is the original construction design plan (outer foot of the rock mound, traced on Blacka et al. 2013 Fig A.2 after Lyons 1992, scaled from its printed dimensions), georeferenced by fitting it to the DoT WA soundings of Nov 1999 (91 % of the rock soundings inside, scale within 2 %) and checked on Esri satellite images (the dark rock patch coincides with it). The drawn southern-arm extension (320 m3) is kept as a separate version because neither the 2002 soundings nor the imagery confirm it. The V printed on the paper's site plan (Fig 7) and an early concept sketch are shown for comparison.",
  "design_surface": {
   "note": "Design ramp of the Lyons plan: RL contours -1.0 (crest line, inner V) to -3.0 (set-out line, outer edge) every 0.5 m; slopes 1:20 at the apex, 1:15 right arm, ~1:13 left arm (printed labels). Datum of RL not stated on the drawing (see 3d/ and HANDOFF).",
   "levels_RL_m": [
@@ -3752,7 +3751,497 @@
   "ramp_area_m2": 3112.7,
   "source_id": "img26"
  },
- "geo": null,
+ "geo": {
+  "crs": "EPSG:28350 GDA94 / MGA zone 50 (soundings); WGS84 lon/lat given for the anchor",
+  "anchor_canonical_xy_m": [
+   3.738,
+   271.446
+  ],
+  "anchor_lon": 115.748462,
+  "anchor_lat": -32.015644,
+  "anchor_E": 381801.49,
+  "anchor_N": 6457145.86,
+  "theta_ccw_deg": 9.74,
+  "canonical_plus_x_bearing_deg_T": 350.3,
+  "apex_direction_bearing_deg_T": 260.3,
+  "transform": "(E,N) = R(theta) (-(y-yc), (x-xc)) + (E0,N0); canonical x north, y west of shape.json",
+  "shoreline_bearing_deg_T": 7.8,
+  "anchor_to_0m_AHD_line_m": {
+   "80": 263.0,
+   "90": 254.0,
+   "100": 263.0
+  },
+  "method": "rigid fit (rotation + shift, scale fixed) of the traced original-plan outline to the DoT WA soundings of Nov 1999 (scripts/georef_fit.py); free-scale run gives 0.979; independent check on four Esri images (VERIFY.md)",
+  "fit": {
+   "rock_soundings_inside_pct": 91.0,
+   "bed_soundings_inside_pct": 18.5,
+   "n_rock": 564,
+   "n_bed": 135,
+   "n_post_1999": 840,
+   "free_scale_fit_scale": 0.979,
+   "note": "scale freed in a separate run: 0.979 (outline scale confirmed within 2 %)"
+  },
+  "source_ids": [
+   "DoT1999",
+   "DoT1998",
+   "SAT"
+  ],
+  "polygons_latlon": [
+   [
+    [
+     -32.015869,
+     115.7488637
+    ],
+    [
+     -32.0158882,
+     115.7488673
+    ],
+    [
+     -32.0159246,
+     115.7488578
+    ],
+    [
+     -32.0159858,
+     115.7488511
+    ],
+    [
+     -32.0159917,
+     115.7488489
+    ],
+    [
+     -32.0160029,
+     115.7488494
+    ],
+    [
+     -32.0160289,
+     115.7488444
+    ],
+    [
+     -32.0160334,
+     115.7488419
+    ],
+    [
+     -32.0160504,
+     115.7488402
+    ],
+    [
+     -32.0160916,
+     115.7488265
+    ],
+    [
+     -32.0161406,
+     115.7488274
+    ],
+    [
+     -32.0161749,
+     115.7488125
+    ],
+    [
+     -32.016189,
+     115.7488118
+    ],
+    [
+     -32.016192,
+     115.7487951
+    ],
+    [
+     -32.016182,
+     115.7487808
+    ],
+    [
+     -32.0161479,
+     115.7487531
+    ],
+    [
+     -32.0161282,
+     115.7487329
+    ],
+    [
+     -32.0161039,
+     115.7487053
+    ],
+    [
+     -32.0160837,
+     115.7486784
+    ],
+    [
+     -32.0160472,
+     115.7486469
+    ],
+    [
+     -32.0160393,
+     115.7486281
+    ],
+    [
+     -32.0160294,
+     115.7486139
+    ],
+    [
+     -32.0159826,
+     115.7485755
+    ],
+    [
+     -32.0159742,
+     115.7485657
+    ],
+    [
+     -32.0159549,
+     115.7485422
+    ],
+    [
+     -32.0159283,
+     115.748501
+    ],
+    [
+     -32.0159021,
+     115.7484665
+    ],
+    [
+     -32.01589,
+     115.748447
+    ],
+    [
+     -32.0158728,
+     115.7484132
+    ],
+    [
+     -32.0158405,
+     115.7483825
+    ],
+    [
+     -32.015833,
+     115.7483704
+    ],
+    [
+     -32.0158157,
+     115.7483326
+    ],
+    [
+     -32.0158063,
+     115.7482781
+    ],
+    [
+     -32.0157868,
+     115.7482464
+    ],
+    [
+     -32.0157735,
+     115.7482209
+    ],
+    [
+     -32.0157663,
+     115.7482113
+    ],
+    [
+     -32.0157529,
+     115.7481857
+    ],
+    [
+     -32.0157442,
+     115.7481577
+    ],
+    [
+     -32.0157407,
+     115.7481521
+    ],
+    [
+     -32.0157363,
+     115.7481332
+    ],
+    [
+     -32.0157312,
+     115.7480977
+    ],
+    [
+     -32.0157173,
+     115.7480555
+    ],
+    [
+     -32.0157062,
+     115.7480394
+    ],
+    [
+     -32.0156952,
+     115.7480275
+    ],
+    [
+     -32.0156625,
+     115.7480099
+    ],
+    [
+     -32.0156436,
+     115.7480046
+    ],
+    [
+     -32.0156425,
+     115.7480028
+    ],
+    [
+     -32.0156151,
+     115.7479977
+    ],
+    [
+     -32.0155807,
+     115.7480028
+    ],
+    [
+     -32.0155454,
+     115.7480299
+    ],
+    [
+     -32.0155362,
+     115.7480462
+    ],
+    [
+     -32.015512,
+     115.7480797
+    ],
+    [
+     -32.0154921,
+     115.7481022
+    ],
+    [
+     -32.0154546,
+     115.7481298
+    ],
+    [
+     -32.015444,
+     115.7481459
+    ],
+    [
+     -32.0154371,
+     115.7481504
+    ],
+    [
+     -32.0154303,
+     115.7481491
+    ],
+    [
+     -32.0154287,
+     115.7481562
+    ],
+    [
+     -32.0154114,
+     115.7481695
+    ],
+    [
+     -32.0153983,
+     115.7481835
+    ],
+    [
+     -32.0153785,
+     115.7482003
+    ],
+    [
+     -32.0153723,
+     115.7482041
+    ],
+    [
+     -32.0153655,
+     115.7482028
+    ],
+    [
+     -32.0153638,
+     115.7482099
+    ],
+    [
+     -32.0153614,
+     115.7482119
+    ],
+    [
+     -32.0153167,
+     115.7482415
+    ],
+    [
+     -32.0153048,
+     115.7482516
+    ],
+    [
+     -32.01528,
+     115.7482996
+    ],
+    [
+     -32.0152416,
+     115.7483295
+    ],
+    [
+     -32.0151945,
+     115.7483354
+    ],
+    [
+     -32.015156,
+     115.7483653
+    ],
+    [
+     -32.0151407,
+     115.7483855
+    ],
+    [
+     -32.0151381,
+     115.7484047
+    ],
+    [
+     -32.0151398,
+     115.7484075
+    ],
+    [
+     -32.0151507,
+     115.7484096
+    ],
+    [
+     -32.0151571,
+     115.7484141
+    ],
+    [
+     -32.0151804,
+     115.7484498
+    ],
+    [
+     -32.0151842,
+     115.7484521
+    ],
+    [
+     -32.015206,
+     115.7484776
+    ],
+    [
+     -32.0152087,
+     115.7484781
+    ],
+    [
+     -32.015215,
+     115.7484883
+    ],
+    [
+     -32.0152252,
+     115.7485166
+    ],
+    [
+     -32.0152334,
+     115.7485338
+    ],
+    [
+     -32.0152747,
+     115.7485498
+    ],
+    [
+     -32.0153098,
+     115.748591
+    ],
+    [
+     -32.0153387,
+     115.7486161
+    ],
+    [
+     -32.0153447,
+     115.7486238
+    ],
+    [
+     -32.0153748,
+     115.7486294
+    ],
+    [
+     -32.0154084,
+     115.7486095
+    ],
+    [
+     -32.0154518,
+     115.7485995
+    ],
+    [
+     -32.0154817,
+     115.7485598
+    ],
+    [
+     -32.0154873,
+     115.748555
+    ],
+    [
+     -32.0155225,
+     115.7485336
+    ],
+    [
+     -32.0155564,
+     115.7485219
+    ],
+    [
+     -32.0155596,
+     115.7485193
+    ],
+    [
+     -32.015565,
+     115.7485203
+    ],
+    [
+     -32.0155721,
+     115.7485355
+    ],
+    [
+     -32.0155722,
+     115.7485397
+    ],
+    [
+     -32.0156026,
+     115.7485536
+    ],
+    [
+     -32.0156245,
+     115.7485989
+    ],
+    [
+     -32.0156634,
+     115.7486325
+    ],
+    [
+     -32.0156896,
+     115.748677
+    ],
+    [
+     -32.0157093,
+     115.7486971
+    ],
+    [
+     -32.0157112,
+     115.7487041
+    ],
+    [
+     -32.0157191,
+     115.7487072
+    ],
+    [
+     -32.0157573,
+     115.7487572
+    ],
+    [
+     -32.015787,
+     115.7487859
+    ],
+    [
+     -32.0158093,
+     115.748818
+    ],
+    [
+     -32.0158238,
+     115.7488355
+    ],
+    [
+     -32.0158447,
+     115.7488576
+    ],
+    [
+     -32.0158679,
+     115.7488619
+    ]
+   ]
+  ],
+  "centroid_latlon": [
+   -32.015648,
+   115.748452
+  ],
+  "shoreline_bearing_deg": 7.8,
+  "source_id": "DoT1999",
+  "polygons_note": "default outline = original design plan; GDA94 coordinates treated as WGS84 (about 1.8 m difference)"
+ },
  "angles": [
   {
    "what": "south arm outer edge vs shoreline (N-S assumed)",
@@ -3768,6 +4257,11 @@
    "what": "apex angle",
    "deg": 87.4,
    "method": "sum of the two arm angles"
+  },
+  {
+   "what": "arm bearings after georeferencing (true): north arm 35, south arm 128 deg; relative to the shoreline bearing 8 deg: north arm 27, south arm 60 deg",
+   "deg": null,
+   "method": "canonical arm angles 42.7 / 44.7 deg to the frame axis rotated by the fitted theta; shoreline from the 0 m AHD contour; the frame axis is NOT shore-normal (the first model assumed N-S)"
   }
  ],
  "dimensions_check": [
@@ -3791,9 +4285,9 @@
    "quantity": "offshore distance (centroid)",
    "text_value": "250 m (S1) / 275 m (RWR, Blacka)",
    "text_ref": "S1; Table 4.2",
-   "drawing_value": "271 m measured on Fig 7 (assumed grid)",
+   "drawing_value": "254 m (due east) to 263 m (080/100 deg) from the georeferenced centroid anchor to the 0 m AHD line (DoT Perth_5m)",
    "diff_pct": null,
-   "comment": "used as input for the origin; not independent"
+   "comment": "measured on DoT data (independent of the drawing); closest to S1 250 m"
   },
   {
    "quantity": "peel angle / arm angle",
@@ -3841,7 +4335,38 @@
    "supports": "drawings img05, img06, img07; 140 x 70 m; 275 m; 3-6 m depth"
   }
  ],
- "verified_on": null,
- "verification": [],
- "checked_without_network": true
+ "verified_on": "2026-10-10",
+ "verification": [
+  {
+   "check": "overlay vs structure on georeferenced imagery",
+   "verdict": "good",
+   "evidence": "outline coincides with the dark rock patch on Esri Wayback 2014-12-03, 2020-03-23, 2022-06-08, 2024-08-15 and World Imagery 2025-12-06; waves break on the patch in 2020-03-23 (src/imagery/annotated/overlay_*.png)"
+  },
+  {
+   "check": "position, orientation, scale against soundings",
+   "verdict": "good",
+   "evidence": "91.0 % of rock soundings (>0.6 m over the 1998 bed) inside, 18.5 % of bed soundings inside; theta 9.7 deg ccw; free scale 0.979"
+  },
+  {
+   "check": "southern-arm extension",
+   "verdict": "not confirmed",
+   "evidence": "2002 soundings in the triangle: +0.43 m (n=23) vs +0.19 m outside; imagery brightness inside the triangle equals the surroundings (edge.py brightness ratio 1.1-2.9 vs rock interior)"
+  },
+  {
+   "check": "dimensions vs text",
+   "verdict": "ok with note",
+   "evidence": "121 x 76 m traced and soundings fit vs text 140 x 70 m (-13 % / +9 %); the text is approximate"
+  },
+  {
+   "check": "rock volume",
+   "verdict": "design surface low",
+   "evidence": "design surface on the measured bed: 3,920 m3 (original plan); soundings: 4751 (Nov 1999) to 5201 m3 (Feb 2002); stated 3,500-5,500"
+  },
+  {
+   "check": "datum",
+   "verdict": "A nearer than B",
+   "evidence": "survey-implied RL minus AHD about 0.5-0.6 m on the design ramp vs 0.78 (A) and 0 (B)"
+  }
+ ],
+ "checked_without_network": false
 }

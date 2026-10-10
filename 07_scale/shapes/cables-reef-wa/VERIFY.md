@@ -1,4 +1,38 @@
-# VERIFY - cables-reef-wa (2026-10-10; no network: PARTIAL verification, internal checks only)
+# VERIFY - cables-reef-wa
+
+## Revision 2026-10-10 (network open): VERIFIED against DoT WA soundings and Esri imagery
+Status: shape.json "verified" (verified_on 2026-10-10). Result: the traced original design plan is right in position, orientation and scale; the drawn south-arm extension is NOT confirmed; the first model's assumptions (shoreline N-S, plane bed fitted to 5,500 m3, drawing = built) were replaced or tested. Overlay match: GOOD.
+
+| # | check | verdict | evidence |
+|---|---|---|---|
+| R1 | position, orientation, scale vs a coordinated survey | pass | DoT WA single-beam soundings of 22 Nov 1999 (FR19991122_Single.txt, 840 pts, AHD) over the 1998 pre-construction bed: the traced outline, moved and rotated only (theta 9.74 deg ccw, anchor 32.015644 S 115.748462 E), contains 91.0 % of the rock soundings (> 0.6 m above bed, n = 564) and 18.5 % of the bed soundings (n = 135); with scale free the best scale is 0.979 (scripts/georef_fit.py; src/bathymetry/figures/survey_1999_thickness.png, img-38) |
+| R2 | overlay on georeferenced imagery | good | outline coincides with the dark rock patch on Esri Wayback 2014-12-03, 2020-03-23, 2022-06-08, 2024-08-15 and World Imagery (capture 2025-12-06); on 2020-03-23 a wave breaks on the NE arm; mean luminance inside / ring 0.35-0.87 on 7 images (src/imagery/annotated/overlay_montage_4dates.png, img-37). No image information entered the fit. |
+| R3 | design version | answered | the soundings show the original plan footprint (Nov 1999 and Feb 2002); the dossier's southern extension (347 m2, 320 m3 drawn): Feb 2002 soundings in the triangle +0.43 m mean (median 0.29, n = 23) vs +1.29 m inside the plan and +0.19 m in the ring outside; the triangle is as bright as its surroundings. NOT CONFIRMED; kept as a separate version. The page must say the default drawing represents the original plan as surveyed, not the extension. |
+| R4 | scale | pass | soundings: 0.979 (2 %); printed dimensions: 6.51 px/m (sd 0.05) |
+| R5 | dimensions vs text | ok with note | 121 x 76 m (drawing and soundings agree) vs text 140 x 70 m (-13 % / +9 %): the text is rounded |
+| R6 | arm angles | changed | after georeferencing the frame axis is 9.7 deg off true north and the shoreline is at 7.8 deg T (DoT Perth_5m 0 m AHD line), so the arms meet the shoreline at about 27 deg (north arm) and 60 deg (south arm); the 42.7 / 44.7 deg to the frame axis are the design peel angles, not shoreline angles |
+| R7 | rock volume | mismatch resolved | design surface on the measured bed: 3,920 (original) / 4,249 m3; surveyed 4,671 (Nov 1999) / 5,219 m3 (Feb 2002), +-1,000; stated 3,500-5,500 |
+| R8 | datum | partial | design ramp RL minus surveyed AHD = 0.59 / 0.50 m; A 0.78, B 0.00: A is nearer; Fremantle CD-AHD offset not found |
+| R9 | offshore distance | measured | 254 m (E) - 263 m (080/100 deg) from the anchor to the 0 m AHD line; text 250 m (Pattiaratchi) / 275 m (Blacka) |
+| R10 | Gemini | n/a | not in this repo; nothing used |
+| R11 | confidence | set | plan HIGH (extension LOW), 3D MEDIUM; reasons in shape.json and METHODS_3D 6 |
+
+Before / after of the model (first-run values from archive/pre_imagery_2026-10-10/model.js):
+| quantity | before | after |
+|---|---|---|
+| default version | design plan + extension | Nov 1999 surveyed surface on the original plan |
+| footprint (default) | 4,355 m2 (121 x 89 m) | 4,049 m2 (121 x 76 m); extension version 4,355 m2 |
+| rock volume (default) | 5,500 m3 (fitted) | 4,671 m3 (surveyed, +-1,000); design surface 3,920 (original) / 4,249 (extension) |
+| mean / max thickness (default) | 1.26 / 2.48 m | 1.15 / 2.76 m (design: 0.97 / 2.30) |
+| crest | design RL -1.0 = -1.78 m MSL (A) / -1.00 (B) | design unchanged; surveyed surface top -1.55 m AHD, highest sounding -1.40 m (Nov 1999) / -1.67 m (Feb 2002) |
+| datum reading A / B | unresolved, 0.78 m apart | A default, survey-implied 0.5-0.6 m; B kept as a switch for the design versions |
+| seabed | plane 1:30, RL -3.50 at y = 270 | measured: -3.68 m AHD at the anchor, 2.84-6.63 m below MSL (A) along the outline |
+| orientation | shoreline N-S | frame 9.7 deg from true north, shoreline 7.8 deg T |
+
+Open: Fremantle chart-datum to AHD offset and HAT / LAT (Transport WA); Wayback capture dates; the papers (Bancroft 1999, Ranasinghe 2001, Pattiaratchi 2003 / 2007); a survey after 2002. Dead ends: 02_research/dead_ends/cables-reef-wa.json.
+
+---
+## First verification (2026-10-10, no network, history)
 
 Status: shape.json stays "traced". The checks that could break the trace (a dated aerial / satellite image of the built reef, the full design drawing set) need the network, so it is not marked "verified".
 
