@@ -1,59 +1,16 @@
-photo_match: 30 eligible pictures {'borth-coastal-defence-reef': 8, 'boscombe-surf-reef': 6, 'bunbury-airwave': 1, 'mount-maunganui-reef': 7, 'palm-beach-gold-coast': 6, 'prattes-reef-el-segundo': 2}; max trace residual 3.25 m; 9 excluded -> data/photo_match.json
-  OK  stal-defence-reef-img-08 trace    georef     rms 0.00 m  iou 1.0  280 x 280 m  mirror=True
-  OK  stal-defence-reef-img-09 trace    georef     rms 2.20 m  iou 0.842  280 x 280 m  mirror=True
-  OK  stal-defence-reef-img-10 trace    georef     rms 3.25 m  iou 0.782  280 x 280 m  mirror=True
-  OK  stal-defence-reef-img-20 trace    direct     rms 0.13 m  iou 0.997  420 x 297 m  mirror=True
-  OK  stal-defence-reef-img-26 navionics web_mercator_capture_log rms 0.01 m  iou -  714 x 476 m  mirror=True
-  OK  stal-defence-reef-img-27 navionics web_mercator_capture_log rms 0.01 m  iou -  357 x 238 m  mirror=True
-  OK  stal-defence-reef-img-28 navionics web_mercator_capture_log rms 0.01 m  iou -  714 x 476 m  mirror=True
-  OK  stal-defence-reef-img-29 navionics web_mercator_capture_log rms 0.01 m  iou -  357 x 238 m  mirror=True
-  OK  oscombe-surf-reef-img-08 trace    georef     rms 0.00 m  iou 1.0  800 x 800 m  mirror=True
-  OK  oscombe-surf-reef-img-14 navionics web_mercator_capture_log rms 0.01 m  iou -  1512 x 1136 m  mirror=True
-  OK  oscombe-surf-reef-img-15 navionics web_mercator_capture_log rms 0.01 m  iou -  756 x 568 m  mirror=True
-  OK  oscombe-surf-reef-img-16 navionics web_mercator_capture_log rms 0.01 m  iou -  378 x 284 m  mirror=True
-  OK  oscombe-surf-reef-img-17 navionics web_mercator_capture_log rms 0.01 m  iou -  756 x 568 m  mirror=True
-  OK  oscombe-surf-reef-img-18 navionics web_mercator_capture_log rms 0.01 m  iou -  378 x 284 m  mirror=True
-  OK  bunbury-airwave-img-06   trace    direct     rms 0.23 m  iou 0.932  39 x 24 m  mirror=False
-  OK  nt-maunganui-reef-img-08 trace    georef     rms 0.15 m  iou 0.969  165 x 196 m  mirror=True
-  OK  nt-maunganui-reef-img-09 trace    georef     rms 0.77 m  iou 0.811  142 x 142 m  mirror=True
-  OK  nt-maunganui-reef-img-10 trace    direct     rms 0.02 m  iou 0.999  96 x 87 m  mirror=True
-  OK  nt-maunganui-reef-img-19 navionics web_mercator_capture_log rms 0.05 m  iou -  928 x 619 m  mirror=True
-  OK  nt-maunganui-reef-img-20 navionics web_mercator_capture_log rms 0.05 m  iou -  464 x 309 m  mirror=True
-  OK  nt-maunganui-reef-img-21 navionics web_mercator_capture_log rms 0.05 m  iou -  928 x 619 m  mirror=True
-  OK  nt-maunganui-reef-img-22 navionics web_mercator_capture_log rms 0.05 m  iou -  464 x 309 m  mirror=True
-  OK  -beach-gold-coast-img-24 trace    icp        rms 1.11 m  iou 0.973  1483 x 790 m  mirror=True
-  OK  -beach-gold-coast-img-20 trace    direct     rms 0.00 m  iou 1.0  245 x 163 m  mirror=True
-  OK  -beach-gold-coast-img-28 navionics web_mercator_capture_log rms 0.15 m  iou -  1034 x 690 m  mirror=True
-  OK  -beach-gold-coast-img-29 navionics web_mercator_capture_log rms 0.15 m  iou -  517 x 345 m  mirror=True
-  OK  -beach-gold-coast-img-30 navionics web_mercator_capture_log rms 0.15 m  iou -  1034 x 690 m  mirror=True
-  OK  -beach-gold-coast-img-31 navionics web_mercator_capture_log rms 0.15 m  iou -  517 x 345 m  mirror=True
-  OK  s-reef-el-segundo-img-04 trace    direct     rms 0.00 m  iou 0.999  60 x 75 m  mirror=True
-  OK  s-reef-el-segundo-img-08 trace    icp        rms 0.19 m  iou 0.954  63 x 72 m  mirror=True
-  --  boscombe-s img2           residual 4.62 m (IoU 0.80) > tolerance 2.0 m (vs canonical outline (shape.json))
-  --  boscombe-s img3           residual 5.02 m (IoU 0.76) > tolerance 2.0 m (vs canonical outline (shape.json))
-  --  bunbury-ai img4           oblique picture (no plan-view button; human alignment is enough)
-  --  bunbury-ai img5           picture not calibrated (no px/m, no georeference, no vertex correspondence): scale would only be fitted to the
-  --  bunbury-ai navionics      Navionics/Garmin screenshots (6) not offered: no geo (lat/lon <-> canonical) in shape.json
-  --  narrowneck -              model frame not yet supported by photo_match.py (model_rings / scene_map)
-  --  palm-beach s2             residual 27.81 m (IoU 0.29) > tolerance 4.0 m (vs canonical outline (shape.json))
-  --  prattes-re img6           residual 4.03 m (IoU 0.42) > tolerance 2.0 m (vs canonical outline (shape.json))
-  --  prattes-re navionics      Navionics/Garmin screenshots (10) not offered: no geo (lat/lon <-> canonical) in shape.json
-photo_match: recomputed
 NOTE: burkitts-reef-bargara: HELD by data/models3d_hold.json (Not yet modelled)
 NOTE: cables-reef-wa: HELD by data/models3d_hold.json (trace/verify/3D agent running (started 2026-10-10))
 NOTE: opunake-reef: HELD by data/models3d_hold.json (Not yet modelled)
 NOTE: kovalam-reef-india: HELD by data/models3d_hold.json (Not yet modelled)
 NOTE: southern-ocean-surf-reef-albany: HELD by data/models3d_hold.json (Not yet modelled)
 NOTE: mexico-reef-2026-unnamed: HELD by data/models3d_hold.json (Not yet modelled)
+combined: borth-coastal-defence-reef: cached (ok)
+combined: boscombe-surf-reef: cached (ok)
+combined: bunbury-airwave: cached (ok)
+combined: mount-maunganui-reef: cached (ok)
+combined: narrowneck-gold-coast: cached (ok)
 combined: palm-beach-gold-coast: cached (ok)
-combined: borth-coastal-defence-reef: ok ok=True (7 s)
-combined: boscombe-surf-reef: ok ok=True (7 s)
-combined: bunbury-airwave: ok ok=True (7 s)
-combined: mount-maunganui-reef: ok ok=True (7 s)
-combined: narrowneck-gold-coast: ok ok=True (7 s)
-combined: prattes-reef-el-segundo: ok ok=True (7 s)
-models3d: 7 models, 0 feasibility, 6 not yet; pictures {'borth-coastal-defence-reef': 23, 'boscombe-surf-reef': 34, 'bunbury-airwave': 13, 'mount-maunganui-reef': 25, 'narrowneck-gold-coast': 46, 'palm-beach-gold-coast': 27, 'prattes-reef-el-segundo': 32}; 102 references (from 177); caveat rows 60; verify 119 checked, 2 failed; json 1386 KB; 49.3s
-VERIFY FAIL: prattes-reef-el-segundo | caveat 'Reef position' | The three estimates span 190 m, so the hint is stated as +-100 m.
-VERIFY FAIL: mount-maunganui-reef | key number 'Reef height above the bed' | largest bags 3.5 m high x 50 m long (660 m3)
-wrote /home/user/artificial-reef-survey/04_build/artificial_reefs.html (2537 KB)
+combined: prattes-reef-el-segundo: cached (ok)
+models3d: 7 models, 0 feasibility, 6 not yet; pictures {'borth-coastal-defence-reef': 23, 'boscombe-surf-reef': 34, 'bunbury-airwave': 13, 'mount-maunganui-reef': 25, 'narrowneck-gold-coast': 46, 'palm-beach-gold-coast': 27, 'prattes-reef-el-segundo': 32}; 102 references (from 177); caveat rows 60; verify 119 checked, 0 failed; json 1386 KB; 1.0s
+wrote /home/user/artificial-reef-survey/04_build/artificial_reefs.html (2571 KB)
 reefs: 13; with USD cost: 12; total ~US$47,406,500-50,457,500

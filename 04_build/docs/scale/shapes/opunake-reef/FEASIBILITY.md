@@ -43,3 +43,10 @@ Google Earth Pro: historical imagery 2007-2012 over lat -39.457, lon 173.853 (lo
 5. Dated imagery: Google Earth Pro history 2007-2012, LINZ/Taranaki aerials, Esri Wayback (networks blocked here).
 Already in papers/ (no plan): Mead & Borrero 2011, Rendle 2016, Blacka et al. 2013.
 Until one of 1-5 arrives: shape.json stays no_source, no outline anywhere (Lior 2026-10-10: do not show shapes of reefs we do not know).
+
+## Why this reef is hidden on the page, what was checked, what is assumed (source audit 2026-10-10)
+Rule (Lior, 2026-10-10): shapes we do not know are not shown. Opunake is hidden (footprint.json display:false / DO_NOT_DISPLAY; shape.json status no_source).
+- Why: no plan figure, no survey, no reef coordinates, and the structure is not visible on the satellite frames we hold (bags are submerged, water is turbid). The only size is text, and two sources disagree: 90 m x 20 m (Newsroom 2021 / Raised Water Research / SurferToday, one lineage) vs 30 m longshore x 100 m cross-shore, depth 1.8-3.0 m, ~300 m offshore at LAT (Blacka et al. 2013, Table 4.2, printed p.65). Neither is drawn.
+- Checked, with sources: Esri World Imagery 2025-01-16 (4 frames, 0.115 m/px); papers/ at the cited places (Mead and Borrero 2011 s.3.1.5; Rendle 2016 PhD thesis Table 2.1 p.41, refs p.298; Blacka et al. 2013 Tables 4.2-4.4); 10 web searches (TRC Technical Report 2009-33 and Black et al. 2004 not found online); Gemini extracts (self-contradictory, not used).
+- Assumed (A1-A4 in shape.json): location only "north side of the cove" within a few hundred metres; not seeing the bags is not evidence of absence; the two sizes may measure different things; the built state is the unfinished north reef. Nothing numeric is assumed in a drawing because there is none.
+- Confidence: plan none; position very low; size low; crest, seabed none; tides low. Full tables: SOURCE_AUDIT_2026-10-10.md.

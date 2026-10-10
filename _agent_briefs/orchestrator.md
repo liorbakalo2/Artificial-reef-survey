@@ -72,7 +72,7 @@
 - **Page tabs (Lior, 2026-10-10).** Only Gallery, Table and 3D models. The Map and Scale (2D) tabs are removed (code archived, reversible); traced outlines stay reachable through the 3D outline versions and reef files.
 - **Lior, 2026-10-10:** (1) "Don't show the shape of reefs you don't know": no outline on the page unless a real plan source exists (survey, scaled drawing, or clearly visible structure in a dated georeferenced image). Hidden: Mexico, Opunake, Burkitts (platform is not the reshaped zone), Kovalam (scale unknown). (2) Keep a Google Maps link per reef (location) on the page although the Map tab is gone. (3) D7 agreed: Narrowneck default = 2020 photo. (4) Pratte's J1: paper datum (MLLW) as now; J2 our call (+-150 m). (5) Depth/app readings: later; keep them in REQUESTS_FOR_LIOR.md "Later". (6) Bunbury/Albany: Zoom interview with Troy (Airwave founder), 8 Oct 2026, as a source.
 - **Source standard (Lior, 2026-10-10):** academic level: every statement sourced (full citation + location), each source says how it was used, methods explicit, assumptions (A#) and decisions (D#) listed, shown in each model viewer. Brief: `_agent_briefs/task_source_audit.md`.
-- **Network (cloud):** the container reaches package servers only; WebFetch/curl/downloads fail. The WebSearch tool DOES work (server-side): agents may use it for citations, contacts and facts.
+- **Network (cloud):** Lior set the environment to Full network on 2026-10-10 (evening); web pages, tiles and downloads work now.
 - **Navionics/Garmin.** Used without login. Their datum is inferred by RMS against an independent survey.
 - **Photo-match tolerance.** 2 m (or 10 % of length for reefs under 40 m); 4 m for georeferenced pictures. Set by the page agent;
   not yet confirmed by Lior.
@@ -151,8 +151,13 @@ All of them are in `REQUESTS_FOR_LIOR.md`:
 | 2026-10-10 | `_agent_briefs/task_source_audit.md` | `07_scale/shapes/narrowneck-gold-coast/` | `SOURCE_AUDIT_2026-10-10.md` | DONE: 47 checked, 13 fixed; D7 recorded as Lior's; viewer chips Sources/Assumptions (A1-A16)/Decisions; survey date 19 Jul 2018 fixed. Page edits: `05_qa/pending_page_edits/audit_narrowneck_2026-10-10.md` |
 | 2026-10-10 | `_agent_briefs/task_source_audit.md` | `07_scale/shapes/cables-reef-wa/` | `SOURCE_AUDIT_2026-10-10.md` | DONE: 45 checked, 6 fixed (max thickness text 2.9 -> 2.5 m); A1-A11, X1-X8, how-used table; PAGE_TEXTS_FOR_MAIN.json revised |
 | 2026-10-10 | `_agent_briefs/task_source_audit.md` | non-3D shapes: albany, burkitts, kovalam, opunake, mexico | `SOURCE_AUDIT_2026-10-10.md` | DONE: 67 checked, 10 fixed, 8 open mismatches (listed in pending_page_edits); FEASIBILITY 'why hidden' sections; A#/D# in shape.json |
-| 2026-10-10 | `_agent_briefs/task_source_audit.md` | cards group A (7 cards with models) | `SOURCE_AUDIT_2026-10-10.md` | RUNNING |
-| 2026-10-10 | `_agent_briefs/task_source_audit.md` | cards group B (6 other cards) | `05_qa/source_audit/cards_group_B_2026-10-10.md` | DONE: ~250 checked, ~75 fixed; unread SurferToday tags removed (Cables); Burkitts lat sign fixed. Follow-ups for main listed in the audit file (Opunake R4 unread, Albany 6-8 s attribution, Mexico 'unveiled' date, Burkitts/Bunbury coordinates, Kovalam cost check) |
+| 2026-10-10 | `_agent_briefs/task_source_audit.md` | cards group A (7 cards with models) | `05_qa/source_audit/cards_group_A_2026-10-10.md` | DONE: 7 cards, verdict reasons, 31 refs added, coordinates fixed (Bunbury, Palm, Narrowneck, MM); 183 uncited number sentences -> follow-up agent |
+| 2026-10-10 | `_agent_briefs/task_source_audit.md` | cards group B (6 other cards) | `05_qa/source_audit/cards_group_B_2026-10-10.md` | DONE: ~250 checked, ~75 fixed; unread SurferToday tags removed (Cables); Burkitts lat sign fixed. Follow-ups for main listed in the audit file (Opunake R4 unread, Albany 6-8 s attribution, Mexico 'unveiled' date, Burkitts/Bunbury coordinates, Kovalam cost check) || 2026-10-10 | card citations + fixes (prompt) | `02_research/reefs/*` | `05_qa/source_audit/cards_citations_2026-10-10.md` | RUNNING |
+| 2026-10-10 | Albany 3D with network | `07_scale/shapes/southern-ocean-surf-reef-albany/` | `HANDOFF.md` | RUNNING |
+| 2026-10-10 | Cables imagery verification | `07_scale/shapes/cables-reef-wa/` | `HANDOFF.md` | RUNNING |
+| 2026-10-10 | Kovalam with imagery | `07_scale/shapes/kovalam-reef-india/` | `HANDOFF.md` | RUNNING |
+| 2026-10-10 | Opunake with imagery | `07_scale/shapes/opunake-reef/` | `HANDOFF.md` | RUNNING |
+| 2026-10-10 | Burkitts + Mexico with network | their `07_scale/shapes/` folders | `HANDOFF.md` | RUNNING |
 **When an agent finishes:**
 - save its report from the hand-back;
 - refresh the page: `python src/update_page.py` from `04_build`, after the model agents. Check the SUMMARY and FAIL lines;

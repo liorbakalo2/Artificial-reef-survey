@@ -35,7 +35,7 @@
   {
    "slug": "prattes-reef-el-segundo",
    "q": "Reef position",
-   "model": "33.92058 N, 118.43335 W, +-100 m (inferred)",
+   "model": "33.92058 N, 118.43335 W, +-150 m (inferred)",
    "stated": "text: '200 m south of the 1-mile outfall' (but the same paper's Fig. 2 reads about 340 m from the outfall and 670 m from the Grand Street jetty); earlier CCC hint 217 m away; jetty-based estimate 160 m further north",
    "diff": "the three estimates span 190 m",
    "reason": "No georeferenced outline exists; the position is the centre of the Fig. 9 survey window of the 2003 paper. Depths are barely affected (seabed uniform alongshore, sd 0.14 m), the picture is.",
@@ -44,7 +44,7 @@
    "section": "3.10; 7 L1",
    "ids": "S10; S1; S7",
    "ev": [
-    "The three estimates span 190 m, so the hint is stated as +-100 m."
+    "outfall- and jetty-based estimates span 190 m; +-150 m decided 2026-10-10"
    ]
   },
   {

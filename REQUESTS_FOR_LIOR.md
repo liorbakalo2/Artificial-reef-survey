@@ -237,3 +237,10 @@ What to read for every row: tap the point, read the depth (or drying height), an
 - Papers/pages (browser): Maritime Safety Queensland 2026 semidiurnal tidal planes, Burnett Heads row (HAT, MHWS, MSL, LAT) https://www.msq.qld.gov.au/_/media/tmronline/msqinternet/msqfiles/home/tides/tidal-planes/2026-semidiurnal-tidal-planes.pdf (Burkitts tide datum; the 2.5 m swing is a single RWR statement).
 - Tides Albany: Bureau of Meteorology or WA Department of Transport tide levels for Albany with datum (the 0.4 m / 1.1 m ranges are from Wikipedia).
 - Confirm URL/DOI: Mead and Borrero (2011) Coasts & Ports 2011 (informit link not confirmed); Rendle (2016) Plymouth PEARL record URL; Black et al. (2004) authors/report number; TRC (2009) Technical Report 2009-33 place and number (Stratford vs Opunake).
+
+## Source audit of cards, group A (2026-10-10), details not confirmed (append only)
+- Authors and dates of web pages cited without them ("n.d."): Boscombe R2, R4, R7, R10, R12; Palm Beach R1, R2, R4, R5, R7, R10-R12, R18; Borth R2, R4; Narrowneck R5, R7, R8. A normal browser is needed (agents cannot fetch).
+- Prattes: venue and year of Borrero & Nelsen (2003) (the supplied PDF prints neither); source of the "bags degrade within ~2 years" sentence; which reef position to show (card point vs model hint 33.92058, -118.43335).
+- Bunbury: surname of "Troy" in the 8 Oct 2026 interview notes (assumed Bottegal); any recording or photos from the call; the "2-8 ft" Bunbury face range has no source.
+- Exchange rates behind cost_usd_approx for Boscombe (GBP 1.59, NZD 0.70), Bunbury (A$75,000 = US$50,000) and Narrowneck (AUD 0.65 / 0.75): pick a rate table (e.g. RBA or IRS yearly averages) if the USD figures are to stay on the page. Borth was corrected using the 2013 CIA Factbook value only.
+- Prenzler et al. (2022) ICCE monitoring abstract 12921: DOI, pages, full author list.
