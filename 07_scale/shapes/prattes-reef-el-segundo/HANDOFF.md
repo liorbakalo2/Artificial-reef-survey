@@ -65,7 +65,7 @@ Short version: Pratte's Reef (El Segundo, California; 110 sand-filled geotextile
 ## 5. Open issues, discrepancies, pending checks
 Judgement calls NOT changed (for Lior or main; one line each):
 - J1 Crest datum: the same number (6 ft) is "-6' MSL" on the drawing (at the arm tips, "min depth") and "approximately - 6 ft MLLW" in the paper (outermost point = apex, deepest). They differ by exactly 0.849 m. The model default is B (paper, MLLW). Only the authors / dive records can settle it (root REQUESTS E1, 3d C1).
-- **J2 DECIDED 2026-10-10 (by us, Lior did not need to answer): use +-150 m for the position hint (sigma_x); the model agent applies it on the next rebuild. J1 DECIDED 2026-10-10 (Lior): keep the paper's MLLW crest datum.**
+- **J2 DECIDED 2026-10-10 (by us): +-150 m position uncertainty. APPLIED in the 2026-10-10 source audit (build_3d.py sig_x=150, METHODS template, shape.json geo_note, viewer note); the hint and model did not move. J1 DECIDED 2026-10-10 (Lior): keep the paper's MLLW crest datum (METHODS_3D decision D6).**
 - J2 (original text) Position hint uncertainty: model and notes say +-100 m; the paper's text (200 m / within 500 m) and Fig. 2 (about 340 m / 670 m) disagree by 140-170 m, so +-150 m may be more honest. Model keeps sigma_x = 100 m (depth effect small, seabed sd 0.14 m alongshore). geo stays null.
 - J3 Volume gap V8/V9 (model B 443 m3 vs 695-782 m3 of bags): unresolved, not an uncertainty effect; model A is closer. Possible causes: arm bags overlapped in the drawing, second course elsewhere, less filling. Needs as-built sections.
 - J4 Wording: the paper calls the V "obtuse"; the drawing's arms are 89.1 deg apart. The drawing is what was traced; the as-built angle is unknown.
@@ -101,3 +101,6 @@ Needs network (blocked in this container; for Lior to widen or for a later run):
 | METHODS_3D.md section 3.10 | no note | re-verification note appended (position inconsistency, Fig. 20 size check) |
 | registry rows | 36 (32 mine + 4 intake) | 38 (-img-37, -img-38 added) |
 Files archived first: archive/pre_reverify_2026-10-10/. Scratch (Fig. 20 measurement scripts) was in /tmp and is not kept; the method is in VERIFY.md.
+
+## 8. Source audit 2026-10-10
+See SOURCE_AUDIT_2026-10-10.md. Added to METHODS_3D: 2.2 how each source was used, 3.12 decisions D1-D10, per-element confidence (section 6); viewer sub-tabs for sources/assumptions/decisions/confidence. J1 and J2 applied (text only; model.js data identical). Open: S10 venue/year not confirmed; card says V 64 m x 29 m (Blacka 2013) vs our 58.0 m, and ~12.7 t vs 14 t bags (card not edited; for main).

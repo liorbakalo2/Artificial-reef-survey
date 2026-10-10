@@ -584,3 +584,6 @@ Added R13 (Mead & Borrero 2011) and R14 (Blacka et al. 2013) to the .json and .m
 ## 2026-10-10 - palm-beach-gold-coast source audit (fresh agent)
 - 07_scale/shapes/palm-beach-gold-coast/SOURCE_AUDIT_2026-10-10.md written. METHODS_3D.md: per-source "how used" table (2.2), assumptions A12-A14, decisions DEC1-DEC15 (3.9), tools/AI statement (3.10), references c1, d1, t2 added; docs.js regenerated (model.js byte-identical; no value changed). IMAGES.md stale pending-3D lines fixed (registry otherwise complete).
 - Unconfirmed: Prenzler 2022 DOI/pages (REQUESTS). Mismatches listed for main: card volume 25,000 vs model 22,000 vs register 33,000; card offshore 270/330 m vs model 225-374 m.
+
+## 2026-10-10 - Pratte's Reef source audit (agent)
+Audit in 07_scale/shapes/prattes-reef-el-segundo/SOURCE_AUDIT_2026-10-10.md. Applied J1 (MLLW kept, decision D6) and J2 (+-150 m position uncertainty, text only; model unchanged). METHODS_3D gained source "how used" table, decisions D1-D10, per-element confidence; viewer got sub-tabs. Open: S10 venue/year unconfirmed; card V size 64 m vs our 58.0 m (not edited).
