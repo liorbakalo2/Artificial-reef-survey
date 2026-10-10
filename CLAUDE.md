@@ -24,14 +24,21 @@ Briefs, HANDOFFs and logs were written on Lior's Windows PC. Read
 `C:\Users\lior\Documents\Claude\Projects\Artificial reef\X\Y` as `<repo root>/X/Y`, with backslashes as forward slashes.
 Gemini's folder (`C:\Users\lior\Documents\Gemini\AG\artifical reef`) is NOT in this repo; see `_agent_briefs/orchestrator.md`.
 
-## Cloud session start (the environment has no setup script, by Lior's choice)
-In a cloud (Linux) session, the orchestrator runs these once, before any build, QA or OCR step. Agents then reuse them.
-1. `pip install -r requirements.txt playwright && python -m playwright install --with-deps chromium`
-   This gives Python packages plus a headless Chromium, which the page scripts find automatically.
-2. Only when a scanned paper needs OCR: `apt-get install -y tesseract-ocr` (prefix `sudo` if needed).
-3. Check: `python src/update_page.py --dry`, run from `04_build/`, must finish without errors.
-If an install fails with a network error, tell Lior that the environment's network access must allow it (Full).
-Details: `_agent_briefs/orchestrator.md` section 3.
+## Cloud session start (no setup script in the environment; keep it cheap)
+Install output costs tokens. NEVER let pip, playwright or apt print into the conversation: send it to a log file, check first
+and skip what is already there, and read only the last 15 log lines if something fails. Only the orchestrator runs these, once
+per session; agents never reinstall. Run from the repo root:
+```
+python -c "import numpy,shapely,PIL,scipy,pyproj,fitz,websockets" 2>/dev/null && echo DEPS_OK || { pip install -q -r requirements.txt >/tmp/pip.log 2>&1 && echo DEPS_OK || { echo DEPS_FAILED; tail -n 15 /tmp/pip.log; }; }
+{ command -v chromium || command -v google-chrome || ls ~/.cache/ms-playwright/chromium-*/chrome-linux*/chrome; } >/dev/null 2>&1 && echo CHROME_OK || { pip install -q playwright >/tmp/pw.log 2>&1 && python -m playwright install --with-deps chromium >>/tmp/pw.log 2>&1 && echo CHROME_OK || { echo CHROME_FAILED; tail -n 15 /tmp/pw.log; }; }
+```
+- **OCR**, only when a scanned paper needs it:
+  `command -v tesseract >/dev/null || { (sudo apt-get install -y -qq tesseract-ocr || apt-get install -y -qq tesseract-ocr) >/tmp/apt.log 2>&1; tail -n 3 /tmp/apt.log; }`
+- **Check:** run `python src/update_page.py --dry >/tmp/dry.log 2>&1; tail -n 12 /tmp/dry.log` from `04_build/`. It must end without errors.
+- **Network errors:** if an install fails with one, tell Lior that the environment's network access must be Full.
+- **Zero-token option:** the same two lines pasted into the environment's setup script run before the session starts, so they
+  cost no tokens.
+- **Details:** `_agent_briefs/orchestrator.md` section 3.
 
 ## Standing rules (Lior's)
 1. Traceability, academic level. Every number and every drawn vertex has:
