@@ -124,9 +124,9 @@ All of them are in `REQUESTS_FOR_LIOR.md`:
 | 2026-10-07 | `_agent_briefs/task_narrowneck_verify.md` | `07_scale/shapes/narrowneck-gold-coast/` | `VERIFY.md` CHECKPOINT + `HANDOFF.md` | CUT OFF by the usage limit 2026-10-07 (no new checkpoint written). Fresh agent: start from the old `VERIFY.md` CHECKPOINT, but first list files in the folder changed on 2026-10-07 after it (partial work of the cut-off run) |
 | 2026-10-07 | `_agent_briefs/task_seabed_fixes.md` | Borth and Boscombe `3d/` | each reef's `HANDOFF.md` (Borth first) | Borth D6 DONE 2026-10-07; Borth page texts + `update_page.py --full` DONE 2026-10-10 (cloud). Boscombe D2: see the 2026-10-10 row below |
 | 2026-10-10 | `_agent_briefs/task_mm_update.md` | `07_scale/shapes/mount-maunganui-reef/` | `3d/SOURCES_3D.md` CHECKPOINT (2026-10-07 b) + `HANDOFF.md` section 0 | RUNNING (fresh cloud agent): D1 in code, volume table, register img-23..38, card refs, previews |
-| 2026-10-10 | `_agent_briefs/task_narrowneck_verify.md` | `07_scale/shapes/narrowneck-gold-coast/` | `VERIFY.md` CHECKPOINT + `HANDOFF.md` | RUNNING (fresh cloud agent): first audits partial files of the cut-off run, then stage 1 |
+| 2026-10-10 | `_agent_briefs/task_narrowneck_verify.md` | `07_scale/shapes/narrowneck-gold-coast/` | `VERIFY.md` CHECKPOINT + `HANDOFF.md` | DONE 2026-10-10: verified with issues; scale conflict resolved (none); 5 outline versions, default 2020 photo; img-54..65 registered. Report: `REPORT_stage1_2026-10-10.md`. Page refresh not needed (no 3D yet) |
 | 2026-10-10 | `_agent_briefs/task_seabed_fixes.md` (Boscombe part) | `07_scale/shapes/boscombe-surf-reef/3d/` | `HANDOFF.md` | RUNNING (fresh cloud agent): D2 |
-
+| 2026-10-10 | `_agent_briefs/model_3d.md` (Narrowneck stage 2) | `07_scale/shapes/narrowneck-gold-coast/3d/` | `HANDOFF.md` 3D plan | RUNNING (fresh cloud agent) |
 **When an agent finishes:**
 - save its report from the hand-back;
 - refresh the page: `python src/update_page.py` from `04_build`, after the model agents. Check the SUMMARY and FAIL lines;

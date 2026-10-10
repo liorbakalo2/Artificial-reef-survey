@@ -148,7 +148,8 @@
   "id": "narrowneck-gold-coast-img-04",
   "file": "07_scale/shapes/narrowneck-gold-coast/src/gov/narrowneck-gold-coast_jackson2012_fig2_reef_levels_original_and_revised_design_300dpi_crop.png",
   "annotated_files": [
-   "07_scale/bathymetry/gold_coast/annotated/narrowneck_jackson2012_fig2_design_depth_labels_read.png"
+   "07_scale/bathymetry/gold_coast/annotated/narrowneck_jackson2012_fig2_design_depth_labels_read.png",
+   "07_scale/shapes/narrowneck-gold-coast/overlays/design_2004_minus6_on_s3.png"
   ],
   "kind": "design_drawing",
   "title": "Jackson et al. 2012 Fig 2: Reef Levels - Original and Revised Design (crop)",
@@ -169,7 +170,7 @@
    "3d_height_slopes",
    "cross_check"
   ],
-  "how_used": "Depth labels read and boxed in annotated/narrowneck_jackson2012_fig2_design_depth_labels_read.png: revised crest -2.50 (both arms), side contours every 0.5 m to -5.0, then -6.0 and -8.00 outer limit; datum not stated in the paper. Goes to REPORT.md section 6. Levels and topology used for INPUTS FOR 3D (crest variation along the arms).",
+  "how_used": "Depth labels read and boxed in annotated/narrowneck_jackson2012_fig2_design_depth_labels_read.png: revised crest -2.50 (both arms), side contours every 0.5 m to -5.0, then -6.0 and -8.00 outer limit; datum not stated in the paper. Goes to REPORT.md section 6. Levels and topology used for INPUTS FOR 3D (crest variation along the arms). 2026-10-10: Fig 2-right design placed in the canonical frame as outline version design_2004_revised (-6 m envelope 13,631 m2, crest loops 1,044/1,083 m2).",
   "linked_records": [
    "07_scale/bathymetry/gold_coast/SOURCES.md GC-N04",
    "07_scale/bathymetry/gold_coast/REPORT.md",
@@ -243,7 +244,9 @@
  {
   "id": "narrowneck-gold-coast-img-06",
   "file": "07_scale/shapes/narrowneck-gold-coast/src/gov/narrowneck-gold-coast_jackson2012_fig5a_reef_bathymetry_2011-06-09_native.jpeg",
-  "annotated_files": [],
+  "annotated_files": [
+   "07_scale/shapes/narrowneck-gold-coast/overlays/survey2011_zone_on_s3.png"
+  ],
   "kind": "survey_plot",
   "title": "Jackson et al. 2012 Fig 5a: Narrowneck reef bathymetry survey 9 June 2011",
   "citation": "Jackson, A., Tomlinson, R., Corbett, B. and Strauss, D. (2012). Long term performance of a submerged coastal control structure: a case study of the Narrowneck multi-functional artificial reef. Coastal Engineering Proceedings 1(33), structures.54 (Proc. 33rd International Conference on Coastal Engineering, Santander), doi:10.9753/icce.v33.structures.54, p.4, Fig 5a (embedded raster). https://icce-ojs-tamu.tdl.org/icce/article/view/6956. Accessed 2026-10-06.",
@@ -259,9 +262,10 @@
   "state_shown": "as-maintained (2011-06-09)",
   "used_for": [
    "cross_check",
-   "context"
+   "context",
+   "plan_trace"
   ],
-  "how_used": "No depth value readable (contours unlabelled). Evidence that a 2011 GCCC reef survey exists and that its contours follow the revised-design outline. Goes to REPORT.md section 6.",
+  "how_used": "No depth value readable (contours unlabelled). Evidence that a 2011 GCCC reef survey exists and that its contours follow the revised-design outline. Goes to REPORT.md section 6. 2026-10-10: dense-contour relief zone digitised (4,922 m2) = outline version survey_2011-06-09; no depth legend, so relief zone only.",
   "linked_records": [
    "07_scale/bathymetry/gold_coast/SOURCES.md GC-N06",
    "07_scale/bathymetry/gold_coast/REPORT.md"
@@ -1889,7 +1893,8 @@
   "id": "narrowneck-gold-coast-img-45",
   "file": "07_scale/shapes/narrowneck-gold-coast/src/wayback/nn_wayback_2020-08-08_r9812_z19.png",
   "annotated_files": [
-   "07_scale/shapes/narrowneck-gold-coast/overlays/s3_primary_trace.png"
+   "07_scale/shapes/narrowneck-gold-coast/overlays/s3_primary_trace.png",
+   "07_scale/shapes/narrowneck-gold-coast/overlays/faint_patches_on_s3.png"
   ],
   "kind": "satellite",
   "title": "Esri Wayback 2020-08-08 (release 9812), z19 crop of Narrowneck Reef, 0.2637 m/px (1517x1517 px)",
@@ -1909,7 +1914,7 @@
    "scale",
    "cross_check"
   ],
-  "how_used": "PRIMARY plan-view trace (shape.json source s3 / sources.md s3): outline of the visible container patches of each arm read off this georeferenced image (0.2637 m/px from Web-Mercator z19 at -27.9867 deg). Gives canonical polygons, area, bbox, arm angles and the lat/lon polygon. Traced: 7 polygons (north/south arm envelopes, two NW patches, three channel containers) -> shape.json canonical (METHOD.md Steps 2a-3).",
+  "how_used": "PRIMARY plan-view trace (shape.json source s3 / sources.md s3): outline of the visible container patches of each arm read off this georeferenced image (0.2637 m/px from Web-Mercator z19 at -27.9867 deg). Gives canonical polygons, area, bbox, arm angles and the lat/lon polygon. Traced: 7 polygons (north/south arm envelopes, two NW patches, three channel containers) -> shape.json canonical (METHOD.md Steps 2a-3). 2026-10-10: 24 faint seaward patches (663 m2) recomputed and stored as faint_seaward_patches (not in any outline).",
   "linked_records": [
    "07_scale/shapes/narrowneck-gold-coast/sources.md s3",
    "07_scale/shapes/narrowneck-gold-coast/METHOD.md Step 1d"
@@ -2102,7 +2107,8 @@
   "file": "07_scale/shapes/narrowneck-gold-coast/src/navionics/sonar_z18_shade00.0.png",
   "annotated_files": [
    "07_scale/shapes/narrowneck-gold-coast/overlays/navionics_sonar_z18_shade0_with_trace_and_readings.png",
-   "07_scale/shapes/narrowneck-gold-coast/overlays/navionics_sonar_z18_shade5_with_trace_and_readings.png"
+   "07_scale/shapes/narrowneck-gold-coast/overlays/navionics_sonar_z18_shade5_with_trace_and_readings.png",
+   "07_scale/shapes/narrowneck-gold-coast/overlays/navionics_shoals_on_s3.png"
   ],
   "kind": "chart_screenshot",
   "title": "Garmin Navionics SonarChart, Narrowneck Reef, zoom 18, shallow shading 0 m (series of 9 screenshots 0-8 m)",
@@ -2123,7 +2129,7 @@
    "cross_check",
    "scale"
   ],
-  "how_used": "Seabed and shoal read-out for the 3D stage and a position check of the trace: the s3 arms laid on the chart (map centre = reef centroid) fall on the 4.0/4.5 m shoal loops (METHOD.md Step 5; overlays navionics_sonar_*). Depth datum is not stated by the app (assumed LAT, supported by REPORT.md 5.2); the chart shows the arms only as 1.5-2 m shoals above 5.5-6 m seabed, not the crest.",
+  "how_used": "Seabed and shoal read-out for the 3D stage and a position check of the trace: the s3 arms laid on the chart (map centre = reef centroid) fall on the 4.0/4.5 m shoal loops (METHOD.md Step 5; overlays navionics_sonar_*). Depth datum is not stated by the app (assumed LAT, supported by REPORT.md 5.2); the chart shows the arms only as 1.5-2 m shoals above 5.5-6 m seabed, not the crest. 2026-10-10: 4.0 m closed loops (138 + 399 m2) = outline version navionics_4.0m_shoals (indicative only).",
   "linked_records": [
    "07_scale/shapes/narrowneck-gold-coast/sources.md s12",
    "07_scale/shapes/narrowneck-gold-coast/METHOD.md Step 5"
@@ -2308,5 +2314,496 @@
    "model_values_affected": []
   },
   "added_by": "narrowneck-gold-coast plan-shape trace (resume), 2026-10-06"
+ },
+ {
+  "id": "narrowneck-gold-coast-img-54",
+  "file": "07_scale/shapes/narrowneck-gold-coast/src/gov/corbett2023_extracted/p3_x88.png",
+  "annotated_files": [
+   "07_scale/shapes/narrowneck-gold-coast/overlays/option2_on_s3.png"
+  ],
+  "kind": "design_drawing",
+  "title": "Corbett et al. 2023 Fig 2: concept design Renewal Option 1 (left) and Option 2 (right)",
+  "citation": "Corbett, B.B., Mulcahy, M.G., Elliott-Perkins, Z. and Hunt, S. (2023). Narrowneck Artificial Reef Renewal. Australasian Coasts & Ports 2023 Conference, Sunshine Coast, 15-18 Aug 2023, pp. 663-669 (PDF pp.1-7), PDF p.3, Fig 2. Supplied by Lior (papers/ folder). Accessed 2026-10-07.",
+  "image_url": "not online (copy of the conference paper in papers/ 'Narrowneck Artificial Reef Renewal. Australasian Coasts & Ports 2023.pdf')",
+  "source_page": "papers/ PDF",
+  "page_or_figure": "PDF p.3, Fig 2",
+  "image_date": "2017",
+  "credit": "International Coastal Management (ICM) / City of Gold Coast; Australasian Coasts & Ports 2023",
+  "license": "Conference paper, copyright of the authors/Engineers Australia; not an open licence; private research copy only",
+  "retrieved": "2026-10-10",
+  "shows": "Plan drawings with -2.5 (crest), -3, -4, -5, -6 m AHD contours and a 50 m bar; Option 2 (right, built 2018) is further seaward with the south reef rotated 5 deg, Option 1 (= 2004 design) in grey.",
+  "structure_visible": true,
+  "state_shown": "design (Option 2 = the layout the 2017-18 works followed; south reef and bridge only partly built)",
+  "used_for": [
+   "plan_trace",
+   "scale",
+   "cross_check"
+  ],
+  "how_used": "Calibrated on the 50 m bar (0.5155 m/px, 97 px); chamfer-fit to Jackson 2012 Fig 2 (same CAD design, s=1.504); Option 2 outer -6 m envelope (13,941 m2) and -2.5 m crest loops placed in the canonical frame = shape.json outline_versions design_option2_2017 (+-15 m). Resolved the scale conflict (crest loops 71 m, not 85-90 m).",
+  "linked_records": [
+   "07_scale/shapes/narrowneck-gold-coast/VERIFY.md",
+   "07_scale/shapes/narrowneck-gold-coast/sources.md s13"
+  ],
+  "bytes": 313147,
+  "px": [
+   769,
+   334
+  ],
+  "sha256": "849b1e5a11121190ff9cf84434d4ecbacb170286fdd286ccfb04909594790b68",
+  "rights_note": "Private research copy; reuse rights to be checked before any public release.",
+  "display": true,
+  "for_3d_check": {
+   "pending": false,
+   "what_to_check": "none (context)",
+   "model_values_affected": []
+  },
+  "added_by": "narrowneck-gold-coast verification (stage 1), 2026-10-10"
+ },
+ {
+  "id": "narrowneck-gold-coast-img-55",
+  "file": "07_scale/shapes/narrowneck-gold-coast/src/gov/corbett2023_extracted/p3_x86.png",
+  "annotated_files": [],
+  "kind": "survey_plot",
+  "title": "Corbett et al. 2023 Fig 3: pre-works multibeam survey of the existing reef (ICM 2017)",
+  "citation": "Corbett, B.B., Mulcahy, M.G., Elliott-Perkins, Z. and Hunt, S. (2023). Narrowneck Artificial Reef Renewal. Australasian Coasts & Ports 2023 Conference, Sunshine Coast, 15-18 Aug 2023, pp. 663-669 (PDF pp.1-7), PDF p.3, Fig 3. Supplied by Lior (papers/ folder). Accessed 2026-10-07.",
+  "image_url": "not online (copy of the conference paper in papers/ 'Narrowneck Artificial Reef Renewal. Australasian Coasts & Ports 2023.pdf')",
+  "source_page": "papers/ PDF",
+  "page_or_figure": "PDF p.3, Fig 3",
+  "image_date": "2017",
+  "credit": "International Coastal Management (ICM) / City of Gold Coast; Australasian Coasts & Ports 2023",
+  "license": "Conference paper, copyright of the authors/Engineers Australia; not an open licence; private research copy only",
+  "retrieved": "2026-10-10",
+  "shows": "Multibeam bathymetry of part of the reef with individual 17-20 m containers, colour depth scale -1 to -9 m (AHD assumed), 20 m bar.",
+  "structure_visible": true,
+  "state_shown": "pre-renewal (2017)",
+  "used_for": [
+   "3d_seabed",
+   "3d_height_slopes",
+   "cross_check"
+  ],
+  "how_used": "Not yet digitised. Container length vs 20 m bar checked (17-20 m, consistent). For the 3D stage: toe/extent, container heights and seabed depths (red/orange crest -3..-4, blue -6..-9).",
+  "linked_records": [
+   "07_scale/shapes/narrowneck-gold-coast/VERIFY.md",
+   "07_scale/shapes/narrowneck-gold-coast/sources.md s13"
+  ],
+  "bytes": 327385,
+  "px": [
+   460,
+   312
+  ],
+  "sha256": "e6ae8e348a8048faec1379cde7324643b16d3413bd016af68f3638fc8bae91cb",
+  "rights_note": "Private research copy; reuse rights to be checked before any public release.",
+  "display": true,
+  "for_3d_check": {
+   "pending": true,
+   "what_to_check": "read crest/seabed depth colours and container stacking height from the colour scale; check toe depth vs planned 3D seabed (-6 to -8 AHD)",
+   "model_values_affected": [
+    "crest_z",
+    "seabed",
+    "heights"
+   ]
+  },
+  "added_by": "narrowneck-gold-coast verification (stage 1), 2026-10-10"
+ },
+ {
+  "id": "narrowneck-gold-coast-img-56",
+  "file": "07_scale/shapes/narrowneck-gold-coast/src/gov/corbett2023_extracted/p1_x39.png",
+  "annotated_files": [],
+  "kind": "aerial",
+  "title": "Corbett et al. 2023 Fig 1: Narrowneck Artificial Reef (2001) on the Gold Coast coastline (oblique aerial)",
+  "citation": "Corbett, B.B., Mulcahy, M.G., Elliott-Perkins, Z. and Hunt, S. (2023). Narrowneck Artificial Reef Renewal. Australasian Coasts & Ports 2023 Conference, Sunshine Coast, 15-18 Aug 2023, pp. 663-669 (PDF pp.1-7), PDF p.1, Fig 1. Supplied by Lior (papers/ folder). Accessed 2026-10-07.",
+  "image_url": "not online (copy of the conference paper in papers/ 'Narrowneck Artificial Reef Renewal. Australasian Coasts & Ports 2023.pdf')",
+  "source_page": "papers/ PDF",
+  "page_or_figure": "PDF p.1, Fig 1",
+  "image_date": "2001",
+  "credit": "International Coastal Management (ICM) / City of Gold Coast; Australasian Coasts & Ports 2023",
+  "license": "Conference paper, copyright of the authors/Engineers Australia; not an open licence; private research copy only",
+  "retrieved": "2026-10-10",
+  "shows": "Oblique aerial photograph looking north along Surfers Paradise beach with the reef as a dark patch offshore.",
+  "structure_visible": true,
+  "state_shown": "as-built (2001 state)",
+  "used_for": [
+   "context"
+  ],
+  "how_used": "Context only; oblique, no scale.",
+  "linked_records": [
+   "07_scale/shapes/narrowneck-gold-coast/VERIFY.md",
+   "07_scale/shapes/narrowneck-gold-coast/sources.md s13"
+  ],
+  "bytes": 523896,
+  "px": [
+   693,
+   389
+  ],
+  "sha256": "90c247f4ea1ff43f4fdf50160a8766f7d12528831d5a5efd3d729f11c703fa6e",
+  "rights_note": "Private research copy; reuse rights to be checked before any public release.",
+  "display": true,
+  "for_3d_check": {
+   "pending": false,
+   "what_to_check": "none (context)",
+   "model_values_affected": []
+  },
+  "added_by": "narrowneck-gold-coast verification (stage 1), 2026-10-10"
+ },
+ {
+  "id": "narrowneck-gold-coast-img-57",
+  "file": "07_scale/shapes/narrowneck-gold-coast/src/gov/corbett2023_extracted/p3_x87.png",
+  "annotated_files": [],
+  "kind": "report_photo",
+  "title": "Corbett et al. 2023 Fig 4: CNC-machined polystyrene foam model of the existing reef bathymetry (physical model)",
+  "citation": "Corbett, B.B., Mulcahy, M.G., Elliott-Perkins, Z. and Hunt, S. (2023). Narrowneck Artificial Reef Renewal. Australasian Coasts & Ports 2023 Conference, Sunshine Coast, 15-18 Aug 2023, pp. 663-669 (PDF pp.1-7), PDF p.3, Fig 4. Supplied by Lior (papers/ folder). Accessed 2026-10-07.",
+  "image_url": "not online (copy of the conference paper in papers/ 'Narrowneck Artificial Reef Renewal. Australasian Coasts & Ports 2023.pdf')",
+  "source_page": "papers/ PDF",
+  "page_or_figure": "PDF p.3, Fig 4",
+  "image_date": "2017",
+  "credit": "International Coastal Management (ICM) / City of Gold Coast; Australasian Coasts & Ports 2023",
+  "license": "Conference paper, copyright of the authors/Engineers Australia; not an open licence; private research copy only",
+  "retrieved": "2026-10-10",
+  "shows": "Physical wave-basin model of the reef with individual containers (1 mm accuracy).",
+  "structure_visible": true,
+  "state_shown": "model of the pre-renewal reef (2017)",
+  "used_for": [
+   "context"
+  ],
+  "how_used": "Context: shows container shapes in the model; not used for dimensions.",
+  "linked_records": [
+   "07_scale/shapes/narrowneck-gold-coast/VERIFY.md",
+   "07_scale/shapes/narrowneck-gold-coast/sources.md s13"
+  ],
+  "bytes": 332887,
+  "px": [
+   694,
+   239
+  ],
+  "sha256": "bc4a2d585cb8a15df0c5f5586ca4c7a0dec4a050da67c045b27739a6c2a5cfd2",
+  "rights_note": "Private research copy; reuse rights to be checked before any public release.",
+  "display": true,
+  "for_3d_check": {
+   "pending": false,
+   "what_to_check": "none (context)",
+   "model_values_affected": []
+  },
+  "added_by": "narrowneck-gold-coast verification (stage 1), 2026-10-10"
+ },
+ {
+  "id": "narrowneck-gold-coast-img-58",
+  "file": "07_scale/shapes/narrowneck-gold-coast/src/gov/corbett2023_extracted/p4_x117.png",
+  "annotated_files": [],
+  "kind": "report_photo",
+  "title": "Corbett et al. 2023 Fig 5: Renewal Option 1 built in the wave basin from scaled geotextile containers over the existing reef",
+  "citation": "Corbett, B.B., Mulcahy, M.G., Elliott-Perkins, Z. and Hunt, S. (2023). Narrowneck Artificial Reef Renewal. Australasian Coasts & Ports 2023 Conference, Sunshine Coast, 15-18 Aug 2023, pp. 663-669 (PDF pp.1-7), PDF p.4, Fig 5. Supplied by Lior (papers/ folder). Accessed 2026-10-07.",
+  "image_url": "not online (copy of the conference paper in papers/ 'Narrowneck Artificial Reef Renewal. Australasian Coasts & Ports 2023.pdf')",
+  "source_page": "papers/ PDF",
+  "page_or_figure": "PDF p.4, Fig 5",
+  "image_date": "2017",
+  "credit": "International Coastal Management (ICM) / City of Gold Coast; Australasian Coasts & Ports 2023",
+  "license": "Conference paper, copyright of the authors/Engineers Australia; not an open licence; private research copy only",
+  "retrieved": "2026-10-10",
+  "shows": "Scale-model containers arranged in the Option 1 layout (physical model).",
+  "structure_visible": true,
+  "state_shown": "model of design Option 1",
+  "used_for": [
+   "context"
+  ],
+  "how_used": "Context only (model).",
+  "linked_records": [
+   "07_scale/shapes/narrowneck-gold-coast/VERIFY.md",
+   "07_scale/shapes/narrowneck-gold-coast/sources.md s13"
+  ],
+  "bytes": 394909,
+  "px": [
+   693,
+   314
+  ],
+  "sha256": "797a35fcc91a54ff73e5a08f7e70389fc9067bd9f606a18e52d701a24f1c3c55",
+  "rights_note": "Private research copy; reuse rights to be checked before any public release.",
+  "display": true,
+  "for_3d_check": {
+   "pending": false,
+   "what_to_check": "none (context)",
+   "model_values_affected": []
+  },
+  "added_by": "narrowneck-gold-coast verification (stage 1), 2026-10-10"
+ },
+ {
+  "id": "narrowneck-gold-coast-img-59",
+  "file": "07_scale/shapes/narrowneck-gold-coast/src/gov/corbett2023_extracted/p4_x116.png",
+  "annotated_files": [],
+  "kind": "report_photo",
+  "title": "Corbett et al. 2023 Fig 6: annotated aerial of the physical model of Renewal Option 2 with ride-length and peel-angle measurements",
+  "citation": "Corbett, B.B., Mulcahy, M.G., Elliott-Perkins, Z. and Hunt, S. (2023). Narrowneck Artificial Reef Renewal. Australasian Coasts & Ports 2023 Conference, Sunshine Coast, 15-18 Aug 2023, pp. 663-669 (PDF pp.1-7), PDF p.4, Fig 6. Supplied by Lior (papers/ folder). Accessed 2026-10-07.",
+  "image_url": "not online (copy of the conference paper in papers/ 'Narrowneck Artificial Reef Renewal. Australasian Coasts & Ports 2023.pdf')",
+  "source_page": "papers/ PDF",
+  "page_or_figure": "PDF p.4, Fig 6",
+  "image_date": "2017",
+  "credit": "International Coastal Management (ICM) / City of Gold Coast; Australasian Coasts & Ports 2023",
+  "license": "Conference paper, copyright of the authors/Engineers Australia; not an open licence; private research copy only",
+  "retrieved": "2026-10-10",
+  "shows": "Plan view of the Option 2 model with container layout and drawn ride lengths/peel angles.",
+  "structure_visible": true,
+  "state_shown": "model of design Option 2",
+  "used_for": [
+   "cross_check"
+  ],
+  "how_used": "Visual cross-check of the Option 2 container layout and orientation (south reef rotated); not digitised.",
+  "linked_records": [
+   "07_scale/shapes/narrowneck-gold-coast/VERIFY.md",
+   "07_scale/shapes/narrowneck-gold-coast/sources.md s13"
+  ],
+  "bytes": 537655,
+  "px": [
+   665,
+   462
+  ],
+  "sha256": "56ea62bcc8183beebf7228aecc6fb0123077aa11c3d3e988c9a9fb9b51528f2f",
+  "rights_note": "Private research copy; reuse rights to be checked before any public release.",
+  "display": true,
+  "for_3d_check": {
+   "pending": false,
+   "what_to_check": "none (context)",
+   "model_values_affected": []
+  },
+  "added_by": "narrowneck-gold-coast verification (stage 1), 2026-10-10"
+ },
+ {
+  "id": "narrowneck-gold-coast-img-60",
+  "file": "07_scale/shapes/narrowneck-gold-coast/src/gov/corbett2023_extracted/p5_x141.png",
+  "annotated_files": [],
+  "kind": "aerial",
+  "title": "Corbett et al. 2023 Fig 7: trailing suction split-hull hopper dredger at the Narrowneck reef site before placing a container",
+  "citation": "Corbett, B.B., Mulcahy, M.G., Elliott-Perkins, Z. and Hunt, S. (2023). Narrowneck Artificial Reef Renewal. Australasian Coasts & Ports 2023 Conference, Sunshine Coast, 15-18 Aug 2023, pp. 663-669 (PDF pp.1-7), PDF p.5, Fig 7. Supplied by Lior (papers/ folder). Accessed 2026-10-07.",
+  "image_url": "not online (copy of the conference paper in papers/ 'Narrowneck Artificial Reef Renewal. Australasian Coasts & Ports 2023.pdf')",
+  "source_page": "papers/ PDF",
+  "page_or_figure": "PDF p.5, Fig 7",
+  "image_date": "2018",
+  "credit": "International Coastal Management (ICM) / City of Gold Coast; Australasian Coasts & Ports 2023",
+  "license": "Conference paper, copyright of the authors/Engineers Australia; not an open licence; private research copy only",
+  "retrieved": "2026-10-10",
+  "shows": "Aerial view of the dredger above the dark container field in turquoise water.",
+  "structure_visible": true,
+  "state_shown": "renewal works (2017-18)",
+  "used_for": [
+   "cross_check",
+   "context"
+  ],
+  "how_used": "Qualitative: the dark container field is visible at the same scale as the Esri imagery; not measured.",
+  "linked_records": [
+   "07_scale/shapes/narrowneck-gold-coast/VERIFY.md",
+   "07_scale/shapes/narrowneck-gold-coast/sources.md s13"
+  ],
+  "bytes": 270315,
+  "px": [
+   688,
+   406
+  ],
+  "sha256": "c3ab4435c6402f4a318f9dd5d0c4cc2453be8468227bf5069d8cdd9a6f701d79",
+  "rights_note": "Private research copy; reuse rights to be checked before any public release.",
+  "display": true,
+  "for_3d_check": {
+   "pending": false,
+   "what_to_check": "none (context)",
+   "model_values_affected": []
+  },
+  "added_by": "narrowneck-gold-coast verification (stage 1), 2026-10-10"
+ },
+ {
+  "id": "narrowneck-gold-coast-img-61",
+  "file": "07_scale/shapes/narrowneck-gold-coast/src/gov/corbett2023_extracted/p6_x154.png",
+  "annotated_files": [],
+  "kind": "aerial",
+  "title": "Corbett et al. 2023 Fig 11: GPS surf tracks near the reef before and after the renewal works",
+  "citation": "Corbett, B.B., Mulcahy, M.G., Elliott-Perkins, Z. and Hunt, S. (2023). Narrowneck Artificial Reef Renewal. Australasian Coasts & Ports 2023 Conference, Sunshine Coast, 15-18 Aug 2023, pp. 663-669 (PDF pp.1-7), PDF p.6, Fig 11. Supplied by Lior (papers/ folder). Accessed 2026-10-07.",
+  "image_url": "not online (copy of the conference paper in papers/ 'Narrowneck Artificial Reef Renewal. Australasian Coasts & Ports 2023.pdf')",
+  "source_page": "papers/ PDF",
+  "page_or_figure": "PDF p.6, Fig 11",
+  "image_date": "2018-2023",
+  "credit": "International Coastal Management (ICM) / City of Gold Coast; Australasian Coasts & Ports 2023",
+  "license": "Conference paper, copyright of the authors/Engineers Australia; not an open licence; private research copy only",
+  "retrieved": "2026-10-10",
+  "shows": "Aerial with coloured GPS tracks (pre/post renewal, on reef and in the lee); post-renewal tracks start up to 62 m further seaward.",
+  "structure_visible": true,
+  "state_shown": "as-built (post-renewal)",
+  "used_for": [
+   "cross_check"
+  ],
+  "how_used": "Evidence that the renewed crest/take-off lies further seaward (up to 62 m), consistent with Option 2's ~20 m seaward crest shift; not digitised.",
+  "linked_records": [
+   "07_scale/shapes/narrowneck-gold-coast/VERIFY.md",
+   "07_scale/shapes/narrowneck-gold-coast/sources.md s13"
+  ],
+  "bytes": 580667,
+  "px": [
+   692,
+   367
+  ],
+  "sha256": "b4259e9dad7d67464665eaf2b93ac6fc9a3ea73f0e70e345e5601186af62cc36",
+  "rights_note": "Private research copy; reuse rights to be checked before any public release.",
+  "display": true,
+  "for_3d_check": {
+   "pending": false,
+   "what_to_check": "none (context)",
+   "model_values_affected": []
+  },
+  "added_by": "narrowneck-gold-coast verification (stage 1), 2026-10-10"
+ },
+ {
+  "id": "narrowneck-gold-coast-img-62",
+  "file": "07_scale/shapes/narrowneck-gold-coast/src/gov/corbett2023_extracted/p6_x155.png",
+  "annotated_files": [],
+  "kind": "photo",
+  "title": "Corbett et al. 2023 Fig 9: surfer in the barrel on the Narrowneck artificial reef, 6/7/2018",
+  "citation": "Corbett, B.B., Mulcahy, M.G., Elliott-Perkins, Z. and Hunt, S. (2023). Narrowneck Artificial Reef Renewal. Australasian Coasts & Ports 2023 Conference, Sunshine Coast, 15-18 Aug 2023, pp. 663-669 (PDF pp.1-7), PDF p.6, Fig 9. Supplied by Lior (papers/ folder). Accessed 2026-10-07.",
+  "image_url": "not online (copy of the conference paper in papers/ 'Narrowneck Artificial Reef Renewal. Australasian Coasts & Ports 2023.pdf')",
+  "source_page": "papers/ PDF",
+  "page_or_figure": "PDF p.6, Fig 9",
+  "image_date": "2018-07-06",
+  "credit": "International Coastal Management (ICM) / City of Gold Coast; Australasian Coasts & Ports 2023",
+  "license": "Conference paper, copyright of the authors/Engineers Australia; not an open licence; private research copy only",
+  "retrieved": "2026-10-10",
+  "shows": "Surfer tube-riding a breaking wave on the reef shortly after the renewal.",
+  "structure_visible": false,
+  "state_shown": "as-built (post-renewal)",
+  "used_for": [
+   "context"
+  ],
+  "how_used": "Context (surf).",
+  "linked_records": [
+   "07_scale/shapes/narrowneck-gold-coast/VERIFY.md",
+   "07_scale/shapes/narrowneck-gold-coast/sources.md s13"
+  ],
+  "bytes": 411258,
+  "px": [
+   700,
+   313
+  ],
+  "sha256": "56153fee676a33c655ea3c80e4cadc8ebd69ae63bdfb193c835053d42b86f9a2",
+  "rights_note": "Private research copy; reuse rights to be checked before any public release.",
+  "display": true,
+  "for_3d_check": {
+   "pending": false,
+   "what_to_check": "none (context)",
+   "model_values_affected": []
+  },
+  "added_by": "narrowneck-gold-coast verification (stage 1), 2026-10-10"
+ },
+ {
+  "id": "narrowneck-gold-coast-img-63",
+  "file": "07_scale/shapes/narrowneck-gold-coast/src/gov/corbett2023_extracted/p6_x156.png",
+  "annotated_files": [],
+  "kind": "photo",
+  "title": "Corbett et al. 2023 Fig 10: hydrofoil surfer at Narrowneck on 24/03/2023",
+  "citation": "Corbett, B.B., Mulcahy, M.G., Elliott-Perkins, Z. and Hunt, S. (2023). Narrowneck Artificial Reef Renewal. Australasian Coasts & Ports 2023 Conference, Sunshine Coast, 15-18 Aug 2023, pp. 663-669 (PDF pp.1-7), PDF p.6, Fig 10. Supplied by Lior (papers/ folder). Accessed 2026-10-07.",
+  "image_url": "not online (copy of the conference paper in papers/ 'Narrowneck Artificial Reef Renewal. Australasian Coasts & Ports 2023.pdf')",
+  "source_page": "papers/ PDF",
+  "page_or_figure": "PDF p.6, Fig 10",
+  "image_date": "2023-03-24",
+  "credit": "International Coastal Management (ICM) / City of Gold Coast; Australasian Coasts & Ports 2023",
+  "license": "Conference paper, copyright of the authors/Engineers Australia; not an open licence; private research copy only",
+  "retrieved": "2026-10-10",
+  "shows": "Hydrofoil surfer on a small wave over the reef.",
+  "structure_visible": false,
+  "state_shown": "as-built (post-renewal)",
+  "used_for": [
+   "context"
+  ],
+  "how_used": "Context (surf).",
+  "linked_records": [
+   "07_scale/shapes/narrowneck-gold-coast/VERIFY.md",
+   "07_scale/shapes/narrowneck-gold-coast/sources.md s13"
+  ],
+  "bytes": 229407,
+  "px": [
+   693,
+   269
+  ],
+  "sha256": "22c6f0e8dfffba92236fa469ff220f950f7b5526c536ba4eeafdd3aab23fcd91",
+  "rights_note": "Private research copy; reuse rights to be checked before any public release.",
+  "display": true,
+  "for_3d_check": {
+   "pending": false,
+   "what_to_check": "none (context)",
+   "model_values_affected": []
+  },
+  "added_by": "narrowneck-gold-coast verification (stage 1), 2026-10-10"
+ },
+ {
+  "id": "narrowneck-gold-coast-img-64",
+  "file": "07_scale/shapes/narrowneck-gold-coast/src/gov/corbett2023_extracted/p4_x115.png",
+  "annotated_files": [],
+  "kind": "diagram",
+  "title": "Corbett et al. 2023 Table (physical-model tests 4-13): peel angle and ride length per reef, Options",
+  "citation": "Corbett, B.B., Mulcahy, M.G., Elliott-Perkins, Z. and Hunt, S. (2023). Narrowneck Artificial Reef Renewal. Australasian Coasts & Ports 2023 Conference, Sunshine Coast, 15-18 Aug 2023, pp. 663-669 (PDF pp.1-7), PDF p.4, results table. Supplied by Lior (papers/ folder). Accessed 2026-10-07.",
+  "image_url": "not online (copy of the conference paper in papers/ 'Narrowneck Artificial Reef Renewal. Australasian Coasts & Ports 2023.pdf')",
+  "source_page": "papers/ PDF",
+  "page_or_figure": "PDF p.4, results table",
+  "image_date": "2017",
+  "credit": "International Coastal Management (ICM) / City of Gold Coast; Australasian Coasts & Ports 2023",
+  "license": "Conference paper, copyright of the authors/Engineers Australia; not an open licence; private research copy only",
+  "retrieved": "2026-10-10",
+  "shows": "Table of model tests (Tp, Hs, SWL, peel angle, ride length) for the north and south reefs.",
+  "structure_visible": false,
+  "state_shown": "design (physical model)",
+  "used_for": [
+   "not_used"
+  ],
+  "how_used": "Not used for geometry; table of surfing metrics.",
+  "linked_records": [
+   "07_scale/shapes/narrowneck-gold-coast/VERIFY.md",
+   "07_scale/shapes/narrowneck-gold-coast/sources.md s13"
+  ],
+  "bytes": 8901,
+  "px": [
+   418,
+   278
+  ],
+  "sha256": "bf99e2ca3c52592642226916a937042d418abaa23d139943bfa550a483bb26d4",
+  "rights_note": "Private research copy; reuse rights to be checked before any public release.",
+  "display": true,
+  "for_3d_check": {
+   "pending": false,
+   "what_to_check": "none (not a picture of the reef)",
+   "model_values_affected": []
+  },
+  "added_by": "narrowneck-gold-coast verification (stage 1), 2026-10-10"
+ },
+ {
+  "id": "narrowneck-gold-coast-img-65",
+  "file": "07_scale/shapes/narrowneck-gold-coast/src/gov/corbett2023_extracted/p6_x157.png",
+  "annotated_files": [],
+  "kind": "diagram",
+  "title": "Corbett et al. 2023 Fig 12: wave height vs water level when most waves were breaking, pre- and post-renewal",
+  "citation": "Corbett, B.B., Mulcahy, M.G., Elliott-Perkins, Z. and Hunt, S. (2023). Narrowneck Artificial Reef Renewal. Australasian Coasts & Ports 2023 Conference, Sunshine Coast, 15-18 Aug 2023, pp. 663-669 (PDF pp.1-7), PDF p.6, Fig 12. Supplied by Lior (papers/ folder). Accessed 2026-10-07.",
+  "image_url": "not online (copy of the conference paper in papers/ 'Narrowneck Artificial Reef Renewal. Australasian Coasts & Ports 2023.pdf')",
+  "source_page": "papers/ PDF",
+  "page_or_figure": "PDF p.6, Fig 12",
+  "image_date": "2018-2023",
+  "credit": "International Coastal Management (ICM) / City of Gold Coast; Australasian Coasts & Ports 2023",
+  "license": "Conference paper, copyright of the authors/Engineers Australia; not an open licence; private research copy only",
+  "retrieved": "2026-10-10",
+  "shows": "Scatter/ellipse plot (Hrms vs water level m AHD) showing a lower limiting wave height for breaking after the renewal.",
+  "structure_visible": false,
+  "state_shown": "as-built (post-renewal)",
+  "used_for": [
+   "not_used"
+  ],
+  "how_used": "Context for the crest-depth/surf discussion; not used for geometry.",
+  "linked_records": [
+   "07_scale/shapes/narrowneck-gold-coast/VERIFY.md",
+   "07_scale/shapes/narrowneck-gold-coast/sources.md s13"
+  ],
+  "bytes": 224171,
+  "px": [
+   650,
+   641
+  ],
+  "sha256": "d8824143d5d5a87ee2476e7b823e356a6d54da4b06112128fe36d7b71511b220",
+  "rights_note": "Private research copy; reuse rights to be checked before any public release.",
+  "display": true,
+  "for_3d_check": {
+   "pending": false,
+   "what_to_check": "none (not a picture of the reef)",
+   "model_values_affected": []
+  },
+  "added_by": "narrowneck-gold-coast verification (stage 1), 2026-10-10"
  }
 ]

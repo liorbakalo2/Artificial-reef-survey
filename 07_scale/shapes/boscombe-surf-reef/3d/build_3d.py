@@ -89,7 +89,7 @@ def main():
                      "2": "INTERPOLATED under the reef (thin-plate spline across the reef footprint) - pre-reef seabed estimate",
                      "3": "CCO BEACH PROFILE (Channel Coastal Observatory, survey of %s, m ODN): measured at the 11 profile lines, linearly interpolated alongshore between lines; y -66 m to the seaward end of the lines (y about 21-38 m)" % ex.CCO_DATE,
                      "4": "INTERPOLATION between the seaward end of the CCO profiles and the survey: spline extrapolation + the CCO offset decaying over %d m" % ex.BLEND_L,
-                     "5": "EMODnet SLOPE EXTRAPOLATION y > 380 m: z(y) = z_model(x, 380) - %.4f (y - 380), EMODnet DTM 2024 slope, +-%.1f m; no local data" % (ex.EMODNET_SLOPE, ex.EMODNET_UNC)},
+                     "5": "EMODnet SLOPE EXTRAPOLATION y > 380 m (D2 2026-10-10: alongshore flat): z(y) = mean over x of z_model(x, 380) - %.4f (y - 380), EMODnet DTM 2024 slope, +-%.1f m; no local data" % (ex.EMODNET_SLOPE, ex.EMODNET_UNC)},
         "datum_w": "".join(chr(48 + int(v)) for v in dw10.ravel()),
         "datum_w_key": "one character per cell: chr(48 + round(10 * w)), w in 0..1 = fraction of the 'survey zero = ODN' switch (+1.40 m) applied to the cell; the CCO beach (ODN-referenced) has w = 0",
         "survey_valid_area_m2": int(valid.sum()),
@@ -336,17 +336,17 @@ def main():
     seabed["extension"]["emodnet_tie_x0"] = {"rows": [{"y": a, "model_z_msl": b, "emodnet_z_msl": c, "model_minus_emodnet": d} for a, b, c, d in emo_tie],
                                              "note": "EMODnet cell means at the centres y = 380 / 445 / 505 / 605 m (REPORT 9.1; LAT -> MSL with 1.46 m); model = extension at x = 0"}
     prov += [
-        {"parameter": "Seabed y 380-650 m (zone 'EMODnet slope', code 5)", "value": "z(y) = z_model(x, 380) - 0.0141 (y - 380); z(x=0, y=650) = %.2f m MSL" % zx0(650.0), "unit": "m", "source_id": "S5/S14",
-         "method": "EMODnet DTM 2024 slope -1.41 % (+-0.10 %) from the four full cells beyond the model grid, applied from the model's own y = 380 row (column by column, so the alongshore pattern of the spline row continues); EXTRAPOLATED, no local data. Ties to EMODnet cell means within 0.8-1.4 m (model shallower): " +
+        {"parameter": "Seabed y 380-650 m (zone 'EMODnet slope', code 5)", "value": "z(y) = mean over x of z_model(x, 380) - 0.0141 (y - 380), flat alongshore (D2, 2026-10-10); z(x=0, y=650) = %.2f m MSL" % zx0(650.0), "unit": "m", "source_id": "S5/S14",
+         "method": "EMODnet DTM 2024 slope -1.41 % (+-0.10 %) from the four full cells beyond the model grid, applied from the alongshore MEAN of the model's own y = 380 row (D2, 2026-10-10: the row and everything seaward of it is flat alongshore; before D2 the spline row was copied column by column and carried a tilt of +0.76 m per 100 m of x that neither EMODnet nor Navionics show); EXTRAPOLATED, no local data. Ties to EMODnet cell means within 0.7-1.3 m (model shallower): " +
                    "; ".join("y %d: model %+.2f vs EMODnet %+.2f (%+.2f)" % r for r in emo_tie),
-         "uncertainty": "+-1.2 m (REPORT 9.1 gave +-1.0 m; Navionics z16 check of 11 soundings: rms 1.2 m, model deeper at x<0 and shallower at x>0, about -1.2 m per 100 m of x); EMODnet absolute levels themselves carry +-1.5 m datum/sampling uncertainty at Boscombe", "estimated": True},
+         "uncertainty": "+-0.5 m (D2: Navionics z16 check of 11 soundings, rms 0.5 m after flattening; before D2 +-1.2 m with a misfit of about -1.2 m per 100 m of x; REPORT 9.1 had +-1.0 m); EMODnet absolute levels themselves carry +-1.5 m datum/sampling uncertainty at Boscombe", "estimated": True},
         {"parameter": "EMODnet cross-check of the model seabed (validation, not a model value)", "value": "reef-centre cell (ki34288/kj32794, n = 12): EMODnet -5.62 m LAT = -7.08 m MSL; model minus EMODnet = +1.39 m; seven cells fully inside the grid: mean +1.80 m, sd 0.66 m (range +1.14 .. +3.05)", "unit": "m", "source_id": "S5/S14",
          "method": "EMODnet cell means vs the model averaged over the same cell footprints (z_LAT = z_MSL + 1.46); not a constant offset (smallest where best sampled), so not a datum shift (REPORT 6.2); the DTM shows no reef; EMODnet is not used for the reef, toe, beach or the seabed around the reef",
          "uncertainty": "+-1.5 m datum and sampling (REPORT 6.2)", "estimated": False},
     ]
 
     conf = {"level": "medium",
-            "reason": "Outline (2011 satellite), seabed (April 2011 DGPS plot, +-0.2 m colour read) and the as-built crest (designers +0.5 m ACD, Oct 2009 survey +0.45..0.65) are all sourced and agree, and Garmin Navionics shows the same shoal; but the zero of the survey plot (chart datum) is assumed (+-1.4 m if wrong), the as-built flanks and flat crest are an idealised loft, and the ground under the reef and the strip between the beach profiles and the survey (y ~35-100 m) are interpolated. From 2026-10-07 the beach is a measured profile (Channel Coastal Observatory, April 2010) and it also supports the chart-datum reading (CCO minus model = +0.03 m, sd 0.30 m); the seabed beyond y = 380 m is an EMODnet-slope extrapolation (+-1 m)."}
+            "reason": "Outline (2011 satellite), seabed (April 2011 DGPS plot, +-0.2 m colour read) and the as-built crest (designers +0.5 m ACD, Oct 2009 survey +0.45..0.65) are all sourced and agree, and Garmin Navionics shows the same shoal; but the zero of the survey plot (chart datum) is assumed (+-1.4 m if wrong), the as-built flanks and flat crest are an idealised loft, and the ground under the reef and the strip between the beach profiles and the survey (y ~35-100 m) are interpolated. From 2026-10-07 the beach is a measured profile (Channel Coastal Observatory, April 2010) and it also supports the chart-datum reading (CCO minus model = +0.03 m, sd 0.30 m); the seabed beyond y = 380 m is an EMODnet-slope extrapolation, flat alongshore since D2 2026-10-10 (+-0.5 m)."}
 
     history = [
         {"date": "2008-06", "event": "Construction starts (lower container layer placed in 2008)", "source_id": "S3/S12"},

@@ -81,7 +81,7 @@ def build():
         _bsc('sens_-3.5', 'Sensitivity -3.5 m CD', -3.5, 'sensitivity', 'selector range of the earlier model', 'reproduces the stated 2,800 m3 for the survey+skirt version'),
         _bsc('sens_-4.0', 'Sensitivity -4.0 m CD (earlier default)', -4.0, 'sensitivity', 'orchestrator decision 2026-10-06, replaced by D1', 'volume 15 to 29 % above the stated 2,800 m3'),
         _bsc('sens_-4.5', 'Sensitivity -4.5 m CD', -4.5, 'sensitivity', 'ASR Installed ring read as MVD-53 (-4.46 CD); Moores design 4.5 m', ''),
-        {'id': 'nav', 'name': 'Navionics 2026 as it is', 'z_cd': None, 'z_msl': None, 'kind': 'reference', 'source': 'Garmin Navionics SonarChart 2026 (-2.76 m CD at the reef centre)',
+        {'id': 'nav', 'name': 'Navionics 2026 as it is', 'z_cd': None, 'z_msl': None, 'volume_m3': {v['id']: round(v['volume_by_bed']['nav']['volume_m3'], 0) for v in versions}, 'kind': 'reference', 'source': 'Garmin Navionics SonarChart 2026 (-2.76 m CD at the reef centre)',
          'note': 'the 2026 chart profile unshifted; volumes: ' + ', '.join('%s %s' % (v['id'], '{:,.0f}'.format(v['volume_by_bed']['nav']['volume_m3'])) for v in versions)},
     ]
     # crest check: highest reef cell (crest option -0.8, the highest) vs the LOWEST water level shown (LAT)
@@ -146,6 +146,7 @@ def build():
             'inner_per_mille': [int(v) for v in G['inner'].ravel()], 'inner_note': 'r = RISE(d2) / 1.10 * 1000 inside the -2.0 m polygons, -1 outside; z = zc + r/1000 * (crest - zc)',
             'rule': ('inside the -2.0 m CD polygons z = zc + r (crest - zc); outside: version rule "skirt" z = max(S, zc - dout / run) (run = H:V, default 1) or "loft" z = S + (zc - S) t. S = local seabed. '
                      'Reef height h = z - S (>= 0); volume = sum(h) dx dy')},
+        'bed_scenarios': bed_scenarios, 'default_bed': 'assumed',
         'versions': versions, 'default_version': sh['default_outline'], 'versions_info': sh['versions_info'], 'versions_optional': sh['outline_versions_optional'],
         'stated_volume_m3': STATED_VOLUME, 'arms_xy': arms,
         'survey2013': {'grid': {'x0': sx0, 'y0': sy0, 'dx': sd, 'nx': len(sxs), 'ny': len(sys_)}, 'z_msl_cm': [int(v) for v in survey_cm.ravel()], 'nodata': -32768,
@@ -183,18 +184,19 @@ def fill_methods(model, comp, nav, chk):
     BK = '%.1f' % M.BED_DEFAULT
     v_t = _vol(ct, BK); v_s = _vol(cs, BK)
     dv_bed = (_vol(ct, '-4.5') - _vol(ct, '-3.5')) / 2.0
-    cbeds = ['-3.0', '-3.5', '-4.0', '-4.5']
+    cbeds = [('%.1f' % b) for b in (-2.8, -3.0, -3.5, -3.6, -4.0, -4.5)]
     ver_by_id = {v['id']: v for v in model['versions']}
-    rows = ['| version (rule) | date | source ids | footprint at the outline (m2) | vol. at bed -3.0 | vol. at bed -3.5 | **vol. at bed -4.0 (default)** | vol. at bed -4.5 | Navionics bed as is | bed that gives 2,800 m3 | footprint at bed -4.0 (m2) |',
-            '|---|---|---|---|---|---|---|---|---|---|---|']
+    hdr = ['version (rule)', 'date', 'source ids', 'outline area (m2)'] + [('vol. at bed %s%s' % (b, ' **(DEFAULT, assumption)**' if b == BK else (' (later seabed)' if b == '-2.8' else ''))) for b in cbeds] + ['Navionics bed as is', 'bed that gives 2,800 m3', 'footprint at default bed (m2)']
+    rows = ['| ' + ' | '.join(hdr) + ' |', '|' + '---|' * len(hdr)]
     for vid, c in ((VER_IDS[0], cs), (VER_IDS[1], ct)):
         v = ver_by_id[vid]
         vols = ['{:,.0f}'.format(_vol(c, b)) for b in cbeds]
-        rows.append('| %s (%s) | %s | %s | %s | %s | %s | **%s** | %s | %s | %s m CD | %s |' % (
+        vols = [('**%s**' % x if b == BK else x) for x, b in zip(vols, cbeds)]
+        rows.append('| %s (%s) | %s | %s | %s | %s | %s | %s m CD | %s |' % (
             v['name'], 'outline + 1:1 skirt' if v['rule'] == 'skirt' else 'toe loft', v['date'], ', '.join(v['source_ids']), '{:,.0f}'.format(v['area_m2']),
-            vols[0], vols[1], vols[2], vols[3], '{:,.0f}'.format(_vol(c, 'nav')), '%.2f' % c['bed_for_2800'], '{:,.0f}'.format(c['volume_by_bed'][BK]['footprint_area_m2'])))
+            ' | '.join(vols), '{:,.0f}'.format(_vol(c, 'nav')), '%.2f' % c['bed_for_2800'], '{:,.0f}'.format(c['volume_by_bed'][BK]['footprint_area_m2'])))
     rows.append('')
-    rows.append('Volumes in m3, crest -0.9 m CD, sum(h) dx dy on a 0.5 m grid (`mmr_model.py`); stated volume 2,800 m3 (BoPRC p28, Raised Water Research). The bed is the seabed level at the reef centre; '
+    rows.append('Volumes in m3, crest -0.9 m CD, sum(h) dx dy on a 0.5 m grid (`mmr_model.py`); stated volume 2,800 m3 (BoPRC p28, Raised Water Research; Mead & Borrero 2011 Fig 3). The bed is the seabed level at the reef centre; the default -3.6 m CD is an ASSUMPTION (Lior D1), not a measurement. '
                 '"Navionics bed as is" uses the 2026 SonarChart without shifting it (%.2f m CD at the reef centre).' % nav['z_cd_at_reef_centroid'])
     ver_table = '\n'.join(rows)
     bands = ['| y band (m from shoreline) | cells | 2013 multibeam median (m CD) | Navionics 2026 (m CD) | Navionics minus 2013 (m) |', '|---|---|---|---|---|']
@@ -209,12 +211,12 @@ def fill_methods(model, comp, nav, chk):
         'DT_CD_MEAN': '%.2f' % dk['CD']['mean_diff_m'], 'DT_CD_RMS': '%.2f' % dk['CD']['rms_m'], 'DT_LAT_RMS': '%.2f' % dk['LAT']['rms_m'],
         'DT_MVD_RMS': '%.2f' % dk['MVD-53']['rms_m'], 'DT_MSL_RMS': '%.2f' % dk['MSL']['rms_m'],
         'NAV_TABLE': nav_tab, 'DT_BANDS': '\n'.join(bands), 'VER_TABLE': ver_table,
-        'WALL_MIN': '{:,.0f}'.format(cs['vertical_wall_minimum_volume_beddef_m3']), 'ABOVE_CONTOUR': '{:,.0f}'.format(cs['volume_above_contour_m3']),
+        'WALL_MIN': '{:,.0f}'.format(cs['vertical_wall_minimum_volume_beddef_m3']), 'WALL_MIN_40': '{:,.0f}'.format(cs['vertical_wall_minimum_volume_beddef_m3'] + M.REGION.area * (-3.6 + 4.0) * 1.0), 'ABOVE_CONTOUR': '{:,.0f}'.format(cs['volume_above_contour_m3']),
         'AREA_S': '{:,.0f}'.format(cs['area_m2']), 'AREA_T': '{:,.0f}'.format(ct['area_m2']),
         'FP_S_RUN1': '{:,.0f}'.format(fp1['1.0']), 'FP_S_RUN05': '{:,.0f}'.format(fp1['0.5']),
         'V_S_RUN05': '{:,.0f}'.format(cs['volume_beddef_by_run']['0.5']), 'V_RUN025': '{:,.0f}'.format(cs['volume_beddef_by_run']['0.25']), 'V_RUN2': '{:,.0f}'.format(cs['volume_beddef_by_run']['2.0']),
         'V_T': '{:,.0f}'.format(v_t), 'V_S': '{:,.0f}'.format(v_s),
-        'V_T_PCT': '%.0f' % ((v_t / STATED_VOLUME - 1) * 100), 'V_S_PCT': '%.0f' % ((v_s / STATED_VOLUME - 1) * 100),
+        'V_T_PCT': '%+.0f' % ((v_t / STATED_VOLUME - 1) * 100), 'V_S_PCT': '%+.0f' % ((v_s / STATED_VOLUME - 1) * 100),
         'BED2800_T': '%.2f' % ct['bed_for_2800'], 'BED2800_S': '%.2f' % cs['bed_for_2800'],
         'BED_VERT': '%.2f' % (M.ZC - (STATED_VOLUME - cs['volume_above_contour_m3']) / cs['area_m2']), 'DV_BED': '{:,.0f}'.format(dv_bed), 'DV_BED_PCT': '%.0f' % (dv_bed / v_t * 100),
         'DV_CREST_P': '{:,.0f}'.format(ct['volume_beddef_crest-0.8'] - v_t), 'DV_CREST_M': '{:,.0f}'.format(v_t - ct['volume_beddef_crest-1.0']),
@@ -229,12 +231,13 @@ def fill_methods(model, comp, nav, chk):
 
 
 REQUESTS = [
-    ('DECISION', 'As-built bed level at the reef centre (the one number that sets the 3 m height and the volume).',
-     'The model default is -4.0 m CD (orchestrator decision of 2026-10-06; BoPRC p23 bed 3.0-4.0 m beside the north arm in 2008, ASR Installed ring about -4.5 m CD if its datum is MVD-53). '
-     'But the stated 2,800 m3 is reproduced only at -3.51 m CD (survey outline, 1:1 skirt) or -3.66 m CD (toe outline), and every later source reads the bed shallower (2013 survey -2.4 to -3.3, Navionics 2026 -2.76). '
-     'Keep -4.0, or switch the default to about -3.6 m CD? (The viewer already has a bed selector -3.0 / -3.5 / -4.0 / -4.5 / Navionics.)'),
-    ('FILE', 'Mead, Black and Moores (2007) and Mead (2011): an as-built plan or section of the Mount Reef.',
-     'No PDF could be found without a login. A scaled section would fix the flank slope and the bed level and would replace two assumptions (flank shape, bed). Do you have access (university library, ASR, Raised Water Research)?'),
+    ('DONE', 'D1 applied (2026-10-07): the as-built bed is an ASSUMPTION of -3.6 m CD, with an option "later seabed" -2.8 m CD.',
+     'Both are in the viewer bed selector (#bed=assumed | later | sens_-3.0 ... | nav) and are labelled everywhere. No source states the 2008-09 seabed at the reef; -3.6 m CD reproduces the stated 2,800 m3 (-3.51 survey+skirt, -3.66 toe loft). '
+     'Mead et al. (2007) Fig 12 (Oct 2006, unfinished reef) reads the bed beside the reef at 2.0-3.7 m (datum unstated), which supports the shallower option. The crest (-0.9 m CD) stays below even LAT (-0.03 m CD) in every bed option.'),
+    ('DONE', 'Mead, Black and Moores (2007) (P2) and Mead and Borrero (2011) (P3) read.',
+     'P2 gives design and construction facts and the Oct 2006 survey of the unfinished reef (no as-built outline, no datum). The "design 6,500 m3 vs as-built 2,800 m3" figure is Fig 3 of P3, not P2. It has an unlabelled grid, no scale or date, and fits the ASR toe outline (IoU 0.87, grid about 10 m), so it corroborates the toe version and was not traced as a new version.'),
+    ('DECISION', 'Make the as-built toe outline (ASR "Installed", 1,424 m2) the default outline instead of the 2013 multibeam -2.0 m outline (1,071 m2)?',
+     'The toe outline is now confirmed by two independent as-built graphics (ASR Installed and Mead & Borrero 2011 Fig 3 bottom), and 3D should show the as-built state. Against it: the 2013 survey is a measured survey with a labelled scale. Not applied; the default stays the 2013 survey outline until you decide (asked via main as D8).'),
     ('ASK', 'Datum of the ASR "Mount Reef Installed" bathymetry image (legend -1.8 to -7.4 m).',
      'It is read as MVD-53 here; the same reading as CD would move the toe-level ring from -4.46 to -5.4 m CD. A one-line answer from ASR / Raised Water Research settles whether the 2008 seabed was about -4.5 m CD.'),
     ('LOOK', 'Google Earth historical imagery 2008-2010 over -37.6448, 176.2026.',

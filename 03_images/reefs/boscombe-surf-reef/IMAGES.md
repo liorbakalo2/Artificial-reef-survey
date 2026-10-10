@@ -378,7 +378,7 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **licence**: Garmin/Navionics terms ('Not to be used for navigation'); no open licence; private research copy, reuse NOT cleared
 - **retrieved**: 2026-10-05
 - **used for**: 3d_seabed; cross_check; context
-- **How used for the model**: Wide context screenshot; the soundings and shoal were read on the zoom 17/18 shots. Re-check run 2026-10-07: used for two cross-checks of the EXTENDED seabed. NEARSHORE (31 scans, x -150..150): chart colour boundaries high-water line / chart datum / 1 m below CD sit where the model is +0.96 / -1.66 / -2.53 m MSL (expected +0.81 (MHWS) / -1.40 / -2.40): differences +0.15 / -0.26 / -0.13 m. OFFSHORE (11 soundings read inside |x| <= 160 m, y 428-604 m): model minus chart depth mean -0.27, sd 1.23, rms 1.20 m, with an alongshore trend of -1.2 m per 100 m of x (see SOURCES_3D.md, METHODS_3D.md section 4 item 12). Both annotated images hang off this row.
+- **How used for the model**: Wide context screenshot; the soundings and shoal were read on the zoom 17/18 shots. Re-check run 2026-10-07: used for two cross-checks of the EXTENDED seabed. NEARSHORE (31 scans, x -150..150): chart colour boundaries high-water line / chart datum / 1 m below CD sit where the model is +0.96 / -1.66 / -2.53 m MSL (expected +0.81 (MHWS) / -1.40 / -2.40): differences +0.15 / -0.26 / -0.13 m. OFFSHORE (11 soundings read inside |x| <= 160 m, y 428-604 m): model minus chart depth mean -0.27, sd 1.23, rms 1.20 m, with an alongshore trend of -1.2 m per 100 m of x BEFORE decision D2; after D2 (2026-10-10, offshore rows flattened alongshore) mean -0.18, sd 0.51, rms 0.51 m; the offshore annotated image was re-made with the after-D2 values (see SOURCES_3D.md, METHODS_3D.md 3.4 block D2 and section 4 item 12). Both annotated images hang off this row.
 - **3D check pending**: no - none: wide context RESULT (2026-10-07, 3D re-check agent (seabed extension run)): Done 2026-10-07: see how_used (nearshore within 0.26 m, offshore rms 1.2 m); no further check needed for the extended seabed.
 - **annotated / overlay files**: `07_scale/shapes/boscombe-surf-reef/3d/annotated/navionics_nauticalchart_z16_nearshore_vs_model_annotated.png`; `07_scale/shapes/boscombe-surf-reef/3d/annotated/navionics_nauticalchart_z16_offshore_soundings_annotated.png`
 - **linked records**: 07_scale/shapes/boscombe-surf-reef/src/navionics_garmin_screenshots.provenance.json; 07_scale/shapes/boscombe-surf-reef/3d/SOURCES_3D.md (Step 1/2 addendum - NAVIONICS); 07_scale/shapes/boscombe-surf-reef/3d/model.js source S9
@@ -820,7 +820,7 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **3D check pending**: no - none: figure made from the model and the CCO data
 - **linked records**: 07_scale/shapes/boscombe-surf-reef/3d/SOURCES_3D.md (re-check run 2026-10-07); 07_scale/shapes/boscombe-surf-reef/3d/METHODS_3D.md section 3.4
 - **size**: 0.10 MB, 1040x884 px
-- **sha256**: d77e93e530c75467f35b2ffc2062dce0f8d5c86869f1406eebe3efc078a86484
+- **sha256**: e0e5bfae241622a310d1ff78a09ecbc8c3da9a04bd4b881334b63bd9fdabbe8c
 - **rights**: Private research copy; reuse rights to be checked before any public release.
 - **display in HTML**: True
 - **added by**: 3D re-check agent (seabed extension), 2026-10-07
@@ -847,7 +847,7 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **3D check pending**: no - none: figure made from the model and the CCO data
 - **linked records**: 07_scale/shapes/boscombe-surf-reef/3d/SOURCES_3D.md (re-check run 2026-10-07); 07_scale/shapes/boscombe-surf-reef/3d/METHODS_3D.md section 3.4
 - **size**: 0.13 MB, 1170x676 px
-- **sha256**: c2bed94cbc47cafc630e0a2a3ef3f30991722353e73198e8b66a2a32cea47846
+- **sha256**: 1703eb23e868108642e65c79a41da5f3514409770a7fd0ba4edfdf3fcd6a9781
 - **rights**: Private research copy; reuse rights to be checked before any public release.
 - **display in HTML**: True
 - **added by**: 3D re-check agent (seabed extension), 2026-10-07
@@ -870,11 +870,11 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **licence**: CCO data: Open Government Licence v3.0 (acknowledge the source; not for navigation); figure is a project product
 - **retrieved**: 2026-10-07
 - **used for**: 3d_seabed
-- **How used for the model**: Documents which part of the model seabed is measured, interpolated or extrapolated (the viewer's zone toggle shows the same codes). Uncertainty by zone: survey +-0.5 m, CCO +-0.3 m, spline 0.5-1 m, EMODnet extrapolation +-1.2 m (Navionics z16 check).
+- **How used for the model**: Documents which part of the model seabed is measured, interpolated or extrapolated (the viewer's zone toggle shows the same codes). Uncertainty by zone: survey +-0.5 m, CCO +-0.3 m, spline 0.5-1 m, EMODnet extrapolation +-0.5 m since D2 (2026-10-10: row y = 380 and seaward flat alongshore; was +-1.2 m; Navionics z16 check r.m.s. 1.20 -> 0.51 m). Figure re-made 2026-10-10 (legend text only; zone codes unchanged).
 - **3D check pending**: no - none: figure made from the model and the CCO data
 - **linked records**: 07_scale/shapes/boscombe-surf-reef/3d/SOURCES_3D.md (re-check run 2026-10-07); 07_scale/shapes/boscombe-surf-reef/3d/METHODS_3D.md section 3.4
 - **size**: 0.06 MB, 858x1248 px
-- **sha256**: 083731caec959b0a2c19dd0e66cf0eef6d894a97f84495f8e997e88c67ffdbfe
+- **sha256**: a8f1736af5381a15bfc4dbebd5edaad50ad3f8bf6d52b9cd08585a7b7932760e
 - **rights**: Private research copy; reuse rights to be checked before any public release.
 - **display in HTML**: True
 - **added by**: 3D re-check agent (seabed extension), 2026-10-07

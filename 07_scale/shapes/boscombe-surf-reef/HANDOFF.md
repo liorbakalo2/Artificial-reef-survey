@@ -1,4 +1,4 @@
-# HANDOFF - boscombe-surf-reef (shape + 3D model + seabed extension)
+# HANDOFF - boscombe-surf-reef (shape + 3D model + seabed extension; D2 offshore flattening applied 2026-10-10, see section 9)
 
 Written 2026-10-07 by the agent that finished the seabed-extension re-check run. Read this first; open other files only for a specific fact.
 Datums: z = 0 is mean sea level (MSL); ACD = above chart datum (CD); z_ACD = z_MSL + 1.40 (S4 NTSLF: CD is 1.40 m below ODN; ODN ~ MSL, A4). Frame: x alongshore (bearing 83.4 deg, east; the pier is at negative x), y offshore (bearing 173.4 deg), metres.
@@ -10,8 +10,8 @@ Source ids S1-S13 are those of `3d/METHODS_3D.md` section 2; equation ids E1-E16
 |---|---|---|---|
 | Plan trace (`shape.json`) | verified, 25 vertices, 4,042 m2, minimum rotated rectangle 121.1 x 45.0 m, shore normal 173.4 deg | 2026-10-05 | medium: three plan sources agree; area is 60 % below the repeated "about 1 ha" in the literature (VERIFY.md) |
 | 3D reef + seabed (survey part) | built; reef = idealised as-built loft (flat crest +0.5 m ACD, 1:3 flanks) on the April 2011 DGPS seabed (Fig. 9) | 2026-10-05 | medium: plan medium; seabed +-0.2 m colour read; datum of the Fig. 9 zero is an assumption (A3) but now supported by two independent tests |
-| Seabed extension (beach + offshore) | DONE: grid 161 x 359 cells, 2 m, x -160..160, y -66..650 m; zone codes 3/4/5 added; reef cells unchanged | 2026-10-07 | beach +-0.36 m (CCO, measured); blend +-0.5 m; offshore y > 380 m +-1.2 m (extrapolated) |
-| Cross-checks of the extension | DONE: CCO datum test, Navionics z16 nearshore + offshore, EMODnet DTM 2024 | 2026-10-07 | nearshore within 0.26 m; offshore r.m.s. 1.2 m with a known alongshore trend (open issue 1) |
+| Seabed extension (beach + offshore) | DONE: grid 161 x 359 cells, 2 m, x -160..160, y -66..650 m; zone codes 3/4/5 added; reef cells unchanged | 2026-10-07 | beach +-0.36 m (CCO, measured); blend +-0.5 m; offshore y >= 380 m +-0.5 m since D2 (extrapolated, flat alongshore; was +-1.2 m) |
+| Cross-checks of the extension | DONE: CCO datum test, Navionics z16 nearshore + offshore, EMODnet DTM 2024 | 2026-10-07 | nearshore within 0.26 m; offshore r.m.s. 1.2 m before D2 with an alongshore trend, 0.51 m after D2 (2026-10-10) |
 | Documentation | `METHODS_3D.md` (sections 3.4, 3.8, 4 items 9-13, 5, 7, 8 updated), `SOURCES_3D.md`, `docs.js` regenerated | 2026-10-07 | complete |
 | Viewer | `index.html`: zone colouring toggle + legend, draped shorelines and waterline of the selected level, default plan/oblique views show beach and reef; scene structure unchanged | 2026-10-07 | previews rendered and viewed |
 | Image registry | 32 rows in `03_images/reefs/boscombe-surf-reef/images.json` + `IMAGES.md`; `check_registry.py` reports NO error for Boscombe; pending 3D checks: 0 | 2026-10-07 | complete |
@@ -25,11 +25,11 @@ confidence_3d = medium (unchanged). Reason in one line: plan, seabed and crest a
 - Beach and nearshore from Channel Coastal Observatory (CCO) beach profiles, not from the Gemini folder or extrapolation (S13; public, Open Government Licence v3; heights m ODN).
 - CCO survey date 2010-04-20: the nearest date at which all 11 lines exist (the A lines start that day); dates closer to the 2009 as-built state exist only on 2 lines. Date-to-date variability of the beach is 0.1-0.5 m (METHODS validation 10).
 - z_MSL = z_ODN on the CCO beach (ODN ~ MSL within +-0.1 m, A4); survey cells keep z_MSL = z_ACD - 1.40 (A3, E6).
-- Offshore y 380-650 m: slope only from EMODnet DTM 2024 (-1.41 %, REPORT 9.1), level continued from the model's own row y = 380; EMODnet levels are NOT used (1.1-3.1 m deeper than the survey, no reef in the DTM).
+- Offshore y 380-650 m: slope only from EMODnet DTM 2024 (-1.41 %, REPORT 9.1), level = alongshore mean of the model's own row y = 380 (D2); EMODnet levels are NOT used (1.1-3.1 m deeper than the survey, no reef in the DTM).
 - The original survey cells (code 0), the cells under the reef (code 2) and the whole reef surface were left byte-identical so that the page's "All (compare)" view and the earlier results stay valid (checked cell by cell: 0 of 4,295 + 1,580 cells changed).
 - The model shoreline: the viewer draws the tidal waterline of the selected level (contour of z on the grid) plus the 28 Sep 2011 surf line y = 0 as a separate cyan line; y = 0 sits at z = -0.2 m (about MLWN).
-- Stated uncertainty of zone 5 raised from +-1.0 m (REPORT 9.1) to +-1.2 m after the Navionics check (r.m.s. 1.20 m).
-- Offshore alongshore tilt NOT corrected (kept as specified in REPORT 9.1); the fix is quantified and documented as open issue 1.
+- Stated uncertainty of zone 5 raised from +-1.0 m (REPORT 9.1) to +-1.2 m after the Navionics check (r.m.s. 1.20 m); lowered to +-0.5 m after D2 (r.m.s. 0.51 m).
+- D2 (2026-10-10, Lior did not object): offshore alongshore tilt corrected: row y = 380 and seaward = alongshore mean, EMODnet cross-shore gradient kept (section 9). Pre-D2 files: 3d/archive/pre_D2/.
 - Registry row img-01 corrected: the photo shows a land-side sand heap, not an exposed reef mound.
 
 ## 3. Key numbers (units, datum, source)
@@ -47,7 +47,7 @@ Extended seabed (2026-10-07; scripts/extend_seabed.py; METHODS 3.4)
 - Zones (cells by code are in the zone map, `3d/annotated/seabed_zone_map.png`): 0 Fig. 9 survey (April 2011), 1 spline extrapolation (survey ends at y about 312 m; 305-380 m is extrapolated), 2 interpolated under the reef, 3 CCO beach profile, 4 blend CCO to survey (40 m decay), 5 EMODnet slope extrapolation (y 382-650).
 - CCO data (S13): 11 lines 5f00424, 424A, 425, 425A, 426, 426A, 427, 427A, 428, 428A, 429 at x = +222, +176, +145, +96, +43, -5, -58, -87, -142, -183, -221 m; back of beach y about -66 m at z about +3.3 m ODN; seaward ends y 21-38 m at about -1.0 m ODN; 17-28 points per line (spacing 4-6 m). Seven lines lie inside the grid, 428A and 424A fix the edge columns, 429 and 424 are not needed. Raw copies (316 text files, all dates 2004-2026): `src/cco_profiles/`.
 - Equations: E13 beach interpolation across lines; E14 `z = S + R` with the CCO offset decaying over L = 40 m (smoothstep); E15 `z = z(x,380) - 0.0141 (y - 380)`; E16 datum weights. Slope s = 0.0141 +-0.0010 from four EMODnet cells (REPORT 9.1).
-- Row y = 380: mean z -7.78 m MSL, alongshore slope +0.76 m per 100 m of x (spline extrapolation); EMODnet cell at y 380 = -7.05 m LAT = -8.51 m MSL (model 0.7 m shallower).
+- Row y = 380: mean z -7.78 m MSL; before D2 alongshore slope +0.76 m per 100 m of x (spline extrapolation, range 2.15 m), since D2 flat (0 m); EMODnet cell at y 380 = -7.05 m LAT = -8.51 m MSL (model 0.7 m shallower).
 - Shoreline (model contours, depends on x): MSL waterline y = -3 to -8 m; MHWS -10 to -30; HAT -27 to -37; MLWS +24 to +38; LAT +51 to +72; surf line y = 0 at z = -0.2 m. Beach slope about 0.04 between +1.2 and -0.3 m. A level error of 0.35 m moves a waterline by about 9 m.
 - Uncertainty (1 sd): beach 0.36 m (date 0.28, ODN 0.1, position 5 m x slope 0.04); blend 0.5 m; zone 5 1.2 m (correlated along x).
 
@@ -55,7 +55,7 @@ Cross-checks of the extension (METHODS section 4)
 - Item 9 CCO datum test (A3): at the seaward ends of the 11 lines, CCO (ODN) minus the Fig. 9 spline read as chart datum = +0.03 m (sd 0.30, n = 11); if the Fig. 9 zero were ODN: -1.37 m. Supports chart datum (independent of EMODnet and Navionics; caveat: spline extrapolated 60-80 m, two dates).
 - Item 10 beach variability: 2011-03-23 minus 2010-04-20 r.m.s. 0.28 m (11 lines); 2009-09-22: 0.49 m (2 lines); 2009-11-30: 0.13 m (1 line).
 - Item 11 Navionics z16 nearshore (31 scans x -150..150, `nav_z16_nearshore.json`): chart HW line at model z +0.96 m (expected +0.81 MHWS, +0.15); chart datum boundary at -1.66 (expected -1.40, -0.26); 1 m below CD at -2.53 (expected -2.40, -0.13).
-- Item 12 Navionics z16 offshore (11 soundings, y 428-604, `nav_z16_offshore.json`): model minus chart depth mean -0.27, sd 1.23, r.m.s. 1.20 m; trend -1.21 +- 0.11 m per 100 m of x; flattening row 380 would give r.m.s. 0.51 m (0.46 with the EMODnet gradient). `offshore_tilt_check.json`.
+- Item 12 Navionics z16 offshore (11 soundings, y 428-604, `nav_z16_offshore.json`): before D2 model minus chart depth mean -0.27, sd 1.23, r.m.s. 1.20 m, trend -1.21 +- 0.11 m per 100 m of x; AFTER D2: mean -0.18, sd 0.51, r.m.s. 0.51 m, range -0.85..+0.46, trend -0.44 +- 0.09 m per 100 m of x. `d2_check.json`, `offshore_tilt_check.json` (pre-D2 analysis).
 - Item 13 EMODnet DTM 2024 cells vs model seabed: mean -1.80 m (sd 0.66, 7 cells); reef cell -1.39 m; offset not constant, so not a datum shift (EMODnet REPORT 6).
 - Earlier checks (2026-10-05, still valid): 16 Navionics soundings model minus chart +0.06 m (sd 0.49); Navionics shoal areas match the survey zones (296 vs 378/492 m2 drying, 956 vs 950 at 0.5 m, 1,609 vs 1,630/2,073 at 1 m).
 
@@ -86,7 +86,7 @@ Cross-checks of the extension (METHODS section 4)
 
 ## 5. Open issues, discrepancies, pending checks
 
-1. Zone 5 (y 380-650) alongshore error: the extension copies row y = 380 (spline extrapolation, +0.76 m per 100 m of x) to y = 650, whereas EMODnet (27 cells) shows no alongshore gradient and 11 Navionics soundings show a misfit of -1.2 m per 100 m of x (model too deep at x < 0, too shallow at x > 0, up to +-1.7 m). Replacing row 380 by its alongshore mean would cut the Navionics r.m.s. from 1.2 to 0.5 m. NOT applied (REPORT 9.1 formula kept; zone is context only, flagged +-1.2 m). Decision for Lior / coordinator; if yes: in `extend_seabed.py` replace `z380 = base_msl[-1]` by a flat or blended row (e.g. mean of the row, or blend over y 312-440 m) and re-run `build_3d.py`, then re-render the previews; the reef and survey cells stay unchanged.
+1. RESOLVED 2026-10-10 (D2 applied, section 9). Remaining: 1.13 m step between rows y = 378 and 380 at the x edges (the spline zone y 312-378 was left as it was); the 11 hand-read soundings still show -0.44 +- 0.09 m per 100 m of x against the flat model (EMODnet: -0.07).
 2. Registry row img-01 (Flickr 2009-07-28) was described as an "exposed reef mound at extreme low tide"; the picture shows a dry sand heap behind a fence and the safety sign, no sea, no reef. The registry row is corrected; the same wording remains in `02_research/reefs/boscombe-surf-reef.json` images[0], in `05_qa/reef/boscombe-surf-reef_media_recheck.json` and probably in the page caption (04_build not touched by this run).
 3. Datum A3 (Fig. 9 zero = chart datum) is still an assumption, now supported by the CCO test (+0.03 m vs -1.37 m), the crest and design-depth evidence and Navionics shoal areas. The EMODnet CDI 117452 metadata page (vertical reference and date of the DTM source survey) is still unread: needs a normal browser (REQUESTS_FOR_LIOR D1).
 4. The beach is the CCO surface of 2010-04-20 (after completion, before the 2011 failure), not of 28 Sep 2011; the surf line y = 0 of that image is at an unknown tide (z = -0.2 m on the model beach). Waterlines of the viewer carry +-9 m.
@@ -100,7 +100,7 @@ Cross-checks of the extension (METHODS section 4)
 
 ## 6. Requests for Lior
 
-1. Decide open issue 1 (flatten the offshore row alongshore: yes / no). Recommended yes if the offshore corners matter for any picture; otherwise leave.
+1. (done: D2 applied 2026-10-10; Lior can revert with 3d/archive/pre_D2/.)
 2. Open the CDI 117452 record (EDMO 2607 OceanWise Limited) in a normal browser and tell us the vertical reference and survey date (D1 in REQUESTS_FOR_LIOR.md).
 3. Ask the Channel Coastal Observatory whether nearshore or offshore bathymetry of Poole Bay for 2009-2012 exists (would replace zones 4 and 5; D2).
 4. From earlier requests (A-C in REQUESTS_FOR_LIOR.md) still useful: Navionics app depth/datum reading on the reef, Google Earth Pro 2009-2010 imagery and a dated waterline with known tide, the Rendle thesis (Plymouth PEARL 412) via a normal browser.
@@ -108,7 +108,7 @@ Cross-checks of the extension (METHODS section 4)
 
 ## 7. Next steps for the next agent, in order
 
-1. If Lior says yes to open issue 1: edit `extend_seabed.py` (offshore rows), run `python build_3d.py` in `3d/`, update METHODS 3.4 / 4.12 / A16 and the zone-5 uncertainty (about +-0.5 m expected), re-render previews with `render_previews.py`, update this file.
+1. (done 2026-10-10) D2 applied. Optional later: blend the offshore flattening over y 312-380 to remove the 1.13 m edge step (changes code-1 cells; needs a decision).
 2. Page integration (04_build, coordinator): replace the page's Boscombe `model.js` / `docs.js` / viewer by the new ones; confirm the "All (compare)" view still works with the 161 x 359 seabed; update the page caption for img-01 (sand heap).
 3. Fix the img-01 wording in `02_research/reefs/boscombe-surf-reef.json` and `05_qa/reef/boscombe-surf-reef_media_recheck.json` (those are the coordinator's files).
 4. Read the CDI 117452 metadata (or have Lior do it) and close A3; check MSL against a tide-gauge value (open issue 7).
@@ -119,3 +119,10 @@ Cross-checks of the extension (METHODS section 4)
 - Brief read: common.md; SOURCES_3D.md re-check entries; METHODS_3D.md sections 2, 3.2, 3.4, 3.8, 4, 5, 7, 8; REPORT 9.1 and 6.1.
 - Step A (previous agent, usage limit hit afterwards): CCO data, extension, viewer, previews. Steps 1-5 (this agent): Navionics z16 checks, figures, STEP 0 registry views (img-01/02/03/07 viewed, results written), registry (new rows img-30/31/32, img-14 annotations, img-25..29 resolved), METHODS/docs, previews, this file.
 - The extension was verified by a cell-by-cell comparison with the previous model.js and by `python build_3d.py` runs; no 04_build file and nothing in the Gemini folder was touched.
+
+## 9. CHECKPOINT 2026-10-10 - D2 applied (offshore flattening); finished and consistent
+- Done: extend_seabed.py flag OFFSHORE_FLATTEN (row y = 380 = alongshore mean -7.78 m MSL; z = -7.78 - 0.0141 (y - 380) for y >= 380); EMODNET_UNC 0.5; build_3d.py texts (code 5 key, provenance row, confidence reason); model.js, docs.js rebuilt (shape.json identical); METHODS_3D.md (3.4 block D2, 3.4 table, E15, A16, validation 12, section 7 row), SOURCES_3D.md entry; navionics_z16_offshore.py re-run (json + annotated image caption), figures_extension.py (zone map legend; cco figures re-made, shas refreshed); render_previews.py now uses 04_build/src/qa_cdp.find_chrome and --no-sandbox; previews plan, oblique, plan_hw, datum_alt_odn re-rendered (no page errors); registry img-14 text, img-30/31/32 sha/bytes/px and img-32 text; root REQUESTS D2 = applied; 05_qa/00_STATUS.md entry.
+- Before -> after: Navionics offshore r.m.s. 1.20 -> 0.51 m (sd 1.23 -> 0.51; range -1.67..+1.47 -> -0.85..+0.46); zone-5 alongshore trend +0.76 -> 0.00 m per 100 m of x; Navionics trend -1.21 -> -0.44 m per 100 m of x; cross-shore gradient 0.0141 unchanged; z at x = 0, y 380/446/506/604: -7.63/-8.56/-9.41/-10.79 -> -7.78/-8.71/-9.55/-10.94.
+- Unchanged (checked by scripts/d2_check.py -> d2_check.json): reef grid, stats (reef volume 13,119 / 9,573 m3, crest +0.68 m ACD at (20,193), crest-zone areas 1,609/956/296 m2), shoreline, water levels, zone codes, datum weights; 21,779 cells changed, all at y >= 380, 0 below. Borth lesson: same 161 x 359 nodes, all finite, every zone-5 row has 161 equal cells; the only max/min-like operation is the row mean over all 161 cells (asserted code 1).
+- Pre-D2 copies for reverting: 3d/archive/pre_D2/ (model.js, docs.js, build_3d.py, METHODS_3D.md, SOURCES_3D.md, REQUESTS, index.html, previews, scripts, annotated figures, registry json/md, shape.json, HANDOFF.md). To revert: copy back and set OFFSHORE_FLATTEN = False.
+- TO DO (main): `python src/update_page.py` from 04_build/; copy 3d/model.js, docs.js, index.html (unchanged) into 04_build/3d/boscombe-surf-reef/; re-type the typed Boscombe caveat/curated texts (exact old -> new list in the D2 agent's final JSON).

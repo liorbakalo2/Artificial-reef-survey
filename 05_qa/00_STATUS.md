@@ -459,3 +459,21 @@ Shape tracing continues for all 13 reefs.
 - `python src/update_page.py --full`: all checks pass, state saved; Borth is back in "All (compare)" (area 11,793 m2).
 - Cloud fixes in 04_build/src (no effect on Lior's PC): Chrome gets --no-sandbox when run as root and a desktop-mouse setting on Linux (hover tooltips); the cloud Chromium path /opt/pw-browsers is found; QA ignores two cloud-only console messages (proxy-blocked remote pictures, the iframe fullscreen policy notice).
 - Side effect: re-encoded image copies in 04_build/assets and 04_build/3d/*/annotated (same pictures, other bytes) and Linux paths in images_manifest.json. Harmless; a PC rebuild writes Windows paths again.
+
+## 2026-10-10 (Narrowneck verify agent, stage 1) - Narrowneck VERIFIED (with issues); stage 2 (3D) not started
+- Resumed after a usage-limit cut-off (partial work: 4 exploratory step2_*.py scripts without outputs: discarded; everything else consistent).
+- Scale conflict resolved: none (Corbett Fig 2 bar: crest loops 71 m; same CAD design as Jackson Fig 2). Option 2 built (Corbett 2023); placed in the frame (13,941 m2 envelope, 96.6 % of the traced arms inside).
+- shape.json: status "verified with issues", 5 outline versions (default = 2020 photo trace, 6,239 m2; Option 2 design; 2004 design; 2011 survey relief zone; Navionics 4.0 m shoals, indicative), versions_info, faint patches (24, 663 m2).
+- Registry img-54..65 (Corbett 2023 figures; Fig 3 multibeam pending 3D check); 5 new overlays; check_registry: Narrowneck passes. 3D plan in 07_scale/shapes/narrowneck-gold-coast/HANDOFF.md.
+- Not done: Gemini re-fetch (no network to the hosts); Navionics "0.9" reading (Lior); D7 open (recommendation: keep photo).
+
+## 2026-10-10 (Mount Maunganui update, agent 3) - D1 applied, P2/P3 registered and used (previews re-rendered; page refresh by main still to do)
+- D1 in code: default as-built bed -3.6 m CD labelled ASSUMPTION, option "later seabed" -2.8 m CD, sensitivity -3.0/-3.5/-4.0/-4.5/Navionics; model.js bed_scenarios + default_bed, seabed-scenario selector with (i) pop-up and #bed=<id> in 3d/index.html; METHODS_3D.md, docs.js, REQUESTS rebuilt (build_3d.py). Crest -0.9 / highest cell -0.8 m CD stays 0.77+ m below LAT in every bed option (nothing clipped).
+- Volumes (m3): -3.6 default 2,945 (2013 outline + skirt, +5 % vs 2,800) / 2,727 (toe loft, -3 %); -2.8 later seabed 1,752 / 1,756; full table in METHODS_3D.md 4.3 and shape.json volume_table_3d.
+- Papers: the 6,500 vs 2,800 m3 figure is Mead & Borrero 2011 Fig 3 (P3), not P2. Bottom picture fits the ASR toe outline (IoU 0.87), not traced, default outline unchanged; D8 (toe as default) is open. Oct 2006 bed 2.0-3.7 m (P2 Fig 12) supports the -2.8 option.
+- 16 figures registered (mount-maunganui-reef-img-23..38, NEW_IMAGES_LOG.md); card gets R16/R17 with the P2/P3 facts; HANDOFF section 0 rewritten. 04_build untouched: main must refresh the page and re-type the texts that quote -4.0 (see the task's final JSON).
+
+## 2026-10-10 (Boscombe D2 agent) - D2 applied: offshore seabed (row y = 380 and seaward) flat alongshore
+- extend_seabed.py (flag OFFSHORE_FLATTEN): row 380 = its alongshore mean (-7.78 m MSL), EMODnet cross-shore gradient 0.0141 kept; zone-5 uncertainty +-1.2 -> +-0.5 m. model.js, docs.js, shape.json (identical), METHODS_3D.md (3.4 block D2, validation 12, A16, tables), SOURCES_3D.md, zone map and Navionics offshore figure re-made, 4 previews re-rendered, registry img-14/30/31/32 updated.
+- Navionics offshore r.m.s. 1.20 -> 0.51 m; zone-5 alongshore trend +0.76 -> 0.00 m per 100 m of x. Reef, survey, beach, codes, datum weights, stats byte-identical (21,779 cells changed, all at y >= 380). Known: 1.13 m step between rows 378 and 380 at the x edges; soundings still show -0.44 m per 100 m of x.
+- Pre-D2 copies in 07_scale/shapes/boscombe-surf-reef/3d/archive/pre_D2/. 04_build untouched: main refreshes the page and re-types the Boscombe caveat texts (see the agent's final JSON). REQUESTS D2 = applied.
