@@ -1,4 +1,4 @@
-# FEASIBILITY - Opunake reef plan shape and 3D model (2026-10-10)
+# FEASIBILITY - Opunake reef plan shape and 3D model (2026-10-10, updated after papers/ + Gemini + web check)
 
 Verdict: NOT feasible with what we hold. No plan shape drawn, no 3D model built.
 
@@ -27,3 +27,19 @@ Verdict: NOT feasible with what we hold. No plan shape drawn, no 3D model built.
 
 ## For Lior
 Google Earth Pro: historical imagery 2007-2012 over lat -39.457, lon 173.853 (look for a pale rectangle ~90 x 20 m offshore; give date, lat/lon of both ends). Navionics: soundings along a line off the beach. Papers: Black et al. 2004. When any of this exists, re-run the trace (METHOD.md steps) then 3D.
+
+## Checked in the second pass (2026-10-10)
+- papers/ (all 5 PDFs, text layer): Opunake appears only in text and tables: Mead & Borrero 2011 p.1,3-4; Rendle 2016 thesis Table 2.1 (p.41) + references (p.298); Blacka et al. 2013 Tables 4.1-4.4 + references. No plan figure, no coordinates, no crest level. The 2007 Mount Maunganui paper is scanned (no text; not OCR'd) and is about Mount Maunganui.
+- Gemini extracts: no confirmable original source; its Opunake dimensions are self-contradictory. Not used.
+- WebSearch (9 queries, list in sources.md): only text (90 x 20 m, 27 bags, 1.5-2 m high bags). No plan, no coordinates, no survey, no aerial of the bags.
+- Old wedge in 07_scale/reefs/opunake-reef.footprint.json is now flagged DO_NOT_DISPLAY inside the file (schematic analogy, not the reef's shape).
+- Size values disagree and both are kept on the card: 90 x 20 m (news/RWR lineage) vs 30 m longshore x 100 m cross-shore, depth 1.8-3.0 m, ~300 m offshore, at LAT (Blacka Table 4.2).
+
+## What would give a shape (documents, in order of value)
+1. Taranaki Regional Council (2009). Opunake Artificial Reef Monitoring Programme 2005-2009. Technical Report 2009-33, Stratford, NZ. Monitoring surveys, probably bathymetry/bag positions. NOT in papers/. Ask TRC (public technical report) or Lior via a browser/library.
+2. Black, K.P. et al. (2004). Studies for Resource Consent: Opunake Surfing Reef. ASR Ltd technical report for South Taranaki District Council (ResearchGate 273133845). NOT in papers/ (full author list and exact title to confirm from the page).
+3. Mead, S.T. and Black, K. design report/dossier for Opunake (ASR Ltd, c.2005-06; Gemini cites "Mead & Black 2007 Design Dossier", unverified). NOT in papers/.
+4. Moores, A. (2006). Artificial surf reefs - coming to a beach near you. New Zealand Geographic 078 (Mar-Apr). Pre-construction design figure possible. NOT in papers/ (web text only, figure not seen).
+5. Dated imagery: Google Earth Pro history 2007-2012, LINZ/Taranaki aerials, Esri Wayback (networks blocked here).
+Already in papers/ (no plan): Mead & Borrero 2011, Rendle 2016, Blacka et al. 2013.
+Until one of 1-5 arrives: shape.json stays no_source, no outline anywhere (Lior 2026-10-10: do not show shapes of reefs we do not know).

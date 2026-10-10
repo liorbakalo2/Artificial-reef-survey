@@ -122,6 +122,10 @@ By October 2025, Beachgrit reported the reef was being considered for "detuning"
 - Albany Advertiser reports a short film titled *Midds Reef*, directed by Rhys Jones, about "surfers' dream for Albany artificial reef," which premiered at the CinefestOZ film festival — title and festival confirmed via search-result headline; direct URL/streaming link not found in this research [R11-adjacent, unreferenced — needs source for a direct video URL]
 - Surfline is reported (via search synthesis, not directly fetched) to hold reef-break footage of a bodyboarder in a barrel at Midds Reef; no direct Surfline URL was returned by a fetched or search-verbatim source, so this is flagged (unreferenced — needs source)
 
+## Additions 2026-10-10 (another review, R19)
+
+- **Troy (founder of Airwave, the Bunbury reef developer)**, Zoom interview with Lior, 8 Oct 2026 [R19]: said the waves at this reef look bad from the outside; he did not surf them. Caveats: an outside observer's opinion, not surfed; from a developer of a different reef (interested party); notes as reported by Lior, not verbatim. It conflicts with the mostly positive surfer reports in the reviews above.
+
 ## References
 
 R1. Wikipedia, "Southern Ocean Surf Reef" — https://en.wikipedia.org/wiki/Southern_Ocean_Surf_Reef — accessed 2026-09-24 — supports: location, construction timeline, materials, cost, funders, contractor, opening date, design performance targets.
@@ -159,6 +163,8 @@ R16. Bluecoast Consulting Engineers, staff bio page for Evan Watterson — https
 R17. Albany Surf Life Saving Club, "Albany Artificial Surf Reef Project Works" (3 December 2024) — https://albanysurfclub.com.au/blog/2024/12/03/albany-artificial-surf-reef-project-works/ — accessed 2026-09-24 — supports: quarry location (Mindijup Rd, Palmdale) and operator (Spinifex Crushing & Screening Services, contact Martin Shuttleworth); marine-plant mobilisation — dredge from Darwin (Nov 2024), barges/tugs from Adelaide (Jan 2025) — as distinct from the marine personnel, who other sources (R2/R3/R6/R8) describe as a crew from New Zealand; contractor name (Heron Construction Limited); detailed month-by-month construction timeline.
 
 R18. Albany Advertiser: "Eighteen rocks of Southern Ocean Surf Reef repositioned in successful bid to reduce user injuries", Melissa Sheil, 11 March 2026 — https://www.albanyadvertiser.com.au/news/albany-advertiser/eighteen-rocks-of-southern-ocean-surf-reef-repositioned-in-successful-bid-to-reduce-user-injuries-c-21896905 — accessed 2026-09-25 (via Gemini survey, verified 2026-09-25) — supports: independent re-verification that R11's article is live and correctly headlined/dated (headline and byline "Melissa Sheil Albany Advertiser Wed, 11 March 2026 4:00PM" match exactly); no new facts beyond R11 — the article body is confirmed paywalled in both the live page and a Wayback Machine snapshot (20260517181036), so cost/cause details beyond the headline remain unconfirmed by an independent second source, same as R11 already notes.
+
+R19. Lior Bakalo, Zoom interview with Troy (founder of Airwave, the Bunbury reef developer), 8 October 2026; notes as reported by Lior. Personal communication / interview, unpublished, no URL. (Troy commented on the Albany reef.) — accessed 2026-10-10 — supports: Airwave founder says the Albany waves look bad from the outside; did not surf them.
 
 ## Enrichment 2026-09-25 (from Gemini survey, verified)
 

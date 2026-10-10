@@ -102,6 +102,25 @@ Bunbury sits on a microtidal Western Australian coast: recorded tide heights at 
 
 - No direct YouTube/Vimeo URLs were retrieved in this research pass (WebSearch budget for this session was exhausted before a dedicated video search could be run). The Waveco company site (https://www.waveco.com.au/) and its social channels (Instagram/Facebook above) are the most likely hosts of installation and wave-test footage; a follow-up pass should search YouTube directly for "Airwave Bunbury," "Waveco Airwave," and "Bunbury inflatable surf reef" and check Waveco's own site for an embedded video/webcam feed referenced in the June 2024 Instagram post [R11].
 
+## Additions 2026-10-10 (founder interview, R25)
+
+Source: Lior Bakalo, Zoom interview with Troy (founder of Airwave), 8 Oct 2026; notes as reported by Lior; unrecorded, developer is an interested party [R25].
+
+- **Fill (design/as-built):** in the final design they used SAND instead of air, because the engineers found air did not respond well with the waves [R25].
+- **Failure mode:** a seam opened up a couple of days after installation [R25].
+- **Performance before failure (founder claim):** until then it worked amazingly, "perfect waves" [R25]. No independent report, photo or video confirms this.
+- **Future:** now going for concrete [R25].
+- **Verdict:** stays FAILED (the structure failed within days). The founder reports excellent waves before the seam failure; independent confirmation is still lacking.
+
+**Sources disagree**
+
+| Topic | Card / independent sources | Founder (R25) |
+|---|---|---|
+| Fill | air/sand [R3][R9][R8] | sand instead of air in the final design |
+| Failure timing | tore during installation, 13 Dec 2019, ~90% installed, removed within about three days [R1][R5][R8] | seam opened a couple of days after installation |
+| Waves | no independent report of surfable waves; one 0.75 m wave in the developer account [R8][R21] | perfect waves until the seam opened |
+| Future | granite/rock proposal [R20]; Summer 2024 relaunch promise [R8] | concrete |
+
 ## References
 
 R1. ABC News (2019-12-16/17). "Bunbury's Back Beach surfers deflated as artificial reef, Airwave, tears during installation." https://www.abc.net.au/news/2019-12-16/word-first-surf-reef-tears-during-installation/11803228 — accessed 2026-09-24 — supports: tear during installation, 90% complete, A$75,000 council investment, cause (undertow/deep swell), quotes from Bottegal, CEO Osborne, tourist Perron, no-cost-to-ratepayers repair commitment.
@@ -151,3 +170,5 @@ R22. Tracks Magazine (2021-10-08, Luke Kennedy). "The Airwave Pumps Again." http
 R23. Tracks Magazine (2019-08-12). "Inflatable Artificial Reef is Ready for the Ultimate Test." https://tracksmag.com.au/inflatable-artificial-reef-is-ready-for-the-ultimate-test-529463 — accessed 2026-10-05, full text read — supports: as of 2019-08-12 nothing had been deployed (first live trial planned for "mid-November" 2019, 45 m offshore; the crowd-funding campaign was "last year"; install "less than two days"; two webcams planned).
 
 R24. ABC listen, South West WA Breakfast (2022-10-07). "Meet the surfer who says Bunbury can have world class waves." https://www.abc.net.au/listen/programs/southwestwa-breakfast/bunbury-waves/101511922 — accessed 2026-10-05, program summary text read (audio not heard) — supports: ABC's own summary that Waveco "attempted to install" the Airwave on Back Beach in 2019, that "The bladder tore and the installation was scrapped", and that Bottegal says he is working on a stronger prototype.
+
+R25. Lior Bakalo, Zoom interview with Troy (founder of Airwave, the Bunbury reef developer), 8 October 2026; notes as reported by Lior. Personal communication / interview, unpublished, no URL. — accessed 2026-10-10 — supports: sand fill instead of air in the final design; seam opened a couple of days after installation; "perfect waves" until then (founder claim); next version concrete.

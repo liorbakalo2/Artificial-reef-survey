@@ -541,3 +541,30 @@ Slugs: borth-coastal-defence-reef, boscombe-surf-reef, mount-maunganui-reef, opu
 - 02_research/reefs/narrowneck-gold-coast.json/.md: added R22 (Mead & Borrero 2011), R23 (Blacka et al. 2013), R24 (internal 3D stage-2 report); fields extended (motivation, design_as_planned, size, as_built_vs_design, outcome, why_worked_or_failed, cost, year, 2 gaps); md "Additions 2026-10-10" section before References.
 - Disagreements recorded (both values kept): crest lowering 1 m vs 0.5 m (-1.0 to -1.5 m AHD, P8 p.94), measured crest -2.2 m AHD (3D); footprint 170 x 280 m vs 350 x 600 / 450 x 250 m; salient 20-50 m / 30-50 m vs P8 p.98 reference-line misreading; 70,000 vs 78,500 m3 placed (17-27 % exposed).
 - JSON validated. Notes files P3/P8 marked narrowneck applied.
+
+## 2026-10-10 - PAGE agent: Map and Scale tabs removed (Lior's decision)
+- Top nav now Gallery, Table, 3D models; #view/map and #view/scale fall back to the gallery; viewer top bars (incl. combined) list the three tabs; meta description updated; Leaflet/map tiles and scale.js no longer loaded.
+- Rule 1 kept: reef dialog section "Footprint & how we drew it" (derivation, images relied on, verification, provenance md) stays for all 13 reefs via slim src/footprint.js; 3D tab keeps outline versions and methods. Lost only the 2D all-reefs overlay/comparison.
+- Archived (restorable): archive/04_build_removed_2026-10-10/ (scale.js + pre-change src files + old page); restore steps in 04_build/HANDOFF.md section 0.
+- Checks: Map/Scale checks in check.py, qa_models3d.py, qa_shots.py replaced by retired-route and no-leftover checks; update_page.py --full: all pass, state saved.
+- Fixes: Palm Beach labels in match view (pm_receiver.js), compact version block (Borth viewer higher at 900 px), photo_match.py skips held models (it had silently dropped all Match-photo buttons because of Narrowneck).
+
+## 2026-10-10 - kovalam-reef-india, queue item 9 (shape; 3D withheld)
+- Traced the container strips on the ASR aerial (img-07 = WRL Fig 4.5), rectified through a camera fitted to the 2011-02-28 Esri swash line. Result LOW confidence: area 1,216 m2, 59 x 41 m at an assumed camera height of 60 m; the photo cannot fix the scale (546-1,681 m2 for 30-80 m), so 3 versions (35/60/80 m) in shape.json. Status verified (self-check), VERIFY.md, METHOD.md, sources.md, HANDOFF.md in 07_scale/shapes/kovalam-reef-india/.
+- 3D not built: FEASIBILITY.md (crest/depth from WRL Table 4.2 are unlocated ranges without datum; no seabed profile; tides only a ~1 m range). Main: add slug to models3d_hold.json.
+- Images: registry rows img-07/-08/-09/-16 updated, planform pendings closed; check_registry passes for kovalam. Needs network list in HANDOFF section 7 (Esri Wayback z19 2010-14, Navionics, surfer.com/surfingindia pages).
+
+## 2026-10-10 - Airwave founder interview added to Bunbury and Albany cards
+- New personal-communication source (Lior's Zoom interview with Troy, Airwave founder, 8 Oct 2026; notes as reported by Lior). Bunbury card: R25, fill = sand not air in final design, seam opened a couple of days after installation, "perfect waves" before that (founder claim), future = concrete; `sources_disagree` (4 items) and `interview_2026_10_10` added; verdict label unchanged (failed), verdict_reason made fairer. Albany card: R19 plus a review (waves look bad from outside; not surfed; developer of a different reef). .md in step ("Additions 2026-10-10" sections); both JSON parse. HANDOFF section 8 appended for bunbury-airwave. 04_build not touched and the page not rebuilt (new keys `sources_disagree`, `interview_2026_10_10` are not yet used by the pipeline).
+
+## 2026-10-10 - opunake-reef, item 9b (local papers + Gemini extracts + web search)
+- papers/ text-layer grep: Opunake only in text/tables (Mead & Borrero 2011; Rendle 2016 Table 2.1 + refs; Blacka 2013 Tables 4.1-4.4). No plan figure, coordinates or datum. Gemini extracts: nothing confirmable. 9 WebSearches: text only (90 x 20 m, 27 bags). Log in 07_scale/shapes/opunake-reef/sources.md.
+- Result: still no plan source. shape.json stays no_source; FEASIBILITY.md updated with what is needed (TRC 2009 Tech. Report 2009-33, Black et al. 2004, design report, NZ Geographic figure, dated imagery).
+- 07_scale/reefs/opunake-reef.footprint.json now carries DO_NOT_DISPLAY / display:false (file kept). 04_build/src/compile_data.py load_footprint still reads it and does not honour the flag: main please check the page does not show the wedge, and add opunake-reef to models3d_hold.json.
+- Card: R15 added (Rendle 2016 Table 2.1: 4,800 m3, A$760,000), TRC report lead. No new images.
+
+## 2026-10-10 - REQUESTS_FOR_LIOR.md rewritten into one to-do file
+- Old file archived: archive/REQUESTS_FOR_LIOR_before_2026-10-10.md. New layout: Do next; 1 Papers (full citations); 2 E-mails with contact + draft (E1-E13); 3 Web searches (W1-W11); 4 Google Earth captures (G1-G11, precise links); 5 Later app readings (links per point); 6 Decisions open (D3, D4, D5, D8, D9); 7 Decided/done.
+- Lior's answers applied: D7 agreed (keep photo trace); Pratte's J1 decided (MLLW); J2 closed as decided by us (+-150 m; noted in prattes HANDOFF section 5 for the model agent).
+- Papers: already in papers/ = P1, P2, P3, P5, P8 (asking agents should be told); missing = P4, P7, P9-P16 (P10 and P16 have free online copies).
+- Contacts confirmed by web search: City of Gold Coast beaches@, City of Albany staff@ (general), BCP Council (Matt Hosey), CCO cco@channelcoast.org, City of Bunbury info@, WA DoT cdc@, TRC consents@, STDC phone/form, Bundaberg council general. Not confirmed: DETSI, Bluecoast, Borrero/Nelsen, Coastal Frontiers, Waveco, RWR, ASR/CESS.

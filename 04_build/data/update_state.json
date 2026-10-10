@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-10 21:07",
+ "updated": "2026-10-10 21:26",
  "sig": {
   "models": {
    "borth-coastal-defence-reef": {
@@ -8,16 +8,16 @@
     "annotated": "826aa18903896b1f",
     "shape.json": "cff033f702d25918",
     "registry": "160fda3c775212ae",
-    "card": "40c17c55df1bb4ce",
+    "card": "4beb10b4d82b1a0a",
     "config": "ef26b489de2476f0"
    },
    "boscombe-surf-reef": {
-    "viewer": "c4fe2d19eb72bc0b",
-    "model.js": "cb6ad1508e6be7b4",
+    "viewer": "a76ebba4f83f2428",
+    "model.js": "627667e606a0a679",
     "annotated": "8b89d8089762e706",
     "shape.json": "b6b5a73f1edb3bb3",
     "registry": "a40b657771c032b1",
-    "card": "e1dc0421faf28b79",
+    "card": "339d6b58c10f40ef",
     "config": "855b46a314bd2787"
    },
    "bunbury-airwave": {
@@ -29,45 +29,54 @@
     "card": "93a0e60c9449647a",
     "config": "30a18b5efbc83d0b"
    },
+   "cables-reef-wa": {
+    "viewer": "71b06b1c4601cf61",
+    "model.js": "ea45b9a3a42eee4b",
+    "annotated": "e3b0c44298fc1c14",
+    "shape.json": "bf6677659593fbeb",
+    "registry": "b226186f0e6a40e9",
+    "card": "d097bb12c76d6e01",
+    "config": "1502d661d52d949f"
+   },
    "mount-maunganui-reef": {
     "viewer": "63064539340d1c4d",
     "model.js": "53545e7e4d76a1ce",
     "annotated": "66b0e754f7a2b3af",
     "shape.json": "8aa8b021b629ce7a",
     "registry": "b32b43005aab177b",
-    "card": "8f33e980757dfa94",
+    "card": "70b7776e59eadb3e",
     "config": "658e76c3543aef4a"
    },
    "narrowneck-gold-coast": {
-    "viewer": "8832b0daaff15b3d",
+    "viewer": "9650f410fdb4954f",
     "model.js": "4dc4c69b61ba35b4",
     "annotated": "35ed980edd5d344c",
     "shape.json": "db28a2ade0809e34",
-    "registry": "e01cda909cc76f70",
-    "card": "8a1a99b0e8eef8e6",
-    "config": "1502d661d52d949f"
+    "registry": "e8fcad05fb1e1baf",
+    "card": "c153b918380d7e69",
+    "config": "1709cf2feca47555"
    },
    "palm-beach-gold-coast": {
     "viewer": "9a141eaa93a23217",
     "model.js": "53be2c2ea726fe1b",
     "annotated": "708425714f0edd31",
     "shape.json": "9d74d332271d31bb",
-    "registry": "ef70a84962615af7",
+    "registry": "a0f9ca0e8bc26a39",
     "card": "ce501df9e7b36401",
-    "config": "08d80b1bf7d60e45"
+    "config": "d8cb510848afe857"
    },
    "prattes-reef-el-segundo": {
-    "viewer": "b8334ffe12dc3f20",
-    "model.js": "ce9ea001604e021b",
+    "viewer": "acbd39f409ed4e10",
+    "model.js": "421c22dd69a8e142",
     "annotated": "c3f4f1239e62c46a",
-    "shape.json": "49729c41a3c44264",
+    "shape.json": "fd6eb2d4d5219f18",
     "registry": "2dcfd7a4cd326fed",
-    "card": "326ef4bb8e12e8d6",
-    "config": "036d108ce91351d3"
+    "card": "5d4b548f094f06e0",
+    "config": "40425a7afda7425b"
    }
   },
-  "hold": "2be8613eb6870471",
-  "src": "494ac5a7ec76f020"
+  "hold": "a75b738cf3e87d9c",
+  "src": "39bd81639af4c08c"
  },
  "snapshot": {
   "borth-coastal-defence-reef": {
@@ -175,6 +184,47 @@
     "ok": true,
     "area_m2": 1766.25,
     "crest_z_m": -2.0149998664855957
+   }
+  },
+  "narrowneck-gold-coast": {
+   "default_version": "photo_2020-08-08",
+   "versions": {
+    "photo_2020-08-08": {
+     "area_m2": 6239.0,
+     "volume_m3": 13495.0
+    },
+    "design_option2_2017": {
+     "area_m2": 13941.0,
+     "volume_m3": 21271.0
+    },
+    "design_2004_revised": {
+     "area_m2": 13631.0,
+     "volume_m3": 13603.0
+    },
+    "survey_2011-06-09": {
+     "area_m2": 4922.0,
+     "volume_m3": 6856.0
+    },
+    "navionics_4.0m_shoals": {
+     "area_m2": 537.0,
+     "volume_m3": null
+    }
+   },
+   "key_numbers": {
+    "Footprint (plan outline)": "6,239 m2 visible container field (photo 8 Aug 2020, default); 13,941 m2 Option 2 design envelope; 13,631 m2 2004 design; 4,922 m2 2011 relie",
+    "Crest level": "-2.2 m AHD measured after the 2018 renewal (= -2.32 m MSL); 1.44 m below LAT by MSQ, 1.20 m by the papers; shallowest mesh top -1.8 m AHD (i",
+    "Mound envelope volume": "13,495 m3 (photo, default); 21,271 m3 (Option 2); 13,603 m3 (2004); 6,856 m3 (2011 zone); +-3,100 m3 for 0.5 m of bed (photo)",
+    "Reef height above the seabed": "mean 2.2 m, maximum 3.9 m (default); 2-2.5 m at the crest wedge, 1-1.5 m at the toe",
+    "Seabed": "-4 m AHD at the shoreward ends of the arms, -7 m at the toe, -7.8 to -10.8 m at 400-515 m offshore; nearshore (0-190 m) assumed",
+    "Tide planes (local, Gold Coast Seaway)": "LAT -0.88, MLWS -0.66, MLWN -0.37, MSL 0, MHWN +0.36, MHWS +0.65, HAT +1.15 m MSL"
+   },
+   "pictures": 46,
+   "match_buttons": 0,
+   "combined": {
+    "status": "ok",
+    "ok": true,
+    "area_m2": 6797.0,
+    "crest_z_m": -1.9199999570846558
    }
   },
   "palm-beach-gold-coast": {

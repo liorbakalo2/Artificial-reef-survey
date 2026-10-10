@@ -88,6 +88,21 @@
           "text": "M.roles.north.label"
         }
       ]
+    },
+    "narrowneck-gold-coast": {
+      "frame_note": "model.js frame: x alongshore toward NORTH (bearing 356.21), y offshore toward EAST (bearing 86.21) (x turned 90 deg clockwise); viewer maps (X = x, Y = z, Z = y); default outline version (photo trace 8 Aug 2020)",
+      "offshore_scene_xz": [
+        0,
+        1
+      ],
+      "hand": 1,
+      "polygon": "M.versions.filter(function(v){return v.id===M.default_version;})[0].outline_m",
+      "area_ref_expr": "M.versions.filter(function(v){return v.id===M.default_version;})[0].area_m2",
+      "area_ref_label": "footprint area vs model.js area of the default version (the mesh covers the 7 traced polygons)",
+      "crest_z": "M.versions.filter(function(v){return v.id===M.default_version;})[0].crest_shallowest_AHD - M.datum.ahd_msl_msq",
+      "crest_note": "shallowest top of the default mesh (-1.8 m AHD, an isolated container at the shoreward wing; the arm crest is -2.2 m AHD measured) minus 0.12 = -1.92 m MSL",
+      "shore_mode": "crossing",
+      "sublabels": []
     }
   }
 }

@@ -100,6 +100,15 @@
       "outlet": "Beachgrit",
       "date": "2025-10",
       "url": "https://beachgrit.com/2025/10/worlds-best-artificial-surfing-reef-to-be-detuned-following-spate-of-injuries/"
+    },
+    {
+      "who": "Troy (founder of Airwave / Waveco, developer of a different reef, Bunbury)",
+      "role": "Outside observer, not surfed: developer of a competing artificial-reef project; interested party",
+      "quote_or_summary": "Said the waves look bad from the outside; he did not surf them. This is an outside observer's opinion based on looking, not surfing, and comes from a developer of a different reef. It conflicts with the largely positive surfer reports above; weight accordingly. Notes as reported by Lior; not verbatim.",
+      "outlet": "Personal communication: Zoom interview with Lior Bakalo",
+      "date": "2026-10-08",
+      "url": "",
+      "ref": "R19"
     }
   ],
   "images": [
@@ -352,6 +361,15 @@
       "accessed": "2026-09-25",
       "supports": "Independently re-verified R11's article is live and correctly headlined/dated ('Eighteen rocks of Southern Ocean Surf Reef repositioned in successful bid to reduce user injuries', byline Melissa Sheil, Wed 11 March 2026 4:00PM). No new facts beyond R11: article body remains behind a subscriber paywall in both the live page and a Wayback Machine snapshot (20260517181036), so cost/cause details beyond the headline stay unconfirmed by a second independent source.",
       "origin": "via Gemini survey, verified 2026-09-25"
+    },
+    {
+      "id": "R19",
+      "citation": "Lior Bakalo, Zoom interview with Troy (founder of Airwave, the Bunbury reef developer), 8 October 2026; notes as reported by Lior. Personal communication / interview, unpublished, no URL. (Troy commented on the Albany reef.)",
+      "url": "",
+      "accessed": "2026-10-10",
+      "type": "personal communication / interview",
+      "supports": "Troy (Airwave founder) says the Albany waves look bad from the outside; he did not surf them (opinion of a non-surfing outside observer from a different reef developer).",
+      "origin": "added 2026-10-10 from Lior's interview notes"
     }
   ],
   "blocked_sources": [

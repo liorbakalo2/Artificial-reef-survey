@@ -6,10 +6,24 @@ Read this instead of re-reading src/. Briefs: the 3D tab = `_agent_briefs/build_
 (round 11 = two agents; the log has a checkpoint section). Rules followed: `_agent_briefs/common.md`. User-facing docs: `README.md` section "3D models
 tab", `UPDATE_PROTOCOL.md` (how to bring in model updates), schemas `data/SCHEMA.md` ("models3d.json", "models3d_combined.json", "Round 11 additions").
 
+## 0. Map and Scale tabs REMOVED (2026-10-10, Lior: "only Gallery, Table and 3D tabs") - read first
+- Top navigation = Gallery, Table, 3D models. `#view/map` and `#view/scale` (also old links from viewers) fall back to the gallery. Viewer top bars (`BAR_TABS` in compile_models3d.py, incl. 3d/combined) list the same three. Launcher HTML at the repo root only opens the page: nothing to change.
+- Gone from the page: Leaflet + OSM/Carto tile loading (CDN), `renderMap`, map pins sanity code in build.py, map/overlay/comparison-table/panels of the Scale view, their CSS. Not touched: `data/reefs.json` fields (`lat`, `lon`) and the cards.
+- **Traceability kept (rule 1):** the reef dialog still has the section "Footprint & how we drew it" (jump button "Footprint"): traced plan drawing at a fixed px/m, facts, the full derivation table
+  (quantity, method, source, uncertainty), images relied on, notes, Gemini comparison, open issues, verification, link to the provenance md in `docs/scale/`. It exists for all 13 reefs, so reefs without a 3D model
+  keep their traced outline and method. It comes from the slim `src/footprint.js` (successor of scale.js; still `window.ReefScale.detailSection`). The 3D tab keeps the outline versions + methods of modelled reefs. The only thing lost is the side-by-side
+  overlay/comparison of all 2D footprints (the 3D tab "All (compare)" scene replaces it for modelled reefs).
+- **Archived (restore = copy back):** `archive/04_build_removed_2026-10-10/src/scale.js` (full old Scale view) and `src_before/` (template.html, app.js, styles.css, build.py, compile_models3d.py, check.py, qa_models3d.py, qa_round11.py, qa_shots.py, update_page.py as they were + the page).
+  To restore: copy `scale.js` back to `src/`, copy the `src_before` files over `src/` (or re-apply: template buttons/sections + `/*__SCALE_JS__*/` marker, app.js `renderMap`/view lists/hash regexes, build.py scale_js, BAR_TABS), then `python src/update_page.py --full`. Note `photo_match.py` / `pm_receiver.js` / models3d.* changes below are independent and should be kept.
+- Checks changed: check.py Scale-view render check -> "footprint detail code present", "no Map/Scale/Leaflet code in page" and "#view/scale falls back to gallery" (qa_shots.retired_view_checks); the "not plotted on map" INFO and qa_shots scale shots removed;
+  qa_models3d.py "Map -> 3D models" tab switch now "Table -> 3D models" and the standalone bar expects Gallery/Table/3D models. qa_round11.py and update_page.py needed no check changes (update_page: dropped the "not on map" note filter). No other check weakened.
+- Small fixes same day: (a) `pm_receiver.js` scales sizeAttenuation:false sprites by tan(8 deg/2)/tan(home fov/2) while a photo is matched (Palm Beach labels were about 5x too big in "Palm s4"); restored on Reset. (b) compact "Outline version" block (3 buttons on one row, one-line "Showing", title tooltip with the full name): Borth viewer top 585 -> 450 px at 1440 x 900.
+  (c) `photo_match.py` now skips slugs in `data/models3d_hold.json` (Narrowneck's half-built folder made photo_match fail and silently removed all 30 "Match this photo" buttons).
+
 ## 1. Status per stage (2026-10-07)
 | stage | status | confidence / reason |
 |---|---|---|
-| Tabs Gallery / Map / Table / Scale | unchanged (round 10: view buttons in the sticky top bar, short intro with (i)) | high: `check.py` 0 failures |
+| Tabs Gallery / Table / 3D models (Map and Scale removed 2026-10-10, section 0) | built; full update + 163 DOM checks pass | high |
 | 3D tab mechanics (round 9 + 10): discovery, viewers, key numbers, caveats, methods, references, full screen, selector, All (compare) | built, tested | high for the mechanics; per-model numbers are only as good as each model's METHODS_3D |
 | Round 11 models: Borth, Boscombe (extended seabed), Mount Maunganui added/updated; 6 models, 6/6 in the combined scene | built | each model medium confidence except Prattes LOW |
 | Round 11 combined-scene fixes (Lior's screenshot): Boscombe beach + shoreline, ONE scale bar, labels without overlap inside the canvas | built, QA 80 checks | high |

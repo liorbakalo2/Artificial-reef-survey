@@ -82,3 +82,6 @@ Read this first. Open other files only for one fact. Source ids = shape.json sou
 
 ## 7. CHECKPOINT 2026-10-10
 Bunbury is FINISHED at MEDIUM confidence and consistent; this HANDOFF was written by the housekeeping agent. Nothing was rebuilt or edited besides this file. A fresh agent can proceed to the page build or to the REQUESTS data without reading the sources above.
+
+## 8. UPDATE 2026-10-10 - new source R25 (personal communication)
+Lior Bakalo, Zoom interview with Troy (founder of Airwave), 8 Oct 2026, notes as reported by Lior (no URL, unrecorded, developer = interested party). Key points: final design filled with SAND instead of air (air did not respond well with the waves); seam opened a couple of days after installation; worked "amazingly / perfect waves" until then (unverified founder claim); next version is concrete. Recorded on the card as R25 plus a `sources_disagree` list (fill, failure timing, waves, future). Verdict stays FAILED; verdict text now notes the founder's wave claim and the lack of independent confirmation. Caption "sand-slurry filled" in section 6 is consistent with the founder's sand statement; the card's older "air/sand" wording is kept and flagged. Shape and 3D model untouched.

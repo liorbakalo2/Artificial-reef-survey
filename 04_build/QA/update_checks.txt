@@ -1,10 +1,10 @@
 PASS  tab is the visible view
 PASS  URL hash follows the selector: default = first built model
-PASS  selector has one button per model + 'All (compare)' (7), exactly one pressed
+PASS  selector has one button per model + 'All (compare)' (8), exactly one pressed
 PASS  selector buttons show the 3D-confidence dot of each reef
 PASS  ONE model section visible (one at a time)
-PASS  6 model sections rendered (others hidden)
-PASS  140 thumbnails rendered (one per selected picture)
+PASS  7 model sections rendered (others hidden)
+PASS  200 thumbnails rendered (one per selected picture)
 PASS  header: badge + one-line reason + state + vertical-exaggeration note
 PASS  every model has the full vertical-exaggeration text behind its (i)
 PASS  text at the top is short: tab intro <= 260 chars, page intro <= 260 chars (the rest sits behind (i))
@@ -52,7 +52,7 @@ PASS  'Top' button appears on long views and returns to the top
 PASS  'Top' button scrolls to the top
 PASS  from deep inside the tab one click on 'Gallery' shows the main page from its top
 PASS  leaving the tab frees the viewers (no iframe left)
-PASS  tabs switch from every view (Map -> 3D models) and the tab re-opens on its model
+PASS  tabs switch from every view (Table -> 3D models) and the tab re-opens on its model
 PASS  brand link 'Surf reefs survey' returns to the main page (Gallery)
 PASS  the gallery's page intro is 2 short lines with an (i)
 PASS  no console errors (navigation session)
@@ -61,7 +61,7 @@ PASS  combined viewer starts in its stage; comparison panel lists every model wi
 PASS  comparison panel: footprint and crest read back from the meshes, all checks pass
 PASS  method + check table of the combined scene are on the page
 PASS  combined viewer (standalone, file://) renders a frame without errors
-PASS  combined scene holds all 6 exported reefs, each with seabed + reef mesh
+PASS  combined scene holds all 7 exported reefs, each with seabed + reef mesh
 PASS  combined: every reef is positioned side by side at one scale (no overlap of the seabed patches)
 PASS  combined: z = 0 is each site's own MSL (water plane at y = 0; the exported crest level is the reef mesh's top)
 PASS  combined: vertical exaggeration is always shown, default 1x
@@ -79,9 +79,9 @@ PASS  mobile: photos sit directly under the viewer (stacked, no side-by-side)
 PASS  mobile: tapping a thumbnail shows it in the panel
 PASS  combined: Boscombe seabed reaches the beach (y from about -66 m, land above MSL) and offshore (y to 650 m)
 PASS  combined: Boscombe is in the scene (all exported models present)
-PASS  combined 1440x900 oblique: reef labels do not overlap and sit inside the canvas, clear of the panel (6 labels)
+PASS  combined 1440x900 oblique: reef labels do not overlap and sit inside the canvas, clear of the panel (7 labels)
 PASS  combined 1440x900 oblique: exactly one scale bar (one label '100 m')
-PASS  combined 1440x900 plan: reef labels do not overlap and sit inside the canvas, clear of the panel (6 labels)
+PASS  combined 1440x900 plan: reef labels do not overlap and sit inside the canvas, clear of the panel (7 labels)
 PASS  combined 1440x900 plan: exactly one scale bar (one label '100 m')
 PASS  combined overlay: labels do not overlap, inside the canvas, one scale bar
 PASS  combined panel: open by default (Hide button visible, Layout button hidden)
@@ -89,9 +89,9 @@ PASS  combined panel: Hide collapses the panel and shows a labelled 'Layout' but
 PASS  combined panel collapsed: labels still do not overlap and stay inside
 PASS  combined panel: the Layout button opens it again
 PASS  combined: no page errors
-PASS  combined 1000x700 oblique: reef labels do not overlap and sit inside the canvas, clear of the panel (6 labels)
+PASS  combined 1000x700 oblique: reef labels do not overlap and sit inside the canvas, clear of the panel (7 labels)
 PASS  combined 1000x700 oblique: exactly one scale bar (one label '100 m')
-PASS  combined 1000x700 plan: reef labels do not overlap and sit inside the canvas, clear of the panel (6 labels)
+PASS  combined 1000x700 plan: reef labels do not overlap and sit inside the canvas, clear of the panel (7 labels)
 PASS  combined 1000x700 plan: exactly one scale bar (one label '100 m')
 PASS  page panel (All): open by default, 'Hide' in the panel, 'Reefs' button hidden
 PASS  full screen (All): the stage is full screen with the reefs panel and the viewer's layout panel both open
@@ -103,6 +103,7 @@ PASS  borth-coastal-defence-reef: viewer's right panel is open by default and co
 PASS  boscombe-surf-reef: viewer's left panel is open by default and collapsible; the canvas then uses the full width; 'Layout' button at the edge
 PASS  bunbury-airwave: viewer's left panel is open by default and collapsible; the canvas then uses the full width; 'Layout' button at the edge
 PASS  mount-maunganui-reef: viewer's left panel is open by default and collapsible; the canvas then uses the full width; 'Layout' button at the edge
+PASS  narrowneck-gold-coast: viewer's right panel is open by default and collapsible; the canvas then uses the full width; 'Controls' button at the edge
 PASS  palm-beach-gold-coast: viewer's left panel is open by default and collapsible; the canvas then uses the full width; 'Layout' button at the edge
 PASS  prattes-reef-el-segundo: viewer's left panel is open by default and collapsible; the canvas then uses the full width; 'Layout' button at the edge
 PASS  page: no errors while exercising panels
@@ -116,6 +117,16 @@ PASS  mount-maunganui-reef: default version 'multibeam_2013_m2p0' is pressed on 
 PASS  mount-maunganui-reef: version 'asr_installed_toe_2008' is really applied in the 3D viewer (its own version selector reads it after the switch)
 PASS  mount-maunganui-reef: version 'asr_installed_toe_2008' -> iframe hash, pressed state, 'Showing' line and key-number rows follow
 PASS  mount-maunganui-reef: the versions (i) dialog opens and lists every version
+PASS  narrowneck-gold-coast: default version 'photo_2020-08-08' is pressed on load, 5 versions offered
+PASS  narrowneck-gold-coast: version 'design_option2_2017' is really applied in the 3D viewer (its own version selector reads it after the switch)
+PASS  narrowneck-gold-coast: version 'design_option2_2017' -> iframe hash, pressed state, 'Showing' line and key-number rows follow
+PASS  narrowneck-gold-coast: version 'design_2004_revised' is really applied in the 3D viewer (its own version selector reads it after the switch)
+PASS  narrowneck-gold-coast: version 'design_2004_revised' -> iframe hash, pressed state, 'Showing' line and key-number rows follow
+PASS  narrowneck-gold-coast: version 'survey_2011-06-09' is really applied in the 3D viewer (its own version selector reads it after the switch)
+PASS  narrowneck-gold-coast: version 'survey_2011-06-09' -> iframe hash, pressed state, 'Showing' line and key-number rows follow
+PASS  narrowneck-gold-coast: version 'navionics_4.0m_shoals' is really applied in the 3D viewer (its own version selector reads it after the switch)
+PASS  narrowneck-gold-coast: version 'navionics_4.0m_shoals' -> iframe hash, pressed state, 'Showing' line and key-number rows follow
+PASS  narrowneck-gold-coast: the versions (i) dialog opens and lists every version
 PASS  page: no errors while exercising versions
 PASS  borth-coastal-defence-reef: every eligible picture of photo_match.json that is in the picture panel carries its transform (8 of 8; 0 not in the panel)
 PASS  borth-coastal-defence-reef: 'Match this photo' button appears on an eligible picture
@@ -194,6 +205,12 @@ shot  update_versions_borth_dialog.png
 shot  update_versions_mount_default.png
 shot  update_versions_mount_asr_installe.png
 shot  update_versions_mount_dialog.png
+shot  update_versions_narrowneck_default.png
+shot  update_versions_narrowneck_design_optio.png
+shot  update_versions_narrowneck_design_2004_.png
+shot  update_versions_narrowneck_survey_2011-.png
+shot  update_versions_narrowneck_navionics_4..png
+shot  update_versions_narrowneck_dialog.png
 shot  update_photomatch_borth.png
 shot  update_photomatch_boscombe.png
 shot  update_photomatch_bunbury.png

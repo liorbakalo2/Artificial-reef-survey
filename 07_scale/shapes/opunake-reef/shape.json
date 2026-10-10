@@ -82,10 +82,13 @@
   "searched": [
    "card refs R1-R12 (text only)",
    "local Esri imagery z20/mid/wide/current",
-   "network probe 2026-10-10 (Esri, LINZ, nzgeo refused)"
+   "network probe 2026-10-10 (Esri, LINZ, nzgeo refused)",
+   "papers/ (5 PDFs, text layer, 2026-10-10): Opunake only in text/tables of Mead & Borrero 2011, Rendle 2012 thesis (Table 2.1 + reference list), Blacka et al. 2013 (tables, ref list); no plan figure, no coordinates",
+   "Gemini extracts 06_gemini_compare/ and 07_scale/00_gemini_footprints_extract.*: no usable Opunake plan, numbers self-contradictory and unverified",
+   "WebSearch x9, 2026-10-10 (see sources.md): no plan, coordinates, crest depth or survey found"
   ],
   "gemini_sources": "Mead & Black 2007 Design Dossier; Taranaki Regional Council Monitoring Records 2010 - inaccessible",
-  "why_insufficient": "no plan-view figure, no position, structure not visible, no depth datum",
+  "why_insufficient": "no plan-view figure, no position, structure not visible, no depth datum; re-checked 2026-10-10 with papers/, Gemini extracts and web search: still none",
   "fallback_used": "text bbox 90 x 20 m only; the wedge in 07_scale/reefs/opunake-reef.footprint.json is a schematic placeholder and is NOT used"
  },
  "references": [

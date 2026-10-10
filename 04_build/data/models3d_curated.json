@@ -83,7 +83,7 @@
     {
      "q": "Footprint",
      "model": "435.2 m2, 58.0 x 28.6 m (76 vertices)",
-     "stated": "same design drawing (Skelly; Fig. 4 of the 2003 paper); 110 bags x 6.39 m2 = 703 m2 of bag footprint",
+     "stated": "same design drawing (Skelly; Fig. 4 of the 2003 paper, whose Fig. 20 re-measures at 29.0 x 58.5 m); 110 bags x 6.39 m2 = 703 m2 of bag footprint",
      "diff": "0 vs the drawing; -268 m2 (-38 %) vs the bag footprint",
      "ids": "P1; shape.json; S10",
      "note": "Design layout, not an as-built plan.",
@@ -422,8 +422,8 @@
      "model": "-1.5 m MSL = 0.62 m below LAT (59.2 x 5.9 m slot)",
      "stated": "'The crest of the reef is 1.5m below mean sea level' (Prenzler et al. 2022); concept '-1.5 m AHD' (Mortensen 2015); chart label 'FISH HAVEN 1.5MT'",
      "diff": "0 vs the text; AHD vs MSL 0.12 m; if the chart depth is below LAT the chart top is 0.88 m deeper than design",
-     "ids": "p1; s8; p2; t1; n2",
-     "note": "Four sources agree on the design number; the chart datum is not stated by the app.",
+     "ids": "p1; s8; p2; c1; s6; t1; n2",
+     "note": "Four sources agree on the design number (council section view and text re-checked 2026-10-10: 0 to 0.12 m, AHD vs MSL); the chart datum is not stated by the app.",
      "ev": [
       "crest level (-1.5 m below mean sea level)",
       "the chart puts the top 0.88 m deeper than the design"
@@ -432,9 +432,9 @@
     {
      "q": "Toe / seabed depth",
      "model": "toe -4.0 (landward end) to -7.0 m MSL (seaward end, +-0.5 m); seabed from the Navionics SonarChart",
-     "stated": "no surveyed value read; Navionics seabed vs toe elevations -0.27 m (sd 0.55 m)",
+     "stated": "no as-built surveyed value read; Navionics seabed vs toe elevations -0.27 m (sd 0.55 m); pre-reef City survey profile (Mortensen 2015 Fig 6a, datum assumed AHD) vs model seabed RMS 0.33 m over 13 labels (3.5-11.5 m); PBO3 buoy (Daniels 2022) 11.75 m vs model 12.37 m below LAT (+0.62 m, extrapolated)",
      "diff": "rock toe 0.27 m deeper than the chart seabed on average",
-     "ids": "n1; s7",
+     "ids": "n1; s7; s6; d1",
      "note": "Seabed under the reef is a smooth interpolation, not a measurement. Concept-design depths (11.4 m at 560 m) belong to a different structure.",
      "ev": [
       "Mean -0.27 m (the rock toe is deeper than the chart seabed), sd 0.55 m",
@@ -688,6 +688,61 @@
      "diff": "between the two stated values",
      "ids": "sat2024; ref6",
      "note": "Esri position +-5 m."
+    }
+   ],
+   "relied": []
+  },
+  "narrowneck-gold-coast": {
+   "state_short": "Renewed reef as left in June 2018 (84 containers added around the 2004-revised structure; about 534 containers placed since 1999), drawn as the visible container field of the 8 Aug 2020 aerial (default; a lower bound). Four more outlines are selectable: Option 2 renewal design 2017, 2004 revised design, 2011 survey relief zone, Navionics 4.0 m shoals (outline only). History (1999 build, 2004 weir and wings, 2017-18 renewal, Option 2 only partly built) is notes, not modelled.",
+   "ve_note": "At VE = 5 a 1.5:1 container flank looks like 0.3:1 and the 2 m mound height looks 10 m high.",
+   "key_numbers": [
+    {
+     "q": "Footprint (plan outline)",
+     "model": "{{versions/photo_2020-08-08/area_m2|n0}} m2 visible container field (photo 8 Aug 2020, default); {{versions/design_option2_2017/area_m2|n0}} m2 Option 2 design envelope; {{versions/design_2004_revised/area_m2|n0}} m2 2004 design; {{versions/survey_2011-06-09/area_m2|n0}} m2 2011 relief zone",
+     "stated": "council layer OBJECTID 4637: 34,565 m2 polygon; design drawings to the -6 m contour: 13,631 m2 (2004) and 13,941 m2 (Option 2)",
+     "diff": "the photo field is 45 % of the design envelope (toe below about -6 m not visible)",
+     "ids": "s3; cor23; jack12",
+     "note": "Use the version toggle; design outlines are placed to +-15 m."
+    },
+    {
+     "q": "Crest level",
+     "model": "-2.2 m AHD measured after the 2018 renewal (= -2.32 m MSL); 1.44 m below LAT by MSQ, 1.20 m by the papers; shallowest mesh top {{versions/photo_2020-08-08/crest_shallowest_AHD|n1}} m AHD (isolated wing container)",
+     "stated": "-2.2 m AHD measured (Vieira da Silva 2021 p.5); target -2.5 m AHD = -1.5 m LAT (Jackson 2007, Corbett 2023)",
+     "diff": "0.24 m datum ambiguity (MSQ AHD = LAT + 0.760 vs papers LAT + 1.00)",
+     "ids": "vds21; jack07; cor23; msq",
+     "note": "The viewer has a datum-rule switch; geometry is in m AHD."
+    },
+    {
+     "q": "Mound envelope volume",
+     "model": "{{versions/photo_2020-08-08/volume_m3|n0}} m3 (photo, default); {{versions/design_option2_2017/volume_m3|n0}} m3 (Option 2); {{versions/design_2004_revised/volume_m3|n0}} m3 (2004); {{versions/survey_2011-06-09/volume_m3|n0}} m3 (2011 zone); +-3,100 m3 for 0.5 m of bed (photo)",
+     "stated": "534 containers x about 147 m3 of sand = about 78,500 m3 placed",
+     "diff": "exposed mound is 17-27 % of the placed volume",
+     "ids": "jack07; jack12; city20",
+     "note": "Envelope above the modelled seabed including gaps between containers; the rest is buried, stacked below the visible field, displaced or lost."
+    },
+    {
+     "q": "Reef height above the seabed",
+     "model": "mean {{versions/photo_2020-08-08/mean_height_m|n1}} m, maximum {{versions/photo_2020-08-08/max_height_m|n1}} m (default); 2-2.5 m at the crest wedge, 1-1.5 m at the toe",
+     "stated": "no published section; multibeam relief p90 0.9-1.2 m, p99 1.8-2.2 m (Corbett 2023 Fig 3, this model)",
+     "diff": "stage-1 estimate 4-6 m at the toe is not supported",
+     "ids": "cor23",
+     "note": "Heights from the 2017 multibeam are biased low where stacks are wider than 9 m."
+    },
+    {
+     "q": "Seabed",
+     "model": "-4 m AHD at the shoreward ends of the arms, -7 m at the toe, -7.8 to -10.8 m at 400-515 m offshore; nearshore (0-190 m) assumed",
+     "stated": "inner edge -4/-5, under the reef -6 to -8, seaward -9/-10 m AHD (Vieira da Silva 2021 Fig 3)",
+     "diff": "within +-1 m",
+     "ids": "cor23; vds21; s12",
+     "note": "Window of 164 x 145 m from the pre-works multibeam (colour figure, +-0.4 m, placed +-10 m)."
+    },
+    {
+     "q": "Tide planes (local, Gold Coast Seaway)",
+     "model": "LAT -0.88, MLWS -0.66, MLWN -0.37, MSL 0, MHWN +0.36, MHWS +0.65, HAT +1.15 m MSL",
+     "stated": "MSQ 2026 planes above LAT: 0.22, 0.51, 0.88, 1.24, 1.53, 2.03",
+     "diff": "none",
+     "ids": "msq",
+     "note": "z = 0 at MSL; z_MSL = z_AHD - 0.12 (MSQ)."
     }
    ],
    "relied": []

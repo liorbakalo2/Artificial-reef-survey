@@ -1649,6 +1649,11 @@
    "reason": "Navionics/Garmin screenshots (6) not offered: no geo (lat/lon <-> canonical) in shape.json"
   },
   {
+   "slug": "narrowneck-gold-coast",
+   "source_id": "-",
+   "reason": "model frame not yet supported by photo_match.py (model_rings / scene_map)"
+  },
+  {
    "slug": "palm-beach-gold-coast",
    "source_id": "s2",
    "registry_id": "palm-beach-gold-coast-img-23",
@@ -1701,5 +1706,5 @@
   "max_residual_m": 3.25,
   "max_residual_m_all_kinds": 3.25
  },
- "signature": "403ab5408b19d3f1d2a8"
+ "signature": "20426b7c46f0246950bd"
 }

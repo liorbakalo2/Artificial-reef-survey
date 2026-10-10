@@ -1011,6 +1011,160 @@ false,
 true
 ]
 },
+"3d/narrowneck-gold-coast/annotated/A1_corbett_fig3_digitised": {
+"res": {
+"bytes": 131759,
+"h": 448,
+"scale": 0.72727,
+"src_h": 616,
+"src_w": 1650,
+"w": 1200,
+"web": "3d/narrowneck-gold-coast/annotated/A1_corbett_fig3_digitised.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/3d/annotated/A1_corbett_fig3_digitised.png",
+827379,
+1791666342,
+1200,
+400,
+false,
+null,
+true,
+false
+]
+},
+"3d/narrowneck-gold-coast/annotated/A2_navionics_readings_used": {
+"res": {
+"bytes": 195664,
+"h": 800,
+"scale": 0.611,
+"src_h": 1310,
+"src_w": 1964,
+"w": 1200,
+"web": "3d/narrowneck-gold-coast/annotated/A2_navionics_readings_used.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/3d/annotated/A2_navionics_readings_used.png",
+481135,
+1791666343,
+1200,
+400,
+false,
+null,
+true,
+false
+]
+},
+"3d/narrowneck-gold-coast/annotated/A3_vieira_fig3_reef_bed_read": {
+"res": {
+"bytes": 277896,
+"h": 1200,
+"scale": 0.90909,
+"src_h": 1320,
+"src_w": 550,
+"w": 500,
+"web": "3d/narrowneck-gold-coast/annotated/A3_vieira_fig3_reef_bed_read.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/3d/annotated/A3_vieira_fig3_reef_bed_read.png",
+908857,
+1791666343,
+1200,
+400,
+false,
+null,
+true,
+false
+]
+},
+"3d/narrowneck-gold-coast/annotated/A4_jackson2012_fig2_contours_read": {
+"res": {
+"bytes": 218305,
+"h": 395,
+"scale": 0.69324,
+"src_h": 570,
+"src_w": 1731,
+"w": 1200,
+"web": "3d/narrowneck-gold-coast/annotated/A4_jackson2012_fig2_contours_read.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/3d/annotated/A4_jackson2012_fig2_contours_read.png",
+315157,
+1791666343,
+1200,
+400,
+false,
+null,
+true,
+false
+]
+},
+"3d/narrowneck-gold-coast/annotated/A5_profile_model_vs_sources": {
+"res": {
+"bytes": 175775,
+"h": 567,
+"scale": 0.99174,
+"src_h": 572,
+"src_w": 1210,
+"w": 1200,
+"web": "3d/narrowneck-gold-coast/annotated/A5_profile_model_vs_sources.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/3d/annotated/A5_profile_model_vs_sources.png",
+113402,
+1791666343,
+1200,
+400,
+false,
+null,
+true,
+false
+]
+},
+"3d/narrowneck-gold-coast/annotated/A6_versions_on_seabed": {
+"res": {
+"bytes": 187019,
+"h": 880,
+"scale": 1.0,
+"src_h": 880,
+"src_w": 990,
+"w": 990,
+"web": "3d/narrowneck-gold-coast/annotated/A6_versions_on_seabed.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/3d/annotated/A6_versions_on_seabed.png",
+190962,
+1791666344,
+1200,
+400,
+false,
+null,
+true,
+false
+]
+},
+"3d/narrowneck-gold-coast/poster": {
+"res": {
+"bytes": 75489,
+"h": 579,
+"scale": 0.64286,
+"src_h": 900,
+"src_w": 1400,
+"w": 900,
+"web": "3d/narrowneck-gold-coast/poster.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/3d/preview_oblique.png",
+380772,
+1791666456,
+900,
+400,
+false,
+400000,
+false,
+true
+]
+},
 "3d/palm-beach-gold-coast/annotated/model_sections": {
 "res": {
 "bytes": 249338,
@@ -5380,6 +5534,1684 @@ false
 "/home/user/artificial-reef-survey/03_images/reefs/mount-maunganui-reef/mount-maunganui-reef_p8-fig2-16-RAD-method_2005-2008.png",
 1896368,
 1791666389,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-01": {
+"res": {
+"bytes": 231906,
+"h": 1600,
+"scale": 0.68405,
+"src_h": 2339,
+"src_w": 1654,
+"th": 400,
+"thumb": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-01_400.jpg",
+"tw": 283,
+"w": 1131,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-01.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/src/gov/narrowneck-gold-coast_jackson2012_page3_200dpi_2012.png",
+554157,
+1791662847,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-01_ann1": {
+"res": {
+"bytes": 177964,
+"h": 715,
+"scale": 0.92432,
+"src_h": 774,
+"src_w": 1731,
+"w": 1600,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-01_ann1.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/bathymetry/gold_coast/annotated/narrowneck_jackson2012_fig2_design_depth_labels_read.png",
+366610,
+1791662845,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-01_ann2": {
+"res": {
+"bytes": 337692,
+"h": 527,
+"scale": 0.92432,
+"src_h": 570,
+"src_w": 1731,
+"w": 1600,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-01_ann2.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/3d/annotated/A4_jackson2012_fig2_contours_read.png",
+315157,
+1791666343,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-02": {
+"res": {
+"bytes": 260082,
+"h": 1600,
+"scale": 0.68405,
+"src_h": 2339,
+"src_w": 1654,
+"th": 400,
+"thumb": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-02_400.jpg",
+"tw": 283,
+"w": 1131,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-02.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/src/gov/narrowneck-gold-coast_jackson2012_page4_200dpi_2012.png",
+1381774,
+1791662847,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-03": {
+"res": {
+"bytes": 254129,
+"h": 1600,
+"scale": 0.68405,
+"src_h": 2339,
+"src_w": 1654,
+"th": 400,
+"thumb": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-03_400.jpg",
+"tw": 283,
+"w": 1131,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-03.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/src/gov/narrowneck-gold-coast_jackson2012_page5_200dpi_2012.png",
+2519658,
+1791662847,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-03_ann1": {
+"res": {
+"bytes": 340543,
+"h": 1041,
+"scale": 0.9822,
+"src_h": 1060,
+"src_w": 1629,
+"w": 1600,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-03_ann1.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/overlays/fig7_2011_aerial_design_contours_with_2020_trace.png",
+2360196,
+1791662847,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-03_ann2": {
+"res": {
+"bytes": 258924,
+"h": 1040,
+"scale": 1.0,
+"src_h": 1040,
+"src_w": 1320,
+"w": 1320,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-03_ann2.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/overlays/design_prior_fig7_contours_on_s3.png",
+1526047,
+1791662847,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-04": {
+"res": {
+"bytes": 310801,
+"h": 527,
+"scale": 0.92432,
+"src_h": 570,
+"src_w": 1731,
+"th": 132,
+"thumb": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-04_400.jpg",
+"tw": 400,
+"w": 1600,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-04.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/src/gov/narrowneck-gold-coast_jackson2012_fig2_reef_levels_original_and_revised_design_300dpi_crop.png",
+304851,
+1791662847,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-04_ann1": {
+"res": {
+"bytes": 177964,
+"h": 715,
+"scale": 0.92432,
+"src_h": 774,
+"src_w": 1731,
+"w": 1600,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-04_ann1.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/bathymetry/gold_coast/annotated/narrowneck_jackson2012_fig2_design_depth_labels_read.png",
+366610,
+1791662845,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-04_ann2": {
+"res": {
+"bytes": 313149,
+"h": 900,
+"scale": 1.0,
+"src_h": 900,
+"src_w": 1100,
+"w": 1100,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-04_ann2.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/overlays/design_2004_minus6_on_s3.png",
+344415,
+1791665221,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-04_ann3": {
+"res": {
+"bytes": 337692,
+"h": 527,
+"scale": 0.92432,
+"src_h": 570,
+"src_w": 1731,
+"w": 1600,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-04_ann3.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/3d/annotated/A4_jackson2012_fig2_contours_read.png",
+315157,
+1791666343,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-05": {
+"res": {
+"bytes": 225425,
+"h": 597,
+"scale": 1.0,
+"src_h": 597,
+"src_w": 899,
+"th": 266,
+"thumb": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-05_400.jpg",
+"tw": 400,
+"w": 899,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-05.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/src/gov/narrowneck-gold-coast_jackson2012_fig4_container_placement_plans_2002-2006_native.png",
+197601,
+1791662847,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-06": {
+"res": {
+"bytes": 83481,
+"h": 450,
+"scale": 1.0,
+"src_h": 450,
+"src_w": 623,
+"th": 289,
+"thumb": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-06_400.jpg",
+"tw": 400,
+"w": 623,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-06.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/src/gov/narrowneck-gold-coast_jackson2012_fig5a_reef_bathymetry_2011-06-09_native.jpeg",
+76605,
+1791662847,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-06_ann1": {
+"res": {
+"bytes": 311802,
+"h": 900,
+"scale": 1.0,
+"src_h": 900,
+"src_w": 1100,
+"w": 1100,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-06_ann1.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/overlays/survey2011_zone_on_s3.png",
+342471,
+1791665222,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-08": {
+"res": {
+"bytes": 19004,
+"h": 468,
+"scale": 1.0,
+"src_h": 468,
+"src_w": 572,
+"th": 327,
+"thumb": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-08_400.jpg",
+"tw": 400,
+"w": 572,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-08.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/src/gov/narrowneck-gold-coast_jackson2012_fig6a_aerial_2004_native.jpeg",
+17101,
+1791662847,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-09": {
+"res": {
+"bytes": 42922,
+"h": 466,
+"scale": 1.0,
+"src_h": 466,
+"src_w": 644,
+"th": 289,
+"thumb": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-09_400.jpg",
+"tw": 400,
+"w": 644,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-09.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/src/gov/narrowneck-gold-coast_jackson2012_fig6b_aerial_2011-07_native.jpeg",
+81422,
+1791662847,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-09_ann1": {
+"res": {
+"bytes": 139135,
+"h": 932,
+"scale": 1.0,
+"src_h": 932,
+"src_w": 1288,
+"w": 1288,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-09_ann1.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/overlays/fig6b_2011_aerial_with_2020_trace.png",
+1090692,
+1791662847,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-10": {
+"res": {
+"bytes": 173194,
+"h": 707,
+"scale": 1.0,
+"src_h": 707,
+"src_w": 1086,
+"th": 260,
+"thumb": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-10_400.jpg",
+"tw": 400,
+"w": 1086,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-10.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/src/gov/narrowneck-gold-coast_jackson2012_fig7_overlay_2011-07_aerial_with_design_contours_and_containers_native.jpeg",
+150706,
+1791662847,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-10_ann1": {
+"res": {
+"bytes": 340543,
+"h": 1041,
+"scale": 0.9822,
+"src_h": 1060,
+"src_w": 1629,
+"w": 1600,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-10_ann1.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/overlays/fig7_2011_aerial_design_contours_with_2020_trace.png",
+2360196,
+1791662847,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-10_ann2": {
+"res": {
+"bytes": 258924,
+"h": 1040,
+"scale": 1.0,
+"src_h": 1040,
+"src_w": 1320,
+"w": 1320,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-10_ann2.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/overlays/design_prior_fig7_contours_on_s3.png",
+1526047,
+1791662847,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-14": {
+"res": {
+"bytes": 8889,
+"h": 168,
+"scale": 1.0,
+"src_h": 168,
+"src_w": 723,
+"th": 93,
+"thumb": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-14_400.jpg",
+"tw": 400,
+"w": 723,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-14.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/src/gov/narrowneck-gold-coast_jackson2012_fig9_sketch_slumping_native.png",
+7440,
+1791662847,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-21": {
+"res": {
+"bytes": 188545,
+"h": 318,
+"scale": 1.0,
+"src_h": 318,
+"src_w": 854,
+"th": 149,
+"thumb": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-21_400.jpg",
+"tw": 400,
+"w": 854,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-21.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/src/gov/narrowneck-gold-coast_jackson2012_fig16_salient_in_lee_of_reef_2010-05-20_native.png",
+320360,
+1791662847,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-22": {
+"res": {
+"bytes": 480787,
+"h": 1600,
+"scale": 0.70299,
+"src_h": 2276,
+"src_w": 2275,
+"th": 400,
+"thumb": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-22_400.jpg",
+"tw": 400,
+"w": 1599,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-22.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/bathymetry/gold_coast/annotated/q1_narrowneck_dtm_source_coverage_on_esri.png",
+3539451,
+1791662845,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-23": {
+"res": {
+"bytes": 134128,
+"h": 783,
+"scale": 1.0,
+"src_h": 783,
+"src_w": 1254,
+"th": 250,
+"thumb": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-23_400.jpg",
+"tw": 400,
+"w": 1254,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-23.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/03_images/reefs/narrowneck-gold-coast/narrowneck-gold-coast_renewal_works_dredger_over_reef_icm_2017-18.png",
+1254139,
+1791662843,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-24": {
+"res": {
+"bytes": 239770,
+"h": 1181,
+"scale": 0.81425,
+"src_h": 1450,
+"src_w": 1965,
+"th": 295,
+"thumb": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-24_400.jpg",
+"tw": 400,
+"w": 1600,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-24.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/03_images/reefs/narrowneck-gold-coast/narrowneck-gold-coast_drone_view_reef_with_surfers_and_buoy_icm_post2018.jpeg",
+195609,
+1791662843,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-26": {
+"res": {
+"bytes": 136953,
+"h": 945,
+"scale": 1.0,
+"src_h": 945,
+"src_w": 1400,
+"th": 270,
+"thumb": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-26_400.jpg",
+"tw": 400,
+"w": 1400,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-26.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/src/gov/narrowneck-gold-coast_jackson2007_fig2_narrowneck_reef_design_plan_elevation_section_1998_200dpi_crop.png",
+115064,
+1791662847,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-27": {
+"res": {
+"bytes": 274468,
+"h": 1093,
+"scale": 0.7601,
+"src_h": 1438,
+"src_w": 2105,
+"th": 273,
+"thumb": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-27_400.jpg",
+"tw": 400,
+"w": 1600,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-27.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/src/gov/narrowneck-gold-coast_jackson2007_fig13_recorded_surf_tracks_on_revised_design_contours_scale_100m_300dpi_crop.png",
+123312,
+1791662847,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-27_ann1": {
+"res": {
+"bytes": 177804,
+"h": 1239,
+"scale": 0.7601,
+"src_h": 1630,
+"src_w": 2105,
+"w": 1600,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-27_ann1.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/bathymetry/gold_coast/annotated/narrowneck_jackson2007_fig13_scale_calibration_100m.png",
+173301,
+1791662845,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-28": {
+"res": {
+"bytes": 265683,
+"h": 495,
+"scale": 0.94118,
+"src_h": 526,
+"src_w": 1700,
+"th": 124,
+"thumb": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-28_400.jpg",
+"tw": 400,
+"w": 1600,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-28.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/src/gov/narrowneck-gold-coast_jackson2007_fig14_photo_of_break_with_crest_at_minus0.5m_LAT_200dpi_crop.png",
+136374,
+1791662847,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-29": {
+"res": {
+"bytes": 94519,
+"h": 706,
+"scale": 1.0,
+"src_h": 706,
+"src_w": 928,
+"th": 304,
+"thumb": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-29_400.jpg",
+"tw": 400,
+"w": 928,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-29.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/src/gov/narrowneck-gold-coast_jackson2007_fig15_photo_of_break_with_crest_at_minus1.5m_LAT_200dpi_crop.png",
+106252,
+1791662847,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-30": {
+"res": {
+"bytes": 321422,
+"h": 1020,
+"scale": 1.0,
+"src_h": 1020,
+"src_w": 1342,
+"th": 304,
+"thumb": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-30_400.jpg",
+"tw": 400,
+"w": 1342,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-30.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/src/gov/narrowneck-gold-coast_vieira_da_silva2021_fig1_study_area_eta_lines_and_reef_native.jpeg",
+308128,
+1791662847,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-31": {
+"res": {
+"bytes": 549284,
+"h": 1599,
+"scale": 1.0,
+"src_h": 1599,
+"src_w": 1331,
+"th": 400,
+"thumb": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-31_400.jpg",
+"tw": 333,
+"w": 1331,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-31.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/src/gov/narrowneck-gold-coast_vieira_da_silva2021_fig3_ten_topo_bathymetric_surveys_2018-2020_native.jpeg",
+525627,
+1791662847,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-31_ann1": {
+"res": {
+"bytes": 210046,
+"h": 1600,
+"scale": 0.68788,
+"src_h": 2326,
+"src_w": 1500,
+"w": 1032,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-31_ann1.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/bathymetry/gold_coast/annotated/narrowneck_vieira2021_fig3_survey1_2018-07-19_depth_labels_read.png",
+1935089,
+1791662845,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-31_ann2": {
+"res": {
+"bytes": 152942,
+"h": 1320,
+"scale": 1.0,
+"src_h": 1320,
+"src_w": 550,
+"w": 550,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-31_ann2.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/3d/annotated/A3_vieira_fig3_reef_bed_read.png",
+908857,
+1791666343,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-32": {
+"res": {
+"bytes": 6618,
+"h": 127,
+"scale": 1.0,
+"src_h": 127,
+"src_w": 200,
+"th": 127,
+"thumb": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-32_400.jpg",
+"tw": 200,
+"w": 200,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-32.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/03_images/reefs/narrowneck-gold-coast/narrowneck-gold-coast_cogc_renewal_page_faucon_over_reef_drone_thumb_2018.jpg",
+14962,
+1791662843,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-35": {
+"res": {
+"bytes": 5833,
+"h": 127,
+"scale": 1.0,
+"src_h": 127,
+"src_w": 200,
+"th": 127,
+"thumb": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-35_400.jpg",
+"tw": 200,
+"w": 200,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-35.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/03_images/reefs/narrowneck-gold-coast/narrowneck-gold-coast_cogc_renewal_page_faucon_placing_container_over_reef_thumb_2018.jpg",
+7740,
+1791662843,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-43": {
+"res": {
+"bytes": 121589,
+"h": 952,
+"scale": 1.0,
+"src_h": 952,
+"src_w": 1326,
+"th": 287,
+"thumb": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-43_400.jpg",
+"tw": 400,
+"w": 1326,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-43.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/Initial info from Lior/Screenshot 2026-10-04 193459.png",
+1117648,
+1791662849,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-45": {
+"res": {
+"bytes": 96963,
+"h": 1517,
+"scale": 1.0,
+"src_h": 1517,
+"src_w": 1517,
+"th": 400,
+"thumb": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-45_400.jpg",
+"tw": 400,
+"w": 1517,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-45.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/src/wayback/nn_wayback_2020-08-08_r9812_z19.png",
+703625,
+1791662847,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-45_ann1": {
+"res": {
+"bytes": 168082,
+"h": 1040,
+"scale": 1.0,
+"src_h": 1040,
+"src_w": 1320,
+"w": 1320,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-45_ann1.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/overlays/s3_primary_trace.png",
+1253755,
+1791662847,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-45_ann2": {
+"res": {
+"bytes": 307431,
+"h": 900,
+"scale": 1.0,
+"src_h": 900,
+"src_w": 1100,
+"w": 1100,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-45_ann2.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/overlays/faint_patches_on_s3.png",
+338311,
+1791665222,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-46": {
+"res": {
+"bytes": 274725,
+"h": 1517,
+"scale": 1.0,
+"src_h": 1517,
+"src_w": 1517,
+"th": 400,
+"thumb": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-46_400.jpg",
+"tw": 400,
+"w": 1517,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-46.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/src/wayback/nn_wayback_2022-11-06_r47963_z19.png",
+2358816,
+1791662847,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-46_ann1": {
+"res": {
+"bytes": 263589,
+"h": 1040,
+"scale": 1.0,
+"src_h": 1040,
+"src_w": 1320,
+"w": 1320,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-46_ann1.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/overlays/s4_crosscheck_on_2022-11.png",
+2014241,
+1791662847,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-47": {
+"res": {
+"bytes": 158689,
+"h": 1517,
+"scale": 1.0,
+"src_h": 1517,
+"src_w": 1517,
+"th": 400,
+"thumb": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-47_400.jpg",
+"tw": 400,
+"w": 1517,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-47.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/src/wayback/nn_wayback_2019-06-18_r21485_z19.png",
+1196189,
+1791662847,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-47_ann1": {
+"res": {
+"bytes": 277693,
+"h": 1040,
+"scale": 1.0,
+"src_h": 1040,
+"src_w": 1320,
+"w": 1320,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-47_ann1.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/overlays/s5_check_on_2019-06.png",
+1989789,
+1791662847,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-49": {
+"res": {
+"bytes": 328253,
+"h": 1599,
+"scale": 0.56239,
+"src_h": 2844,
+"src_w": 2845,
+"th": 400,
+"thumb": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-49_400.jpg",
+"tw": 400,
+"w": 1600,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-49.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/src/wayback/nn_wayback_2020-08-08_r9812_z17_shoreline_context.png",
+5519878,
+1791662847,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-50": {
+"res": {
+"bytes": 42235,
+"h": 655,
+"scale": 1.0,
+"src_h": 655,
+"src_w": 982,
+"th": 267,
+"thumb": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-50_400.jpg",
+"tw": 400,
+"w": 982,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-50.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/src/navionics/sonar_z18_shade00.0.png",
+42478,
+1791662847,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-50_ann1": {
+"res": {
+"bytes": 230383,
+"h": 1067,
+"scale": 0.81466,
+"src_h": 1310,
+"src_w": 1964,
+"w": 1600,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-50_ann1.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/overlays/navionics_sonar_z18_shade0_with_trace_and_readings.png",
+443952,
+1791662847,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-50_ann2": {
+"res": {
+"bytes": 235356,
+"h": 1067,
+"scale": 0.81466,
+"src_h": 1310,
+"src_w": 1964,
+"w": 1600,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-50_ann2.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/overlays/navionics_sonar_z18_shade5_with_trace_and_readings.png",
+610682,
+1791662847,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-50_ann3": {
+"res": {
+"bytes": 302357,
+"h": 900,
+"scale": 1.0,
+"src_h": 900,
+"src_w": 1100,
+"w": 1100,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-50_ann3.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/overlays/navionics_shoals_on_s3.png",
+333101,
+1791665222,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-50_ann4": {
+"res": {
+"bytes": 284652,
+"h": 1067,
+"scale": 0.81466,
+"src_h": 1310,
+"src_w": 1964,
+"w": 1600,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-50_ann4.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/3d/annotated/A2_navionics_readings_used.png",
+481135,
+1791666343,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-51": {
+"res": {
+"bytes": 27048,
+"h": 655,
+"scale": 1.0,
+"src_h": 655,
+"src_w": 982,
+"th": 267,
+"thumb": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-51_400.jpg",
+"tw": 400,
+"w": 982,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-51.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/src/navionics/naut_z18_shade00.0.png",
+26205,
+1791662847,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-52": {
+"res": {
+"bytes": 46164,
+"h": 655,
+"scale": 1.0,
+"src_h": 655,
+"src_w": 982,
+"th": 267,
+"thumb": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-52_400.jpg",
+"tw": 400,
+"w": 982,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-52.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/src/navionics/sonar_z17_shade00.0.png",
+46311,
+1791662847,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-53": {
+"res": {
+"bytes": 28760,
+"h": 655,
+"scale": 1.0,
+"src_h": 655,
+"src_w": 982,
+"th": 267,
+"thumb": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-53_400.jpg",
+"tw": 400,
+"w": 982,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-53.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/src/navionics/naut_z17_shade00.0.png",
+28146,
+1791662847,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-54": {
+"res": {
+"bytes": 271820,
+"h": 334,
+"scale": 1.0,
+"src_h": 334,
+"src_w": 769,
+"th": 174,
+"thumb": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-54_400.jpg",
+"tw": 400,
+"w": 769,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-54.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/src/gov/corbett2023_extracted/p3_x88.png",
+313147,
+1791662847,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-54_ann1": {
+"res": {
+"bytes": 73654,
+"h": 1000,
+"scale": 1.0,
+"src_h": 1000,
+"src_w": 1000,
+"w": 1000,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-54_ann1.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/overlays/option2_on_s3.png",
+548853,
+1791665221,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-55": {
+"res": {
+"bytes": 223432,
+"h": 312,
+"scale": 1.0,
+"src_h": 312,
+"src_w": 460,
+"th": 271,
+"thumb": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-55_400.jpg",
+"tw": 400,
+"w": 460,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-55.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/src/gov/corbett2023_extracted/p3_x86.png",
+327385,
+1791662847,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-55_ann1": {
+"res": {
+"bytes": 143822,
+"h": 597,
+"scale": 0.9697,
+"src_h": 616,
+"src_w": 1650,
+"w": 1600,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-55_ann1.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/3d/annotated/A1_corbett_fig3_digitised.png",
+827379,
+1791666342,
+1600,
+400,
+false,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-59": {
+"res": {
+"bytes": 361001,
+"h": 462,
+"scale": 1.0,
+"src_h": 462,
+"src_w": 665,
+"th": 278,
+"thumb": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-59_400.jpg",
+"tw": 400,
+"w": 665,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-59.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/src/gov/corbett2023_extracted/p4_x116.png",
+537655,
+1791662847,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-60": {
+"res": {
+"bytes": 181857,
+"h": 406,
+"scale": 1.0,
+"src_h": 406,
+"src_w": 688,
+"th": 236,
+"thumb": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-60_400.jpg",
+"tw": 400,
+"w": 688,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-60.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/src/gov/corbett2023_extracted/p5_x141.png",
+270315,
+1791662847,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-61": {
+"res": {
+"bytes": 67429,
+"h": 367,
+"scale": 1.0,
+"src_h": 367,
+"src_w": 692,
+"th": 212,
+"thumb": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-61_400.jpg",
+"tw": 400,
+"w": 692,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-61.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/src/gov/corbett2023_extracted/p6_x154.png",
+580667,
+1791662847,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-66": {
+"res": {
+"bytes": 162858,
+"h": 510,
+"scale": 1.0,
+"src_h": 510,
+"src_w": 695,
+"th": 294,
+"thumb": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-66_400.jpg",
+"tw": 400,
+"w": 695,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-66.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/03_images/reefs/narrowneck-gold-coast/narrowneck-gold-coast_p3-fig5-shoreline-1999-2008_2008.png",
+174536,
+1791666389,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-69": {
+"res": {
+"bytes": 96225,
+"h": 835,
+"scale": 1.0,
+"src_h": 835,
+"src_w": 1140,
+"th": 293,
+"thumb": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-69_400.jpg",
+"tw": 400,
+"w": 1140,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-69.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/03_images/reefs/narrowneck-gold-coast/narrowneck-gold-coast_p8-fig5-1-sucking-dry_unknown.png",
+925064,
+1791666389,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-71": {
+"res": {
+"bytes": 160857,
+"h": 675,
+"scale": 1.0,
+"src_h": 675,
+"src_w": 1001,
+"th": 270,
+"thumb": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-71_400.jpg",
+"tw": 400,
+"w": 1001,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-71.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/03_images/reefs/narrowneck-gold-coast/narrowneck-gold-coast_p8-figA5-container-schedule_2007.png",
+199746,
+1791666389,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-72": {
+"res": {
+"bytes": 73787,
+"h": 584,
+"scale": 1.0,
+"src_h": 584,
+"src_w": 1362,
+"th": 172,
+"thumb": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-72_400.jpg",
+"tw": 400,
+"w": 1362,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-72.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/03_images/reefs/narrowneck-gold-coast/narrowneck-gold-coast_p8-figA6-peak-placement_2002.png",
+76352,
+1791666389,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-73": {
+"res": {
+"bytes": 81186,
+"h": 764,
+"scale": 1.0,
+"src_h": 764,
+"src_w": 1362,
+"th": 224,
+"thumb": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-73_400.jpg",
+"tw": 400,
+"w": 1362,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-73.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/03_images/reefs/narrowneck-gold-coast/narrowneck-gold-coast_p8-figA7-beach-position_2008.png",
+65975,
+1791666389,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-74": {
+"res": {
+"bytes": 162234,
+"h": 932,
+"scale": 1.0,
+"src_h": 932,
+"src_w": 1209,
+"th": 308,
+"thumb": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-74_400.jpg",
+"tw": 400,
+"w": 1209,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-74.jpg"
+},
+"sig": [
+"/home/user/artificial-reef-survey/03_images/reefs/narrowneck-gold-coast/narrowneck-gold-coast_p8-figA8-monthly-shorelines_2007.png",
+1418135,
+1791666389,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-75": {
+"res": {
+"bytes": 112110,
+"h": 572,
+"scale": 1.0,
+"src_h": 572,
+"src_w": 1210,
+"th": 189,
+"thumb": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-75_400.jpg",
+"tw": 400,
+"w": 1210,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-75.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/3d/annotated/A5_profile_model_vs_sources.png",
+113402,
+1791666343,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-76": {
+"res": {
+"bytes": 187019,
+"h": 880,
+"scale": 1.0,
+"src_h": 880,
+"src_w": 990,
+"th": 356,
+"thumb": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-76_400.jpg",
+"tw": 400,
+"w": 990,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-76.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/3d/annotated/A6_versions_on_seabed.png",
+190962,
+1791666344,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-77": {
+"res": {
+"bytes": 379318,
+"h": 900,
+"scale": 1.0,
+"src_h": 900,
+"src_w": 1400,
+"th": 257,
+"thumb": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-77_400.jpg",
+"tw": 400,
+"w": 1400,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-77.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/3d/preview_oblique.png",
+380772,
+1791666456,
+1600,
+400,
+true,
+400000,
+false,
+false
+]
+},
+"assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-78": {
+"res": {
+"bytes": 304467,
+"h": 900,
+"scale": 1.0,
+"src_h": 900,
+"src_w": 1400,
+"th": 257,
+"thumb": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-78_400.jpg",
+"tw": 400,
+"w": 1400,
+"web": "assets/images/narrowneck-gold-coast/narrowneck-gold-coast-img-78.png"
+},
+"sig": [
+"/home/user/artificial-reef-survey/07_scale/shapes/narrowneck-gold-coast/3d/preview_plan.png",
+309233,
+1791666462,
 1600,
 400,
 true,

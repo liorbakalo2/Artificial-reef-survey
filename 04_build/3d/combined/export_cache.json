@@ -1,6 +1,6 @@
 {
  "boscombe-surf-reef": {
-  "sig": "57a0f8eb8ccff41ef738bf27b10abc6ecb8e5ebb",
+  "sig": "404b26135a156bc9f0a89026ee88013795852546",
   "result": {
    "slug": "boscombe-surf-reef",
    "status": "ok",
@@ -584,6 +584,104 @@
     "reef_meshes": 1,
     "seabed_vertices": 9765,
     "reef_vertices": 47616
+   }
+  }
+ },
+ "narrowneck-gold-coast": {
+  "sig": "7c62ef6fc0147b30b1587663e739eaf469e71376",
+  "result": {
+   "slug": "narrowneck-gold-coast",
+   "status": "ok",
+   "reason": "",
+   "ok": true,
+   "metrics": {
+    "area_m2": 6797.0,
+    "area_ref_m2": 6239.0,
+    "centroid": [
+     0.21796380756215977,
+     287.311681624246
+    ],
+    "centroid_ref": [
+     -0.0007668041892157586,
+     288.19244159739236
+    ],
+    "crest_z_m": -1.9199999570846558,
+    "bbox_alongshore_m": 220.0,
+    "bbox_offshore_m": 230.0,
+    "n_reef_meshes": 1,
+    "n_skirt_ignored": 0
+   },
+   "checks": [
+    {
+     "name": "footprint area vs model.js area of the default version (the mesh covers the 7 traced polygons)",
+     "got": 6797.0,
+     "ref": 6239.0,
+     "err": 0.08943740984132073,
+     "tol": 0.25,
+     "unit": "relative",
+     "ok": true
+    },
+    {
+     "name": "footprint centroid vs polygon centroid",
+     "got": [
+      0.21796380756215977,
+      287.311681624246
+     ],
+     "ref": [
+      -0.0007668041892157586,
+      288.19244159739236
+     ],
+     "err": 0.9075137524103684,
+     "tol": 6.0,
+     "unit": "m",
+     "ok": true
+    },
+    {
+     "name": "crest level vs model.js",
+     "got": -1.9199999570846558,
+     "ref": -1.92,
+     "err": 4.2915344167226976e-08,
+     "tol": 0.2,
+     "unit": "m",
+     "ok": true
+    },
+    {
+     "name": "seabed falls away offshore (+z)",
+     "got": 0.015800176271592112,
+     "ref": 0.0,
+     "err": 0.015800176271592112,
+     "tol": 20,
+     "unit": "deg",
+     "ok": true
+    },
+    {
+     "name": "seabed crosses 0 m MSL on a beach inside the patch (waterline at offshore 0 m; the frame's y = 0 is not the shoreline)",
+     "got": 0.0,
+     "ref": 0.0,
+     "err": 0.0,
+     "tol": 1.5,
+     "unit": "m",
+     "ok": true
+    }
+   ],
+   "area_m2": 6797.0,
+   "area_ref_m2": 6239.0,
+   "area_rel_err": 0.08943740984132073,
+   "crest_z_m": -1.9199999570846558,
+   "crest_ref_m": -1.92,
+   "crest_err_m": 4.2915344167226976e-08,
+   "bbox_m": [
+    220.0,
+    230.0
+   ],
+   "file": "3d/combined/narrowneck-gold-coast.js",
+   "size_kb": 772,
+   "note": {
+    "rotation_deg": 0.0,
+    "skirt_ignored": 0,
+    "reef_meshes": 1,
+    "seabed_vertices": 11413,
+    "reef_vertices": 51051
    }
   }
  }
