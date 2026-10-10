@@ -34,3 +34,6 @@ Read this first. Verdict and reasons: FEASIBILITY.md in this folder.
 
 ## 8. CHECKPOINT 2026-10-10
 Agent finished the whole task (no partial state). Fresh agent: only act if new evidence in section 6 exists.
+
+## Source audit 2026-10-10
+SOURCE_AUDIT_2026-10-10.md in this folder holds the sources-with-how-used, statement check, assumptions (A#), decisions (D#), confidence and consistency tables. FEASIBILITY.md / shape.json now carry the why / checked / assumed text (page_status for hidden reefs). Open mismatches are listed in the audit section 2. If kovalam build_shape_json.py is re-run it overwrites the audit additions in shape.json: re-apply from the audit.

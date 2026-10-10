@@ -45,3 +45,6 @@
 5. Original ABC article page and its other photos https://www.abc.net.au/news/2024-01-28/diy-surf-break-built-by-mates-at-burkitts-reef-bargara/103387450 ; Raised Water Research page; Swellnet comment 540429 (re-read for any location detail). Why: wide shots showing the reshaped zone.
 6. Jackson and Corbett 2007, "Review of Existing Multi-Functional Artificial Reefs" (ICCE / Griffith); SurfingRamps.com.au (Andrew Pitt) page on Burkitts. Why: possible dimensions or a plan.
 7. Wikimedia Commons / Google Maps low-tide photos of Burkitts Reef, Bargara. Why: exposed boulder field.
+
+## Source audit 2026-10-10
+SOURCE_AUDIT_2026-10-10.md in this folder holds the sources-with-how-used, statement check, assumptions (A#), decisions (D#), confidence and consistency tables. FEASIBILITY.md / shape.json now carry the why / checked / assumed text (page_status for hidden reefs). Open mismatches are listed in the audit section 2. If kovalam build_shape_json.py is re-run it overwrites the audit additions in shape.json: re-apply from the audit.

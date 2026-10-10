@@ -1024,6 +1024,13 @@
    "url": "https://www.msq.qld.gov.au/_/media/tmronline/msqinternet/msqfiles/home/tides/tidal-planes/2026-semidiurnal-tidal-planes.pdf",
    "accessed": "not read (URL found by WebSearch 2026-10-10)",
    "supports": "would give HAT/MHWS/MSL/LAT for the nearest port; requested"
+  },
+  {
+   "id": "R-Rendle",
+   "citation": "Rendle, E.J. (2016). The Environmental, Social and Economic Impacts of an Artificial Surf Reef - The UK Experience. PhD thesis, University of Plymouth. Table 2.1 (PDF p.41): Bargara 1997, 300 m3 rock, AUS$10,000.",
+   "url": "not confirmed",
+   "accessed": "2026-10-10 (Lior's PDF in papers/)",
+   "supports": "~300 m3 and AUD 10,000 (corroboration; independence from R3/R4 not established)"
   }
  ],
  "verification": [

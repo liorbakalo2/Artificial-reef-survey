@@ -31,7 +31,14 @@ CICESE or NOAA tide predictions), and as-built crest levels.
 
 ## 4. Existing fallback (not a trace)
 07_scale/reefs/mexico-reef-2026-unnamed.footprint.json: symmetric 160 x 80 m envelope placed 230-310 m offshore by analogy to Palm Beach Reef;
-declared "not a measurement of Xala". If the page shows it, label it "schematic, analogy only, confidence low (no source)".
+declared "not a measurement of Xala". It must NOT be shown on the page (Lior, 2026-10-10: shapes we do not know are not shown; footprint.json has display:false).
 
 ## 5. Status
 Trace: not done (no source). Verify: n/a. 3D: not feasible. Registry: unchanged (2 rows, none new). Re-open when A, B or C arrives.
+
+## Why this reef is hidden on the page, what was checked, what is assumed (source audit 2026-10-10)
+Rule (Lior, 2026-10-10): shapes we do not know are not shown. Xala is hidden (no shape.json; footprint.json display:false).
+- Why: no plan, no survey, no coordinates, no dimensions and no image of the structure (it is submerged) exist in any source we found. The reef's location was withheld until the 16 April 2026 event.
+- Checked, with sources: Raised Water Research post of 2026-03-31 "Unveiling the new reef in Mexico" and its two images (registry img-01, img-02: surfer and drone shot, no scale); The Hollywood Reporter, K. Romeyn, 2025-04-22 ("3,000 truckloads of boulders"); Hospitality Net and the Xala website (location context only); WSCC 2026 speaker bio and RWR Palm Beach / Mortensen pages (designer pedigree, Palm Beach figures); web search 2026-10-10 for Xala dimensions (nothing found); Gemini "~140 x 75 m" (no source). The RWR site was not reachable in the audit (HTTP 403 earlier): the post was not re-fetched.
+- Assumed (ASSUMPTION): the April 2026 reef is the Xala reef (identified by an RWR image caption); the 2025 boulder break and the 2026 reef are one structure; a submerged boulder reef would not show on satellite imagery (an expectation, untested); Palm Beach figures say nothing about Xala's size.
+- Confidence: every geometric element none; identity of the structure medium. Full tables: SOURCE_AUDIT_2026-10-10.md.

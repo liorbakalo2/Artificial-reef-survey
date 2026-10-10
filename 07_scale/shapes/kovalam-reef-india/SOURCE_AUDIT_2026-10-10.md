@@ -70,3 +70,6 @@ Areas, scale, dates agree across shape.json, METHOD, VERIFY, HANDOFF. Mismatches
 
 ## 8. Counts
 Statements checked 17; ok 12; fixed 3; mismatch 2 open (10, volume 2) + 1 rounding; missing 1 (confirmed URL/DOI of Mead & Borrero 2011); assumptions 7; decisions 6.
+
+## 9. Image registry check (03_images/reefs/kovalam-reef-india/)
+16 rows checked by script: every row has citation, image_url, source_page, page_or_figure, image_date, credit, license, retrieved, shows, how_used and file; every file exists on disk. Licences are "not cleared" private copies as recorded. IMAGES.md not rewritten.

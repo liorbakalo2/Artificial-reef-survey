@@ -71,3 +71,6 @@ Volume 4,000 m3 (Mead & Borrero 2011 s.3.1.7) vs 4,800 m3 (card, ASR via RWR; 3,
 
 ## 9. CHECKPOINT 2026-10-10
 Everything above is final for this run. If resumed: do section 6 step 1 when the network allows; no half-finished work.
+
+## Source audit 2026-10-10
+SOURCE_AUDIT_2026-10-10.md in this folder holds the sources-with-how-used, statement check, assumptions (A#), decisions (D#), confidence and consistency tables. FEASIBILITY.md / shape.json now carry the why / checked / assumed text (page_status for hidden reefs). Open mismatches are listed in the audit section 2. If kovalam build_shape_json.py is re-run it overwrites the audit additions in shape.json: re-apply from the audit.

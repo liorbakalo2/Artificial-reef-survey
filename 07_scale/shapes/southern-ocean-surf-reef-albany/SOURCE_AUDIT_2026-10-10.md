@@ -79,3 +79,6 @@ Checked shape.json vs HANDOFF vs METHOD vs VERIFY vs sources.md: areas, extents,
 
 ## 8. Counts
 Statements checked 16 (+9 assumptions, 7 decisions); ok 11; fixed 3 (1, 15, R18 citation); mismatch 3 (11, 14, 15; 15 fixed as wording); missing 1 (primary tide source).
+
+## 9. Image registry check (03_images/reefs/southern-ocean-surf-reef-albany/)
+13 rows checked by script: every row has citation, image_url, source_page, page_or_figure, image_date, credit, license, retrieved, shows, how_used and file; every file exists on disk. Licences are "not cleared" private copies as recorded. IMAGES.md not rewritten.

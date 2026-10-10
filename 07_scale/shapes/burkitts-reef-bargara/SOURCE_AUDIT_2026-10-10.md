@@ -13,6 +13,7 @@ Status key: ok / ok(card) = from the reef card, not re-fetched / fixed / mismatc
 | card R3 | Coastal Management / ICM (Angus Jackson), "Building Artificial Surf Reefs: Worldwide Lessons & Applications", https://www.coastalmanagement.com.au/artificial-surf-reefs, 2026, accessed 2026-09-24 | - | ~300 m3, basalt boulders, excavator at low tide | text | volume (not used in geometry) | ok(card) |
 | card R4 | Raised Water Research, Burkitts Reef spot page, https://raisedwaterresearch.com/spot/artificial-reef/australia/queensland/burkitts-reef/, accessed 2026-09-24 | - | ~12 boulders, ~300 m3, ~AUD 10,000, "~2.5 m tide swing" | text; tide figure has no datum, no stated gauge | context | ok(card); WEAK for tides |
 | card R10 | DivePlanit (2026). From macro to megafauna: shore diving the Bundaberg coast. https://www.diveplanit.com/diving/dive-bundaberg/ | - | dive site depth to ~9 m | site-wide maximum, location on the headland unknown | context only | mismatch, see item 9 |
+| P-Rendle | Rendle, E.J. (2016). The Environmental, Social and Economic Impacts of an Artificial Surf Reef - The UK Experience. PhD thesis, University of Plymouth, Table 2.1 (PDF p.41): "Bargara 1997, Harvey Bay [sic], QLD, Australia, 300 m3, Rock, AUS$ 10,000" | Lior's PDF in papers/, read in this audit | corroborates ~300 m3 and AUD 10,000 in an academic table (probably itself derived from the same web lineage; independence not established) | as published | context only | ok (new; added to shape.json references) |
 | Gemini | 80 x 40 m prose; 4 references = 1 dead ABC URL + 3 homepages (2026-09-25 pass) | - | compared | - | none | ok: not used, not re-fetched |
 | earlier footprint | 07_scale/reefs/burkitts-reef-bargara.footprint.json, 120 x 46 m, 2,480 m2 from Google Maps 2026-09-25, no image saved | - | - | not reproducible | none | ok: rejected, kept as a note |
 
@@ -66,3 +67,6 @@ Areas, scale, dates agree across shape.json, METHOD, VERIFY, HANDOFF (items 4, 5
 
 ## 8. Counts
 Statements checked 13; ok 9; fixed 1; mismatch 2 (+1 fixed); missing 1 (primary tide levels); assumptions 8; decisions 6.
+
+## 9. Image registry check (03_images/reefs/burkitts-reef-bargara/)
+8 rows checked by script: every row has citation, image_url, source_page, page_or_figure, image_date, credit, license, retrieved, shows, how_used and file; every file exists on disk. Licences are "not cleared" private copies as recorded. IMAGES.md not rewritten.

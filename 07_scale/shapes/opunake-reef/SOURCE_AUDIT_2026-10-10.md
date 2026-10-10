@@ -68,3 +68,6 @@ shape.json, FEASIBILITY, METHOD, VERIFY, sources agree except items 11 and 12 (f
 
 ## 8. Counts
 Statements checked 12; ok 10; fixed 2; mismatch 1 open (size 90 x 20 vs 30 x 100; recorded, not a defect of the files); missing 3 documents (TRC 2009, Black et al. 2004, NZ Geographic figure); assumptions 4; decisions 5.
+
+## 9. Image registry check (03_images/reefs/opunake-reef/)
+10 rows checked by script: every row has citation, image_url, source_page, page_or_figure, image_date, credit, license, retrieved, shows, how_used and file; every file exists on disk. Licences are "not cleared" private copies as recorded. IMAGES.md not rewritten.

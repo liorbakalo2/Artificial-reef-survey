@@ -83,7 +83,7 @@
    "card refs R1-R12 (text only)",
    "local Esri imagery z20/mid/wide/current",
    "network probe 2026-10-10 (Esri, LINZ, nzgeo refused)",
-   "papers/ (5 PDFs, text layer, 2026-10-10): Opunake only in text/tables of Mead & Borrero 2011, Rendle 2012 thesis (Table 2.1 + reference list), Blacka et al. 2013 (tables, ref list); no plan figure, no coordinates",
+   "papers/ (5 PDFs, text layer, 2026-10-10): Opunake only in text/tables of Mead & Borrero 2011, Rendle (2016) PhD thesis (Table 2.1 + reference list), Blacka et al. 2013 (tables, ref list); no plan figure, no coordinates",
    "Gemini extracts 06_gemini_compare/ and 07_scale/00_gemini_footprints_extract.*: no usable Opunake plan, numbers self-contradictory and unverified",
    "WebSearch x9, 2026-10-10 (see sources.md): no plan, coordinates, crest depth or survey found"
   ],
@@ -98,6 +98,55 @@
    "url": "https://raisedwaterresearch.com/spot/artificial-reef/new-zealand/north-island/opunake/",
    "accessed": "2026-09-24 (card)",
    "supports": "90 x 20 m, 27 bags"
+  },
+  {
+   "id": "R1",
+   "citation": "Reid, M. and Sumner, B. (2021-12-06). The Kiwi scientist and the failed surf breaks. Newsroom (NZ).",
+   "url": "https://newsroom.co.nz/2021/12/06/the-kiwi-scientist-and-the-failed-surf-breaks/",
+   "accessed": "2026-09-24 (card)",
+   "supports": "90 x 20 m footprint (text only)"
+  },
+  {
+   "id": "R3",
+   "citation": "Moores, A. (Mar-Apr 2006). Artificial surf reefs - coming to a beach near you. New Zealand Geographic 078.",
+   "url": "https://www.nzgeo.com/stories/artificial-surf-reefs-coming-to-a-beach-near-you/",
+   "accessed": "2026-09-24 (card); figure not seen",
+   "supports": "pre-construction design (text)"
+  },
+  {
+   "id": "R9",
+   "citation": "Black, K. / ASR Ltd (2004). Studies for Resource Consent: Opunake Surfing Reef. Report for South Taranaki District Council. Authors, report number, pages not confirmed.",
+   "url": "https://www.researchgate.net/publication/273133845",
+   "accessed": "2026-09-24 (snippet only); NOT HELD",
+   "supports": "likely source of a plan"
+  },
+  {
+   "id": "R-MB",
+   "citation": "Mead, S. and Borrero, J. (2011). Multi-Purpose Reefs - A Decade of Applications. Coasts & Ports 2011, ASR Ltd, s.3.1.5 (PDF p.3-4).",
+   "url": "not confirmed (card gives https://search.informit.org/doi/10.3316/informit.715072832934166)",
+   "accessed": "2026-10-10 (Lior's PDF in papers/)",
+   "supports": "4,800 m3, construction from early 2006, last work May 2008, ~1,400 m3 short"
+  },
+  {
+   "id": "R-WRL",
+   "citation": "Blacka, M.J., Shand, T.D., Carley, J.T. and Mariani, A. (2013). A Review of Artificial Reefs for Coastal Protection in NSW. UNSW WRL Technical Report 2012/08, Tables 4.2 (printed p.65), 4.3 (p.67), 4.4 (p.69).",
+   "url": "https://doi.org/10.4225/53/58e1dc7368c7a",
+   "accessed": "2026-10-10 (Lior's PDF in papers/)",
+   "supports": "30 x 100 m, 1.8-3.0 m, ~300 m offshore at LAT; tide >3.0 m; A$0.93 M (conflicts with 90 x 20 m; neither drawn)"
+  },
+  {
+   "id": "R-Rendle",
+   "citation": "Rendle, E.J. (2016). The Environmental, Social and Economic Impacts of an Artificial Surf Reef - The UK Experience. PhD thesis, University of Plymouth. Table 2.1 p.41 (4,800 m3, AUS$760,000); reference list p.298.",
+   "url": "not confirmed",
+   "accessed": "2026-10-10 (Lior's PDF in papers/)",
+   "supports": "volume, cost; lead to TRC 2009"
+  },
+  {
+   "id": "TRC2009",
+   "citation": "Taranaki Regional Council (2009). Opunake Artificial Reef Monitoring Programme 2005-2009. Technical Report 2009-33.",
+   "url": "not found online (WebSearch 2026-10-10)",
+   "accessed": "NOT HELD",
+   "supports": "would hold monitoring surveys / bag positions"
   }
  ],
  "verified_on": "2026-10-10",
@@ -106,6 +155,85 @@
    "check": "structure visible on held imagery",
    "verdict": "no",
    "evidence": "overlays/search_frame_z20_no_structure.png"
+  }
+ ],
+ "page_status": {
+  "shown_on_page": false,
+  "rule": "Lior 2026-10-10: shapes we do not know are not shown (footprint.json display:false, DO_NOT_DISPLAY; shape status no_source)",
+  "why": "No plan figure, no survey, no coordinates of the reef and the structure is not visible on the satellite image we hold. Only a text size is known and two sources disagree (90 x 20 m vs 30 x 100 m).",
+  "checked": [
+   "card references R1-R12 (text only)",
+   "Esri World Imagery 2025-01-16 z20 (0.115 m/px) and three other frames: reef not visible",
+   "papers/: Mead & Borrero 2011 s.3.1.5, Rendle 2016 Table 2.1 p.41, Blacka et al. 2013 Tables 4.2-4.4: text and tables only, no plan",
+   "WebSearch x10 (2026-10-10): no plan, coordinates, crest datum, survey; TRC Technical Report 2009-33 not found online",
+   "Gemini extracts: self-contradictory, sources inaccessible; not used"
+  ],
+  "assumed": [
+   "A1-A4 below; none feeds a drawing because nothing is drawn"
+  ],
+  "audit": "SOURCE_AUDIT_2026-10-10.md"
+ },
+ "assumptions": [
+  {
+   "id": "A1",
+   "assumption": "Reef lies on the north side of the cove within a few hundred metres of 39.457 S 173.854 E",
+   "effect": "search frame only",
+   "replaced_by": "consent plan, aerial, Navionics"
+  },
+  {
+   "id": "A2",
+   "assumption": "Not seeing the structure on 2025-01-16 is not evidence it is absent (submerged bags, surf, turbid water)",
+   "effect": "none",
+   "replaced_by": "dated clear-water image"
+  },
+  {
+   "id": "A3",
+   "assumption": "90 x 20 m (news lineage) and 30 x 100 m (WRL) may be different things (bag field vs design extent); neither used",
+   "effect": "none",
+   "replaced_by": "TRC 2009 or Black et al. 2004"
+  },
+  {
+   "id": "A4",
+   "assumption": "Built state = unfinished north reef (27 bags, ~1,400 m3 short of design)",
+   "effect": "which state a drawing would show is unknown",
+   "replaced_by": "as-built survey"
+  }
+ ],
+ "decisions": [
+  {
+   "id": "D1",
+   "decision": "Old wedge schematic not traced",
+   "options": "trace / ignore",
+   "who": "agent 2026-10-10",
+   "reason": "analogy placeholder, not evidence"
+  },
+  {
+   "id": "D2",
+   "decision": "status no_source, no outline",
+   "options": "text bbox 90 x 20 m / nothing",
+   "who": "agent 2026-10-10, Lior's rule",
+   "reason": "a bbox would look like a measurement"
+  },
+  {
+   "id": "D3",
+   "decision": "Unlabelled overlays of 2026-10-04 archived",
+   "options": "keep / archive",
+   "who": "agent 2026-10-10",
+   "reason": "origin unrecorded"
+  },
+  {
+   "id": "D4",
+   "decision": "Shape hidden on the page; no 3D",
+   "options": "-",
+   "who": "Lior 2026-10-10",
+   "reason": "unknown shape"
+  },
+  {
+   "id": "D5",
+   "decision": "Gemini not used",
+   "options": "-",
+   "who": "agent",
+   "reason": "unverifiable"
   }
  ]
 }

@@ -232,3 +232,8 @@ What to read for every row: tap the point, read the depth (or drying height), an
 
 ### mount-maunganui-reef (source audit, 2026-10-10) - added lines
 - Citations not confirmed: NIWA HAM2006-133 authors (web search says Bell, R. and Lewis, M.; cover not checked); Moores (2006) NZ Geographic issue 78 date; Scarfe (2008) thesis page numbers (thesis PDF not in the repo; pages quoted from METHOD.md); NZ Herald 2014/2023 and SunLive article authors/dates not re-fetched. If you have the Scarfe thesis PDF, please add it to papers/.
+
+### source audit 2026-10-10 (Albany / Burkitts / Kovalam / Opunake / Mexico shape agent) - added lines
+- Papers/pages (browser): Maritime Safety Queensland 2026 semidiurnal tidal planes, Burnett Heads row (HAT, MHWS, MSL, LAT) https://www.msq.qld.gov.au/_/media/tmronline/msqinternet/msqfiles/home/tides/tidal-planes/2026-semidiurnal-tidal-planes.pdf (Burkitts tide datum; the 2.5 m swing is a single RWR statement).
+- Tides Albany: Bureau of Meteorology or WA Department of Transport tide levels for Albany with datum (the 0.4 m / 1.1 m ranges are from Wikipedia).
+- Confirm URL/DOI: Mead and Borrero (2011) Coasts & Ports 2011 (informit link not confirmed); Rendle (2016) Plymouth PEARL record URL; Black et al. (2004) authors/report number; TRC (2009) Technical Report 2009-33 place and number (Stratford vs Opunake).
