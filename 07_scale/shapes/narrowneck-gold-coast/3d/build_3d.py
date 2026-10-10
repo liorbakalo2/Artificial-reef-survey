@@ -191,7 +191,7 @@ def main():
                     dict(text='S arm crest (design -2.5 AHD)', x=cen(s_loop)[0], y=cen(s_loop)[1], z=round(CREST_DESIGN - A_MSQ, 2)),
                     dict(text='toe: surface meets bed at about -6 to -7 AHD', x=20.0, y=352.0, z=round(-6.5 - A_MSQ, 2))]
     prov = provenance(M, stats)
-    conf = dict(level='medium', reason=('The container field is a georeferenced 2020 photo trace and the crest (-2.2 m AHD, multibeam) and seabed (2017 multibeam, 18 Jul 2018 survey) are measured, but the 2017 multibeam is read from a colour figure (+-0.4 m, placed to +-10 m), '
+    conf = dict(level='medium', reason=('The container field is a georeferenced 2020 photo trace and the crest (-2.2 m AHD, multibeam) and seabed (2017 multibeam, 19 Jul 2018 survey, Vieira da Silva 2021 Fig 3) are measured, but the 2017 multibeam is read from a colour figure (+-0.4 m, placed to +-10 m), '
                                         'no post-renewal plan or survey exists, the toe below about -6 m is not visible, and the crest datum differs by 0.24 m between sources; reef height is known to about +-1 m and volume only as a lower bound.'))
     model = dict(slug='narrowneck-gold-coast', name='Narrowneck Reef, Gold Coast (Queensland, Australia)', built=BUILT,
                  state=('Renewed reef as left in June 2018 (84 containers added around the 2004-revised structure; about 534 containers placed since 1999), shown by the visible container field of 8 Aug 2020. '
