@@ -445,3 +445,15 @@ body.dlg-open { overflow: hidden; }
   html.print-one .site-head, html.print-one .later, html.print-one .site-foot { display: none !important; }
   html.print-one #print-all .detail { break-before: auto; }
 }
+
+/* 2026-10-10: location links, hidden-shape note, sources-disagree table */
+.detail .dloc { margin: 0 0 10px; font-size: .92rem; }
+.loc-lab { color: var(--muted); }
+.loc-link { white-space: nowrap; }
+.loc-none { color: var(--muted); }
+td.loc { white-space: nowrap; }
+.tile-loc { position: relative; z-index: 2; }
+.sc-hidden { border: 1px dashed var(--line); border-radius: 8px; padding: 10px 14px; }
+.sc-nodraw { margin-top: 0; }
+.sc-tr { border-style: solid; }
+.sd-tab td { vertical-align: top; }

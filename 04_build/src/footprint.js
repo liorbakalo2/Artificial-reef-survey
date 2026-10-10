@@ -132,14 +132,16 @@
   }
   function factsHTML(r) {
     var f = fp(r), b = f.bbox_m || {}, cr = f.crest_depth_m || {}, di = f.distance_offshore_m || {};
-    var dimIds = derivIds(r, /length|width|diameter|dimension|footprint|size|span|extent|arm|chord|topolog|shape|plan/i, /depth|offshore|distance|crest|volume|area|height/i);
-    var areaIds = derivIds(r, /area/i);
+    var traced = !!f.outline_source;
+    var tr = '<span class="sc-est sc-tr" title="Measured on the traced outline (shape.json); see Outline source below">traced</span>';
+    var dimIds = traced ? [] : derivIds(r, /length|width|diameter|dimension|footprint|size|span|extent|arm|chord|topolog|shape|plan/i, /depth|offshore|distance|crest|volume|area|height/i);
+    var areaIds = traced ? [] : derivIds(r, /area/i);
     var crestIds = idsIn(cr.ref, r), distIds = idsIn(di.ref, r);
     var est = '<span class="sc-est" title="Not a published figure: derived from our own drawing or an estimate; see How we drew this">derived</span>';
     return '<dl class="sc-facts">' +
-      '<div><dt>Plan box, L × W</dt><dd>' + fmt(b.length_alongshore) + ' × ' + fmt(b.width_crossshore) + ' m' + marks(dimIds, r) +
+      '<div><dt>Plan box, L × W</dt><dd>' + fmt(b.length_alongshore) + ' × ' + fmt(b.width_crossshore) + ' m' + (traced ? ' ' + tr : marks(dimIds, r)) +
         '<small>alongshore × cross-shore' + (b.note ? '; see note' : '') + '</small></dd></div>' +
-      '<div><dt>Footprint area</dt><dd>' + fmt(f.area_m2) + ' m²' + (areaIds.length ? marks(areaIds, r) : ' ' + est) +
+      '<div><dt>Footprint area</dt><dd>' + fmt(f.area_m2) + ' m²' + (traced ? ' ' + tr : areaIds.length ? marks(areaIds, r) : ' ' + est) +
         '<small>≈ ' + pitches(f.area_m2) + ' × a football pitch (105 × 68 m)</small></dd></div>' +
       '<div><dt>Crest depth</dt><dd>' + esc(f.crest_label || '—') + (crestIds.length ? marks(crestIds, r) : (cr.value != null ? ' ' + est : '')) + '</dd></div>' +
       '<div><dt>Distance offshore</dt><dd>' + esc(f.distance_label || '—') + (distIds.length ? marks(distIds, r) : (di.value != null ? ' ' + est : '')) + '</dd></div>' +
@@ -156,7 +158,28 @@
   function howHTML(r) {
     var f = fp(r), o = [];
     var der = f.derivation || [];
-    o.push('<h4>1 · Derivation: every quantity, how we got it, and from where</h4>');
+    var os = f.outline_source;
+    if (os) {
+      var dl = f.docs || {}, lk = [];
+      if (A().safeUrl(os.url) && !/[{}]/.test(os.url)) lk.push(A().extLink(os.url, 'image / figure ↗'));
+      if (A().safeUrl(os.source_page)) lk.push(A().extLink(os.source_page, 'source page ↗'));
+      [['method', 'method'], ['verify', 'verification'], ['sources', 'sources']].forEach(function (k) {
+        if (dl[k[0]]) lk.push('<a href="' + esc(dl[k[0]]) + '" target="_blank" rel="noopener">' + k[1] + ' (md) ↗</a>');
+      });
+      o.push('<h4>0 · Outline source: where the drawn shape comes from</h4><dl class="sc-notes">' +
+        '<dt>Drawn from</dt><dd>' + esc(os.title || os.derived_from) + (os.image_date ? ' (' + esc(os.image_date) + ')' : '') + (os.kind ? ' <span class="muted">· ' + esc(String(os.kind).replace(/_/g, ' ')) + '</span>' : '') +
+          (os.page_or_figure ? '<br><span class="muted">' + esc(os.page_or_figure) + '</span>' : '') + (os.credit ? '<br><span class="muted">Credit: ' + esc(os.credit) + '</span>' : '') + '</dd>' +
+        '<dt>Status</dt><dd>' + esc(f.status || '—') + ' · confidence ' + esc(f.confidence_level || '—') + ' · checked ' + esc(f.verified_on || '—') + '</dd>' +
+        '<dt>Why this confidence</dt><dd>' + linkRefs(f.confidence, r) + '</dd>' +
+        (os.frame ? '<dt>Drawing frame</dt><dd>' + esc(os.frame) + (f.plan_x_flipped ? ' <span class="muted">(drawn with the sea at the top, so x runs right to left)</span>' : '') + '</dd>' : '') +
+        (lk.length ? '<dt>Files</dt><dd>' + lk.join(' · ') + '</dd>' : '') + '</dl>');
+      if ((f.shape_conf_factors || []).length) {
+        o.push('<details class="sc-ver"><summary>Show the ' + f.shape_conf_factors.length + ' confidence factors</summary><ul class="sc-ul">' +
+          f.shape_conf_factors.map(function (x) { return '<li>' + linkRefs(x, r) + '</li>'; }).join('') + '</ul></details>');
+      }
+    }
+    o.push('<h4>1 · ' + (os ? 'Earlier text-based estimate (not the drawing): every quantity, how we got it, and from where' : 'Derivation: every quantity, how we got it, and from where') + '</h4>');
+    if (os && f.text_estimate_area_m2) o.push('<p class="muted">This table comes from the earlier text-derived footprint note (area ' + fmt(f.text_estimate_area_m2) + ' m²). The drawing above is the traced outline and its numbers are in section 0; crest depth and distance offshore still come from the sources listed here.</p>');
     o.push('<div class="sc-tw"><table class="sc-tab sc-deriv"><colgroup><col style="width:15%"><col style="width:11%"><col style="width:34%"><col style="width:13%"><col style="width:27%"></colgroup><thead><tr><th>Quantity</th><th>Value</th><th>Method, and the quote or figure relied on</th><th>Source</th><th>Uncertainty</th></tr></thead><tbody>' +
       der.map(function (d) {
         var src = String(d.source_ref == null ? '' : d.source_ref);
@@ -232,9 +255,21 @@
   }
 
 
+  /* Reefs whose shape we do not know (Lior 2026-10-10): NO drawing, only a plain-text reason, the text-only size facts and the feasibility note. */
+  function hiddenSection(r) {
+    var f = fp(r), d = f.docs || {};
+    return '<div class="sc-detail sc-hidden" data-slug="' + esc(r.slug) + '">' +
+      '<p class="sc-nodraw"><b>Shape not drawn:</b> no plan, survey or clear image of the reef found (see FEASIBILITY).</p>' +
+      '<p><span class="sc-lab">Why</span> ' + linkRefs(f.hidden_reason, r) + '</p>' +
+      (r.size ? '<p><span class="sc-lab">Size facts from text only (no drawing)</span> ' + A().refify(r.size, r, 'link') + '</p>' : '') +
+      (d.feasibility ? '<p class="sc-prov">Details: <a href="' + esc(d.feasibility) + '" target="_blank" rel="noopener">FEASIBILITY.md</a> <span class="muted">(copy of ' + esc(d.feasibility_src) + ')</span></p>' : '') +
+    '</div>';
+  }
+
   /* Detail-dialog section: the same drawing and facts, plus the How-we-drew-this content. */
   function detailSection(r, forPrint) {
     if (!fp(r)) return '';
+    if (fp(r).display === false) return hiddenSection(r);
     return '<div class="sc-detail" data-slug="' + esc(r.slug) + '">' +
       '<div class="sc-badges">' + confBadge(fp(r)) + '</div>' +
       '<div class="sc-drawwrap">' + panelSVG(r, S.scale) + '</div>' +
@@ -242,5 +277,5 @@
       '<div class="sc-how-b">' + howHTML(r) + '</div></div>';
   }
 
-  window.ReefScale = { detailSection: detailSection, panelSVG: panelSVG, panelFrame: panelFrame, PITCH: PITCH };
+  window.ReefScale = { detailSection: detailSection, hiddenSection: hiddenSection, panelSVG: panelSVG, panelFrame: panelFrame, PITCH: PITCH };
 })();

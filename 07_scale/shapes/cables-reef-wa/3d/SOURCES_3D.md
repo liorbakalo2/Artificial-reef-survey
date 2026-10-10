@@ -21,16 +21,16 @@ Run started 2026-10-10 (network blocked all run: only repo files used). Registry
 | file | caption | registered as |
 |---|---|---|
 | annotated/A1_A2_scale_and_contours_read.png | Fig A.2 with the four printed dimensions used for scale (blue / magenta) and the model's RL -2.5 / -2.0 / -1.5 contours (orange) over the drawn ones | annotated_files of cables-reef-wa-img-26 |
-| annotated/A2_centreline_section.png | modelled section through the apex: reef surface, bed, water levels | cables-reef-wa-img-29 |
-| annotated/A3_bed_level_vs_volume.png | bed level fitted to the stated volumes (3,500 / 5,000 / 5,500 m3) | cables-reef-wa-img-30 |
+| annotated/A2_centreline_section.png | modelled section through the apex: reef surface, bed, water levels | cables-reef-wa-img-28 |
+| annotated/A3_bed_level_vs_volume.png | bed level fitted to the stated volumes (3,500 / 5,000 / 5,500 m3) | cables-reef-wa-img-29 |
 | annotated/A4_pitt_sketch_bed_gradient_read.png | Pitt sketch with the contour rows read for the bed gradient and the scale bar | annotated_files of cables-reef-wa-img-07 |
 | ../overlays/cables-reef-wa-img-26_A2_outline_ramp_scale.png | traced outline (red), ramp polygon (green), extension (orange), scale lines | annotated_files of img-26 |
 | ../overlays/cables-reef-wa-img-05_retrace_outer_foot.png | independent re-trace on the RWR copy (assumed scale) | annotated_files of img-05 |
 | ../overlays/cables-reef-wa-img-06_extension_triangle.png | extension triangle | annotated_files of img-06 |
 | ../overlays/cables-reef-wa-img-20_fig7_V_outline_rotated.png | Fig 7 V outline on the rotated figure (north up) | annotated_files of img-20 |
 | ../overlays/cables-reef-wa-img-07_pitt_concept_outline.png | Pitt concept outline | annotated_files of img-07 |
-| ../overlays/cables-reef-wa_versions_compare_m.png | the four outline versions in metres | cables-reef-wa-img-28 |
-| preview_plan.png, preview_oblique.png | screenshots of index.html (own headless Chrome, vendored three.js) | cables-reef-wa-img-31, -32 |
+| ../overlays/cables-reef-wa_versions_compare_m.png | the four outline versions in metres | cables-reef-wa-img-27 |
+| preview_plan.png, preview_oblique.png | screenshots of index.html (own headless Chrome, vendored three.js) | cables-reef-wa-img-30, -31 |
 
 ## Registry results (for_3d_check) written 2026-10-10
 img-26: used (primary, plan + levels). img-05: re-trace, area +4% vs img-26 at the assumed scale. img-06: extension triangle 347 m2, 0.92 m mean fill vs the 320 m3 text. img-07: bed gradient and scale bar read; concept outline differs from the built design. img-20: orientation and the 270 m offshore position; V 122 x 76 m (assumed 100 m grid) agrees with img-26. img-23: same as img-20 (upscale). img-17: oblique, not traceable; ride-length check inconclusive (crest arms 49 / 52 m). img-10: qualitative section, consistent with the modelled centreline section (gentle ramp on the offshore side, steeper inner side), no numbers.

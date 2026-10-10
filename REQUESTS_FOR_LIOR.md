@@ -201,3 +201,9 @@ What to read for every row: tap the point, read the depth (or drying height), an
 - Pratte's J2 position uncertainty: DECIDED BY US 2026-10-10: use +-150 m (noted in the Pratte's HANDOFF for the model agent). Not on your list any more.
 - P1, P2, P3, P5, P8 received (papers/); P6 dropped (not needed); Palm Beach DTM download (C2) answered: nothing to download. Pratte's A4 resolved 2026-10-05 (paper supplied).
 
+
+### cables-reef-wa (3D agent, 2026-10-10) - added lines
+- G (Google Earth Pro): dated clear image of the Cable Station reef V (Leighton / Cottesloe, Perth) + ruler: arm tip to arm tip (model 121 m), apex to tip line (76 m), apex to waterline (about 310 m). Details 07_scale/shapes/cables-reef-wa/3d/REQUESTS_FOR_LIOR.md rows 1.
+- N (Navionics app): depth at the apex (model frame (-11, 314)), inner apex (-12, 265), south tip (61, 248), north tip (-60, 268), 100 m and 300 m west of the apex; note datum. Rows 2-3 of the same file.
+- Decision/paper: datum of the Lyons design 'RL' levels (chart datum vs MSL/AHD; 0.78 m at the crest) - add to E7 (WA Department of Transport): as-built crest level and datum; also the extension size. Papers: Lyons 1992 UWA report, Ranasinghe et al. 2001, Pattiaratchi 2003.
+- Tide table: Fremantle LAT / MSL / HAT vs chart datum and AHD.

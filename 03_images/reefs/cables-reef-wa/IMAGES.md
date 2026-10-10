@@ -711,3 +711,88 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **rights**: Private research copy; reuse rights to be checked before any public release.
 - **display in HTML**: True
 - **added by**: papers intake P3/P8, 2026-10-10
+
+## cables-reef-wa-img-27 - Outline versions of the Cable Station reef compared in metres (own figure)
+
+![cables-reef-wa-img-27](../../../07_scale/shapes/cables-reef-wa/overlays/cables-reef-wa_versions_compare_m.png)
+
+- **file**: `07_scale/shapes/cables-reef-wa/overlays/cables-reef-wa_versions_compare_m.png`
+- **kind**: diagram
+- **shows**: The four outline versions (default design plan + extension, design plan, paper Fig 7 V, Pitt concept) plotted in the canonical frame.
+- **state shown**: design (model)
+- **image date**: 2026-10-10
+- **citation**: Own figure made for this project (cables-reef-wa shape + 3D task, 2026-10-10), derived from the registered sources named in SOURCES_3D.md.
+- **licence**: own work; derived from sources whose reuse rights are not cleared
+- **used for**: plan_trace, cross_check
+- **How used for the model**: Shows how the versions differ in size and shape; the Pitt concept is about 2.4 times the built footprint.
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: cables-reef-wa shape + 3D task, 2026-10-10
+
+## cables-reef-wa-img-28 - Modelled section through the apex of the Cable Station reef (own figure)
+
+![cables-reef-wa-img-28](../../../07_scale/shapes/cables-reef-wa/3d/annotated/A2_centreline_section.png)
+
+- **file**: `07_scale/shapes/cables-reef-wa/3d/annotated/A2_centreline_section.png`
+- **kind**: diagram
+- **shows**: Section along the apex centreline: reef surface (RL -1.0 crest to -3.0 set-out), modelled bed and the water levels.
+- **state shown**: design (model)
+- **image date**: 2026-10-10
+- **citation**: Own figure made for this project (cables-reef-wa shape + 3D task, 2026-10-10), derived from the registered sources named in SOURCES_3D.md.
+- **licence**: own work; derived from sources whose reuse rights are not cleared
+- **used for**: 3d_crest, 3d_height_slopes, 3d_seabed
+- **How used for the model**: Shows the modelled crest depth (1.78 m below MSL under reading A) and the thickness over the bed; a check, not a source.
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: cables-reef-wa shape + 3D task, 2026-10-10
+
+## cables-reef-wa-img-29 - Bed level fitted to the stated rock volume (Cable Station reef) (own figure)
+
+![cables-reef-wa-img-29](../../../07_scale/shapes/cables-reef-wa/3d/annotated/A3_bed_level_vs_volume.png)
+
+- **file**: `07_scale/shapes/cables-reef-wa/3d/annotated/A3_bed_level_vs_volume.png`
+- **kind**: diagram
+- **shows**: Modelled rock volume versus the assumed bed depth, with the stated volumes 3,500 / 5,000 / 5,500 m3 and the bed depth each implies.
+- **state shown**: design (model)
+- **image date**: 2026-10-10
+- **citation**: Own figure made for this project (cables-reef-wa shape + 3D task, 2026-10-10), derived from the registered sources named in SOURCES_3D.md.
+- **licence**: own work; derived from sources whose reuse rights are not cleared
+- **used for**: 3d_seabed, 3d_height_slopes
+- **How used for the model**: Documents the single free parameter of the model (bed level D0 = 3.50 m at y = 270 m).
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: cables-reef-wa shape + 3D task, 2026-10-10
+
+## cables-reef-wa-img-30 - Screenshot of the three.js viewer, plan view (Cable Station reef) (own figure)
+
+![cables-reef-wa-img-30](../../../07_scale/shapes/cables-reef-wa/3d/preview_plan.png)
+
+- **file**: `07_scale/shapes/cables-reef-wa/3d/preview_plan.png`
+- **kind**: diagram
+- **shows**: Plan view of the modelled reef on the modelled seabed with the 10 m grid and scale bars (north = left).
+- **state shown**: design (model)
+- **image date**: 2026-10-10
+- **citation**: Own figure made for this project (cables-reef-wa shape + 3D task, 2026-10-10), derived from the registered sources named in SOURCES_3D.md.
+- **licence**: own work; derived from sources whose reuse rights are not cleared
+- **used for**: camera_match, context
+- **How used for the model**: Preview of the delivered model viewer (index.html) for the page and for camera-match planning.
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: cables-reef-wa shape + 3D task, 2026-10-10
+
+## cables-reef-wa-img-31 - Screenshot of the three.js viewer, oblique view from the sea (Cable Station reef) (own figure)
+
+![cables-reef-wa-img-31](../../../07_scale/shapes/cables-reef-wa/3d/preview_oblique.png)
+
+- **file**: `07_scale/shapes/cables-reef-wa/3d/preview_oblique.png`
+- **kind**: diagram
+- **shows**: Oblique view from the sea of the modelled V-shaped reef under a translucent MSL water surface.
+- **state shown**: design (model)
+- **image date**: 2026-10-10
+- **citation**: Own figure made for this project (cables-reef-wa shape + 3D task, 2026-10-10), derived from the registered sources named in SOURCES_3D.md.
+- **licence**: own work; derived from sources whose reuse rights are not cleared
+- **used for**: camera_match, context
+- **How used for the model**: Preview of the delivered model viewer (index.html).
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: cables-reef-wa shape + 3D task, 2026-10-10

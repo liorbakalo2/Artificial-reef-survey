@@ -1,4 +1,5 @@
 {
+  "display_reason": "No plan, survey or visible structure on the imagery we hold (shape.json status no_source); only the text size (about 90 m x 20 m) is known.",
   "DO_NOT_DISPLAY": true,
   "display": false,
   "status_flag": "SCHEMATIC ANALOGY, NOT THE REEF'S SHAPE. Do not display, trace, overlay or use for any dimension, area or model. No source gives the Opunake plan (checked again 2026-10-10: shape.json status no_source). Kept only as history. Lior's rule 2026-10-10: do not show the shape of reefs we do not know.",

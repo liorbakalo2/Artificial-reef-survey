@@ -45,6 +45,33 @@
     if (!s) return esc(text);
     return '<a href="' + esc(s) + '" target="_blank" rel="noopener noreferrer"' + (cls ? ' class="' + cls + '"' : '') + '>' + esc(text) + '</a>';
   }
+  function noUrlWord(x) { return /personal communication|interview/i.test(String((x && x.type) || '') + ' ' + String((x && x.citation) || '')) ? 'personal communication, unpublished' : 'internal note'; }
+  /* Location link (Lior 2026-10-10: the Map tab is gone, each reef still links to its place). r.location is compiled in compile_data.py:
+     status ok | approximate | none; the coordinates come from shape.json geo, else the card (r.location.source says which). */
+  function locLinks(r, compact) {
+    var L = r.location || {};
+    if (L.status === 'none' || !L.maps_url) return '<span class="loc-none">' + (compact ? 'not published' : 'Location: not published') + '</span>';
+    var ap = L.status === 'approximate';
+    var title = esc((L.lat + ', ' + L.lon) + ' — ' + (L.source || '') + (L.note ? ' — ' + L.note : ''));
+    var a = '<a class="loc-link" href="' + esc(L.maps_url) + '" target="_blank" rel="noopener noreferrer" title="' + title + '">' +
+      (compact ? (ap ? 'Map (approx.) ↗' : 'Map ↗') : (ap ? 'approximate location: open in Google Maps ↗' : 'open in Google Maps ↗')) + '</a>';
+    if (compact) return a;
+    return '<span class="loc-lab">' + (ap ? 'Location (approximate): ' : 'Location: ') + '</span>' + a +
+      ' · <a class="loc-link" href="' + esc(L.satellite_url) + '" target="_blank" rel="noopener noreferrer">satellite view ↗</a>';
+  }
+  function locFact(r) {
+    var L = r.location || {};
+    if (L.status === 'none' || !L.maps_url) return 'not published' + (L.note ? ' (' + esc(L.note) + ')' : '');
+    return esc(L.lat + ', ' + L.lon) + (L.status === 'approximate' ? ' (approximate)' : '') + ' — ' + esc(L.source || '') + (L.note ? '. ' + esc(L.note) : '') + ' ' + locLinks(r, false);
+  }
+  function disagreeBody(r) {
+    var d = r.sources_disagree || [];
+    return '<p class="muted">Where the sources, or a source and the founder, say different things. Both sides are kept, each with its source; nothing is averaged.</p>' +
+      '<div class="sc-tw"><table class="sc-tab sd-tab"><thead><tr><th>Topic</th><th>Card (published sources) says</th><th>Interview says</th><th>Note</th></tr></thead><tbody>' +
+      d.map(function (x) {
+        return '<tr><td>' + esc(x.topic) + '</td><td>' + refify(x.card_says, r, 'link') + '</td><td>' + refify(x.founder_says, r, 'link') + '</td><td>' + refify(x.note, r, 'link') + '</td></tr>';
+      }).join('') + '</tbody></table></div>';
+  }
   function refIds(r) { var o = {}; (r.references || []).forEach(function (x) { o[x.id] = true; }); return o; }
   function refById(r, id) {
     if (!r._refMap) { r._refMap = {}; (r.references || []).forEach(function (x) { r._refMap[x.id] = x; }); }
@@ -189,7 +216,8 @@
     size: function (r) { return (r.size_short || '').toLowerCase(); },
     financed: function (r) { return stripRefs(r.financed_by).toLowerCase(); },
     verdict: function (r) { return (V_BY_KEY[r.verdict] || V_BY_KEY['n-a']).order; },
-    refs: function (r) { return (r.references || []).length; }
+    refs: function (r) { return (r.references || []).length; },
+    loc: function (r) { var L = r.location || {}; return L.status === 'none' ? 2 : L.status === 'approximate' ? 1 : 0; }
   };
   function current() {
     var key = SORTERS[state.sort] || SORTERS.year, dir = state.dir;
@@ -282,6 +310,7 @@
         '<h3><button type="button" class="tile-open" data-open="' + esc(r.slug) + '" aria-describedby="' + descId + '">' + esc(r.name) + '</button></h3>' +
         '<p class="tile-meta">' + flag(r) + esc(r.place_short) + '</p>' +
         '<p class="tile-meta">' + esc(r.year_short) + ' · ' + esc(r.type_short) + '</p>' +
+        '<p class="tile-meta tile-loc">' + locLinks(r, true) + '</p>' +
       '</div>' +
       '<p class="tile-credit" title="' + esc(h ? (h.credit + ' — ' + h.license) : '') + '">' + credit + '</p>' +
     '</article>';
@@ -292,7 +321,7 @@
   var COLS = [
     { k: 'name', t: 'Name' }, { k: 'country', t: 'Country' }, { k: 'year', t: 'Year' }, { k: 'type', t: 'Type' },
     { k: 'size', t: 'Size' }, { k: 'cost', t: 'Cost (~US$)' }, { k: 'financed', t: 'Financed by' },
-    { k: 'verdict', t: 'Verdict' }, { k: 'refs', t: '# refs' }
+    { k: 'loc', t: 'Location' }, { k: 'verdict', t: 'Verdict' }, { k: 'refs', t: '# refs' }
   ];
   function renderTable(list) {
     var head = '<thead><tr>' + COLS.map(function (c) {
@@ -311,6 +340,7 @@
         '<td class="wide">' + esc(cleanShort(r.size_short)) + plainRefs(r.hover_refs.size) + '</td>' +
         '<td class="num">' + cost + '</td>' +
         '<td class="wide">' + esc(short(stripRefs(r.financed_by), 140)) + plainRefs(uniqRefs(r.financed_by)) + '</td>' +
+        '<td class="loc">' + locLinks(r, true) + '</td>' +
         '<td>' + badge(r) + '</td>' +
         '<td class="num">' + (r.references || []).length + '</td>' +
       '</tr>';
@@ -352,9 +382,10 @@
     var rows = [
       ['Place', r.place], ['Country', r.country], ['Year', r.year], ['Type', r.type], ['Purpose', r.purpose],
       ['Size', r.size], ['Cost', r.cost], ['Cost (approx. USD)', r.cost_usd_approx], ['Financed by', r.financed_by],
-      ['Designer', r.designer], ['Contractor', r.contractor], ['Status now', r.status_now]
+      ['Designer', r.designer], ['Contractor', r.contractor], ['Status now', r.status_now], ['Location', { html: locFact(r) }]
     ];
     return '<table class="qf"><tbody>' + rows.filter(function (x) { return x[1] != null && x[1] !== ''; }).map(function (x) {
+      if (x[1] && x[1].html) return '<tr><th scope="row">' + esc(x[0]) + '</th><td>' + x[1].html + '</td></tr>';
       var val = typeof x[1] === 'number' ? 'US$' + x[1].toLocaleString('en-US') : x[1];
       return '<tr><th scope="row">' + esc(x[0]) + '</th><td>' + refify(val, r, 'link') + '</td></tr>';
     }).join('') + '<tr><th scope="row">Verdict</th><td>' + badge(r) + '</td></tr></tbody></table>';
@@ -500,7 +531,7 @@
   function refsHTML(r, idPrefix) {
     return '<ol>' + (r.references || []).map(function (x) {
       return '<li id="' + idPrefix + esc(x.id) + '"><span class="rid">' + esc(x.id) + '</span><span>' +
-        esc(x.citation) + (safeUrl(x.url) ? ' ' + extLink(x.url, 'link ↗') : ' <span class="muted">(internal note — no URL)</span>') +
+        esc(x.citation) + (safeUrl(x.url) ? ' ' + extLink(x.url, 'link ↗') : ' <span class="muted">(' + noUrlWord(x) + ' — no URL)</span>') +
         (safeUrl(x.pdf_url) ? ' ' + extLink(x.pdf_url, 'PDF ↗') : '') +
         (safeUrl(x.also_url) ? ' ' + extLink(x.also_url, 'also read at ↗') : '') +
         (x.origin ? ' <span class="tag tag-gem">' + esc(x.origin) + '</span>' : '') +
@@ -525,6 +556,7 @@
     var nImg = (r.images || []).length, nVid = forPrint ? 0 : (r.videos || []).length, nFig = (r.lior_images || []).length;
     var nRev = (r.reviews || []).length, nRef = (r.references || []).length;
     var hasFp = !!(r.footprint && window.ReefScale);
+    var nDis = (r.sources_disagree || []).length;
     var story = (r.sections || []).filter(function (s) { return s.html_or_text; }).map(function (s) {
       return accHTML(pfx, keyOf(s.title), s.title, paras(s.html_or_text, r),
         { forPrint: forPrint, peek: short(stripRefs(s.html_or_text), 140) });
@@ -535,6 +567,7 @@
       (firstSec ? '<button type="button" data-jump="' + keyOf(firstSec.title) + '">Story</button>' : '') +
       (nRev ? '<button type="button" data-jump="reviews">Reviews <span class="n">' + nRev + '</span></button>' : '') +
       (nImg + nVid + nFig ? '<button type="button" data-jump="' + (nImg ? 'images' : nVid ? 'videos' : 'figures') + '">Media <span class="n">' + (nImg + nVid + nFig) + '</span></button>' : '') +
+      (nDis ? '<button type="button" data-jump="sources-disagree">Disagree <span class="n">' + nDis + '</span></button>' : '') +
       (hasFp ? '<button type="button" data-jump="scale">Footprint</button>' : '') +
       '<button type="button" data-jump="references">Sources <span class="n">' + nRef + '</span></button>' +
       '<button type="button" class="xall" data-expand-all aria-pressed="false">Expand all</button>' +
@@ -542,6 +575,7 @@
     return '<article class="detail">' +
       '<h2 class="dt"' + (forPrint ? '' : ' id="dlg-title"') + '>' + esc(r.name) + '</h2>' +
       '<p class="dplace">' + flag(r) + esc(r.place) + ', ' + esc(r.country) + '</p>' +
+      '<p class="dloc">' + locLinks(r, false) + '</p>' +
       '<div class="dmeta"><span>' + esc(r.type_short) + '</span>' +
         '<span>Card verified ' + esc(r.verified_on || '—') + '</span>' +
         (forPrint ? '' : '<span class="tip">Tap or hover any <span class="ref-demo">R1</span> marker to see its source</span>' +
@@ -550,13 +584,15 @@
       glanceHTML(r) +
       accHTML(pfx, 'quick-facts', 'Quick facts', quickFacts(r), o) +
       story +
+      (nDis ? accHTML(pfx, 'sources-disagree', 'Sources disagree', disagreeBody(r), { forPrint: forPrint, count: nDis, cls: 'acc-sd',
+        peek: 'Published sources vs the 2026-10-08 interview with the founder: both sides kept, each with its source' }) : '') +
       (nRev ? accHTML(pfx, 'reviews', 'Reviews by real people', reviewsBody(r), { forPrint: forPrint, count: nRev, cls: 'acc-rv',
         peek: short(stripRefs((r.reviews[0] || {}).quote_or_summary).replace(/^["“]/, ''), 120) + ' — ' + (r.reviews[0].who || '') }) : '') +
       (nImg ? accHTML(pfx, 'images', 'Images', imagesBody(r), { forPrint: forPrint, count: nImg }) : '') +
       (nVid ? accHTML(pfx, 'videos', 'Videos', videosBody(r), { forPrint: forPrint, count: nVid }) : '') +
       (nFig ? accHTML(pfx, 'figures', 'Lior\'s figures', liorBody(r), { forPrint: forPrint, count: nFig }) : '') +
       (hasFp ? accHTML(pfx, 'scale', 'Footprint & how we drew it', window.ReefScale.detailSection(r, forPrint), { forPrint: forPrint,
-        peek: 'Traced plan drawing, and how we drew it: every number with its source' }) : '') +
+        peek: r.footprint.display ? 'Traced plan drawing, and how we drew it: every number with its source' : 'Shape not drawn: no plan, survey or clear image of the reef found' }) : '') +
       accHTML(pfx, 'references', 'References', '<div class="refs">' + refsHTML(r, forPrint ? pfx + 'ref-' : 'ref-') + '</div>',
         { forPrint: forPrint, count: nRef, peek: 'Every [R#] above, with what each source supports and when it was checked' }) +
     '</article>';
@@ -623,7 +659,7 @@
         (ref.origin ? ' · <span class="tag tag-gem">' + esc(ref.origin) + '</span>' : '') + '</p>' +
       '<div class="rp-actions">' +
         (hasUrl ? '<a class="rp-open" href="' + esc(ref.url) + '" target="_blank" rel="noopener noreferrer">Open source ↗</a>'
-                : '<span class="rp-nourl">(internal note — no URL)</span>') +
+                : '<span class="rp-nourl">(' + noUrlWord(ref) + ' — no URL)</span>') +
         '<button type="button" class="rp-btn" data-pop-list>Show in list</button>' +
         '<button type="button" class="rp-btn" data-pop-copy>Copy citation</button>' +
       '</div>';
@@ -1016,7 +1052,7 @@
   window.ReefApp = {
     REEFS: REEFS, BY_SLUG: BY_SLUG, VERDICT_COLOR: VERDICT_COLOR, V_BY_KEY: V_BY_KEY,
     esc: esc, safeUrl: safeUrl, extLink: extLink, refById: refById, markBtn: markBtn, badge: badge,
-    imgTag: imgTag, short: short, flag: flag, openReef: openReef, closeReef: closeReef, closePop: closePop, setView: setView
+    imgTag: imgTag, refify: refify, short: short, flag: flag, openReef: openReef, closeReef: closeReef, closePop: closePop, setView: setView
   };
 
   // ----------------------------------------------------------------- init
