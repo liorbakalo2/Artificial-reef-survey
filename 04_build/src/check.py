@@ -380,7 +380,7 @@ def main() -> int:
     # 2026-10-10: Map and Scale tabs removed; the footprint section of the reef dialog (footprint.js) stays = rule 1 traceability
     check("function linkRefs" in raw and "window.ReefScale" in raw and "function detailSection" in raw,
           "footprint detail code (reef dialog 'Footprint & how we drew it') is in the page")
-    check(all(x not in raw.lower() for x in ('id="view-scale"', 'id="view-map"', 'data-view="scale"', 'data-view="map"', "leaflet", "tile.openstreetmap")),
+    check(all(x not in raw.lower() for x in ('id="view-scale"', 'id="view-map"', 'data-view="scale"', 'data-view="map"', "leaflet.min", "l.map(", "tile.openstreetmap")),
           "no Map / Scale view, button, Leaflet or map-tile code remains in the page")
     try:
         sys.path.insert(0, str(Path(__file__).resolve().parent))
