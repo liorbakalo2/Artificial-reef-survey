@@ -676,5 +676,166 @@
    "result": "Break position is NW of the tombolo rock about 60-100 m off the swash line; planform check done in shape.json (pending closed for planform). Depth and crest values from the same report are unlocated ranges (see FEASIBILITY.md)."
   },
   "added_by": "papers intake P3/P8, 2026-10-10"
+ },
+ {
+  "id": "kovalam-reef-india-img-17",
+  "file": "03_images/reefs/kovalam-reef-india/kovalam-reef-india_rwr-barrel_unknown-date.jpg",
+  "annotated_files": [],
+  "kind": "photo",
+  "title": "RWR Kovalam surf photo (Kovalam-Barrel.jpg)",
+  "citation": "Raised Water Research (2019). Kovalam artificial reef, spot page, image Kovalam-Barrel.jpg. https://raisedwaterresearch.com/spot/artificial-reef/asia/india/kovalam/ Accessed 2026-10-10.",
+  "image_url": "https://raisedwaterresearch.com/wp-content/uploads/2019/12/Kovalam-Barrel.jpg",
+  "source_page": "https://raisedwaterresearch.com/spot/artificial-reef/asia/india/kovalam/",
+  "page_or_figure": "spot page gallery",
+  "image_date": "unknown (2010-2011 by context)",
+  "credit": "Raised Water Research (photographer not stated)",
+  "license": "not stated",
+  "retrieved": "2026-10-10",
+  "shows": "A surfer in a green barrel on a left-breaking wave at the reef, shot from the beach side; no structure visible.",
+  "structure_visible": false,
+  "state_shown": "as-built (undated, early life)",
+  "used_for": [
+   "context"
+  ],
+  "how_used": "Looked at once (2026-10-10) for any vertical view, scale or structure: none. Surf context only; not used for plan, crest or seabed.",
+  "linked_records": [
+   "07_scale/shapes/kovalam-reef-india/METHOD.md section 6 (network pass 2026-10-10)",
+   "07_scale/shapes/kovalam-reef-india/FEASIBILITY.md"
+  ],
+  "bytes": 45235,
+  "px": [
+   640,
+   428
+  ],
+  "sha256": "57d946a0069a44e6ad7ee6206aa5ca344bc68ef12f66c70e470896c19005a9cf",
+  "rights_note": "Private research copy; reuse rights to be checked before any public release.",
+  "display": true,
+  "for_3d_check": {
+   "pending": false,
+   "what_to_check": "nothing: no structure, no scale",
+   "model_values_affected": []
+  },
+  "added_by": "kovalam network pass, 2026-10-10"
+ },
+ {
+  "id": "kovalam-reef-india-img-18",
+  "file": "03_images/reefs/kovalam-reef-india/kovalam-reef-india_rwr-left_unknown-date.jpg",
+  "annotated_files": [],
+  "kind": "photo",
+  "title": "RWR Kovalam surf photo (Kovalam-Left.jpg)",
+  "citation": "Raised Water Research (2019). Kovalam artificial reef, spot page, image Kovalam-Left.jpg. https://raisedwaterresearch.com/spot/artificial-reef/asia/india/kovalam/ Accessed 2026-10-10.",
+  "image_url": "https://raisedwaterresearch.com/wp-content/uploads/2019/12/Kovalam-Left.jpg",
+  "source_page": "https://raisedwaterresearch.com/spot/artificial-reef/asia/india/kovalam/",
+  "page_or_figure": "spot page gallery",
+  "image_date": "unknown (2010-2011 by context)",
+  "credit": "Raised Water Research (photographer not stated)",
+  "license": "not stated",
+  "retrieved": "2026-10-10",
+  "shows": "Distant left-hander breaking over the reef with a pink buoy; no structure visible.",
+  "structure_visible": false,
+  "state_shown": "as-built (undated, early life)",
+  "used_for": [
+   "context"
+  ],
+  "how_used": "Looked at once (2026-10-10) for any vertical view, scale or structure: none. Surf context only; not used for plan, crest or seabed.",
+  "linked_records": [
+   "07_scale/shapes/kovalam-reef-india/METHOD.md section 6 (network pass 2026-10-10)",
+   "07_scale/shapes/kovalam-reef-india/FEASIBILITY.md"
+  ],
+  "bytes": 25789,
+  "px": [
+   550,
+   300
+  ],
+  "sha256": "d777c668e0c4bed07f550c123ae98692f70e71d17649f928dd76b581d3a1eb77",
+  "rights_note": "Private research copy; reuse rights to be checked before any public release.",
+  "display": true,
+  "for_3d_check": {
+   "pending": false,
+   "what_to_check": "nothing: no structure, no scale",
+   "model_values_affected": []
+  },
+  "added_by": "kovalam network pass, 2026-10-10"
+ },
+ {
+  "id": "kovalam-reef-india-img-19",
+  "file": "03_images/reefs/kovalam-reef-india/kovalam-reef-india_rwr-left2_unknown-date.jpg",
+  "annotated_files": [],
+  "kind": "photo",
+  "title": "RWR Kovalam surf photo (Kovalam-Left2.jpg)",
+  "citation": "Raised Water Research (2019). Kovalam artificial reef, spot page, image Kovalam-Left2.jpg. https://raisedwaterresearch.com/spot/artificial-reef/asia/india/kovalam/ Accessed 2026-10-10.",
+  "image_url": "https://raisedwaterresearch.com/wp-content/uploads/2019/12/Kovalam-Left2.jpg",
+  "source_page": "https://raisedwaterresearch.com/spot/artificial-reef/asia/india/kovalam/",
+  "page_or_figure": "spot page gallery",
+  "image_date": "unknown (2010-2011 by context)",
+  "credit": "Raised Water Research (photographer not stated)",
+  "license": "not stated",
+  "retrieved": "2026-10-10",
+  "shows": "Left-hand wave breaking off the beach with two bathers in the foreground; no structure visible.",
+  "structure_visible": false,
+  "state_shown": "as-built (undated, early life)",
+  "used_for": [
+   "context"
+  ],
+  "how_used": "Looked at once (2026-10-10) for any vertical view, scale or structure: none. Surf context only; not used for plan, crest or seabed.",
+  "linked_records": [
+   "07_scale/shapes/kovalam-reef-india/METHOD.md section 6 (network pass 2026-10-10)",
+   "07_scale/shapes/kovalam-reef-india/FEASIBILITY.md"
+  ],
+  "bytes": 36755,
+  "px": [
+   720,
+   405
+  ],
+  "sha256": "e8256892f4ab738217116a2a360ef14cf34a5a698339fdde2c002f9e7d59e001",
+  "rights_note": "Private research copy; reuse rights to be checked before any public release.",
+  "display": true,
+  "for_3d_check": {
+   "pending": false,
+   "what_to_check": "nothing: no structure, no scale",
+   "model_values_affected": []
+  },
+  "added_by": "kovalam network pass, 2026-10-10"
+ },
+ {
+  "id": "kovalam-reef-india-img-20",
+  "file": "07_scale/shapes/kovalam-reef-india/src/wayback_z17_2011_to_2020_sheet.png",
+  "annotated_files": [],
+  "kind": "satellite",
+  "title": "Esri Wayback z17 contact sheet, Kovalam west of the tombolo rock, 6 releases (2014-02-20 [= capture 2011-02-28], 2014-12-03, 2017-02-27, 2018-09-06, 2019-10-09, 2020-11-18)",
+  "citation": "Esri, Maxar, Earthstar Geographics, and the GIS User Community (2011-2020 captures). World Imagery Wayback releases 10, 23383, 31026, 2168, 11351, 20753, z17. https://livingatlas.arcgis.com/wayback/. Accessed 2026-10-10.",
+  "image_url": "https://wayback.maptiles.arcgis.com/arcgis/rest/services/World_Imagery/WMTS/1.0.0/default028mm/MapServer/tile/{release}/17/{y}/{x} (releases 10, 23383, 31026, 2168, 11351, 20753; tiles x 93560-93562, y 2 rows around 62471)",
+  "source_page": "Esri World Imagery Wayback https://livingatlas.arcgis.com/wayback/",
+  "page_or_figure": "z17 tiles around 8.3872 N 76.9757 E",
+  "image_date": "2011-02-28 (release 10, from earlier agent); other captures dated only by release date (2014-12-03 to 2020-11-18), capture dates not read",
+  "credit": "Esri, Maxar, Earthstar Geographics, and the GIS User Community",
+  "license": "Esri/Maxar imagery terms (not an open licence); private research copy only",
+  "retrieved": "2026-10-10",
+  "shows": "Six 240x240 px z17 crops (1.19 m/px, enlarged 3x) of the bay west of the rock; surf zone and swash visible, no container strips or reef outline in any release.",
+  "structure_visible": false,
+  "state_shown": "as-built to degraded (unresolved)",
+  "used_for": [
+   "context",
+   "not_used"
+  ],
+  "how_used": "Network pass 2026-10-10: scanned all 197 Wayback releases; z19 and z18 tiles are blank (196-byte no-data) for the Kovalam area before 2021, so 1.19 m/px z17 is the finest pre-2021 imagery; the only distinct pre-2014 capture is 2011-02-28. Reef not resolved: no re-trace possible.",
+  "linked_records": [
+   "07_scale/shapes/kovalam-reef-india/METHOD.md section 6 (network pass 2026-10-10)",
+   "07_scale/shapes/kovalam-reef-india/FEASIBILITY.md"
+  ],
+  "bytes": 1371429,
+  "px": [
+   1200,
+   800
+  ],
+  "sha256": "1ecf137845fe62ff34644ba001e1cb820b5946579b1e5edbed55db626fd5fddb",
+  "rights_note": "Private research copy; reuse rights to be checked before any public release.",
+  "display": true,
+  "for_3d_check": {
+   "pending": false,
+   "what_to_check": "checked: no reef visible in any 2011-2020 release",
+   "model_values_affected": []
+  },
+  "added_by": "kovalam network pass, 2026-10-10"
  }
 ]

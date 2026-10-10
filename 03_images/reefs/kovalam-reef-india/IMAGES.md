@@ -435,3 +435,51 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **rights**: Private research copy; reuse rights to be checked before any public release.
 - **display in HTML**: True
 - **added by**: papers intake P3/P8, 2026-10-10
+
+## kovalam-reef-india-img-17 - RWR Kovalam surf photo (Kovalam-Barrel.jpg)
+- **file**: 03_images/reefs/kovalam-reef-india/kovalam-reef-india_rwr-barrel_unknown-date.jpg
+- **citation**: Raised Water Research (2019). Kovalam artificial reef, spot page, image Kovalam-Barrel.jpg. https://raisedwaterresearch.com/spot/artificial-reef/asia/india/kovalam/ Accessed 2026-10-10.
+- **url**: https://raisedwaterresearch.com/wp-content/uploads/2019/12/Kovalam-Barrel.jpg
+- **date**: unknown (2010-2011 by context); retrieved 2026-10-10; licence: not stated
+- **shows**: A surfer in a green barrel on a left-breaking wave at the reef, shot from the beach side; no structure visible.
+- **How used for the model**: Looked at once (2026-10-10) for any vertical view, scale or structure: none. Surf context only; not used for plan, crest or seabed.
+- **3D check pending**: no
+- **size**: 45235 bytes, 640x428 px; sha256 57d946a0069a44e6ad7ee6206aa5ca344bc68ef12f66c70e470896c19005a9cf
+- **display in HTML**: True
+- **added by**: kovalam network pass, 2026-10-10
+
+## kovalam-reef-india-img-18 - RWR Kovalam surf photo (Kovalam-Left.jpg)
+- **file**: 03_images/reefs/kovalam-reef-india/kovalam-reef-india_rwr-left_unknown-date.jpg
+- **citation**: Raised Water Research (2019). Kovalam artificial reef, spot page, image Kovalam-Left.jpg. https://raisedwaterresearch.com/spot/artificial-reef/asia/india/kovalam/ Accessed 2026-10-10.
+- **url**: https://raisedwaterresearch.com/wp-content/uploads/2019/12/Kovalam-Left.jpg
+- **date**: unknown (2010-2011 by context); retrieved 2026-10-10; licence: not stated
+- **shows**: Distant left-hander breaking over the reef with a pink buoy; no structure visible.
+- **How used for the model**: Looked at once (2026-10-10) for any vertical view, scale or structure: none. Surf context only; not used for plan, crest or seabed.
+- **3D check pending**: no
+- **size**: 25789 bytes, 550x300 px; sha256 d777c668e0c4bed07f550c123ae98692f70e71d17649f928dd76b581d3a1eb77
+- **display in HTML**: True
+- **added by**: kovalam network pass, 2026-10-10
+
+## kovalam-reef-india-img-19 - RWR Kovalam surf photo (Kovalam-Left2.jpg)
+- **file**: 03_images/reefs/kovalam-reef-india/kovalam-reef-india_rwr-left2_unknown-date.jpg
+- **citation**: Raised Water Research (2019). Kovalam artificial reef, spot page, image Kovalam-Left2.jpg. https://raisedwaterresearch.com/spot/artificial-reef/asia/india/kovalam/ Accessed 2026-10-10.
+- **url**: https://raisedwaterresearch.com/wp-content/uploads/2019/12/Kovalam-Left2.jpg
+- **date**: unknown (2010-2011 by context); retrieved 2026-10-10; licence: not stated
+- **shows**: Left-hand wave breaking off the beach with two bathers in the foreground; no structure visible.
+- **How used for the model**: Looked at once (2026-10-10) for any vertical view, scale or structure: none. Surf context only; not used for plan, crest or seabed.
+- **3D check pending**: no
+- **size**: 36755 bytes, 720x405 px; sha256 e8256892f4ab738217116a2a360ef14cf34a5a698339fdde2c002f9e7d59e001
+- **display in HTML**: True
+- **added by**: kovalam network pass, 2026-10-10
+
+## kovalam-reef-india-img-20 - Esri Wayback z17 contact sheet, Kovalam west of the tombolo rock, 6 releases (2014-02-20 [= capture 2011-02-28], 2014-12-03, 2017-02-27, 2018-09-06, 2019-10-09, 2020-11-18)
+- **file**: 07_scale/shapes/kovalam-reef-india/src/wayback_z17_2011_to_2020_sheet.png
+- **citation**: Esri, Maxar, Earthstar Geographics, and the GIS User Community (2011-2020 captures). World Imagery Wayback releases 10, 23383, 31026, 2168, 11351, 20753, z17. https://livingatlas.arcgis.com/wayback/. Accessed 2026-10-10.
+- **url**: https://wayback.maptiles.arcgis.com/arcgis/rest/services/World_Imagery/WMTS/1.0.0/default028mm/MapServer/tile/{release}/17/{y}/{x} (releases 10, 23383, 31026, 2168, 11351, 20753; tiles x 93560-93562, y 2 rows around 62471)
+- **date**: 2011-02-28 (release 10, from earlier agent); other captures dated only by release date (2014-12-03 to 2020-11-18), capture dates not read; retrieved 2026-10-10; licence: Esri/Maxar imagery terms (not an open licence); private research copy only
+- **shows**: Six 240x240 px z17 crops (1.19 m/px, enlarged 3x) of the bay west of the rock; surf zone and swash visible, no container strips or reef outline in any release.
+- **How used for the model**: Network pass 2026-10-10: scanned all 197 Wayback releases; z19 and z18 tiles are blank (196-byte no-data) for the Kovalam area before 2021, so 1.19 m/px z17 is the finest pre-2021 imagery; the only distinct pre-2014 capture is 2011-02-28. Reef not resolved: no re-trace possible.
+- **3D check pending**: no
+- **size**: 1371429 bytes, 1200x800 px; sha256 1ecf137845fe62ff34644ba001e1cb820b5946579b1e5edbed55db626fd5fddb
+- **display in HTML**: True
+- **added by**: kovalam network pass, 2026-10-10

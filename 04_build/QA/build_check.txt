@@ -211,7 +211,7 @@ PASS [3D] DOM: leaving the tab frees the viewers (no iframe left)
 PASS [3D] DOM: tabs switch from every view (Table -> 3D models) and the tab re-opens on its model
 PASS [3D] DOM: brand link 'Surf reefs survey' returns to the main page (Gallery)
 PASS [3D] DOM: the gallery's page intro is 2 short lines with an (i)
-FAIL [3D] DOM: no console errors (navigation session)  -> ['NETFAIL net::ERR_BLOCKED_BY_ORB blocked=None id=27282.303', 'NETFAIL net::ERR_BLOCKED_BY_ORB blocked=None id=27282.355']
+FAIL [3D] DOM: no console errors (navigation session)  -> ['NETFAIL net::ERR_BLOCKED_BY_ORB blocked=None id=31075.303 url=https://upload.wikimedia.org/wikipedia/commons/8/86/Opunake_Beach.JPG', 'NETFAIL net::ERR_BLOCKED_BY_ORB blocked=None id=31075.355 url=https://upload.wikimedia.org/wikipedia/commons/8/86/Opunake_Beach.JPG']
 PASS [3D] DOM: 'All (compare)' selects the combined section (hash #view/models3d/all, one section visible)
 PASS [3D] DOM: combined viewer starts in its stage; comparison panel lists every model with its check result
 PASS [3D] DOM: comparison panel: footprint and crest read back from the meshes, all checks pass

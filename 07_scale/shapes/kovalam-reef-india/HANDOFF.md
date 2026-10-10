@@ -74,3 +74,8 @@ Everything above is final for this run. If resumed: do section 6 step 1 when the
 
 ## Source audit 2026-10-10
 SOURCE_AUDIT_2026-10-10.md in this folder holds the sources-with-how-used, statement check, assumptions (A#), decisions (D#), confidence and consistency tables. FEASIBILITY.md / shape.json now carry the why / checked / assumed text (page_status for hidden reefs). Open mismatches are listed in the audit section 2. If kovalam build_shape_json.py is re-run it overwrites the audit additions in shape.json: re-apply from the audit.
+
+## 10. NETWORK PASS 2026-10-10 (fresh agent) - result: nothing better found
+Done from section 7: Esri Wayback (no releases 2010-2013; z19 blank before 2022, z17 1.19 m/px shows no strips 2011-2020), surfingindia.net + Vimeo page (text/video only), RWR gallery (3 new surf photos, img-17 to -19), ASR/CESS report searches (no open copy), Wayback web and ASR site unreachable (proxy), surfer.com 403, Navionics not readable (no Chrome here). New registry rows img-17 to -20 (img-20 = z17 sheet in src/wayback_z17_2011_to_2020_sheet.png). Shape unchanged: LOW, hidden, no 3D. Details METHOD.md section 6, FEASIBILITY.md.
+Still needs Lior (or a session with Chrome): Navionics readings, Google Earth Pro historical imagery Feb 2010-2012, ASR 2010a / CESS report, Vizhinjam tide table; or a retry of web.archive.org / surfer.com from a PC.
+HANDOFF_STOP: nothing else can be done in this folder without those inputs.

@@ -1043,7 +1043,8 @@
   "assumed": [
    "A1-A7 below (sea plane, pinhole camera, H = 60 m default, swash line 2011 = 2010, strips = whole reef)"
   ],
-  "audit": "SOURCE_AUDIT_2026-10-10.md"
+  "audit": "SOURCE_AUDIT_2026-10-10.md",
+  "network_recheck_2026-10-10": "Esri Wayback (all 197 releases, z17-z19), surfingindia.net, Vimeo page, RWR gallery, web searches for ASR/CESS reports: no vertical or scaled image of the reef found; still hidden, confidence LOW. See METHOD.md section 6."
  },
  "assumptions": [
   {

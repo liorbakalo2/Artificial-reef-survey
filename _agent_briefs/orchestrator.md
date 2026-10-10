@@ -155,7 +155,7 @@ All of them are in `REQUESTS_FOR_LIOR.md`:
 | 2026-10-10 | `_agent_briefs/task_source_audit.md` | cards group B (6 other cards) | `05_qa/source_audit/cards_group_B_2026-10-10.md` | DONE: ~250 checked, ~75 fixed; unread SurferToday tags removed (Cables); Burkitts lat sign fixed. Follow-ups for main listed in the audit file (Opunake R4 unread, Albany 6-8 s attribution, Mexico 'unveiled' date, Burkitts/Bunbury coordinates, Kovalam cost check) || 2026-10-10 | card citations + fixes (prompt) | `02_research/reefs/*` | `05_qa/source_audit/cards_citations_2026-10-10.md` | DONE: 174 flagged, ~90 tagged, 11 derived, ~45 labelled; 8 fixes done (coords on 6 cards, Kovalam cost US$1.58 M, Opunake R4 untagged); unsourced leftovers listed in the report. Not on page until next build |
 | 2026-10-10 | Albany 3D with network | `07_scale/shapes/southern-ocean-surf-reef-albany/` | `HANDOFF.md` | RUNNING |
 | 2026-10-10 | Cables imagery verification | `07_scale/shapes/cables-reef-wa/` | `HANDOFF.md` | RUNNING |
-| 2026-10-10 | Kovalam with imagery | `07_scale/shapes/kovalam-reef-india/` | `HANDOFF.md` | RUNNING |
+| 2026-10-10 | Kovalam with imagery | `07_scale/shapes/kovalam-reef-india/` | `HANDOFF.md` | DONE (HANDOFF_STOP): no usable image (Wayback has nothing 2010-13; z17 2011-20 shows no reef); stays hidden, no 3D. Needs Lior: Google Earth Pro 2010-12, Navionics, ASR/CESS report |
 | 2026-10-10 | Opunake with imagery | `07_scale/shapes/opunake-reef/` | `HANDOFF.md` | RUNNING |
 | 2026-10-10 | Burkitts + Mexico with network | their `07_scale/shapes/` folders | `HANDOFF.md` | RUNNING |
 **When an agent finishes:**
