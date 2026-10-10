@@ -172,3 +172,5 @@ Reference entry (assign next free R-number): `{"id":"R-P8","citation":"Blacka, M
   - size: append "Blacka et al. (2013, Table 4.2): rubble mound, North reef 72 m x 170 m, South reef 85 m x 45 m, depth 4.0 m, 110 m (north) and 140 m (south) offshore, crest at MSL [R-P8] - conflicts with the card's 300-400 m offshore (P8 measures to the undisturbed shoreline). Typical tide range given as 6.0 m (card: spring 4.7-4.8 m)."
   - outcome: append "Blacka et al. (2013, p.70): performance 'yet to be determined' (completed 2012); rated 'unknown'; Fig 4.1 shows the reef in June 2012 [R-P8]."
 - **palm-beach-gold-coast, southern-ocean-surf-reef-albany, burkitts-reef-bargara, bunbury-airwave, mexico-reef-2026-unnamed**: nothing in P8.
+
+**Applied 2026-10-10:** borth-coastal-defence-reef, boscombe-surf-reef, mount-maunganui-reef, opunake-reef, prattes-reef-el-segundo. Pending: narrowneck-gold-coast, cables-reef-wa, kovalam-reef-india.
