@@ -71,3 +71,6 @@ Scripts + outputs: verify_scripts\corbett_scale\ (step1a_bar.py bar ticks; step1
 - Excluded alternative: a 1.4x larger design (crest loops 85-90 m) would need an alongshore crest width of 160 m, contradicting the paper's 120 m, the Fig 2 bar-derived 119 m, the Fig 5a 100 m grid (98 m) and the 113 m alongshore extent of the traced 2020 arms.
 - Corbett Fig 3 (pre-works multibeam, 20 m bar = 105 px of 1100): visible containers are 17-20 m long at that bar -> internally consistent.
 VERDICT: no scale conflict. Use bar-calibrated Corbett Fig 2 for Option 2 (0.5155 m/px), chain registration placement tolerance stays +-15 m (translation), scale +-3 %.
+
+## RESUME NOTE (2026-10-10, new fresh agent; previous run cut off by usage limit after STEP 1)
+Folder audit vs checkpoint/HANDOFF: shape.json still "traced" (consistent, unedited); registry has 53 rows, no Corbett row; no new overlays. Partial work of the cut-off run = verify_scripts\corbett_scale\step2_*.py (4 exploratory scripts, Windows paths, NO outputs, no checkpoint of results) -> DISCARDED as unverified; step 2 is redone from scratch below. Step 1 files (step1a-e, c3_*.json, corbett_loops*.json) are complete and consistent with the STEP 1 DONE section: kept. src\gov\corbett2023_extracted\* complete (text + 12 crops), not yet registered.
