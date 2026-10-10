@@ -105,6 +105,15 @@ Wikipedia's summary states the reef "had very little effect on the surfing condi
 - No new reference number was needed — the source is the same live article already covered by [R7].
 - Origin: via Gemini survey, verified 2026-09-25 (Gemini AI's independent pass over the same project surfaced this reviewer; Claude independently re-fetched and confirmed the quote at the source before merging).
 
+## Additions 2026-10-10 (from Mead & Borrero 2011 and Blacka et al. 2013)
+
+- **size**: Mead & Borrero (2011, p.3) give 1,350 m3, the smallest MPR ever built, placed very close to shore [R18] (card 1,400-1,600 m3: sources disagree slightly, both kept). Blacka et al. (2013, Table 4.2; A.11): 64 m x 29 m V, depth 3.0 m (MLLW), 50 m from the undisturbed shoreline; Phase 1 design 110 bags of 3.0 x 2.1 x 1.2 m (~12.7 t, 80-90% fill), crest 1.8 m below MLLW; after Phase 2 (+90 bags, +80% volume) apex 0.9 m below MLLW; crest then dropped 1.5 m in a year; seabed scoured to ~4 m depth [R19].
+- **cost**: Mead & Borrero (2011, p.3): US$300,000 to build (Phase 1 budget only) and removal in 2010 cost more than twice that [R18]. Blacka et al. (2013, p.117-119): build US$550,000 ($300,000 + $250,000); removal US$551,000 (stage 1 budget $285,000; stage 2 $266,000 two years later); 142.5 containers removed, 1 left visible, 42.5 torn or buried [R19]. SOURCES DISAGREE on the build total (US$300,000 Phase 1 only vs US$550,000 total) and the removal total (more than US$600,000 vs US$551,000); all kept.
+- **as_built_vs_design**: SOURCES DISAGREE on the Phase 2 date: Blacka et al. (2013, p.117) date the 90-bag extension in 2000 [R19]; the card has spring 2001 [R1][R7]. To be resolved against Borrero & Nelsen (2003). Blacka Table A.11 also: after Phase 2 apex 0.9 m below MLLW and the crest then dropped 1.5 m in a year [R19].
+- **year**: Phase 2 dated 2000 in Blacka et al. (2013, p.117) [R19] vs spring 2001 above: sources disagree.
+- **gap: No single authoritative engineering drawing reconc**: [2026-10-10 update, not resolved: Blacka et al. 2013 Table A.11 give Phase 1 design crest 1.8 m below MLLW and apex 0.9 m below MLLW after Phase 2 [R19], consistent with the -0.9 m figure but not with ~2.4 m]
+- **gap: Bag weight also disputed 2x**: [2026-10-10 update, not resolved: Blacka et al. 2013 give ~12.7 t per bag (3.0 x 2.1 x 1.2 m, 80-90% fill) [R19], a third value]
+
 ## References
 
 R1. Wikipedia contributors (updated; accessed 2026-09-24). "Chevron Reef." *Wikipedia*. https://en.wikipedia.org/wiki/Chevron_Reef — accessed 2026-09-24 — supports: build years, location/coordinates, cost figures ($300k Chevron + $200k Coastal Conservancy), permit history, "first in US, second in world" claim, removal timing, Nelsen budget quote.
@@ -140,3 +149,7 @@ R15. Lior's notes, 01_source_notes/pptx_goldcoast_swells_people_photos.md — su
 R16. 02_research/00_master_list.md — supports: seed facts and seed URLs for this dossier, and the framing of Pratte's Reef alongside Narrowneck/Cables/Mount Reef in the project's overall reef survey.
 
 R17. EcoShape (n.d.; accessed 2026-09-24). "Artificial Reefs — Example Cases." https://www.ecoshape.org/en/knowledge-articles/artificial-reefs/example-cases/ — accessed 2026-09-24 — supports: Narrowneck (Gold Coast) reef's marine-life colonization (macro-algae, pelagic fish, benthos), its popularity for local recreational (spear-)fishing, diving and snorkeling, and its documented vulnerability to vessel/anchor damage; also confirms the ~50-container post-construction addition over the following decade.
+
+R18. Mead, S.T. and Borrero, J.C. (2011). Multi-Purpose Reefs - A Decade of Applications. Proc. 20th Australasian Coastal and Ocean Engineering Conference (Coasts and Ports 2011), ASR Ltd. https://search.informit.org/doi/10.3316/informit.715072832934166 (Lior's copy: papers/). https://search.informit.org/doi/10.3316/informit.715072832934166 - accessed 2026-10-10 - supports: volume 1,350 m3 (smallest MPR built, close to shore); US$300,000 build; removal 2010 cost more than twice that (p.3)
+
+R19. Blacka, M.J., Shand, T.D., Carley, J.T. and Mariani, A. (2013). A Review of Artificial Reefs for Coastal Protection in NSW. WRL Technical Report 2012/08, UNSW Water Research Laboratory, for NSW Office of Environment and Heritage. https://doi.org/10.4225/53/58e1dc7368c7a (P8 report page = PDF page - 12). https://doi.org/10.4225/53/58e1dc7368c7a - accessed 2026-10-10 - supports: Table 4.2 and Appendix A.11 (p.115-119): 64 x 29 m V, depth 3.0 m MLLW, 50 m from undisturbed shoreline; bags and crest depths; build US$550,000, removal US$551,000 (p.117-119); Phase 2 dated 2000 (p.117)

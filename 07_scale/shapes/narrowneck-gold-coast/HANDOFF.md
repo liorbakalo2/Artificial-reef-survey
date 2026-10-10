@@ -31,7 +31,7 @@ Source ids: s1..s12 are in sources.md; img-NN are registry ids (03_images\reefs\
 | plan-shape TRACE | done, shape.json status "traced" | 2026-10-06 | MEDIUM: both arms resolve into individual 20 m containers on georeferenced 2020 imagery (edges +-1 m; confirmed on a second tile set to 0.2 m and by the Navionics shoal loops to ~20 m), arm length within 10 % of the design drawing; but the deeper toe (below ~6 m) is not visible, 3 channel containers are faint, and which renewal option was built is unverified |
 | VERIFY | done 2026-10-10, status "verified with issues" (see top section) | 2026-10-10 | medium: visible field is a lower bound; no post-renewal survey |
 | 3D model | DONE 2026-10-10 (3d\; see the STAGE 2 DONE block at the top) | 2026-10-10 | MEDIUM: crest and bed measured (multibeam read from a colour picture, +-0.4 m / +-10 m), no post-renewal survey, toe invisible, datum 0.24 m |
-| image registry | 53 rows (img-45..53 added today); check_registry.py PASSED | 2026-10-06 | 7 rows still pending for the 3D agent (section 5) |
+| image registry | 78 rows; check_registry.py passes for Narrowneck | 2026-10-10 | all 3D checks closed (pending 0); img-75..78 = 3D figures |
 | page (04_build) | not touched by this task | - | the page needs shape.json, overlays\ and the registry |
 
 ## 2. KEY DECISIONS AND WHY
@@ -105,7 +105,7 @@ Added by verification (2026-10-10): verify_scripts\ = design_outline_2004.py/.js
 3. Identity of the three channel containers; the 2004 weir containers are not visible.
 4. Crest datum: measured -2.2 m AHD = -1.44 LAT (MSQ 0.760) or -1.2 LAT (ICM 1.00 rule); target -2.5 AHD = -1.74 LAT (MSQ) or -1.5 LAT (ICM): carry +-0.25 m; ask the City for the offset used in the 2018 survey (REPORT 3 remark ii).
 5. Navionics "0.9" spot depth (obstruction symbol, suffix unclear, datum unstated): ask Lior to read it in the app at -27.9866, 153.4341 (Navionics app: label, depth units, datum). It is 0.5 m shallower than the measured crest, probably an older state (2001-2012: ~1.0 m below LAT).
-6. Registry rows still pending for the 3D agent: img-01 and img-04 (crest labels/datum, seabed), img-14 (stack height), img-24 (crest), img-31 (seabed/crest), img-50 and img-51 (Navionics crest/seabed). All other planform checks are written (pending false for 02, 03, 05, 08, 09, 10, 23, 26, 27, 36, 43).
+6. (CLOSED 2026-10-10, results in images.json for_3d_check.result) Registry rows that were pending for the 3D agent: img-01 and img-04 (crest labels/datum, seabed), img-14 (stack height), img-24 (crest), img-31 (seabed/crest), img-50 and img-51 (Navionics crest/seabed). All other planform checks are written (pending false for 02, 03, 05, 08, 09, 10, 23, 26, 27, 36, 43).
 7. Black & Mead (2001) JCR SI 29 pp.115-130 not opened (paywalled): crest "-0.67 m AHD" is known only via Vieira da Silva 2021.
 8. Licences: Esri imagery, Garmin charts and the ICCE/Shore & Beach figures are private research copies; reuse rights to be checked before any public release (every registry row says so).
 9. Fig 13 vs Fig 7 are not equally stretched (E-W ratio 1.10, N-S 1.22 between the two drawings): the design drawings are not metric to better than ~10 %.

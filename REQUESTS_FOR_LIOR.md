@@ -42,7 +42,7 @@ exact coordinates live in the per-topic files linked below; this page is the sin
 | Bunbury | 07_scale\shapes\bunbury-airwave\3d\REQUESTS_FOR_LIOR.md | Google Earth A1-A4; Navionics B1-B11 |
 | Palm Beach | 07_scale\shapes\palm-beach-gold-coast\3d\REQUESTS_FOR_LIOR.md | Navionics A1-A7; Google Earth B1-B4 |
 | Mount Maunganui | 07_scale\shapes\mount-maunganui-reef\3d\REQUESTS_FOR_LIOR.md | Google Earth 2008-2010 (item 4); Navionics (item 5) |
-| Narrowneck | (no file yet - from the trace) | Navionics app label "0.9" at -27.9866, 153.4341 (older crest state?) |
+| Narrowneck | 07_scale/shapes/narrowneck-gold-coast/3d/REQUESTS_FOR_LIOR.md | Navionics app label "0.9" at -27.9866, 153.4341 (older crest state?); depth at 4 points on a beach-to-reef line (y 50-200 m: nearshore bed is assumed in the 3D model); Google Earth ruler waterline-to-reef |
 | Borth | 07_scale\shapes\borth-coastal-defence-reef\3d\REQUESTS_FOR_LIOR.md (written 2026-10-07) | Navionics app rows 1-3 (symbol at the rock; spot depths at y 400-600 m; datum points); Google Earth rows 4-5 (lowest-tide image; depth readout); tide table row 6 (HAT, Z0); drawing check row 7 (oval length 38 vs 46 m) |
 
 ## 5. Decisions

@@ -83,6 +83,15 @@ All found via a YouTube search for "Borth reef coastal defence" [R12]; titles on
 - "Snorkelling Borth Reefs" — https://www.youtube.com/watch?v=8HA7rbBqRwc
 - "Stormy day at Borth" (19 Oct 2014) — https://www.youtube.com/watch?v=YqjMnbZS2Vw
 
+## Additions 2026-10-10 (from Mead & Borrero 2011 and Blacka et al. 2013)
+
+- **size**: SOURCES DISAGREE on distance offshore: contractor c.400 m [R1], local/heritage c.300 m [R2][R3], but Blacka et al. (2013, Table 4.2 p.66) give 110 m (north reef) and 140 m (south reef), probably measured to the undisturbed shoreline [R14]. Blacka also gives two reefs of rubble mound: north reef 72 m (longshore) x 170 m (cross-shore), south reef 85 m x 45 m (max dims), depth 4.0 m, crest at MSL [R14]. Typical tide range 6.0 m in Blacka Table 4.3 (p.68; term not defined) vs the card's spring range 4.7-4.8 m [R11]; both kept.
+- **outcome**: Blacka et al. (2013, p.70): performance 'yet to be determined' (completed 2012); protection and surfing rated 'unknown (insufficient monitoring)' (Table 4.1); Fig 4.1 (p.72) shows the reef in June 2012 [R14].
+- **year**: Blacka et al. (2013, p.70) also state completion in 2012 [R14].
+- **gap: reef crest depth / freeboard**: [partly filled 2026-10-10: Blacka et al. 2013 Table 4.2 p.66 give crest at MSL and depth 4.0 m, datum and design-vs-built not stated [R14]]
+- **gap: reef footprint width and volume in m3**: [partly filled 2026-10-10: footprint dimensions per Blacka Table 4.2 (north 72 x 170 m, south 85 x 45 m) [R14]; volume still missing]
+- **new gap**: Borrero & Mead (2010) Borth surfing assessment for Ceredigion Council: request/locate [R15]
+
 ## References
 
 R1. Mark Hansford, New Civil Engineer (2011-09-15). "Borth's Big Dig." https://www.newcivilengineer.com/archive/borths-big-dig-15-09-2011/ — accessed 2026-09-24 — supports: designer/contractor identities, cost figures, tender details, construction methods (causeway, shingle reuse), material tonnages, reef location/distance offshore, construction schedule, named quotes (Llwyd, Johnson, Jones).
@@ -110,3 +119,7 @@ R11. Tide-Forecast.com, Aberystwyth tide data. https://www.tide-forecast.com/loc
 R12. YouTube search results listing for "Borth reef coastal defence." https://www.youtube.com/results?search_query=Borth+reef+coastal+defence — accessed 2026-09-24 — supports: video titles and IDs listed under Video leads (titles only; content not reviewed).
 
 R13. Project internal discovery notes (not Lior's own notes — no 01_source_notes file was found to mention Borth or Wallog; this session confirmed their absence by direct search of 01_source_notes/*.md). 02_research/discovery_media.md and 02_research/discovery_surfers.md (prior agents' research-discovery passes within this same project) — supports: flagging of the unreachable Magic Seaweed forum thread as a lead only, not used as a factual source.
+
+R14. Blacka, M.J., Shand, T.D., Carley, J.T. and Mariani, A. (2013). A Review of Artificial Reefs for Coastal Protection in NSW. WRL Technical Report 2012/08, UNSW Water Research Laboratory, for NSW Office of Environment and Heritage. https://doi.org/10.4225/53/58e1dc7368c7a (P8 report page = PDF page - 12). https://doi.org/10.4225/53/58e1dc7368c7a - accessed 2026-10-10 - supports: reef dimensions (north 72 x 170 m, south 85 x 45 m), depth 4.0 m, offshore 110/140 m, crest at MSL, tide range 6.0 m (Table 4.2, 4.3, p.66-68); performance 'yet to be determined' and 'unknown' ratings (p.70, Table 4.1); Fig 4.1 June 2012 (p.72)
+
+R15. Borrero, J.C. and Mead, S.T. (2010). Borth Reef: Surfing Assessment Study. Report for Ceredigion Council, September 2010. (Not seen; cited in Mead & Borrero 2011, p.6, refs [2].)  - accessed 2026-10-10 - supports: existence of a surfing assessment; lessons on small structures and unit orientation

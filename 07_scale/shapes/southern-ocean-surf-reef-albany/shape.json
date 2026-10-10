@@ -1,7 +1,7 @@
 {
  "slug": "southern-ocean-surf-reef-albany",
  "name": "Southern Ocean Surf Reef (\"Midds Reef\"), Middleton Beach, Albany WA",
- "status": "traced",
+ "status": "verified",
  "updated": "2026-10-10",
  "confidence": {
   "level": "high",
@@ -1111,5 +1111,49 @@
  ],
  "default_outline": "design_bluecoast",
  "versions_info": "Two outlines of the one reef. Default: the Bluecoast final-design outline (13,100 m2), because per the project rule a design drawing of the built version outranks a photo trace and no measured as-built survey is available; its size and shape come from the scale-barred plan, its position from the satellite fit. Toggle: the reef as visible on an Esri satellite image of 20 Jan 2026 (10,900 m2), the as-built check; it lies inside the design outline, and the dark patch fades offshore where the water deepens. Both agree on length (about 160 m) and crest orientation (about 280 deg true).",
- "outline_versions_chosen": "default design_bluecoast; toggle sat_2026"
+ "outline_versions_chosen": "default design_bluecoast; toggle sat_2026",
+ "verified_on": "2026-10-10",
+ "overlay_match": "good (sat2026: follows visible dark edge within about 1.5-4 m on the landward sides, soft +-5-7 m offshore edge); good (design plan: outermost contour within about 2 m)",
+ "verification": [
+  {
+   "check": "1 overlays viewed and re-rendered from shape.json",
+   "verdict": "good",
+   "evidence": "Re-rendered both pixel polygons from shape.json with overlay.py render and viewed the trace overlays. Satellite outline follows the dark wedge incl. the foam patch; the objective green<30 mask lies 99 % inside it (IoU 0.69, difference = soft edge). Design outline follows the outermost contour."
+  },
+  {
+   "check": "2 design version / state drawn",
+   "verdict": "final design = built version; as-built image agrees",
+   "evidence": "City page quotes the same dimensions for the built reef as the Bluecoast final design (165 m, up to 110 m, -1.0 m AHD, 62,800 t = about 34,000 m3). Satellite wedge matches the plan in shape and orientation (free fit rotation -3 deg, IoU 0.84). Later change: 18 rocks moved March 2026 (card R11), after the image; a note only. No extension/removal known."
+  },
+  {
+   "check": "3 scale",
+   "verdict": "ok",
+   "evidence": "sat: georeferenced 0.4891 m/px (sidecar, centre px checked with pix2ll). Design: bar ticks 493.5/569.5/645.5 px = 1.52 px/m (3 %). Area recomputed three ways: px*mpp2, shapely on lat/lon polygon (13,104.3 / 10,918.7 vs 13,104.4 / 10,918.2), and shape.json. One vertex converted by hand: px (397,418) -> (-1.53, 70.76) m. geom.py selftest 334/334 PASS. make-canonical was not used (own explicit rotation, checked by hand)."
+  },
+  {
+   "check": "4 dimensions vs text",
+   "verdict": "agree within 10 % (length), +6/+10 % (width)",
+   "evidence": "length along crest 157.2 (sat, -4.7 %) / 164.6 (design, -0.2 %) vs 165 m; width across crest 116.7 / 121.2 vs 'up to 110 m'. 140 m offshore cannot be reproduced: reference undefined (71 m from dry-sand edge, about 150 m from vegetation edge). The 110 m and 140 m arrows on the design figure are not to scale with its bar (69 m and 117 m measured)."
+  },
+  {
+   "check": "5 provenance",
+   "verdict": "complete",
+   "evidence": "every source has url, figure, date, credit, licence, registry id (sources.md). Registry text for img-10 says volume 54,000 m3; the table reads 34,000 m3 (corrected in the registry how_used note)."
+  },
+  {
+   "check": "6 Gemini",
+   "verdict": "unverifiable (network blocked)",
+   "evidence": "Gemini's three source titles carry no URL; its 'Post-Construction Monitoring (2022)' predates the 2024-25 build, so it cannot be right. Its area 13,500 m2 is within 3 % of our design outline; its '160-190 deg' orientation is unsupported. Not used."
+  },
+  {
+   "check": "7 confidence",
+   "verdict": "high (planform), area -30 %/+20 % edge uncertainty",
+   "evidence": "rubric: structure visible on geo-referenced imagery and length within 10 %. Weakened by: single date, soft offshore edge, no measured survey, design position from fit."
+  },
+  {
+   "check": "8 independence",
+   "verdict": "limitation",
+   "evidence": "traced and verified by the same agent in one run (fresh-eye re-render and recomputation done, but not a different person); a second look at the east edge on another dated image would raise the certainty."
+  }
+ ]
 }

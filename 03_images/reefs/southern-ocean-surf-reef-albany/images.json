@@ -102,10 +102,11 @@
   "used_for": [
    "context"
   ],
-  "how_used": "Page illustration of the construction state. No scale in the file, so not traced; the berm shape is consistent with the ~165 m footprint.",
+  "how_used": "Page illustration of the construction state. No scale in the file, so not traced; the berm shape is consistent with the ~165 m footprint. Context only, not traced (METHOD.md 2c).",
   "linked_records": [
    "02_research/reefs/southern-ocean-surf-reef-albany.json images[2]",
-   "05_qa/reef/southern-ocean-surf-reef-albany_media_recheck.json images[2]"
+   "05_qa/reef/southern-ocean-surf-reef-albany_media_recheck.json images[2]",
+   "07_scale/shapes/southern-ocean-surf-reef-albany/METHOD.md 2c"
   ],
   "bytes": 1506635,
   "px": [
@@ -116,12 +117,13 @@
   "rights_note": "Private research copy; reuse rights to be checked before any public release.",
   "display": true,
   "for_3d_check": {
-   "pending": true,
+   "pending": false,
    "what_to_check": "Planform and length: if the barge size is known (jack-up barge, tug) the berm outline could be scaled and compared with the design crest length 110 m @ -2 m AHD and the ~165 m footprint; also the berm's curvature",
    "model_values_affected": [
     "planform",
     "volume"
-   ]
+   ],
+   "result": "Viewed: near-vertical drone view of barges over the partly built berm, no known-length scale reference: not traceable. Qualitative only."
   },
   "added_by": "image-registry backfill, 2026-10-06"
  },
@@ -183,12 +185,14 @@
   "structure_visible": true,
   "state_shown": "under construction (May 2025)",
   "used_for": [
-   "context"
+   "context",
+   "cross_check"
   ],
-  "how_used": "Page illustration of the construction state; oblique view with no scale, so not traced. The berm shadow is visible, so it could support a planform check.",
+  "how_used": "Page illustration of the construction state; oblique view with no scale, so not traced. The berm shadow is visible, so it could support a planform check. Context for the planform, not traced (METHOD.md 2c).",
   "linked_records": [
    "02_research/reefs/southern-ocean-surf-reef-albany.json images (card image)",
-   "05_qa/reef/southern-ocean-surf-reef-albany_media_recheck.json"
+   "05_qa/reef/southern-ocean-surf-reef-albany_media_recheck.json",
+   "07_scale/shapes/southern-ocean-surf-reef-albany/METHOD.md 2c"
   ],
   "bytes": 27060,
   "px": [
@@ -199,12 +203,13 @@
   "rights_note": "Private research copy; reuse rights to be checked before any public release.",
   "display": true,
   "for_3d_check": {
-   "pending": true,
+   "pending": false,
    "what_to_check": "Planform: the berm shadow outline vs the design crest length 110 m @ -2 m AHD and the ~165 m footprint, orientation 270-305 deg N, ~140 m offshore",
    "model_values_affected": [
     "planform",
     "position"
-   ]
+   ],
+   "result": "Viewed: oblique aerial, no scale, berm only partly built (May 2025): not traceable. Qualitative only: elongated dark berm tapering seaward, consistent with the wedge planform. No depth value."
   },
   "added_by": "image-registry backfill, 2026-10-06"
  },
@@ -384,17 +389,21 @@
   "credit": "City of Albany / Bluecoast Consulting Engineers",
   "license": "City of Albany (local government); no licence stated - link/research copy only, NOT cleared",
   "retrieved": "2026-10-04",
-  "shows": "Left: Bluecoast design table (surfing direction left-hander, volume 54,000 m3 (2017 bathymetry), alongshore position 350 m north of the Big4 Middleton Beach Caravan Park, cross-shore 140 m from the landward toe, crest length 110 m @ -2 m AHD, crest level -1.00 m AHD, crest orientation curved 270-305 deg N, 60-degree peel angle, rides up to 100 m / 12 s, surfable ~41% of the year). Right: plan diagram of the ASR design over an aerial with the 110 m crest, 140 m offshore and 350 m alongshore labels, surfing and take-off areas.",
+  "shows": "Left: Bluecoast design table (surfing direction left-hander, volume 34,000 m3 (2017 bathymetry), alongshore position 350 m north of the Big4 Middleton Beach Caravan Park, cross-shore 140 m from the landward toe, crest length 110 m @ -2 m AHD, crest level -1.00 m AHD, crest orientation curved 270-305 deg N, 60-degree peel angle, rides up to 100 m / 12 s, surfable ~41% of the year). Right: plan diagram of the ASR design over an aerial with the 110 m crest, 140 m offshore and 350 m alongshore labels, surfing and take-off areas.",
   "structure_visible": true,
   "state_shown": "design (Bluecoast final design, before construction)",
   "used_for": [
    "cross_check",
-   "scale"
+   "scale",
+   "plan_trace",
+   "3d_crest",
+   "context"
   ],
-  "how_used": "Source of the design parameters in the card (crest length 110 m, offshore 140 m, crest -1.0 m AHD, orientation 270-305 deg N, 54,000 m3). The plan diagram carries a 0.05/0.1 km scale bar but the shape was not traced (no sources.md / shape.json for Albany yet); the as-built outline must be traced on esri_current_2026-01-20_z18.png.",
+  "how_used": "Source of the design parameters in the card (crest length 110 m, offshore 140 m, crest -1.0 m AHD, orientation 270-305 deg N, 54,000 m3). The plan diagram carries a 0.05/0.1 km scale bar but the shape was not traced (no sources.md / shape.json for Albany yet); the as-built outline must be traced on esri_current_2026-01-20_z18.png. Values read into METHOD.md step 1/3 and shape.json dimensions_check (source id design_table). Correction: volume is 34,000 m3, not 54,000 m3.",
   "linked_records": [
    "02_research/reefs/southern-ocean-surf-reef-albany.json images[5]",
-   "05_qa/reef/southern-ocean-surf-reef-albany_media_recheck.json images[5]"
+   "05_qa/reef/southern-ocean-surf-reef-albany_media_recheck.json images[5]",
+   "07_scale/shapes/southern-ocean-surf-reef-albany/sources.md design_table"
   ],
   "bytes": 102447,
   "px": [
@@ -405,21 +414,25 @@
   "rights_note": "Private research copy; reuse rights to be checked before any public release.",
   "display": true,
   "for_3d_check": {
-   "pending": true,
+   "pending": false,
    "what_to_check": "Crest -1.0 m AHD vs the as-built crest; 110 m crest length and 140 m offshore vs the dark berm outline on the 2026-01-20 Esri image; volume 54,000 m3",
    "model_values_affected": [
     "crest_z",
     "planform",
     "volume",
     "position"
-   ]
+   ],
+   "result": "Table read again on the image: volume 34,000 m3 (NOT 54,000 m3 as an earlier text said), crest level -1.00 m AHD, crest length 110 m @ -2 m AHD, 140 m from landward toe, orientation curved 270N-305N. Volume consistent with 62,800 t / 1.85 t/m3. No as-built crest value found to compare with."
   },
   "added_by": "image-registry backfill, 2026-10-06"
  },
  {
   "id": "southern-ocean-surf-reef-albany-img-11",
   "file": "07_scale/shapes/southern-ocean-surf-reef-albany/src/rwr_bluecoast_design_diagram.png",
-  "annotated_files": [],
+  "annotated_files": [
+   "07_scale/shapes/southern-ocean-surf-reef-albany/overlays/design_diagram_trace.png",
+   "07_scale/shapes/southern-ocean-surf-reef-albany/overlays/canonical_versions_m.png"
+  ],
   "kind": "design_drawing",
   "title": "Southern-Ocean-Surf-Reef-Design-by-Bluecoast.png: Bluecoast plan diagram (RWR copy; scale bar 0.05 / 0.1 km)",
   "citation": "Bluecoast Consulting Engineers (n.d.), via Raised Water Research (2025). Southern Ocean Surf Reef Design by Bluecoast [plan diagram] on: Midds Reef [spot page]. https://raisedwaterresearch.com/spot/artificial-reef/australia/western-australia/albany-artificial-surf-reef/. Image file https://raisedwaterresearch.com/wp-content/uploads/2019/12/Souther-Ocean-Surf-Reef-Design-by-Bluecoast.png (file name misspelled 'Souther'). Accessed 2026-10-04 (sha256 re-verified 2026-10-06).",
@@ -435,11 +448,14 @@
   "state_shown": "design (Bluecoast final design)",
   "used_for": [
    "cross_check",
-   "scale"
+   "scale",
+   "plan_trace"
   ],
-  "how_used": "Higher-resolution version of the plan diagram in design.jpg: a candidate for tracing the design planform with its scale bar; not traced yet (no shape.json for Albany).",
+  "how_used": "Higher-resolution version of the plan diagram in design.jpg: a candidate for tracing the design planform with its scale bar; not traced yet (no shape.json for Albany). TRACED 2026-10-10: planform -> shape.json source design_plan / default outline design_bluecoast (METHOD.md 2b).",
   "linked_records": [
-   "07_scale/shapes/southern-ocean-surf-reef-albany/src/design.jpg"
+   "07_scale/shapes/southern-ocean-surf-reef-albany/src/design.jpg",
+   "07_scale/shapes/southern-ocean-surf-reef-albany/sources.md design_plan",
+   "07_scale/shapes/southern-ocean-surf-reef-albany/shape.json outline design_bluecoast"
   ],
   "bytes": 996956,
   "px": [
@@ -450,20 +466,23 @@
   "rights_note": "Private research copy; reuse rights to be checked before any public release.",
   "display": true,
   "for_3d_check": {
-   "pending": true,
+   "pending": false,
    "what_to_check": "Trace the design planform and contours using the scale bar and compare with the as-built dark berm on the 2026-01-20 Esri image and with crest -1.0 m AHD",
    "model_values_affected": [
     "planform",
     "crest_z",
     "seabed"
-   ]
+   ],
+   "result": "Outermost design contour traced (25 vertices); scale bar 1.52 px/m, north up (crest line 278 deg; free fit -3 deg); positioned on the satellite by translation (IoU 0.81). Area 13,104 m2, along-crest length 164.6 m (text 165 m). Faint seabed contours east of the reef carry no labels: no depth read."
   },
   "added_by": "image-registry backfill, 2026-10-06"
  },
  {
   "id": "southern-ocean-surf-reef-albany-img-12",
   "file": "07_scale/shapes/southern-ocean-surf-reef-albany/src/esri_wayback13192_2025-01-16_z18.png",
-  "annotated_files": [],
+  "annotated_files": [
+   "07_scale/shapes/southern-ocean-surf-reef-albany/overlays/before_after_2025-01-16_vs_2026-01-20.png"
+  ],
   "kind": "satellite",
   "title": "Esri Wayback release 13192, Middleton Beach, z18, r=250 m (2025-01-16, before construction)",
   "citation": "Esri, Maxar, Earthstar Geographics, and the GIS User Community (2025). World Imagery Wayback release 13192, image captured 2025-01-16. Esri World Imagery tile service, https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer, via Esri Wayback https://livingatlas.arcgis.com/wayback/. Accessed 2026-10-04.",
@@ -478,11 +497,13 @@
   "structure_visible": false,
   "state_shown": "pre-construction (2025-01-16)",
   "used_for": [
-   "context"
+   "context",
+   "cross_check"
   ],
-  "how_used": "Pre-construction baseline of the site (no reef): comparison with the 2026 frame isolates the reef. Not traced.",
+  "how_used": "Pre-construction baseline of the site (no reef): comparison with the 2026 frame isolates the reef. Not traced. Pre-construction control for the planform trace (VERIFY.md check 1).",
   "linked_records": [
-   "07_scale/shapes/southern-ocean-surf-reef-albany/src/esri_wayback13192_2025-01-16_z18.png.geo.json"
+   "07_scale/shapes/southern-ocean-surf-reef-albany/src/esri_wayback13192_2025-01-16_z18.png.geo.json",
+   "07_scale/shapes/southern-ocean-surf-reef-albany/VERIFY.md"
   ],
   "bytes": 1616075,
   "px": [
@@ -493,18 +514,23 @@
   "rights_note": "Private research copy; reuse rights to be checked before any public release.",
   "display": true,
   "for_3d_check": {
-   "pending": true,
+   "pending": false,
    "what_to_check": "Seabed/sand-bar pattern before construction vs the design bathymetry (2017) and the berm position",
    "model_values_affected": [
     "seabed"
-   ]
+   ],
+   "result": "Before/after: inside the traced polygon mean green 137 (2025) vs 129 offshore = no structure; 57 vs 68 in 2026. Confirms the dark wedge is the new reef. No depth information extractable from the RGB image."
   },
   "added_by": "image-registry backfill, 2026-10-06"
  },
  {
   "id": "southern-ocean-surf-reef-albany-img-13",
   "file": "07_scale/shapes/southern-ocean-surf-reef-albany/src/esri_current_2026-01-20_z18.png",
-  "annotated_files": [],
+  "annotated_files": [
+   "07_scale/shapes/southern-ocean-surf-reef-albany/overlays/sat2026-01-20_trace.png",
+   "07_scale/shapes/southern-ocean-surf-reef-albany/overlays/shoreline_fit.png",
+   "07_scale/shapes/southern-ocean-surf-reef-albany/overlays/before_after_2025-01-16_vs_2026-01-20.png"
+  ],
   "kind": "satellite",
   "title": "Esri World Imagery current, Middleton Beach, z18, r=250 m (2026-01-20)",
   "citation": "Esri, Maxar, Earthstar Geographics, and the GIS User Community (2026). World Imagery (current layer), image captured 2026-01-20. Esri World Imagery tile service, https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer. Accessed 2026-10-04.",
@@ -519,11 +545,16 @@
   "structure_visible": true,
   "state_shown": "as-built, in service (2026-01-20)",
   "used_for": [
-   "context"
+   "context",
+   "plan_trace",
+   "scale",
+   "cross_check"
   ],
-  "how_used": "Best satellite view of the as-built reef (visible dark berm + breaking wave). The planform has not been traced yet (no shape.json); this is the primary candidate image for the trace and for the crest length / 140 m offshore check.",
+  "how_used": "Best satellite view of the as-built reef (visible dark berm + breaking wave). The planform has not been traced yet (no shape.json); this is the primary candidate image for the trace and for the crest length / 140 m offshore check. TRACED 2026-10-10: source sat2026 (primary as-built visible outline), outline version sat_2026 (METHOD.md 2a).",
   "linked_records": [
-   "07_scale/shapes/southern-ocean-surf-reef-albany/src/esri_current_2026-01-20_z18.png.geo.json"
+   "07_scale/shapes/southern-ocean-surf-reef-albany/src/esri_current_2026-01-20_z18.png.geo.json",
+   "07_scale/shapes/southern-ocean-surf-reef-albany/sources.md sat2026",
+   "07_scale/shapes/southern-ocean-surf-reef-albany/shape.json outline sat_2026"
   ],
   "bytes": 1559141,
   "px": [
@@ -534,13 +565,14 @@
   "rights_note": "Private research copy; reuse rights to be checked before any public release.",
   "display": true,
   "for_3d_check": {
-   "pending": true,
+   "pending": false,
    "what_to_check": "Trace the dark berm (length vs 110 m crest @ -2 m AHD, 165 m footprint; distance offshore vs 140 m; orientation vs 270-305 deg N) and set shape.json/3D from it",
    "model_values_affected": [
     "planform",
     "position",
     "volume"
-   ]
+   ],
+   "result": "Traced (20 vertices): area 10,918 m2; along-crest length 157 m (text 165 m, -4.7 %), across 117 m (text up to 110 m); crest edge bearing 281.5 deg (design 270-305). Nearest edge 71 m from the dry-sand beach-face line (about 150 m from the vegetation edge; text 140 m from landward toe, reference undefined). No depth information in the image."
   },
   "added_by": "image-registry backfill, 2026-10-06"
  }

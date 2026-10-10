@@ -15,3 +15,12 @@ Frame = shape.json canonical (x alongshore bearing 356.2, y offshore bearing 86.
 
 ## CHECKPOINT 1 (2026-10-10) - model built
 Files: prep_multibeam.py, nn_lib.py, build_3d.py (model.js 0.6 MB, docs.js), index.html (adapted from the Borth viewer: version selector + (i), datum-rule switch, other-outline overlays, photo match), make_previews.py (serves a copy with the vendored three.js; the sandbox cannot reach the CDN). Volumes (mound envelope, m3): photo 13.5k, Option 2 20.9k, 2004 13.8k, 2011 zone 6.9k. Next: annotated images, registry, METHODS_3D.md, docs.js rebuild, HANDOFF/STATUS/REQUESTS.
+
+## CHECKPOINT 2 (2026-10-10) - documentation, registry, hand-over
+- annotated/: A1 (Corbett Fig 3 digitised: bar ticks, colour-bar fit, registration, derived bed and relief), A2 (Navionics labels used / not used), A3 (Vieira Fig 3 reading), A4 (Jackson Fig 2 contour labels), A5 (profile: model vs sources), A6 (five versions on the model seabed). Previews: preview_oblique.png, preview_plan.png, preview_methods_panel.png (made by make_previews.py with the vendored three.js, own headless Chrome, random port, fresh profile).
+- Registry (03_images/reefs/narrowneck-gold-coast): pending rows closed (img-01, 04, 14, 24, 31, 50, 51, 55 and img-69 from the papers intake); new rows img-75 (A5), img-76 (A6), img-77 (preview_oblique), img-78 (preview_plan); lines appended to NEW_IMAGES_LOG.md; check_registry.py: Narrowneck passes.
+- img-69 (Blacka et al. 2013 Fig 5.1, surfer standing on the crest in a wave trough): qualitatively consistent with a crest 1.2-1.7 m below LAT; no value read.
+- Navionics y-positions of the seaward labels corrected for the 3.8 deg frame rotation (7 -> y 402, 8 -> 411, 9 -> 474, 10 -> 514 m, +-20 m).
+- Bugs fixed on the way: seabed blend used the array bounds instead of the valid map area (a -5 m dip at y 200 m); viewer AHD read-out under the papers' datum rule.
+- Smoke test (own Chrome): all five versions load, datum switch, other-outline overlay, (i) pop-ups, no console errors.
+- Done. Hand-over: HANDOFF.md top block; 3d/MAIN_TYPED_TEXTS.json.
