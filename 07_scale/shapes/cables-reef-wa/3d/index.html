@@ -89,7 +89,8 @@ const $ = id => document.getElementById(id);
 const D2R = Math.PI / 180;
 const OFFA = M.datum.rl_minus_msl_A;                 // scene Y = z_RL - 0.78 (datum reading A)
 let READ = 'A';                                      // datum reading A (RL = chart datum, MSL = RL + 0.78) or B (RL = MSL)
-const rlOff = () => (READ === 'A' ? OFFA : 0);       // z_RL - z_MSL
+const surveyVer = () => { const v = M.versions.find(q => q.id === state.ver); return !!(v && v.kind === 'survey_surface'); };   // surveyed versions are in AHD (= MSL), independent of the RL reading
+const rlOff = () => ((READ === 'A' || surveyVer()) ? OFFA : 0);       // z_RL - z_MSL
 const wlY = () => state.wl - (OFFA - rlOff());       // scene Y of the water plane (state.wl is relative to MSL)
 const ZODN = OFFA;                                   // RL = scene Y + OFFA
 const FR = M.frame, BX = FR.bearing_x_deg * D2R, BY = FR.bearing_y_deg * D2R;
@@ -187,8 +188,8 @@ function setVersion(id) {
   state.ver = id; const v = verObj();
   if (reefMesh) world.remove(reefMesh); if (outlineLine) world.remove(outlineLine);
   if (!reefCache[id]) reefCache[id] = buildReef(v);
-  reefMesh = reefCache[id].mesh; outlineLine = reefCache[id].line; if (reefMesh) world.add(reefMesh); world.add(outlineLine); contourG.visible = !!v.grid && state.show.reef;
-  $('ver').value = id; applyToggles(); updateInfoText(); writeHash();
+  reefMesh = reefCache[id].mesh; outlineLine = reefCache[id].line; if (reefMesh) world.add(reefMesh); world.add(outlineLine); contourG.visible = !!v.grid && v.kind !== 'survey_surface' && state.show.reef;
+  $('ver').value = id; applyToggles(); updateInfoText(); setWater(state.wl); writeHash();
 }
 
 // ---------------------------------------------------------------------------------------------- labels (HTML overlay)
@@ -224,9 +225,9 @@ const northG = new THREE.Group(); world.add(northG);
   northG.add(new THREE.ArrowHelper(new THREE.Vector3(nx_, 0, ny_).normalize(), new THREE.Vector3(o[0], 0.2, o[1]), 40, 0xff6644, 9, 6));
   addLabel('N', () => m2s(o[0] + nx_ * 48, o[1] + ny_ * 48, wlz()), 'water', 'north');
 })();
-// (the shore line is 235-310 m east of the reef and outside the modelled window)
+// (the 0 m AHD shore line is about 255-265 m ENE of the reef centre and outside the modelled window)
 addLabel('Open sea (west)', () => m2s(0, 405, wlz() + 1), 'water', 'misc');
-addLabel('Shore: 235-310 m to the east (not modelled)', () => m2s(0, 195, wlz() + 1), 'dim', 'misc');
+addLabel('0 m AHD shore line about 255-265 m east (not modelled)', () => m2s(0, 195, wlz() + 1), 'dim', 'misc');
 M.roles.north && addLabel(M.roles.north.label, () => m2s(M.roles.north.centroid[0], M.roles.north.centroid[1] + 20, 5), 'reef', 'reef');
 M.roles.south && addLabel(M.roles.south.label, () => m2s(M.roles.south.centroid[0], M.roles.south.centroid[1] + 14, 5), 'brk', 'reef');
 (M.crest_labels || []).forEach(c => addLabel(c.text, () => m2s(c.x, c.y, c.z + 0.2 * state.ve), 'reef dim', 'crest'));
@@ -255,7 +256,7 @@ function updateLabels(w, h) {
 
 // ---------------------------------------------------------------------------------------------- toggles, VE, water level
 function applyToggles() {
-  water.visible = state.show.water; seabedMesh.visible = state.show.seabed; if (reefMesh) reefMesh.visible = state.show.reef; contourG.visible = !!verObj().grid && state.show.reef;
+  water.visible = state.show.water; seabedMesh.visible = state.show.seabed; if (reefMesh) reefMesh.visible = state.show.reef; contourG.visible = !!verObj().grid && verObj().kind !== 'survey_surface' && state.show.reef;
   gridG.visible = state.show.grid; barG.visible = state.show.grid; northG.visible = true; if (outlineLine) outlineLine.visible = state.show.outline;
 }
 function setWater(z) { state.wl = z; const y = wlY(); water.position.y = y; gridG.position.y = y; barG.position.y = y; northG.position.y = y; refreshWL(); writeHash(); }
@@ -337,7 +338,7 @@ const SRCN = M.source_names || {};
 $('info').onclick = () => {
   const rows = M.versions.map(v => `<tr><td><b>${v.name}</b>${v.id === M.default_version ? ' (default)' : ''}</td><td>${v.date}</td><td>${v.source_ids.map(i => SRCN[i] || i).join('; ')}</td><td>${v.area_m2.toLocaleString()} m²</td><td>${v.volume_m3 ? v.volume_m3.toLocaleString() + ' m³' : 'n/a'}</td><td>${v.level}</td></tr>`).join('');
   $('modalc').innerHTML = `<h2>Outline versions</h2><p>${M.versions_info}</p><table><tr><th>Name</th><th>Date</th><th>Source</th><th>Footprint</th><th>Volume (model)</th><th>Edge = </th></tr>${rows}</table>
-  <p class="small">Volumes: rock above the modelled bed, fitted to the stated 5,500 m³ for the default (Blacka 2013). Version ids for the URL hash: ${M.versions.map(v => v.id).join(', ')}.</p>`;
+  <p class="small">Volumes: rock above the measured pre-construction bed (DoT WA 1998 soundings). Design versions: idealised design surface (not fitted to any stated volume); surveyed versions: rock thickness interpolated from the DoT soundings (±1,000 m³). Stated volumes: 5,500 (Blacka 2013), 5,000 (Rendle 2011, Mead and Borrero 2011), 3,500 (Wikipedia). Version ids for the URL hash: ${M.versions.map(v => v.id).join(', ')}.</p>`;
   $('modal').style.display = 'flex';
 };
 $('mclose').onclick = () => $('modal').style.display = 'none'; $('modal').onclick = e => { if (e.target === $('modal')) $('modal').style.display = 'none'; };
@@ -345,7 +346,7 @@ $('mclose').onclick = () => $('modal').style.display = 'none'; $('modal').onclic
 // ---------------------------------------------------------------------------------------------- header: confidence and state
 const C = M.confidence_3d; $('conf').innerHTML = `<span class="badge b-${C.level}">3D confidence: ${C.level.toUpperCase()}</span> <span class="small">${C.reason.split('. ')[0]}.</span>`; $('conf').title = C.reason;
 $('state').textContent = M.state; $('state').title = M.state;
-$('cap').innerHTML = `<b>${M.name}</b><br>z = 0 at MSL (reading A: z_MSL = RL − 0.78). Design drawing, not a survey. Not for navigation.`;
+$('cap').innerHTML = `<b>${M.name}</b><br>z = 0 at MSL (reading A: z_MSL = RL − 0.78). Default = DoT WA soundings (Nov 1999) on the georeferenced design footprint; design versions are drawings. Not for navigation.`;
 
 // ---------------------------------------------------------------------------------------------- sources tab
 (function mkSources() {

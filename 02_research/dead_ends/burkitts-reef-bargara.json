@@ -1,0 +1,85 @@
+{
+  "slug": "burkitts-reef-bargara",
+  "entries": [
+    {
+      "what": "Jackson and Corbett (2007) 'Review of Existing Multi-Functional Artificial Reefs', Coasts and Ports 2007 (for Burkitts dimensions or plan)",
+      "kind": "paper",
+      "where": "ICCE / Griffith / International Coastal Management copies; Coastal Restoration Trust of NZ copy https://ref.coastalrestorationtrust.org.nz/site/assets/files/7954/2007_cp-review_mfar.pdf",
+      "checked": "2026-09-24",
+      "by": "agent: Burkitts card research (cloud/PC); lead found by 2026-10-10 web search",
+      "result": "other: access blocked, not read",
+      "detail": "Card gap: the paper could not be fetched directly (access blocked), so it is not read. A 2026-10-10 web search found a PDF on the Coastal Restoration Trust of NZ reference site, but the container network was blocked at that time, so the PDF was not opened. Not in papers/. Unknown whether it holds any Burkitts plan; it may only repeat the ~300 m3 / A$10,000 facts.",
+      "might_work": "Retry fetching the Coastal Restoration Trust PDF now that the network is Full; else Lior: P10 / W9"
+    },
+    {
+      "what": "Swellnet forum thread 'An actual functioning man-made reef. Burkitts Reef, Bargara' (Dicky Roberts); Swellnet comment thread 540429 (truebluebasher)",
+      "kind": "web page",
+      "where": "https://www.swellnet.com/forums/surfing-reef-designs/577692 ; https://www.swellnet.com (comment 540429)",
+      "checked": "2026-09-25",
+      "by": "agent: Burkitts card research and verification re-check (WebFetch / built-in browser)",
+      "result": "bot check (not bypassed)",
+      "detail": "The 577692 thread returned HTTP 403 on re-fetch (card R9), so the dossier uses only its title. The comment thread behind R8 gave ECONNRESET twice to WebFetch and was read only through the built-in browser; it covers the 1982 proposal, ~300 m3 and ~12 boulders, A$10,000 and the before/after surf-days stats, but it does NOT contain the '2.5 m tide swing' (that figure is R4 only). No location detail for the reshaped zone.",
+      "might_work": "Lior: W7 (re-read in a browser for any location detail of the moved boulders)"
+    },
+    {
+      "what": "X (Twitter) post by @abcsport about the ABC story, 2024-01-27",
+      "kind": "web page",
+      "where": "https://x.com/abcsport/status/1751370066221051992",
+      "checked": "2026-09-24",
+      "by": "agent: Burkitts card research (dossier audit 2026-10-10)",
+      "result": "paywalled",
+      "detail": "HTTP 402 on re-fetch; not read. The quote is kept in the card only because the same facts are independently corroborated by R14 (Instagram) and the ABC article itself. Nothing about location or dimensions.",
+      "might_work": ""
+    },
+    {
+      "what": "Gemini's Burkitts sources: ABC News 'burkitts-reef-bundaberg-greg-redgard-surfing/103328224' (2024-01-21), The Inertia 2021, Swellnet 2022, Tracks Magazine 2023, and the '80 m x 40 m' size",
+      "kind": "web page",
+      "where": "https://www.abc.net.au/news/2024-01-21/burkitts-reef-bundaberg-greg-redgard-surfing/103328224 ; theinertia.com, swellnet.com and tracksmag.com.au (homepages only)",
+      "checked": "2026-09-25",
+      "by": "agent: Burkitts verification re-check",
+      "result": "broken link",
+      "detail": "The ABC URL returns HTTP 404 (re-confirmed twice); the real story is dated 2024-01-28 under a different URL and gives no dimensions. The other three Gemini references link only to site homepages. The 80 x 40 m figure has no citation. Gemini lead not confirmed; not used.",
+      "might_work": ""
+    },
+    {
+      "what": "Google Maps satellite re-measurement of the Burkitts Reef point (earlier estimate 120 x 46 m, 2,480 m2)",
+      "kind": "imagery",
+      "where": "Google Maps satellite near -24.82, 152.47 (built-in browser, scale bar read from the page DOM)",
+      "checked": "2026-09-25",
+      "by": "agent: Burkitts verification re-check",
+      "result": "other: not reproducible",
+      "detail": "The 120 x 46 m figure is the dossier author's own visual estimate from Google Maps; no image was saved. The re-check could not drive Google Maps' measure tool (menu clicks inconsistent) and only reached a rough pixel-ruler agreement in order of magnitude (about 1.3 m per screenshot pixel). The 2026-10-10 shape agent therefore treated it as not reproducible and kept it as a note only.",
+      "might_work": "Lior: G10 (Google Earth Pro ruler, with dated low-tide imagery)"
+    },
+    {
+      "what": "Esri World Imagery 2025-09-05 (z19, 0.271 m/px) for the 1997 reshaped boulder zone",
+      "kind": "imagery",
+      "where": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}, centre -24.8153, 152.4671 (registry burkitts-reef-bargara-img-08)",
+      "checked": "2026-10-10",
+      "by": "agent: Burkitts shape agent (queue item 9, cloud)",
+      "result": "imagery shows no structure",
+      "detail": "The natural basalt rock platform is visible (traced, 31,485 m2 in frame, LOW confidence) but the sub-zone where about 12 boulders (about 300 m3) were moved in 1997 cannot be identified in it, and no source locates it. Tide state of the image is unknown (the waterline edge could shift tens of metres) and the frame cuts the platform at its south end. Drawing the platform would present the stage as the reef, so the shape is hidden.",
+      "might_work": "Dated low-tide imagery (Esri Wayback 2014+, Google Earth Pro history: Lior G10), 1997-98 aerials, or an account from Redgard / Bargara Boardriders (E12)"
+    },
+    {
+      "what": "YouTube videos 'Diving Bargara, Burkitt's Reef Marine Park' (wuJ__7Js-cY) and 'Surfing at Bargara Beach, QLD' (O3bEn8029XQ), and their extracted frames",
+      "kind": "video",
+      "where": "https://www.youtube.com/watch?v=wuJ__7Js-cY ; https://www.youtube.com/watch?v=O3bEn8029XQ",
+      "checked": "2026-09-25",
+      "by": "agent: Burkitts media re-check; Lior's review 2026-09-25",
+      "result": "wrong site",
+      "detail": "Lior (2026-09-25) found that neither shows the artificial reef. The first is shore-dive footage at the Burkitts Reef Marine Park dive site (sandy / rocky bottom, hard coral bommies, fish) sharing the name; the second is generic Bargara Beach surf-tourism footage with no mention of Burkitts Reef. Frames wuJ__7Js-cY_0025 and _0205 were rejected (registry img-06, img-07, display false). The dive site's depth to about 9 m is therefore not used as seabed for the reef.",
+      "might_work": ""
+    },
+    {
+      "what": "papers/ folder: any mention or plan of Burkitts Reef (Bargara) in Lior's 5 PDFs",
+      "kind": "paper",
+      "where": "papers/ folder (PyMuPDF text-layer grep for Burkitt, Bargara, Bundaberg, Hervey / Harvey Bay, 2026-10-10)",
+      "checked": "2026-10-10",
+      "by": "agent: dead-ends compilation (papers/ scan, cloud)",
+      "result": "no plan or figure",
+      "detail": "Only one mention in the five PDFs: Rendle (2016) thesis Table 2.1, p.41, one row 'Bargara 1997, Harvey [Hervey] Bay QLD, 300 m3, rock, A$10,000' (same facts as the card). No plan, dimensions or location anywhere. Mead and Borrero 2011, Blacka et al. 2013 and the Narrowneck 2023 paper have no Burkitts or Bargara text. The Mount Maunganui 2007 paper has no text layer (image pages, not OCR'd).",
+      "might_work": "Not in papers/; see P10 entry above"
+    }
+  ]
+}

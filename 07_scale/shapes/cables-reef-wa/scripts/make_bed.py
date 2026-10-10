@@ -1,6 +1,6 @@
 """cables-reef-wa: measured pre-construction seabed (replaces the fitted plane D0 + 1:30 of the first model).
 Sources: DoT WA singlebeam survey FR19980330_Reef_Single (30 Mar 1998, pre-construction; AHD) inside its coverage; DoT 'Perth_5m' composite surface
-(AHD, 5 m cells) elsewhere, shifted by the mean raster-minus-sounding difference where both exist (+0.18 m -> subtract it).
+(AHD, 5 m cells) elsewhere, shifted by the mean raster-minus-sounding difference over the 1998 soundings more than 120 m from the reef (the composite contains the reef itself).
 Method: 1 m world grid (MGA50 metres relative to the anchor); survey points averaged per 1 m cell, linear-interpolated (LinearNDInterpolator) where the
 nearest sounding is < 8 m; raster bilinear elsewhere; whole field Gaussian-smoothed sigma 2 m (removes sounding-line stripes); then re-sampled into the
 canonical frame (x north, y west of shape.json) by the georeference in georef.json and saved as ../3d/bed_measured_canonical.npz (z in m AHD, 1 m grid).
@@ -20,7 +20,9 @@ z = np.load(S + 'DoT_Perth_5m_clip_reef.npz'); rz = z['z_AHD'].astype(float); rz
 def raster_at(E, N):
     c = (E + E0 - xl) / px - 0.5; r = (yt - (N + N0)) / px - 0.5
     return ndi.map_coordinates(np.nan_to_num(rz, nan=-9999), [r, c], order=1, mode='nearest')
-rv = raster_at(pre[:, 0], pre[:, 1]); bias = float(np.mean(rv - pre[:, 2]))
+rv = raster_at(pre[:, 0], pre[:, 1])
+far = np.hypot(pre[:, 0], pre[:, 1]) > 120                    # exclude the reef itself: the Perth_5m composite contains the reef (post-construction soundings merged in)
+bias = float(np.mean((rv - pre[:, 2])[far])); bias_all = float(np.mean(rv - pre[:, 2]))
 cell = {}
 ci = np.floor((pre[:, :2] + R) / step).astype(int)
 sums = np.zeros((n, n)); cnt = np.zeros((n, n))
@@ -42,7 +44,7 @@ rr = (Nw + R) / step; cc = (Ew + R) / step
 bed = ndi.map_coordinates(field, [rr, cc], order=1, mode='nearest')
 src_flag = ndi.map_coordinates(use_s.astype(float), [rr, cc], order=1, mode='nearest') > 0.5
 np.savez_compressed(HERE + '/../3d/bed_measured_canonical.npz', x=cx, y=cy, z_AHD=bed.astype('float32'), from_survey=src_flag)
-res = {"raster_minus_sounding_bias_m": round(bias, 3), "share_canonical_grid_from_1998_survey": round(float(src_flag.mean()), 3),
+res = {"raster_minus_sounding_bias_m": round(bias, 3), "raster_minus_sounding_bias_all_points_m": round(bias_all, 3), "share_canonical_grid_from_1998_survey": round(float(src_flag.mean()), 3),
        "bed_AHD_at_anchor": round(float(bed[np.argmin(abs(cy - YC)), np.argmin(abs(cx - XC))]), 2),
        "smoothing_sigma_m": 2.0, "n_1998_soundings_used": int(len(pre))}
 json.dump(res, open(HERE + '/bed_measured.json', 'w'), indent=1); print(res)

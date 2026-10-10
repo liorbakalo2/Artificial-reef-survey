@@ -140,9 +140,9 @@ def survey_version(vid, name, date, fn, note, srcs):
     out['crest_rl_m'] = None; out['mean_thickness_m'] = round(Vs / float(sil_o.sum() * L.STEP ** 2), 2); out['max_thickness_m'] = round(float(tt.max()), 2)
     out['crest_AHD_m'] = round(float(np.nanmax(z_msl)), 2); return out
 V.append(survey_version('survey_surface_1999_11', 'Surveyed surface, Nov 1999 (DoT WA singlebeam)', 'survey ending 22 Nov 1999 (FR19991122); construction Feb-Dec 1999', 'FR19991122_Single.txt',
-        "Measured, 840 soundings; the nearest thing to the as-built reef at completion. Footprint = the original plan (the extension triangle has only 27 soundings and is not distinguishable). Rock thickness is interpolated between sounding lines; single-beam smooths narrow ridges.", 'DoT1999, DoT1998'))
+        "Measured, 840 soundings; the nearest thing to the as-built reef at completion. Footprint = the original plan (the extension triangle has only 27 soundings and is not distinguishable). Rock thickness is interpolated between sounding lines; single-beam smooths narrow ridges.", ['DoT1999', 'DoT1998']))
 V.append(survey_version('survey_surface_2002_02', 'Surveyed surface, Feb 2002 (DoT WA singlebeam)', 'survey ending 1 Feb 2002 (FR20020201)', 'FR20020201_Single.txt',
-        "Measured, 5,143 soundings in the window (about 5 m line spacing), 2.2 years after completion; the south-arm extension triangle is covered (mean +0.43 m) but not distinguishable from the surrounding bed.", 'DoT2002, DoT1998'))
+        "Measured, 5,143 soundings in the window (about 5 m line spacing), 2.2 years after completion; the south-arm extension triangle is covered (mean +0.43 m) but not distinguishable from the surrounding bed.", ['DoT2002', 'DoT1998']))
 for v in V[-2:]: print(v['id'], v['area_m2'], v['volume_m3'], v['mean_thickness_m'], v['max_thickness_m'], v['crest_AHD_m'])
 GEO = _json.load(open(HERE + '/../scripts/georef.json'))['transform']; GEO_FIT = _json.load(open(HERE + '/../scripts/georef.json'))['fit']; SV2 = _json.load(open(HERE + '/../scripts/georef.json'))['survey_2002_vs_1998']
 SVOL = _json.load(open(HERE + '/../scripts/survey_volume.json')); SHDAT = _json.load(open(HERE + '/../scripts/shore_datum.json')); SHORE_BRG = SHDAT['shoreline_bearing_deg_T']
@@ -169,7 +169,7 @@ levels = [
 ]
 M = {
  "slug": "cables-reef-wa", "name": "Cable Station artificial surfing reef (Cables Reef, Cottesloe / Leighton, Perth, Western Australia)", "built": datetime.date.today().isoformat(),
- "state": "Design state of the 1999 reef: Lyons (1992) design plan with the southern-arm extension, drawn at its design levels (RL -1.0 crest to -3.0 outer edge). No survey of the built reef was found; later changes are notes only.",
+ "state": "Default: rock surface surveyed by DoT WA in Nov 1999 (the month before completion) on the georeferenced Lyons (1992) design footprint, on the measured pre-construction bed. Design-plan versions (with and without the south-arm extension) are drawn at their design levels (RL -1.0 crest to -3.0 outer edge). Later changes are notes only.",
  "frame": {"x": "alongshore, + toward SOUTH (x_model = -x_canonical)", "y": "offshore, + toward WEST", "z": "up, 0 = MSL (reading A)", "units": "m", "origin": "the design drawing frame (x along the reef axis, y offshore) rotated %.1f deg from true north by the georeference; origin = canonical origin, centroid of the original footprint at y = 271 m" % GEO['theta_ccw_deg'],
            "bearing_x_deg": round((GEO['canonical_plus_x_bearing_deg'] + 180.0) % 360, 1), "bearing_y_deg": GEO['canonical_plus_y_(offshore)_bearing_deg'], "north_xy": [round(-float(np.cos(np.radians(GEO['theta_ccw_deg']))), 4), round(-float(np.sin(np.radians(GEO['theta_ccw_deg']))), 4)], "shoreline_y": 0.0, "shoreline_bearing_deg": SHORE_BRG},
  "datum": {"zero": "MSL", "rl_minus_msl_A": OFF_A, "equation": "reading A (default): z_MSL = z_RL - 0.78 ; reading B (Blacka 2013 wording 'below MSL'): z_MSL = z_RL",

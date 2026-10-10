@@ -1,0 +1,85 @@
+{
+  "slug": "southern-ocean-surf-reef-albany",
+  "entries": [
+    {
+      "what": "Bluecoast Consulting Engineers (2020) Albany Artificial Surf Reef - Detailed Design Report P19024_DetailedDesign_R2.00 (cross-sections, 2017 bathymetry, coordinates)",
+      "kind": "report",
+      "where": "https://albany.wa.gov.au/documents/801/albany-artificial-surf-reef-executive-summary-detailed-design ; City of Albany SOSR project pages",
+      "checked": "2026-10-10",
+      "by": "agent: Albany shape / 3D feasibility agents (cloud)",
+      "result": "not found",
+      "detail": "Only the executive summary is public; the full Detailed Design Report (cross-sections, 2017 bathymetry, footprint coordinates, vertical datum) is not on the City site. The design table/plan (design.jpg) and project profile give crest -1.00 m AHD, 34,000 m3 and a plan outline (these are references) but no seabed levels, pile height, side slopes or toe level, which is what blocks the 3D model. A search for a post-construction (as-built) survey also found nothing.",
+      "might_work": "Lior: E9 (e-mail the City of Albany project team) / P12; search `\"P19024\" Bluecoast Albany detailed design report`"
+    },
+    {
+      "what": "Post-construction (as-built) survey, monitoring results, beach-width surveys or ecology data for the Southern Ocean Surf Reef (practical completion March 2025)",
+      "kind": "search",
+      "where": "City of Albany project pages; web searches by the card, shape and verification agents (2026-09-24 to 2026-10-10)",
+      "checked": "2026-10-10",
+      "by": "agent: Albany shape agent (queue item 9) and card verification",
+      "result": "not found",
+      "detail": "No as-built survey, monitoring report, beach-width data or fisheries / ecology data found in any source fetched. Hence the default outline is the Bluecoast final-design outline (a design drawing of the built version), not a measured survey; a visible-reef trace on Esri 2026-01-20 is the toggle. Gemini's '2022 post-construction monitoring' cannot exist for a reef built 2024-25.",
+      "might_work": "Lior: E9 (as-built survey from March 2025), W8 (AusSeabed / King George Sound)"
+    },
+    {
+      "what": "Swellnet interview 'Evan Watterson, designer of the Albany artificial reef' (2025-07-18)",
+      "kind": "web page",
+      "where": "https://www.swellnet.com/news/talking-heads/2025/07/18/evan-watterson-designer-albany-artificial-reef",
+      "checked": "2026-09-25",
+      "by": "agent: Albany card research / verification (WebFetch + browser pane)",
+      "result": "bot check (not bypassed)",
+      "detail": "Persistent HTTP 403, so it is neither used nor cited. Only the firm Bluecoast Consulting Engineers is sourced as designer; the individual designer attribution was withdrawn (Gemini's 'Dr. Scott Baker, Craig Cowper' also not found anywhere).",
+      "might_work": "Lior in a browser if the designer's own account of the reef is wanted"
+    },
+    {
+      "what": "YouTube video 'Middleton Beach Artificial Reef' (Liam De Lucia, 2025)",
+      "kind": "video",
+      "where": "https://www.youtube.com/watch?v=6kwDBzf67EU",
+      "checked": "2026-09-25",
+      "by": "agent: Albany media re-check (cloud)",
+      "result": "broken link",
+      "detail": "yt-dlp reports 'This video is not available'; content cannot be classified, so it stays a link-only mention. No frames exist for this reef in 03_images/video_frames.",
+      "might_work": ""
+    },
+    {
+      "what": "Short film 'Midds Reef' (director Rhys Jones, CinefestOZ premiere): direct URL or streaming link",
+      "kind": "video",
+      "where": "web search by headline (Albany Advertiser report); no URL found",
+      "checked": "2026-09-24",
+      "by": "agent: Albany card research (cloud)",
+      "result": "not found",
+      "detail": "Title and festival are confirmed from a search-result headline only; no direct video URL or streaming link was found, so it is unreferenced in the card.",
+      "might_work": "Lior: search CinefestOZ programme or the director's page"
+    },
+    {
+      "what": "Albany Advertiser 'Eighteen rocks of Southern Ocean Surf Reef repositioned in successful bid to reduce user injuries' (2026-03-11) and other Albany Advertiser reef articles",
+      "kind": "web page",
+      "where": "https://www.albanyadvertiser.com.au/news/albany-advertiser/eighteen-rocks-of-southern-ocean-surf-reef-repositioned-in-successful-bid-to-reduce-user-injuries-c-21896905",
+      "checked": "2026-10-10",
+      "by": "agent: Albany source audit (cloud)",
+      "result": "paywalled",
+      "detail": "Headline, byline and date are confirmed (and a Wayback cross-check), but the article body is paywalled. The AUD 20,000 repositioning cost rests on search-engine synthesis of the paywalled article, not on a second independent source. How far the March 2026 rock move changed the planform is unquantified (assumption A9).",
+      "might_work": "Lior: subscriber copy, or the City of Albany media release"
+    },
+    {
+      "what": "Gemini's Albany sources: 'City of Albany Post-Construction Monitoring 2022' and two other URL-less references; '160-190 deg' orientation; designers' names; '> $9 million' review quote",
+      "kind": "report",
+      "where": "Gemini reef_footprints.json / reef entry (no URLs given); independent web searches",
+      "checked": "2026-10-10",
+      "by": "agent: Albany shape agent and verification (2026-09-25)",
+      "result": "not found",
+      "detail": "Gemini's three references carry no URLs and could not be fetched or found by search. Its numbers equal the City page's (area 13,500 m2 is within 3 % of our design outline by coincidence of the same City numbers) but its orientation is unsupported, the 'Post-Construction Monitoring 2022' document cannot exist for a reef built 2024-25, and the '> $9 million' Boardriders quote has no source (the sourced total is AUD 11.75M). Gemini lead not confirmed; nothing used.",
+      "might_work": ""
+    },
+    {
+      "what": "papers/ folder: any mention or plan of the Albany (Middleton Beach) reef in Lior's 5 PDFs",
+      "kind": "paper",
+      "where": "papers/ folder (PyMuPDF text-layer grep for Albany, King George Sound, Middleton, Bluecoast, 2026-10-10)",
+      "checked": "2026-10-10",
+      "by": "agent: dead-ends compilation (papers/ scan, cloud)",
+      "result": "not found",
+      "detail": "None of the five PDFs mentions Albany or Middleton Beach (the reef was built 2024-25, after all of them). The Mount Maunganui 2007 paper has no text layer (image pages, not OCR'd) but is about another reef and 17 years older.",
+      "might_work": "Not in papers/; the public City of Albany documents and the Bluecoast report (E9 / P12) are the source"
+    }
+  ]
+}
