@@ -40,7 +40,7 @@ Check against the drawing: on the centreline the model gives RL -2.59, -2.20, -1
 | contours on the centreline | -2.59, -2.20, -1.62 | -2.5, -2.0, -1.5 (Fig A.2) | rms 0.14 m |
 | contour crossings on the transects | within 0.1-1.4 m | Fig A.2 | good |
 | ramp drop | 2.0 m over 26 m and 30 m | 1:13, 1:15 labels | consistent |
-| rock volume | 5,500 m3 (fitted); original design alone 5,169 m3 | 5,500 (Blacka), 5,000 (P3/ICM), 3,500 (Wikipedia) | calibrated, so not independent; mean thickness 1.26 m, max 2.9 m |
+| rock volume | 5,500 m3 (fitted); original design alone 5,169 m3 | 5,500 (Blacka), 5,000 (P3/ICM), 3,500 (Wikipedia) | calibrated, so not independent; mean thickness 1.26 m, max 2.5 m (2.48) |
 | density | 10,000 t / 5,500 m3 = 1.82 t/m3 | granite placed with voids 1.6-1.9 | plausible |
 | bed depth under the footprint | RL -2.0 (shoreward edge) to -5.0 (offshore edge); +0.78 = 2.8-5.8 m at MSL (A) | 3.0-6.0 m (Blacka, RWR) | agrees under A, 1 m shallower under B |
 | bed at y = 350 m | RL -6.2 m | S1: ~7 m contour at ~350 m (approximate) | 0.8 m shallower |
@@ -67,4 +67,32 @@ LOW. Against the rubric: the plan is MEDIUM (design drawing with printed scale, 
 6. Settlement or damage: Blacka reports 'no information on long-term stability'; later changes are not modelled.
 
 ## 8. References
-Blacka et al. (2013) as in section 2. Pattiaratchi (1999) as in section 2. Lyons, M. (1992) Design studies for an artificial surfing reef. Unpublished report, Dept of Environmental Engineering, UWA (the design drawing, as reproduced in Blacka 2013). Pitt, A. (1990s) concept sketch via Raised Water Research (2019). Raised Water Research (2019) Cables Reef. Mead, S. and Borrero, J. (2011), see papers intake P3. Ranasinghe, R. et al. (2001) and Pattiaratchi (2003), cited by Blacka, not read.
+Blacka et al. (2013) as in section 2. Pattiaratchi (1999) as in section 2. Lyons, M. (1992) Design studies for an artificial surfing reef. Unpublished report, Dept of Environmental Engineering, UWA (the design drawing, as reproduced in Blacka 2013). Pitt, A. (1990s) concept sketch via Raised Water Research (2019). Raised Water Research (2019) Cables Reef. Mead, S. and Borrero, J. (2011), see papers intake P3. Ranasinghe, R. et al. (2001): cited by Blacka, not read; authors, title and venue NOT CONFIRMED (web search 2026-10-10 found nothing). Pattiaratchi, C. et al. (2003) Performance of an artificial surfing reef: Cable Station, Western Australia. 6th International Conference on Coastal and Port Engineering in Developing Countries (COPEDEC VI), Colombo, Sri Lanka, 15-19 Sep 2003 (venue confirmed via UWA research repository listing; co-authors and pages not confirmed; not read). Bancroft, S. (1999) Performance Monitoring of the Cable Station Artificial Surfing Reef. UWA thesis, supervised by C. Pattiaratchi (title via web search 2026-10-10; degree and pages not confirmed; not read, candidate source for as-built levels).
+
+## 9. Assumptions
+Each is shown in the viewer as "assumed" where used. Sensitivity = effect on the result if the assumption is wrong.
+| id | assumption | why (evidence) | effect | what would replace it |
+|---|---|---|---|---|
+| A1 | RL of the design drawing = tide-gauge / chart datum, MSL = RL + 0.78 m (reading A, default) | Pattiaratchi (1999) p.3 gives MTL 0.78 m above datum for the same contours; Blacka (2013) wording 'below MSL' points to reading B | all water depths over the reef move by 0.78 m (crest 1.78 m vs 1.00 m below MSL); switch in the viewer | Transport WA / design-drawing datum note |
+| A2 | shoreline runs N-S; arms measured to a straight shoreline; north = drawing right | Pattiaratchi (1999) Fig 7 orientation; arm angles 42.7 / 44.7 deg match the 45 deg design peel angle | orientation of the model only; areas unaffected | georeferenced imagery |
+| A3 | bed level under the reef: plane fitted so the modelled rock volume = 5,500 m3 (D0 = RL -3.50 m at y = 270 m) | no bathymetry; 5,500 m3 is Blacka A.1.3 | +-0.3 m bed = +-1,300 m3 (about +-24 %); volume is calibrated, not independent | surveyed bathymetry (Landgate / AusSeabed / Navionics) |
+| A4 | bed gradient uniform 1:30 | Pitt concept sketch contours 3.0-7.0 m (28-33 m per m, annotated/A4) | 1:28-1:33 changes the bed under the footprint by < 0.15 m | bathymetry |
+| A5 | rock side slopes: linear fall from ramp-edge level to the bed over the drawn band width (3-7 m) | hatched bands on Fig A.2 read as side slopes; no section drawing with numbers | local surface +-0.5 m; volume effect absorbed in A3 | as-built section |
+| A6 | southern-arm extension: pyramid-like thickness scaled to 320 m3 (0.92 m mean) | only footprint (img-06) and volume (320 m3) are stated | local; +-30 % extent; 6 % of the total volume | extension drawing / later paper |
+| A7 | typical high / low water = MSL +-0.4 m | Blacka Table 4.3 gives range 0.8 m only; symmetry assumed | water-level slider only | Fremantle tide tables (LAT, HAT) |
+| A8 | the '+' grid of Pattiaratchi (1999) Fig 7 is 100 m (label illegible) | reproduces the Fig A.2 dimensions (122 x 76 m vs 121 x 76 m) | Fig 7 version scale and the 270 m offshore cross-check; no effect on the default outline | legible original figure |
+| A9 | the reef was built as designed (design plan + extension at design levels) | no survey, image or as-built drawing found; Pitt (2009) says the crest is about 1.5 m below the lowest tide, which is not contradicted by RL -1.0 under reading A | plan, crest level and volume could all differ | aerial / satellite imagery, as-built survey, Bancroft (1999) |
+| A10 | ramp surface between the set-out line (RL -3.0) and the crest line (RL -1.0) interpolated by the distance ratio d_out / (d_out + d_in) | matches the drawn contours to rms 0.14 m on the centreline | +-0.1-0.2 m on the ramp | drawn contour digitisation |
+| A11 | scale of Fig A.2 = 6.51 px/m from its four printed dimensions | four readings sd 0.05 | +-3 % scale = +-6 % area | higher-resolution drawing |
+
+## 10. Decisions
+| id | decision | options | decided by / when | reason |
+|---|---|---|---|---|
+| X1 | primary plan source = Blacka (2013) Fig A.2 | RWR 'original design' (same drawing, illegible), Pattiaratchi Fig 7, Pitt sketch | agent, 2026-10-10 | legible labels and printed dimensions give the scale |
+| X2 | default outline = design plan + drawn extension | original plan alone; Fig 7; Pitt concept | agent, 2026-10-10, per standing rule 4 (no survey exists: design drawing of the built version is the highest available) | others are toggleable versions with an (i) pop-up |
+| X3 | datum default = reading A (RL = chart datum) | reading A / B | agent, 2026-10-10 | Pattiaratchi and the Pitt note give 'datum' with the 0.78 m MTL; reading B is a viewer switch; to be settled with Transport WA |
+| X4 | bed fitted to 5,500 m3 | 5,000 (Mead and Borrero 2011), 3,500 (Wikipedia), 5,500 (Blacka) | agent, 2026-10-10 | Blacka states the construction quantity (A.1.3); others give 3.36 / 2.92 m beds, shown as sensitivity |
+| X5 | model shows the design state, later changes are notes | - | standing rule 5 (Lior) | rule |
+| X6 | only the two Lyons-plan versions get a 3D mesh | all four | agent, 2026-10-10 | Fig 7 and Pitt versions have no design levels |
+| X7 | Gemini's work not used | - | standing rule 2 | its folder is not in this repo; nothing from it was used or checked |
+| X8 | no value rebuilt after the 2026-10-10 source audit | - | audit brief | audit changed text only |

@@ -146,7 +146,7 @@ All of them are in `REQUESTS_FOR_LIOR.md`:
 | 2026-10-10 | `_agent_briefs/task_source_audit.md` | `07_scale/shapes/boscombe-surf-reef/` | `SOURCE_AUDIT_2026-10-10.md` | RUNNING |
 | 2026-10-10 | `_agent_briefs/task_source_audit.md` | `07_scale/shapes/bunbury-airwave/` | `SOURCE_AUDIT_2026-10-10.md` | RUNNING |
 | 2026-10-10 | `_agent_briefs/task_source_audit.md` | `07_scale/shapes/mount-maunganui-reef/` | `SOURCE_AUDIT_2026-10-10.md` | RUNNING |
-| 2026-10-10 | `_agent_briefs/task_source_audit.md` | `07_scale/shapes/palm-beach-gold-coast/` | `SOURCE_AUDIT_2026-10-10.md` | RUNNING |
+| 2026-10-10 | `_agent_briefs/task_source_audit.md` | `07_scale/shapes/palm-beach-gold-coast/` | `SOURCE_AUDIT_2026-10-10.md` | DONE: 28 checked, 7 fixed; source-use table, A12-A14, DEC1-15 in Methods; model.js identical. Page edits: `05_qa/pending_page_edits/audit_palm-beach_2026-10-10.md` |
 | 2026-10-10 | `_agent_briefs/task_source_audit.md` | `07_scale/shapes/prattes-reef-el-segundo/` | `SOURCE_AUDIT_2026-10-10.md` | RUNNING |
 | 2026-10-10 | `_agent_briefs/task_source_audit.md` | `07_scale/shapes/narrowneck-gold-coast/` | `SOURCE_AUDIT_2026-10-10.md` | RUNNING |
 | 2026-10-10 | `_agent_briefs/task_source_audit.md` | `07_scale/shapes/cables-reef-wa/` | `SOURCE_AUDIT_2026-10-10.md` | RUNNING |

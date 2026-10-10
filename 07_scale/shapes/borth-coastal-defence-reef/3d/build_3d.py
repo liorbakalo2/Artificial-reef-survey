@@ -206,7 +206,7 @@ def main(update_shape=False):
 
     # --- docs.js -----------------------------------------------------------------------------------------
     docs = {}
-    for key, fn in (('methods_md', 'METHODS_3D.md'), ('sources_md', 'SOURCES_3D.md')):
+    for key, fn in (('methods_md', 'METHODS_3D.md'), ('register_md', 'REGISTER_3D.md'), ('sources_md', 'SOURCES_3D.md')):
         p = os.path.join(HERE, fn)
         docs[key] = open(p, encoding='utf-8').read() if os.path.exists(p) else ''
     with open(os.path.join(HERE, 'docs.js'), 'w', encoding='utf-8') as f:

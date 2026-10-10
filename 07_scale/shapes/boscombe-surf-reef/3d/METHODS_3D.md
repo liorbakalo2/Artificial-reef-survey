@@ -11,8 +11,8 @@ The model shows the **as-built state of the Boscombe geotextile surf reef (finis
 | ID | Citation | What it contributed | Resolution / date | Licence / status |
 |---|---|---|---|---|
 | S1 | Esri, Maxar, Earthstar Geographics and the GIS User Community (2011). World Imagery Wayback, release 10, tiles captured 2011-09-28. https://livingatlas.arcgis.com/wayback/ (retrieved 2026-10-04) | plan outline of the bag field (traced in the project, `shape.json`), georeference of the canonical frame, shoreline (surf line) bearing 83.4 deg | 0.378 m/px, 28 Sep 2011 | Esri/Maxar terms; private research copy, reuse not cleared |
-| S2 | Rendle, E. and Davidson, M. (2012). An evaluation of the physical impact and structural integrity of a geotextile surf reef. *Coastal Engineering Proceedings* 33 (ICCE 2012), article 6794, Fig. 9. https://icce-ojs-tamu.tdl.org/icce/article/view/6794 (accessed 2026-10-05). Survey data: Channel Coastal Observatory / Bournemouth Borough Council | seabed and reef surface heights (Fig. 9 left map, April 2011 DGPS bathymetry, colour bar +0.93 to -5.30 m); crest levels and flank slope from the four cross-section profiles (Oct 2009, May 2010, Oct 2010, Apr 2011); text: "Situated 225 m offshore in 2.7 to 5 m depth", damage description | map about 0.5 m/px (1.908 px/m E, 1.091 px/m N), plot itself interpolated from DGPS lines | authors' copyright; research copy |
-| S3 | Mead, S., Blenkinsopp, C., Moores, A. and Borrero, J. (2010). Design and construction of the Boscombe multi-purpose reef. *Coastal Engineering Proceedings* 32 (ICCE 2010), article 1352. https://icce-ojs-tamu.tdl.org/icce/article/view/1352 (accessed 2026-10-05) | design crest "0.5 m above chart datum"; Table 1 water levels (m ACD) HAT 2.59, MHWS 2.21, MHWN 1.67, MLWN 1.17, MLWS 0.45, LAT -0.06 (Bournemouth Pier gauge); MHWS-MLWS range 1.76 m; design depth plan Fig. 3a (design in 3-5 m CD); 54 containers 1-5 m diameter, 15-70 m long, about 13,000 m3 | Table 1 to 0.01 m | authors' copyright; research copy |
+| S2 | Rendle, E. and Davidson, M. (2012). An evaluation of the physical impact and structural integrity of a geotextile surf reef. *Coastal Engineering Proceedings* 1(33) (ICCE 2012), OJS article 6794, Fig. 9; e-published 28 Sep 2012 (Plymouth research portal). https://icce-ojs-tamu.tdl.org/icce/article/view/6794 (accessed 2026-10-05; DOI and paper identifier not confirmed). Survey data: Channel Coastal Observatory / Bournemouth Borough Council | seabed and reef surface heights (Fig. 9 left map, April 2011 DGPS bathymetry, colour bar +0.93 to -5.30 m); crest levels and flank slope from the four cross-section profiles (Oct 2009, May 2010, Oct 2010, Apr 2011); text: "Situated 225 m offshore in 2.7 to 5 m depth", damage description | map about 0.5 m/px (1.908 px/m E, 1.091 px/m N), plot itself interpolated from DGPS lines | authors' copyright; research copy |
+| S3 | Mead, S., Blenkinsopp, C., Moores, A. and Borrero, J. (2010). Design and construction of the Boscombe multi-purpose reef. *Coastal Engineering Proceedings* 1(32), structures.58 (proceedings of ICCE 2010, Shanghai; the OJS listing dates the paper 2011), OJS article 1352. https://icce-ojs-tamu.tdl.org/icce/article/view/1352 (accessed 2026-10-05; citation form re-checked 2026-10-10; DOI not confirmed) | design crest "0.5 m above chart datum"; Table 1 water levels (m ACD) HAT 2.59, MHWS 2.21, MHWN 1.67, MLWN 1.17, MLWS 0.45, LAT -0.06 (Bournemouth Pier gauge); MHWS-MLWS range 1.76 m; design depth plan Fig. 3a (design in 3-5 m CD); 54 containers 1-5 m diameter, 15-70 m long, about 13,000 m3 | Table 1 to 0.01 m | authors' copyright; research copy |
 | S4 | National Tidal and Sea Level Facility (n.d.). Chart datum and ordnance datum. https://ntslf.org/tides/datum (accessed 2026-10-05) | Bournemouth chart datum is 1.40 m below Ordnance Datum (table row "Bournemouth -1.40m") | 0.01 m | open web page |
 | S5 | EMODnet Bathymetry Consortium (2026). EMODnet Digital Bathymetry (DTM), WMS GetFeatureInfo, layer `emodnet:mean`. https://ows.emodnet-bathymetry.eu/wms (queried 2026-10-05); and EMODnet Bathymetry Consortium (2024). EMODnet Digital Bathymetry (DTM 2024), ERDDAP `bathymetry_dtm_2024`, https://doi.org/10.12770/cf51df64-56f9-4a99-b1aa-36b8d7b743a1 (queried 2026-10-06; project test `07_scale/bathymetry/emodnet/REPORT.md`) | datum plausibility check (2026-10-05); since 2026-10-07 also the far-field seabed SLOPE (-1.41 %, y > 380 m) of the offshore rows; no EMODnet level is used | cells about 115 m, depths relative to LAT | open data, EMODnet terms of use |
 | S6 | Herbert, R.J.H., Collins, K., Mallinson, J., Hall, A.E., Pegg, J., Ross, K., Clarke, L. and Clements, T. (2017). Epibenthic and mobile species colonisation of a geotextile artificial surf reef on the south coast of England. *PLoS ONE* 12(9): e0184100. https://pmc.ncbi.nlm.nih.gov/articles/PMC5604948/ (accessed 2026-10-05) | "shallow water (0-5 m Chart Datum)"; "upper section is exposed on low spring tides"; 220 m offshore, 210 m east of the pier | text | CC-BY |
@@ -24,7 +24,10 @@ The model shows the **as-built state of the Boscombe geotextile surf reef (finis
 | S13 | Channel Coastal Observatory, Southeast Regional Coastal Monitoring Programme (2026). Beach profile surveys, lines 5f00424, 424A, 425, 425A, 426, 426A, 427, 427A, 428, 428A, 429 (survey 2010-04-20; Easting, Northing, Elevation_OD, Chainage). https://coastalmonitoring.org/ (profile API `cco/profiles/api.php`; accessed 2026-10-06; raw copies `07_scale/shapes/boscombe-surf-reef/src/cco_profiles/`) | beach and nearshore seabed y -66 to about +40 m (zones 3/4); independent datum test of A3 (validation 9) | 11 lines 29-55 m apart alongshore (x -221 to +222 m), 17-28 points per line (median spacing 4-6 m); heights m ODN; 2010-04-20 | Open Government Licence v3.0 (acknowledge source; hydrographic data not for navigation) |
 | S12 | Wikipedia (2026). Boscombe Surf Reef (accessed 2026-09-24, via the project dossier `02_research/reefs/boscombe-surf-reef.md`, refs R1, R4, R6, R8); Leisure Opportunities (2012), "Future of Boscombe surf reef in doubt"; Newsroom.co.nz (2021), "The Kiwi scientist and the failed surf breaks" | dated history after 2009 (section 3.10) | text | secondary sources |
 
-Not used: any value from the Gemini folder; GEBCO (grid far too coarse for a 120 m object); the Plymouth PhD thesis of Rendle (blocked by a bot check, see `REQUESTS_FOR_LIOR.md`).
+| S14 | This project (2026). `07_scale/bathymetry/emodnet/REPORT.md`, sections 6 and 9.1 (EMODnet test and integration plan) | slope 0.0141 +-0.0010 of zone 5 (four DTM cells) and the DTM-versus-model comparison (validation 13) | cells about 116 x 73 m | project file; derived from S5 |
+| S15 | Rendle, E.J. (2016). *The Environmental, Social and Economic Impacts of an Artificial Surf Reef - The UK Experience.* PhD thesis, School of Biological and Marine Sciences, University of Plymouth. https://pearl.plymouth.ac.uk/bms-theses/412/ (received from Lior as PDF in `papers/`, read 2026-10-10; printed page = PDF page - 3; notes `07_scale/shapes/boscombe-surf-reef/P5_RENDLE2016_NOTES.md`) | read 2026-10-10, validation only, NO model value changed: built crest about +0.5 m CD (p. 70), design 0 m CD (Table 4.4) and 0.3 m CD (Fig. 5.3), design footprint 4,474 / 5,450 m2, design volume 11,900 / 12,200 m3, bag counts 32 / about 46, survey dates, "relative to MSL" wording of Fig. 5.6 | text and figures; Fig. 5.7 is the same April 2011 survey as S2 Fig. 9 | author's copyright; private research copy; images img-33 to img-40 |
+
+Not used: any value from the Gemini folder (no Gemini number, outline or conclusion enters this model; an earlier agent's estimates were only used as starting hypotheses and every value above was re-read from its original source); GEBCO (grid far too coarse for a 120 m object). Read but used for validation only: S15.
 
 ## 3. Methods
 
@@ -194,7 +197,7 @@ Propagation (independent errors, first order): `sigma_f^2 = sum_i (df/dx_i)^2 si
 
 - Crest in the model frame (E6): `z_crest,MSL = h_c - D`, `sigma^2 = sigma_hc^2 + sigma_D^2`, with sigma_hc = 0.3 m (A6), sigma_D = 0.1 m (A4): **sigma = 0.32 m**. Crest below LAT: `d_LAT = -(h_c - z_LAT)`, so the crest stands 0.56 m above LAT (d_LAT = -0.56 m), `sigma^2 = sigma_hc^2 + sigma_LAT^2`, sigma_LAT = 0.05 m (table precision): **sigma = 0.30 m**.
 - Reef height at a point: `H = z_c - S`, `sigma_H^2 = sigma_hc^2 + sigma_read^2 + sigma_tps^2`, with colour read 0.2 m and interpolation under the reef 0.3 m (TPS ring r.m.s. 0.02 m, but the pre-reef seabed is unobserved): **sigma_H = 0.47 m** on a mean height of 3.2 m (median surveyed relief 2.3 m, maximum 4.1 m, after damage and smoothing). The datum risk is separate: if the survey zero were ODN, S would be 1.4 m higher in the model frame and H smaller by 1.4 m (absolute heights of the survey shift, relief of the survey does not).
-- Beach and nearshore (zone 3, E13): `sigma^2 = sigma_date^2 + sigma_D^2 + (sigma_pos tan(beta))^2` with sigma_date = 0.28 m (validation 10), sigma_D = 0.1 m (ODN = MSL, A4) and the position error 5 m on a slope tan(beta) = 0.04 (0.2 m): **sigma = 0.36 m**. A waterline at a given level is displaced by `sigma / tan(beta)` = about **9 m**. Blend zone (code 4): 0.5 m (A15). Offshore zone 5: **1.2 m** (validation 12), correlated along x.
+- Beach and nearshore (zone 3, E13): `sigma^2 = sigma_date^2 + sigma_D^2 + (sigma_pos tan(beta))^2` with sigma_date = 0.28 m (validation 10), sigma_D = 0.1 m (ODN = MSL, A4) and the position error 5 m on a slope tan(beta) = 0.04 (0.2 m): **sigma = 0.36 m**. A waterline at a given level is displaced by `sigma / tan(beta)` = about **9 m**. Blend zone (code 4): 0.5 m (A15). Offshore zone 5: **0.5 m** since D2 (validation 12; it was 1.2 m before D2), correlated along x.
 - Seabed depth at a point inside the survey: sigma = 0.2 m (colour read) plus the plot's own interpolation; extrapolated: 0.5 m from the Navionics comparison (validation 6), growing with distance.
 - Volume: `(sigma_V/V)^2 = (sigma_A/A)^2 + (sigma_H/H)^2 + (sigma_m)^2`, with area +-5 % (1 m outline error on a 120 x 45 m field), height 0.47/3.2 = 15 %, slope 5 %: about **16 %** (the sensitivity runs in validation 2 span -12 % to +14 %).
 - Outline: +-1 m on the west, east and south edges, +-1.1 m on the shoreward edge (S7); position of the whole frame relative to the true geography about +-5 m (Esri georeference, OSGB conversion).
@@ -233,10 +236,11 @@ See `REQUESTS_FOR_LIOR.md` for exact points and values to read.
 - Garmin Ltd / Navionics (2026). Marine Maps viewer, Nautical Charts and SonarChart Maps. https://maps.garmin.com/en-US/marine (accessed 2026-10-05). Not for navigation.
 - Herbert, R.J.H., Collins, K., Mallinson, J., Hall, A.E., Pegg, J., Ross, K., Clarke, L. and Clements, T. (2017). Epibenthic and mobile species colonisation of a geotextile artificial surf reef on the south coast of England. *PLoS ONE* 12(9): e0184100. https://pmc.ncbi.nlm.nih.gov/articles/PMC5604948/ (accessed 2026-10-05).
 - Leisure Opportunities (2012). Future of Boscombe surf reef in doubt. https://www.leisureopportunities.co.uk/news/Future-of-Boscombe-surf-reef-in-doubt/303273 (accessed 2026-09-24).
-- Mead, S., Blenkinsopp, C., Moores, A. and Borrero, J. (2010). Design and construction of the Boscombe multi-purpose reef. *Coastal Engineering Proceedings* 32 (ICCE 2010), 1352. https://icce-ojs-tamu.tdl.org/icce/article/view/1352 (accessed 2026-10-05).
+- Mead, S., Blenkinsopp, C., Moores, A. and Borrero, J. (2010/2011). Design and construction of the Boscombe multi-purpose reef. *Coastal Engineering Proceedings* 1(32), structures.58 (ICCE 2010; OJS article 1352; DOI not confirmed). https://icce-ojs-tamu.tdl.org/icce/article/view/1352 (accessed 2026-10-05).
 - National Tidal and Sea Level Facility (n.d.). Chart datum and ordnance datum. https://ntslf.org/tides/datum (accessed 2026-10-05).
 - Newsroom.co.nz (2021). The Kiwi scientist and the failed surf breaks. https://newsroom.co.nz/2021/12/06/the-kiwi-scientist-and-the-failed-surf-breaks/ (accessed 2026-09-24).
-- Rendle, E. and Davidson, M. (2012). An evaluation of the physical impact and structural integrity of a geotextile surf reef. *Coastal Engineering Proceedings* 33 (ICCE 2012), 6794. https://icce-ojs-tamu.tdl.org/icce/article/view/6794 (accessed 2026-10-05).
+- Rendle, E.J. (2016). The Environmental, Social and Economic Impacts of an Artificial Surf Reef - The UK Experience. PhD thesis, University of Plymouth. https://pearl.plymouth.ac.uk/bms-theses/412/ (P5 in the project, S15 above).
+- Rendle, E. and Davidson, M. (2012). An evaluation of the physical impact and structural integrity of a geotextile surf reef. *Coastal Engineering Proceedings* 1(33) (ICCE 2012; OJS article 6794; DOI not confirmed). https://icce-ojs-tamu.tdl.org/icce/article/view/6794 (accessed 2026-10-05).
 - riverlevels.uk (n.d.). Tide at Bournemouth. https://riverlevels.uk/tide-bournemouth (accessed 2026-10-05).
 - Solent Forum (n.d.). Waves and tides. https://solentforum.org/solent/our_coastal_zone/waves_and_tides/ (accessed 2026-10-05).
 - Three.js authors (2024). three.js r170, MIT licence. https://threejs.org/
@@ -244,3 +248,81 @@ See `REQUESTS_FOR_LIOR.md` for exact points and values to read.
 - Virtanen, P. et al. (2020). SciPy 1.0: fundamental algorithms for scientific computing in Python. *Nature Methods* 17, 261-272.
 - Wikipedia (2026). Boscombe Surf Reef. https://en.wikipedia.org/wiki/Boscombe_Surf_Reef (accessed 2026-09-24).
 - Wavve Boating (2024). Navionics Chart Viewer website "decommissioned" by Garmin. https://www.wavveboating.com/boating-tips/navionics-chart-viewer/ (accessed 2026-10-05).
+
+## 9. Audit registers (source audit of 2026-10-10)
+
+Added by the source audit of 2026-10-10 (details and the statement-by-statement table: `../SOURCE_AUDIT_2026-10-10.md`). No model value was changed. "P5" in sections 4 and 7 is source S15. Decision ids D1-D3 follow Lior's list in the root `REQUESTS_FOR_LIOR.md` (D2 = offshore flattening, D3 = beach date); BD1-BD10 are decisions of this model.
+
+### 9.1 How each source was used, by model element
+
+| Source | Read off / how | Accuracy of the reading | Feeds | Role |
+|---|---|---|---|---|
+| S1 Esri Wayback 2011-09-28 | outline of the bag field traced by hand on the z18 mosaic (25 vertices), checked with an independent per-channel stretch; georeference by Web-Mercator bounds (E2, E3) | +-1 m (W, E, S edges), +-1.1 m (shoreward edge); frame +-5 m | plan; frame; surf line y = 0 | primary |
+| S2 Rendle and Davidson 2012, Fig. 9 | colour read of the printed DGPS plot by nearest colour-bar colour (E5), gridlines to OSGB36 (E4), resampled to 1 m then 2 m grid, thin-plate-spline ambient seabed (E9); profiles and text for crest, flank, damage | +-0.2 m height (colour read), position +-5 m (Helmert) | seabed y about 100-305 m; under-reef seabed; evidence layer (April 2011 surface); flank slope (A7); crest check | primary |
+| S3 Mead et al. 2010 | design crest "0.5 m above chart datum"; Table 1 water levels typed in (to 0.01 m); 13,000 m3 and 54 containers; design plan Fig. 3a read by eye for the design depth | table values exact; Fig. 3a +-0.3 m | crest (A6), tide levels (E7), volume check, validation 7 | primary |
+| S4 NTSLF | CD 1.40 m below ODN (table row Bournemouth) | 0.01 m as printed | datum conversion E6 | primary for the offset |
+| S5, S14 EMODnet | DTM cell means (WMS 2026-10-05; ERDDAP 2026-10-06); only the cross-shore SLOPE 0.0141 is used | slope +-0.0010; levels 1.1-3.1 m deeper than the survey, so NOT used | zone 5 slope (E15); datum plausibility (A3); validation 13 | slope used, levels rejected (BD7) |
+| S6 Herbert et al. 2017 | text: 0-5 m CD, exposed at low springs, 220 m offshore, 210 m east of pier | text | A3 evidence, crest exposure check | context and validation |
+| S7 project shape.json | verified polygon (4,042 m2) | +-1 m | plan | primary (derived from S1) |
+| S8 riverlevels.uk | usual range -1.08 to +1.11 m ODN, mid-range +0.02 | 0.01 m; web page of unknown method | A4 (ODN = MSL +-0.1 m) | weak support, assumption A4 |
+| S9 Garmin Navionics | shoal areas by colour class on z18 screenshots; soundings read by eye; z16 nearshore boundaries scanned along 31 lines; 11 offshore soundings read by eye | areas +-10 %; soundings +-0.05 m, position +-1 m (z18) / +-15 m (z16) | validation 5, 6, 11, 12 only; NOT used to build any cell | validation only |
+| S10, S11 | text statements (SonarChart policy; tide range, double high water) | text | caveat on S9 independence; tide context | context |
+| S12 Wikipedia, Leisure Opportunities, Newsroom.co.nz | dated history | secondary | section 3.10, viewer history table | context only, not in any number |
+| S13 CCO profiles 2010-04-20 | 11 lines, OSGB36 converted with the Fig. 9 chain, linear across lines (E13), CCO offset decayed over 40 m (E14) | beach +-0.36 m; blend +-0.5 m | beach (zone 3), blend (zone 4), datum test of A3 (validation 9) | primary for the beach; independent datum test |
+| S15 Rendle 2016 | text and figures read 2026-10-10 | page/figure per row in `../P5_RENDLE2016_NOTES.md` | none; validation 2-4 and BD10 | validation only |
+| Gemini folder | nothing used | - | - | rejected (standing rule 2) |
+
+### 9.2 Assumption register (A1-A16): effect and replacement
+
+| Id | Assumption (short) | Why | Effect if wrong | What would replace it |
+|---|---|---|---|---|
+| A1 | footprint of 2009 = footprint seen on 2011-09-28 | same envelope in the 2025 image (S7); damage lowered crests, not the envelope | edge shift of a few m on the offshore half; area +-5 % (1 m on a 120 x 45 m field) | 2009-2010 aerial image (Google Earth Pro) |
+| A2 | Fig. 9 is a faithful smooth rendering of the DGPS surfaces | author-made plot | features finer than 3-5 m untrustworthy; +-0.2 m | the council xyz survey |
+| A3 | Fig. 9 zero = chart datum | CCO test +0.03 m vs -1.37 m (validation 9); crest and design depths; Navionics areas; Rendle Fig. 5.6 content | all absolute survey heights +-1.4 m; relief, volume and shape unchanged | CDI 117452 metadata or the survey report; viewer switch shows the alternative |
+| A4 | ODN = MSL within +-0.1 m | S8 range centred +0.02 m ODN | all MSL heights +-0.1 m; crest sigma 0.32 m | NTSLF/BODC mean level 2009-2011 |
+| A5 | pier gauge levels apply at the reef 1.5 km away | same bay, no local gauge | effect not quantified (no local record) | local tide record |
+| A6 | built crest flat +0.5 m ACD (Mead, Rendle p. 70) | designers' value, Oct 2009 tops +0.05 to +0.65 m | +-0.3 m crest; volume 12,554 / 13,625 m3 at crest +0.2 / +0.8 (-4 % / +4 %); crest cover and the dry-at-low-water statement | Oct 2009 as-built survey |
+| A7 | flanks 1:3, 1 m relief at the outline | Fig. 9 section 1:3-1:4 (SW), 1:5-1:7 (NE), median 1:5.8 | +-30 %; volume 14,184 / 12,161 m3 at 1:2 / 1:4 (+8 % / -7 %); r0 0.5 / 1.5 m: 11,640 / 14,678 m3 | Oct 2009 survey grid |
+| A8 | seabed under the reef = spline of the surroundings | no pre-reef survey | +-0.3 m (volume about +-9 % on 3.2 m mean height); scour ignored | pre-construction survey |
+| A9 | Navionics depths are chart datum; same structure | viewer states no datum | validation 5, 6, 11, 12 shift by up to 1.4 m (they are not model inputs) | Navionics app datum setting |
+| A10 | beyond the survey the seabed is spline / CCO / EMODnet slope; y = 0 line drawn at unknown tide | no data | zone dependent, 0.5 m (zones 4, 5), waterline +-9 m | CCO or UKHO nearshore survey |
+| A11 | static water level | simplification | tide time curve, set-up, surge and double high water absent | tide table for a photo date |
+| A12 | smooth 1 m heightfield, 54 containers not modelled | layout unpublished (Rendle: no as-built plan) | no texture, no overhangs; silhouette matching only | as-built layout drawing |
+| A13 | S1 pixel scale = Web-Mercator ground scale | latitude formula; pier check measured 167.5-178 m for a 180 m pier | up to -7 % on lengths at the worst reading, about -1 % at the best | pier survey length |
+| A14 | CCO 2010-04-20 beach represents 2009-2011 | the only date with all 11 lines | 0.28-0.49 m, waterline 7-12 m (D3) | other CCO dates (in `src/cco_profiles/`) |
+| A15 | transition rows = spline + decayed CCO offset | no data in y 40-100 m | +-0.5 m | nearshore survey |
+| A16 | zone 5 flat alongshore, 1.41 % slope, contours parallel to x | EMODnet slope; D2 | +-0.5 m r.m.s.; residual trend -0.44 +- 0.09 m per 100 m of x; step 1.13 m at x edges | offshore survey |
+
+### 9.3 Decision register
+
+| Id | Choice | Options | Decided by, date | Reason |
+|---|---|---|---|---|
+| BD1 | State drawn | as-built 2009 / April 2011 damaged / design | Lior rule 4-5 (CLAUDE.md), applied 2026-10-05 | default = built version; survey surface kept as evidence layer |
+| BD2 | Outline source | Wayback 2011 trace / Fig. 9 relief / Mead design plan | agent, 2026-10-04/05 | only plan-view trace with date and checks; agrees with April 2011 survey (IoU 0.90) |
+| BD3 | Datum of Fig. 9 zero | chart datum / ODN | agent, 2026-10-05 (A3); supported 2026-10-07 and 2026-10-10 | evidence list in A3; viewer switch for the alternative |
+| BD4 | ODN to MSL | ODN = MSL (A4) / local MSL 1.66 m (Rendle p. 70) | agent; 1.40 kept 2026-10-10 | official NTSLF value; 1.66 listed as open question |
+| BD5 | Seabed extended to beach and offshore | camera zoom / extend grid | Lior request 2026-10-07 ("make the 3D larger"); agent chose CCO data | measured source available (S13) |
+| BD6 | Beach date | 2010-04-20 (11 lines) / autumn 2009 (2 lines) | agent 2026-10-07; Lior's D3 default 2010-04-20 | all lines exist; variability 0.1-0.5 m |
+| BD7 | EMODnet use | slope only / levels too | agent 2026-10-07 | levels 1.1-3.1 m deeper than survey, no reef in the DTM |
+| BD8 | D2 offshore flattening | keep spline tilt / flatten row y = 380 | agent proposed, applied 2026-10-10, Lior did not object | tilt unsupported by EMODnet; r.m.s. 1.20 to 0.51 m |
+| BD9 | Crest value | design 0 / 0.3 m CD, built +0.5 m CD | agent 2026-10-05; relabelled built 2026-10-10 | Rendle p. 70 states built crest; value unchanged |
+| BD10 | Use of Rendle 2016 | replace outline or seabed / validate only | agent 2026-10-10 | no as-built plan in P5; Fig. 5.7 is the same survey as Fig. 9 |
+| BD11 | Navionics | model input / validation only | agent 2026-10-05 | datum and date unknown, A9 |
+| BD12 | Original survey and reef cells untouched in the extension | rebuild all / keep | agent 2026-10-07 | earlier results and the page "All (compare)" view stay valid |
+
+### 9.4 Confidence per element
+
+| Element | Level | Reason |
+|---|---|---|
+| Plan | medium | three plan sources agree (+-1 m) but area is 60 % below the repeated "about 1 ha" |
+| Crest | medium | built +0.5 m CD (Rendle p. 70, Mead) vs Oct 2009 tops +0.05 to +0.65 m: +-0.3 m; flat crest is idealised |
+| Seabed (survey part) | medium-high for relief, medium for absolute height | +-0.2 m read; datum A3 supported by two independent tests |
+| Beach, nearshore | medium | measured CCO, +-0.36 m, other date than 2011 |
+| Zone 4, zone 5 | low-medium | interpolated / extrapolated, +-0.5 m |
+| Tides | medium | pier gauge 1.5 km away, ODN = MSL assumed (A4, A5) |
+| Volume | medium | 13,119 m3 vs about 13,000 (+0.9 %); about 16 % propagated |
+| Overall | **medium** | unchanged; the survey datum and the as-built flanks are assumptions |
+
+### 9.5 Processing methods not obvious from the text
+
+Hand tracing (outline); colour-bar nearest-colour classification (Fig. 9); Helmert OSGB36-WGS84 with pyproj; template matching between the two Fig. 9 maps (inpainting of the section line, TELEA); Gaussian smoothing sigma 1 m; thin-plate spline (scipy RBFInterpolator); signed-distance loft (E10); smoothstep decay (E14); headless-Chrome previews (`scripts/render_previews.py`). The scripts are in `scripts/` and `build_3d.py`; each number's script is named in `SOURCES_3D.md`. Artificial-intelligence tools: no output of Gemini is used; image reading, scripts and text were produced by Claude agents (project sessions 2026-10-05 to 2026-10-10) and every value was checked against its original source as logged in `SOURCES_3D.md`.

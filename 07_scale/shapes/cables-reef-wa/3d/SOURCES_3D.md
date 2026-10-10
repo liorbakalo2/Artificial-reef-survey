@@ -34,3 +34,20 @@ Run started 2026-10-10 (network blocked all run: only repo files used). Registry
 
 ## Registry results (for_3d_check) written 2026-10-10
 img-26: used (primary, plan + levels). img-05: re-trace, area +4% vs img-26 at the assumed scale. img-06: extension triangle 347 m2, 0.92 m mean fill vs the 320 m3 text. img-07: bed gradient and scale bar read; concept outline differs from the built design. img-20: orientation and the 270 m offshore position; V 122 x 76 m (assumed 100 m grid) agrees with img-26. img-23: same as img-20 (upscale). img-17: oblique, not traceable; ride-length check inconclusive (crest arms 49 / 52 m). img-10: qualitative section, consistent with the modelled centreline section (gentle ramp on the offshore side, steeper inner side), no numbers.
+
+## Sources and how each was used (audit 2026-10-10)
+| source | location | used for | how | accuracy | status |
+|---|---|---|---|---|---|
+| Blacka et al. (2013) WRL TR 2012/08, https://doi.org/10.4225/53/58e1dc7368c7a (Lior's copy, papers/) | Fig A.2 p.93 (PDF p.105) [img-26] | plan, scale, crest and set-out levels, contours, slopes | silhouette traced by hand-picked vertices; scale from four printed dimensions; labels read by eye | scale +-3 %, area +-6 % | primary |
+| same | A.1.1-A.1.5 p.92-93, Tables 4.2-4.4 p.65-69 | 140 x 70 m, 275 m, 3.0-6.0 m depth, crest 1.0-2.5 m below MSL, 5,500 m3, tide range 0.8 m | read from text; compared with the traced model (validation) and 5,500 m3 used to fit the bed (A3) | 'approximately' | validation + one fitted input |
+| Pattiaratchi (1999) CWR UWA ED1483CP, http://joas.free.fr/studies/bei/g2s/reefdesign.pdf (mirror, accessed 2026-10-05) | p.2-4, Fig 1, 3-7 [img-15..23] | MTL 0.78 m above datum, 3 m contour extension, 1:20 slope to the 1 m contour, 250 m offshore, 45 deg peel angle, Fig 7 plan | text read; Fig 7 V outline traced (18 vertices, 100 m grid assumed A8) | Fig 7 +-1 grid cell | datum + cross-check |
+| Raised Water Research (2019) Cables Reef, https://raisedwaterresearch.com/spot/artificial-reef/australia/western-australia/cables-reef/ (accessed 2026-10-06) | 'original design' [img-05], 'additional fill area' 320 m3 [img-06], Pitt 'Cables Drawing' [img-07], side view [img-10], stats images [img-11..13] | img-05 re-trace check; img-06 extension; img-07 bed gradient 1:30 and concept version; img-10 qualitative section check; img-11..13 context only | img-06 triangle registered on P2, P1; img-07 contour rows read with printed scale bar | extension +-30 % | secondary |
+| Mead and Borrero (2011) Coasts and Ports 2011, https://search.informit.org/doi/10.3316/informit.715072832934166 (Lior's copy) | p.2 | 5,000 m3 (sensitivity of the bed fit) | text read | - | comparison only; it says limestone, Blacka says granite (unresolved) |
+| Wikipedia, Multi-purpose reef (accessed 2026-09-24) | card R1 | 3,500 m3 (sensitivity of the bed fit) | read | weak secondary | comparison only |
+| Reef card 02_research/reefs/cables-reef-wa.json | R2, R5 | '> 10,000 t' (density check 1.82 t/m3), Pitt 2009 'crest ~1.5 m below lowest tide' | read | R5 was blocked, second-hand | validation only |
+| Pitt, A. (2009) assessment, via the card (SurfingRamps.com.au) | card dossier | crest depth cross-check | second-hand, original not read | - | context only |
+| Lyons (1992) UWA design report | via Blacka Fig A.2 | origin of the design drawing | not read | citation details not confirmed | cited via Blacka |
+| Ranasinghe et al. (2001); Pattiaratchi et al. (2003) COPEDEC VI Colombo 15-19 Sep 2003; Bancroft (1999) UWA thesis | cited by Blacka / dossier | nothing in the model | not read | - | wanted for as-built levels (REQUESTS_FOR_LIOR.md) |
+| Gemini folder | - | not used (not in this repo) | - | - | rejected by rule 2 |
+| Own scripts ../scripts/ (trace_a2.py, compute_shape.py, make_overlays.py, make_shape_json.py) and build_3d.py | - | every derived number | python (numpy, scipy, skimage, shapely) | - | reproducible |
+Assumptions A1-A11 and decisions X1-X8 are listed in METHODS_3D.md sections 9 and 10.

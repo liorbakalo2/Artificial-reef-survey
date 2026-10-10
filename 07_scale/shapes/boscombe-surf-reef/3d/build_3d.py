@@ -257,6 +257,8 @@ def main():
                       "Raw copies: ../src/cco_profiles/.") % ex.CCO_DATE, "kind": "data"},
         {"id": "S14", "short": "Project EMODnet feasibility report (integration plan 9.1, comparison 6)",
          "citation": "This project (2026) 07_scale/bathymetry/emodnet/REPORT.md, sections 6 (comparison with the Boscombe model) and 9.1 (integration plan: far-field slope -1.41 % +-0.10 %).", "kind": "project"},
+        {"id": "S15", "short": "Rendle (2016) PhD thesis, University of Plymouth (validation only)",
+         "citation": "Rendle, E.J. (2016) The Environmental, Social and Economic Impacts of an Artificial Surf Reef - The UK Experience. PhD thesis, University of Plymouth. https://pearl.plymouth.ac.uk/bms-theses/412/ (PDF supplied by Lior, read 2026-10-10; printed page = PDF page - 3). Used for validation only, no model value changed: built crest about +0.5 m CD (p. 70), design 0 m CD (Table 4.4) / 0.3 m CD (Fig. 5.3), design footprint 4,474 / 5,450 m2, design volume 11,900 / 12,200 m3, bag counts 32 / about 46; no as-built plan in the thesis. Notes: 07_scale/shapes/boscombe-surf-reef/P5_RENDLE2016_NOTES.md.", "kind": "text"},
     ]
 
     A_ = lambda a: float(a)

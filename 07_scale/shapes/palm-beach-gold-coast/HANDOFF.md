@@ -141,3 +141,6 @@ Done: steps 1-5 of the task (re-check table, no geometry change, provenance/docs
 marked CHECKED, this HANDOFF, status entry). `3d/build_3d.py` last run rc = 0 (log /tmp only); `model.js` and `docs.js` load in node. Not done: viewer
 screenshots (Chrome script is Windows-specific and needs three.js from the CDN, blocked here); camera matching; anything needing the network.
 No decision for Lior is required; REQUESTS_FOR_LIOR.md (root) was not changed.
+
+## 8. SOURCE AUDIT 2026-10-10
+`SOURCE_AUDIT_2026-10-10.md` (statement -> source table, mismatches, citations). METHODS_3D.md now has 2.2 (how each source was used), A12-A14, 3.9 decisions DEC1-DEC15, 3.10 tools/AI statement, three added references; docs.js regenerated (model.js identical). IMAGES.md stale "3D check pending: YES" lines fixed. Open: Prenzler 2022 DOI/pages not confirmed; card volume/offshore wording differs (audit sec 2).

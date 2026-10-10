@@ -31,6 +31,30 @@ Not used: all values attributed to the Gemini folder; the concept design volume 
 
 Concept design 2013-2015 (DHI; 175 x 144 m, 53,319 m3, offshore toe 560 m from shore in 11.4 m); detailed design (Royal HaskoningDHV) moved the reef about 50 m shoreward and reduced it to 160 x 80 m (Raised Water Research, 2019); construction April/May-September 2019 (Hall/Heron joint venture, 60,000 t, barged from the Port of Brisbane); engineering certification September 2019; later condition "comparable to the as-constructed certification" (EPW 2020); monitoring to 2023 stable (Prenzler et al. 2022). Searched for top-ups, repairs, extension, damage or removal and for the effect of cyclone Alfred (March 2025): none found; the dark mound is present on the Esri image of 2025-12-01. **The viewer shows the as-built state, with the caption "no later change found (searched 2026-10-05)".**
 
+### 2.2 How each source was used (added by the 2026-10-10 source audit)
+
+Role: PLAN, CREST, SEABED, TIDES, VOLUME feed the model; CHECK = validation only; CONTEXT = background only; REJECTED = not used. Registry ids (`palm-beach-gold-coast-img-NN`) are in `SOURCES_3D.md`.
+
+| id | what was read | how (method) and accuracy | model element / role |
+|---|---|---|---|
+| s7 Bluecoast/Nearmap aerial | scale from the 0-25-50 m bar (8.50 px/m), north arrow, outer outline, innermost slot, 10 contour lines | digitised by colour/line tracing (`contours_s7.py`, `shape.json` METHOD.md); outer line equals the City polygon (IoU 0.995, Hausdorff 0.55 m, area +0.25 %); line elevations NOT printed (A3) | PLAN (primary), CREST outline, reef surface |
+| s1 City GIS polygon | 154-vertex asset polygon, attributes | vector read from the FeatureServer query (0.00 m re-run difference); survey date and method not stated | PLAN cross-check; attributes HEIGHT_M 5 / VOLUME 33,000 = CHECK, unresolved (4.7) |
+| s3 Esri 2025-12-01 | waterline (y = 0), shoreline bearing 334.3 +-2 deg, rock visible | georeferenced from Web-Mercator tile bounds (0.527 m/px); capture date from the Esri identify DATE field (best effort); tide stage unknown (A7) | FRAME, state check |
+| s4 Hunt et al. 2022 Fig 1 | independent reef icon | scaled with 4 control points matched to s3; area +0.4 % vs s7 | CHECK (plan) |
+| s5 Hunt et al. 2022 Fig 4 | multibeam picture of the built reef | read by eye, colour ramp has no scale | CONTEXT (qualitative) |
+| p1 Prenzler et al. 2022 | "crest 1.5 m below mean sea level", 6-8 t rock, stable | text, abstract only (full paper not read) | CREST (one of four sources), state |
+| s8 EPW 2020 / c1 City brochure 2020 | 160 x 80 m, ~270 m offshore, crest 1.5 m below "average water level", 60,000 t, rock classes | text; nominal rounded figures | CREST, dimension CHECK, tonnage |
+| p2 Nettle 2019 | freeboard 1.5 m at MSL = 60 cm at LAT | journalist report of the design; gives MSL - LAT of 0.9 m | CREST (datum), CHECK of t1 |
+| s6 Mortensen et al. 2015 | slopes 1/12, 1/5 (Fig 3), crest 105 deg, 60 m; Fig 6a pre-reef survey profile, 13 labels 3.5-11.5 m | text/figure read by eye; labels read at y = 3050 m; concept (a different, larger reef, not built) | CHECK of slopes and seabed profile (RMS 0.33 m, 4.9); not a model input |
+| t1 MSQ 2026 | tidal planes, Gold Coast Seaway | table values; epoch 2010-2029; Palm Beach itself not tabulated (A10) | TIDES |
+| t2 MSQ 2014 | AHD = LAT + 0.760 m | read at the source (via the bathymetry report); benchmark only | AHD note, CHECK (A11) |
+| n1 Navionics SonarChart | iso-depth lines 1-10 m (shading boundaries) | headless-browser screenshots, boundaries digitised by `navionics_isolines.py`, georeferenced to the canonical frame; accuracy +-0.5 m assumed (no source states one); datum inferred (A5) | SEABED (primary) |
+| n2 Navionics nautical layer | label "FISH HAVEN 1.5MT" | read by eye | CHECK only; not used for the crest (DEC13) |
+| d1 Daniels et al. 2022 | buoy depths, Table 1 (datum not stated) | read from table; PBO3 compared with the extrapolated seabed (+0.62 m) | CHECK |
+| g1 GEBCO 2024 | -13 m in one 450 m cell | WMS GetFeatureInfo | CHECK, too coarse; not used |
+| Raised Water Research 2019, ICM 2024 (Salyer), Hunt 2022 text | chronology (design moved ~50 m shoreward, built Apr-Sep 2019, certified Sept 2019, sand 470,000 m3) | text | CONTEXT, state drawn (2.1) |
+| Gemini folder (another AI) | 160 x 80 m and 270 m figures, chevron polygon, wrong coordinates (1.2 km off) | the figures were re-confirmed in s1/s8/c1 by us; the polygon and coordinates were rejected (`../VERIFY.md`) | REJECTED as a source; no Gemini value is in the model |
+
 ## 3. Methods
 
 ### 3.1 Coordinate frame, handedness and datum
@@ -131,6 +155,35 @@ The water surface is a flat plane at the selected level (LAT, MLWS, MLWN, MSL, M
 | A9 | crest level -1.5 m uniform over the 59 x 6 m slot | design statements give one number; apex/arm variation not published | none known |
 | A10 | tide planes of the Gold Coast Seaway apply at Palm Beach (20 min earlier) | MSQ note for ocean beaches | +-0.1 m |
 | A11 | AHD is 0.12 m below MSL at the Seaway (0.88 - 0.76) | MSQ 2014 standard-port datum levels (read at the source; benchmark only) | only the AHD note; the geometry is MSL-based |
+| A12 | the 10 contour lines of s7 show the as-built surface, not the design | image sits on a page about the built reef; the outer line equals the council asset polygon | if design lines, the reef surface differs by the (unknown) construction tolerance |
+| A13 | Navionics seabed represents the bed at the 2019 construction (no change from the 2013-14 survey, nourishment 2017 ignored) | none; the chart is undated | bed up to about 0.5 m shallower = volume +-28 % (5) |
+| A14 | the Mortensen 2015 Fig 6a depths are metres below AHD | usual for Australian design surveys, not stated | validation only; the RMS test (4.9) moves by 0.12 m |
+
+### 3.9 Decisions (numbered; added by the 2026-10-10 source audit)
+
+"Who/when" is as recorded in `../HANDOFF.md`, `../VERIFY.md` and this note; where a decision follows a standing rule of Lior's (CLAUDE.md rules 4 and 5) it says so. No decision here is one of Lior's open D-items.
+
+| # | decision | options considered | who / when | reason |
+|---|---|---|---|---|
+| DEC1 | default plan outline = outer contour of the aerial s7 (= City polygon s1 = toe) | s1 polygon; Esri visible-rock patch (19-38 % of footprint); 160 x 80 m rectangle; Gemini chevron | agent 2026-10-05, rule 4 (measured survey > design > photo trace) | IoU 0.995 with s1; Esri shows only rock above the visibility depth |
+| DEC2 | long axis 109.6 deg true, about 45 deg to the shore | earlier text-derived schematic (alongshore) | agent 2026-10-05 | measured on s7, s4 (axis 108-110 deg) and the City polygon |
+| DEC3 | state drawn = as built May-Sept 2019, one state, caption "no later change found" | add a later state | agent 2026-10-05; rule 5 | monitoring to 2023 and Esri 2025-12-01 show no change |
+| DEC4 | concept design (Mortensen 2015) not modelled | model SCS A/B/C | agent 2026-10-05 | a different, larger reef that was not built; used for checks only |
+| DEC5 | crest -1.5 m vs MSL; the 0.12 m AHD/MSL difference is not applied | -1.5 AHD (concept); -1.38 AHD | agent 2026-10-05, re-affirmed 2026-10-10 | four sources say below MSL / average water level; 0.12 m is inside the +-0.2 m crest uncertainty |
+| DEC6 | z = 0 at MSL; Gold Coast Seaway tide planes, local tides only | Haifa preset; Snapper Rocks planes | agent; rule 5 | the model shows the local site; Seaway is the nearest standard port (A10) |
+| DEC7 | seabed = thin-plate spline through Navionics iso-lines outside a 25 m buffer plus toe elevations; Navionics-only surface kept as check | Navionics only; plane; GEBCO | agent 2026-10-05 | chart contours bend around the reef; sensitivity +-0.35 m under the crest (A6) |
+| DEC8 | chart datum taken as LAT | MLWS, MLWN, AHD, MSL | agent 2026-10-05 | lowest RMS vs toe elevations (4.3: LAT 0.61, MSL 1.28 m); Australian convention (A5) |
+| DEC9 | contour interval 0.5 m | 1.0 m; 0.459 m fitted | agent 2026-10-05 | fitted 0.459 +-0.003 m (4.2) is within 10 %; 1.0 m would put the seaward toe at -12.5 m |
+| DEC10 | one rock surface, envelope volume, no layers | draw core / armour / crest layers | agent 2026-10-05 | no layer thicknesses published (A8) |
+| DEC11 | council register HEIGHT_M 5 / VOLUME 33,000 not adopted; recorded as unresolved | scale the model to the register | agent 2026-10-10, reported to main | units and datum unknown; all independent seabed evidence gives a shallower seabed (4.7) |
+| DEC12 | PBO3 buoy (+0.62 m) accepted as marginal, geometry unchanged | shift the 12 m contour by 23 m | agent 2026-10-10 | the buoy datum is not stated and the seabed there is extrapolated (4.9) |
+| DEC13 | charted "FISH HAVEN 1.5MT" not used for the crest | use it | agent 2026-10-05 | probably copies the design number; chart datum unknown (7) |
+| DEC14 | all Gemini values excluded unless re-confirmed from the original source | use its footprint | rule 2 (Lior); applied by the verifier 2026-10-05 | its polygon was wrong and its coordinates 1.2 km off |
+| DEC15 | the Navionics iso-lines are read from headless-browser screenshots rather than from a data download | request the chart data | agent 2026-10-05 | no download is possible; Lior's app readings A1-A7 are requested to check it |
+
+### 3.10 Processing steps that are not direct readings, and tools used
+
+All are scripts in this folder: contour tracing (`contours_s7.py`, colour/line digitising and ranking of the 10 lines); Navionics iso-line extraction (`navionics_capture.py` screenshots, `navionics_isolines.py` boundary tracing and georeferencing); datum conversion `z_MSL = -d_chart - (MSL - CD)` (3.1, offsets from t1); reef surface by Delaunay interpolation between contour lines at `z = -1.5 - 0.5 k` m (3.4); seabed by thin-plate-spline interpolation (Duchon 1977, via SciPy; 3.5); volume by integrating `zr - zb` on a 1 m grid (3.6); regression of the contour interval (4.2). Everything is regenerated by `build_3d.py`. **AI use:** Claude agents wrote and ran these scripts and read the figures by eye; the Gemini folder (another AI) influenced nothing in the model (DEC14), and its figures were re-confirmed in primary sources. Earlier agents' estimates (the alongshore schematic of `07_scale/reefs/palm-beach-gold-coast.md`) were replaced (DEC2). Image-based checks (4.9) were done by a Claude agent from the registry images and are as accurate as a by-eye read of an uncalibrated figure.
 
 ## 4. Validation
 
@@ -221,6 +274,9 @@ The register's 5 m / 33,000 m3 lies 2.0 sigma (height) and 1.8 sigma (volume) ab
 
 - Bluecoast Consulting Engineers (c. 2020) *Palm Beach artificial reef - Nearmap aerial with survey contour lines (AR_aerial_Nearmaps.jpg)*. https://www.bluecoastconsulting.com.au/artificialreefs. Accessed 2026-10-05. Private research copy; reuse rights unchecked.
 - City of Gold Coast (2026) *Artificial Reef feature layer, OBJECTID 4638*. City of Gold Coast Open Data, ArcGIS Hub. https://data-goldcoast.opendata.arcgis.com/datasets/c9d0b521374740cc9e9561b04c453736_0. Accessed 2026-10-05. CC BY 3.0.
+- City of Gold Coast (2020) *Palm Beach Shoreline Project - project overview*, brochure, June 2020, ref 19-TI-00753, pp. 8-9 (PDF pp. 10-11). goldcoast.qld.gov.au (full URL in `provenance_3d.json` source c1). Accessed 2026-10-10.
+- Daniels, R., Metters, D. and Ryan, J. (2022) Wave transformation over Palm Beach reef. *Coastal Engineering Proceedings* 37 (ICCE 2022), abstract 12702, https://icce-ojs-tamu.tdl.org/icce/article/view/12702, Table 1 and Fig 1. DOI recorded earlier as 10.9753/icce.v37.papers.63: not re-confirmed (WebSearch 2026-10-10 confirmed authors, title, article page only).
+- Maritime Safety Queensland (2014) *Standard port datum levels* (AHD above LAT, Gold Coast Seaway 0.760 m), as read in `07_scale/bathymetry/gold_coast/REPORT.md` section 3. Benchmark value only.
 - Duchon, J. (1977) Splines minimizing rotation-invariant semi-norms in Sobolev spaces. In: *Constructive Theory of Functions of Several Variables*, Lecture Notes in Mathematics 571, Springer, pp. 85-100.
 - Engineering for Public Works (2020) *Palm Beach Artificial Reef*, Issue 19, September, IPWEAQ, pp. 50-51 (page image hosted by Bluecoast: https://images.squarespace-cdn.com/content/v1/5bfcd059e2ccd1869cf36e40/1600915288822-89V2T6CKSW7PKEPCA0ZE/image-asset.png). Accessed 2026-10-05.
 - Esri (2025) *World Imagery*, zoom 18 (Maxar), capture 2025-12-01. https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9. Fetched 2026-10-04. Esri terms; private research copy.
@@ -231,7 +287,7 @@ The register's 5 m / 33,000 m3 lies 2.0 sigma (height) and 1.8 sigma (volume) ab
 - Maritime Safety Queensland (2026) *Semidiurnal Tidal Planes - 2026, height above Queensland Port Datum (LAT (1992))*. https://www.msq.qld.gov.au/_/media/tmronline/msqinternet/msqfiles/home/tides/tidal-planes/2026-semidiurnal-tidal-planes.pdf. Accessed 2026-10-05.
 - Mortensen, S.B., Hibberd, S., Kaergaard, K., Kristensen, S.E., Deigaard, R. and Hunt, S. (2015) Concept design of a multipurpose submerged control structure for Palm Beach, Gold Coast. *Australasian Coasts & Ports Conference 2015*. https://www.dhigroup.com/upload/publications/coastsea/Mortensen_2015.pdf. Accessed 2026-10-05.
 - Nettle, S. (2019) First impressions at the Palm Beach Artificial Reef. *Swellnet*, 29 July 2019. https://www.swellnet.com/news/swellnet-dispatch/2019/07/29/first-impressions-palm-beach-artificial-reef. Accessed 2026-09-24.
-- Prenzler, P., Hunt, S., Elliott-Perkins, Z. et al. (2022) Monitoring of the Palm Beach Artificial Reef. *Coastal Engineering Proceedings* 37 (abstract 12921). https://icce-ojs-tamu.tdl.org/icce/article/view/12921. Accessed 2026-10-05.
+- Prenzler, P., Hunt, S., Elliott-Perkins, Z. et al. (2022) Monitoring of the Palm Beach Artificial Reef. *Coastal Engineering Proceedings* 37 (abstract 12921). https://icce-ojs-tamu.tdl.org/icce/article/view/12921. Accessed 2026-10-05. DOI, volume pages and full author list: not confirmed (only the abstract page was read; WebSearch 2026-10-10 found no DOI).
 - Raised Water Research (2019) *Palm Beach Reef*. https://raisedwaterresearch.com/spot/artificial-reef/australia/queensland/palm-beach-reef/. Accessed 2026-10-05.
 - Snyder, J.P. (1987) *Map Projections - A Working Manual*. US Geological Survey Professional Paper 1395.
 - Virtanen, P. et al. (2020) SciPy 1.0: fundamental algorithms for scientific computing in Python. *Nature Methods* 17, 261-272.

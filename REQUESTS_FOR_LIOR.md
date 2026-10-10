@@ -216,3 +216,6 @@ What to read for every row: tap the point, read the depth (or drying height), an
 - N (Navionics app): depth at the apex (model frame (-11, 314)), inner apex (-12, 265), south tip (61, 248), north tip (-60, 268), 100 m and 300 m west of the apex; note datum. Rows 2-3 of the same file.
 - Decision/paper: datum of the Lyons design 'RL' levels (chart datum vs MSL/AHD; 0.78 m at the crest) - add to E7 (WA Department of Transport): as-built crest level and datum; also the extension size. Papers: Lyons 1992 UWA report, Ranasinghe et al. 2001, Pattiaratchi 2003.
 - Tide table: Fremantle LAT / MSL / HAT vs chart datum and AHD.
+
+### palm-beach-gold-coast (source audit, 2026-10-10) - added line
+- Paper/citation: Prenzler, P. et al. (2022) "Monitoring of the Palm Beach Artificial Reef", Coastal Engineering Proceedings 37 (ICCE abstract 12921): DOI, page range and full author list not confirmed (only the abstract page was read). Also Daniels, Metters and Ryan (2022), abstract 12702: DOI papers.63 not re-confirmed.
