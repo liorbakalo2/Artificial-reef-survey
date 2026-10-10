@@ -1282,7 +1282,7 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **added by**: narrowneck-gold-coast plan-shape trace (resume), 2026-10-06
 - **How used (update 2026-10-06)**: Traced: 7 polygons (north/south arm envelopes, two NW patches, three channel containers) -> shape.json canonical (METHOD.md Steps 2a-3).
 - **annotated versions**: 07_scale/shapes/narrowneck-gold-coast/overlays/s3_primary_trace.png
-- **How used (update 2026-10-10)**: 2026-10-10: 24 faint seaward patches (663 m2) recomputed and stored as faint_seaward_patches (not in any outline).
+- **How used (update 2026-10-10)**: 2026-10-10: 24 faint seaward patches (663 m2) recomputed and stored as faint_seaward_patches (not in any outline). Default outline of the model by Lior's decision D7 (2026-10-10).
 - **annotated versions**: 07_scale/shapes/narrowneck-gold-coast/overlays/s3_primary_trace.png, 07_scale/shapes/narrowneck-gold-coast/overlays/faint_patches_on_s3.png
 
 ## narrowneck-gold-coast-img-46 - Esri Wayback release 47963 (identify date 2022-11-06; tile set identical to releases 12428 and 20512), z19 crop of Narrowneck Reef, 0.2637 m/px (1517x1517 px)

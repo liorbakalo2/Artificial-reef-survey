@@ -52,3 +52,4 @@ NEEDS NETWORK (blocked all run: curl code 000 to raisedwaterresearch.com, servic
 
 ## 7. CHECKPOINT 2026-10-10 (end of run)
 All stages above finished except network-dependent verification (HANDOFF_STOP: network). No stage is half-written. The 'Fresh-agent run' part of METHOD.md describes the run; scripts reproduce every number.
+- Source audit 2026-10-10 done: see SOURCE_AUDIT_2026-10-10.md. METHODS_3D.md now has assumptions A1-A11 and decisions X1-X8; SOURCES_3D.md has a "how used" table; docs.js rebuilt (values unchanged); max thickness corrected to 2.5 m in text.

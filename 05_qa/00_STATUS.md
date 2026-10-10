@@ -592,3 +592,14 @@ Audit in 07_scale/shapes/prattes-reef-el-segundo/SOURCE_AUDIT_2026-10-10.md. App
 - SOURCE_AUDIT_2026-10-10.md in 07_scale/shapes/bunbury-airwave/: 29 rows, 22 ok, 6 fixed, 1 mismatch (card lat/lon ~2 km off, card read-only). Registry (21 ids) checked: files present, sha256 match, no empty fields.
 - 3d/METHODS_3D template + docs.js: added 2.2 fill disagreement (ABC "air", Tracks sand+air, Troy interview R25 "sand instead of air"; unresolved, no value changed), 2.3 how each source was used, A14, DEC1-DEC12, L12, Bakalo (2026) reference, S_Troy in viewer sources. Rebuilt for docs only; model.js changed in text fields only (checked as JSON diff).
 - Page text proposals for main (not applied): models3d_curated.json bunbury-airwave/state_short, see audit section 6. Request E5b added.
+
+## 2026-10-10 - Boscombe source audit (agent)
+Result: `07_scale/shapes/boscombe-surf-reef/SOURCE_AUDIT_2026-10-10.md`. METHODS_3D.md: stale zone-5 uncertainty (1.2 -> 0.5 m since D2) fixed; Rendle 2016 added as S15 (validation only) and S14 row added; Mead / Rendle-Davidson citation forms completed (DOIs not confirmed); new section 9 (source use by element, assumption register with sensitivities, decision register BD1-BD12, confidence per element, methods/AI statement). build_3d.py gets source S15; model.js/docs.js rebuilt (text only; reef, stats, levels identical; seabed = D2 state). Page text edits and card mismatches listed for main in the audit file section 3. No model value changed.
+
+## 2026-10-10 - cables-reef-wa source audit
+SOURCE_AUDIT_2026-10-10.md written; METHODS_3D/SOURCES_3D extended (assumptions A1-A11, decisions X1-X8, how-used table), docs.js rebuilt, PAGE_TEXTS_FOR_MAIN.json texts sourced. No model values changed. Open: citations for Bancroft 1999, Pattiaratchi 2003, Ranasinghe 2001, Lyons 1992 (REQUESTS_FOR_LIOR.md).
+
+## 2026-10-10 - borth-coastal-defence-reef source audit (fresh agent)
+- 07_scale/shapes/borth-coastal-defence-reef/SOURCE_AUDIT_2026-10-10.md: 34 statements, 19 ok, 10 fixed, 2 open, 3 mismatches explained (2 are card wording about the superseded two-reef design). No model value changed; 3d/model.js byte-identical after rebuild.
+- New 3d/REGISTER_3D.md (sources with how-used, methods, assumptions A1-A14, decisions DEC1-DEC14, confidence) built into docs.js and shown in the viewer Methods tab; METHODS_3D.md pointer + Blacka reference; shape.json ref6 "Hansford, Mark"; registry img-24 note (LiDAR mask). Registry has 31 rows (HANDOFF said 30). Viewer logic tested with node only (no Chrome).
+- Page text edits for main: none needed. Card (not edited): `size` quotes Blacka's superseded-design dimensions.

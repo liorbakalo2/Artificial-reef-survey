@@ -1,6 +1,6 @@
 # HANDOFF - borth-coastal-defence-reef (shape verifier 2026-10-06; 3D model finished 2026-10-07; seabed fix D6 applied 2026-10-07; for the page builder and any later agent)
 
-Read this first. Open other files only for one fact (section/page given). Source ids = shape.json sources/references (sat2024, drg1020-1023, lidar2022, hrpp576f2, ref1-ref10 ...); registry ids = 03_images/reefs/borth-coastal-defence-reef/images.json (-img-NN, 30 rows).
+Read this first. Open other files only for one fact (section/page given). Source ids = shape.json sources/references (sat2024, drg1020-1023, lidar2022, hrpp576f2, ref1-ref10 ...); registry ids = 03_images/reefs/borth-coastal-defence-reef/images.json (-img-NN, 31 rows).
 The verifier's HANDOFF (2026-10-06) is superseded by this file; its facts are kept below (sections 3.1-3.4) and updated.
 
 ## 1. Status per stage
@@ -10,7 +10,7 @@ The verifier's HANDOFF (2026-10-06) is superseded by this file; its facts are ke
 | verify (shape.json status "verified") | done: checks 1-7 in VERIFY.md | 2026-10-06 | HIGH: two mounds clearly visible on four geo-referenced images; outline agrees with the georeferenced Royal Haskoning construction plan (position 0.3-4 m, angle 1-3 deg) and with the 2022 LiDAR; area depends on the edge definition (now 3 versions) |
 | outline versions | shape.json outline_versions (lidar_2022 DEFAULT, design_1020, sat_2024), default_outline "lidar_2022", versions_info; canonical.polygons_m unchanged (traced 2024 polygon) | 2026-10-07 | Lior chose the LiDAR default 2026-10-06 (VERIFY.md line) |
 | 3D model | BUILT, then seabed fixed (D6, 2026-10-07): 3d\model.js (660 kB), index.html (viewer), docs.js, METHODS_3D.md (8 sections; D6 block in 3.3), SOURCES_3D.md, REQUESTS_FOR_LIOR.md, previews, annotated A1-A10; pre-fix files in 3d\archive\pre_D6\ | 2026-10-07 | MEDIUM: plan and crests high; seabed medium-low (design bed -4.0 +-0.4 m, hand-read Fig 2 -3.0 and -4.0 contours, 9 assumed -4.0 bridge/extension nodes); sea floor now follows the Fig 2 -4.0 contour (was 0.89 m deeper, D6) |
-| image registry | 30 images; all pending_3d rows closed with result lines; check_registry.py exit 0 | 2026-10-07 | rows 26-29 Navionics series (11 files each), 30 = seabed source map |
+| image registry | 31 images (img-31 added 2026-10-10, context only); all pending_3d rows closed with result lines; check_registry.py exit 0 | 2026-10-07 | rows 26-29 Navionics series (11 files each), 30 = seabed source map |
 | page build | nothing done here; shape.json and 3d\ are ready (see 6) | - | - |
 
 ## 2. Key decisions and why
@@ -96,3 +96,5 @@ Values AFTER the D6 seabed fix. Before it (first build): 31,336 / 30,091 / 26,40
   3. BOSCOMBE D2 (not started): follow _agent_briefs/task_seabed_fixes.md "Boscombe, D2" and 07_scale/shapes/boscombe-surf-reef/HANDOFF.md item 12 and open issue 1; archive to 3d/archive/pre_D2/ first; flatten the offshore extension alongshore (row y = 380 and seaward) keeping the EMODnet cross-shore gradient; reef zone and beach unchanged; expect Navionics offshore r.m.s. 1.20 -> about 0.5 m; check the reef volume and crest numbers do not change and the alongshore trend is about 0. Beware the Borth lesson: check that no node or clamp silently ignores part of the grid, and compare volumes before/after.
   4. Optional later: Navionics-app / Google Earth readings (3d/REQUESTS_FOR_LIOR.md); Aberystwyth Z0 / HAT.
 
+## 8. SOURCE AUDIT 2026-10-10
+SOURCE_AUDIT_2026-10-10.md (34 statements: 19 ok, 10 fixed, 2 open, 3 mismatches explained; no model value changed, model.js byte-identical). New 3d/REGISTER_3D.md (source register with how-used, methods, assumptions A1-A14 with effect, decisions DEC1-DEC14, confidence per element) is built into docs.js and shown in the viewer's Methods tab (button 2); build_3d.py includes it. Open: Hansford NCE article not re-found online (REQUESTS); Aberystwyth Z0/HAT; oval length 38 vs 46 m (DEC11); viewer not render-checked in a browser (no Chrome).
