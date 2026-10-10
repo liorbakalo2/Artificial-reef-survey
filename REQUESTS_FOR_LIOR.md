@@ -219,3 +219,4 @@ What to read for every row: tap the point, read the depth (or drying height), an
 
 ### palm-beach-gold-coast (source audit, 2026-10-10) - added line
 - Paper/citation: Prenzler, P. et al. (2022) "Monitoring of the Palm Beach Artificial Reef", Coastal Engineering Proceedings 37 (ICCE abstract 12921): DOI, page range and full author list not confirmed (only the abstract page was read). Also Daniels, Metters and Ryan (2022), abstract 12702: DOI papers.63 not re-confirmed.
+- **E5b (Bunbury source audit 2026-10-10):** (a) Troy interview of 8 Oct 2026 (R25): please say whether it was recorded or can be transcribed, and ask which design was in the water in Dec 2019 (sand slurry only, or sand + air) and what "final design" means. (b) Authors/bylines of ABC News 2019-12-16 (story 11803228) and Tracks Magazine 2019-11-15 "Airwave set for live trial at Bunbury" not confirmed (search did not return them).

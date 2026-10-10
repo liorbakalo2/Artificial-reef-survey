@@ -149,7 +149,7 @@ def main():
                      '(2) Renewal design Option 2 (2017; Corbett et al. 2023 Fig 2): the layout the 2017-18 works followed, drawn to the -6 m AHD contour (13,941 m2); the north reef was almost fully achieved, the south reef and the bridge only partly. '
                      '(3) The 2004 revised design (13,631 m2): the reef BEFORE the 84 containers of 2017-18. (4) The 2011 survey relief zone (4,922 m2; Jackson et al. 2012): also pre-renewal, no depth legend. '
                      '(5) Navionics chart shoals shallower than 4.0 m (537 m2): indicative position check only, not a footprint, no solid is drawn. Design outlines are placed to +-15 m and are envelopes larger than the container field. '
-                     'Decision D7 (photo vs Option 2 as default) is open with Lior; the recommendation is to keep the photo.')
+                     'Default = decision D7 by Lior, 2026-10-10 (photo trace; Option 2 stays a toggle).')
 
     # ------------------------------------------------------------------ validation numbers
     stats = {}
@@ -213,6 +213,12 @@ def main():
     docs = {}
     for key, fn in (('methods_md', 'METHODS_3D.md'), ('sources_md', 'SOURCES_3D.md')):
         p = os.path.join(HERE, fn); docs[key] = open(p, encoding='utf-8').read() if os.path.exists(p) else ''
+    # sections of METHODS_3D.md shown as their own tabs in the viewer (source audit 2026-10-10)
+    import re as _re
+    for key, head in (('sources_use_md', '### 2b.'), ('assumptions_md', '### 3.6 '), ('decisions_md', '### 3.8 ')):
+        m_ = docs['methods_md']; i_ = m_.find(head)
+        if i_ >= 0:
+            j_ = _re.search(r'\n#{2,3} ', m_[i_ + 4:]); docs[key] = m_[i_:i_ + 4 + j_.start()] if j_ else m_[i_:]
     with open(os.path.join(HERE, 'docs.js'), 'w', encoding='utf-8') as f:
         f.write('window.REEF_DOCS = '); json.dump(docs, f, ensure_ascii=False); f.write(';\n')
 

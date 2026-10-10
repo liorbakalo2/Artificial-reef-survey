@@ -706,7 +706,7 @@ function md(src) {
   }
   return out.join('\n');
 }
-const docTabs = [['methods_md', 'Methods'], ['sources_md', 'Sources log'], ['requests_md', 'Requests for Lior'], ['figs', 'Annotated figures']];
+const docTabs = [['methods_md', 'Methods'], ['srcuse_md', 'Sources & how used'], ['assump_md', 'Assumptions'], ['decis_md', 'Decisions'], ['sources_md', 'Sources log'], ['requests_md', 'Requests for Lior'], ['figs', 'Annotated figures']];
 function showDoc(key) {
   document.querySelectorAll('#subtabs button').forEach(b => b.classList.toggle('on', b.dataset.k === key));
   if (key === 'figs') {

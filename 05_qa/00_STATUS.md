@@ -587,3 +587,8 @@ Added R13 (Mead & Borrero 2011) and R14 (Blacka et al. 2013) to the .json and .m
 
 ## 2026-10-10 - Pratte's Reef source audit (agent)
 Audit in 07_scale/shapes/prattes-reef-el-segundo/SOURCE_AUDIT_2026-10-10.md. Applied J1 (MLLW kept, decision D6) and J2 (+-150 m position uncertainty, text only; model unchanged). METHODS_3D gained source "how used" table, decisions D1-D10, per-element confidence; viewer got sub-tabs. Open: S10 venue/year unconfirmed; card V size 64 m vs our 58.0 m (not edited).
+
+## 2026-10-10 - bunbury-airwave source audit (fresh agent)
+- SOURCE_AUDIT_2026-10-10.md in 07_scale/shapes/bunbury-airwave/: 29 rows, 22 ok, 6 fixed, 1 mismatch (card lat/lon ~2 km off, card read-only). Registry (21 ids) checked: files present, sha256 match, no empty fields.
+- 3d/METHODS_3D template + docs.js: added 2.2 fill disagreement (ABC "air", Tracks sand+air, Troy interview R25 "sand instead of air"; unresolved, no value changed), 2.3 how each source was used, A14, DEC1-DEC12, L12, Bakalo (2026) reference, S_Troy in viewer sources. Rebuilt for docs only; model.js changed in text fields only (checked as JSON diff).
+- Page text proposals for main (not applied): models3d_curated.json bunbury-airwave/state_short, see audit section 6. Request E5b added.
