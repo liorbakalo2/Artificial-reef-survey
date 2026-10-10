@@ -490,7 +490,7 @@ function md(src) {
   return out.join('\n');
 }
 (function mkDoc() {
-  const d = $('doc'); const keys = [['methods_md', 'METHODS_3D.md'], ['sources_md', 'SOURCES_3D.md']].filter(k => DOCS[k[0]]);
+  const d = $('doc'); const keys = [['methods_md', 'METHODS_3D.md'], ['sources_use_md', 'Sources: how used'], ['assumptions_md', 'Assumptions'], ['decisions_md', 'Decisions'], ['sources_md', 'SOURCES_3D.md']].filter(k => DOCS[k[0]]);
   d.innerHTML = '<div class="chips" id="dtabs"></div><div id="dbody"></div>';
   const show = k => { $('dbody').innerHTML = md(DOCS[k]); [...$('dtabs').children].forEach(b => b.classList.toggle('on', b.dataset.k === k)); $('t4').scrollTop = 0; };
   keys.forEach(([k, n]) => { const b = document.createElement('button'); b.textContent = n; b.dataset.k = k; b.onclick = () => show(k); $('dtabs').appendChild(b); });

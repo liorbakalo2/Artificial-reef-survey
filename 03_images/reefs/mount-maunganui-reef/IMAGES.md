@@ -2,7 +2,7 @@
 
 Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_registry.md`; overview: `03_images/reefs/README.md`). This file is generated from it.
 
-38 images registered, 38 with a file, 12 used for the model (any use other than context/not_used).
+41 images registered, 41 with a file, 13 used for the model (any use other than context/not_used).
 
 ## mount-maunganui-reef-img-01 - BoPRC report Figure 1: aerial view of Mount Reef (arrowed in the report), Mauao and Mount Maunganui Beach
 
@@ -14,7 +14,7 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **structure visible**: False
 - **state shown**: as-built (photo date not stated)
 - **image date**: not stated (BoPRC photo; before Dec 2013)
-- **citation**: Focus Resource Management Group (2013). Mount Maunganui Reef - Assessment of Management Options. Report prepared for Bay of Plenty Regional Council, December 2013 (PDF created 2014-01-23), PDF page 8 (printed p.7), Figure 1 'Aerial view of Mount Reef (arrowed). Photo supplied by BoPRC.' (embedded raster 2077 x 1172 px; the arrow is a vector overlay not present in this raster). https://www.boprc.govt.nz/media/558385/mount-maunganui-reef-assessment-of-management-options.pdf. Accessed 2026-10-05.
+- **citation**: Dahm, J. and Gibberd, B. (Focus Resource Management Group) (2013). Mount Maunganui Reef - Assessment of Management Options. Focus Report No. 131, prepared for Bay of Plenty Regional Council, December 2013 (PDF created 2014-01-23), PDF page 8 (printed p.7), Figure 1 'Aerial view of Mount Reef (arrowed). Photo supplied by BoPRC.' (embedded raster 2077 x 1172 px; the arrow is a vector overlay not present in this raster). https://www.boprc.govt.nz/media/558385/mount-maunganui-reef-assessment-of-management-options.pdf. Accessed 2026-10-05.
 - **image URL**: https://www.boprc.govt.nz/media/558385/mount-maunganui-reef-assessment-of-management-options.pdf
 - **source page**: https://www.boprc.govt.nz/media/558385/mount-maunganui-reef-assessment-of-management-options.pdf
 - **page / figure**: PDF p.8, Figure 1 (embedded raster xref 18)
@@ -42,7 +42,7 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **structure visible**: False
 - **state shown**: design/as-built (modelled)
 - **image date**: not stated (modelling quoted by the report; original model run date unknown)
-- **citation**: Focus Resource Management Group (2013). Mount Maunganui Reef - Assessment of Management Options. Report prepared for Bay of Plenty Regional Council, December 2013 (PDF created 2014-01-23), PDF page 15 (printed p.14), Figure 2 'Predicted hydrodynamic circulations in the vicinity of the reef for wave height of 1.0 m (top) ...' (embedded raster 810 x 578 px). https://www.boprc.govt.nz/media/558385/mount-maunganui-reef-assessment-of-management-options.pdf. Accessed 2026-10-05.
+- **citation**: Dahm, J. and Gibberd, B. (Focus Resource Management Group) (2013). Mount Maunganui Reef - Assessment of Management Options. Focus Report No. 131, prepared for Bay of Plenty Regional Council, December 2013 (PDF created 2014-01-23), PDF page 15 (printed p.14), Figure 2 'Predicted hydrodynamic circulations in the vicinity of the reef for wave height of 1.0 m (top) ...' (embedded raster 810 x 578 px). https://www.boprc.govt.nz/media/558385/mount-maunganui-reef-assessment-of-management-options.pdf. Accessed 2026-10-05.
 - **image URL**: https://www.boprc.govt.nz/media/558385/mount-maunganui-reef-assessment-of-management-options.pdf
 - **source page**: https://www.boprc.govt.nz/media/558385/mount-maunganui-reef-assessment-of-management-options.pdf
 - **page / figure**: PDF p.15, Figure 2 top panel (embedded raster xref 33)
@@ -70,7 +70,7 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **structure visible**: False
 - **state shown**: design/as-built (modelled)
 - **image date**: not stated
-- **citation**: Focus Resource Management Group (2013). Mount Maunganui Reef - Assessment of Management Options. Report prepared for Bay of Plenty Regional Council, December 2013 (PDF created 2014-01-23), PDF page 15 (printed p.14), Figure 2 lower panel (embedded raster 850 x 623 px). https://www.boprc.govt.nz/media/558385/mount-maunganui-reef-assessment-of-management-options.pdf. Accessed 2026-10-05.
+- **citation**: Dahm, J. and Gibberd, B. (Focus Resource Management Group) (2013). Mount Maunganui Reef - Assessment of Management Options. Focus Report No. 131, prepared for Bay of Plenty Regional Council, December 2013 (PDF created 2014-01-23), PDF page 15 (printed p.14), Figure 2 lower panel (embedded raster 850 x 623 px). https://www.boprc.govt.nz/media/558385/mount-maunganui-reef-assessment-of-management-options.pdf. Accessed 2026-10-05.
 - **image URL**: https://www.boprc.govt.nz/media/558385/mount-maunganui-reef-assessment-of-management-options.pdf
 - **source page**: https://www.boprc.govt.nz/media/558385/mount-maunganui-reef-assessment-of-management-options.pdf
 - **page / figure**: PDF p.15, Figure 2 lower panel (embedded raster xref 35)
@@ -98,7 +98,7 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **structure visible**: True
 - **state shown**: as-built, 2013 (five years after completion; apex deflation)
 - **image date**: survey 2013-07-18
-- **citation**: Focus Resource Management Group (2013). Mount Maunganui Reef - Assessment of Management Options. Report prepared for Bay of Plenty Regional Council, December 2013 (PDF created 2014-01-23), PDF page 27 (printed p.26), Figure 5 'View of July 2013 multibeam survey with colour-coded depths. Note apparent bag deflation near apex (arrowed).' (embedded raster 1299 x 752 px). https://www.boprc.govt.nz/media/558385/mount-maunganui-reef-assessment-of-management-options.pdf. Accessed 2026-10-05.
+- **citation**: Dahm, J. and Gibberd, B. (Focus Resource Management Group) (2013). Mount Maunganui Reef - Assessment of Management Options. Focus Report No. 131, prepared for Bay of Plenty Regional Council, December 2013 (PDF created 2014-01-23), PDF page 27 (printed p.26), Figure 5 'View of July 2013 multibeam survey with colour-coded depths. Note apparent bag deflation near apex (arrowed).' (embedded raster 1299 x 752 px). https://www.boprc.govt.nz/media/558385/mount-maunganui-reef-assessment-of-management-options.pdf. Accessed 2026-10-05.
 - **image URL**: https://www.boprc.govt.nz/media/558385/mount-maunganui-reef-assessment-of-management-options.pdf
 - **source page**: https://www.boprc.govt.nz/media/558385/mount-maunganui-reef-assessment-of-management-options.pdf
 - **page / figure**: PDF p.27, Figure 5 (embedded raster xref 67)
@@ -208,7 +208,7 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **structure visible**: True
 - **state shown**: as-built, 2013 survey (5 years after completion; partly smaller than the BoPRC text, small north-arm base bags buried)
 - **image date**: survey 2013-07-18
-- **citation**: Focus Resource Management Group (2013). Mount Maunganui Reef - Assessment of Management Options. Report prepared for Bay of Plenty Regional Council, December 2013 (PDF created 2014-01-23), PDF page 23 (printed p.22), Figure 3 'Most recent survey of Mount Reef conducted on 18 July 2013' (embedded raster 900 x 1064 px, extracted unresampled; figure title 'MOUNT MAUNGANUI - ARTIFICIAL SURF REEF', surveyed by University of Waikato & Discovery Marine Ltd). https://www.boprc.govt.nz/media/558385/mount-maunganui-reef-assessment-of-management-options.pdf. Accessed 2026-10-05.
+- **citation**: Dahm, J. and Gibberd, B. (Focus Resource Management Group) (2013). Mount Maunganui Reef - Assessment of Management Options. Focus Report No. 131, prepared for Bay of Plenty Regional Council, December 2013 (PDF created 2014-01-23), PDF page 23 (printed p.22), Figure 3 'Most recent survey of Mount Reef conducted on 18 July 2013' (embedded raster 900 x 1064 px, extracted unresampled; figure title 'MOUNT MAUNGANUI - ARTIFICIAL SURF REEF', surveyed by University of Waikato & Discovery Marine Ltd). https://www.boprc.govt.nz/media/558385/mount-maunganui-reef-assessment-of-management-options.pdf. Accessed 2026-10-05.
 - **image URL**: https://www.boprc.govt.nz/media/558385/mount-maunganui-reef-assessment-of-management-options.pdf
 - **source page**: https://www.boprc.govt.nz/media/558385/mount-maunganui-reef-assessment-of-management-options.pdf
 - **page / figure**: PDF p.23, Figure 3 (raster xref 53)
@@ -293,7 +293,7 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **structure visible**: True
 - **state shown**: part-built (January 2007, 70% complete)
 - **image date**: survey January 2007 (reef 70% complete)
-- **citation**: Focus Resource Management Group (2013). Mount Maunganui Reef - Assessment of Management Options. Report prepared for Bay of Plenty Regional Council, December 2013 (PDF created 2014-01-23), PDF page 26 (printed p.25), Figure 4 'View of the Mount Reef from a multibeam survey conducted in January 2007, when the reef was 70 % complete (from Scarfe, 2009)' (raster 815 x 953 px). https://www.boprc.govt.nz/media/558385/mount-maunganui-reef-assessment-of-management-options.pdf. Accessed 2026-10-05.
+- **citation**: Dahm, J. and Gibberd, B. (Focus Resource Management Group) (2013). Mount Maunganui Reef - Assessment of Management Options. Focus Report No. 131, prepared for Bay of Plenty Regional Council, December 2013 (PDF created 2014-01-23), PDF page 26 (printed p.25), Figure 4 'View of the Mount Reef from a multibeam survey conducted in January 2007, when the reef was 70 % complete (from Scarfe, 2009)' (raster 815 x 953 px). https://www.boprc.govt.nz/media/558385/mount-maunganui-reef-assessment-of-management-options.pdf. Accessed 2026-10-05.
 - **image URL**: https://www.boprc.govt.nz/media/558385/mount-maunganui-reef-assessment-of-management-options.pdf
 - **source page**: https://www.boprc.govt.nz/media/558385/mount-maunganui-reef-assessment-of-management-options.pdf
 - **page / figure**: PDF p.26, Figure 4 (raster xref 60)

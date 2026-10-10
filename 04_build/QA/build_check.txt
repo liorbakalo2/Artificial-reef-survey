@@ -42,7 +42,36 @@ PASS every reef with coordinates has a Google Maps link in the right format http
 PASS only reefs with no published coordinates have no link (no link: ['mexico-reef-2026-unnamed']; expected only Mexico)
 INFO locations: narrowneck-gold-coast=ok:-27.986629,153.434052; cables-reef-wa=approximate:-32.0,115.74; prattes-reef-el-segundo=approximate:33.915123,-118.432624; mount-maunganui-reef=ok:-37.644783,176.202591; opunake-reef=approximate:-39.46,173.86; boscombe-surf-reef=ok:50.717532,-1.838909; kovalam-reef-india=approximate:8.387326,76.97522; borth-coastal-defence-reef=ok:52.483243,-4.056157; palm-beach-gold-coast=ok:-28.107334,153.470913; southern-ocean-surf-reef-albany=ok:-35.01808,117.920935; burkitts-reef-bargara=approximate:-24.816017,152.467272; bunbury-airwave=approximate:-33.3276,115.6284; mexico-reef-2026-unnamed=none:None,None
 PASS [dialog narrowneck-gold-coast] outline drawn
-FAIL dialog / Maps-link DOM check crashed: NameError("name 'X' is not defined")
+PASS [dialog narrowneck-gold-coast] Location link to Google Maps (new tab, noopener)
+PASS [dialog cables-reef-wa] outline drawn
+PASS [dialog cables-reef-wa] Location link to Google Maps (new tab, noopener, labelled approximate)
+PASS [dialog prattes-reef-el-segundo] outline drawn
+PASS [dialog prattes-reef-el-segundo] Location link to Google Maps (new tab, noopener, labelled approximate)
+PASS [dialog mount-maunganui-reef] outline drawn
+PASS [dialog mount-maunganui-reef] Location link to Google Maps (new tab, noopener)
+PASS [dialog opunake-reef] no outline drawn (shape not drawn note present)
+PASS [dialog opunake-reef] shows the 'Shape not drawn' text
+PASS [dialog opunake-reef] Location link to Google Maps (new tab, noopener, labelled approximate)
+PASS [dialog boscombe-surf-reef] outline drawn
+PASS [dialog boscombe-surf-reef] Location link to Google Maps (new tab, noopener)
+PASS [dialog kovalam-reef-india] no outline drawn (shape not drawn note present)
+PASS [dialog kovalam-reef-india] shows the 'Shape not drawn' text
+PASS [dialog kovalam-reef-india] Location link to Google Maps (new tab, noopener, labelled approximate)
+PASS [dialog borth-coastal-defence-reef] outline drawn
+PASS [dialog borth-coastal-defence-reef] Location link to Google Maps (new tab, noopener)
+PASS [dialog palm-beach-gold-coast] outline drawn
+PASS [dialog palm-beach-gold-coast] Location link to Google Maps (new tab, noopener)
+PASS [dialog southern-ocean-surf-reef-albany] outline drawn
+PASS [dialog southern-ocean-surf-reef-albany] Location link to Google Maps (new tab, noopener)
+PASS [dialog burkitts-reef-bargara] no outline drawn (shape not drawn note present)
+PASS [dialog burkitts-reef-bargara] shows the 'Shape not drawn' text
+PASS [dialog burkitts-reef-bargara] Location link to Google Maps (new tab, noopener, labelled approximate)
+PASS [dialog bunbury-airwave] outline drawn
+PASS [dialog bunbury-airwave] Location link to Google Maps (new tab, noopener, labelled approximate)
+PASS [dialog mexico-reef-2026-unnamed] no outline drawn (shape not drawn note present)
+PASS [dialog mexico-reef-2026-unnamed] shows the 'Shape not drawn' text
+PASS [dialog mexico-reef-2026-unnamed] says location not published and has no map link
+PASS table: a Location link in every row that has coordinates (12 of 12; Mexico shows 'not published')
 PASS every image with a 'shows' verdict carries a caption label (missing=[])
 PASS site-only videos render as link-only with their label (bad=[])
 PASS hero image prefers structure visible > reef effect > site context (bad=[])

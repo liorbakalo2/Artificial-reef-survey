@@ -24,3 +24,8 @@ Files: prep_multibeam.py, nn_lib.py, build_3d.py (model.js 0.6 MB, docs.js), ind
 - Bugs fixed on the way: seabed blend used the array bounds instead of the valid map area (a -5 m dip at y 200 m); viewer AHD read-out under the papers' datum rule.
 - Smoke test (own Chrome): all five versions load, datum switch, other-outline overlay, (i) pop-ups, no console errors.
 - Done. Hand-over: HANDOFF.md top block; 3d/MAIN_TYPED_TEXTS.json.
+
+## SOURCE AUDIT (2026-10-10, fresh agent) - documentation only
+- METHODS_3D.md extended: 2b (how each source was used, accuracy, model element; id crosswalk to sources.md), 3.6 assumptions A1-A16 (effect, replacement), 3.7 other methods / AI involvement, 3.8 decisions (D7 by Lior, N1-N14), 6 confidence per element; citations completed (Corbett pp. 663-669 confirmed on the PDF; Vieira da Silva authors; Jackson 2007 Fall 2007; Blacka 2013 full citation); Black & Mead 2001 and the Jackson 2012 DOI listed as not confirmed.
+- build_3d.py: versions_info says D7 decided; confidence text 18 Jul -> 19 Jul 2018 (Vieira da Silva AM p.8 line 176 and p.12 line 312); extra docs keys sources_use_md, assumptions_md, decisions_md (sections cut from METHODS_3D.md); index.html lists them as chips. model.js regenerated: only versions_info and confidence_3d.reason text differ (compared field by field with a build of the previous script); docs.js regenerated.
+- Smoke test (own Chrome): Methods tab shows 5 chips, tables render, no console errors except favicon 404.

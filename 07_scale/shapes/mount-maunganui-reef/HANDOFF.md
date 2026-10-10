@@ -11,6 +11,8 @@
 - PAGE (04_build, main): see final JSON "main_page_todo" of the task; no token paths were removed from model.js (seabed/bed_default_cd is now -3.6; seabed/bed_options_cd is [-3.6,-2.8,-3.0,-3.5,-4.0,-4.5]).
 - Tool notes: 3d/mmr_lib.py ROOT is now derived from __file__ (works in the cloud); render_previews.py finds the cloud Chromium via 04_build/src/qa_cdp.find_chrome; THREE_VENDOR must hold three r170 (cloud: copy 04_build/3d/vendor/three.module.js, addons/controls/OrbitControls.js, addons/renderers/CSS2DRenderer.js into <dir>/build/ and <dir>/examples/jsm/controls|renderers/; jsDelivr is blocked). fig3_asbuilt_check.py and fig12_oct2006_read.py still hold the Windows path (outputs saved, no need to re-run).
 
+- SOURCE AUDIT 2026-10-10 (task_source_audit): SOURCE_AUDIT_2026-10-10.md. METHODS_3D now holds the sources table with how used (2.1), assumptions A1-A14 (3.5), decisions M1-M15 (3.6), scripts/AI note (3.7), confidence per element (6); viewer tabs Sources & how used / Assumptions / Decisions (index.html + build_3d.py). BoPRC citation corrected to Dahm & Gibberd, Focus Report 131; NIWA authors Bell & Lewis. 2,800 m3 is one origin (A11). No model value changed.
+
 ## 1. Status per stage
 | stage | state | date | confidence / reason |
 |---|---|---|---|
@@ -20,7 +22,7 @@
 | 3D model | BUILT, viewer works, no page errors (3d/index.html + model.js + docs.js); D1 applied 2026-10-10 | 2026-10-10 | MEDIUM. Plan, crest, tides sourced; the as-built bed (-3.6 m CD default, -2.8 option) is an ASSUMPTION (Lior D1), so the 2.7 m (or 1.9 m) height and the flank shape are not measured. |
 | 3D docs | done: METHODS_3D.md (generated; 4.3 volume table version x bed, 4.5 P2/P3), SOURCES_3D.md, REQUESTS_FOR_LIOR.md, docs.js | 2026-10-10 | volume-versus-bed finding and version comparison are in METHODS_3D.md 4.3 |
 | 3D previews | preview_plan / oblique / beach / version2 / methods / methods_versions .png viewed and fixed | 2026-10-07 | own headless Chrome, never the shared pane |
-| registry | 38 rows img-01..38 (img-23..38 = P2/P3 figures, 2026-10-10); check_registry.py: no error for this reef (errors are other reefs') | 2026-10-10 | img-04/-06/-10/-23/-37 3D checks resolved; pending: img-27, img-33 |
+| registry | 41 rows img-01..41 (img-39..41 = Blacka 2013, context) (img-23..38 = P2/P3 figures, 2026-10-10); check_registry.py: no error for this reef (errors are other reefs') | 2026-10-10 | img-04/-06/-10/-23/-37 3D checks resolved; pending: img-27, img-33 |
 | page (04_build) | NOT touched by the 3D task | - | the page must say: drawing = as-built reef (2008) measured July 2013; removed Sep-Nov 2014; z = 0 present MSL |
 
 ## 2. Key decisions and why (one line each)
@@ -79,7 +81,7 @@ Later states (for captions): consent 5-year from Aug/Sep 2000 (lapsed 2010, NZ H
 - 3d/computed.json (volumes per version x bed, runs, crest options), navionics_profile.json (profile, contours, datum test), navionics_isolines.json (143 kB, bulky, skip), checks.json (run for toe area).
 - 3d/annotated/ - mmr_model_checks.png (plan footprints, two sections vs the 2013 DEM, volume vs bed), nav_sonar_z17_profile.png, nav_naut_z17_check.png, nav_datum_test.png. 3d/src/ - LINZ tidal-level excerpts (R6/R7). Navionics screenshots: shapes/mount-maunganui-reef/src/navionics/ (registry img-19..22).
 - 3d/preview_*.png - rendered checks (plan, oblique, beach, version2, methods, methods_versions); view downscaled if at all.
-- 03_images/reefs/mount-maunganui-reef/images.json + IMAGES.md - 22 registered images (Fig 5 = img-04, Fig 3 = img-08, aerial = img-09, Installed = img-10, apex render = img-06, Esri 2011 = img-15/16, Navionics = img-19..22).
+- 03_images/reefs/mount-maunganui-reef/images.json + IMAGES.md - 41 registered images (Fig 5 = img-04, Fig 3 = img-08, aerial = img-09, Installed = img-10, apex render = img-06, Esri 2011 = img-15/16, Navionics = img-19..22).
 - 07_scale/tools/ (geom.py, overlay.py) - only for re-rendering the traced overlays.
 
 ## 6. Open issues, discrepancies, pending checks
@@ -91,7 +93,7 @@ Later states (for captions): consent 5-year from Aug/Sep 2000 (lapsed 2010, NZ H
 - Nautical-chart sounding 2.4 m at (x 36, y 345) vs SonarChart interpolation 3.22 m there (0.8 m disagreement, recorded). Navionics datum is not stated by the viewer (CD assumed and tested); SonarChart date unknown, crowd-sourced, not for navigation.
 - Apex bags drawn intact at the main crest (deflated by 2013 = caption note); the buried north-arm base bags are only in the toe version.
 - Reuse rights: BoPRC/Focus RMG figures, ASR image, Esri Wayback and Garmin screenshots are private research copies, licence not cleared; LINZ aerial is CC BY 4.0. Clear before any public release.
-- Registry: 38 rows; pending 3D check img-27 (design bed -4.5 vs assumed -3.6, weak) and img-33 (container layout vs traced arms, qualitative). check_registry.py fails only for other reefs.
+- Registry: 41 rows; pending 3D check img-27 (design bed -4.5 vs assumed -3.6, weak) and img-33 (container layout vs traced arms, qualitative). check_registry.py fails only for other reefs.
 - Requests for Lior (3d/REQUESTS_FOR_LIOR.md): D1 applied and P2/P3 used (both marked done); open: toe-version-as-default (D8), datum of the ASR Installed image, Google Earth history 2008-10, Navionics app depth reading, reuse rights.
 
 ## 7. Next steps (next agent, in order)

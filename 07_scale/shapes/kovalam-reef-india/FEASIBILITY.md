@@ -16,8 +16,15 @@ Rule in the brief: build if plan, crest and seabed are sourced. Here crest and s
 1. **Navionics / SonarChart readings** (Garmin Navionics, not for navigation) around the lighthouse end of Lighthouse Beach: depth at 5 points along a line from the shoreline at about 8.3875 N, 76.9750 E straight out to 250 m offshore, note datum. Gives the seabed profile (input d).
 2. **Google Earth Pro historical imagery**, Feb 2010 - 2012 (Maxar): the reef strips may be visible from above, which would give the plan with a scale bar (input a). Note dates and the lat/lon of both ends of the strips and of the tombolo rock tip.
 3. Esri Wayback z19 tiles for the 2011-02-28 capture (listed in HANDOFF.md section 7): the container strips are about 1 m wide features at 0.3 m/px; if visible, they give a georeferenced trace directly.
-4. ASR Ltd technical report "Kovalam coastal protection" (ASR 2010a, cited in Rendle 2013 thesis) or the CESS (Centre for Earth Science Studies) morphological assessment: design plan, crest levels, container dimensions.
+4. ASR Ltd technical report "Kovalam coastal protection" (ASR 2010a, cited in the reference list of Rendle (2016) PhD thesis, Univ. Plymouth, PDF p.279) or the CESS (Centre for Earth Science Studies) morphological assessment: design plan, crest levels, container dimensions.
 5. A published Kerala tide table (Vizhinjam) for MSL, LAT, HHWL levels.
 
 ## What a future 3D could be
 If 1 and 2 arrive, build with the Borth pipeline (07_scale/shapes/borth-coastal-defence-reef/3d/build_3d.py): strips as extruded tubes on a sloping seabed. Until then the model is held off the page ("Not yet modelled").
+
+## Why this reef is hidden on the page, what was checked, what is assumed (source audit 2026-10-10)
+Rule (Lior, 2026-10-10): shapes we do not know are not shown. Kovalam is hidden (footprint.json display:false).
+- Why: the only picture of the structure is one oblique, unscaled ASR photo; it cannot fix the camera height, so the traced strips cover 546 to 1,681 m2 (versions H35 / H60 / H80). WRL Table 4.2 says 65 x 85 m; the default trace is 59 x 41 m (cross-shore -52 %). The true size and position are unknown.
+- Checked, with sources: camera fit on the Esri 2011-02-28 frame (rms 2.2-2.8 px for H 30-80 m, rectify_result.json); Blacka, Shand, Carley and Mariani (2013) WRL TR 2012/08 Tables 4.2-4.4 (printed pp.66, 68, 69) and p.70; Mead and Borrero (2011) s.3.1.7 and 4.1.4 (4,000 m3, late Feb 2010, monitoring from the lighthouse platform); Esri frames 2011 and 2026 (reef not visible); RWR Kovalam Outline (foam line only); Gemini (unfetchable, not used).
+- Assumed (ASSUMPTION, A1-A7 in shape.json): sea plane; pinhole camera; camera height 60 m by lens plausibility and WRL's 90 m (circular); 2011 swash line = 2010 beach; strips = whole reef.
+- Confidence: plan LOW, position LOW-MEDIUM (+-20 m), crest/seabed none (unlocated ranges, no datum), tides LOW (range ~1.0 m). Full tables: SOURCE_AUDIT_2026-10-10.md.

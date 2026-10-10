@@ -225,3 +225,10 @@ What to read for every row: tap the point, read the depth (or drying height), an
 - (cables-reef-wa, audit 2026-10-10, papers) Citation details NOT CONFIRMED, wanted for as-built levels: Bancroft, S. (1999) Performance Monitoring of the Cable Station Artificial Surfing Reef, UWA thesis (candidate PDF https://data-ww3.ifremer.fr/BIB/Bancroft_BATHESIS1999.pdf, needs a browser download); Pattiaratchi et al. (2003) COPEDEC VI Colombo (co-authors, pages); Ranasinghe et al. (2001); Lyons (1992) UWA report.
 
 - **Borth source audit 2026-10-10:** New Civil Engineer, M. (Mark) Hansford, "Borth's Big Dig", 15 Sept 2011 (275,000 t; Type 4 42,000 t): the article could not be re-found by web search; if you have the PDF or page, please supply it so the page number and wording can be confirmed (ref6 in shape.json).
+
+### narrowneck-gold-coast (source audit, 2026-10-10) - added lines
+- Paper/citation: Black, K.P. and Mead, S. (2001) JCR SI 29 pp. 115-130 (Gold Coast reef design): exact citation not confirmed by web search; please look it up and send it. Also not confirmed: DOI of Jackson et al. 2012 (ICCE 33 structures.54) and journal pages of Jackson et al. 2007 (Shore & Beach 75(4), 67-79 per one citing paper). Details: 07_scale/shapes/narrowneck-gold-coast/3d/REQUESTS_FOR_LIOR.md.
+- Decision D7 recorded in the folder files (METHODS_3D 3.8, shape.json, HANDOFF).
+
+### mount-maunganui-reef (source audit, 2026-10-10) - added lines
+- Citations not confirmed: NIWA HAM2006-133 authors (web search says Bell, R. and Lewis, M.; cover not checked); Moores (2006) NZ Geographic issue 78 date; Scarfe (2008) thesis page numbers (thesis PDF not in the repo; pages quoted from METHOD.md); NZ Herald 2014/2023 and SunLive article authors/dates not re-fetched. If you have the Scarfe thesis PDF, please add it to papers/.

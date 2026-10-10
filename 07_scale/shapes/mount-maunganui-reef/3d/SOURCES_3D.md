@@ -1,5 +1,7 @@
 # SOURCES_3D - mount-maunganui-reef
 
+> Note (source audit 2026-10-10): this file is a chronological working log. Values written in earlier checkpoints (bed -4.0 m CD default, height 3 m / 3.5 m) are superseded by Lior D1 (-3.6 m CD ASSUMPTION); the current sources, assumptions (A1-A14) and decisions (M1-M15) are in the Methods tab (METHODS_3D.md sections 2, 3.5, 3.6).
+
 Run started 2026-10-06 (3D agent; orchestrator decisions of 2026-10-06 applied: as-built state, z = 0 at present MSL, bed -4.0 +-0.5 m CD, crest -0.9 m CD, height ~3 m).
 Checkpoint file: append after each step. Inputs: HANDOFF.md of the verifier (shape.json canonical.toe_polygons_m / polygons_m).
 
