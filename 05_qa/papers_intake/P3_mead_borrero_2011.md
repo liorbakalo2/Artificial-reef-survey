@@ -134,4 +134,4 @@ Reference entry used by all (assign next free R-number): `{"id":"R-P3","citation
   - references: add `{"id":"R-P3b","citation":"Borrero, J.C. and Mead, S.T. (2010). Borth Reef: Surfing Assessment Study. Report for Ceredigion Council, September 2010. (Not seen; cited in Mead & Borrero 2011, p.6, refs [2].)","url":"","accessed":"2026-10-10","supports":"existence of a surfing assessment; lessons on small structures and unit orientation"}` and gaps: "Borrero & Mead (2010) Borth surfing assessment: request/locate".
 - **palm-beach-gold-coast, southern-ocean-surf-reef-albany, burkitts-reef-bargara, bunbury-airwave, mexico-reef-2026-unnamed**: nothing in P3.
 
-**Applied 2026-10-10:** borth-coastal-defence-reef, boscombe-surf-reef, mount-maunganui-reef, opunake-reef, prattes-reef-el-segundo. Pending: narrowneck-gold-coast, cables-reef-wa, kovalam-reef-india.
+**Applied 2026-10-10:** borth-coastal-defence-reef, boscombe-surf-reef, mount-maunganui-reef, opunake-reef, prattes-reef-el-segundo, narrowneck-gold-coast. Pending: cables-reef-wa, kovalam-reef-india.
