@@ -111,7 +111,9 @@ for tag, fn in (('1999-11', 'FR19991122_Single.txt'), ('2002-02', 'FR20020201_Si
     d = zs_[inn] - zm[inn]
     ramp_in = inn & ramp[j, i]
     top = lambda z: float(np.mean(np.sort(z)[-max(3, int(0.05 * len(z))):]))
-    svy[tag] = {"n_inside_original_footprint": int(inn.sum()), "survey_minus_model_mean_m": round(float(d.mean()), 2), "rms_m": round(float(np.sqrt((d ** 2).mean())), 2),
+    rr_ = ramp[j, i] & np.isfinite(zr_nan[j, i]); cfit = float(np.mean(zr_nan[j, i][rr_] - zs_[rr_])) if rr_.any() else None
+    svy_off = {"n_ramp_soundings": int(rr_.sum()), "best_fit_RL_minus_AHD_m": round(cfit, 2), "sd_of_residual_m": round(float(np.std(zr_nan[j, i][rr_] - zs_[rr_])), 2)}
+    svy[tag] = {"ramp_offset_fit": svy_off, "n_inside_original_footprint": int(inn.sum()), "survey_minus_model_mean_m": round(float(d.mean()), 2), "rms_m": round(float(np.sqrt((d ** 2).mean())), 2),
                 "median_m": round(float(np.median(d)), 2), "survey_top5pct_mean_AHD": round(top(zs_[inn]), 2), "model_top5pct_mean_A": round(top(zm[inn]), 2),
                 "model_top5pct_mean_if_reading_B": round(top(zm[inn]) + OFF_A, 2), "survey_max_AHD": round(float(zs_[inn].max()), 2)}
 # ---- surveyed-surface versions: rock thickness from the DoT soundings (survey z - measured bed) interpolated linearly on the original-plan footprint (scripts/survey_volume.py logic)
@@ -153,8 +155,7 @@ validation = {"bed": "measured: DoT WA singlebeam 30 Mar 1998 (pre-construction)
   "bed_depth_at_outline_original_plan_below_MSL_A_m": {"min": round(float(_bu.min()) + OFF_A, 2), "max": round(float(_bu.max()) + OFF_A, 2), "mean": round(float(_bu.mean()) + OFF_A, 2), "text_water_depth": "3.0-6.0 m (Blacka Table 4.2, RWR)"},
   "S1_7m_contour_at_350m_model_depth_RL": round(float(-bed_fn(0, 350.0)), 2),
   "contour_check_centreline": chk, "contour_check_rms_m": rms, "contour_check_transects": tchk,
-  "bed_at_setout_line": {"RL_reading_A_m": round(float(np.mean([bed_fn(p[0], p[1]) for p in np.array(CO['v_orig_m'])[12:73]])), 2), "RL_reading_B_m": round(float(np.mean([bed_fn(p[0], p[1]) for p in np.array(CO['v_orig_m'])[12:73]])) - OFF_A, 2),
-     "note": "mean RL of the measured bed along the outer foot (vertices 12-72 of the traced outline); the design sets the outer line at RL -3.0 = 'the existing 3 m depth contour extended offshore' (S1 p.3): A fits, B (RL = AHD) would put the bed 0.8 m deeper"},
+  "bed_at_setout_line": {"AHD_m": round(float(np.mean([bed_fn(p[0], p[1]) for p in np.array(CO['v_orig_m'])[12:73]])) - OFF_A, 2), "note": "mean measured bed (m AHD) along the outer foot (vertices 12-72 of the traced outline). Not a datum test: the design outer line RL -3.0 is the top of the outer slope, the bed under the foot is deeper"},
   "survey_check": svy,
   "volumes": {"default_model": dflt['volume_m3'], "original_model": orig['volume_m3'], "volume_with_extension_model": V[0]['volume_m3'], "stated_Blacka_A13": 5500, "stated_P3_ICM": 5000, "stated_Wikipedia": 3500, "extension_text_m3": 320,
               "implied_density_t_m3_if_10000_t": round(10000 / dflt['volume_m3'], 2), "first_model_before_survey": {"default_with_extension": 5500.0, "original": None}},
