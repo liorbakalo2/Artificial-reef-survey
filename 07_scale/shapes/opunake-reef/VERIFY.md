@@ -8,3 +8,10 @@ No shape was traced, so there is no outline to verify. Checks run instead on the
 5. Provenance: every image in src/ has a source row; the earlier schematic polygon is flagged placeholder and not carried into shape.json.
 6. Gemini: its Opunake-specific sources were inaccessible/unverifiable (2026-09-25 footprint file); not used.
 7. Confidence: LOW (rubric: no image of the structure).
+
+## 2026-10-13 checks (agent self-checks, not independent)
+- Consent 6376-1 coordinates vs page image: read twice (OCR and crop viewed); first easting printed 257484, used 267484 (rectangle closure + GR).
+- Closure: angles 91.1/91.0/87.7/90.1 deg. GR P20:832-937 vs NZMG of the corners: consistent.
+- Fig 1 white rectangle = consent polygon: 4-GCP residual 0.3 m; boat-ramp landmark 0.7 m (pick error 5-10 m); coast aligns on the Esri overlay.
+- Structure visible inside the consent area on LINZ 2011-12: no.
+- Not verified: where the reef lies inside the consent area; crest/bed levels; whether the reef was ever finished.

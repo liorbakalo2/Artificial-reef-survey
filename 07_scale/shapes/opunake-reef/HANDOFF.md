@@ -1,6 +1,26 @@
 # HANDOFF - opunake-reef (item 9 agent, 2026-10-10)
 
-Read this first. Result: FEASIBILITY ONLY - plan shape not traceable, no 3d/. Source ids = sources.md.
+## 0. STATE 2026-10-13 (agent: Opunake TRC/NZGeo task) - read this first
+Lior's two uploads were read (TRC Technical Report 2009-33 = P15, NZ Geographic print = P16). Result: the reef POSITION and design SIZE are now known; the BAG LAYOUT is still not. Full detail: FEASIBILITY.md (verdict), METHOD.md (2026-10-13 steps 1-14), sources.md ("New sources 2026-10-13"), consent_georef.json (every number), shape.json.
+| item | result |
+|---|---|
+| position | Coastal Permit 6376-1 (31 May 2005) occupation area, corners published in TRC 2009-33 Appendix I (PDF p. 39): 189 x 94 m rectangle, 17,726 m2, long axis 63 deg, centre -39.459433, 173.851625. First easting printed 257484 = misprint of 267484. Checked by rectangle closure, GR P20:832-937, and TRC Fig 1 (white rectangle = this area; 4-GCP residual 0.3 m; boat ramp 0.7 m). Card lat/lon now -39.4594, 173.8516 (old -39.46, 173.86 was 720 m east). |
+| size | design 99 m long x 30 m wide x 3.5 m high, area about 2,970 m2 (= 99 x 30, bounding rectangle), volume about 4,900 m3 (TRC printed p. 4). 90 x 20 m = 2004 concept (Daily News 11 Jun 2004); 99 x 30 = Blacka 100 x 30. |
+| depth / crest | built in 3.0-1.8 m below chart datum (= LAT), shallowest contour 0.0 m below chart datum (TRC printed p. 3). |
+| state | 27 bags April 2008, not finished Sept 2009 (TRC printed pp. 4, 15); works Feb 2007 - May 2008 per sign photo. |
+| shape | status envelope_only (consent area default outline + optional assumed 99 x 30 m rectangle); NOT the bag outline; page stays hidden; no 3D. |
+| registry | 9 new rows img-17..25 (Fig 1, Fig 2, 5 photos, consent page crop, NZGeo hero); check_registry PASSED. |
+| dead ends | +5 entries (TRC report partial, NZGeo no figure, construction manual, later TRC reports, imagery in consent area). |
+| card | 02_research/reefs/opunake-reef.json/.md: R18 TRC, R19 Daily News 2004, R20 LINZ grid; size, year, design, state, position, gaps updated. |
+For main (exact): (1) nothing to un-hide; (2) the card changes are picked up by update_page.py; (3) optional Lior decision in FEASIBILITY.md "Recommendation for main" (show the consent area only). No 3D, so no PAGE_TEXTS_FOR_MAIN.json. 04_build and papers/ untouched.
+
+## CHECKPOINT 2026-10-13 (end of task, nothing in progress)
+Done: all of the above. Files changed (this folder): FEASIBILITY.md, HANDOFF.md, METHOD.md, VERIFY.md, sources.md, shape.json, consent_georef.json (new), scripts/ (new: build_consent_georef.py, update_shape_json_2026-10-13.py, proj_grid/nz_linz_nzgd2kgrid0005.tif), overlays/ (2 new), src/ (9 new images + 1 .geo.json). Elsewhere: 03_images/reefs/opunake-reef/ (images.json, IMAGES.md), 03_images/reefs/NEW_IMAGES_LOG.md (9 lines), 02_research/reefs/opunake-reef.json/.md, 02_research/dead_ends/opunake-reef.json, 05_qa/papers_intake/ (2 OCR files), REQUESTS_FOR_LIOR.md and 05_qa/00_STATUS.md (appends).
+Next steps for a fresh agent, in order (only if new documents arrive): (1) if TRC/STDC consent file, Black and Mead 2006 manual, Black et al. 2004 or a later TRC report with a plan/survey arrives: trace the bag layout inside the consent area (georeferenced base: LINZ crops in src/, consent_georef.json canonical frame), replace the assumed rectangle, then set status traced and give crest levels with chart datum; (2) Google Earth Pro history (REQUESTS G8) at the polygon corners in consent_georef.json; (3) LINZ tide tables and a chart datum -> NZVD2016/MSL offset for Opunake/New Plymouth before any 3D; (4) then build 3d/ from Borth as template.
+Re-running the scripts: build_consent_georef.py (add --overlays; needs the Esri z18 frame in /tmp/claude-0/opunake/, re-fetch command in sources.md) and update_shape_json_2026-10-13.py (idempotent).
+
+
+(2026-10-10 text below; sections 1-9 are history, superseded in part by section 0.) Source ids = sources.md.
 
 ## 1. Status per stage
 | stage | state | date | confidence / reason |

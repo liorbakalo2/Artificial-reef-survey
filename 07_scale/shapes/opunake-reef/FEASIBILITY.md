@@ -1,6 +1,44 @@
-# FEASIBILITY - Opunake reef plan shape and 3D model (2026-10-10, updated after papers/ + Gemini + web check)
+# FEASIBILITY - Opunake reef plan shape and 3D model (updated 2026-10-13, after TRC 2009-33 and NZ Geographic)
 
-Verdict: NOT feasible with what we hold. No plan shape drawn, no 3D model built.
+## Verdict 2026-10-13
+- Can the reef's own SHAPE (bag outline) now be shown? NO. Confidence that it cannot: high. Neither upload draws the bag layout: TRC 2009-33 gives only a bounding size and a location figure, NZ Geographic has no Opunake figure.
+- Can its POSITION and SIZE now be stated? YES.
+  - Position: the reef lies inside the legal occupation area of Coastal Permit 6376-1 (31 May 2005): four published corner co-ordinates (Taranaki local circuit grid = NZGD49 Taranaki Circuit) = a 189 x 94 m rectangle (17,726 m2), long axis bearing 63 deg, centre lat -39.45943, lon 173.85163 (TRC 2009-33 Appendix I, PDF p. 39). Confidence medium-high: the corners close as a rectangle, agree with the consent's map reference P20:832-937, and with the white rectangle of TRC Figure 1 (georeference residual 0.3 m, independent boat-ramp check 0.7 m, pick error 5-10 m). One printed easting is a misprint (257484 for 267484), corrected and documented.
+  - Size (design, consent stage): about 99 m long x 30 m wide x 3.5 m high, area about 2,970 m2 (= 99 x 30, a bounding rectangle, not the true footprint), volume about 4,900 m3 (TRC printed pp. 3-4). Built in 3.0 to 1.8 m water depth below chart datum (= LAT) with the shallowest contour at 0.0 m below chart datum. 27 bags in place as of April 2008, fine-tuning (filling) still planned for 2009/2010; the reef was "basically in place" in Sept 2009 (TRC pp. 4, 15).
+  - Where the reef lies INSIDE the occupation area is unknown: +-47 m along the axis, +-32 m across, and the axis is assumed parallel to the long side (assumptions A7, A8). The imagery (LINZ 2011-12, 0.4 m) shows no structure.
+- The 90 x 20 m versus 30 x 100 m conflict is resolved: 99 x 30 m (consent-stage design, TRC) equals Blacka et al. 30 x 100 m; 90 x 20 m is the 2004 concept quoted in The Daily News of 11 June 2004 (bags 1.5-2 m high), which Newsroom 2021, RWR and SurferToday repeat.
+- 3D model: still NO. No bag layout, no per-bag crest levels, no surveyed seabed; only one design sentence on the crest datum. Not built.
+
+## Recommendation for main (page; nothing was un-hidden)
+1. Keep the reef hidden as a SHAPE (Lior's rule of 2026-10-10: do not show shapes we do not know). shape.json status is now "envelope_only", so even if the footprint flag were removed the compile step keeps it hidden.
+2. Use the new facts on the card/page: lat/lon to the consent centre (-39.45943, 173.85163; the old -39.46, 173.86 is 720 m east), size 99 x 30 x 3.5 m, volume 4,900 m3, crest/bed depths with datum. The card (02_research/reefs/opunake-reef.json/.md) already carries them.
+3. Optional, Lior's decision: show the consent occupation area only, labelled "Consent occupation area 2005, not the reef outline", with the (i) text in shape.json versions_info. To do that: status "traced" in shape.json and remove display:false from 07_scale/reefs/opunake-reef.footprint.json. The 99 x 30 m rectangle (assumed placement) should stay unshown.
+
+## What we know now / what is still missing
+| need | state 2026-10-13 | source |
+|---|---|---|
+| position | consent area, centre -39.45943, 173.85163, +-47 / +-32 m for the reef inside it | TRC App. I PDF p. 39; Fig 1 |
+| size | 99 x 30 x 3.5 m, 2,970 m2 (bounding), 4,900 m3 | TRC printed p. 4 |
+| crest level | shallowest contour 0.0 m below chart datum (LAT) | TRC printed p. 3 |
+| seabed | 1.8-3.0 m below chart datum (thin sand on rock, no excavation) | TRC printed pp. 3-4; Blacka 2013 Table 4.2 |
+| state | 27 bags by April 2008; not finished Sept 2009; works Feb 2007 - May 2008 per sign (last digit blurred) | TRC printed pp. 4, 15; Photograph 2 |
+| cost | north reef about NZ$1.3 m (2006 plan); bond NZ$50,000 (consent 6377-1 cond. 18) | NZ Geographic; TRC printed p. 6 |
+| bag layout / plan drawing | MISSING | - |
+| as-built survey (+-5 m) | MISSING (consent condition 10 required it within 90 days of completion) | held by TRC, STDC, LINZ Hydrographic Office |
+| post-construction dive survey | MISSING (recommended for 2009-10, TRC printed p. 18) | later TRC report |
+| tide levels with datum | still to fetch (LINZ tide tables) | - |
+
+## What would give the bag layout (in order of value)
+1. TRC / South Taranaki District Council consent file (Official Information request, REQUESTS E11): the detailed design plan (consent 6377-1 condition 3), the engineer's as-built confirmation (condition 9), the survey map of the reef position (condition 10), structural-integrity reports (condition 15) and any later monitoring report (dive survey 2009-10).
+2. Black, K. and Mead, S. (2006). Opunake Reef Construction Manual. ASR Limited for the Opunake Reef Trust (cited in TRC bibliography, printed p. 20; not found online 2026-10-13).
+3. Black et al. (2004), Studies for Resource Consent (REQUESTS P9; ResearchGate login).
+4. Google Earth Pro history 2007-2012 (REQUESTS G8) over the now-exact target: look inside the 189 x 94 m rectangle at the four corners given in consent_georef.json for a pale bag field.
+5. LINZ nautical chart of Opunake (reef symbol / obstruction) via the Hydrographic Office.
+
+---
+# History: FEASIBILITY as of 2026-10-10 (kept for the record; the verdict and position items above supersede it)
+
+Earlier verdict (2026-10-10, SUPERSEDED in part by the section above): NOT feasible with what we held. No plan shape drawn, no 3D model built.
 
 ## What we have
 - Size, text only: bags "around 90 m long and 20 m wide" (Newsroom 2021, Raised Water Research, SurferToday - one lineage), 27 sand-filled geotextile bags by 2009, north reef only, designed for one right-hand wave (card R1-R4).

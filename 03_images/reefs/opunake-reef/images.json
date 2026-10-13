@@ -655,5 +655,370 @@
    "model_values_affected": []
   },
   "added_by": "opunake network pass, 2026-10-10"
+ },
+ {
+  "id": "opunake-reef-img-17",
+  "file": "07_scale/shapes/opunake-reef/src/trc2009-33_fig1_p9_reef_location.png",
+  "annotated_files": [
+   "07_scale/shapes/opunake-reef/overlays/fig1_georef_check_on_esri2025.png",
+   "07_scale/shapes/opunake-reef/overlays/consent_area_and_envelope_on_linz2011-12.png"
+  ],
+  "kind": "plan_figure",
+  "title": "Aerial photograph of Opunake Bay with the proposed reef location (white rectangle), the construction water area (orange) and landmarks (TRC 2009-33 Figure 1)",
+  "citation": "Taranaki Regional Council (2009). Opunake Artificial Reef Monitoring Programme 2005-2009. Technical Report 2009-33 (ISSN 0114-8184 print, 1178-1467 online; document 631513). Stratford, NZ, September 2009, printed p. 3 (PDF p. 9), Figure 1 'Aerial photograph showing the location of the artificial reef and the areas used for construction'. Embedded image 417 x 273 px. Source file: new uploads from lior/Opunake Artificial Reef monitoring programme 2005-2009.pdf (Lior's upload, request P15). Accessed 2026-10-13.",
+  "image_url": "new uploads from lior/Opunake Artificial Reef monitoring programme 2005-2009.pdf (Lior's upload, request P15)",
+  "source_page": "https://www.trc.govt.nz (Technical Report 2009-33; site bot-checks, so used Lior's copy)",
+  "page_or_figure": "printed p. 3 (PDF p. 9), Figure 1 (embedded image 417 x 273 px)",
+  "image_date": "unknown (aerial photo pre-construction; figure from the 2004-05 consent application or the 2009 report; not stated)",
+  "credit": "Taranaki Regional Council (aerial photo source not stated)",
+  "license": "not stated (public council report; reuse not cleared)",
+  "retrieved": "2026-10-13",
+  "shows": "North-up aerial of Opunake Bay (Middleton Bay top left, town top right): white rectangle labelled 'Proposed location of surf reef', orange rectangle 'Area of water to be used during the construction process', boat ramp and concrete hard-standing, rock groyne from wharf, access road, scale bar and north arrow. No built structure is visible (pre-construction).",
+  "structure_visible": false,
+  "state_shown": "design (proposed location + construction water area; pre-construction aerial)",
+  "used_for": [
+   "plan_trace",
+   "scale",
+   "cross_check"
+  ],
+  "how_used": "Georeferenced 2026-10-13 with 4 control points: the 4 corners of the white rectangle on this figure = the 4 corners of consent 6376-1 (NZGD49 Taranaki Circuit, img-24). Result: north-up, 4.4-4.5 m/px, residuals 0.3 m; independent boat-ramp landmark check 0.7 m (pick error 5-10 m), so the white rectangle IS the consent occupation area (about 189 x 94 m, not the 99 x 30 m reef). Orange area = about 320 x 200 m. Feeds shape.json source 'fig1' and consent_georef.json; the scale bar labels are illegible (read as 0/75/150/300 m, consistent).",
+  "linked_records": [
+   "07_scale/shapes/opunake-reef/sources.md fig1",
+   "07_scale/shapes/opunake-reef/consent_georef.json",
+   "07_scale/shapes/opunake-reef/METHOD.md 2026-10-13"
+  ],
+  "bytes": 208641,
+  "px": [
+   417,
+   273
+  ],
+  "sha256": "ffc320211aecd01b11c57d875f550f4c3010cd6c910f480fb9e4c8db8647c5cf",
+  "rights_note": "Private research copy; reuse rights to be checked before any public release.",
+  "display": true,
+  "for_3d_check": {
+   "pending": false,
+   "what_to_check": "Planform position of the consent area: done 2026-10-13 (georeference); the bag layout itself is not shown in any source.",
+   "model_values_affected": [
+    "planform"
+   ]
+  },
+  "added_by": "Opunake TRC/NZGeo upload task, 2026-10-13"
+ },
+ {
+  "id": "opunake-reef-img-18",
+  "file": "07_scale/shapes/opunake-reef/src/trc2009-33_fig2_p16_survey_sites.png",
+  "annotated_files": [],
+  "kind": "plan_figure",
+  "title": "Kaimoana and intertidal survey sites around the Opunake artificial reef, with the approximate reef location hatched (TRC 2009-33 Figure 2)",
+  "citation": "Taranaki Regional Council (2009). Opunake Artificial Reef Monitoring Programme 2005-2009. Technical Report 2009-33 (ISSN 0114-8184 print, 1178-1467 online; document 631513). Stratford, NZ, September 2009, printed p. 10 (PDF p. 16), Figure 2. Embedded image 389 x 346 px. Source file: new uploads from lior/Opunake Artificial Reef monitoring programme 2005-2009.pdf (Lior's upload, request P15). Accessed 2026-10-13.",
+  "image_url": "new uploads from lior/Opunake Artificial Reef monitoring programme 2005-2009.pdf (Lior's upload, request P15)",
+  "source_page": "https://www.trc.govt.nz (Technical Report 2009-33)",
+  "page_or_figure": "printed p. 10 (PDF p. 16), Figure 2 (embedded image 389 x 346 px)",
+  "image_date": "unknown (aerial photo pre-construction)",
+  "credit": "Taranaki Regional Council",
+  "license": "not stated (public council report; reuse not cleared)",
+  "retrieved": "2026-10-13",
+  "shows": "Aerial of Opunake Bay and Middleton Bay with five survey-site markers (Opunake Bay 1, 2, 3, Middleton Bay, Manihi Rd) and a hatched rectangle 'Approximate location of artificial reef' in the bay north of Opunake Beach. Schematic; no scale bar.",
+  "structure_visible": false,
+  "state_shown": "design (approximate location; pre-construction)",
+  "used_for": [
+   "context",
+   "cross_check"
+  ],
+  "how_used": "Read once: hatched rectangle has the same 2:1 shape as the consent area but its angle (about 15 deg above horizontal) differs from Fig 1 and the consent coordinates (about 28 deg), so it is treated as a hand-drawn schematic and NOT used for position or orientation. Gives the monitoring-site context only.",
+  "linked_records": [
+   "07_scale/shapes/opunake-reef/sources.md fig2"
+  ],
+  "bytes": 274252,
+  "px": [
+   389,
+   346
+  ],
+  "sha256": "023a33a6613a375874503475d9f5707ae69f594068b5d3bb3d5a09dddf89c93d",
+  "rights_note": "Private research copy; reuse rights to be checked before any public release.",
+  "display": true,
+  "for_3d_check": {
+   "pending": false,
+   "what_to_check": "Context only; no model value affected.",
+   "model_values_affected": []
+  },
+  "added_by": "Opunake TRC/NZGeo upload task, 2026-10-13"
+ },
+ {
+  "id": "opunake-reef-img-19",
+  "file": "07_scale/shapes/opunake-reef/src/trc2009-33_photo1_p10_bags_awaiting_deployment.png",
+  "annotated_files": [],
+  "kind": "report_photo",
+  "title": "Geo-textile bags awaiting deployment (TRC 2009-33 Photograph 1)",
+  "citation": "Taranaki Regional Council (2009). Opunake Artificial Reef Monitoring Programme 2005-2009. Technical Report 2009-33 (ISSN 0114-8184 print, 1178-1467 online; document 631513). Stratford, NZ, September 2009, printed p. 4 (PDF p. 10), Photograph 1. Page region rendered at 220 dpi (photo is stored as horizontal strips in the PDF). Source file: new uploads from lior/Opunake Artificial Reef monitoring programme 2005-2009.pdf (Lior's upload, request P15). Accessed 2026-10-13.",
+  "image_url": "new uploads from lior/Opunake Artificial Reef monitoring programme 2005-2009.pdf (Lior's upload, request P15)",
+  "source_page": "https://www.trc.govt.nz (Technical Report 2009-33)",
+  "page_or_figure": "printed p. 4 (PDF p. 10), Photograph 1",
+  "image_date": "unknown (c. 2006-2008)",
+  "credit": "Taranaki Regional Council (photographer not stated)",
+  "license": "not stated (public council report; reuse not cleared)",
+  "retrieved": "2026-10-13",
+  "shows": "Four crumpled, empty-looking geotextile bag units lying on grass, pale blue/fawn fabric; no scale object. Gives the look of the bag fabric only.",
+  "structure_visible": false,
+  "state_shown": "pre-installation (bags on land)",
+  "used_for": [
+   "context"
+  ],
+  "how_used": "Context only: bag appearance. No dimension read (no scale).",
+  "linked_records": [
+   "07_scale/shapes/opunake-reef/sources.md ph1"
+  ],
+  "bytes": 198593,
+  "px": [
+   1306,
+   893
+  ],
+  "sha256": "836c6aaa08ba4f63a175f57f9ad372d2ae95b047d978631300a79406bda9326a",
+  "rights_note": "Private research copy; reuse rights to be checked before any public release.",
+  "display": true,
+  "for_3d_check": {
+   "pending": false,
+   "what_to_check": "Context only; no model value affected.",
+   "model_values_affected": []
+  },
+  "added_by": "Opunake TRC/NZGeo upload task, 2026-10-13"
+ },
+ {
+  "id": "opunake-reef-img-20",
+  "file": "07_scale/shapes/opunake-reef/src/trc2009-33_photo2_p11_construction_sign.png",
+  "annotated_files": [],
+  "kind": "report_photo",
+  "title": "Signage 'Construction of Opunake Artificial Surfing Reef' with works period (TRC 2009-33 Photograph 2)",
+  "citation": "Taranaki Regional Council (2009). Opunake Artificial Reef Monitoring Programme 2005-2009. Technical Report 2009-33 (ISSN 0114-8184 print, 1178-1467 online; document 631513). Stratford, NZ, September 2009, printed p. 5 (PDF p. 11), Photograph 2 'Signage erected in accordance with various consent conditions'. Embedded image 403 x 265 px. Source file: new uploads from lior/Opunake Artificial Reef monitoring programme 2005-2009.pdf (Lior's upload, request P15). Accessed 2026-10-13.",
+  "image_url": "new uploads from lior/Opunake Artificial Reef monitoring programme 2005-2009.pdf (Lior's upload, request P15)",
+  "source_page": "https://www.trc.govt.nz (Technical Report 2009-33)",
+  "page_or_figure": "printed p. 5 (PDF p. 11), Photograph 2 (embedded image 403 x 265 px)",
+  "image_date": "unknown (2007-2008, during works)",
+  "credit": "Taranaki Regional Council",
+  "license": "not stated (public council report; reuse not cleared)",
+  "retrieved": "2026-10-13",
+  "shows": "Trust notice board on the foreshore: 'Opunake Artificial Reef Trust - Construction of Opunake Artificial Surfing Reef - Works period: February 2007 - May 200? (last digit blurred, read as 2008) - Contractor ASR Ltd'; a small location plan on the board is unreadable; bags visible in the background.",
+  "structure_visible": false,
+  "state_shown": "during construction (sign)",
+  "used_for": [
+   "context"
+  ],
+  "how_used": "Read the works period (Feb 2007 to May 2008, last digit blurred; consistent with TRC printed p. 4 '27 bags in place as of April 2008'). The small plan on the board is too small to read, so no geometry used.",
+  "linked_records": [
+   "07_scale/shapes/opunake-reef/sources.md ph2"
+  ],
+  "bytes": 166307,
+  "px": [
+   403,
+   265
+  ],
+  "sha256": "e5e7cbd2b738666b75090193a2dd2431bba4182e4540c898422d5a5ed18856aa",
+  "rights_note": "Private research copy; reuse rights to be checked before any public release.",
+  "display": true,
+  "for_3d_check": {
+   "pending": false,
+   "what_to_check": "Context only; no model value affected.",
+   "model_values_affected": []
+  },
+  "added_by": "Opunake TRC/NZGeo upload task, 2026-10-13"
+ },
+ {
+  "id": "opunake-reef-img-21",
+  "file": "07_scale/shapes/opunake-reef/src/trc2009-33_photo4_p15_pumping_pipe_buoys.png",
+  "annotated_files": [],
+  "kind": "report_photo",
+  "title": "Buoys float the pipe used for pumping the sand slurry out to the geo-textile bags (TRC 2009-33 Photograph 4)",
+  "citation": "Taranaki Regional Council (2009). Opunake Artificial Reef Monitoring Programme 2005-2009. Technical Report 2009-33 (ISSN 0114-8184 print, 1178-1467 online; document 631513). Stratford, NZ, September 2009, printed p. 9 (PDF p. 15), Photograph 4. Embedded image 398 x 261 px. Source file: new uploads from lior/Opunake Artificial Reef monitoring programme 2005-2009.pdf (Lior's upload, request P15). Accessed 2026-10-13.",
+  "image_url": "new uploads from lior/Opunake Artificial Reef monitoring programme 2005-2009.pdf (Lior's upload, request P15)",
+  "source_page": "https://www.trc.govt.nz (Technical Report 2009-33)",
+  "page_or_figure": "printed p. 9 (PDF p. 15), Photograph 4 (embedded image 398 x 261 px)",
+  "image_date": "unknown (2006-2008, during works)",
+  "credit": "Taranaki Regional Council",
+  "license": "not stated (public council report; reuse not cleared)",
+  "retrieved": "2026-10-13",
+  "shows": "Bay seen from the cliff top: a line of blue buoys carrying the sand-slurry pipe across the water towards the reef site; cliffs on the far shore. The bags themselves are not visible.",
+  "structure_visible": false,
+  "state_shown": "during construction",
+  "used_for": [
+   "context"
+  ],
+  "how_used": "Context: construction method (sand pumped as slurry from shore). Direction of the pipe line is not measurable (oblique photo).",
+  "linked_records": [
+   "07_scale/shapes/opunake-reef/sources.md ph4"
+  ],
+  "bytes": 108695,
+  "px": [
+   398,
+   261
+  ],
+  "sha256": "ad8b0ec9c01cf3026a12a0c542cdd5edc457599fa1432a68594aa478460008f2",
+  "rights_note": "Private research copy; reuse rights to be checked before any public release.",
+  "display": true,
+  "for_3d_check": {
+   "pending": false,
+   "what_to_check": "Context only; no model value affected.",
+   "model_values_affected": []
+  },
+  "added_by": "Opunake TRC/NZGeo upload task, 2026-10-13"
+ },
+ {
+  "id": "opunake-reef-img-22",
+  "file": "07_scale/shapes/opunake-reef/src/trc2009-33_photo5_p15_sand_pumping_equipment.png",
+  "annotated_files": [],
+  "kind": "report_photo",
+  "title": "Sand pumping equipment on the shore rocks (TRC 2009-33 Photograph 5)",
+  "citation": "Taranaki Regional Council (2009). Opunake Artificial Reef Monitoring Programme 2005-2009. Technical Report 2009-33 (ISSN 0114-8184 print, 1178-1467 online; document 631513). Stratford, NZ, September 2009, printed p. 9 (PDF p. 15), Photograph 5. Embedded image 398 x 261 px. Source file: new uploads from lior/Opunake Artificial Reef monitoring programme 2005-2009.pdf (Lior's upload, request P15). Accessed 2026-10-13.",
+  "image_url": "new uploads from lior/Opunake Artificial Reef monitoring programme 2005-2009.pdf (Lior's upload, request P15)",
+  "source_page": "https://www.trc.govt.nz (Technical Report 2009-33)",
+  "page_or_figure": "printed p. 9 (PDF p. 15), Photograph 5 (embedded image 398 x 261 px)",
+  "image_date": "unknown (2006-2008, during works)",
+  "credit": "Taranaki Regional Council",
+  "license": "not stated (public council report; reuse not cleared)",
+  "retrieved": "2026-10-13",
+  "shows": "Red pump unit on boulders at the headland boat-ramp area with the slurry pipe running into the water; rock shore beyond.",
+  "structure_visible": false,
+  "state_shown": "during construction",
+  "used_for": [
+   "context"
+  ],
+  "how_used": "Context: construction method and the boulder shore of the headland. No dimensions used.",
+  "linked_records": [
+   "07_scale/shapes/opunake-reef/sources.md ph5"
+  ],
+  "bytes": 193276,
+  "px": [
+   398,
+   261
+  ],
+  "sha256": "cf32e421fb4228bd801fad450176066153623499364c9f9864becb2d223befae",
+  "rights_note": "Private research copy; reuse rights to be checked before any public release.",
+  "display": true,
+  "for_3d_check": {
+   "pending": false,
+   "what_to_check": "Context only; no model value affected.",
+   "model_values_affected": []
+  },
+  "added_by": "Opunake TRC/NZGeo upload task, 2026-10-13"
+ },
+ {
+  "id": "opunake-reef-img-23",
+  "file": "07_scale/shapes/opunake-reef/src/trc2009-33_photo7_p20_opunake_bay2_site.png",
+  "annotated_files": [],
+  "kind": "report_photo",
+  "title": "Opunake Bay 2 intertidal monitoring site (TRC 2009-33 Photograph 7)",
+  "citation": "Taranaki Regional Council (2009). Opunake Artificial Reef Monitoring Programme 2005-2009. Technical Report 2009-33 (ISSN 0114-8184 print, 1178-1467 online; document 631513). Stratford, NZ, September 2009, printed p. 14 (PDF p. 20), Photograph 7. Embedded image 409 x 283 px. Source file: new uploads from lior/Opunake Artificial Reef monitoring programme 2005-2009.pdf (Lior's upload, request P15). Accessed 2026-10-13.",
+  "image_url": "new uploads from lior/Opunake Artificial Reef monitoring programme 2005-2009.pdf (Lior's upload, request P15)",
+  "source_page": "https://www.trc.govt.nz (Technical Report 2009-33)",
+  "page_or_figure": "printed p. 14 (PDF p. 20), Photograph 7 (embedded image 409 x 283 px)",
+  "image_date": "unknown (Feb 2006 or Feb 2007, intertidal survey)",
+  "credit": "Taranaki Regional Council",
+  "license": "not stated (public council report; reuse not cleared)",
+  "retrieved": "2026-10-13",
+  "shows": "Boulder shore at low tide, 50 m east of the Opunake Bay boat ramp, looking along the shore with the bay beyond: large boulders and cobbles on the low intertidal platform next to the reef site.",
+  "structure_visible": false,
+  "state_shown": "pre-construction site (intertidal)",
+  "used_for": [
+   "context"
+  ],
+  "how_used": "Context: nature of the shore (boulder and cobble, not sand). The sand-over-rock seabed statement is TRC p.4 text, not this photo.",
+  "linked_records": [
+   "07_scale/shapes/opunake-reef/sources.md ph7"
+  ],
+  "bytes": 236113,
+  "px": [
+   409,
+   283
+  ],
+  "sha256": "f423f66a42e2468e3eb8ee56b5d422c43cb60f41c64263ffda806c87ba96582b",
+  "rights_note": "Private research copy; reuse rights to be checked before any public release.",
+  "display": true,
+  "for_3d_check": {
+   "pending": false,
+   "what_to_check": "Context only; no model value affected.",
+   "model_values_affected": []
+  },
+  "added_by": "Opunake TRC/NZGeo upload task, 2026-10-13"
+ },
+ {
+  "id": "opunake-reef-img-24",
+  "file": "07_scale/shapes/opunake-reef/src/trc2009-33_p39_consent6376-1_occupation_area_coordinates.png",
+  "annotated_files": [],
+  "kind": "diagram",
+  "title": "Coastal permit 6376-1: the four corner co-ordinates of the area the Trust may occupy for the reef (TRC 2009-33 Appendix I, scanned page)",
+  "citation": "Taranaki Regional Council (2009). Opunake Artificial Reef Monitoring Programme 2005-2009. Technical Report 2009-33 (ISSN 0114-8184 print, 1178-1467 online; document 631513). Stratford, NZ, September 2009, Appendix I, PDF p. 39 (unnumbered scan of Coastal Permit 6376-1, granted 31 May 2005, expiry 1 June 2018, Taranaki Regional Council). Crop of the page rendered at 300 dpi. Source file: new uploads from lior/Opunake Artificial Reef monitoring programme 2005-2009.pdf (Lior's upload, request P15). Accessed 2026-10-13.",
+  "image_url": "new uploads from lior/Opunake Artificial Reef monitoring programme 2005-2009.pdf (Lior's upload, request P15)",
+  "source_page": "https://www.trc.govt.nz (Technical Report 2009-33)",
+  "page_or_figure": "PDF p. 39 (Appendix I, unnumbered scan of consent 6376-1 'Conditions of Consent')",
+  "image_date": "2005-05-31 (consent granted)",
+  "credit": "Taranaki Regional Council",
+  "license": "not stated (public council document; reuse not cleared)",
+  "retrieved": "2026-10-13",
+  "shows": "Text only: 'To occupy an area of the coastal marine area within Opunake Bay defined by the Taranaki local circuit grid co-ordinates 257484E-663800N, 267650E-663887N, 267696E-663803N, 267525E-663718N ... GR: P20:832-937'.",
+  "structure_visible": false,
+  "state_shown": "design (legal occupation area, 2005)",
+  "used_for": [
+   "plan_trace",
+   "scale"
+  ],
+  "how_used": "THE position source: the four corners (first easting misprinted 257484, corrected to 267484 by geometry and by the GR) converted from NZGD49 Taranaki Circuit (EPSG:27209) to WGS84 with the LINZ grid: a 189 x 94 m rectangle, long axis bearing 63 deg, centre -39.45943, 173.85163. Feeds consent_georef.json, shape.json outline version 'consent_area_2005-05-31' and img-17's georeference.",
+  "linked_records": [
+   "07_scale/shapes/opunake-reef/sources.md c6376",
+   "07_scale/shapes/opunake-reef/consent_georef.json"
+  ],
+  "bytes": 15698,
+  "px": [
+   2205,
+   580
+  ],
+  "sha256": "d98c883b7471dbd8c710325562beb39b3793282397ca94f69f52d2928e8964da",
+  "rights_note": "Private research copy; reuse rights to be checked before any public release.",
+  "display": true,
+  "for_3d_check": {
+   "pending": false,
+   "what_to_check": "Corner A easting misprint (257484 vs 267484): resolved 2026-10-13; confirm with the TRC consent file if ever needed.",
+   "model_values_affected": [
+    "planform"
+   ]
+  },
+  "added_by": "Opunake TRC/NZGeo upload task, 2026-10-13"
+ },
+ {
+  "id": "opunake-reef-img-25",
+  "file": "07_scale/shapes/opunake-reef/src/nzgeo_moores2006_p1_hero_sand_pumping_aerial.png",
+  "annotated_files": [],
+  "kind": "aerial",
+  "title": "Aerial photograph of a sand-pumping barge and buoyed pipe over a geo-textile reef under construction (hero image of the New Zealand Geographic article; site and credit not printed)",
+  "citation": "Moores, A. (2006). Artificial surf reefs - coming to a beach near you. New Zealand Geographic (Geo News; card R3 gives issue 078, Mar-Apr 2006). https://www.nzgeo.com/stories/artificial-surf-reefs-coming-to-a-beach-near-you/ . Web page printed to PDF by Lior 2026-10-11: new uploads from lior/New Zyland Geographic.pdf (request P16), p. 1, embedded image 1300 x 999 px. Accessed 2026-10-13 (Lior's print).",
+  "image_url": "https://www.nzgeo.com/stories/artificial-surf-reefs-coming-to-a-beach-near-you/",
+  "source_page": "https://www.nzgeo.com/stories/artificial-surf-reefs-coming-to-a-beach-near-you/ (page bot-checks; Lior's PDF print used)",
+  "page_or_figure": "p. 1 of the print (hero photograph; no caption printed)",
+  "image_date": "unknown (the article is about the Oct 2005 Mount Maunganui start and the planned March 2006 Opunake start)",
+  "credit": "not printed (NZ Geographic)",
+  "license": "not stated (reuse not cleared)",
+  "retrieved": "2026-10-13",
+  "shows": "Oblique aerial of an orange work barge on blue water with a line of blue buoys carrying the sand pipe and long pale sand plumes on the seabed. The print has no caption: the site is NOT stated and is probably Mount Maunganui (Oct 2005 to 2006), not Opunake. No reef outline is visible.",
+  "structure_visible": false,
+  "state_shown": "during construction (site unconfirmed, probably Mount Maunganui)",
+  "used_for": [
+   "context"
+  ],
+  "how_used": "Context only: shows the method (slurry pumped from a barge) used at both NZ reefs. NOT used for Opunake geometry. Orchestrator: consider also registering it for mount-maunganui-reef (not done here: another agent's folder).",
+  "linked_records": [
+   "07_scale/shapes/opunake-reef/sources.md nzg_hero"
+  ],
+  "bytes": 2088149,
+  "px": [
+   1300,
+   999
+  ],
+  "sha256": "32398fafa766ed79b4e984c8c9b2fe9ccdae39c19a5c5c61e41158622ec7688b",
+  "rights_note": "Private research copy; reuse rights to be checked before any public release.",
+  "display": true,
+  "for_3d_check": {
+   "pending": false,
+   "what_to_check": "Context only; no model value affected.",
+   "model_values_affected": []
+  },
+  "added_by": "Opunake TRC/NZGeo upload task, 2026-10-13"
  }
 ]

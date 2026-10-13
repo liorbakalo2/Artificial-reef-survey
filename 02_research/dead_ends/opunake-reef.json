@@ -160,6 +160,56 @@
       "result": "bot check (not bypassed)",
       "detail": "Cloudflare HTTP 403, also on the Wayback copy (the same page is card R5 in the Cables card, where it was never read). The 2026-09-25 verification reported re-fetching it by curl and confirming '90 meters long and 20 meters wide', but the 2026-10-10 citations audit could not reproduce that and removed all 31 [R4] tags (each sat beside R2, which carries the same 90 x 20 m); R4 is now recorded as NOT READ with supports 'nothing'. The two runs disagree, so the 90 x 20 m figure rests on R1 (Newsroom) and R2 (Raised Water Research) only, one lineage.",
       "might_work": "Lior in a browser: read the page and confirm the sentence; else leave R4 uncited"
+    },
+    {
+      "what": "TRC Technical Report 2009-33 (Lior's copy): bag layout, as-built survey, bathymetry, post-construction survey",
+      "kind": "report",
+      "where": "new uploads from lior/Opunake Artificial Reef monitoring programme 2005-2009.pdf (58 pp.), read in full 2026-10-13",
+      "checked": "2026-10-13",
+      "by": "agent: Opunake TRC/NZGeo task (cloud)",
+      "result": "no plan or figure (partial yield)",
+      "detail": "The report gave the design size (99 x 30 x 3.5 m), depths with datum, state, consents and the occupation-area co-ordinates (used as references), but NO drawing of the bag layout, no bag levels, no bathymetry and no reef survey: it is an environmental compliance report (kaimoana and intertidal baseline surveys 2006-07, inspections from the cliff top). Figure 1 shows only the proposed-location rectangle on an aerial; Figure 2 a schematic hatched rectangle. The dive survey of the structure was only recommended for 2009-10 (printed p.18) and is not in this report.",
+      "might_work": "Later TRC monitoring reports (2009-10 and after; dive survey, structural-integrity reports under consent 6377-1 condition 15) and the consent file via E11 (TRC / STDC Official Information request)"
+    },
+    {
+      "what": "NZ Geographic article (Moores 2006): Opunake design figure",
+      "kind": "web page",
+      "where": "new uploads from lior/New Zyland Geographic.pdf (Lior's print of https://www.nzgeo.com/stories/artificial-surf-reefs-coming-to-a-beach-near-you/), read and OCRed 2026-10-13",
+      "checked": "2026-10-13",
+      "by": "agent: Opunake TRC/NZGeo task (cloud)",
+      "result": "no plan or figure",
+      "detail": "The article is text only (cost about NZ$1.3 m, waves 1.8-2.5 m, 100 m ride, south reef 200 m / 3.6 m, construction slated for March): used for those facts. It has no Opunake plan, dimensions of the reef or coordinates; its one photograph is an uncaptioned aerial of a pumping barge (site not stated, probably Mount Maunganui). Issue number and date are not on the print.",
+      "might_work": "Nothing for the design figure; the print edition (NZ Geographic issue 078, Mar-Apr 2006) might hold a graphic that the web page lacks (library)"
+    },
+    {
+      "what": "Black and Mead (2006), Opunake Reef Construction Manual (ASR Ltd for the Opunake Reef Trust)",
+      "kind": "report",
+      "where": "cited in TRC 2009-33 bibliography (printed p.20); WebSearch 2026-10-13 'Black Mead 2006 \"Opunake Reef Construction Manual\" ASR Limited'",
+      "checked": "2026-10-13",
+      "by": "agent: Opunake TRC/NZGeo task (cloud)",
+      "result": "not found",
+      "detail": "No online copy or catalogue record. Probably holds the construction drawings and bag layout.",
+      "might_work": "TRC / South Taranaki District Council / Opunake Reef Trust files (E11); University of Waikato (Kerry Black) library"
+    },
+    {
+      "what": "TRC post-construction monitoring reports on the Opunake reef (dive survey 2009-10, annual reports after 2009)",
+      "kind": "search",
+      "where": "WebSearch 2026-10-13: 'Opunake Artificial Reef monitoring programme post-construction dive survey Taranaki Regional Council technical report 2010'",
+      "checked": "2026-10-13",
+      "by": "agent: Opunake TRC/NZGeo task (cloud)",
+      "result": "not found",
+      "detail": "Results were unrelated reefs or general Opunake news; trc.govt.nz is bot-checked, so its publications library cannot be searched automatically.",
+      "might_work": "Lior in a browser: TRC 'Technical reports' library, search 'Opunake'; or E11"
+    },
+    {
+      "what": "Imagery inside the consent occupation area (LINZ 2011-12, 0.4 m) for a visible bag field",
+      "kind": "imagery",
+      "where": "07_scale/shapes/opunake-reef/overlays/consent_area_and_envelope_on_linz2011-12.png",
+      "checked": "2026-10-13",
+      "by": "agent: Opunake TRC/NZGeo task (cloud)",
+      "result": "imagery shows no structure",
+      "detail": "Now that the exact 189 x 94 m area is known, the LINZ 2011-12 aerial was re-checked inside it: only wave texture; the bags (crest at chart datum) are not visible. Esri 2025 frames likewise (earlier entries).",
+      "might_work": "Google Earth Pro history 2007-2012 (G8) over the polygon centre -39.4594, 173.8516 (fresh bags, calm day)"
     }
   ]
 }

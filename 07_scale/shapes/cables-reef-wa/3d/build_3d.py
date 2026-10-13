@@ -1,7 +1,7 @@
 """cables-reef-wa: build model.js + docs.js. Run from anywhere: python3 build_3d.py
 Inputs: ../shape.json, ../scripts/computed.json, ../scripts/a2_trace.json, METHODS_3D.md, SOURCES_3D.md (docs). numpy/scipy/skimage/shapely only.
 Frame of model.js: x = alongshore, + toward SOUTH (x_model = -x_canonical of shape.json) so that (x, y west, z up) is right-handed in three.js; y = offshore, + toward WEST;
-z (reef/seabed grids) = metres relative to MSL under datum reading A (z_MSL = z_RL - 0.78); RL values are kept as z_RL in the contours and provenance."""
+z (reef/seabed grids) = metres AHD (taken as MSL, A12) under datum reading A (z_AHD = z_RL - 0.716, datum link of 2026-10-13); RL values are kept as z_RL in the contours and provenance."""
 import base64, json, sys, datetime
 import numpy as np
 from scipy import ndimage as ndi
@@ -10,7 +10,7 @@ from skimage import measure
 sys.path.insert(0, __file__.rsplit('/', 1)[0]); import b3d_lib as L
 HERE = L.HERE
 DEFAULT_VERSION = "survey_surface_1999_11"   # decision X9 (2026-10-10): measured survey > design drawing (Lior rule 4); see METHODS_3D section 10
-OFF_A = 0.78                       # S1 p.3: mean tide level 0.78 m above datum -> z_MSL = z_RL - 0.78 (reading A)
+OFF_A = 0.716                      # AHD above the design / tide-gauge datum (Fremantle LWD): DNM TR12 Table 3, MSL 1966-68 = 2.350 ft = 0.716 m above gauge zero = AHD 0.000 (scripts/datum_link.py); +-0.04 m Perth metro zone. Until 2026-10-13: 0.78 (S1 p.3 mean tide level). z_AHD(= z_MSL, A12) = z_RL - 0.716 (reading A)
 G_BED = 1 / 30.0                   # Pitt sketch: 1 m depth per ~28-33 m
 V_TARGET = 5500.0                  # Blacka 2013 A.1.3
 Y_REF = 270.0
@@ -66,7 +66,9 @@ def version_entry(vid, name, date, kind, srcs, method, level, key, note, sil):
 V = []
 for vid, key, sil in (('design_plan_plus_extension_1999', 'v_asbuilt_m', sil_a), ('design_plan_original_1999', 'v_orig_m', sil_o), ('paper_fig7_site_plan_1999', 'fig7_m', None), ('pitt_concept_sketch', 'pitt_m', None)):
     s = vers_src[vid]
-    e = version_entry(vid, s['name'], s['date'], s['kind'], s['source_ids'], s['method'], s['level'], key, s['note'], sil); V.append(e)
+    # shape.json (written by scripts/add_geo_to_shape.py before the survey versions existed) still labels the original plan "(default)"; since decision X2/X9 the default is
+    # survey_surface_1999_11 and the viewer appends "[default]" itself (index.html), so the label is stripped here (fixed 2026-10-13).
+    e = version_entry(vid, s['name'].replace(' (default)', ''), s['date'], s['kind'], s['source_ids'], s['method'], s['level'], key, s['note'], sil); V.append(e)
     print(vid, e['area_m2'], e['bbox_m'], e.get('volume_m3'))
 # ---- design contours (RL) as polylines in the model frame, from the ramp surface
 cont = []
@@ -151,7 +153,7 @@ bed_range = [round(float(-bed_fn(0, y)), 2) for y in (min(p[1] for p in CO['v_as
 _ob = np.array(CO['v_orig_m']); _bu = -bed_fn(_ob[:, 0], _ob[:, 1])
 validation = {"bed": "measured: DoT WA singlebeam 30 Mar 1998 (pre-construction) + Perth_5m, AHD; replaces the fitted 1:30 plane (RL -3.50 at y = 270) of the first model",
   "bed_AHD_at_x0_y270": round(float(bed_fn(0.0, 270.0)) - OFF_A, 2),
-  "bed_depth_at_outline_original_plan_RL_m": {"min": round(float(_bu.min()), 2), "max": round(float(_bu.max()), 2), "mean": round(float(_bu.mean()), 2), "note": "depth below RL 0 of the measured bed along the outline; add 0.78 for depth below MSL under reading A (AHD = MSL assumed)"},
+  "bed_depth_at_outline_original_plan_RL_m": {"min": round(float(_bu.min()), 2), "max": round(float(_bu.max()), 2), "mean": round(float(_bu.mean()), 2), "note": "depth below RL 0 of the measured bed along the outline; add 0.716 for depth below AHD (= MSL, A12) under reading A"},
   "bed_depth_at_outline_original_plan_below_MSL_A_m": {"min": round(float(_bu.min()) + OFF_A, 2), "max": round(float(_bu.max()) + OFF_A, 2), "mean": round(float(_bu.mean()) + OFF_A, 2), "text_water_depth": "3.0-6.0 m (Blacka Table 4.2, RWR)"},
   "S1_7m_contour_at_350m_model_depth_RL": round(float(-bed_fn(0, 350.0)), 2),
   "contour_check_centreline": chk, "contour_check_rms_m": rms, "contour_check_transects": tchk,
@@ -162,29 +164,31 @@ validation = {"bed": "measured: DoT WA singlebeam 30 Mar 1998 (pre-construction)
   "mean_thickness_m": dflt['mean_thickness_m'], "max_thickness_m": dflt['max_thickness_m']}
 sys.path.insert(0, HERE)
 levels = [
- {"id": "DATUM", "name": "Design / tide-gauge datum (chart datum, low-water mark)", "z": -0.78, "rl": 0.0, "source": "S1 p.3: wave-basin sea level 'mean tide level of 0.78 m above datum'; Pitt sketch note: 0.0 on the tide gauge", "estimated": False},
- {"id": "LWt", "name": "Typical low water (MSL - 0.4 m)", "z": -0.40, "rl": 0.38, "source": "Blacka 2013 Table 4.3: tide range 0.8 m; half range taken as +-0.4 m (estimate)", "estimated": True},
- {"id": "MSL", "name": "Mean sea level (mean tide level 0.78 m above datum)", "z": 0.0, "rl": 0.78, "source": "S1 p.3 (MTL taken as MSL)", "estimated": False},
- {"id": "HWt", "name": "Typical high water (MSL + 0.4 m)", "z": 0.40, "rl": 1.18, "source": "Blacka 2013 Table 4.3: tide range 0.8 m (estimate)", "estimated": True},
+ {"id": "DATUM", "name": "Design / tide-gauge datum (chart datum, low-water mark)", "z": -0.716, "rl": 0.0, "source": "DNM TR12 Table 3: Fremantle MSL 1966-68 = AHD 0.000 is 0.716 m above gauge zero (Fremantle LWD; +-0.04 m Perth metro zone); Pitt sketch note: 0.0 on the tide gauge", "estimated": False},
+ {"id": "LWt", "name": "Typical low water (MSL - 0.4 m)", "z": -0.40, "rl": 0.32, "source": "Blacka 2013 Table 4.3: tide range 0.8 m; half range taken as +-0.4 m (estimate)", "estimated": True},
+ {"id": "MSL", "name": "Mean sea level (= AHD, MSL 1966-68 at Fremantle; MSL 1992-2011 is +0.06 m)", "z": 0.0, "rl": 0.716, "source": "AHD 0.000 = MSL 1966-68 (GA; DNM TR12 Table 3); BoM Fremantle MSL 1992-2011 0.773 m above gauge zero = AHD +0.057; S1 p.3 mean tide level 0.78 m above datum", "estimated": False},
+ {"id": "HWt", "name": "Typical high water (MSL + 0.4 m)", "z": 0.40, "rl": 1.12, "source": "Blacka 2013 Table 4.3: tide range 0.8 m (estimate)", "estimated": True},
 ]
 M = {
  "slug": "cables-reef-wa", "name": "Cable Station artificial surfing reef (Cables Reef, Cottesloe / Leighton, Perth, Western Australia)", "built": datetime.date.today().isoformat(),
  "state": "Default: rock surface surveyed by DoT WA in Nov 1999 (the month before completion) on the georeferenced Lyons (1992) design footprint, on the measured pre-construction bed. Design-plan versions (with and without the south-arm extension) are drawn at their design levels (RL -1.0 crest to -3.0 outer edge). Later changes are notes only.",
  "frame": {"x": "alongshore, + toward SOUTH (x_model = -x_canonical)", "y": "offshore, + toward WEST", "z": "up, 0 = MSL (reading A)", "units": "m", "origin": "the design drawing frame (x along the reef axis, y offshore) rotated %.1f deg from true north by the georeference; origin = canonical origin, centroid of the original footprint at y = 271 m" % GEO['theta_ccw_deg'],
            "bearing_x_deg": round((GEO['canonical_plus_x_bearing_deg'] + 180.0) % 360, 1), "bearing_y_deg": GEO['canonical_plus_y_(offshore)_bearing_deg'], "north_xy": [round(-float(np.cos(np.radians(GEO['theta_ccw_deg']))), 4), round(-float(np.sin(np.radians(GEO['theta_ccw_deg']))), 4)], "shoreline_y": 0.0, "shoreline_bearing_deg": SHORE_BRG},
- "datum": {"zero": "MSL", "rl_minus_msl_A": OFF_A, "equation": "reading A (default): z_MSL = z_RL - 0.78 ; reading B (Blacka 2013 wording 'below MSL'): z_MSL = z_RL",
-           "note": "The drawing's RL datum is not stated. Reading A: RL = tide-gauge / chart datum (Pitt note, S1 'datum'). Reading B: RL = MSL (Blacka 2013 A.1.1 'crest submergence of 1-2.5 m below MSL'). They differ by 0.78 m; the viewer has a switch."},
+ "datum": {"zero": "MSL", "rl_minus_msl_A": OFF_A, "equation": "reading A (default): z_AHD (= z_MSL) = z_RL - 0.716 ; reading B (Blacka 2013 wording 'below MSL'): z_MSL = z_RL",
+           "note": "The drawing's RL datum is not stated. Reading A: RL = tide-gauge / chart datum (Pitt note, S1 'datum'). Reading B: RL = MSL (Blacka 2013 A.1.1 'crest submergence of 1-2.5 m below MSL'). They differ by 0.716 m; the viewer has a switch. Since 2026-10-13 reading A is supported by the datum definition: AHD 0.000 = MSL 1966-68 at Fremantle = 0.716 m above the Fremantle gauge zero (LWD) (DNM TR12 Table 3), so the offset is 0.716 m (+-0.04 m, Perth metro zone), not the 0.78 m of the 1999 paper (a present-day mean tide level)."},
  "levels": levels, "extra_levels": [], "slider": {"min_id": "DATUM", "max_id": "HWt", "note": "HAT/LAT of Fremantle not found at a primary source; slider spans the tide-gauge datum to typical high water (range 0.8 m, Blacka 2013)."},
  "seabed": {"x0": SBX0, "y0": SBY0, "step": SBS, "nx": snx, "ny": sny, "x1": SBX1, "z": seabed_z},
- "versions": V, "default_version": DEFAULT_VERSION, "versions_info": SH['versions_info'] + " Only the first two are modelled in 3D (they carry the design levels of the Lyons plan); the Fig 7 and Pitt outlines are plan-only.",
+ "versions": V, "default_version": DEFAULT_VERSION,
+ # shape.json's versions_info (written before the survey versions) says the default outline is the design plan; since X2/X9 the default VERSION is the Nov 1999 surveyed surface on that footprint (fixed 2026-10-13)
+ "versions_info": SH['versions_info'].replace('The default outline is the original construction design plan', 'The default version is the rock surface surveyed in Nov 1999 (DoT WA soundings), drawn on the footprint of the original construction design plan') + " Four versions are modelled in 3D: the two design-plan versions (design levels of the Lyons plan) and the Nov 1999 and Feb 2002 surveyed surfaces; the Fig 7 and Pitt outlines are plan-only.",
  "contours": cont,
  "roles": {"north": {"label": "North arm (shorter)", "centroid": [-30.0, 280.0]}, "south": {"label": "South arm (longer, extended)", "centroid": [38.0, 262.0]}},
- "crest_labels": [{"text": "crest line RL -1.0 (1.0 m below datum)", "x": 4.0, "y": 268.0, "z": -1.78}, {"text": "set-out line RL -3.0 (apex)", "x": -12.0, "y": 308.0, "z": -3.78}],
+ "crest_labels": [{"text": "crest line RL -1.0 (1.0 m below datum)", "x": 4.0, "y": 268.0, "z": -1.72}, {"text": "set-out line RL -3.0 (apex)", "x": -12.0, "y": 308.0, "z": -3.72}],
  "provenance": [], "confidence_3d": {}, "validation": validation, "photo_match": True,
  "axis_xy": {"head": [-12.0, 312.0], "tail": [60.0, 240.0]},
 }
 exec(open(HERE + '/provenance.py').read())              # fills M['provenance'], M['confidence_3d'], M['ui'], M['source_names']
-js = "/* Generated by build_3d.py (%s). x south, y west (offshore), z in m relative to MSL under datum reading A (z_MSL = z_RL - 0.78). */ window.REEF_MODEL = %s;\n" % (M['built'], json.dumps(M, separators=(',', ':')))
+js = "/* Generated by build_3d.py (%s). x south, y west (offshore), z in m AHD (taken as MSL) under datum reading A (z = z_RL - 0.716). */ window.REEF_MODEL = %s;\n" % (M['built'], json.dumps(M, separators=(',', ':')))
 open(HERE + '/model.js', 'w', encoding='utf-8').write(js)
 docs = {}
 for k, f in (('methods_md', 'METHODS_3D.md'), ('sources_md', 'SOURCES_3D.md')):

@@ -87,8 +87,8 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 const M = window.REEF_MODEL, DOCS = window.REEF_DOCS || {};
 const $ = id => document.getElementById(id);
 const D2R = Math.PI / 180;
-const OFFA = M.datum.rl_minus_msl_A;                 // scene Y = z_RL - 0.78 (datum reading A)
-let READ = 'A';                                      // datum reading A (RL = chart datum, MSL = RL + 0.78) or B (RL = MSL)
+const OFFA = M.datum.rl_minus_msl_A;                 // scene Y = z_RL - 0.716 (datum reading A); z = m AHD (taken as MSL)
+let READ = 'A';                                      // datum reading A (RL = chart datum = Fremantle LWD, AHD = RL + 0.716) or B (RL = MSL)
 const surveyVer = () => { const v = M.versions.find(q => q.id === state.ver); return !!(v && v.kind === 'survey_surface'); };   // surveyed versions are in AHD (= MSL), independent of the RL reading
 const rlOff = () => ((READ === 'A' || surveyVer()) ? OFFA : 0);       // z_RL - z_MSL
 const wlY = () => state.wl - (OFFA - rlOff());       // scene Y of the water plane (state.wl is relative to MSL)
@@ -263,7 +263,7 @@ function setWater(z) { state.wl = z; const y = wlY(); water.position.y = y; grid
 function setVE(v) { state.ve = v; world.scale.y = v; $('ve').textContent = 'Vertical exaggeration ×' + v.toFixed(1) + (v > 1 ? '  (heights stretched, plan true)' : '  (true scale)'); if ($('ve_s')) { $('ve_s').value = v; $('ve_o').textContent = '×' + v.toFixed(1); } writeHash(); }
 function refreshWL() {
   const z = state.wl; if ($('wl')) { $('wl').value = z; }
-  if ($('wlo')) $('wlo').innerHTML = `<b>${fmt(z)} m MSL</b> = RL ${fmt(z + rlOff())} m (design datum; reading ${READ}) = ${(z + 0.78).toFixed(2)} m above the tide-gauge datum`;
+  if ($('wlo')) $('wlo').innerHTML = `<b>${fmt(z)} m AHD (≈ MSL)</b> = RL ${fmt(z + rlOff())} m (design datum; reading ${READ}) = ${(z + OFFA).toFixed(2)} m above the tide-gauge datum`;
 }
 function writeHash() {
   const lv = allLevels.find(l => Math.abs(l.z - state.wl) < 0.004), p = new URLSearchParams();
@@ -346,14 +346,14 @@ $('mclose').onclick = () => $('modal').style.display = 'none'; $('modal').onclic
 // ---------------------------------------------------------------------------------------------- header: confidence and state
 const C = M.confidence_3d; $('conf').innerHTML = `<span class="badge b-${C.level}">3D confidence: ${C.level.toUpperCase()}</span> <span class="small">${C.reason.split('. ')[0]}.</span>`; $('conf').title = C.reason;
 $('state').textContent = M.state; $('state').title = M.state;
-$('cap').innerHTML = `<b>${M.name}</b><br>z = 0 at MSL (reading A: z_MSL = RL − 0.78). Default = DoT WA soundings (Nov 1999) on the georeferenced design footprint; design versions are drawings. Not for navigation.`;
+$('cap').innerHTML = `<b>${M.name}</b><br>z = 0 at AHD ≈ MSL (reading A: z = RL − 0.716). Default = DoT WA soundings (Nov 1999) on the georeferenced design footprint; design versions are drawings. Not for navigation.`;
 
 // ---------------------------------------------------------------------------------------------- sources tab
 (function mkSources() {
   const rows = M.provenance.map(p => `<tr><td>${p.parameter}</td><td>${p.value} ${p.unit && p.unit !== '-' ? '' : ''}</td><td>${p.source_id}</td><td>${p.method}</td><td class="${p.estimated ? 'est' : ''}">${p.uncertainty}${p.estimated ? ' (estimated)' : ''}</td></tr>`).join('');
   $('t3').innerHTML = `<h3>3D confidence: <span class="badge b-${C.level}">${C.level.toUpperCase()}</span></h3><p>${C.reason}</p>
   <h3>Provenance (every model value)</h3><table><tr><th>Parameter</th><th>Value</th><th>Source</th><th>Method</th><th>Uncertainty</th></tr>${rows}</table>
-  <h3>Water levels (m MSL, reading A; RL = z + 0.78)</h3><table><tr><th>Level</th><th>RL</th><th>m MSL</th><th>Source</th></tr>${allLevels.map(l => `<tr><td>${l.name}</td><td>${fmt(l.rl)}</td><td>${fmt(l.z)}</td><td class="${l.estimated ? 'est' : ''}">${l.source}</td></tr>`).join('')}</table>`;
+  <h3>Water levels (m AHD ≈ MSL, reading A; RL = z + 0.716)</h3><table><tr><th>Level</th><th>RL</th><th>m MSL</th><th>Source</th></tr>${allLevels.map(l => `<tr><td>${l.name}</td><td>${fmt(l.rl)}</td><td>${fmt(l.z)}</td><td class="${l.estimated ? 'est' : ''}">${l.source}</td></tr>`).join('')}</table>`;
 })();
 
 // ---------------------------------------------------------------------------------------------- docs tab (small markdown renderer)
@@ -420,7 +420,7 @@ function camState() {
   const vfov = camera.fov, hfov = 2 * Math.atan(Math.tan(vfov * D2R / 2) * camera.aspect) / D2R;
   return { x: camera.position.x, y: camera.position.z, z: camera.position.y / ve, hdg, pitch, vfov, hfov };
 }
-function camJSON() { const c = camState(); return { model: 'cables-reef-wa', version: state.ver, frame: 'model x south, y offshore (west), metres; z scene = RL - 0.78', x_m: +c.x.toFixed(2), y_m: +c.y.toFixed(2), z_m_MSL: +c.z.toFixed(2), z_RL_m: +(c.z + ZODN).toFixed(2), datum_reading: READ, heading_true_deg: +c.hdg.toFixed(1), pitch_deg: +c.pitch.toFixed(1), hfov_deg: +c.hfov.toFixed(1), vfov_deg: +c.vfov.toFixed(1), aspect: +camera.aspect.toFixed(3), water_level_m_MSL: state.wl, vertical_exaggeration: state.ve }; }
+function camJSON() { const c = camState(); return { model: 'cables-reef-wa', version: state.ver, frame: 'model x south, y offshore (west), metres; z scene = RL - 0.716', x_m: +c.x.toFixed(2), y_m: +c.y.toFixed(2), z_m_MSL: +c.z.toFixed(2), z_RL_m: +(c.z + ZODN).toFixed(2), datum_reading: READ, heading_true_deg: +c.hdg.toFixed(1), pitch_deg: +c.pitch.toFixed(1), hfov_deg: +c.hfov.toFixed(1), vfov_deg: +c.vfov.toFixed(1), aspect: +camera.aspect.toFixed(3), water_level_m_MSL: state.wl, vertical_exaggeration: state.ve }; }
 function syncFromCamera() { const c = camState(); Object.assign(ph, { x: c.x, y: c.y, z: c.z, h: (c.hdg + 360) % 360, p: c.pitch, fov: c.hfov }); ['x', 'y', 'z', 'h', 'p', 'fov'].forEach(k => { $('ps_' + k).value = ph[k]; $('pn_' + k).value = +ph[k].toFixed(2); }); }
 function applyPhotoCam() {
   if (!state.photoMode) return;

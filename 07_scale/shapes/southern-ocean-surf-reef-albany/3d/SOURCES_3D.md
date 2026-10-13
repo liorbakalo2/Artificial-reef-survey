@@ -19,3 +19,9 @@ Run started 2026-10-10 (fresh agent; network FULL). Source register with "how us
 
 ## Scripts (3d/scripts/)
 geo.py (georeference, frame), prof.py + read_contours.py (contour crossings -> src/levels2_raw.json), tides_from_dot.py (-> src/tides_derived.json), make_annotations.py, make_viewer_from_borth.py (viewer derived from the Borth viewer), preview.py (headless screenshots), ../build_3d.py (model.js, docs.js, src/build_metrics.json).
+
+## Run 2026-10-13 (Lior's uploads: Albany FAQ PDF and three Raised Water Research PDFs; live pages)
+- Read: Albany FAQ PDF (byte-identical to src/city_docs copy, S8: nothing new); RWR spot, design-2019 and moved-rocks pages (S15-S17; Lior's PDFs are screenshots, text checked against the live pages); live pages and articles S18-S22 (curl through the cloud proxy, no login); GA 2021 holdings file S23 (42 MB; the 69 MB 2019 file was not downloaded: over the 50 MB limit).
+- Result: no source gives an as-built level, crest, section or seabed depth, so geometry is unchanged (D11). Corrected: state "completed March 2025" -> placement 18 Mar - June 2025, opened 16 Jul 2025 (A12). New: later changes section (Methods 3.4), three validation rows, A13 (70,000 t sensitivity), D11, D12, full reference list, change log (Methods 9).
+- Rebuilt with `python -I build_3d.py`: model.js differs only in two text strings and the added sensitivity key `if_built_70000_t` (checked by diff).
+- W8: GA services return 403 and the portal scripts are served as HTML (cannot render); GA's public 2021 holdings file names WA DoT "Middleton Bay & Oyster Harbour" multibeam and laser-scanner surveys. `W8_how_to.png` (lat/lon, point, 5 steps) saved here.

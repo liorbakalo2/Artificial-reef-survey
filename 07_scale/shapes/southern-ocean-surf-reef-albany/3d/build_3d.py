@@ -99,7 +99,7 @@ def main():
 
     metrics = {'N_shape_exponent': round(N, 3), 'density_t_m3': round(dens, 3), 'LAT_AHD': LAT, 'HAT_pred_AHD': HAT_pred}
     versions = []
-    defs = [('design_bluecoast', 'Bluecoast final design, outer contour (design stage, volume on 2017 bathymetry)', 'design stage, before the Oct 2024 - Mar 2025 build', ['design_plan', 'design_table', 'rhdhv2015', 'eia2018'],
+    defs = [('design_bluecoast', 'Bluecoast final design, outer contour (design stage, volume on 2017 bathymetry)', 'design stage, before the March - June 2025 rock placement', ['design_plan', 'design_table', 'rhdhv2015', 'eia2018'],
              'Toe polygon = outermost contour of the Bluecoast plan (shape.json design_bluecoast). Seabed from the RHDHV 2015 contour profile. Crest ridge 9 m inside the steep shoreward edge, -1.0 m AHD at the offshore (east) end, -2.0 m AHD along the rest; surface lofted between crest and toe with exponent N calibrated so the volume is the stated 34,000 m3.'),
             ('sat_2026', 'Visible reef on Esri satellite 2026-01-20 (as seen from above)', '2026-01-20', ['sat2026', 'design_table', 'rhdhv2015', 'eia2018'],
              'Toe polygon = traced dark rock patch on the 2026-01-20 image (shape.json sat_2026). Same seabed, crest rule and exponent N as the design version (not re-fitted); volume is therefore a result, not a fit.')]
@@ -128,7 +128,11 @@ def main():
                  bbox_m=[round(float(np.ptp([p[0] for p in pts])), 1), round(float(np.ptp([p[1] for p in pts])), 1)], outline_m=[poly_o],
                  grid=dict(x0=-80.0, y0=50.0, step=1.0, nx=160, ny=200, h_cm_b64=b64(Hcm, np.int16), zone_b64=b64(np.where(G['inside'], 1, 0), np.uint8)))
         versions.append(v)
+        if vid == 'design_bluecoast':   # 2026-10-13 sensitivity only (not in model.js): press/ABC quote 70,000 t; City design table 62,800 t
+            N70 = calibrate_N(pts, nch, target=70000 / dens); G70 = reef_grid(pts, nch, N70)
+            sens70 = dict(target_t=70000, target_m3=round(70000 / dens), N=round(N70, 2), volume_m3=round(G70['vol']), max_height_m=round(G70['hmax'], 2), mean_height_m=round(float(G70['hmean']), 2) if 'hmean' in G70 else None)
         metrics[vid] = {k: v[k] for k in ('area_m2', 'volume_m3', 'volume_unc_m3', 'tonnes_est', 'max_height_m', 'mean_height_m', 'volume_unfitted_loft_N1', 'sensitivities_m3', 'ridge_length_m', 'area_above_minus2_m2')}
+        if vid == 'design_bluecoast': metrics[vid]['if_built_70000_t'] = sens70
         # bed depth at key points of the outline (m AHD)
         ys_ = np.array([p[1] for p in pts]); metrics[vid]['bed_at_outline_y_min_max'] = [round(float(zb(ys_.min())), 2), round(float(zb(ys_.max())), 2)]
     # ---- seabed grid
@@ -147,7 +151,7 @@ def main():
     north_xy = [round(math.cos(th), 4), round(math.cos(th + math.pi / 2), 4)]
     ctr = Polygon(des).centroid
     model = dict(slug='southern-ocean-surf-reef-albany', name='Southern Ocean Surf Reef ("Midds Reef"), Middleton Beach, Albany WA', built=BUILT,
-                 state='As built (completed March 2025, 18 rocks repositioned March 2026 = note only). Plan = Bluecoast design outline (default) or the visible reef on Esri 2026-01-20; heights = design crest levels over a seabed read from 2015 design contours (LOW confidence, see Methods).',
+                 state='As built (rock placed 18 March - June 2025, opened 16 July 2025; a May 2025 storm moved some core rock before armouring and 18 high rocks were repositioned in late February 2026 = notes only). Plan = Bluecoast design outline (default) or the visible reef on Esri 2026-01-20; heights = design crest levels over a seabed read from 2015 design contours (LOW confidence, see Methods).',
                  frame=dict(x='alongshore, + toward NNE (bearing %.2f deg true)' % BETA, y='offshore, + toward ESE (bearing %.2f deg true)' % (BETA + 90), z='up, 0 = AHD (about MSL)', units='m',
                             origin='foot of the perpendicular from the traced reef centroid onto the beach-face line (edge of bright dry sand, Esri 2026-01-20); lat/lon -35.0172584, 117.919428',
                             bearing_x_deg=BETA, bearing_y_deg=BETA + 90, north_xy=north_xy, shoreline_y=0.0),

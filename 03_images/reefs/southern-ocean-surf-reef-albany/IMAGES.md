@@ -729,3 +729,37 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **rights**: Private research copy; reuse rights to be checked before any public release.
 - **display in HTML**: True
 - **added by**: 3D network run (fresh agent), 2026-10-10
+
+## southern-ocean-surf-reef-albany-img-29 - Rocks moved shoreward by the 26 May 2025 storm, Albany reef under construction (ABC Great Southern photo, via RWR)
+- **file**: `03_images/reefs/southern-ocean-surf-reef-albany/southern-ocean-surf-reef-albany_rwr-abc-moved-rocks_2025-05.png`
+- **kind**: photo
+- **citation**: Indelicato, P. (2025). More waves, and a few moved rocks, at Southern Ocean Surf Reef. Raised Water Research, 28 May 2025; photo credit Sam Carmody and Albany Boardriders, ABC Great Southern frame. https://raisedwaterresearch.com/more-waves-and-a-few-moved-rocks-at-southern-ocean-surf-reef/ . Image file https://raisedwaterresearch.com/wp-content/uploads/2025/05/Rocks-at-Southern-Ocean-Surf-Reef.png (482 x 282 px: the largest size on the site). Accessed 2026-10-13.
+- **image url**: https://raisedwaterresearch.com/wp-content/uploads/2025/05/Rocks-at-Southern-Ocean-Surf-Reef.png
+- **source page**: https://raisedwaterresearch.com/more-waves-and-a-few-moved-rocks-at-southern-ocean-surf-reef/
+- **image date**: late May 2025 (after the storm of Monday 26 May 2025)
+- **credit / licence**: Sam Carmody and Albany Boardriders; ABC Great Southern (logo on the frame); Raised Water Research / not stated; copyright ABC / photographers: link/research copy only, NOT cleared
+- **shows**: Dark rocks showing above the whitewater close to the beach at Middleton Beach with a circular inset of a wave breaking on the reef; the rocks are core rock moved shoreward during construction (per Peter Bolt).
+- **How used for the model**: Evidence for the Methods 3.4 note on the May 2025 move of core rock (S17). No position or size read: no scale, camera unknown; not used for any model value.
+- **3D check**: pending False
+- **size**: 203236 bytes, [482, 282] px
+- **sha256**: 8b32ee1bf35abe8141a4e042f8015979061cf72b38f0f28339c41bc61be3a1c6
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: Albany uploads agent, 2026-10-13
+
+## southern-ocean-surf-reef-albany-img-30 - W8 how-to: reef centre on Esri imagery 2026-01-20 with the 5 steps for the AusSeabed portal
+- **file**: `07_scale/shapes/southern-ocean-surf-reef-albany/3d/W8_how_to.png`
+- **kind**: diagram
+- **citation**: Own figure (2026-10-13) on Esri, Maxar, Earthstar Geographics and the GIS User Community (2026), World Imagery capture 2026-01-20 (registry img-13).
+- **image url**: local file
+- **source page**: local figure (made by this project)
+- **image date**: 2026-10-13
+- **credit / licence**: this project; imagery Esri et al. / private
+- **shows**: Esri image of Middleton Beach with the rock reef (dark patch) and the point lat -35.018005, lon 117.920991 marked; text with the steps for the GA AusSeabed portal.
+- **How used for the model**: Instruction for Lior (request W8); not a model input. The point is the reef centroid of the model (shape.json).
+- **3D check**: pending False
+- **size**: 970544 bytes, [1000, 976] px
+- **sha256**: 483a5a262f89cbbc5b49b2290441e399494ba5c6765c4905d5a4d02ad19521ea
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: Albany uploads agent, 2026-10-13
