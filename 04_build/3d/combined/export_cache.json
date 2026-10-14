@@ -686,7 +686,7 @@
   }
  },
  "cables-reef-wa": {
-  "sig": "28f7b622b3d784ec217e07916437d450453bd965",
+  "sig": "f4c2fd5781be4b98c92a683877b0d5596eb398e9",
   "result": {
    "slug": "cables-reef-wa",
    "status": "ok",
@@ -784,7 +784,7 @@
   }
  },
  "southern-ocean-surf-reef-albany": {
-  "sig": "df4ecb6a600eca51398e04660e5d18cfd08dd705",
+  "sig": "c27cdf1ac0a4f3602fad9da25345ad5cdea3230f",
   "result": {
    "slug": "southern-ocean-surf-reef-albany",
    "status": "ok",

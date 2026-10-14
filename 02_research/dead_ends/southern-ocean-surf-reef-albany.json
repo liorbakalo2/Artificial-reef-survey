@@ -250,6 +250,56 @@
    "result": "not found",
    "detail": "DoT gives predictions and 'metres to LAT' only; no tidal-plane table or AHD relation found. Partial yield: 2024 predictions used to derive LAT and mean level (references).",
    "might_work": "Australian National Tide Tables (BoM / AHO), DoT Coastal Data 'tidal datums' report."
+  },
+  {
+   "what": "Lior's uploads 2026-10-13 (City FAQ PDF + 3 Raised Water Research pages) for as-built levels, crest, seabed depth, section and rock sizes",
+   "kind": "web page",
+   "where": "new uploads from lior/Albany-Artificial-Surf-Reef-Community-Update-and-FAQs.pdf; raisedwaterresearch.com pages 'Albany Artificial Surf Reef' (spot page), 'Detailed design starts...', 'More waves and a few moved rocks...'",
+   "checked": "2026-10-13",
+   "by": "agent: Albany uploads (cloud, 2026-10-13)",
+   "result": "no plan or figure",
+   "detail": "The FAQ PDF is byte-identical to our copy src/city_docs/albany_community_update_faqs_2023.pdf (sha256 042fd350...). The three RWR pages give dates, the 2019 'Long Right' concept, '0.75 m under the surface', 1.61 ha, 47,000 m3 / 70,000 t and the May 2025 storm that moved core rock, but no as-built level, crest survey, section, seabed depth or rock-size table, so the 3D geometry is unchanged. Dates and the storm are used as references.",
+   "might_work": "E-mail to City of Albany / Bluecoast / Heron for the March 2025 practical-completion survey (Lior sends)."
+  },
+  {
+   "what": "Geoscience Australia portal 'Marine' persona and AusSeabed survey-coverage layer at the reef (second attempt, to give Lior click instructions, request W8)",
+   "kind": "database",
+   "where": "https://portal.ga.gov.au/persona/marine ; https://services.ga.gov.au (ArcGIS REST) ; https://ausseabed.gov.au",
+   "checked": "2026-10-13",
+   "by": "agent: Albany uploads (cloud, 2026-10-13)",
+   "result": "other: HTTP 403 to this environment; portal scripts come back as HTML, map cannot be drawn in headless Chrome (not bypassed)",
+   "detail": "Could not render the portal or query its services without bypassing the block. The public file 'AusSeabed Bathymetry Coverage 2021' (data.gov.au, 42 MB FileGDB) lists WA Department of Transport surveys 'Middleton Bay & Oyster Harbour' (multibeam, laser scanner), 'Middleton Bay' (single beam) and 'King George Sound' (single beam, RTK), Data Access https://maps.slip.wa.gov.au/Marine/app/ . The 69 MB 2019 holdings zip was not downloaded (50 MB rule).",
+   "might_work": "Lior in his own browser (3d/W8_how_to.png, point -35.018005, 117.920991), or open the 42 MB FileGDB in QGIS (https://d28rz98at9flks.cloudfront.net/140124/140124_00_1.zip), or the WA DoT / SLIP marine app."
+  },
+  {
+   "what": "beachgrit.com and ausleisure.com.au articles on the Albany reef (opening, cost, rocks)",
+   "kind": "web page",
+   "where": "beachgrit.com ; ausleisure.com.au",
+   "checked": "2026-10-13",
+   "by": "agent: Albany uploads (cloud, 2026-10-13)",
+   "result": "bot check (not bypassed)",
+   "detail": "Cloudflare block / 'Just a moment' page; not bypassed. The same facts (opening 16 Jul 2025, 13 M AUD) are already referenced from the City and ABC pages.",
+   "might_work": "Lior in his browser, only if a number is missing."
+  },
+  {
+   "what": "Original ABC Great Southern article (May 2025) on the 26 May 2025 storm that moved rocks at the Southern Ocean Surf Reef",
+   "kind": "search",
+   "where": "web search 'ABC Great Southern Southern Ocean Surf Reef storm rocks moved May 2025'",
+   "checked": "2026-10-13",
+   "by": "agent: Albany uploads (cloud, 2026-10-13)",
+   "result": "not found",
+   "detail": "The RWR page of 28 May 2025 quotes it, but the original ABC page was not found by search; the RWR page is the only trace and is the reference (with the ABC attribution as printed there).",
+   "might_work": "Lior searching abc.net.au/news (Great Southern) for 'Southern Ocean Surf Reef storm'."
+  },
+  {
+   "what": "Public as-built / completion / bathymetric survey of the Southern Ocean Surf Reef (second search, after the uploads)",
+   "kind": "search",
+   "where": "web searches 'Southern Ocean Surf Reef as-built survey', 'completion survey', 'bathymetric survey Middleton Beach reef'",
+   "checked": "2026-10-13",
+   "by": "agent: Albany uploads (cloud, 2026-10-13)",
+   "result": "not found",
+   "detail": "Nothing public: no survey, no sounding, no section after construction; the 2025 Albany Advertiser pages are paywalled (article body text only, via the page metadata).",
+   "might_work": "E-mail to City of Albany, Bluecoast or Heron (Lior sends); request W8 (WA DoT surveys)."
   }
  ]
 }

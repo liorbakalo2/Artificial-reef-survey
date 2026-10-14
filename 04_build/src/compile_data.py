@@ -820,12 +820,36 @@ def location_for(slug, card, shape, shown):
     if pt is None:
         return {"status": "none", "label": "location not published", "note": "No coordinates are published for this reef."}
     lat, lon = round(pt[0], 6), round(pt[1], 6)
-    return {
+    loc = {
         "status": "approximate" if approx else "ok", "lat": lat, "lon": lon, "approximate": approx,
         "source": src, "note": note.strip(),
         "maps_url": f"https://www.google.com/maps/search/?api=1&query={lat},{lon}",
         "satellite_url": f"https://www.google.com/maps/@{lat},{lon},300m/data=!3m1!1e3",
+        # 2026-10-13 "Open location in..." block (Lior): same point, more tools
+        "dd": f"{lat:.5f}, {lon:.5f}", "dm": _deg_min(lat, lon),
+        "earth_url": f"https://earth.google.com/web/@{lat},{lon},0a,1000d,35y,0h,0t,0r",
     }
+    # KML outline: ONLY for a reef whose outline is shown on the page (shape.json geo = the same canonical outline, default version)
+    rings = geo.get("polygons_latlon") or []
+    if shown and rings:
+        loc["outline_latlon"] = [[[round(float(q[0]), 6), round(float(q[1]), 6)] for q in ring if _latlon_ok(q)] for ring in rings]
+        loc["outline_latlon"] = [rg for rg in loc["outline_latlon"] if len(rg) >= 3]
+        if loc["outline_latlon"]:
+            loc["outline_source"] = "shape.json geo.polygons_latlon (the traced outline shown on the page, default version)"
+    return loc
+
+
+def _deg_min(lat, lon):
+    """'50 42.944 N, 1 50.802 W' style text: degrees and decimal minutes."""
+    def one(v, pos, neg):
+        h = pos if v >= 0 else neg
+        v = abs(v)
+        d = int(v)
+        m = (v - d) * 60
+        if round(m, 3) >= 60:
+            d, m = d + 1, 0.0
+        return f"{d}\u00b0{m:06.3f}'{h}"
+    return one(lat, "N", "S") + " " + one(lon, "E", "W")
 
 
 

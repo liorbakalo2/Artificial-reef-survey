@@ -64,6 +64,70 @@
     if (L.status === 'none' || !L.maps_url) return 'not published' + (L.note ? ' (' + esc(L.note) + ')' : '');
     return esc(L.lat + ', ' + L.lon) + (L.status === 'approximate' ? ' (approximate)' : '') + ' — ' + esc(L.source || '') + (L.note ? '. ' + esc(L.note) : '') + ' ' + locLinks(r, false);
   }
+  /* "Open location in..." block (Lior 2026-10-13): coordinates as text + Copy, Google Maps / satellite / Google Earth web, KML download for
+     Google Earth Pro (built in the browser from r.location; the outline polygon only when r.location.outline_latlon exists = outline shown),
+     and a Navionics hint (webapp.navionics.com has no working centred URL: it redirects to a Garmin page, tested 2026-10-13). Same point as locLinks. */
+  function locExtras(r, withMaps) {
+    var L = r.location || {};
+    if (L.status === 'none' || !L.maps_url) return '<span class="loc-none">Location: not published</span>';
+    var ap = L.status === 'approximate', a = function (u, t) { return '<a class="loc-link" href="' + esc(u) + '" target="_blank" rel="noopener noreferrer">' + t + ' ↗</a>'; };
+    return '<span class="loc-block" data-locblock="' + esc(r.slug) + '">' +
+      '<span class="loc-coords"><span class="loc-lab">' + (ap ? 'Coordinates (approximate): ' : 'Coordinates: ') + '</span><code class="loc-dd">' + esc(L.dd) + '</code> <span class="loc-dm">(' + esc(L.dm) + ')</span> ' +
+      '<button type="button" class="loc-copy" data-loc-copy="' + esc(L.dd) + '" title="Copies &quot;lat, lon&quot;; paste it into the search box of Google Earth Pro, Navionics, Google Maps and most other apps">Copy</button></span>' +
+      '<span class="loc-open"><span class="loc-lab">Open in: </span>' +
+      (withMaps ? a(L.maps_url, ap ? 'Google Maps (approx.)' : 'Google Maps') + ' · ' + a(L.satellite_url, 'satellite') + ' · ' : '') +
+      a(L.earth_url, 'Google Earth (web)') + ' · ' +
+      '<button type="button" class="loc-kml" data-loc-kml="' + esc(r.slug) + '" title="Downloads a .kml file (placemark' + (L.outline_latlon ? ' and the traced outline' : ', point only: this reef\'s outline is not shown') + '); double-click it to open in Google Earth Pro">KML for Google Earth Pro</button> · ' +
+      '<span class="loc-nav" title="Navionics\' web app has no link that opens centred on a point without a login">Navionics: paste the copied coordinates into its search box</span></span></span>';
+  }
+  function locMenu(r) {      // gallery tile: a small menu that does not open the dialog
+    var L = r.location || {};
+    if (L.status === 'none' || !L.maps_url) return '<span class="loc-none">not published</span>';
+    return '<details class="loc-menu"><summary title="Open the location in Google Maps, Google Earth, KML for Google Earth Pro; copy coordinates">' + (L.status === 'approximate' ? 'Location (approx.)' : 'Location') + ' ▾</summary>' +
+      '<div class="loc-pop">' + locExtras(r, true) + '</div></details>';
+  }
+  function xmlEsc(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+  function kmlPlacemark(r) {
+    var L = r.location || {};
+    if (L.status === 'none' || L.lat == null) return '';
+    var desc = (r.place ? r.place + ', ' + r.country + '. ' : '') + 'Location confidence: ' + (L.status === 'approximate' ? 'approximate' : 'ok (centre of the traced outline or card coordinates)') + '. ' +
+      (L.source ? 'Source: ' + L.source + '. ' : '') + (L.note ? L.note + ' ' : '') +
+      (L.outline_latlon ? 'Polygon = the traced outline shown on the survey page (default version).' : 'Point only: no outline of this reef is shown on the page.') + ' Private research copy.';
+    var g = '<Point><coordinates>' + L.lon + ',' + L.lat + ',0</coordinates></Point>';
+    if (L.outline_latlon) {
+      g = '<MultiGeometry>' + g + L.outline_latlon.map(function (ring) {
+        var pts = ring.slice(); if (pts[0][0] !== pts[pts.length - 1][0] || pts[0][1] !== pts[pts.length - 1][1]) pts.push(pts[0]);
+        return '<Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>' + pts.map(function (q) { return q[1] + ',' + q[0] + ',0'; }).join(' ') + '</coordinates></LinearRing></outerBoundaryIs></Polygon>';
+      }).join('') + '</MultiGeometry>';
+    }
+    return '<Placemark><name>' + xmlEsc(r.name) + '</name><description>' + xmlEsc(desc) + '</description>' +
+      '<Style><IconStyle><scale>1.1</scale></IconStyle><LineStyle><color>ff00a5ff</color><width>2</width></LineStyle><PolyStyle><color>5500a5ff</color></PolyStyle></Style>' + g + '</Placemark>';
+  }
+  function kmlFor(slug) {
+    var list = slug === 'all' ? REEFS : REEFS.filter(function (x) { return x.slug === slug; });
+    var pm = list.map(kmlPlacemark).join('');
+    return '<?xml version="1.0" encoding="UTF-8"?>\n<kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>' + (slug === 'all' ? 'Artificial surf reefs (survey)' : xmlEsc(list[0] ? list[0].name : slug)) + '</name>' + pm + '</Document></kml>\n';
+  }
+  function downloadText(name, text, type) {
+    try {
+      var blob = new Blob([text], { type: type }), u = URL.createObjectURL(blob), a = document.createElement('a');
+      a.href = u; a.download = name; a.style.display = 'none'; document.body.appendChild(a); a.click();
+      setTimeout(function () { URL.revokeObjectURL(u); a.remove(); }, 2000);
+    } catch (e) { /* no download possible */ }
+  }
+  function copyText(txt, btn) {
+    var done = function () { if (!btn) return; var o = btn.getAttribute('data-t0') || btn.textContent; btn.setAttribute('data-t0', o); btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = o; }, 1600); };
+    var fallback = function () { try { var ta = document.createElement('textarea'); ta.value = txt; ta.style.cssText = 'position:fixed;opacity:0'; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); ta.remove(); done(); } catch (e) { /* ignore */ } };
+    if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(txt).then(done, fallback); else fallback();
+  }
+  document.addEventListener('click', function (e) {
+    var t = e.target, k = t.closest && t.closest('[data-loc-kml]'), c = t.closest && t.closest('[data-loc-copy]');
+    if (k) { e.preventDefault(); e.stopPropagation(); var s = k.getAttribute('data-loc-kml'); downloadText(s === 'all' ? 'artificial-surf-reefs-all.kml' : s + '.kml', kmlFor(s), 'application/vnd.google-earth.kml+xml'); return; }
+    if (c) { e.preventDefault(); e.stopPropagation(); copyText(c.getAttribute('data-loc-copy'), c); return; }
+    var openM = document.querySelectorAll('details.loc-menu[open]');
+    for (var i = 0; i < openM.length; i++) if (!openM[i].contains(t)) openM[i].removeAttribute('open');
+  });
+  window.ReefLoc = { extras: function (slug, withMaps) { var r = REEFS.filter(function (x) { return x.slug === slug; })[0]; return r ? locExtras(r, withMaps !== false) : ''; }, kml: kmlFor };
   function disagreeBody(r) {
     var d = r.sources_disagree || [];
     return '<p class="muted">Where the sources, or a source and the founder, say different things. Both sides are kept, each with its source; nothing is averaged.</p>' +
@@ -310,7 +374,7 @@
         '<h3><button type="button" class="tile-open" data-open="' + esc(r.slug) + '" aria-describedby="' + descId + '">' + esc(r.name) + '</button></h3>' +
         '<p class="tile-meta">' + flag(r) + esc(r.place_short) + '</p>' +
         '<p class="tile-meta">' + esc(r.year_short) + ' · ' + esc(r.type_short) + '</p>' +
-        '<p class="tile-meta tile-loc">' + locLinks(r, true) + '</p>' +
+        '<div class="tile-meta tile-loc">' + locMenu(r) + '</div>' +
       '</div>' +
       '<p class="tile-credit" title="' + esc(h ? (h.credit + ' — ' + h.license) : '') + '">' + credit + '</p>' +
     '</article>';
@@ -595,7 +659,7 @@
     return '<article class="detail">' +
       '<h2 class="dt"' + (forPrint ? '' : ' id="dlg-title"') + '>' + esc(r.name) + '</h2>' +
       '<p class="dplace">' + flag(r) + esc(r.place) + ', ' + esc(r.country) + '</p>' +
-      '<p class="dloc">' + locLinks(r, false) + '</p>' +
+      '<p class="dloc">' + locLinks(r, false) + '</p>' + '<p class="dloc dloc2">' + locExtras(r, false) + '</p>' +
       '<div class="dmeta"><span>' + esc(r.type_short) + '</span>' +
         '<span>Card verified ' + esc(r.verified_on || '—') + '</span>' +
         (forPrint ? '' : '<span class="tip">Tap or hover any <span class="ref-demo">R1</span> marker to see its source</span>' +

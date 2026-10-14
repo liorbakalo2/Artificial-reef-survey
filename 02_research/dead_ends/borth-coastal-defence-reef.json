@@ -100,6 +100,16 @@
       "result": "other: video shows the works, not the reef",
       "detail": "Silent amateur construction b-roll. The saved frame QUB6s_F9dZc_0007 shows houses, plant and a stockpile of quarried rock on the seafront (onshore works, not the offshore reef); dQieZVQUDEI is a Komatsu 450 separating rock and shingle (material preparation), judged on its description only (embed not possible, no download). The other two Borth videos (c4J6hfvynr4, AJXnUqQObJM) do show the reef under construction.",
       "might_work": ""
+    },
+    {
+      "what": "SeaDataNet CDI record 115084 / 1981385 ('CARDIGAN BAY'): vertical datum, horizontal datum, grid resolution",
+      "kind": "database",
+      "where": "https://cdi.seadatanet.org/search ; https://cdi.seadatanet.org/report/1981385 ; https://cdi-bathymetry.seadatanet.org/report/edmo/2607/115084 ; CSW endpoints; MARIS WFS https://geo-service.maris.nl/emodnet_bathymetry/wfs",
+      "checked": "2026-10-13",
+      "by": "agent: W1/W2 SeaDataNet + Kovalam (cloud, resumed after interruption)",
+      "result": "bot check (not bypassed)",
+      "detail": "Partial yield: the CDI search export gave survey dates 1969-03-11 to 1969-05-25, distributor OceanWise, originator UKHO, instrument single-beam echosounders, access 'by negotiation' (references in 07_scale/shapes/borth-coastal-defence-reef/3d/SOURCES_3D.md, section W2). The record page with the datums is behind the bot check ('Checking your browser' 503 / 'Web Page Blocked'); no CSW endpoint answers; MARIS WFS has no n_code 115084. Datum and resolution stay unknown.",
+      "might_work": "Lior in a normal browser (REQUESTS W2, figure and 5 lines); a modern MCA/UKHO survey of Cardigan Bay (BGS lists HI1450, 2014) for the offshore gradient"
     }
   ]
 }

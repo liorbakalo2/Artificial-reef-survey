@@ -130,6 +130,36 @@
       "result": "no plan or figure",
       "detail": "Lior ran the W6 searches; nothing useful, only a Google Maps location of the site.",
       "might_work": "E13 e-mail (ASR / CESS); Google Earth Pro history 2010-12"
+    },
+    {
+      "what": "surfer.com 'India's First Artificial Surfing Reef...Works.' (card R4) re-read through Wayback for any plan, dimension, crest level or container size, and its lead photo",
+      "kind": "web page",
+      "where": "https://web.archive.org/web/2/https://www.surfer.com/features/india%E2%80%99s-first-artificial-reef%E2%80%A6works/ (redirects to the 2017-05-20 snapshot, 294 kB; the form with :80 and the id_ form reset the connection); lead photo https://web.archive.org/web/20170520135959im_/http://www.surfer.com/files/2010/05/india-600x333.jpg",
+      "checked": "2026-10-13",
+      "by": "agent: W1/W2 SeaDataNet + Kovalam (cloud, resumed after interruption)",
+      "result": "no plan or figure",
+      "detail": "Article text read in full: completion early 2010, Dept of Tourism, quotes by Chris Jensen and Adam Daigian, 'reef starts to work above 3 feet'. No dimensions, depths, crest level, volume or container size. The lead photo (india-600x333.jpg) is not in the archive (404), so no picture was registered.",
+      "might_work": "nothing further from this page; the text is already card reference R4"
+    },
+    {
+      "what": "Archived ASR Ltd Kovalam pages (asrltd.com project page / brochure) for a plan, dimensions, crest level",
+      "kind": "web page",
+      "where": "https://archive.org/wayback/available?url=asrltd.com/kovalam ; https://web.archive.org/web/2/http://www.asrltd.com/projects/ ; https://web.archive.org/web/2/http://www.asrltd.com/kovalam-india/ ; CDX query for asrltd.com/*",
+      "checked": "2026-10-13",
+      "by": "agent: W1/W2 SeaDataNet + Kovalam (cloud, resumed after interruption)",
+      "result": "not found",
+      "detail": "Availability API returns no snapshot for these paths; /web/2/ for /projects/ lands on a 2022 snapshot of a domain-parking page (hugedomains.com); /kovalam-india/ is 404; the CDX endpoint reset the connection. The brochure PDF itself is already held (07_scale/shapes/kovalam-reef-india/src/asr_brochure_wayback.pdf, from the 2011-11-06 snapshot) and has no plan (earlier dead end).",
+      "might_work": "the 2011-11-06 Wayback snapshot of http://www.asrltd.com/projects/kovalam-coastal-protection.php in a normal browser (links to other pages of the site); e-mail to ASR Ltd (E13)"
+    },
+    {
+      "what": "Navionics webapp / Garmin Marine Maps viewer at 8.3867 N 76.9757 E: depth contours and soundings near the reef",
+      "kind": "chart",
+      "where": "https://webapp.navionics.com/#boating@13&key=... ; https://maps.garmin.com/en-US/marine?maps=another-brand&overlay=false&key=t9qxxwgbpf4n (geohash of 8.3867 N 76.9757 E)",
+      "checked": "2026-10-13",
+      "by": "agent: W1/W2 SeaDataNet + Kovalam (cloud, resumed after interruption)",
+      "result": "other: viewer shows no map in the cloud headless Chrome",
+      "detail": "webapp.navionics.com redirects to the Garmin marine page. With the geohash key the URL is kept but the page shows only the 'What chartplotter is on your boat?' panel with a default location search box and an empty grey map (no map container created) after 25 s real-time wait, with swiftshader WebGL flags, headless Chrome 1194, no login or bot check shown. The same URL format drew a Navionics map on Lior's Windows PC (Borth, 2026-10-05), so the cloud result is an environment limit, not a login wall.",
+      "might_work": "Lior in a normal browser (REQUESTS section 5, Kovalam rows), or an agent on Lior's PC with Chrome and a GPU"
     }
   ]
 }

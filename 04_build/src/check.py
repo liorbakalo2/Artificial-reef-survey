@@ -445,6 +445,58 @@ def main() -> int:
     check(all(by[s].get("location") for s in SLUGS) and set(no_loc) <= {"mexico-reef-2026-unnamed"},
           f"only reefs with no published coordinates have no link (no link: {no_loc}; expected only Mexico)")
     out.append("INFO locations: " + "; ".join(f"{s}={(by[s].get('location') or {}).get('status')}:{(by[s].get('location') or {}).get('lat')},{(by[s].get('location') or {}).get('lon')}" for s in SLUGS))
+    # "Open location in..." block (Lior 2026-10-13): data and URL formats
+    earthre = re.compile(r"^https://earth\.google\.com/web/@-?\d{1,3}\.\d+,-?\d{1,3}\.\d+,0a,1000d,35y,0h,0t,0r$")
+    ddre = re.compile(r"^-?\d{1,3}\.\d{5}, -?\d{1,3}\.\d{5}$")
+    dmre = re.compile(r"^\d{1,2}\u00b0\d{2}\.\d{3}'[NS] \d{1,3}\u00b0\d{2}\.\d{3}'[EW]$")
+    bad_blk = []
+    for s in SLUGS:
+        L = by[s].get("location") or {}
+        if L.get("lat") is None:
+            if any(k in L for k in ("dd", "dm", "earth_url", "outline_latlon")):
+                bad_blk.append(s + ":links without coordinates")
+            continue
+        if not (ddre.match(L.get("dd") or "") and L["dd"] == f"{L['lat']:.5f}, {L['lon']:.5f}" and dmre.match(L.get("dm") or "")
+                and earthre.match(L.get("earth_url") or "") and L["earth_url"] == f"https://earth.google.com/web/@{L['lat']},{L['lon']},0a,1000d,35y,0h,0t,0r"):
+            bad_blk.append(s)
+    check(not bad_blk, f"location block data: 5-decimal 'lat, lon' text, degrees-decimal-minutes text, Google Earth web URL format (bad={bad_blk})")
+    kml_out = sorted(s for s in SLUGS if (by[s].get("location") or {}).get("outline_latlon"))
+    def _georef(s):
+        try:
+            return bool((((json.loads((ROOT / "07_scale" / "shapes" / s / "shape.json").read_text(encoding="utf-8")) or {}).get("geo") or {}).get("polygons_latlon")))
+        except Exception:  # noqa: BLE001
+            return False
+    # a shown reef without a georeferenced outline (Prattes: coordinates disagree; Bunbury: estimated centre) gets its point only: a polygon would be misplaced
+    kml_exp = sorted(s for s in SLUGS if s not in hide_expected and (by[s].get("location") or {}).get("lat") is not None and _georef(s))
+    check(kml_out == kml_exp and not any(s in hide_expected for s in kml_out) and all(len(rg) >= 3 for s in kml_out for rg in by[s]["location"]["outline_latlon"]),
+          f"KML outline data only for reefs whose outline is shown AND georeferenced in shape.json geo ({len(kml_out)} reefs; never for the hidden {sorted(hide_expected)}; expected={kml_exp}; got={kml_out})")
+    try:
+        import qa_shots as _qs
+        _exe, _dom = _qs.dump_dom(HTML.as_uri())
+        if _dom:
+            _body = _qs.strip_scripts(_dom)
+            _tiles = re.findall(r'<article class="tile" data-slug="([a-z0-9-]+)">(.*?)</article>', _body, re.S)
+            _tb = {s: t for s, t in _tiles}
+            bad_t = [s for s in SLUGS if (by[s].get("location") or {}).get("lat") is not None and
+                     not ('class="loc-menu"' in _tb.get(s, "") and 'data-loc-copy="' + by[s]["location"]["dd"] + '"' in _tb.get(s, "") and 'data-loc-kml="' + s + '"' in _tb.get(s, "")
+                          and by[s]["location"]["earth_url"] in _tb.get(s, "") and 'rel="noopener noreferrer"' in _tb.get(s, ""))]
+            check(not bad_t and len(_tb) == len(SLUGS), f"[gallery] every reef with coordinates has the 'Open location in' menu in its tile (copy, KML, Google Earth; bad={bad_t}; tiles={len(_tb)})")
+            check('data-loc-kml="all"' in _body, "[gallery] 'All reefs (KML)' button in the controls header")
+            check('Navionics: paste the copied coordinates' in "".join(_tb.values()) and "webapp.navionics.com" not in _body, "Navionics: paste-the-coordinates hint, no Navionics web link (webapp.navionics.com redirects to a Garmin page, tested 2026-10-13)")
+            _m3 = [m["slug"] for m in json.loads((BUILD / "data" / "models3d.json").read_text(encoding="utf-8"))["models"]]
+            bad_3 = []
+            for s in _m3:
+                _e, _d = _qs.dump_dom(HTML.as_uri() + "#view/models3d/" + s, _exe)
+                _hd = re.search(r'<header class="m3d-mhead">.*?</header>', _qs.strip_scripts(_d) if _d else "", re.S)
+                _hs = _hd.group(0) if _hd else ""
+                L = by[s].get("location") or {}
+                if not (L.get("dd") and 'class="m3d-loc"' in _d and 'data-loc-copy="' + L["dd"] + '"' in _d and 'data-loc-kml="' + s + '"' in _d and L["earth_url"] in _d):
+                    bad_3.append(s)
+            check(not bad_3, f"[3D tab] every model entry has the 'Open location in' block (copy, KML, Google Earth; models={len(_m3)}; bad={bad_3})")
+        else:
+            out.append("INFO no headless browser available: gallery / 3D location-block DOM checks skipped")
+    except Exception as exc:  # noqa: BLE001
+        check(False, f"location block DOM checks crashed: {exc}")
     # dead ends (Lior 2026-10-10): the data of every reef equals its 02_research/dead_ends/<slug>.json
     de_files = {}
     for s in SLUGS:
@@ -479,6 +531,8 @@ def main() -> int:
                 ok = (f'href="{L["maps_url"].replace("&", "&amp;")}"' in dd and 'target="_blank"' in dd and "noopener" in dd and "Google Maps" in dd
                       and (L["approximate"] is False or "approximate location" in dd))
                 check(ok, f"[dialog {s}] Location link to Google Maps (new tab, noopener{', labelled approximate' if L['approximate'] else ''})")
+                check('class="loc-block"' in dd and 'data-loc-copy="' + L["dd"] + '"' in dd and 'data-loc-kml="' + s + '"' in dd and L["earth_url"] in dd and "Navionics: paste" in dd,
+                      f"[dialog {s}] 'Open location in' block: coordinates + Copy, Google Earth web, KML, Navionics hint")
             else:
                 dd_main = re.sub(r'<details class="acc acc-de".*?</details>', "", dd, flags=re.S)       # the dead-ends section may link a Google Maps page it checked
                 check("location: not published" in dd.lower() and "google.com/maps" not in dd_main, f"[dialog {s}] says location not published and has no map link (outside the dead-ends section)")

@@ -876,3 +876,53 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 - **rights**: Private research copy; reuse rights to be checked before any public release.
 - **display in HTML**: True
 - **added by**: papers intake P3/P8, 2026-10-10
+
+
+## borth-coastal-defence-reef-img-32 - EMODnet source-reference map around Cardigan Bay (base render, no annotation)
+- **file**: `07_scale/shapes/borth-coastal-defence-reef/src/cdi_2026-10-13/emodnet_wms_base_map_2026-10-13.png`
+- **annotated versions**: `07_scale/shapes/borth-coastal-defence-reef/3d/annotated/W2_cdi115084_click_point_emodnet_2026-10-13.png`
+- **kind**: chart_screenshot
+- **shows**: Coloured blocks are the source-survey polygons (CDI) of the EMODnet DTM along the coast near the reef; the reef is not drawn and the structure is not visible.
+- **structure visible**: False
+- **state shown**: n/a (map of source surveys, not the reef)
+- **image date**: 2026-10-13 (rendered); data = EMODnet DTM source references
+- **citation**: EMODnet Bathymetry Consortium (2026). EMODnet Digital Bathymetry source-reference map (WMS layers emodnet:mean_atlas_land, emodnet:source_references, coastlines), https://ows.emodnet-bathymetry.eu/wms, rendered by the project 2026-10-13 for SeaDataNet CDI 115084 / 1981385 (Cardigan Bay). Click-point and text drawn with PIL by the agent. Accessed 2026-10-13.
+- **image URL**: https://ows.emodnet-bathymetry.eu/wms
+- **source page**: https://emodnet.ec.europa.eu/en/bathymetry
+- **page / figure**: WMS GetMap render (not a screenshot of the EMODnet viewer)
+- **credit**: EMODnet Bathymetry (data); project (rendering, annotation)
+- **licence**: EMODnet Bathymetry data: CC BY 4.0 (as stated for the DTM); the rendered map is a derived private research copy
+- **retrieved**: 2026-10-13
+- **used for**: context
+- **How used for the model**: Base for the click-point figure W2_cdi115084_click_point_emodnet_2026-10-13.png; shows that the reef point lies inside the CDI 115084 / 1981385 polygon (survey dates in SOURCES_3D). No geometry or level read for the model.
+- **3D check pending**: no - none: locates the CDI source survey polygons; the datum fields still need Lior (REQUESTS W1/W2)
+- **linked records**: 07_scale/shapes/borth-coastal-defence-reef/3d/SOURCES_3D.md (section W2), 07_scale/shapes/borth-coastal-defence-reef/src/cdi_2026-10-13/README.txt, REQUESTS_FOR_LIOR.md ('W1 / W2 / Kovalam update 2026-10-13')
+- **size**: 0.14 MB, 1000x600 px
+- **sha256**: 1b2a4d4ae3d489dd0bbdb559ee417e2f1fce6638b381f20db3e828bd2ea4994c
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: W1/W2 SeaDataNet + Kovalam, 2026-10-13
+
+## borth-coastal-defence-reef-img-33 - Where to click in the EMODnet viewer for CDI 115084 / 1981385 (Cardigan Bay): annotated map with the reef point and 5 steps
+- **file**: `07_scale/shapes/borth-coastal-defence-reef/3d/annotated/W2_cdi115084_click_point_emodnet_2026-10-13.png`
+- **kind**: diagram
+- **shows**: The EMODnet source-reference map with a 'CLICK HERE' mark at 52.4835 N 4.0562 (reef) and the five steps to read the CDI metadata page.
+- **structure visible**: False
+- **state shown**: n/a (map of source surveys, not the reef)
+- **image date**: 2026-10-13 (rendered); data = EMODnet DTM source references
+- **citation**: EMODnet Bathymetry Consortium (2026). EMODnet Digital Bathymetry source-reference map (WMS layers emodnet:mean_atlas_land, emodnet:source_references, coastlines), https://ows.emodnet-bathymetry.eu/wms, rendered by the project 2026-10-13 for SeaDataNet CDI 115084 / 1981385 (Cardigan Bay). Click-point and text drawn with PIL by the agent. Accessed 2026-10-13.
+- **image URL**: https://ows.emodnet-bathymetry.eu/wms
+- **source page**: https://emodnet.ec.europa.eu/en/bathymetry
+- **page / figure**: WMS GetMap render (not a screenshot of the EMODnet viewer)
+- **credit**: EMODnet Bathymetry (data); project (rendering, annotation)
+- **licence**: EMODnet Bathymetry data: CC BY 4.0 (as stated for the DTM); the rendered map is a derived private research copy
+- **retrieved**: 2026-10-13
+- **used for**: context
+- **How used for the model**: Made for Lior (request W2) because the CDI record page is behind a bot check; not used for the model.
+- **3D check pending**: no - none: locates the CDI source survey polygons; the datum fields still need Lior (REQUESTS W1/W2)
+- **linked records**: 07_scale/shapes/borth-coastal-defence-reef/3d/SOURCES_3D.md (section W2), 07_scale/shapes/borth-coastal-defence-reef/src/cdi_2026-10-13/README.txt, REQUESTS_FOR_LIOR.md ('W1 / W2 / Kovalam update 2026-10-13')
+- **size**: 0.14 MB, 1000x815 px
+- **sha256**: 12ba11f3666acc6d84709d3316e550f46ccb41a23901477289756645d9f7d40f
+- **rights**: Private research copy; reuse rights to be checked before any public release.
+- **display in HTML**: True
+- **added by**: W1/W2 SeaDataNet + Kovalam, 2026-10-13

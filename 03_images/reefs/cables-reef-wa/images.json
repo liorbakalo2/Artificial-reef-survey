@@ -1235,16 +1235,16 @@
    "camera_match",
    "context"
   ],
-  "how_used": "Preview of the delivered model viewer (index.html) for the page and for camera-match planning. Regenerated 2026-10-10 after the survey rebuild (default = Nov 1999 surveyed surface).",
+  "how_used": "Preview of the delivered model viewer (index.html) for the page and for camera-match planning. Regenerated 2026-10-10 after the survey rebuild (default = Nov 1999 surveyed surface). Regenerated again 2026-10-13 after the Fremantle datum link (design versions +0.05 m; default view unchanged).",
   "linked_records": [
    "07_scale/shapes/cables-reef-wa/3d/index.html"
   ],
-  "bytes": 404222,
+  "bytes": 368835,
   "px": [
    1400,
    900
   ],
-  "sha256": "e8ca51dd413836a8a31e136e150d91544a681ca52e1a318944b308da2ccee1b0",
+  "sha256": "43011735956bf4ccf4e724ffef8eb389d0502b65fcf1a38b8e56ffead712c10b",
   "rights_note": "Private research copy; reuse rights to be checked before any public release.",
   "display": true,
   "for_3d_check": {
@@ -1275,16 +1275,16 @@
    "camera_match",
    "context"
   ],
-  "how_used": "Preview of the delivered model viewer (index.html). Regenerated 2026-10-10 after the survey rebuild (default = Nov 1999 surveyed surface).",
+  "how_used": "Preview of the delivered model viewer (index.html). Regenerated 2026-10-10 after the survey rebuild (default = Nov 1999 surveyed surface). Regenerated again 2026-10-13 after the Fremantle datum link (design versions +0.05 m; default view unchanged).",
   "linked_records": [
    "07_scale/shapes/cables-reef-wa/3d/index.html"
   ],
-  "bytes": 424059,
+  "bytes": 391537,
   "px": [
    1400,
    900
   ],
-  "sha256": "5755812cedbda0760303fc5f5f1bf6f95d7d6c5580ddc9502163923dd715304d",
+  "sha256": "ada1815b25b4466567acf165abb5de739821d71bee5aa5cd14624b92661e9d8a",
   "rights_note": "Private research copy; reuse rights to be checked before any public release.",
   "display": true,
   "for_3d_check": {

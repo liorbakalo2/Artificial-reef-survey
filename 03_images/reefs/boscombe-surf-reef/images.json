@@ -1835,5 +1835,89 @@
    "model_values_affected": []
   },
   "added_by": "papers intake P3/P8, 2026-10-10"
+ },
+ {
+  "id": "boscombe-surf-reef-img-44",
+  "file": "07_scale/shapes/boscombe-surf-reef/src/cdi_2026-10-13/emodnet_wms_base_map_2026-10-13.png",
+  "annotated_files": [
+   "07_scale/shapes/boscombe-surf-reef/3d/annotated/W1_cdi117452_click_point_emodnet_2026-10-13.png"
+  ],
+  "kind": "chart_screenshot",
+  "title": "EMODnet source-reference map around Poole Bay, Blocks 14-17 (base render, no annotation)",
+  "citation": "EMODnet Bathymetry Consortium (2026). EMODnet Digital Bathymetry source-reference map (WMS layers emodnet:mean_atlas_land, emodnet:source_references, coastlines), https://ows.emodnet-bathymetry.eu/wms, rendered by the project 2026-10-13 for SeaDataNet CDI 117452 / 1982230 (Poole Bay, Blocks 14-17). Click-point and text drawn with PIL by the agent. Accessed 2026-10-13.",
+  "image_url": "https://ows.emodnet-bathymetry.eu/wms",
+  "source_page": "https://emodnet.ec.europa.eu/en/bathymetry",
+  "page_or_figure": "WMS GetMap render (not a screenshot of the EMODnet viewer)",
+  "image_date": "2026-10-13 (rendered); data = EMODnet DTM source references",
+  "credit": "EMODnet Bathymetry (data); project (rendering, annotation)",
+  "license": "EMODnet Bathymetry data: CC BY 4.0 (as stated for the DTM); the rendered map is a derived private research copy",
+  "retrieved": "2026-10-13",
+  "shows": "Coloured blocks are the source-survey polygons (CDI) of the EMODnet DTM along the coast near the reef; the reef is not drawn and the structure is not visible.",
+  "structure_visible": false,
+  "state_shown": "n/a (map of source surveys, not the reef)",
+  "used_for": [
+   "context"
+  ],
+  "how_used": "Base for the click-point figure W1_cdi117452_click_point_emodnet_2026-10-13.png; shows that the reef point lies inside the CDI 117452 / 1982230 polygon (survey dates in SOURCES_3D). No geometry or level read for the model.",
+  "linked_records": [
+   "07_scale/shapes/boscombe-surf-reef/3d/SOURCES_3D.md (section W1)",
+   "07_scale/shapes/boscombe-surf-reef/src/cdi_2026-10-13/README.txt",
+   "REQUESTS_FOR_LIOR.md ('W1 / W2 / Kovalam update 2026-10-13')"
+  ],
+  "bytes": 136867,
+  "px": [
+   1000,
+   600
+  ],
+  "sha256": "653d86ec4ce065d3a66b8f59e25423f2001c3a1692ab312a2e43100cc4e5d383",
+  "rights_note": "Private research copy; reuse rights to be checked before any public release.",
+  "display": true,
+  "for_3d_check": {
+   "pending": false,
+   "what_to_check": "none: locates the CDI source survey polygons; the datum fields still need Lior (REQUESTS W1/W2)",
+   "model_values_affected": []
+  },
+  "added_by": "W1/W2 SeaDataNet + Kovalam, 2026-10-13"
+ },
+ {
+  "id": "boscombe-surf-reef-img-45",
+  "file": "07_scale/shapes/boscombe-surf-reef/3d/annotated/W1_cdi117452_click_point_emodnet_2026-10-13.png",
+  "annotated_files": [],
+  "kind": "diagram",
+  "title": "Where to click in the EMODnet viewer for CDI 117452 / 1982230 (Poole Bay, Blocks 14-17): annotated map with the reef point and 5 steps",
+  "citation": "EMODnet Bathymetry Consortium (2026). EMODnet Digital Bathymetry source-reference map (WMS layers emodnet:mean_atlas_land, emodnet:source_references, coastlines), https://ows.emodnet-bathymetry.eu/wms, rendered by the project 2026-10-13 for SeaDataNet CDI 117452 / 1982230 (Poole Bay, Blocks 14-17). Click-point and text drawn with PIL by the agent. Accessed 2026-10-13.",
+  "image_url": "https://ows.emodnet-bathymetry.eu/wms",
+  "source_page": "https://emodnet.ec.europa.eu/en/bathymetry",
+  "page_or_figure": "WMS GetMap render (not a screenshot of the EMODnet viewer)",
+  "image_date": "2026-10-13 (rendered); data = EMODnet DTM source references",
+  "credit": "EMODnet Bathymetry (data); project (rendering, annotation)",
+  "license": "EMODnet Bathymetry data: CC BY 4.0 (as stated for the DTM); the rendered map is a derived private research copy",
+  "retrieved": "2026-10-13",
+  "shows": "The EMODnet source-reference map with a 'CLICK HERE' mark at 50.7175 N 1.8389 (reef) and the five steps to read the CDI metadata page.",
+  "structure_visible": false,
+  "state_shown": "n/a (map of source surveys, not the reef)",
+  "used_for": [
+   "context"
+  ],
+  "how_used": "Made for Lior (request W1) because the CDI record page is behind a bot check; not used for the model.",
+  "linked_records": [
+   "07_scale/shapes/boscombe-surf-reef/3d/SOURCES_3D.md (section W1)",
+   "07_scale/shapes/boscombe-surf-reef/src/cdi_2026-10-13/README.txt",
+   "REQUESTS_FOR_LIOR.md ('W1 / W2 / Kovalam update 2026-10-13')"
+  ],
+  "bytes": 139350,
+  "px": [
+   1000,
+   815
+  ],
+  "sha256": "4ee65a9722a298dc715034dcfddd418a73ae5830fcd0140d446b637558db9d32",
+  "rights_note": "Private research copy; reuse rights to be checked before any public release.",
+  "display": true,
+  "for_3d_check": {
+   "pending": false,
+   "what_to_check": "none: locates the CDI source survey polygons; the datum fields still need Lior (REQUESTS W1/W2)",
+   "model_values_affected": []
+  },
+  "added_by": "W1/W2 SeaDataNet + Kovalam, 2026-10-13"
  }
 ]

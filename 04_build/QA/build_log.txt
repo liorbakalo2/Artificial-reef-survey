@@ -1,8 +1,7 @@
 NOTE: burkitts-reef-bargara: HELD by data/models3d_hold.json (Not yet modelled)
-NOTE: cables-reef-wa: METHODS_3D.md section 'References' has no list: 8 references taken from REGISTER_3D.md / the 'Data sources' section
+NOTE: cables-reef-wa: METHODS_3D.md section 'References' has no list: 9 references taken from REGISTER_3D.md / the 'Data sources' section
 NOTE: opunake-reef: HELD by data/models3d_hold.json (Not yet modelled)
 NOTE: kovalam-reef-india: HELD by data/models3d_hold.json (Not yet modelled)
-NOTE: southern-ocean-surf-reef-albany: METHODS_3D.md section 'References' has no list: 15 references taken from REGISTER_3D.md / the 'Data sources' section
 NOTE: mexico-reef-2026-unnamed: HELD by data/models3d_hold.json (Not yet modelled)
 combined: borth-coastal-defence-reef: cached (ok)
 combined: boscombe-surf-reef: cached (ok)
@@ -13,7 +12,11 @@ combined: narrowneck-gold-coast: cached (ok)
 combined: palm-beach-gold-coast: cached (ok)
 combined: prattes-reef-el-segundo: cached (ok)
 combined: southern-ocean-surf-reef-albany: cached (ok)
-models3d: 9 models, 0 feasibility, 4 not yet; pictures {'borth-coastal-defence-reef': 23, 'boscombe-surf-reef': 34, 'bunbury-airwave': 13, 'cables-reef-wa': 24, 'mount-maunganui-reef': 25, 'narrowneck-gold-coast': 46, 'palm-beach-gold-coast': 27, 'prattes-reef-el-segundo': 32, 'southern-ocean-surf-reef-albany': 16}; 120 references (from 200); caveat rows 83; verify 144 checked, 0 failed; json 1602 KB; 1.0s
-wrote /home/user/artificial-reef-survey/04_build/artificial_reefs.html (2979 KB)
+models3d: 9 models, 0 feasibility, 4 not yet; pictures {'borth-coastal-defence-reef': 25, 'boscombe-surf-reef': 36, 'bunbury-airwave': 13, 'cables-reef-wa': 24, 'mount-maunganui-reef': 25, 'narrowneck-gold-coast': 46, 'palm-beach-gold-coast': 27, 'prattes-reef-el-segundo': 32, 'southern-ocean-surf-reef-albany': 17}; 128 references (from 212); caveat rows 83; verify 144 checked, 4 failed; json 1680 KB; 1.2s
+VERIFY FAIL: cables-reef-wa | key number 'Crest level' | RL minus AHD on the ramp 0.59 / 0.50 m; A 0.78, B 0.00
+VERIFY FAIL: cables-reef-wa | caveat 'Datum link: RL / AHD / MSL' | unresolved gap 0.2-0.3 m (A12)
+VERIFY FAIL: cables-reef-wa | caveat 'Design-surface versions are idealised' | thickness 0.97 m modelled vs 1.15-1.29 m surveyed
+VERIFY FAIL: southern-ocean-surf-reef-albany | caveat 'Eighteen rocks moved March 2026' | 18 rocks moved in March 2026 are a note only
+wrote /home/user/artificial-reef-survey/04_build/artificial_reefs.html (3129 KB)
 reefs: 13; with USD cost: 11; total ~US$46,306,500-49,357,500
 NOTE: kovalam-reef-india: USD needle '1100000' not found in cost_usd_approx -> dropped from total

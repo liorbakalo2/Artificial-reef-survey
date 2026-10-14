@@ -190,6 +190,66 @@
       "result": "other: HTTP 403 from the origin server",
       "detail": "The citations audit (05_qa/source_audit, Cables R19) found the thesis only as a listing at this IFREMER URL and did not read it. A direct request on 2026-10-10 (browser user-agent, https) returns 403 Forbidden from the Apache origin with the page text 'Server unable to read htaccess file, denying access to be safe' (a server misconfiguration, not a bot check); the plain http:// form does not resolve. The directory index /BIB/ gives the same 403. So the PDF is not retrievable from there; it is the possible source of the as-built levels and monitoring surveys (Bancroft 1999, UWA BEng thesis).",
       "might_work": "Lior in a browser (the 403 may be temporary); UWA Library / Centre for Water Research archive; Wayback copy of the IFREMER URL"
+    },
+    {
+      "what": "HAT and LAT of Fremantle (and a numeric chart-datum-to-AHD offset) on Transport WA pages: 'Tide gauge stations updated vertical reference datum' (21 Jan 2026) and the Perth (Barrack St) tide data page",
+      "kind": "web page",
+      "where": "https://transport.wa.gov.au/tide-gauge-stations-updated-vertical-reference-datum ; https://www.transport.wa.gov.au/marine/charts-warnings-current-conditions/coastal-data-charts/tide-data/perth",
+      "checked": "2026-10-13",
+      "by": "agent: Cables fixes + datum link (cloud, resumed)",
+      "result": "other: datum name only",
+      "detail": "Both pages read. They name the vertical reference ('LWM Fremantle'; gauges changed from Chart Datum to LAT; Fremantle is not among them) but give no numbers: no LWD-to-AHD offset and no HAT / LAT. The LWD-AHD offset was found elsewhere (DNM TR12 Table 3, METHODS_3D 3.1).",
+      "might_work": "E-mail tides@transport.wa.gov.au (address named in the DoT bathymetry readme); draft in 07_scale/shapes/cables-reef-wa/3d/REQUESTS_FOR_LIOR.md"
+    },
+    {
+      "what": "BoM National Tidal Centre pages for Fremantle (station 62230): metadata sheet and monthly sea levels, searched again for HAT / LAT",
+      "kind": "web page",
+      "where": "https://www.bom.gov.au/ntc/IDO50000/IDO50000_62230.pdf ; https://www.bom.gov.au/ntc/IDO70000/IDO70000_62230_SLD.shtml",
+      "checked": "2026-10-13",
+      "by": "agent: Cables fixes + datum link (cloud, resumed)",
+      "result": "other: partial",
+      "detail": "Gives the datum name (Fremantle LWD), the bench mark TGBM Fremantle 53A 3.088 m above LWD, MSL 1992-2011 and the recorded extremes (used). No HAT / LAT and no AHD relation. Only the HAT / LAT part failed.",
+      "might_work": "Tide Tables / AusTides from the Australian Hydrographic Office (paid or login), or e-mail Transport WA"
+    },
+    {
+      "what": "Australian National Tide Tables / AusTides (Australian Hydrographic Office) for the Fremantle HAT and LAT",
+      "kind": "database",
+      "where": "hydro.gov.au (tide tables page)",
+      "checked": "2026-10-13",
+      "by": "agent: Cables fixes + datum link (cloud, resumed)",
+      "result": "other: host unreachable (TLS connection reset from this environment)",
+      "detail": "The host could not be reached; the tables are also a paid product. Not bypassed.",
+      "might_work": "Lior via browser, or a library copy of the Australian National Tide Tables (Fremantle is a standard port)"
+    },
+    {
+      "what": "Landgate (WA) 'Australian Height Datum 1971 and its modification around Perth' (the 0.040 m statement)",
+      "kind": "report",
+      "where": "https://landgate.wa.gov.au/siteassets/documents/location-data-and-services/surveying/australian_height_datum_1971_and_its_modification_around_perth.pdf (also the strata.wa.gov.au and prod013 mirrors)",
+      "checked": "2026-10-13",
+      "by": "agent: Cables fixes + datum link (cloud, resumed)",
+      "result": "bot check (not bypassed)",
+      "detail": "The PDF answers 403 with a bot check. The statement 'disagreed by 0.040m from the already well established State MSL datum' is known only from search-engine snippets, so the +-0.040 m in the datum link is flagged as quoted from snippets (METHODS_3D A19). The link itself (0.716 m) does not depend on it.",
+      "might_work": "Lior opens the PDF in a browser and saves it (REQUESTS_FOR_LIOR)"
+    },
+    {
+      "what": "Web searches 'Fremantle tidal planes HAT LAT MSL chart datum AHD Department of Transport Western Australia' and 'Fremantle Highest Astronomical Tide Lowest Astronomical Tide ... Fremantle Low Water Datum' (and a Fremantle Ports variant)",
+      "kind": "search",
+      "where": "WebSearch, 2026-10-13",
+      "checked": "2026-10-13",
+      "by": "agent: Cables fixes + datum link (cloud, resumed)",
+      "result": "not found",
+      "detail": "Results were the BODC GLOSS sheet (already used), the Landgate PDF, tide-prediction sites (MLLW, no HAT / LAT) and other ports (Onslow, Port Hedland). No Fremantle HAT / LAT in metres.",
+      "might_work": "Transport WA e-mail; Australian National Tide Tables"
+    },
+    {
+      "what": "Research Data Australia record 'DoT tide gauge deployments' (possible datum table for Fremantle)",
+      "kind": "database",
+      "where": "https://researchdata.edu.au/dot-tide-gauge-deployments/681236",
+      "checked": "2026-10-13",
+      "by": "agent: Cables fixes + datum link (cloud, resumed)",
+      "result": "other: host not resolvable from this environment (ENOTFOUND)",
+      "detail": "Not opened; the search snippet only says the Department of Transport holds Fremantle tide data and that queries go to tides@transport.wa.gov.au.",
+      "might_work": "Lior via browser; same Transport WA e-mail"
     }
   ]
 }

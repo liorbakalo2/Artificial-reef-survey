@@ -473,3 +473,19 @@ td.loc { white-space: nowrap; }
 .sc-nodraw { margin-top: 0; }
 .sc-tr { border-style: solid; }
 .sd-tab td { vertical-align: top; }
+
+/* "Open location in..." block (2026-10-13) */
+.loc-block { display: block; }
+.loc-coords, .loc-open { display: block; margin: 2px 0; line-height: 1.7; }
+.loc-dd { font-size: .92em; }
+.loc-dm { color: var(--muted); font-size: .88em; }
+.loc-copy, .loc-kml, .loc-allkml { font: inherit; font-size: .85em; padding: 1px 8px; border: 1px solid var(--line); border-radius: 6px; background: transparent; color: inherit; cursor: pointer; min-height: 28px; }
+.loc-kml { padding: 0 6px; }
+.loc-copy:hover, .loc-kml:hover, .loc-allkml:hover { background: rgba(127,127,127,.15); }
+.loc-nav { color: var(--muted); font-size: .88em; }
+.loc-menu { display: block; }
+.loc-menu summary { cursor: pointer; color: var(--accent); list-style: none; padding: 3px 0; min-height: 28px; }
+.loc-menu summary::-webkit-details-marker { display: none; }
+.loc-pop { margin: 4px 0 6px; padding: 8px 10px; background: var(--surface); color: var(--text); border: 1px solid var(--line); border-radius: 8px; font-size: .88rem; white-space: normal; }
+.m3d-loc { margin: 0 0 8px; font-size: .88rem; }
+.dloc2 { margin-top: -4px; }

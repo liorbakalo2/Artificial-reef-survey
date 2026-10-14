@@ -13,3 +13,6 @@ Nothing here blocks the model: it is built from the printed design drawing with 
 
 ## Update 2026-10-10 (imagery + bathymetry run)
 Rows 2-3 (Navionics) are no longer needed: measured DoT WA soundings (1998, 1999, 2002) replace the modelled bed and give the rock surface. Row 4 / 5 (datum, LAT/HAT) stay open: Transport WA for the Fremantle chart datum to AHD offset. Row 6 (papers): Pattiaratchi 2003 / 2007, Bancroft 1999, Ranasinghe 2001 not reachable (403 / not found, dead ends logged); they would settle whether the southern extension was built. New optional row: Google Earth Pro historical images (dated) of the reef. See ../../../../REQUESTS_FOR_LIOR.md section 'cables-reef-wa (imagery + bathymetry run)'.
+
+## Update 2026-10-13 (Fremantle datum link)
+Row 4 (datum part) and row 5 are DONE 2026-10-13: AHD 0.000 = Fremantle LWD + 0.716 m (DNM TR12 Table 3; METHODS_3D 3.1); reading A holds; the model was rebuilt with 0.716 (section 12 of METHODS_3D). Row 4 (HAT / LAT) stays open: see the root REQUESTS_FOR_LIOR.md, 'Cables update 2026-10-13', for the contact (Tides@transport.wa.gov.au) and the draft e-mail. Row 6 (papers) unchanged. Optional: save the Landgate AHD71 Perth PDF in a browser (same place).
