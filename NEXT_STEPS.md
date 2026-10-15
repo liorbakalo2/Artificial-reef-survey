@@ -1,4 +1,7 @@
-# Next steps - start here (written 2026-10-11, end of the cloud session)
+# Next steps - start here
+
+**2026-10-15: PRIORITY = Lior's course paper (deadline ~1 day). Plan: `08_paper/PLAN.md`. Rounds: 1 gather, 2 compute+figures, 3 write, 4 verify+PDF. Page work below is on hold.**
+ (written 2026-10-11, end of the cloud session)
 
 Read `CLAUDE.md` first, then this file. Agent rules: `_agent_briefs/common.md` (items 10-11 are new: check `papers/` first;
 log dead ends). Source standard: `_agent_briefs/task_source_audit.md`. Who did what: `_agent_briefs/orchestrator.md` section 7.
