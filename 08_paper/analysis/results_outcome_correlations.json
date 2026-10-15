@@ -1,0 +1,50 @@
+{
+ "note": "Spearman rank correlation with outcome score (works 3, works rarely / mixed 2, does not work 1; unknown excluded). n is tiny: descriptive only.",
+ "corr": {
+  "surfable_frac_best_line": {
+   "n": 8,
+   "spearman_rho": 0.737,
+   "p": 0.037
+  },
+  "surfable_frac_crest_line": {
+   "n": 8,
+   "spearman_rho": 0.582,
+   "p": 0.13
+  },
+  "volume_model_m3": {
+   "n": 8,
+   "spearman_rho": 0.926,
+   "p": 0.001
+  },
+  "alongshore_span_m": {
+   "n": 8,
+   "spearman_rho": 0.926,
+   "p": 0.001
+  },
+  "area_within_1m_of_crest_m2": {
+   "n": 8,
+   "spearman_rho": 0.772,
+   "p": 0.025
+  },
+  "crest_depth_msl_m": {
+   "n": 8,
+   "spearman_rho": 0.0,
+   "p": 1.0
+  },
+  "mean_seaward_slope_1_in": {
+   "n": 8,
+   "spearman_rho": 0.617,
+   "p": 0.103
+  },
+  "ramp_length_m": {
+   "n": 8,
+   "spearman_rho": 0.849,
+   "p": 0.008
+  },
+  "crossshore_over_L": {
+   "n": 8,
+   "spearman_rho": 0.54,
+   "p": 0.167
+  }
+ }
+}

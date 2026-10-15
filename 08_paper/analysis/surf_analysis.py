@@ -137,6 +137,8 @@ def skill_from(Y, xi_b, cat):
         return 'n/a'
     if xi_b >= 2.0 or Y < 1.6:
         return 'too hollow / collapsing: bodyboard or expert only'
+    if xi_b < 0.4:
+        return 'beginner-friendly (spilling)'   # Battjes spilling; Mead & Black's fit is for plunging surf waves
     if Y < 1.905:
         return 'expert (extreme, tubing)'
     if Y < 2.505:
