@@ -4756,5 +4756,74 @@
     -7.494
    ]
   ]
+ },
+ "palm-beach-gold-coast": {
+  "label": "reef grid (absolute z, m MSL) + seabed grid; version = model default",
+  "grid_step_m": 1.0,
+  "crest_depth_msl_m": 1.5,
+  "crest_cell_xy": [
+   26.0,
+   243.0
+  ],
+  "transect_at_crest": {
+   "0.1": {
+    "x": 26.0,
+    "y_toe": 349.0,
+    "y_crest_edge": 253.0,
+    "toe_depth": 6.665,
+    "crest_depth": 1.5,
+    "ramp": 96.0,
+    "gap": 5.165,
+    "slope": 0.053802083333333334,
+    "bed_at_crest_edge": 4.83625,
+    "n": 126
+   },
+   "0.25": {
+    "x": 26.0,
+    "y_toe": 349.0,
+    "y_crest_edge": 255.0,
+    "toe_depth": 6.665,
+    "crest_depth": 1.5,
+    "ramp": 94.0,
+    "gap": 5.165,
+    "slope": 0.054946808510638295,
+    "bed_at_crest_edge": 4.87875,
+    "n": 126
+   },
+   "0.5": {
+    "x": 26.0,
+    "y_toe": 349.0,
+    "y_crest_edge": 260.0,
+    "toe_depth": 6.665,
+    "crest_depth": 1.5,
+    "ramp": 89.0,
+    "gap": 5.165,
+    "slope": 0.05803370786516854,
+    "bed_at_crest_edge": 4.99,
+    "n": 126
+   }
+  },
+  "n_columns": 140,
+  "y_extent": [
+   224.0,
+   376.0
+  ],
+  "median_over_columns_toe_depth": 6.97875,
+  "p10_toe_depth": 5.940625,
+  "p90_toe_depth": 7.026312500000001,
+  "median_over_columns_crest_depth": 2.425,
+  "p10_crest_depth": 1.5,
+  "p90_crest_depth": 5.023000000000001,
+  "median_over_columns_ramp": 64.5,
+  "p10_ramp": 16.0,
+  "p90_ramp": 93.10000000000001,
+  "median_over_columns_gap": 4.300625,
+  "p10_gap": 1.7634374999999993,
+  "p90_gap": 5.504437500000001,
+  "median_over_columns_slope": 0.06583333333333337,
+  "p10_slope": 0.05484699675324674,
+  "p90_slope": 0.07672296650717704,
+  "version": "model default (council footprint, toe 11,972 m2)",
+  "slug": "palm-beach-gold-coast"
  }
 }

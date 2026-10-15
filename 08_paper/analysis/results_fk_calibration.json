@@ -1,0 +1,60 @@
+{
+ "rows": [
+  {
+   "case": "BD23 validation",
+   "H": 0.3,
+   "Fy_BELWF_kN": 7,
+   "Fy_est_kN": 6.069739194354381,
+   "Fz_BELWF_kN": 13,
+   "Fz_est_kN": 14.332092042206092,
+   "SI_BELWF": 0.016,
+   "SI_est": 0.012997300202043642,
+   "ratio_Fy": 1.1532620720361229,
+   "ratio_Fz": 0.9070552967226795,
+   "ratio_SI": 1.231024886036273
+  },
+  {
+   "case": "BD23 validation",
+   "H": 1.0,
+   "Fy_BELWF_kN": 28,
+   "Fy_est_kN": 20.23246398118127,
+   "Fz_BELWF_kN": 48,
+   "Fz_est_kN": 47.77364014068697,
+   "SI_BELWF": 0.066,
+   "SI_est": 0.043534998133726945,
+   "ratio_Fy": 1.3839144864433475,
+   "ratio_Fz": 1.0047381748312758,
+   "ratio_SI": 1.5160216568119989
+  },
+  {
+   "case": "BD23 validation",
+   "H": 1.6,
+   "Fy_BELWF_kN": 44.5,
+   "Fy_est_kN": 32.371942369890036,
+   "Fz_BELWF_kN": 64,
+   "Fz_est_kN": 76.43782422509918,
+   "SI_BELWF": 0.106,
+   "SI_est": 0.07022956641324106,
+   "ratio_Fy": 1.374647201935914,
+   "ratio_Fz": 0.8372818123593962,
+   "ratio_SI": 1.509335817001638
+  },
+  {
+   "case": "BD23 design (near breaking, H/h = 0.72)",
+   "H": 2.86,
+   "SI_BELWF": 0.17,
+   "SI_est": 0.18017628108027542,
+   "SIc_BELWF": 0.31,
+   "SIc_est": 0.13845644261466947,
+   "ratio_SI": 0.9435204177860599,
+   "ratio_SIc": 2.2389712905071812,
+   "Wsub_est_kN": 211.9880058082349,
+   "uplift_fraction_est": 0.6446361325474045
+  }
+ ],
+ "factors": {
+  "linear_range_SI_factor": 1.41879411994997,
+  "near_breaking_SI_factor": 0.9435204177860599,
+  "near_breaking_SIc_factor": 2.2389712905071812
+ }
+}

@@ -107,20 +107,35 @@ def tr(slug, tol='0.25'):
 def med(slug, k):
     p = PROFILES[slug]; return p[f'median_over_columns_{k}'], p[f'p10_{k}'], p[f'p90_{k}']
 
-def _profile_fields(self, slug, crest_primary=None, version_note='', skip_ramp=False):
+def _profile_fields(self, slug, crest_primary=None, version_note='', skip_ramp=False, use_median=False):
     """Adds depth_gap_m, seaward_ramp_length_m, mean_seaward_slope DERIVED from the model grid (derive_profiles.py)."""
     P = PROFILES[slug]; t = P['transect_at_crest']['0.25']; ta, tb = P['transect_at_crest']['0.1'], P['transect_at_crest']['0.5']
     srcm = f'repo:07_scale/shapes/{slug}/3d/model.js (default version {P["version"]}) processed by 08_paper/data/src/derive_profiles.py -> 08_paper/data/profiles_derived.json'
-    gap, ramp = t['gap'], t['ramp']; slope = gap / ramp if ramp else None
+    ramp = t['ramp']; gap_model = t['gap']
+    gap = (t['toe_depth'] - crest_primary) if crest_primary is not None else gap_model      # primary: toe depth - SOURCED crest depth when one exists
+    slope = gap / ramp if ramp else None
     locm = f'transect at the alongshore position x = {t["x"]:.1f} m of the shallowest cell; toe at y = {t["y_toe"]:.0f} m (outline edge), crest edge at y = {t["y_crest_edge"]:.0f} m (seaward-most cell within 0.25 m of the column maximum)'
     mg, mg10, mg90 = med(slug, 'gap'); mr, mr10, mr90 = med(slug, 'ramp'); ms, ms10, ms90 = med(slug, 'slope')
     sens = f'ramp {ta["ramp"]:.1f} m (tol 0.10 m) / {t["ramp"]:.1f} m (0.25) / {tb["ramp"]:.1f} m (0.50)'
     alt = lambda lab, v, loc: (v, lab, 'D', srcm, loc)
-    self.F('depth_gap_m', round(gap, 2), 'm', 'D', srcm, locm, note=f'DEPTH GAP = seabed depth at the seaward toe ({t["toe_depth"]:.2f}) - crest depth ({t["crest_depth"]:.2f}) on the crest transect. {version_note}',
-           alts=[alt('median over reef columns (p10-p90 %.2f-%.2f)' % (mg10, mg90), round(mg, 2), f'{P["n_columns"]} columns with >= 5 valid cells')])
+    basis = (f'DEPTH GAP = seabed depth at the seaward toe ({t["toe_depth"]:.2f}) - sourced crest depth ({crest_primary:.2f}) on the crest transect' if crest_primary is not None else f'DEPTH GAP = seabed depth at the seaward toe ({t["toe_depth"]:.2f}) - model crest depth ({t["crest_depth"]:.2f}) on the crest transect')
+    alts_g = [alt('median over reef columns (p10-p90 %.2f-%.2f)' % (mg10, mg90), round(mg, 2), f'{P["n_columns"]} columns with >= 5 valid cells')]
+    if crest_primary is not None: alts_g.insert(0, alt(f'with the model crest depth {t["crest_depth"]:.2f} m (shallowest grid cell)', round(gap_model, 2), 'model.js grid'))
+    self.F('depth_gap_m', round(gap, 2), 'm', 'D', srcm, locm, note=f'{basis}. {version_note}', alts=alts_g)
     if not skip_ramp:
         self.F('seaward_ramp_length_m', round(ramp, 1), 'm', 'D', srcm, locm, note=f'Horizontal distance toe -> crest edge. Sensitivity to the crest tolerance: {sens}.',
                alts=[alt('median over reef columns (p10-p90 %.1f-%.1f)' % (mr10, mr90), round(mr, 1), f'{P["n_columns"]} columns')])
-        self.F('mean_seaward_slope', round(slope, 3), 'm/m (gap / ramp)', 'D', srcm, locm, note=f'= 1:{1/slope:.1f}. Grid step {P["grid_step_m"]} m. ' + (f'With the sourced crest depth {crest_primary} m instead of the model crest {t["crest_depth"]:.2f} m the gap is {t["toe_depth"]-crest_primary:.2f} m and the slope {(t["toe_depth"]-crest_primary)/ramp:.3f}.' if crest_primary else ''),
+        self.F('mean_seaward_slope', round(slope, 3), 'm/m (gap / ramp)', 'D', srcm, locm, note=f'= 1:{1/slope:.1f}. Grid step {P["grid_step_m"]} m. ' + (f'Uses the sourced crest depth {crest_primary} m; with the model crest {t["crest_depth"]:.2f} m the slope is {gap_model/ramp:.3f}.' if crest_primary is not None else ''),
                alts=[alt('median over reef columns (p10-p90 %.3f-%.3f)' % (ms10, ms90), round(ms, 3), f'{P["n_columns"]} columns')])
-Reef.profile_fields = _profile_fields
+_pf_orig = _profile_fields
+def _pf(self, slug, crest_primary=None, version_note='', skip_ramp=False, use_median=False):
+    _pf_orig(self, slug, crest_primary, version_note, skip_ramp)
+    if not use_median: return
+    # swap: primary = median over reef columns, the crest-transect value becomes the alternative
+    for name, k in (('depth_gap_m', 'gap'), ('seaward_ramp_length_m', 'ramp'), ('mean_seaward_slope', 'slope')):
+        rec = self.f[name]; mv = med(slug, k)[0]; alt = rec['alternatives'][0]
+        old = {'value': rec['value'], 'label': 'crest-transect value (through the single shallowest cell)', 'status': rec['status'], 'source': rec['source'], 'location': rec['location']}
+        rec['value'] = round(mv, 3 if k == 'slope' else 2); rec['alternatives'] = [old]
+        rec['location'] = f'median over {PROFILES[slug]["n_columns"]} reef columns (p10-p90 in note); the crest-transect is kept as alternative because the reef is a long diagonal mound for which one shore-normal transect is not representative'
+        rec['note'] = (rec.get('note') or '') + f' [primary = median over columns: p10 {med(slug, k)[1]:.3f}, p90 {med(slug, k)[2]:.3f}]'
+Reef.profile_fields = _pf

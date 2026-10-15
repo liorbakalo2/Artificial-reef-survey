@@ -1,0 +1,163 @@
+tube,Hs_storm,T,h_base,Hmax,depth_limited,SI_est,SI_calibrated,uplift_fraction,state,Hmax_rule,Hs_crit_vansteeg,Hs_local
+Israeli geotube (D_th 5 m),1.0,7.0,3.25,1.8946,False,0.1405,0.1993,0.3539,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,1.0526
+Israeli geotube (D_th 5 m),1.0,7.0,3.75,1.8474,False,0.1249,0.1773,0.3362,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,1.0263
+Israeli geotube (D_th 5 m),1.0,7.0,4.25,1.8095,False,0.1127,0.1599,0.321,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,1.0053
+Israeli geotube (D_th 5 m),1.0,7.0,4.75,1.7785,False,0.1027,0.1457,0.3077,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,0.9881
+Israeli geotube (D_th 5 m),1.0,7.0,5.25,1.7531,False,0.0944,0.1339,0.2957,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,0.9739
+Israeli geotube (D_th 5 m),1.0,7.0,5.75,1.7319,False,0.0874,0.124,0.2849,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,0.9622
+Israeli geotube (D_th 5 m),1.0,7.0,6.25,1.7143,False,0.0814,0.1155,0.2749,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,0.9524
+Israeli geotube (D_th 5 m),1.0,7.0,6.75,1.6995,False,0.0762,0.1081,0.2657,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,0.9442
+Israeli geotube (D_th 5 m),1.0,7.0,7.25,1.6872,False,0.0716,0.1016,0.257,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,0.9374
+Israeli geotube (D_th 5 m),1.0,7.0,7.75,1.677,False,0.0675,0.0957,0.2489,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,0.9317
+Israeli geotube (D_th 5 m),1.0,7.0,8.25,1.6686,False,0.0638,0.0905,0.2413,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,0.927
+Israeli geotube (D_th 5 m),1.0,7.0,8.75,1.6617,False,0.0605,0.0858,0.234,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,0.9232
+Israeli geotube (D_th 5 m),1.0,7.0,9.25,1.6562,False,0.0574,0.0815,0.2271,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,0.9201
+Israeli geotube (D_th 5 m),1.0,7.0,9.75,1.6518,False,0.0547,0.0776,0.2204,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,0.9177
+Israeli geotube (D_th 5 m),1.0,7.0,10.25,1.6485,False,0.0522,0.074,0.214,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,0.9158
+Israeli geotube (D_th 5 m),1.0,7.0,10.75,1.6461,False,0.0498,0.0707,0.2079,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,0.9145
+Israeli geotube (D_th 5 m),1.0,7.0,11.25,1.6445,False,0.0477,0.0676,0.2019,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,0.9136
+Israeli geotube (D_th 5 m),1.0,7.0,11.75,1.6436,False,0.0456,0.0648,0.1962,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,0.9131
+Israeli geotube (D_th 5 m),1.0,7.0,12.25,1.6434,False,0.0437,0.0621,0.1906,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,0.913
+Israeli geotube (D_th 5 m),1.0,7.0,12.75,1.6438,False,0.042,0.0595,0.1852,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,0.9132
+Israeli geotube (D_th 5 m),1.0,7.0,13.25,1.6446,False,0.0403,0.0572,0.18,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,0.9137
+Israeli geotube (D_th 5 m),1.0,7.0,13.75,1.646,False,0.0387,0.0549,0.1748,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,0.9144
+Israeli geotube (D_th 5 m),1.0,7.0,14.25,1.6477,False,0.0372,0.0528,0.1698,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,0.9154
+Israeli geotube (D_th 5 m),1.0,7.0,14.75,1.6498,False,0.0358,0.0508,0.165,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,0.9166
+Israeli geotube (D_th 5 m),1.0,7.0,15.25,1.6523,False,0.0344,0.0489,0.1602,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,0.9179
+Israeli geotube (D_th 5 m),1.0,7.0,15.75,1.655,False,0.0332,0.0471,0.1556,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,0.9194
+Israeli geotube (D_th 5 m),3.3,10.0,3.25,2.535,True,0.1504,0.1419,0.5017,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,1.7875
+Israeli geotube (D_th 5 m),3.3,10.0,3.75,2.925,True,0.1692,0.1597,0.5718,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,2.0625
+Israeli geotube (D_th 5 m),3.3,10.0,4.25,3.315,True,0.1911,0.1803,0.6403,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,2.3375
+Israeli geotube (D_th 5 m),3.3,10.0,4.75,3.705,True,0.2181,0.2058,0.7073,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,2.6125
+Israeli geotube (D_th 5 m),3.3,10.0,5.25,4.095,True,0.2533,0.239,0.7728,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,2.8875
+Israeli geotube (D_th 5 m),3.3,10.0,5.75,4.485,True,0.3054,0.2881,0.8367,near lift-off (0.8 <= U < 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,3.1625
+Israeli geotube (D_th 5 m),3.3,10.0,6.25,4.875,True,0.3954,0.3731,0.899,near lift-off (0.8 <= U < 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,3.4375
+Israeli geotube (D_th 5 m),3.3,10.0,6.75,5.265,True,0.6348,0.5989,0.9599,near lift-off (0.8 <= U < 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,3.4625
+Israeli geotube (D_th 5 m),3.3,10.0,7.25,5.655,True,89.5223,84.4661,1.0192,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,3.4187
+Israeli geotube (D_th 5 m),3.3,10.0,7.75,6.045,True,14.5035,13.6844,1.077,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,3.3796
+Israeli geotube (D_th 5 m),3.3,10.0,8.25,6.02,False,14.6103,13.7851,1.0602,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,3.3444
+Israeli geotube (D_th 5 m),3.3,10.0,8.75,5.9628,False,16.4125,15.4855,1.0381,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,3.3127
+Israeli geotube (D_th 5 m),3.3,10.0,9.25,5.9111,False,13.7,12.9262,1.0172,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,3.2839
+Israeli geotube (D_th 5 m),3.3,10.0,9.75,5.8641,False,2.1865,2.063,0.9974,near lift-off (0.8 <= U < 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,3.2579
+Israeli geotube (D_th 5 m),3.3,10.0,10.25,5.8214,False,0.7374,1.0463,0.9786,near lift-off (0.8 <= U < 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,3.2341
+Israeli geotube (D_th 5 m),3.3,10.0,10.75,5.7824,False,0.5252,0.7452,0.9607,near lift-off (0.8 <= U < 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,3.2125
+Israeli geotube (D_th 5 m),3.3,10.0,11.25,5.7468,False,0.4252,0.6033,0.9435,near lift-off (0.8 <= U < 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,3.1927
+Israeli geotube (D_th 5 m),3.3,10.0,11.75,5.7143,False,0.3628,0.5148,0.927,near lift-off (0.8 <= U < 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,3.1746
+Israeli geotube (D_th 5 m),3.3,10.0,12.25,5.6846,False,0.3183,0.4516,0.9112,near lift-off (0.8 <= U < 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,3.1581
+Israeli geotube (D_th 5 m),3.3,10.0,12.75,5.6573,False,0.2865,0.4065,0.896,near lift-off (0.8 <= U < 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,3.143
+Israeli geotube (D_th 5 m),3.3,10.0,13.25,5.6324,False,0.2603,0.3693,0.8813,near lift-off (0.8 <= U < 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,3.1291
+Israeli geotube (D_th 5 m),3.3,10.0,13.75,5.6096,False,0.2399,0.3403,0.8671,near lift-off (0.8 <= U < 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,3.1164
+Israeli geotube (D_th 5 m),3.3,10.0,14.25,5.5887,False,0.2222,0.3152,0.8534,near lift-off (0.8 <= U < 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,3.1048
+Israeli geotube (D_th 5 m),3.3,10.0,14.75,5.5696,False,0.2075,0.2944,0.84,near lift-off (0.8 <= U < 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,3.0942
+Israeli geotube (D_th 5 m),3.3,10.0,15.25,5.5521,False,0.1947,0.2763,0.8271,near lift-off (0.8 <= U < 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,3.0845
+Israeli geotube (D_th 5 m),3.3,10.0,15.75,5.5362,False,0.1833,0.2601,0.8145,near lift-off (0.8 <= U < 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,3.0757
+Israeli geotube (D_th 5 m),5.0,12.0,3.25,2.535,True,0.128,0.1208,0.51,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,1.7875
+Israeli geotube (D_th 5 m),5.0,12.0,3.75,2.925,True,0.1449,0.1367,0.5835,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,2.0625
+Israeli geotube (D_th 5 m),5.0,12.0,4.25,3.315,True,0.1654,0.156,0.656,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,2.3375
+Israeli geotube (D_th 5 m),5.0,12.0,4.75,3.705,True,0.1912,0.1804,0.7273,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,2.6125
+Israeli geotube (D_th 5 m),5.0,12.0,5.25,4.095,True,0.2278,0.2149,0.7975,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,2.8875
+Israeli geotube (D_th 5 m),5.0,12.0,5.75,4.485,True,0.2869,0.2707,0.8666,near lift-off (0.8 <= U < 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,3.1625
+Israeli geotube (D_th 5 m),5.0,12.0,6.25,4.875,True,0.4164,0.3929,0.9347,near lift-off (0.8 <= U < 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,3.4375
+Israeli geotube (D_th 5 m),5.0,12.0,6.75,5.265,True,18.7856,17.7246,1.0016,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,3.7125
+Israeli geotube (D_th 5 m),5.0,12.0,7.25,5.655,True,4.7001,4.4346,1.0675,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,3.9875
+Israeli geotube (D_th 5 m),5.0,12.0,7.75,6.045,True,4.6454,4.383,1.1323,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,4.2625
+Israeli geotube (D_th 5 m),5.0,12.0,8.25,6.435,True,16.753,15.8068,1.196,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,4.5375
+Israeli geotube (D_th 5 m),5.0,12.0,8.75,6.825,True,73.5489,69.3949,1.2587,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,4.8125
+Israeli geotube (D_th 5 m),5.0,12.0,9.25,7.215,True,15.7258,14.8376,1.3203,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,5.0875
+Israeli geotube (D_th 5 m),5.0,12.0,9.75,7.605,True,5.3677,5.0645,1.3808,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,5.2432
+Israeli geotube (D_th 5 m),5.0,12.0,10.25,7.995,True,6.9915,6.5966,1.4403,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,5.1967
+Israeli geotube (D_th 5 m),5.0,12.0,10.75,8.385,True,11.8913,11.2197,1.4988,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,5.1536
+Israeli geotube (D_th 5 m),5.0,12.0,11.25,8.775,True,5.4588,5.1505,1.5562,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,5.1136
+Israeli geotube (D_th 5 m),5.0,12.0,11.75,9.1378,False,7.1776,6.7722,1.6078,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,5.0765
+Israeli geotube (D_th 5 m),5.0,12.0,12.25,9.0756,False,4.1457,3.9116,1.5843,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,5.042
+Israeli geotube (D_th 5 m),5.0,12.0,12.75,9.0176,False,4.5564,4.299,1.5617,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,5.0098
+Israeli geotube (D_th 5 m),5.0,12.0,13.25,8.9635,False,8.5317,8.0498,1.54,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,4.9797
+Israeli geotube (D_th 5 m),5.0,12.0,13.75,8.9129,False,79.9688,75.4522,1.5191,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,4.9516
+Israeli geotube (D_th 5 m),5.0,12.0,14.25,8.8655,False,10.5727,9.9756,1.4989,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,4.9253
+Israeli geotube (D_th 5 m),5.0,12.0,14.75,8.8211,False,4.902,6.9549,1.4794,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,4.9006
+Israeli geotube (D_th 5 m),5.0,12.0,15.25,8.7795,False,3.3669,4.7769,1.4605,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,4.8775
+Israeli geotube (D_th 5 m),5.0,12.0,15.75,8.7404,False,5.4209,7.6911,1.4422,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",1.417,4.8558
+Israeli geotube (D_th 3 m),1.0,7.0,2.15,1.677,True,0.1767,0.1667,0.5409,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,1.1405
+Israeli geotube (D_th 3 m),1.0,7.0,2.65,1.9688,False,0.1975,0.1863,0.6196,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,1.0938
+Israeli geotube (D_th 3 m),1.0,7.0,3.15,1.9055,False,0.1672,0.1578,0.5854,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,1.0586
+Israeli geotube (D_th 3 m),1.0,7.0,3.65,1.856,False,0.1456,0.2066,0.5567,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,1.0311
+Israeli geotube (D_th 3 m),1.0,7.0,4.15,1.8164,False,0.1291,0.1831,0.532,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,1.0091
+Israeli geotube (D_th 3 m),1.0,7.0,4.65,1.7842,False,0.1161,0.1648,0.5102,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,0.9912
+Israeli geotube (D_th 3 m),1.0,7.0,5.15,1.7578,False,0.1056,0.1499,0.4906,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,0.9765
+Israeli geotube (D_th 3 m),1.0,7.0,5.65,1.7358,False,0.0968,0.1374,0.4728,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,0.9643
+Israeli geotube (D_th 3 m),1.0,7.0,6.15,1.7175,False,0.0895,0.127,0.4565,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,0.9542
+Israeli geotube (D_th 3 m),1.0,7.0,6.65,1.7023,False,0.0832,0.118,0.4413,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,0.9457
+Israeli geotube (D_th 3 m),1.0,7.0,7.15,1.6895,False,0.0777,0.1102,0.4271,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,0.9386
+Israeli geotube (D_th 3 m),1.0,7.0,7.65,1.6789,False,0.0728,0.1033,0.4138,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,0.9327
+Israeli geotube (D_th 3 m),1.0,7.0,8.15,1.6702,False,0.0685,0.0972,0.4012,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,0.9279
+Israeli geotube (D_th 3 m),1.0,7.0,8.65,1.663,False,0.0647,0.0918,0.3892,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,0.9239
+Israeli geotube (D_th 3 m),1.0,7.0,9.15,1.6572,False,0.0612,0.0869,0.3777,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,0.9207
+Israeli geotube (D_th 3 m),1.0,7.0,9.65,1.6526,False,0.0581,0.0824,0.3667,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,0.9181
+Israeli geotube (D_th 3 m),1.0,7.0,10.15,1.6491,False,0.0552,0.0783,0.3562,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,0.9161
+Israeli geotube (D_th 3 m),1.0,7.0,10.65,1.6465,False,0.0525,0.0745,0.346,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,0.9147
+Israeli geotube (D_th 3 m),1.0,7.0,11.15,1.6447,False,0.0501,0.0711,0.3362,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,0.9137
+Israeli geotube (D_th 3 m),1.0,7.0,11.65,1.6437,False,0.0479,0.0679,0.3267,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,0.9132
+Israeli geotube (D_th 3 m),1.0,7.0,12.15,1.6434,False,0.0458,0.0649,0.3174,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,0.913
+Israeli geotube (D_th 3 m),1.0,7.0,12.65,1.6436,False,0.0438,0.0622,0.3085,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,0.9131
+Israeli geotube (D_th 3 m),1.0,7.0,13.15,1.6444,False,0.042,0.0595,0.2998,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,0.9136
+Israeli geotube (D_th 3 m),1.0,7.0,13.65,1.6457,False,0.0402,0.0571,0.2913,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,0.9143
+Israeli geotube (D_th 3 m),1.0,7.0,14.15,1.6473,False,0.0386,0.0548,0.283,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,0.9152
+Israeli geotube (D_th 3 m),1.0,7.0,14.65,1.6494,False,0.0371,0.0526,0.2749,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,0.9163
+Israeli geotube (D_th 3 m),1.0,7.0,15.15,1.6518,False,0.0356,0.0506,0.2671,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,0.9176
+Israeli geotube (D_th 3 m),1.0,7.0,15.65,1.6544,False,0.0343,0.0486,0.2594,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,0.9191
+Israeli geotube (D_th 3 m),3.3,10.0,2.15,1.677,True,0.1303,0.1229,0.5624,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,1.1825
+Israeli geotube (D_th 3 m),3.3,10.0,2.65,2.067,True,0.163,0.1538,0.6851,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,1.4575
+Israeli geotube (D_th 3 m),3.3,10.0,3.15,2.457,True,0.2169,0.2046,0.8052,near lift-off (0.8 <= U < 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,1.7325
+Israeli geotube (D_th 3 m),3.3,10.0,3.65,2.847,True,0.3567,0.3365,0.9226,near lift-off (0.8 <= U < 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,2.0075
+Israeli geotube (D_th 3 m),3.3,10.0,4.15,3.237,True,18.4153,17.3752,1.0374,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,2.2825
+Israeli geotube (D_th 3 m),3.3,10.0,4.65,3.627,True,17.2746,16.299,1.1496,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,2.5575
+Israeli geotube (D_th 3 m),3.3,10.0,5.15,4.017,True,94.8587,89.5011,1.2592,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,2.8325
+Israeli geotube (D_th 3 m),3.3,10.0,5.65,4.407,True,4.039,3.8108,1.3662,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,3.1075
+Israeli geotube (D_th 3 m),3.3,10.0,6.15,4.797,True,4.2728,4.0315,1.4707,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,3.3825
+Israeli geotube (D_th 3 m),3.3,10.0,6.65,5.187,True,3.6266,3.4218,1.5726,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,3.4718
+Israeli geotube (D_th 3 m),3.3,10.0,7.15,5.577,True,8.1414,7.6815,1.672,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,3.4271
+Israeli geotube (D_th 3 m),3.3,10.0,7.65,5.967,True,9.0539,8.5425,1.7689,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,3.3871
+Israeli geotube (D_th 3 m),3.3,10.0,8.15,6.0321,False,8.5746,8.0903,1.7681,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,3.3512
+Israeli geotube (D_th 3 m),3.3,10.0,8.65,5.9738,False,3.792,3.5778,1.7312,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,3.3188
+Israeli geotube (D_th 3 m),3.3,10.0,9.15,5.9211,False,4.047,3.8184,1.6964,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,3.2895
+Israeli geotube (D_th 3 m),3.3,10.0,9.65,5.8732,False,10.0568,9.4888,1.6634,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,3.2629
+Israeli geotube (D_th 3 m),3.3,10.0,10.15,5.8296,False,18.7848,26.6518,1.632,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,3.2387
+Israeli geotube (D_th 3 m),3.3,10.0,10.65,5.7899,False,4.7448,6.7319,1.6022,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,3.2166
+Israeli geotube (D_th 3 m),3.3,10.0,11.15,5.7537,False,2.8479,4.0406,1.5736,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,3.1965
+Israeli geotube (D_th 3 m),3.3,10.0,11.65,5.7206,False,5.2983,7.5173,1.5462,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,3.1781
+Israeli geotube (D_th 3 m),3.3,10.0,12.15,5.6903,False,47.4142,67.271,1.5198,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,3.1613
+Israeli geotube (D_th 3 m),3.3,10.0,12.65,5.6626,False,6.5916,9.3522,1.4945,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,3.1459
+Israeli geotube (D_th 3 m),3.3,10.0,13.15,5.6372,False,3.0342,4.3049,1.47,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,3.1318
+Israeli geotube (D_th 3 m),3.3,10.0,13.65,5.614,False,3.745,5.3134,1.4463,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,3.1189
+Israeli geotube (D_th 3 m),3.3,10.0,14.15,5.5927,False,12.6699,17.976,1.4234,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,3.1071
+Israeli geotube (D_th 3 m),3.3,10.0,14.65,5.5732,False,8.7136,12.3627,1.4012,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,3.0962
+Israeli geotube (D_th 3 m),3.3,10.0,15.15,5.5555,False,3.1846,4.5183,1.3796,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,3.0864
+Israeli geotube (D_th 3 m),3.3,10.0,15.65,5.5393,False,3.2921,4.6708,1.3586,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,3.0774
+Israeli geotube (D_th 3 m),5.0,12.0,2.15,1.677,True,0.1102,0.104,0.5688,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,1.1825
+Israeli geotube (D_th 3 m),5.0,12.0,2.65,2.067,True,0.1394,0.1316,0.6954,"stable (SI <= 0.5, U < 0.8)","Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,1.4575
+Israeli geotube (D_th 3 m),5.0,12.0,3.15,2.457,True,0.19,0.1793,0.8202,near lift-off (0.8 <= U < 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,1.7325
+Israeli geotube (D_th 3 m),5.0,12.0,3.65,2.847,True,0.3503,0.3305,0.9431,near lift-off (0.8 <= U < 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,2.0075
+Israeli geotube (D_th 3 m),5.0,12.0,4.15,3.237,True,5.1522,4.8613,1.0642,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,2.2825
+Israeli geotube (D_th 3 m),5.0,12.0,4.65,3.627,True,4.5201,4.2648,1.1834,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,2.5575
+Israeli geotube (D_th 3 m),5.0,12.0,5.15,4.017,True,4.0935,3.8623,1.3008,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,2.8325
+Israeli geotube (D_th 3 m),5.0,12.0,5.65,4.407,True,64.4043,60.7668,1.4164,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,3.1075
+Israeli geotube (D_th 3 m),5.0,12.0,6.15,4.797,True,12.4384,11.7359,1.5302,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,3.3825
+Israeli geotube (D_th 3 m),5.0,12.0,6.65,5.187,True,378.1863,356.8265,1.6422,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,3.6575
+Israeli geotube (D_th 3 m),5.0,12.0,7.15,5.577,True,4.9524,4.6727,1.7523,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,3.9325
+Israeli geotube (D_th 3 m),5.0,12.0,7.65,5.967,True,3.9978,3.772,1.8607,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,4.2075
+Israeli geotube (D_th 3 m),5.0,12.0,8.15,6.357,True,8.8175,8.3195,1.9673,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,4.4825
+Israeli geotube (D_th 3 m),5.0,12.0,8.65,6.747,True,4.1033,3.8716,2.0721,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,4.7575
+Israeli geotube (D_th 3 m),5.0,12.0,9.15,7.137,True,4.1279,3.8947,2.1751,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,5.0325
+Israeli geotube (D_th 3 m),5.0,12.0,9.65,7.527,True,23.439,22.1152,2.2764,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,5.253
+Israeli geotube (D_th 3 m),5.0,12.0,10.15,7.917,True,3.2124,3.0309,2.3759,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,5.2057
+Israeli geotube (D_th 3 m),5.0,12.0,10.65,8.307,True,3.2147,3.0331,2.4737,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,5.1619
+Israeli geotube (D_th 3 m),5.0,12.0,11.15,8.697,True,10.5254,9.9309,2.5698,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,5.1214
+Israeli geotube (D_th 3 m),5.0,12.0,11.65,9.087,True,9.0929,8.5794,2.6641,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,5.0837
+Israeli geotube (D_th 3 m),5.0,12.0,12.15,9.0877,False,14.8745,14.0344,2.6435,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,5.0487
+Israeli geotube (D_th 3 m),5.0,12.0,12.65,9.0289,False,59.5193,56.1576,2.6058,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,5.0161
+Israeli geotube (D_th 3 m),5.0,12.0,13.15,8.974,False,9.7272,9.1779,2.5695,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,4.9856
+Israeli geotube (D_th 3 m),5.0,12.0,13.65,8.9228,False,5.2431,4.947,2.5346,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,4.9571
+Israeli geotube (D_th 3 m),5.0,12.0,14.15,8.8748,False,3.5648,3.3635,2.5009,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,4.9304
+Israeli geotube (D_th 3 m),5.0,12.0,14.65,8.8298,False,2.6872,2.5354,2.4684,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,4.9054
+Israeli geotube (D_th 3 m),5.0,12.0,15.15,8.7876,False,2.148,3.0475,2.4368,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,4.882
+Israeli geotube (D_th 3 m),5.0,12.0,15.65,8.7481,False,2.1313,3.0239,2.4063,lift-off (U >= 1),"Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)",0.8502,4.86

@@ -44,7 +44,7 @@ def build():
         note='Bed under the reef ranges %.2f-%.2f m below MSL (mean %.2f) under the 6,239 m2 footprint.' % (PROFILES[SL]['bed_depth_under_footprint_m']['min'], PROFILES[SL]['bed_depth_under_footprint_m']['max'], PROFILES[SL]['bed_depth_under_footprint_m']['mean']))
     r.F('reef_height_m', 2.2, 'm (mean; max 3.9)', 'D', 'Corbett2023', 'METHODS_3D KN "Reef height above the seabed": mean 2.2 m, max 3.9 m (default); 2-2.5 m at the crest wedge, 1-1.5 m at the toe; +-1 m')
     r.F('distance_offshore_crest_m', round(PROFILES[SL]['crest_cell_xy'][1], 0), 'm from the 8 Aug 2020 waterline (MSL line proxy)', 'D', 'repo:' + SH + '3d/model.js frame (shoreline_y = 0) (derive_profiles.py)', 'y of the shallowest crest cell',
-        note='Centroid of the traced field is %.0f m offshore; nearest edge 212 m (shape.json canonical.distance_offshore_m 369.1 = farthest-weighted?). Published: 100-600 m offshore (Blacka Table 4.2).' % 288,
+        note='Centroid of the traced field is %.0f m offshore; nearest edge 212 m (shape.json canonical.distance_offshore_m = 369.1 m; its definition is not stated in the file). Published: 100-600 m offshore (Blacka Table 4.2).' % 288,
         alts=[(369.1, 'shape.json canonical.distance_offshore_m', 'D', 'repo:' + SH + 'shape.json canonical.distance_offshore_m', 'shape.json'),
               (288, 'centroid of the traced field', 'D', 'repo:' + SH + 'shape.json dimensions_check "earlier text-derived schematic" row', 'shape.json dimensions_check')])
     # tide
@@ -56,7 +56,7 @@ def build():
     r.F('swell_hs_m', 1.0, 'm (typical; basis not stated)', 'S', 'Blacka2013', 'Table 4.3 p.67 and A.2.1 "Hs 1.0 m"; longshore drift ~500,000 m3/yr to the north',
         note='Dominant swell: south-east (Swellnet 2017 quote: "clean south-east swell"). Reef needs "long period, clean swell" (2007 monitoring report, via Swellnet 2017). Hs distribution/Tp not confirmed in the repo sources; design Tp not confirmed.')
     r.F('swell_tp_s', None, 's', 'U', None, '', note='no Tp for the Narrowneck design/typical surf found in the repo; Blacka 2013 A.2 p.100: actual Gold Coast waves are shorter period than the modelled long-period clean swell (value not stated).')
-    r.F('swell_dir', 'SE (south-east) for the surfable swell; Gold Coast wave climate also has E-NE sea (not quantified here)', 'text', 'S', 'Swellnet2017', 'quote of Stu Nettle 7 Nov 2017 (R2)', note='Direction in degrees not confirmed.')
+    r.F('swell_dir', 'SE (south-east) for the surfable swell (qualitative)', 'text', 'S', 'Swellnet2017', 'quote of Stu Nettle 7 Nov 2017 (R2)', note='Direction in degrees not confirmed.')
     r.F('design_wave', 'design basis: Burleigh Heads and Kirra surfing parameters (Mead 2000, via Mead & Borrero 2011); designers\' 1:50 physical model at UNSW WRL with the ORIGINAL -1.0 m AHD crest; wave transmission 0.5 over the crest, 0.9 at the shoreline', 'text', 'S', 'MeadBorrero2011+Blacka2013', 'M&B p.2-3; Blacka A.2.2-A.2.4 p.95-96',
         note='Design wave height/period not confirmed.')
     r.F('arm_angle_to_shoreline_deg', 72.2, 'deg (north arm; south arm 90.0)', 'D', 'repo:' + SH + 'shape.json angles', 'north arm axis vs shoreline (acute): 72.2 deg (min-rectangle 82.2); south arm 90.0; arms converge seaward by 17.8 +-5 deg',
@@ -74,5 +74,5 @@ def build():
     r.F('shape_on_page', 'shown', 'category', 'S', None, '04_build/data/reefs.json footprint.display = True (read only)')
     r.F('model_3d', 'yes: default = visible container field 8 Aug 2020; confidence MEDIUM', 'text', 'S', None, '07_scale/shapes/narrowneck-gold-coast/3d/METHODS_3D.md s1, s6')
     r.profile_fields(SL, crest_primary=2.32, version_note='Model crest = shallowest container top (1.92 m); the measured 2018 crest level is 2.32 m (see crest_depth_msl_m).')
-    r.F('reef_arm_note', 'two shore-normal arms + weir (chevron)', 'text', 'S', None, 'shape.json canonical.polygon_labels')
+    r.F('reef_arm_note', 'two shore-normal arms + weir (chevron)', 'text', 'S', 'repo:' + SH + 'shape.json canonical.polygon_labels', 'north arm, south arm, shoreward patches, weirs')
     return r

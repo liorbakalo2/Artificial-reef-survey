@@ -79,3 +79,8 @@ C) full data table; D) reefs of Bar & Drimer (2023) not built as surf reefs.
 - 08_paper/data/ (reefs.json, reefs_table.csv, profiles/), 08_paper/lit/ (LITERATURE.md, references.json),
   08_paper/notes/ (bar_drimer_2023_coverage.md, drimer_2026_forces.md, israel.md, sediment.md, materials.md, surf_outcomes.md),
   08_paper/analysis/ (scripts + results), 08_paper/figures/, 08_paper/sections/ (markdown per section), 08_paper/build/ (PDF).
+
+## Decisions 2026-10-15 (Lior)
+- Tokens are short: NO separate revision/review round. Keep: reference verification (Haiku) and the PDF build.
+- A Haiku agent checks whether each insight (a)-(h) is already in the cited literature: 08_paper/notes/insights_in_literature.md.
+  The writer must cite it ("consistent with X") or say it is a new observation of this review.

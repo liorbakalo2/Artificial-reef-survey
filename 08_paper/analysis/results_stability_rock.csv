@@ -1,0 +1,15 @@
+reef,unit,M_kg,Dn50_m,Delta,slope,cot_alpha,KD,H_stable_hudson,depth_where_breaking_H_equals_Hstable,extrapolated,src
+cables-reef-wa,body granite 1.5 t,1500.0,0.8272,1.5854,mean_seaward_slope,20.284,2.0,4.5062,5.7771,True,reefs.json material (Blacka 2013 A.1.3 p.93); rho ASSUMPTION 2650
+cables-reef-wa,body granite 1.5 t,1500.0,0.8272,1.5854,max_seaward_slope,7.6923,2.0,3.2617,4.1816,True,reefs.json material (Blacka 2013 A.1.3 p.93); rho ASSUMPTION 2650
+cables-reef-wa,perimeter granite 3.0 t,3000.0,1.0422,1.5854,mean_seaward_slope,20.284,2.0,5.6774,7.2787,True,as above
+cables-reef-wa,perimeter granite 3.0 t,3000.0,1.0422,1.5854,max_seaward_slope,7.6923,2.0,4.1094,5.2685,True,as above
+southern-ocean-surf-reef-albany,armour D50 0.94 m,1304.5697,0.7896,1.5854,mean_seaward_slope,3.9984,2.0,2.5033,3.2093,False,reefs.json material (design table); Dn50 = 0.84 D50 (ASSUMPTION sieve-to-nominal ratio); rho ASSUMPTION
+southern-ocean-surf-reef-albany,armour D50 0.94 m,1304.5697,0.7896,1.5854,max_seaward_slope,2.3702,2.0,2.1029,2.696,False,reefs.json material (design table); Dn50 = 0.84 D50 (ASSUMPTION sieve-to-nominal ratio); rho ASSUMPTION
+southern-ocean-surf-reef-albany,core D50 0.49 m,184.7872,0.4116,1.5854,mean_seaward_slope,3.9984,2.0,1.3049,1.6729,False,as above
+southern-ocean-surf-reef-albany,core D50 0.49 m,184.7872,0.4116,1.5854,max_seaward_slope,2.3702,2.0,1.0962,1.4053,False,as above
+southern-ocean-surf-reef-albany,belly D50 0.16 m,6.4334,0.1344,1.5854,mean_seaward_slope,3.9984,2.0,0.4261,0.5463,False,as above
+southern-ocean-surf-reef-albany,belly D50 0.16 m,6.4334,0.1344,1.5854,max_seaward_slope,2.3702,2.0,0.3579,0.4589,False,as above
+borth-coastal-defence-reef,Type 4 rock 6-10 t (8 t),8000.0,1.4453,1.5854,mean_seaward_slope,14.4928,2.0,7.0384,9.0235,True,reefs.json material (card R1)
+borth-coastal-defence-reef,Type 4 rock 6-10 t (8 t),8000.0,1.4453,1.5854,max_seaward_slope,2.8571,2.0,4.0964,5.2517,False,reefs.json material (card R1)
+borth-coastal-defence-reef,Type 1 rock 3-6 t (4.5 t),4500.0,1.193,1.5854,mean_seaward_slope,14.4928,2.0,5.81,7.4488,True,as above
+borth-coastal-defence-reef,Type 1 rock 3-6 t (4.5 t),4500.0,1.193,1.5854,max_seaward_slope,2.8571,2.0,3.3815,4.3352,False,as above
