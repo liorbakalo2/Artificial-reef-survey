@@ -276,7 +276,7 @@ A('- Safe statements: (a) in the three well-observed small/medium reefs the lee 
   '(d) at the Gold Coast the reef effect cannot be separated from nourishment with public data.')
 A('- Not safe: "the reef causes a salient/accretion" (Borth) or "the reef has no effect" (the resolution is +-10 m of contour at Cables, 2.2 y).')
 A('- Cheapest additions that would turn Borth and Boscombe into real tests (Lior requests, not done here): the pre-2012 beach survey of Borth (Welsh coastal monitoring programme / the design survey of 2010) and later LiDAR epochs; '
-  'Poole Bay recharge dates and volumes (BCP Council / CCO) and the groyne positions along the CCO lines; Boscombe pre-2009 offshore bathymetry; a pre-construction (before Dec 1999) beach survey of the Cables/Leighton frontage (DoT WA; the 1984-85 and 1996 FR single-beam files in the same zip do not reach the shore near the reef: checked) and the Leighton/Port Beach nourishment history.')
+  'Poole Bay recharge dates and volumes (BCP Council / CCO) and the groyne positions along the CCO lines; Boscombe pre-2009 offshore bathymetry; a pre-construction (before Dec 1999) beach survey of the Cables/Leighton frontage (DoT WA; the other pre-construction FR files in the same zip were checked and not used: the 1984 digitised chart has only 591 points in the window, the 1984-85 and 1996 single-beam files none) and the Leighton/Port Beach nourishment history.')
 A('- Possible paper figure: `fig_sediment_boscombe-surf-reef.png` panel (a) (the nourishment confound) and panel (b) (BACI), and `fig_sediment_cables-reef-wa.png` panels (c) (offset pre-dates the reef) and (d) (shoreline bulge not growing).')
 A('')
 A('## 7. Reproduction, provenance, caveats')
@@ -288,5 +288,10 @@ A('- Data files (all read only): Cables `07_scale/shapes/cables-reef-wa/src/bath
   'Albany `.../southern-ocean-surf-reef-albany/3d/src/levels2_raw.json`.')
 A('- Datum notes: Cables z in m AHD (taken as MSL); Boscombe m ODN (= MSL +-0.1 m); Borth m ODN with MSL = +0.31 m (+-0.15, assumed LiDAR datum ODN); Palm Beach depths below chart datum (LAT assumed); contour OFFSETS are insensitive to a constant datum shift except through the local slope.')
 A('- Not done: wave direction and wave shadow (the lee is taken as the shore directly behind the reef, +-1 L); no wave-driven transport calculation; no offshore Cables survey after 2002 exists in the repo (the other FR files in the DoT zip do not cover the reef); the origin of the Borth north ridge was not identified; Poole Bay groyne positions were not mapped onto the CCO lines.')
+A('')
+A('## 8. Status')
+A('')
+A('Complete for the brief (T1-T4 on every reef with measured data, T5 beach levels at Cables, 3 figures). Open points, none blocking: (1) the Borth north ridge and the Poole Bay groyne/recharge positions are unidentified; '
+  '(2) Mount Maunganui and Palm Beach could be re-tested if a dated pre-construction contour set is supplied; (3) the Cables beach-level files were found late (inside the DoT zip) and are analysed only for the 0, +1, +2 m AHD contours.')
 open(os.path.join(HERE, 'SEABED_SEDIMENT.md'), 'w').write('\n'.join(L) + '\n')
 print(len('\n'.join(L)))
