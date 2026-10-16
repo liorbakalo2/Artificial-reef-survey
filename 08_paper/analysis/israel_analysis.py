@@ -2,7 +2,9 @@
 """israel_analysis.py - Israel / Haifa implications (RESULTS.md part 8, insight h).
 
 Run:    python3 08_paper/analysis/israel_analysis.py   (after surf_analysis.py and coastal_analysis.py)
-Writes: results_israel_design_sweep.csv (synthetic Haifa reef: crest depth x ramp slope x H x T x tide),
+Writes: results_tide_range_sweep.csv / results_tide_range_summary.csv (F7: surfable fraction vs spring tide range),
+        results_israel_design_sweep.csv (synthetic Haifa reef: crest depth x ramp slope x H x T x tide; bed 1:50, and 1:70
+        as a sensitivity with the Israeli tide only; column bed_one_in),
         results_israel_design_summary.csv, results_israel_lst.csv, results_israel_sandtrap.csv, results_israel.json
 
 1. Synthetic Haifa profile (ASSUMPTION: no Haifa bathymetry in the repo): natural bed 1:50 from the MSL line (Haifa Bay
@@ -58,7 +60,9 @@ def haifa_profile(d_c, s_ramp, bed_slope=BED_SLOPE):
     return y, zb, zr, zs, met
 
 
-def design_sweep():
+def design_sweep(bed_slope=BED_SLOPE, with_gc=True):
+    """bed_slope: natural bed slope (default 1:50; sensitivity 1:70 = Haifa Bay mean 5 m over ~350 m, DERIVED in
+    08_paper/notes/israel.md s4.3 from Zviely et al. 2009). with_gc=False skips the Gold Coast tide (faster)."""
     rows, summ = [], []
     lev_i = np.round(np.arange(-0.2, 0.2001, 0.02), 3)
     ser_i = SA.tide_series(0.2, 0.075)[1]
@@ -67,30 +71,82 @@ def design_sweep():
     lev_gc = np.round(np.arange(-0.95, 0.951, 0.02), 3)
     for d_c in (0.6, 0.8, 1.0, 1.2, 1.5, 2.0):
         for s in (1 / 8, 1 / 12, 1 / 16, 1 / 20, 1 / 30):
-            y, zb, zr, zs, met = haifa_profile(d_c, s)
+            y, zb, zr, zs, met = haifa_profile(d_c, s, bed_slope)
             vol_cs = float(np.nansum(np.where(np.isfinite(zr), zr - zb, 0.0)))   # m3 per m of reef length
             for T in (6.0, 7.0, 8.0):
                 for H0 in (0.5, 0.6, 0.8, 1.0, 1.25, 1.5, 2.0):
                     res = [SA.analyse_case(y, zb, zr, zs, met, H0, T, float(e)) for e in lev_i]
                     mid = res[len(res) // 2]
                     surf = np.array([SA.is_surfable(r) for r in res])
-                    res_gc = [SA.analyse_case(y, zb, zr, zs, met, H0, T, float(e)) for e in lev_gc]
-                    surf_gc = np.array([SA.is_surfable(r) for r in res_gc])
-                    rows.append(dict(d_c=d_c, ramp_slope=s, ramp_one_in=round(1 / s), T=T, H0=H0, category_msl=mid['category'],
+                    if with_gc:
+                        res_gc = [SA.analyse_case(y, zb, zr, zs, met, H0, T, float(e)) for e in lev_gc]
+                        surf_gc = np.array([SA.is_surfable(r) for r in res_gc])
+                    rows.append(dict(bed_one_in=round(1 / bed_slope), d_c=d_c, ramp_slope=s, ramp_one_in=round(1 / s), T=T, H0=H0, category_msl=mid['category'],
                                      H_break=mid.get('H_break'), d_break=mid.get('d_break'), xi_b=mid.get('xi_b'), vortex_Y=mid.get('vortex_Y'),
                                      breaker=mid.get('breaker'), skill_msl=mid.get('skill'),
                                      frac_surfable_israeli_tide=SA.window_fraction(lev_i, surf, ser_i),
-                                     frac_surfable_goldcoast_tide=SA.window_fraction(lev_gc, surf_gc, ser_gc),
+                                     frac_surfable_goldcoast_tide=SA.window_fraction(lev_gc, surf_gc, ser_gc) if with_gc else float('nan'),
+                                     d_toe_bed_msl=-met['outer_toe_bed_z'], h_nat_at_crest=bed_slope * Y_CREST,
                                      reef_cross_section_m2=vol_cs, ramp_length_m=(met['seaward_toe_y_m'] - (Y_CREST + CREST_W / 2))))
             sub = [r for r in rows if r['d_c'] == d_c and r['ramp_slope'] == s and 0.6 <= r['H0'] <= 1.5]
-            summ.append(dict(d_c=d_c, ramp_one_in=round(1 / s), n_cases=len(sub),
+            sk = [str(r['skill_msl']) for r in sub]
+            summ.append(dict(bed_one_in=round(1 / bed_slope), d_c=d_c, ramp_one_in=round(1 / s), n_cases=len(sub),
                              mean_frac_surfable_israeli=float(np.mean([r['frac_surfable_israeli_tide'] for r in sub])),
                              mean_frac_surfable_goldcoast_tide=float(np.mean([r['frac_surfable_goldcoast_tide'] for r in sub])),
                              share_intermediate_msl=float(np.mean([str(r['skill_msl']).startswith('intermediate') for r in sub])),
                              share_advanced_or_expert_msl=float(np.mean([str(r['skill_msl']).startswith(('advanced', 'expert')) for r in sub])),
                              share_too_hollow_msl=float(np.mean([str(r['skill_msl']).startswith('too hollow') for r in sub])),
+                             share_spilling_or_gentle_msl=float(np.mean([k.startswith(('beginner', 'novice')) for k in sk])),
+                             share_not_on_reef_msl=float(np.mean([k.startswith(('reef not', 'n/a')) for k in sk])),
+                             H0_min_surfable_israeli=min([r['H0'] for r in rows if r['d_c'] == d_c and r['ramp_slope'] == s and r['frac_surfable_israeli_tide'] >= 0.5], default=float('nan')),
+                             d_toe_bed_msl=sub[0]['d_toe_bed_msl'],
                              reef_cross_section_m2=sub[0]['reef_cross_section_m2'], ramp_length_m=sub[0]['ramp_length_m'],
                              volume_per_100m_m3=100 * sub[0]['reef_cross_section_m2']))
+    return rows, summ
+
+
+TR_RANGES = (0.0, 0.2, 0.4, 0.8, 1.3, 1.8, 2.5, 3.5, 4.3)   # spring range (m): Israel 0.4 ... Borth 4.3 (profile JSONs)
+NEAP_RATIO = 0.375   # ASSUMPTION: neap/spring range = 0.15/0.40 as in Israel (Rosen 2001), applied to every range
+
+
+def tide_range_sweep():
+    """F7: fraction of the lunar month in which a synthetic Haifa-type reef (bed 1:50) shapes a surfable break, vs the
+    spring tide range, for fixed crest depths (m below MSL) and ramp slopes. Breaking evaluated once on a 0.05 m level grid,
+    then weighted by the synthetic tide (SA.tide_series) of each range. 'best_d_c' rows: the crest depth of the set that
+    maximises the mean surfable fraction over H0 0.6-1.5 m for that range, ramp and T (a design tuned to its own tide)."""
+    lev = np.round(np.arange(-2.25, 2.2501, 0.05), 3)
+    rows = []
+    for d_c in (0.6, 0.8, 1.0, 1.2, 1.5, 2.0):
+        for s in (1 / 8, 1 / 12, 1 / 20, 1 / 30):
+            y, zb, zr, zs, met = haifa_profile(d_c, s)
+            for T in (7.0, 10.0):
+                for H0 in (0.6, 0.8, 1.0, 1.5):
+                    res = [SA.analyse_case(y, zb, zr, zs, met, H0, T, float(e)) for e in lev]
+                    surf = np.array([SA.is_surfable(r) for r in res])
+                    works = np.array([r['category'] in SA.WORKS for r in res])
+                    crest = np.array([r['category'] == 'on_crest' for r in res])
+                    i0 = int(np.argmin(np.abs(lev)))
+                    for R in TR_RANGES:
+                        if R == 0:
+                            fs, fw, fc = float(surf[i0]), float(works[i0]), float(crest[i0])
+                        else:
+                            ser = SA.tide_series(R / 2, NEAP_RATIO * R / 2)[1]
+                            fs, fw, fc = (SA.window_fraction(lev, m_, ser) for m_ in (surf, works, crest))
+                        rows.append(dict(d_c=d_c, ramp_one_in=round(1 / s), T=T, H0=H0, spring_range_m=R,
+                                         neap_range_m=round(NEAP_RATIO * R, 3), frac_surfable=fs, frac_breaks_on_reef=fw,
+                                         frac_breaks_on_crest=fc))
+    # mean over H0 0.6-1.5 m and the best crest depth per range / ramp / T
+    summ = []
+    for s1 in sorted(set(r['ramp_one_in'] for r in rows)):
+        for T in (7.0, 10.0):
+            for R in TR_RANGES:
+                by_dc = {}
+                for d_c in (0.6, 0.8, 1.0, 1.2, 1.5, 2.0):
+                    sub = [r for r in rows if r['ramp_one_in'] == s1 and r['T'] == T and r['spring_range_m'] == R and r['d_c'] == d_c]
+                    by_dc[d_c] = (float(np.mean([r['frac_surfable'] for r in sub])), float(np.mean([r['frac_breaks_on_crest'] for r in sub])))
+                best = max(by_dc, key=lambda k: by_dc[k][0])
+                summ.append(dict(ramp_one_in=s1, T=T, spring_range_m=R, mean_frac_surfable_dc1p0=by_dc[1.0][0],
+                                 mean_frac_on_crest_dc1p0=by_dc[1.0][1], best_d_c=best, mean_frac_surfable_best_dc=by_dc[best][0]))
     return rows, summ
 
 
@@ -145,8 +201,14 @@ SETTLEMENT_OBS = [
 
 def main():
     rows, summ = design_sweep()
+    rows70, summ70 = design_sweep(1 / 70.0, with_gc=False)   # bed-slope sensitivity (Israeli tide only)
+    rows += rows70
+    summ += summ70
     SA.write_csv(os.path.join(HERE, 'results_israel_design_sweep.csv'), rows)
     SA.write_csv(os.path.join(HERE, 'results_israel_design_summary.csv'), summ)
+    tr_rows, tr_summ = tide_range_sweep()
+    SA.write_csv(os.path.join(HERE, 'results_tide_range_sweep.csv'), tr_rows)
+    SA.write_csv(os.path.join(HERE, 'results_tide_range_summary.csv'), tr_summ)
     lst = lst_rows()
     SA.write_csv(os.path.join(HERE, 'results_israel_lst.csv'), lst)
     st = sandtrap_rows()
@@ -157,7 +219,7 @@ def main():
         json.dump(dict(meta=dict(script='08_paper/analysis/israel_analysis.py', status='DERIVED / ASSUMPTION-based design screening; see RESULTS.md part 8',
                                  israel_inputs=RI.ISRAEL, bed_slope=BED_SLOPE, crest_offshore_m=Y_CREST, crest_width_m=CREST_W),
                        design_summary=summ, lst=lst, sandtrap=st, burial=bu, settlement_observed=SETTLEMENT_OBS), f, indent=1, default=float)
-    best = sorted(summ, key=lambda r: -r['mean_frac_surfable_israeli'])[:8]
+    best = sorted([r for r in summ if r['bed_one_in'] == 50], key=lambda r: -r['mean_frac_surfable_israeli'])[:8]
     for r in best:
         print({k: (round(v, 2) if isinstance(v, float) else v) for k, v in r.items()})
 

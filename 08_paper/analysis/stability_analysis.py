@@ -66,9 +66,12 @@ def fk_forces(B, D, h, H, T, p=2.5, rho_fill=RHO_FILL_BD23, area=None, nph=96, W
     SIc = Fy / (Wp - Fz - Fc)
     i = int(np.argmax(np.abs(SI)))
     j = int(np.argmax(np.abs(SIc)))
+    # 2026-10-16: uplift_fraction uses the top-surface pressure only (no dynamic pressure under the tube = sealed base,
+    # upper bound). uplift_fraction_contact adds the BD23 contact term Fc (dynamic pressure reaches the base = lower bound).
     return dict(k=k, kh=k * h, area=A, Wsub_kN=Wp / 1e3, Fy_max_kN=float(np.abs(Fy).max()) / 1e3, Fz_uplift_max_kN=float(Fz.max()) / 1e3,
                 Fz_down_max_kN=float(-Fz.min()) / 1e3, SI_max=float(abs(SI[i])), SI_phase_deg=math.degrees(ph[i]),
-                SIc_max=float(abs(SIc[j])), uplift_fraction=float(Fz.max()) / Wp, cycles_per_day=86400.0 / T)
+                SIc_max=float(abs(SIc[j])), uplift_fraction=float(Fz.max()) / Wp,
+                uplift_fraction_contact=float((Fz + Fc).max()) / Wp, cycles_per_day=86400.0 / T)
 
 
 def calibrate():
@@ -134,7 +137,9 @@ def tube_runs(calib):
                                      at_break=bool(abs(H - Hlim) < 1e-6), **{k: v for k, v in r.items() if k not in ('k',)},
                                      SI_calibrated=r['SI_max'] * fac, SIc_calibrated=r['SIc_max'] * facc,
                                      calibration='near-breaking (H/h >= 0.6): BD23 design factor' if nb else 'linear range: BD23 validation factor',
-                                     state=state_of(r['uplift_fraction'], r['SI_max'] * fac, r['SIc_max'] * facc)))
+                                     state=state_of(r['uplift_fraction'], r['SI_max'] * fac, r['SIc_max'] * facc),
+                                     state_contact=state_of(r['uplift_fraction_contact'], r['SIc_max'] * facc, r['SIc_max'] * facc),
+                                     SIc_calibrated_note='contact case: BD23 SIc only (SI without Fc is singular when the top-only uplift nears W)'))
     return rows
 
 
@@ -193,7 +198,11 @@ def israel_depth_scan(calib):
                 fac = calib['near_breaking_SI_factor'] if nb else calib['linear_range_SI_factor']
                 rows.append(dict(tube=t['id'], Hs_storm=Hs, T=T, h_base=float(h), Hmax=Hmax, depth_limited=bool(Hmax >= 0.78 * h - 1e-6),
                                  SI_est=r['SI_max'], SI_calibrated=r['SI_max'] * fac, uplift_fraction=r['uplift_fraction'],
-                                 state=state_of(r['uplift_fraction'], r['SI_max'] * fac, r['SIc_max'] * fac), Hmax_rule='Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)',
+                                 state=state_of(r['uplift_fraction'], r['SI_max'] * fac, r['SIc_max'] * fac),
+                                 uplift_fraction_contact=r['uplift_fraction_contact'],
+                                 SIc_calibrated=r['SIc_max'] * (calib['near_breaking_SIc_factor'] if nb else calib['linear_range_SI_factor']),
+                                 state_contact=state_of(r['uplift_fraction_contact'], r['SIc_max'] * (calib['near_breaking_SIc_factor'] if nb else calib['linear_range_SI_factor']), r['SIc_max'] * (calib['near_breaking_SIc_factor'] if nb else calib['linear_range_SI_factor'])),
+                                 Fy_max_kN=r['Fy_max_kN'], Wsub_kN=r['Wsub_kN'], Hmax_rule='Hmax = min(1.8 Hs Ks, 0.78 h) (ASSUMPTION Rayleigh ~1000 waves)',
                                  Hs_crit_vansteeg=W.vansteeg_hs_crit(t['B'], t['D'], RHO_FILL_BD23, f=F_FRICTION),
                                  Hs_local=min(Hs * float(W.shoaling_coefficient(T, h)), GAMMA_S * h)))
     return rows

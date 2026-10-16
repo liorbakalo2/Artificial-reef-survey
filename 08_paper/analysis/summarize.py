@@ -40,6 +40,11 @@ def main():
     peel = pd.read_csv(os.path.join(HERE, 'results_peel.csv'))
     shore = pd.read_csv(os.path.join(HERE, 'results_shoreline.csv')).set_index('slug')
     tr = pd.read_csv(os.path.join(HERE, 'results_transmission.csv'))
+    # slope at the break point for every on-reef break (McCowan, profile lines, all H, T and tides of results_breaking.csv)
+    br = pd.read_csv(os.path.join(HERE, 'results_breaking.csv'), usecols=['slug', 'line', 'gamma_mode', 'category', 'slope_X', 'xi_b', 'vortex_extrapolated'])
+    br = br[(br.gamma_mode == 'mccowan') & br.category.isin(WORKS) & ~br.line.str.startswith('layer')]
+    brg = br.groupby('slug').agg(n_on_reef_cases=('xi_b', 'size'), slope_X_at_break_median=('slope_X', 'median'),
+                                 xi_b_median=('xi_b', 'median'), share_outside_mead_black_range=('vortex_extrapolated', 'mean'))
     prof = {s: json.load(open(os.path.join(HERE, '..', 'data', 'profiles', s + '.json'))) for s in meta}
     rows = []
     for s, site in meta.items():
@@ -85,6 +90,11 @@ def main():
             volume_model_m3=sz['volume_model_m3'], volume_stated_m3=sz['volume_stated_m3'], alongshore_span_m=sz['alongshore_span_m'],
             area_within_1m_of_crest_m2=sz['area_within_1m_of_crest_m2'], crossshore_over_L=sz['crossshore_over_L'],
             Kt_site_low=k.get('low'), Kt_site_mid=k.get('mid'), Kt_site_high=k.get('high'),
+            n_on_reef_cases=brg.loc[s, 'n_on_reef_cases'] if s in brg.index else 0,
+            slope_X_at_break_median=brg.loc[s, 'slope_X_at_break_median'] if s in brg.index else None,
+            vortex_Y_at_median_X=0.065 * brg.loc[s, 'slope_X_at_break_median'] + 0.821 if s in brg.index else None,
+            xi_b_median=brg.loc[s, 'xi_b_median'] if s in brg.index else None,
+            share_outside_mead_black_range=brg.loc[s, 'share_outside_mead_black_range'] if s in brg.index else None,
             B_over_S=shore.loc[s, 'B_over_S'], salient_pred_m=shore.loc[s, 'salient_Yoff_pred_m'],
             Sa_over_SZW_siteH=shore.loc[s, 'Sa_over_SZW_siteH'], H0_at_ranasinghe_peak=shore.loc[s].get('H0_at_Sa_over_SZW_2')))
     df = pd.DataFrame(rows)
@@ -94,7 +104,8 @@ def main():
     corr = {}
     for c in ['surfable_frac_best_line', 'surfable_frac_crest_line', 'volume_model_m3', 'volume_stated_m3', 'alongshore_span_m',
               'area_within_1m_of_crest_m2', 'crest_depth_msl_m', 'mean_seaward_slope_1_in', 'ramp_length_m', 'crossshore_over_L',
-              'rep_crest_depth_msl_m', 'rep_relief_m', 'rep_depth_gap_m', 'rep_ramp_length_m', 'rep_mean_seaward_slope_1_in']:
+              'rep_crest_depth_msl_m', 'rep_relief_m', 'rep_depth_gap_m', 'rep_ramp_length_m', 'rep_mean_seaward_slope_1_in',
+              'slope_X_at_break_median', 'xi_b_median']:
         x = ok[[c, 'outcome_score']].dropna()
         if len(x) >= 5:
             r, pval = spearmanr(x[c], x['outcome_score'])

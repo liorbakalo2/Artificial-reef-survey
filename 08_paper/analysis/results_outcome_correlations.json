@@ -5,13 +5,13 @@
    "n": 8,
    "spearman_rho": 0.737,
    "p": 0.037,
-   "p_permutation": 0.0488
+   "p_permutation": 0.0485
   },
   "surfable_frac_crest_line": {
    "n": 8,
    "spearman_rho": 0.582,
    "p": 0.13,
-   "p_permutation": 0.1723
+   "p_permutation": 0.1711
   },
   "volume_model_m3": {
    "n": 8,
@@ -90,6 +90,18 @@
    "spearman_rho": 0.386,
    "p": 0.345,
    "p_permutation": 0.3958
+  },
+  "slope_X_at_break_median": {
+   "n": 8,
+   "spearman_rho": 0.617,
+   "p": 0.103,
+   "p_permutation": 0.1454
+  },
+  "xi_b_median": {
+   "n": 8,
+   "spearman_rho": -0.694,
+   "p": 0.056,
+   "p_permutation": 0.0775
   }
  },
  "volume_stated_all_reefs": {

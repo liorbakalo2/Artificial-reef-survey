@@ -97,6 +97,17 @@ def transform(y, zs, H0, T, eta, gamma='mccowan'):
         else:
             g = GAMMAS[gamma]
         if H[i] >= g * d[i]:
+            # 2026-10-16 fix: the 1 m grid let a wave cross a steep face in one step, so H/d at the detected point reached
+            # up to 5 (physically impossible). Locate the crossing H0 Ks(d) = g d inside the last 1 m segment instead
+            # (depth interpolated linearly along the segment).
+            if i > 0 and wet[i - 1] and d[i - 1] > d[i]:
+                dd = np.linspace(d[i], d[i - 1], 41)                      # shallow -> deep
+                Hd = H0 * W.shoaling_coefficient(T, dd)
+                okb = np.where(Hd >= g * dd)[0]
+                j = int(okb.max()) if len(okb) else 0                    # deepest depth on the segment that breaks
+                fr = (d[i - 1] - dd[j]) / (d[i - 1] - d[i])
+                return dict(i=i, y=float(y[i - 1] + fr * (y[i] - y[i - 1])), d=float(dd[j]), H=float(Hd[j]), shore=False,
+                            gamma=float(g))
             return dict(i=i, y=float(y[i]), d=float(d[i]), H=float(H[i]), shore=False, gamma=float(g))
     return dict(i=None, y=float('nan'), d=float('nan'), H=float('nan'), shore=True)
 
