@@ -1,50 +1,109 @@
 {
- "note": "Spearman rank correlation with outcome score (works 3, works rarely / mixed 2, does not work 1; unknown excluded). n is tiny: descriptive only.",
+ "note": "Spearman rank correlation with outcome score (works 3, works rarely / mixed 2, does not work 1; unknown excluded). p = scipy t-approximation; p_permutation = two-sided Monte Carlo permutation test (20,000, seed 1). corr: the 8 modelled reefs with a known outcome (Borth unknown); rep_* = representative line (REP_LINE). volume_stated_all_reefs: reefs.json volume_m3 for every reef with a known outcome (results_volume_outcome.csv). n is tiny and outcome is an ordinal judgement: descriptive only.",
  "corr": {
   "surfable_frac_best_line": {
    "n": 8,
    "spearman_rho": 0.737,
-   "p": 0.037
+   "p": 0.037,
+   "p_permutation": 0.0488
   },
   "surfable_frac_crest_line": {
    "n": 8,
    "spearman_rho": 0.582,
-   "p": 0.13
+   "p": 0.13,
+   "p_permutation": 0.1723
   },
   "volume_model_m3": {
    "n": 8,
    "spearman_rho": 0.926,
-   "p": 0.001
+   "p": 0.001,
+   "p_permutation": 0.005
+  },
+  "volume_stated_m3": {
+   "n": 8,
+   "spearman_rho": 0.772,
+   "p": 0.025,
+   "p_permutation": 0.0365
   },
   "alongshore_span_m": {
    "n": 8,
    "spearman_rho": 0.926,
-   "p": 0.001
+   "p": 0.001,
+   "p_permutation": 0.005
   },
   "area_within_1m_of_crest_m2": {
    "n": 8,
    "spearman_rho": 0.772,
-   "p": 0.025
+   "p": 0.025,
+   "p_permutation": 0.0369
   },
   "crest_depth_msl_m": {
    "n": 8,
    "spearman_rho": 0.0,
-   "p": 1.0
+   "p": 1.0,
+   "p_permutation": 1.0
   },
   "mean_seaward_slope_1_in": {
    "n": 8,
    "spearman_rho": 0.617,
-   "p": 0.103
+   "p": 0.103,
+   "p_permutation": 0.1459
   },
   "ramp_length_m": {
    "n": 8,
    "spearman_rho": 0.849,
-   "p": 0.008
+   "p": 0.008,
+   "p_permutation": 0.0153
   },
   "crossshore_over_L": {
    "n": 8,
    "spearman_rho": 0.54,
-   "p": 0.167
+   "p": 0.167,
+   "p_permutation": 0.2105
+  },
+  "rep_crest_depth_msl_m": {
+   "n": 8,
+   "spearman_rho": -0.154,
+   "p": 0.715,
+   "p_permutation": 0.7723
+  },
+  "rep_relief_m": {
+   "n": 8,
+   "spearman_rho": 0.849,
+   "p": 0.008,
+   "p_permutation": 0.0145
+  },
+  "rep_depth_gap_m": {
+   "n": 8,
+   "spearman_rho": 0.926,
+   "p": 0.001,
+   "p_permutation": 0.005
+  },
+  "rep_ramp_length_m": {
+   "n": 8,
+   "spearman_rho": 0.776,
+   "p": 0.024,
+   "p_permutation": 0.0301
+  },
+  "rep_mean_seaward_slope_1_in": {
+   "n": 8,
+   "spearman_rho": 0.386,
+   "p": 0.345,
+   "p_permutation": 0.3958
+  }
+ },
+ "volume_stated_all_reefs": {
+  "built_reefs_excl_burkitts": {
+   "n": 10,
+   "spearman_rho": 0.724,
+   "p": 0.018,
+   "p_permutation": 0.0212
+  },
+  "all_incl_burkitts_natural": {
+   "n": 11,
+   "spearman_rho": 0.428,
+   "p": 0.1889,
+   "p_permutation": 0.2063
   }
  }
 }

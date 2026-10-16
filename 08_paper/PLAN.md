@@ -84,3 +84,7 @@ C) full data table; D) reefs of Bar & Drimer (2023) not built as surf reefs.
 - Tokens are short: NO separate revision/review round. Keep: reference verification (Haiku) and the PDF build.
 - A Haiku agent checks whether each insight (a)-(h) is already in the cited literature: 08_paper/notes/insights_in_literature.md.
   The writer must cite it ("consistent with X") or say it is a new observation of this review.
+
+## Workflow scripts (to resume in a new session)
+- Round 2: `_agent_briefs/workflows/paper_round2.js`; rounds 3-4: `_agent_briefs/workflows/paper_round3_4.js` (run with the Workflow tool).
+- Status 2026-10-16 04:40 UTC: round 1 done (data, profiles, lit, notes, seabed analysis, analysis scripts+results, insights check); round 2 running.
