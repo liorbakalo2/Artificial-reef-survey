@@ -3,15 +3,15 @@
  "corr": {
   "surfable_frac_best_line": {
    "n": 8,
-   "spearman_rho": 0.737,
-   "p": 0.037,
-   "p_permutation": 0.0485
+   "spearman_rho": 0.694,
+   "p": 0.056,
+   "p_permutation": 0.0753
   },
   "surfable_frac_crest_line": {
    "n": 8,
-   "spearman_rho": 0.582,
-   "p": 0.13,
-   "p_permutation": 0.1711
+   "spearman_rho": 0.54,
+   "p": 0.167,
+   "p_permutation": 0.2114
   },
   "volume_model_m3": {
    "n": 8,

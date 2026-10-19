@@ -22,13 +22,13 @@ Table 3 applies these predictors to the reconstructed reefs. At mid tide the sub
 |:--|:--|--:|--:|:--|:--|
 | Boscombe | 0.05 / 0.48 / 0.47 | 0.39 | 84 (Eq. 31: 11-35) | 5.5 / 3.7 | +3.4 m (95 % CI +1.3 to +5.3), before/after with controls |
 | Palm Beach | 0.29 / 0.52 / 0.75 | 0.43 | 114 | 4.8 / 2.0 | 2 m or less (chart, low confidence) |
-| Cables | 0.36 / 0.46 / 0.56 | 0.44 | 102 (Eq. 31: 14-41) | 3.8 / 2.1 | lee high pre-dates the reef; beach bulge shrinking |
+| Cables | 0.32 / 0.46 / 0.60 | 0.44 | 102 (Eq. 31: 14-41) | 3.8 / 2.1 | lee high pre-dates the reef; beach bulge shrinking |
 | Borth | 0.05 / 0.05 / 0.43 | 0.38 | 89 | 2.2 / 1.4 | +30 m bulge (+12 to +48), single survey, no baseline |
 | Pratte's | 0.80 (upper limit) | 0.63 | 40 | 2.8 / 1.3 | +13 m in 5 months, no control; "no discernible impact" |
 | Narrowneck | 0.42 / 0.64 / 0.68 | 0.39 | 104 | 3.3 / 1.3 | not testable (continuous nourishment) |
 | Mt Maunganui | 0.44 / 0.66 / 0.80 | 0.23 | 79 | 2.1 / 1.1 | "subtle and within the natural variation" |
-| Albany | 0.33 / 0.41 / 0.52 | 0.78 | 77 | 2.4 / 1.6 | no post-construction data (opened 2025) |
-| Bunbury | 0.55 / 0.64 / 0.67 | 0.34 | 11 | 1.5 / 0.7 | removed within days |
+| Albany | 0.20 / 0.41 / 0.63 | 0.78 | 77 | 2.4 / 1.6 | no post-construction data (opened 2025) |
+| Bunbury | 0.46 / 0.64 / 0.80 | 0.34 | 11 | 1.5 / 0.7 | removed within days |
 
 ## 5.3 Observed response: the seabed and beach surveys
 

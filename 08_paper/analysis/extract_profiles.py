@@ -772,6 +772,16 @@ def resolve_citations(slug, m, ids):
     return out
 
 
+ANNUAL_RANGE_HALF = {'southern-ocean-surf-reef-albany': 0.69, 'bunbury-airwave': 0.60, 'cables-reef-wa': 0.57}   # half of the WA DoT/BoM 2026 predicted annual range (1.38, 1.20, 1.14 m), centred on MSL (08_paper/notes/tides_check.md)
+
+
+def apply_annual_range(slug, planes):
+    if slug in ANNUAL_RANGE_HALF:
+        planes.pop('LWt', None); planes.pop('HWt', None)
+        planes['ANN_LO'], planes['ANN_HI'] = -ANNUAL_RANGE_HALF[slug], ANNUAL_RANGE_HALF[slug]
+    return planes
+
+
 def tidal_planes(m):
     lst = None
     for key in ('levels', 'water_levels'):
@@ -938,7 +948,7 @@ def process(slug):
         key_inputs=[dict(input=role, sources={i: c for i, c in resolve_citations(slug, m, ids).items()}) for role, ids in KEY_INPUTS[slug]],
         read_from='07_scale/shapes/%s/3d/model.js (read only)' % slug,
         caveats=meta['caveats'],
-        tidal_planes_m_above_msl=tidal_planes(m),
+        tidal_planes_m_above_msl=apply_annual_range(slug, tidal_planes(m)),
         confidence_3d=m.get('confidence_3d', {}).get('level') if isinstance(m.get('confidence_3d'), dict) else None,
         global_=glob, lines=lines,
     )

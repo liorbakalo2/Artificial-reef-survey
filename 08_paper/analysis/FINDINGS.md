@@ -27,7 +27,7 @@ Status 2026-10-16. Numbers, methods and sources: `RESULTS.md` (section given as 
 ## 2. Ramp gradient, not crest depth, sets the breaker type (f, d) - SUPPORTED in direction
 - **Gradual ramp.** Palm Beach (89 m ramp, 1:17): median breaker index xi_b 0.49 (plunging), Y 2.01 ("very high"), 0% collapsing (s3).
 - **Abrupt rise.**
-  - Bunbury (1:2.7): Y below 1.6 in 100% of cases, median xi_b 3.06.
+  - Bunbury (1:2.7): Y below 1.6 in 100% of cases, median xi_b 2.97.
   - Boscombe (1:3): 100%, xi_b 2.00.
   - Mt Maunganui: 91%.
 - **Across reefs.** Median xi_b ranks with outcome at rho -0.69 (p_perm 0.078); crest depth does not (rho 0.00). The same 2-4 m depth gap gives a surfable wave over a long ramp and a collapsing wave over an abrupt rise.
@@ -47,7 +47,7 @@ Status 2026-10-16. Numbers, methods and sources: `RESULTS.md` (section given as 
 
 ## 3. Narrow surfable wave-height window (d) - SUPPORTED; Boscombe detail PARTLY
 - **Height window.** At MSL a wave needs H0 of 0.3-1.3 m to break on the reef. Above H0 1.6-5.2 m it breaks seaward of the reef (s2). Over the full grid, 34-84% of cases break on the reef.
-- **Surfable time fraction, given the swell (s5).** Palm Beach 0.70, Cables 0.65, Albany 0.59, Borth 0.27, Mt Maunganui 0.16, Narrowneck 0.15, Pratte's 0.04, Boscombe 0, Bunbury 0.
+- **Surfable time fraction, given the swell (s5).** Palm Beach 0.70, Cables 0.63, Albany 0.62, Borth 0.27, Mt Maunganui 0.16, Narrowneck 0.15, Pratte's 0.04, Bunbury 0.01, Boscombe 0 (Cables, Albany and Bunbury use the WA annual range 1.14, 1.38 and 1.20 m as the local tide; 2026-10-19 tide correction).
 - **Reported surfable days per year.** Cables 142, Albany 146, Burkitts 30, Boscombe 77 (design baseline).
 - **Boscombe "too steep": SUPPORTED.** The 1:3 flank collapses in every case; the 0.5 m wave gives xi_b 1.6, Y 1.3.
 - **Boscombe "only bodyboarders": PARTLY.** The model class reads "bodyboard or expert", but the one audit with surfers reports "advanced level surfers" (Davidson 2010 via Rendle 2016).
@@ -102,7 +102,7 @@ Status 2026-10-16. Numbers, methods and sources: `RESULTS.md` (section given as 
   - Mt Maunganui at H0 1 m: 0.41 drops to 0, because it needs low water.
   - Mean change over all cases: +0.01 (range -0.30 to +0.61) (s5).
 - **Synthetic Haifa reef** (1:12, crest 1 m): 0.87-0.98 surfable at a 0.2-0.4 m range, vs 0.64-0.68 at 4.3 m.
-- **Crest load over a spring tide.** The breaking-height range on the crest is 0.31 m in Israel vs 1.0-3.4 m at the built reefs.
+- **Crest load over a spring tide.** The breaking-height range on the crest is 0.31 m in Israel vs 0.9-3.4 m at the built reefs.
 - **Storms are not tidal.**
   - Israeli breaker-zone storms (Hs 3.0-3.3 m, 12 h/yr) exceed the single-tube criterion by 2-5x.
   - With a sealed base, a 2.75 m Israeli tube lifts at 7-9 m depth. Depth alone does not protect it within 16 m (s8.5).

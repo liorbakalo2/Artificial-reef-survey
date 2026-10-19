@@ -14,10 +14,9 @@ Status counts: {'sourced': 17, 'derived': 19, 'assumed': 0, 'unknown': 3}
 - Sediment outcome is contested (20-50 m salient vs misreading, NSW review); Vieira da Silva et al. 2021 (offshore bars) was used only via the 3D notes.
 
 ## cables-reef-wa - Cables Reef (Cable Station reef), Perth / Fremantle, Western Australia
-Status counts: {'sourced': 20, 'derived': 14, 'assumed': 1, 'unknown': 3}
-- UNKNOWN fields: reef_height_m, tide_spring_range_m, swell_tp_s
+Status counts: {'sourced': 20, 'derived': 15, 'assumed': 1, 'unknown': 2}
+- UNKNOWN fields: reef_height_m, swell_tp_s
   - reef_height_m: Blacka 2013 A.1: reef to 6 m depth; no height statement. Model: rock surface on measured bed; see depth_gap_m.
-  - tide_spring_range_m: spring range not stated in the sources read; BoM Fremantle recorded extremes 1.947 m and -0.100 m above gauge zero (1987-2011), i.e. a 2.05 m extreme range (METHODS_3D s3.2), not a spring range. Tide is mixed, mainly diurnal.
   - swell_tp_s: not found in the repo for Cables (Pattiaratchi 1999 report not read for this field).
 - ASSUMED fields: crest_depth_lat_m
   - crest_depth_lat_m: derived: surveyed crest -1.55 m AHD; LWD = -0.716 m AHD (Roelse et al. 1975 Table 3; METHODS_3D s3.1) -> 0.83 m below LWD ASSUMPTION: Fremantle low-water datum (LWD) is used in place of LAT; LAT/HAT for Fremantle were not found on the pages read (METHODS_3D s3.6). Pitt 2009 says crest ~1.5 m below the lowest tide (original not seen).
@@ -54,13 +53,12 @@ Status counts: {'sourced': 16, 'derived': 16, 'assumed': 3, 'unknown': 3}
 - Cost price year (2008) assumed.
 
 ## opunake-reef - Opunake Reef (north reef), Opunake Bay, South Taranaki
-Status counts: {'sourced': 22, 'derived': 5, 'assumed': 1, 'unknown': 10}
-- UNKNOWN fields: year_completed, crest_depth_msl_m, seaward_ramp_length_m, mean_seaward_slope, tide_spring_range_m, swell_tp_s, swell_dir, arm_angle_to_shoreline_deg, arm_angle_to_swell_deg, sediment_shoreline_outcome
+Status counts: {'sourced': 21, 'derived': 7, 'assumed': 1, 'unknown': 9}
+- UNKNOWN fields: year_completed, crest_depth_msl_m, seaward_ramp_length_m, mean_seaward_slope, swell_tp_s, swell_dir, arm_angle_to_shoreline_deg, arm_angle_to_swell_deg, sediment_shoreline_outcome
   - year_completed: never completed: 27 bags in place April 2008; "basically in place" but not complete Sept 2009 (TRC 2009 printed pp.4, 15); last construction work May 2008 (M&B p.3).
   - crest_depth_msl_m: crest is specified against chart datum (= LAT) only; the LAT-to-MSL offset for Opunake/New Plymouth is not in the repo (TRC 2009 gives none). ASSUMPTION candidate: MSL about half the tide range above LAT (>1.5 m); to be fetched from LINZ New Plymouth standard-port levels.
   - seaward_ramp_length_m: no bag layout or section exists; shape hidden on the page (HANDOFF.md 2026-10-13).
   - mean_seaward_slope: not computable without the ramp length.
-  - tide_spring_range_m: not stated; only "tide range > 3.0 m" (Blacka Table 4.3 p.67). Macro-tidal site.
   - swell_tp_s: not found in the repo for Opunake.
   - swell_dir: not found in the repo for Opunake (Black et al. 2004 consent report not obtained; REQUESTS_FOR_LIOR).
   - arm_angle_to_shoreline_deg: single reef; the consent rectangle long axis is at 63 deg grid; headland shore ~parallel (by eye). No design angle available.
@@ -70,7 +68,7 @@ Status counts: {'sourced': 22, 'derived': 5, 'assumed': 1, 'unknown': 10}
   - seabed_depth_at_crest_m: printed pp.3-4: shallower end of the 3.0-1.8 m range, ASSUMED to be the bed under the crest end
 - No bag layout, no section, no survey: crest 0.0 m and depths 3.0-1.8 m are DESIGN statements referenced to chart datum (= LAT); LAT-to-MSL offset for Opunake not in the repo (fetch LINZ New Plymouth standard-port levels).
 - Orientation conflict: 99 x 30 m (TRC) vs 30 m longshore x 100 m cross-shore (NSW review).  Position is the consent area centre only (pin approximate).
-- Wave climate, tide planes (only ">3 m range") and swell direction unknown; surfable-day figure is a design target (1-in-8 to 1-in-3).
+- Wave climate, tide planes (only the Port Taranaki spring 3.16 / mean 2.35 m range, LINZ 2026-27) and swell direction unknown; surfable-day figure is a design target (1-in-8 to 1-in-3).
 
 ## boscombe-surf-reef - Boscombe Surf Reef, Boscombe, Bournemouth, Dorset (Poole Bay)
 Status counts: {'sourced': 19, 'derived': 19, 'assumed': 0, 'unknown': 0}
@@ -138,8 +136,8 @@ Status counts: {'sourced': 14, 'derived': 18, 'assumed': 0, 'unknown': 6}
 - Reef built 2025: no monitoring, tide planes only MLLW/MHHW/LAT/HAT (no neap planes), swell not recorded; surfable fraction (40 % of the year) is a single web statement. Rocks were repositioned Feb 2026 (injuries); the as-built levels are not surveyed.
 
 ## burkitts-reef-bargara - Burkitts Reef ("Greg's Reef"), Bargara, Queensland
-Status counts: {'sourced': 17, 'derived': 4, 'assumed': 0, 'unknown': 17}
-- UNKNOWN fields: footprint_area_m2, plan_length_alongshore_m, plan_length_crossshore_m, reef_height_m, crest_depth_msl_m, crest_depth_lat_m, seabed_depth_toe_m, seabed_depth_at_crest_m, depth_gap_m, seaward_ramp_length_m, mean_seaward_slope, distance_offshore_crest_m, tide_spring_range_m, swell_dir, arm_angle_to_shoreline_deg, arm_angle_to_swell_deg, sediment_shoreline_outcome
+Status counts: {'sourced': 16, 'derived': 6, 'assumed': 0, 'unknown': 16}
+- UNKNOWN fields: footprint_area_m2, plan_length_alongshore_m, plan_length_crossshore_m, reef_height_m, crest_depth_msl_m, crest_depth_lat_m, seabed_depth_toe_m, seabed_depth_at_crest_m, depth_gap_m, seaward_ramp_length_m, mean_seaward_slope, distance_offshore_crest_m, swell_dir, arm_angle_to_shoreline_deg, arm_angle_to_swell_deg, sediment_shoreline_outcome
   - footprint_area_m2: the reshaped zone is not located; the platform (31,485 m2, minimum, 321 x 377 m) is the stage, not the reef (shape.json). Redgard Phase 3 work zones (J&C 2007 Fig 1) were georeferenced at LOW confidence (+-25 m).
   - plan_length_alongshore_m: unknown; platform trace bbox 321 E-W x 377 N-S m is not the reef.
   - plan_length_crossshore_m: unknown.
@@ -152,7 +150,6 @@ Status counts: {'sourced': 17, 'derived': 4, 'assumed': 0, 'unknown': 17}
   - seaward_ramp_length_m: unknown.
   - mean_seaward_slope: unknown.
   - distance_offshore_crest_m: unknown; a headland point break (rock platform at the shoreline).
-  - tide_spring_range_m: only a "tide swing ~2.5 m" (card R4), datum and tide class not stated.
   - swell_dir: not stated.
   - arm_angle_to_shoreline_deg: not applicable / unknown (edge trends of the platform: 160 and 107 deg true are not reef angles).
   - arm_angle_to_swell_deg: unknown.
@@ -179,7 +176,7 @@ Status counts: {'sourced': 12, 'derived': 16, 'assumed': 2, 'unknown': 8}
 
 ## mexico-reef-2026-unnamed - Xala Reef (Costalegre artificial surf reef), Jalisco, Mexico
 Status counts: {'sourced': 10, 'derived': 0, 'assumed': 0, 'unknown': 28}
-- UNKNOWN fields: lat, lon, year_completed, volume_m3, footprint_area_m2, plan_length_alongshore_m, plan_length_crossshore_m, reef_height_m, crest_depth_msl_m, crest_depth_lat_m, seabed_depth_toe_m, seabed_depth_at_crest_m, depth_gap_m, seaward_ramp_length_m, mean_seaward_slope, distance_offshore_crest_m, tide_spring_range_m, tide_mean_range_m, swell_hs_m, swell_tp_s, swell_dir, arm_angle_to_shoreline_deg, arm_angle_to_swell_deg, surfable_days_per_year, sediment_shoreline_outcome, cost_local, cost_usd, cost_usd_2024
+- UNKNOWN fields: lat, lon, year_completed, volume_m3, footprint_area_m2, plan_length_alongshore_m, plan_length_crossshore_m, reef_height_m, crest_depth_msl_m, crest_depth_lat_m, seabed_depth_toe_m, seabed_depth_at_crest_m, depth_gap_m, seaward_ramp_length_m, mean_seaward_slope, distance_offshore_crest_m, tide_spring_range_m, tide_mean_range_m, tide_range_type, tide_source, swell_hs_m, swell_tp_s, swell_dir, arm_angle_to_shoreline_deg, arm_angle_to_swell_deg, surfable_days_per_year, sediment_shoreline_outcome, cost_local, cost_usd, cost_usd_2024
   - lat: location undisclosed; the area pin 19.71861, -105.23222 in the repo is NOT the reef (HANDOFF s3).
   - lon: as lat.
   - year_completed: described as "newly completed" in an announcement of 31 Mar 2026 (source framing, not verified).
@@ -198,6 +195,8 @@ Status counts: {'sourced': 10, 'derived': 0, 'assumed': 0, 'unknown': 28}
   - distance_offshore_crest_m: not disclosed in any source found (no length, width, crest depth, volume, coordinates; no monitoring). Tides for Manzanillo (NOAA/UNAM) were not fetched.
   - tide_spring_range_m: not disclosed in any source found (no length, width, crest depth, volume, coordinates; no monitoring). Tides for Manzanillo (NOAA/UNAM) were not fetched.
   - tide_mean_range_m: not disclosed in any source found (no length, width, crest depth, volume, coordinates; no monitoring). Tides for Manzanillo (NOAA/UNAM) were not fetched.
+  - tide_range_type: no tide value recorded
+  - tide_source: no tide value recorded
   - swell_hs_m: not disclosed in any source found (no length, width, crest depth, volume, coordinates; no monitoring). Tides for Manzanillo (NOAA/UNAM) were not fetched.
   - swell_tp_s: not disclosed in any source found (no length, width, crest depth, volume, coordinates; no monitoring). Tides for Manzanillo (NOAA/UNAM) were not fetched.
   - swell_dir: not disclosed in any source found (no length, width, crest depth, volume, coordinates; no monitoring). Tides for Manzanillo (NOAA/UNAM) were not fetched.

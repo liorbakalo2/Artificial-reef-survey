@@ -49,22 +49,22 @@ The outcome classes (works, works rarely, does not work, mixed or disputed, unkn
 | 12. Southern Ocean Surf Reef | 13,104^d^ | 127 × 153^d^ | 2.6^d^ | 1.00^s^ | 0.26^d^ | 7.33^d^ | 6.33^d^ | 20.0^d^ | 0.317 (1:3)^d^ |
 | 13. Xala Reef | ? | ? | ? | ? | ? | ? | ? | ? | ? |
 
-**Table C3. Setting, typical conditions and outcome.** Distance offshore is that of the crest from the shoreline definition used for each reef (see note 4 below). Arm angle is the angle between the reef arm (or the long axis of the outline) and the shoreline; two values are the two arms. For Narrowneck the value is the northern arm (the southern arm is 90.0 deg). For Pratte's Reef the angles hold if the V axis is shore-normal. Tide range: spring range (MHWS - MLWS, or great diurnal range MHHW - MLLW at the mixed or diurnal sites Pratte's, Bunbury and Albany) / mean range; entries from the NSW review (Burkitts, Cables, Kovalam) carry no definition in the source. Typical swell is as stated in the source and is mostly undefined (Narrowneck 1.0 m, Mount Maunganui 1.5 m and 11 s, Boscombe 0.5 m and 4 s, Kovalam 1-2.5 m and 11-15 s: Blacka et al., 2013, Table 4.3; Burkitts is wave-face height; Opunake is the designed breaking-wave face height).
+**Table C3. Setting, typical conditions and outcome.** Distance offshore is that of the crest from the shoreline definition used for each reef (see note 4 below). Arm angle is the angle between the reef arm (or the long axis of the outline) and the shoreline; two values are the two arms. For Narrowneck the value is the northern arm (the southern arm is 90.0 deg). For Pratte's Reef the angles hold if the V axis is shore-normal. Tide range: spring range (MHWS - MLWS: Narrowneck, Palm Beach, Mount Maunganui, Boscombe, Borth, Burkitts at Burnett Heads, Opunake at Port Taranaki) / mean range ((spring + neap)/2). At the diurnal and mixed sites the first value is not a spring range: it is the great diurnal range MHHW - MLLW at Pratte's (NOAA GT 1.654, MN 1.145 m) and the predicted annual range, about LAT to HAT, of the 2026 predictions of the Western Australia Department of Transport and Bureau of Meteorology at Cables (Fremantle, 1.14 m), Bunbury (1.20 m) and Albany (1.38 m) (Western Australia Department of Transport & Bureau of Meteorology, 2026); the Port Taranaki and Burnett Heads levels are from Land Information New Zealand (2026) and Maritime Safety Queensland (2026); these three are lower bounds (three of four quarterly blocks parsed) and micro-tidal in the sense of a range under 2 m. The Bunbury mean range (0.25 m, from a consultant's tidal planes) and the Cables mean range (0.80 m, NSW review, no definition) are probably too small and were not recomputed; the Kovalam entry carries no definition in its source. Typical swell is as stated in the source and is mostly undefined (Narrowneck 1.0 m, Mount Maunganui 1.5 m and 11 s, Boscombe 0.5 m and 4 s, Kovalam 1-2.5 m and 11-15 s: Blacka et al., 2013, Table 4.3; Burkitts is wave-face height; Opunake is the designed breaking-wave face height).
 
 | Reef | Crest distance offshore (m) | Arm angle to shoreline (deg) | Tide range, spring / mean (m) | Typical swell Hs (m) | Typical Tp (s) | Surf outcome | Surfable days per year |
 |:-------------|:---------|:----------|:-----------|:------------|:------|:----------|:---------------|
-| 1. Burkitts Reef | ? | ? | ? / 2.50^s^ | 0.5-2 (wave face 2-6 ft)^s^ | 7-10^s^ | works^s^ | 30^s^ |
-| 2. Cables Reef | 268^d^ | 27 / 60^d^ | ? / 0.80^s^ | 1-2 (summer), 1.5-2.5 (winter)^s^ | ? | mixed/disputed^s^ | 142^s^ |
+| 1. Burkitts Reef | ? | ? | 2.33^d^ / 1.74^d^ | 0.5-2 (wave face 2-6 ft)^s^ | 7-10^s^ | works^s^ | 30^s^ |
+| 2. Cables Reef | 268^d^ | 27 / 60^d^ | 1.14^d^ (annual) / 0.80^s^ | 1-2 (summer), 1.5-2.5 (winter)^s^ | ? | mixed/disputed^s^ | 142^s^ |
 | 3. Narrowneck Reef | 212^d^ | 72^d^ | 1.31^d^ / 1.02^d^ | 1.0^s^ | ? | works rarely^s^ | ? |
-| 4. Pratte's Reef | 103^d^ | 45 / 44^d^ | 1.65^d^ / 1.15^d^ | ? | ? | does not work^s^ | ? |
+| 4. Pratte's Reef | 103^d^ | 45 / 44^d^ | 1.65^d^ (great diurnal) / 1.15^d^ | ? | ? | does not work^s^ | ? |
 | 5. Mount Maunganui Reef | 308^d^ | 50 / 55^d^ | 1.75^d^ / 1.42^d^ | 1.5^s^ | 11^s^ | works rarely^s^ | ? |
-| 6. Opunake Reef | 300^s^ | ? | ? / >3.0^s^ | 1.8-2.5 (design wave face)^s^ | ? | does not work^s^ | 1-in-8 to 1-in-3 days (design aim)^s^ |
+| 6. Opunake Reef | 300^s^ | ? | 3.16^d^ / 2.35^d^ | 1.8-2.5 (design wave face)^s^ | ? | does not work^s^ | 1-in-8 to 1-in-3 days (design aim)^s^ |
 | 7. Boscombe Surf Reef | 239^d^ | 55^d^ | 1.76^s^ / 1.13^d^ | 0.5^s^ | 4^s^ | works rarely^s^ | 77 (design baseline) to 154 (design target)^s^ |
 | 8. Kovalam Reef | 90^s^ | 38^d^ | ? / 1.00^s^ | 1-2.5^s^ | 11-15^s^ | mixed/disputed^s^ | ? |
 | 9. Borth reef | 330^d^ | 64^d^ | 4.30^d^ / 3.00^d^ | ? | ? | unknown^s^ | ? |
 | 10. Palm Beach Reef | 243^d^ | 45^d^ | 1.31^d^ / 1.02^d^ | ? | ? | works^s^ | ? |
-| 11. Bunbury Airwave | 38^d^ | ? | 0.40^d^ / 0.25^d^ | ? | ? | does not work^s^ | ? |
-| 12. Southern Ocean Surf Reef | 189^d^ | 71^d^ | 0.60^d^ / ? | ? | ? | works^s^ | 146^d^ |
+| 11. Bunbury Airwave | 38^d^ | ? | 1.20^d^ (annual) / 0.25^d^ | ? | ? | does not work^s^ | ? |
+| 12. Southern Ocean Surf Reef | 189^d^ | 71^d^ | 1.38^d^ (annual) / ? | ? | ? | works^s^ | 146^d^ |
 | 13. Xala Reef | ? | ? | ? / ? | ? | ? | unknown^s^ | ? |
 
 **Table C4. Durability and shoreline or sediment outcome as reported.** The entries condense the dataset fields `durability` and `sediment_shoreline_outcome`; each carries its source. A question mark means that nothing was found.
@@ -89,12 +89,12 @@ The outcome classes (works, works rarely, does not work, mixed or disputed, unkn
 
 | Reef | s | d | a | ? | Fields |
 |:------------------------------|:--------|:--------|:--------|:--------|:--------|
-| 1. Burkitts Reef | 17 | 4 | 0 | 17 | 38 |
-| 2. Cables Reef | 20 | 14 | 1 | 3 | 38 |
+| 1. Burkitts Reef | 16 | 6 | 0 | 16 | 38 |
+| 2. Cables Reef | 20 | 15 | 1 | 2 | 38 |
 | 3. Narrowneck Reef | 16 | 19 | 0 | 3 | 38 |
 | 4. Pratte's Reef | 15 | 18 | 2 | 3 | 38 |
 | 5. Mount Maunganui Reef | 16 | 16 | 3 | 3 | 38 |
-| 6. Opunake Reef | 22 | 5 | 1 | 10 | 38 |
+| 6. Opunake Reef | 21 | 7 | 1 | 9 | 38 |
 | 7. Boscombe Surf Reef | 19 | 19 | 0 | 0 | 38 |
 | 8. Kovalam Reef | 18 | 8 | 0 | 12 | 38 |
 | 9. Borth reef | 13 | 20 | 0 | 5 | 38 |

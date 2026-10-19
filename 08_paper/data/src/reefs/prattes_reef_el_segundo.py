@@ -30,8 +30,8 @@ def build():
     r.F('distance_offshore_crest_m', 103.3, 'm from the MSL waterline (apex face)', 'D', 'repo:' + SH + '3d/METHODS_3D.md s3.2 (y_apex = 103.28 m)', 'model frame y from the MSL waterline; shape.json canonical.distance_offshore_m = 91.44 (reef centre)',
         alts=[(50, 'published distance to the undisturbed pre-construction shoreline', 'S', 'Blacka2013', 'Table 4.2 p.65')])
     sp = round(0.804 - (-0.849), 2); mean = round(0.579 - (-0.566), 2)
-    r.F('tide_spring_range_m', sp, 'm (great diurnal range MHHW-MLLW)', 'D', 'NOAA', 'NOAA CO-OPS 9410840 Santa Monica datums, epoch 1983-2001: MHHW +0.804, MLLW -0.849 m MSL (METHODS_3D tide levels); mixed semidiurnal tide, so spring/neap planes are not published; HAT-LAT = 2.85 m')
-    r.F('tide_mean_range_m', mean, 'm (MHW-MLW)', 'D', 'NOAA', 'MHW +0.579, MLW -0.566 m MSL')
+    r.F('tide_spring_range_m', sp, 'm (great diurnal range GT = MHHW-MLLW; NOT a spring range)', 'D', 'NOAA', 'NOAA CO-OPS 9410840 Santa Monica datums, epoch 1983-2001: GT 1.654 (MHHW 2.398 - MLLW 0.745 station datum); MHHW +0.804, MLLW -0.849 m MSL (METHODS_3D tide levels); mixed semidiurnal tide, so spring/neap planes are not published; HAT-LAT = 2.85 m')
+    r.F('tide_mean_range_m', mean, 'm (mean range MN = MHW-MLW)', 'D', 'NOAA', 'NOAA MN 1.145 (MHW 2.173 - MLW 1.028 station datum); MHW +0.579, MLW -0.566 m MSL')
     r.U('swell_hs_m', 'm', 'no wave-height statement for Pratte\'s found in the repo sources; Santa Monica Bay is a low-energy, W-SW swell site. Surfline comment: reef broke only on a few large swells (card R7).')
     r.U('swell_tp_s', 's', 'not found in the repo.')
     r.F('swell_dir', 'predominant swell assumed along the V axis (arms ~45 deg to the predominant swell per the design); the V axis opens to 61 deg T on the 1996 concept sketch vs shore-normal 65-66 deg T', 'text', 'S', 'Skelly', 'shape.json angles (img6 concept bisector 61.1 deg; shoreline 155.5/335.5 deg)', note='Swell direction in degrees from measurements not confirmed.')

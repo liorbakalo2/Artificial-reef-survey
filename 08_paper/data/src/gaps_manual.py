@@ -21,7 +21,7 @@ GAPS = {
  'opunake-reef': [
   'No bag layout, no section, no survey: crest 0.0 m and depths 3.0-1.8 m are DESIGN statements referenced to chart datum (= LAT); LAT-to-MSL offset for Opunake not in the repo (fetch LINZ New Plymouth standard-port levels).',
   'Orientation conflict: 99 x 30 m (TRC) vs 30 m longshore x 100 m cross-shore (NSW review).  Position is the consent area centre only (pin approximate).',
-  'Wave climate, tide planes (only ">3 m range") and swell direction unknown; surfable-day figure is a design target (1-in-8 to 1-in-3).'],
+  'Wave climate, tide planes (only the Port Taranaki spring 3.16 / mean 2.35 m range, LINZ 2026-27) and swell direction unknown; surfable-day figure is a design target (1-in-8 to 1-in-3).'],
  'boscombe-surf-reef': [
   'Datum of the April 2011 survey plot is ASSUMED to be chart datum (Bournemouth CD = ODN - 1.40 m, ODN ~ MSL): all absolute depths shift by 1.4 m if it is ODN; relief does not. Crest +0.5 m ACD = 0.90 m below MSL.',
   'Seaward flank 1:3 (+-30 %) is an assumption of the idealised loft (survey flanks 1:1.5 to 1:7); ramp 14 m and slope 0.33 depend on it. The reef is shown as built in 2009; the 2011 survey shows container failure.',

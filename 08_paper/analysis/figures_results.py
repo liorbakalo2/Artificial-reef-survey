@@ -395,7 +395,7 @@ def fig7():
         tx = ax.annotate('Bunbury' if s == 'bunbury-airwave' else NAMES[s], (x, y), xytext=(dx, dy), textcoords='offset points', fontsize=7,
                          ha=ha, va=va, color=INK, zorder=9)
         tx.set_path_effects([pe.withStroke(linewidth=2.2, foreground='white')])
-    ax.set_xlabel('Spring tide range (m)')
+    ax.set_xlabel('Tide range (m): spring; great diurnal at Pratte\'s; annual at WA reefs')
     ax.set_ylabel('Fraction of the lunar month with a surfable break')
     ax.set_xticks([0, 0.4, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5])
     ax.set_xticklabels(['0', '0.4', '1.0', '1.5', '2.0', '2.5', '3.0', '3.5', '4.0', '4.5'])
@@ -413,7 +413,7 @@ def fig7():
           Line2D([0], [0], color=INK, lw=1.4, ls=DASH, label='    same, T = 10 s'),
           Line2D([0], [0], color='#1B5E87', lw=0.8, label='crest 0.6 m (tuned to the range): T = 7 s'),
           Line2D([0], [0], color='#1B5E87', lw=0.8, ls=DASH, label='    same, T = 10 s'),
-          Line2D([0], [0], color=INK2, lw=1.6, label='ticks: spring range of each built reef')]
+          Line2D([0], [0], color=INK2, lw=1.6, label='ticks: tide range of each built reef (see caption)')]
     fig.legend(handles=h1, loc='lower left', bbox_to_anchor=(0.0, 0.0), ncol=1, frameon=False, fontsize=7, handlelength=2.2,
                labelspacing=0.25)
     h2 = outcome_legend_handles() + [Line2D([0], [0], marker='o', ms=4.2, mfc='white', mec='#7F7F7F', mew=1.0, ls='none',

@@ -78,6 +78,8 @@ Jackson, L. A., & Corbett, B. (2007). Review of existing multi-functional artifi
 
 Jackson, L. A., Corbett, B., McGrath, J., Tomlinson, R., & Stuart, G. (2007). Narrowneck Reef: Review of seven years of monitoring. *Shore & Beach, 75*(4). http://hdl.handle.net/10072/17995
 
+Land Information New Zealand. (2026). *Standard port tidal levels, Port Taranaki, 1 July 2026 to 30 June 2027*. https://www.linz.govt.nz/guidance/marine-information/tide-prediction-guidance/standard-port-tidal-levels [values read from a search extract on 2026-10-19; the host was not reachable from the working environment; see 08_paper/notes/tides_check.md]
+
 Land Information New Zealand. (n.d.). *Standard port tidal levels (Tauranga)* and *Notes about the Moturiki annual mean sea level data* (updated 16 February 2023). https://www.linz.govt.nz/guidance/marine-information/tide-prediction-guidance/standard-port-tidal-levels
 
 Land Information New Zealand. (2010-2011). *Bay of Plenty 0.125 m urban aerial photos* [Aerial imagery, tile BD37_1000_1314; CC BY 4.0]. LINZ Data Service. https://nz-imagery.s3.ap-southeast-2.amazonaws.com/bay-of-plenty/bay-of-plenty_2010-2011_0.125m/rgb/2193/BD37_1000_1314.tiff
@@ -175,6 +177,8 @@ The Daily News. (2004, June 11). Surf reef decision has Opunake buzzing at touri
 Vieira da Silva, G., Hamilton, D., Strauss, D., Murray, T., & Tomlinson, R. (2021). Sediment pathways and morphodynamic response to a multi-purpose artificial reef: New insights. *Coastal Engineering, 171*, 104027. https://doi.org/10.1016/j.coastaleng.2021.104027
 
 Welsh Government. (2022). *LiDAR 2020-22, 1 m DSM and DTM, tile SN6089, flown 19 March 2022* [Data set]. DataMapWales (Open Government Licence). https://dmwproductionblob.blob.core.windows.net/lidar-zips/2020-22/dsm/wg_del_29_260289_20220319dsm.tif
+
+Western Australia Department of Transport, & Bureau of Meteorology. (2026). *Tide predictions by location, WA 2026: Albany, Bunbury and Fremantle* [Predicted high and low waters, heights above LAT]. Government of Western Australia. https://transport.wa.gov.au/getmedia/482d7b83-1a48-4220-9e2c-b07ebfcf8594/MAR_P_2026_Tide_Predictions_by_Location_WA.pdf [downloaded 2026-10-19; annual extremes taken from three of four quarterly blocks, so they are lower bounds; see 08_paper/notes/tides_check.md]
 
 Western Australia Department of Transport. (2009). *Two Rocks to Naturaliste lidar 2009* (survey Lidar2009TRBS, file BU2009TRBS_Lidar.bag) [Data set]. https://dotazprdauegisextpubst01.blob.core.windows.net/transport-wa-public/bathymetry/rasters/BU2009TRBS_Lidar.bag
 

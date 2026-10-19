@@ -26,8 +26,9 @@ def build():
     r.U('seaward_ramp_length_m', 'm', 'unknown.')
     r.U('mean_seaward_slope', 'm/m', 'unknown.')
     r.U('distance_offshore_crest_m', 'm', 'unknown; a headland point break (rock platform at the shoreline).')
-    r.U('tide_spring_range_m', 'm', 'only a "tide swing ~2.5 m" (card R4), datum and tide class not stated.')
-    r.F('tide_mean_range_m', 2.5, 'm (approx., "tide swing", basis unknown)', 'S', 'RWR', 'card size field (R4)')
+    r.F('tide_spring_range_m', 2.33, 'm (spring range MHWS - MLWS, Burnett Heads)', 'D', 'repo:Maritime Safety Queensland (2026). Semidiurnal Tidal Planes 2026, Burnett Heads row (MHWS 2.94, MHWN 2.35, MLWN 1.20, MLWS 0.61 m above LAT); as held in 08_paper/data/profiles/_no_3d_model.json. https://www.msq.qld.gov.au/_/media/tmronline/msqinternet/msqfiles/home/tides/tidal-planes/2026-semidiurnal-tidal-planes.pdf (row not independently verified; see 08_paper/notes/tides_check.md)', 'MSQ 2026 Burnett Heads: MHWS 2.94 - MLWS 0.61 m above LAT = 2.33 m', note='Meso-tidal. Replaces the unsupported "tide swing ~2.5 m" of the Raised Water Research card.')
+    r.F('tide_mean_range_m', 1.74, 'm (mean of spring and neap range, Burnett Heads)', 'D', 'repo:Maritime Safety Queensland (2026). Semidiurnal Tidal Planes 2026, Burnett Heads row (MHWS 2.94, MHWN 2.35, MLWN 1.20, MLWS 0.61 m above LAT); as held in 08_paper/data/profiles/_no_3d_model.json. https://www.msq.qld.gov.au/_/media/tmronline/msqinternet/msqfiles/home/tides/tidal-planes/2026-semidiurnal-tidal-planes.pdf (row not independently verified; see 08_paper/notes/tides_check.md)', '(spring 2.33 + neap 1.15)/2 = 1.74 m; MHWN 2.35, MLWN 1.20', note='Replaces 2.5 m ("tide swing", basis unknown).',
+        alts=[(2.5, '"tide swing", Raised Water Research card R4, basis unknown (superseded)', 'S', 'RWR', 'card size field (R4)')])
     r.F('swell_hs_m', '0.5-2 (wave face 2-6 ft)', 'm (face height)', 'S', 'RWR', 'card outcome field (R4): face 2-6 ft; period 7-10 s; best swell window Nov-Apr', note='Face height, not Hs.')
     r.F('swell_tp_s', '7-10', 's', 'S', 'RWR', 'card outcome field (R4)')
     r.U('swell_dir', 'text', 'not stated.')

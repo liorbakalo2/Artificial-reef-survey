@@ -9,7 +9,7 @@ SLUGS = ['narrowneck-gold-coast', 'cables-reef-wa', 'prattes-reef-el-segundo', '
          'borth-coastal-defence-reef', 'palm-beach-gold-coast', 'southern-ocean-surf-reef-albany', 'burkitts-reef-bargara', 'bunbury-airwave', 'mexico-reef-2026-unnamed']
 ORDER = ['name', 'country', 'lat', 'lon', 'year_built', 'year_completed', 'purpose', 'material', 'volume_m3', 'footprint_area_m2', 'plan_length_alongshore_m', 'plan_length_crossshore_m', 'reef_height_m',
          'crest_depth_msl_m', 'crest_depth_lat_m', 'seabed_depth_toe_m', 'seabed_depth_at_crest_m', 'depth_gap_m', 'seaward_ramp_length_m', 'mean_seaward_slope', 'distance_offshore_crest_m',
-         'tide_spring_range_m', 'tide_mean_range_m', 'swell_hs_m', 'swell_tp_s', 'swell_dir', 'design_wave', 'arm_angle_to_shoreline_deg', 'arm_angle_to_swell_deg', 'surf_outcome', 'surfable_days_per_year',
+         'tide_spring_range_m', 'tide_mean_range_m', 'tide_range_type', 'tide_source', 'swell_hs_m', 'swell_tp_s', 'swell_dir', 'design_wave', 'arm_angle_to_shoreline_deg', 'arm_angle_to_swell_deg', 'surf_outcome', 'surfable_days_per_year',
          'durability', 'sediment_shoreline_outcome', 'cost_local', 'cost_usd', 'cost_usd_2024', 'shape_on_page', 'model_3d']
 FX = json.load(open(f'{D}/fx_worldbank.json'))
 WB = 'World Bank, World Development Indicators: PA.NUS.FCRF "Official exchange rate (LCU per US$, period average)" and FP.CPI.TOTL "Consumer price index (2010 = 100)", USA; https://api.worldbank.org/v2 ; fetched 2026-10-15'
@@ -32,6 +32,33 @@ def add_usd(r):
     r.F('cost_usd_2024', round(nominal * cpi_b / cpi_y, -3), 'USD (2024 prices)', 'D', 'repo:' + WB, f'nominal USD x CPI_USA(2024) {cpi_b:.2f} / CPI_USA({yr}) {cpi_y:.2f}',
         note='DERIVED; US CPI (World Bank FP.CPI.TOTL, 2010 = 100) used as the deflator; 2025 CPI was not yet published by the source.')
 
+# What the field tide_spring_range_m holds for each reef (its name is kept for the pipeline) and the official source (tides_check.md, 2026-10-19)
+_SPR = 'spring range (MHWS - MLWS)'
+_ANN = 'predicted annual range (approx. LAT-HAT), WA DoT 2026; not a spring range'
+_DOT = 'WA DoT / BoM Tide Predictions by Location WA 2026 (heights above LAT)'
+TIDE_META = {
+    'narrowneck-gold-coast': (_SPR, 'MSQ Semidiurnal Tidal Planes 2026, Gold Coast Seaway'),
+    'palm-beach-gold-coast': (_SPR, 'MSQ Semidiurnal Tidal Planes 2026, Gold Coast Seaway'),
+    'cables-reef-wa': (_ANN, _DOT + ', Fremantle (+0.30 to +1.44 m)'),
+    'prattes-reef-el-segundo': ('great diurnal range GT (MHHW - MLLW); mean = MN; not a spring range', 'NOAA CO-OPS datums, station 9410840 Santa Monica (GT 1.654, MN 1.145)'),
+    'mount-maunganui-reef': (_SPR, 'LINZ Standard port tidal levels 2026-27, Tauranga'),
+    'opunake-reef': (_SPR + ', Port Taranaki', 'LINZ Standard port tidal levels 2026-27, Port Taranaki (MHWS 3.56, MLWS 0.40)'),
+    'boscombe-surf-reef': (_SPR, 'Mead et al. 2010 Table 1 (Bournemouth gauge); Admiralty value not retrieved'),
+    'kovalam-reef-india': ('undefined "tide range" (Blacka 2013 Table 4.3)', 'Blacka et al. 2013 Table 4.3 p.68 (approx.); no official source reached'),
+    'borth-coastal-defence-reef': (_SPR, 'West of Wales SMP2 water-level table p.4C.3 (Aberystwyth)'),
+    'southern-ocean-surf-reef-albany': (_ANN, _DOT + ', Albany (+0.09 to +1.47 m)'),
+    'burkitts-reef-bargara': (_SPR + ', Burnett Heads', 'MSQ Semidiurnal Tidal Planes 2026, Burnett Heads (not independently verified)'),
+    'bunbury-airwave': (_ANN, _DOT + ', Bunbury (+0.10 to +1.30 m)'),
+    'mexico-reef-2026-unnamed': (None, None),
+}
+
+def add_tide_meta(r, slug):
+    t, s = TIDE_META[slug]
+    if t is None:
+        r.U('tide_range_type', 'text', 'no tide value recorded'); r.U('tide_source', 'text', 'no tide value recorded'); return
+    r.F('tide_range_type', t, 'text', 'S', None, 'what tide_spring_range_m holds for this reef (see unit of that field)')
+    r.F('tide_source', s, 'text', 'S', None, 'full citations are in the source list of tide_spring_range_m')
+
 def short_src(rec):
     keys = rec.get('src_keys', '')
     s = (keys if not keys.startswith('repo:') else 'repo: ' + keys[5:90]) + (' | ' + rec['location'] if rec.get('location') else '')
@@ -48,12 +75,13 @@ def main():
         if m is None: print('MISSING MODULE', slug); continue
         r = m.build()
         add_usd(r)
+        add_tide_meta(r, slug)
         for f in ORDER:
             if f not in r.f and f != 'slug': r.U(f, '', 'not recorded in this dataset version')
         obj = {'slug': slug}
         for f in ORDER + [k for k in r.f if k not in ORDER]: obj[f] = r.f[f]
         obj['_references'] = r.used
-        obj['_status_counts'] = {s: sum(1 for f in r.f.values() if f['status'] == s) for s in ('sourced', 'derived', 'assumed', 'unknown')}
+        obj['_status_counts'] = {s: sum(1 for k, f in r.f.items() if f['status'] == s and k not in ('tide_range_type', 'tide_source')) for s in ('sourced', 'derived', 'assumed', 'unknown')}
         reefs.append(obj)
     json.dump(reefs, open(f'{D}/reefs.json', 'w'), indent=1, ensure_ascii=False)
     cols = ['slug']

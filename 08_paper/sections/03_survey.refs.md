@@ -93,3 +93,5 @@ State Comptroller of Israel. (2020). *How government authorities deal with the p
 SunLive. (n.d.). Time called on artificial reef. https://www.sunlive.co.nz/news/86837-time-called-on-artificial-reef.html [web news report; date not recorded]
 
 Vieira da Silva, G., Hamilton, D., Strauss, D., Murray, T., & Tomlinson, R. (2021). Sediment pathways and morphodynamic response to a multi-purpose artificial reef: New insights. *Coastal Engineering, 171*, 104027. https://doi.org/10.1016/j.coastaleng.2021.104027
+
+Western Australia Department of Transport, & Bureau of Meteorology. (2026). *Tide predictions by location, WA 2026: Albany, Bunbury and Fremantle* [Predicted high and low waters, heights above LAT]. Government of Western Australia. https://transport.wa.gov.au/getmedia/482d7b83-1a48-4220-9e2c-b07ebfcf8594/MAR_P_2026_Tide_Predictions_by_Location_WA.pdf [downloaded 2026-10-19; annual extremes taken from three of four quarterly blocks, so they are lower bounds; see 08_paper/notes/tides_check.md]

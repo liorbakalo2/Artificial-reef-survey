@@ -96,7 +96,7 @@ def pick_line(pr, table_crest):
 
 
 def tide_band(pl):
-    for lo, hi in (('MLWS', 'MHWS'), ('MLLW', 'MHHW'), ('LWt', 'HWt')):
+    for lo, hi in (('MLWS', 'MHWS'), ('ANN_LO', 'ANN_HI'), ('MLLW', 'MHHW')):
         if lo in pl and hi in pl:
             return pl[lo], pl[hi], '%s–%s' % (lo, hi)
     return None, None, None
@@ -310,7 +310,7 @@ def draw_row(fig, H, y_top, slugs, R, SEC, GEO, with_notes):
         ax = axes_cm(ML + len(slugs) * SLOT_W + PAD / 2, y_prof, SLOT_W - PAD, PROF_H)
         ax.axis('off')
         h = [Patch(fc='#8C8C8C', ec='none', label='reef (colour as plan)'), Patch(fc=S.SAND, ec='none', label='natural seabed'),
-             Patch(fc=S.TIDE, alpha=0.55, ec='none', label='spring tide range'),
+             Patch(fc=S.TIDE, alpha=0.55, ec='none', label='tide range (spring or\ngreat diurnal / annual,\nsee Table)'),
              Line2D([], [], color='#2B5F8A', lw=0.7, ls=(0, (4, 2)), label='MSL')]
         ax.legend(handles=h, loc='upper left', frameon=False, handlelength=1.3, borderaxespad=0, labelspacing=0.25,
                   bbox_to_anchor=(0.0, 1.03), fontsize=7)
@@ -506,8 +506,8 @@ def write_captions():
         "outline is set at its distance from the MSL shoreline (thick line, y = 0) with arbitrary alongshore slots; the hatched shape is Borth's southern oval, a "
         "shore-parallel breakwater rather than a surf reef, and Bunbury is the 12 m Airwave bladder, torn on installation. "
         "Each profile is the section of the 3D reconstruction marked by the dashed line (the section whose crest depth best matches the master table), drawn at the "
-        "plan's horizontal scale (window shifted per reef) with a vertical exaggeration of about %d:1; elevations are relative to MSL, the blue band is the spring tide "
-        "range (MLWS-MHWS, or MLLW-MHHW at diurnal and mixed sites; 0.8 m total range at Cables, Blacka et al., 2013), and C, T and G are the crest depth, the seabed "
+        "plan's horizontal scale (window shifted per reef) with a vertical exaggeration of about %d:1; elevations are relative to MSL, the blue band is the tide "
+        "range (spring range MLWS-MHWS; great diurnal range MLLW-MHHW at Pratte's; predicted annual range, about LAT-HAT, of the 2026 WA DoT/BoM predictions at Cables 1.14 m, Bunbury 1.20 m and Albany 1.38 m, centred on MSL; see the tide-range table in Appendix C), and C, T and G are the crest depth, the seabed "
         "depth at the seaward toe and the depth gap (T - C) read from the plotted section, within 0.35 m of the master-table values."
         % (SCALE, ve))
     n1 = (
@@ -516,7 +516,7 @@ def write_captions():
         "- Plan outlines: DEFAULT outline of each `07_scale/shapes/<slug>/shape.json` (Cables: original design plan of Lyons 1992 as reproduced in Blacka et al. 2013 Fig. A.2, fitted to the Nov 1999 soundings; Narrowneck: container field on the Esri image of 8 Aug 2020; Pratte's: Skelly Engineering design drawing of the Phase I layout; Mount Maunganui: -2.0 m CD contour of the 18 Jul 2013 multibeam survey; Boscombe: outline traced on Esri World Imagery Wayback imagery (frame origin = surf line of 28 Sep 2011); Borth: Welsh Government LiDAR edge of 19 Mar 2022; Palm Beach: toe outline traced on the Bluecoast/Nearmap aerial of the completed reef; Bunbury: 12 m circle traced from the 2019 drone photo, orientation arbitrary; Albany: Bluecoast final-design outline). Per-reef sources and confidence: Appendix A, `shape.json` and `08_paper/data/profiles/<slug>.json`.\n"
         "- Frame: every `shape.json` frame is 'x alongshore, y offshore' with +y = +x turned 90 deg clockwise, so x is plotted as -x to give an unmirrored view looking seaward; the Cables frame has the other handedness (x north, y west) and its outline is rotated into the fitted 0 m AHD shoreline (bearing 7.8 deg; 254 m east of the anchor, `geo` block of its `shape.json`), so the axes there are exactly shore-parallel and shore-normal. Distance offshore = model y minus the model y at which the section's seabed crosses MSL (`y_msl_crossing_m`: Borth 90.6 m, Boscombe -8.0 m, Narrowneck -5.0 m, Albany -5.3 m, Bunbury 3.2 m; Cables: fitted shoreline, 3.1 m; Prattes, Mount Maunganui and Palm Beach 0). Shoreline definitions differ by reef (MSL waterline of an aerial image, wet/dry sand edge, back-of-beach line at Borth; `data/README.md`); differences below 30 m are noise. DERIVED.\n"
         "- Sections: `08_paper/data/profiles/<slug>.json`, lines: Cables crest_line, Narrowneck second_crest_line (south arm), Pratte's centreline (apex), Mount Maunganui second_crest_line, Boscombe crest_line, Borth centreline (northern reef), Palm Beach crest_line, Bunbury crest_line, Albany crest_line. Chosen as the line whose crest depth is closest to `crest_depth_msl_m` of `reefs.json`. The Cables section follows the design-frame y axis, about 17.5 deg off the shore normal (distances along the line, not shore-normal). Seabed under the reefs is interpolated except at Cables (1998 pre-construction survey); crest height and ramp slopes inherit the 3D-model assumptions (profiles/SUMMARY.md section 6). Datums: each model uses z = 0 at MSL with the conversions listed in `data/README.md` (Boscombe, Albany and Prattes depend on stated assumptions).\n"
-        "- Tide band planes from the profile JSONs (`tidal_planes_m_above_msl`); Cables +-0.4 m is half of the 0.8 m range of Blacka et al. 2013 Table 4.3, whose definition is not given in the source.\n"
+        "- Tide band planes from the profile JSONs (`tidal_planes_m_above_msl`); the Cables, Bunbury and Albany bands (`ANN_LO`/`ANN_HI`) are the predicted annual range of the WA Department of Transport / BoM *Tide Predictions by Location WA 2026* (heights above LAT; Fremantle +0.30 to +1.44 m, Bunbury +0.10 to +1.30 m, Albany +0.09 to +1.47 m), centred on MSL; three of four quarterly blocks were parsed, so they are lower bounds. They replace the earlier Cables +-0.4 m (Blacka et al. 2013 Table 4.3, definition not given) and the Bunbury/Albany MHHW-MLLW bands (0.4 and 0.6 m). Pratte's band is the NOAA great diurnal range (GT 1.654 m). Verification: `08_paper/notes/tides_check.md`.\n"
         "- Annotated C, T, G versus master table (max difference): C 0.27 m (Borth, Pratte's), T 0.32 m (Palm Beach), G 0.32 m (Palm Beach).\n")
     c2 = (
         "**Figure 2.** Size overview of the 13 surf-reef projects (in order of construction): plan length along the shore and footprint area of the traced outline, "

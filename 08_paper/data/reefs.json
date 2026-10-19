@@ -435,6 +435,22 @@
    "location": "mean of spring and neap ranges: ((MHWS+MHWN)-(MLWS+MLWN))/2 with MHWS +0.65, MHWN +0.36, MLWN -0.37, MLWS -0.66; neap range 0.73 m",
    "src_keys": "MSQ2026"
   },
+  "tide_range_type": {
+   "value": "spring range (MHWS - MLWS)",
+   "unit": "text",
+   "status": "sourced",
+   "source": [],
+   "location": "what tide_spring_range_m holds for this reef (see unit of that field)",
+   "src_keys": ""
+  },
+  "tide_source": {
+   "value": "MSQ Semidiurnal Tidal Planes 2026, Gold Coast Seaway",
+   "unit": "text",
+   "status": "sourced",
+   "source": [],
+   "location": "full citations are in the source list of tide_spring_range_m",
+   "src_keys": ""
+  },
   "swell_hs_m": {
    "value": 1.0,
    "unit": "m (typical; basis not stated)",
@@ -1019,23 +1035,42 @@
    ]
   },
   "tide_spring_range_m": {
-   "value": null,
-   "unit": "m",
-   "status": "unknown",
-   "source": [],
-   "location": "",
-   "note": "spring range not stated in the sources read; BoM Fremantle recorded extremes 1.947 m and -0.100 m above gauge zero (1987-2011), i.e. a 2.05 m extreme range (METHODS_3D s3.2), not a spring range. Tide is mixed, mainly diurnal."
+   "value": 1.14,
+   "unit": "m (predicted annual range, approx. LAT-HAT; NOT a spring range)",
+   "status": "derived",
+   "source": [
+    "Government of Western Australia, Department of Transport / Bureau of Meteorology (2026). Tide Predictions by Location, WA 2026 (heights above LAT). https://transport.wa.gov.au/getmedia/482d7b83-1a48-4220-9e2c-b07ebfcf8594/MAR_P_2026_Tide_Predictions_by_Location_WA.pdf (downloaded 2026-10-19; extremes extracted by script from 3 of 4 quarterly blocks, so they are lower bounds of the true annual extremes). Checked in 08_paper/notes/tides_check.md"
+   ],
+   "location": "Fremantle 2026 predicted extremes above LAT: +0.30 to +1.44 m -> 1.14 m (2024 edition: +0.32 to +1.38 m); field name kept for the pipeline, the quantity is the annual range; band centred on MSL (no LAT-to-MSL offset documented)",
+   "src_keys": "repo:Government of Western Australia, Department of Transport / Bureau of Meteorology (2026). Tide Predictions by Location, WA 2026 (heights above LAT). https://transport.wa.gov.au/getmedia/482d7b83-1a48-4220-9e2c-b07ebfcf8594/MAR_P_2026_Tide_Predictions_by_Location_WA.pdf (downloaded 2026-10-19; extremes extracted by script from 3 of 4 quarterly blocks, so they are lower bounds of the true annual extremes). Checked in 08_paper/notes/tides_check.md",
+   "note": "Replaces the +-0.4 m (0.8 m) band of Blacka 2013 Table 4.3 (definition not given). Micro-tidal (< 2 m), mixed, mainly diurnal. BoM recorded extremes 1.947 and -0.100 m above gauge zero (1987-2011; 2.05 m) are an all-time extreme range, not the annual range. No official MHWS/MLWS found. Lower bound (3 of 4 quarterly blocks parsed)."
   },
   "tide_mean_range_m": {
    "value": 0.8,
-   "unit": "m",
+   "unit": "m (as listed by Blacka 2013; definition not stated)",
    "status": "sourced",
    "source": [
     "Blacka, M.J., Shand, T.D., Carley, J.T. and Mariani, A. (2013) A Review of Artificial Reefs for Coastal Protection in NSW. WRL Technical Report 2012/08 (final, 11 June 2013), UNSW Water Research Laboratory, for the NSW Office of Environment and Heritage. https://doi.org/10.4225/53/58e1dc7368c7a . Read (Lior's copy in papers/; intake note 05_qa/papers_intake/P8_blacka_2013.md). Used for: plan Fig A.2 (p.93, img-26), text A.1.1 (shape, 140 x 70 m, 'crest submergence 1-2.5 m below MSL', 275 m offshore), A.1.3 (5,500 m3 of 1.5 t and 3.0 t granite), Table 4.2 (p.65, depths 3.0-6.0 m), Table 4.3 (p.67, tide range 0.8 m)."
    ],
    "location": "Table 4.3 p.67 \"tide range 0.8 m\"",
    "src_keys": "Blacka2013",
-   "note": "Used in the 3D model as LW/HW -0.4/+0.4 m (symmetry is an estimate, A7). MSL 0.773 m above gauge zero (BoM Fremantle 1992-2011)."
+   "note": "Probably understated: the 2026 Fremantle annual range is 1.14 m (tide_spring_range_m). The earlier 3D band LW/HW -0.4/+0.4 m was replaced by the annual-range band (tides_check 2026-10-19). MSL 0.773 m above gauge zero (BoM Fremantle 1992-2011)."
+  },
+  "tide_range_type": {
+   "value": "predicted annual range (approx. LAT-HAT), WA DoT 2026; not a spring range",
+   "unit": "text",
+   "status": "sourced",
+   "source": [],
+   "location": "what tide_spring_range_m holds for this reef (see unit of that field)",
+   "src_keys": ""
+  },
+  "tide_source": {
+   "value": "WA DoT / BoM Tide Predictions by Location WA 2026 (heights above LAT), Fremantle (+0.30 to +1.44 m)",
+   "unit": "text",
+   "status": "sourced",
+   "source": [],
+   "location": "full citations are in the source list of tide_spring_range_m",
+   "src_keys": ""
   },
   "swell_hs_m": {
    "value": "1-2 (summer), 1.5-2.5 (winter)",
@@ -1232,9 +1267,9 @@
   },
   "_status_counts": {
    "sourced": 20,
-   "derived": 14,
+   "derived": 15,
    "assumed": 1,
-   "unknown": 3
+   "unknown": 2
   }
  },
  {
@@ -1563,23 +1598,39 @@
   },
   "tide_spring_range_m": {
    "value": 1.65,
-   "unit": "m (great diurnal range MHHW-MLLW)",
+   "unit": "m (great diurnal range GT = MHHW-MLLW; NOT a spring range)",
    "status": "derived",
    "source": [
     "| S4 | NOAA CO-OPS (2026). *Tidal datums, station 9410840 Santa Monica, CA* (34.0083 N, 118.5 W; 11.7 km from the site), epoch 1983-2001. https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/9410840/datums.json?units=metric | MSL, MLLW, MHW, MHHW, MLW, NAVD88, LAT, HAT (m above station datum) | epoch 1983-2001; LAT/HAT from the station record | NOAA, public domain |"
    ],
-   "location": "NOAA CO-OPS 9410840 Santa Monica datums, epoch 1983-2001: MHHW +0.804, MLLW -0.849 m MSL (METHODS_3D tide levels); mixed semidiurnal tide, so spring/neap planes are not published; HAT-LAT = 2.85 m",
+   "location": "NOAA CO-OPS 9410840 Santa Monica datums, epoch 1983-2001: GT 1.654 (MHHW 2.398 - MLLW 0.745 station datum); MHHW +0.804, MLLW -0.849 m MSL (METHODS_3D tide levels); mixed semidiurnal tide, so spring/neap planes are not published; HAT-LAT = 2.85 m",
    "src_keys": "NOAA"
   },
   "tide_mean_range_m": {
    "value": 1.15,
-   "unit": "m (MHW-MLW)",
+   "unit": "m (mean range MN = MHW-MLW)",
    "status": "derived",
    "source": [
     "| S4 | NOAA CO-OPS (2026). *Tidal datums, station 9410840 Santa Monica, CA* (34.0083 N, 118.5 W; 11.7 km from the site), epoch 1983-2001. https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/9410840/datums.json?units=metric | MSL, MLLW, MHW, MHHW, MLW, NAVD88, LAT, HAT (m above station datum) | epoch 1983-2001; LAT/HAT from the station record | NOAA, public domain |"
    ],
-   "location": "MHW +0.579, MLW -0.566 m MSL",
+   "location": "NOAA MN 1.145 (MHW 2.173 - MLW 1.028 station datum); MHW +0.579, MLW -0.566 m MSL",
    "src_keys": "NOAA"
+  },
+  "tide_range_type": {
+   "value": "great diurnal range GT (MHHW - MLLW); mean = MN; not a spring range",
+   "unit": "text",
+   "status": "sourced",
+   "source": [],
+   "location": "what tide_spring_range_m holds for this reef (see unit of that field)",
+   "src_keys": ""
+  },
+  "tide_source": {
+   "value": "NOAA CO-OPS datums, station 9410840 Santa Monica (GT 1.654, MN 1.145)",
+   "unit": "text",
+   "status": "sourced",
+   "source": [],
+   "location": "full citations are in the source list of tide_spring_range_m",
+   "src_keys": ""
   },
   "swell_hs_m": {
    "value": null,
@@ -2180,6 +2231,22 @@
    "location": "mean of spring (1.75) and neap (1.09) ranges: ((MHWS+MHWN)-(MLWS+MLWN))/2, MHWN +0.53, MLWN -0.56",
    "src_keys": "LINZ"
   },
+  "tide_range_type": {
+   "value": "spring range (MHWS - MLWS)",
+   "unit": "text",
+   "status": "sourced",
+   "source": [],
+   "location": "what tide_spring_range_m holds for this reef (see unit of that field)",
+   "src_keys": ""
+  },
+  "tide_source": {
+   "value": "LINZ Standard port tidal levels 2026-27, Tauranga",
+   "unit": "text",
+   "status": "sourced",
+   "source": [],
+   "location": "full citations are in the source list of tide_spring_range_m",
+   "src_keys": ""
+  },
   "swell_hs_m": {
    "value": 1.5,
    "unit": "m (typical; basis not stated)",
@@ -2608,23 +2675,53 @@
    "note": "Datum/definition of the shoreline not stated."
   },
   "tide_spring_range_m": {
-   "value": null,
-   "unit": "m",
-   "status": "unknown",
-   "source": [],
-   "location": "",
-   "note": "not stated; only \"tide range > 3.0 m\" (Blacka Table 4.3 p.67). Macro-tidal site."
+   "value": 3.16,
+   "unit": "m (spring range MHWS - MLWS, Port Taranaki)",
+   "status": "derived",
+   "source": [
+    "Land Information New Zealand (LINZ). Standard port tidal levels, Port Taranaki, 1 Jul 2026 - 30 Jun 2027 (MHWS 3.56, MLWS 0.40 m above chart datum). https://www.linz.govt.nz/guidance/marine-information/tide-prediction-guidance/standard-port-tidal-levels (checked 2026-10-19 via search extract; host blocked from the session). Checked in 08_paper/notes/tides_check.md"
+   ],
+   "location": "Port Taranaki 2026-27: MHWS 3.56 - MLWS 0.40 m above chart datum = 3.16 m; neap 1.53 m",
+   "src_keys": "repo:Land Information New Zealand (LINZ). Standard port tidal levels, Port Taranaki, 1 Jul 2026 - 30 Jun 2027 (MHWS 3.56, MLWS 0.40 m above chart datum). https://www.linz.govt.nz/guidance/marine-information/tide-prediction-guidance/standard-port-tidal-levels (checked 2026-10-19 via search extract; host blocked from the session). Checked in 08_paper/notes/tides_check.md",
+   "note": "Macro-tidal. Port Taranaki is the nearest standard port; whether it represents Opunake exactly is unchecked. Matches the Blacka 2013 Table 4.3 entry \"tide range > 3.0 m\"."
   },
   "tide_mean_range_m": {
-   "value": ">3.0",
-   "unit": "m",
-   "status": "sourced",
+   "value": 2.35,
+   "unit": "m (mean of spring and neap range, Port Taranaki)",
+   "status": "derived",
    "source": [
-    "Blacka, M.J., Shand, T.D., Carley, J.T. and Mariani, A. (2013). A Review of Artificial Reefs for Coastal Protection in NSW. UNSW WRL Technical Report 2012/08, Tables 4.2 (printed p.65), 4.3 (p.67), 4.4 (p.69). https://doi.org/10.4225/53/58e1dc7368c7a"
+    "Land Information New Zealand (LINZ). Standard port tidal levels, Port Taranaki, 1 Jul 2026 - 30 Jun 2027 (MHWS 3.56, MLWS 0.40 m above chart datum). https://www.linz.govt.nz/guidance/marine-information/tide-prediction-guidance/standard-port-tidal-levels (checked 2026-10-19 via search extract; host blocked from the session). Checked in 08_paper/notes/tides_check.md"
    ],
-   "location": "Table 4.3 p.67",
-   "src_keys": "Blacka2013",
-   "note": "Lower bound only; definition of \"range\" not stated."
+   "location": "(spring 3.16 + neap 1.53)/2 = 2.35 m",
+   "src_keys": "repo:Land Information New Zealand (LINZ). Standard port tidal levels, Port Taranaki, 1 Jul 2026 - 30 Jun 2027 (MHWS 3.56, MLWS 0.40 m above chart datum). https://www.linz.govt.nz/guidance/marine-information/tide-prediction-guidance/standard-port-tidal-levels (checked 2026-10-19 via search extract; host blocked from the session). Checked in 08_paper/notes/tides_check.md",
+   "note": "Replaces \">3.0\" (Blacka 2013 Table 4.3), which matches the spring range, not the mean.",
+   "alternatives": [
+    {
+     "value": ">3.0",
+     "label": "Blacka 2013 Table 4.3 p.67, definition not stated (superseded)",
+     "status": "sourced",
+     "source": [
+      "Blacka, M.J., Shand, T.D., Carley, J.T. and Mariani, A. (2013). A Review of Artificial Reefs for Coastal Protection in NSW. UNSW WRL Technical Report 2012/08, Tables 4.2 (printed p.65), 4.3 (p.67), 4.4 (p.69). https://doi.org/10.4225/53/58e1dc7368c7a"
+     ],
+     "location": "Table 4.3 p.67"
+    }
+   ]
+  },
+  "tide_range_type": {
+   "value": "spring range (MHWS - MLWS), Port Taranaki",
+   "unit": "text",
+   "status": "sourced",
+   "source": [],
+   "location": "what tide_spring_range_m holds for this reef (see unit of that field)",
+   "src_keys": ""
+  },
+  "tide_source": {
+   "value": "LINZ Standard port tidal levels 2026-27, Port Taranaki (MHWS 3.56, MLWS 0.40)",
+   "unit": "text",
+   "status": "sourced",
+   "source": [],
+   "location": "full citations are in the source list of tide_spring_range_m",
+   "src_keys": ""
   },
   "swell_hs_m": {
    "value": "1.8-2.5 (design wave face)",
@@ -2792,10 +2889,10 @@
    "DailyNews2004": "The Daily News (2004-06-11). Surf reef decision has Opunake buzzing at tourism prospects. Stuff.co.nz / The Daily News (author not printed); copy at artificialreefs.org. https://artificialreefs.org/Articles/STUFF%20%20TRAVEL%20%20IN%20NEW%20ZEALAND%20-%20STORY%20%20New%20Zealand's%20leading%20news%20and%20information%20website.htm"
   },
   "_status_counts": {
-   "sourced": 22,
-   "derived": 5,
+   "sourced": 21,
+   "derived": 7,
    "assumed": 1,
-   "unknown": 10
+   "unknown": 9
   }
  },
  {
@@ -3139,6 +3236,22 @@
    ],
    "location": "MHW = (MHWS+MHWN)/2, MLW = (MLWS+MLWN)/2 from Mead et al. 2010 Table 1 levels (MHWN +0.27, MLWN -0.23 m MSL); neap range 0.50 m",
    "src_keys": "Mead2010"
+  },
+  "tide_range_type": {
+   "value": "spring range (MHWS - MLWS)",
+   "unit": "text",
+   "status": "sourced",
+   "source": [],
+   "location": "what tide_spring_range_m holds for this reef (see unit of that field)",
+   "src_keys": ""
+  },
+  "tide_source": {
+   "value": "Mead et al. 2010 Table 1 (Bournemouth gauge); Admiralty value not retrieved",
+   "unit": "text",
+   "status": "sourced",
+   "source": [],
+   "location": "full citations are in the source list of tide_spring_range_m",
+   "src_keys": ""
   },
   "swell_hs_m": {
    "value": 0.5,
@@ -3595,6 +3708,22 @@
    ],
    "location": "Table 4.3 p.68",
    "src_keys": "Blacka2013"
+  },
+  "tide_range_type": {
+   "value": "undefined \"tide range\" (Blacka 2013 Table 4.3)",
+   "unit": "text",
+   "status": "sourced",
+   "source": [],
+   "location": "what tide_spring_range_m holds for this reef (see unit of that field)",
+   "src_keys": ""
+  },
+  "tide_source": {
+   "value": "Blacka et al. 2013 Table 4.3 p.68 (approx.); no official source reached",
+   "unit": "text",
+   "status": "sourced",
+   "source": [],
+   "location": "full citations are in the source list of tide_spring_range_m",
+   "src_keys": ""
   },
   "swell_hs_m": {
    "value": "1-2.5",
@@ -4156,6 +4285,22 @@
    "location": "mean of spring 4.30 and neap 1.70 ranges: ((MHWS+MHWN)-(MLWS+MLWN))/2 with MHWN +1.06, MLWN -0.64 mODN",
    "src_keys": "SMP2"
   },
+  "tide_range_type": {
+   "value": "spring range (MHWS - MLWS)",
+   "unit": "text",
+   "status": "sourced",
+   "source": [],
+   "location": "what tide_spring_range_m holds for this reef (see unit of that field)",
+   "src_keys": ""
+  },
+  "tide_source": {
+   "value": "West of Wales SMP2 water-level table p.4C.3 (Aberystwyth)",
+   "unit": "text",
+   "status": "sourced",
+   "source": [],
+   "location": "full citations are in the source list of tide_spring_range_m",
+   "src_keys": ""
+  },
   "swell_hs_m": {
    "value": null,
    "unit": "m",
@@ -4671,6 +4816,22 @@
    "location": "mean of spring and neap ranges (neap 0.73 m)",
    "src_keys": "MSQ2026"
   },
+  "tide_range_type": {
+   "value": "spring range (MHWS - MLWS)",
+   "unit": "text",
+   "status": "sourced",
+   "source": [],
+   "location": "what tide_spring_range_m holds for this reef (see unit of that field)",
+   "src_keys": ""
+  },
+  "tide_source": {
+   "value": "MSQ Semidiurnal Tidal Planes 2026, Gold Coast Seaway",
+   "unit": "text",
+   "status": "sourced",
+   "source": [],
+   "location": "full citations are in the source list of tide_spring_range_m",
+   "src_keys": ""
+  },
   "swell_hs_m": {
    "value": null,
    "unit": "m",
@@ -5180,15 +5341,26 @@
    ]
   },
   "tide_spring_range_m": {
-   "value": 0.6,
-   "unit": "m (great diurnal range MHHW - MLLW)",
+   "value": 1.38,
+   "unit": "m (predicted annual range, approx. LAT-HAT; NOT a spring range)",
    "status": "derived",
    "source": [
-    "Government of Western Australia, Department of Transport / Bureau of Meteorology (2024). Tide Predictions by Location, WA 2024, Albany (35 02 S 117 53 E; datum of predictions LAT). Albany tide page https://transport.wa.gov.au/imarine/albany-tide.asp. https://transport.wa.gov.au/mediaFiles/marine/MAR_P_2024_Tide_Predictions_by_Location_WA.PDF"
+    "Government of Western Australia, Department of Transport / Bureau of Meteorology (2026). Tide Predictions by Location, WA 2026 (heights above LAT). https://transport.wa.gov.au/getmedia/482d7b83-1a48-4220-9e2c-b07ebfcf8594/MAR_P_2026_Tide_Predictions_by_Location_WA.pdf (downloaded 2026-10-19; extremes extracted by script from 3 of 4 quarterly blocks, so they are lower bounds of the true annual extremes). Checked in 08_paper/notes/tides_check.md"
    ],
-   "location": "MHHW +0.34, MLLW -0.26 m AHD (City statement of the crest relative to MLLW/MHHW; DoT/BoM 2024 predictions); HAT +0.66, LAT -0.74 m AHD",
-   "src_keys": "DoT2024",
-   "note": "Micro-tidal, mixed/diurnal; spring and neap planes not published on the pages read."
+   "location": "Albany 2026 predicted extremes above LAT: max 1.47, min 0.09 -> 1.38 m (2024: 1.40 m, HAT +0.66 / LAT -0.74 m AHD); field name kept for the pipeline, the quantity is the annual range",
+   "src_keys": "repo:Government of Western Australia, Department of Transport / Bureau of Meteorology (2026). Tide Predictions by Location, WA 2026 (heights above LAT). https://transport.wa.gov.au/getmedia/482d7b83-1a48-4220-9e2c-b07ebfcf8594/MAR_P_2026_Tide_Predictions_by_Location_WA.pdf (downloaded 2026-10-19; extremes extracted by script from 3 of 4 quarterly blocks, so they are lower bounds of the true annual extremes). Checked in 08_paper/notes/tides_check.md",
+   "note": "Replaces 0.6 m (MHHW +0.34 - MLLW -0.26 m AHD, City statement), which understated the range. Micro-tidal (< 2 m), mixed/diurnal; MHWS/MLWS are not published for WA ports. Lower bound (3 of 4 quarterly blocks parsed). No typical daily range was extracted.",
+   "alternatives": [
+    {
+     "value": 0.6,
+     "label": "MHHW - MLLW as stated by the City of Albany (superseded)",
+     "status": "sourced",
+     "source": [
+      "City of Albany (n.d.; page current 2026-09-24). \"Southern Ocean Surf Reef (SOSR)\" project pages, albany.wa.gov.au, including the detailed-design table (registry img-10). https://www.albany.wa.gov.au/council/projects/completed-projects/southern-ocean-surf-reef-sosr.aspx"
+     ],
+     "location": "City page: crest relative to MLLW/MHHW; MHHW +0.34, MLLW -0.26 m AHD"
+    }
+   ]
   },
   "tide_mean_range_m": {
    "value": null,
@@ -5197,6 +5369,22 @@
    "source": [],
    "location": "",
    "note": "MHW/MLW not published on the pages read (only MLLW, MHHW, LAT and highest predicted 2024 tide +0.66 m AHD)."
+  },
+  "tide_range_type": {
+   "value": "predicted annual range (approx. LAT-HAT), WA DoT 2026; not a spring range",
+   "unit": "text",
+   "status": "sourced",
+   "source": [],
+   "location": "what tide_spring_range_m holds for this reef (see unit of that field)",
+   "src_keys": ""
+  },
+  "tide_source": {
+   "value": "WA DoT / BoM Tide Predictions by Location WA 2026 (heights above LAT), Albany (+0.09 to +1.47 m)",
+   "unit": "text",
+   "status": "sourced",
+   "source": [],
+   "location": "full citations are in the source list of tide_spring_range_m",
+   "src_keys": ""
   },
   "swell_hs_m": {
    "value": null,
@@ -5560,22 +5748,53 @@
    "note": "unknown; a headland point break (rock platform at the shoreline)."
   },
   "tide_spring_range_m": {
-   "value": null,
-   "unit": "m",
-   "status": "unknown",
-   "source": [],
-   "location": "",
-   "note": "only a \"tide swing ~2.5 m\" (card R4), datum and tide class not stated."
+   "value": 2.33,
+   "unit": "m (spring range MHWS - MLWS, Burnett Heads)",
+   "status": "derived",
+   "source": [
+    "Maritime Safety Queensland (2026). Semidiurnal Tidal Planes 2026, Burnett Heads row (MHWS 2.94, MHWN 2.35, MLWN 1.20, MLWS 0.61 m above LAT); as held in 08_paper/data/profiles/_no_3d_model.json. https://www.msq.qld.gov.au/_/media/tmronline/msqinternet/msqfiles/home/tides/tidal-planes/2026-semidiurnal-tidal-planes.pdf (row not independently verified; see 08_paper/notes/tides_check.md)"
+   ],
+   "location": "MSQ 2026 Burnett Heads: MHWS 2.94 - MLWS 0.61 m above LAT = 2.33 m",
+   "src_keys": "repo:Maritime Safety Queensland (2026). Semidiurnal Tidal Planes 2026, Burnett Heads row (MHWS 2.94, MHWN 2.35, MLWN 1.20, MLWS 0.61 m above LAT); as held in 08_paper/data/profiles/_no_3d_model.json. https://www.msq.qld.gov.au/_/media/tmronline/msqinternet/msqfiles/home/tides/tidal-planes/2026-semidiurnal-tidal-planes.pdf (row not independently verified; see 08_paper/notes/tides_check.md)",
+   "note": "Meso-tidal. Replaces the unsupported \"tide swing ~2.5 m\" of the Raised Water Research card."
   },
   "tide_mean_range_m": {
-   "value": 2.5,
-   "unit": "m (approx., \"tide swing\", basis unknown)",
-   "status": "sourced",
+   "value": 1.74,
+   "unit": "m (mean of spring and neap range, Burnett Heads)",
+   "status": "derived",
    "source": [
-    "Raised Water Research (n.d.). \"Burkitts Reef\" [spot page in its artificial-reef database]. No author or date shown (the year 2026 earlier given was the access year). https://raisedwaterresearch.com/spot/artificial-reef/australia/queensland/burkitts-reef/"
+    "Maritime Safety Queensland (2026). Semidiurnal Tidal Planes 2026, Burnett Heads row (MHWS 2.94, MHWN 2.35, MLWN 1.20, MLWS 0.61 m above LAT); as held in 08_paper/data/profiles/_no_3d_model.json. https://www.msq.qld.gov.au/_/media/tmronline/msqinternet/msqfiles/home/tides/tidal-planes/2026-semidiurnal-tidal-planes.pdf (row not independently verified; see 08_paper/notes/tides_check.md)"
    ],
-   "location": "card size field (R4)",
-   "src_keys": "RWR"
+   "location": "(spring 2.33 + neap 1.15)/2 = 1.74 m; MHWN 2.35, MLWN 1.20",
+   "src_keys": "repo:Maritime Safety Queensland (2026). Semidiurnal Tidal Planes 2026, Burnett Heads row (MHWS 2.94, MHWN 2.35, MLWN 1.20, MLWS 0.61 m above LAT); as held in 08_paper/data/profiles/_no_3d_model.json. https://www.msq.qld.gov.au/_/media/tmronline/msqinternet/msqfiles/home/tides/tidal-planes/2026-semidiurnal-tidal-planes.pdf (row not independently verified; see 08_paper/notes/tides_check.md)",
+   "note": "Replaces 2.5 m (\"tide swing\", basis unknown).",
+   "alternatives": [
+    {
+     "value": 2.5,
+     "label": "\"tide swing\", Raised Water Research card R4, basis unknown (superseded)",
+     "status": "sourced",
+     "source": [
+      "Raised Water Research (n.d.). \"Burkitts Reef\" [spot page in its artificial-reef database]. No author or date shown (the year 2026 earlier given was the access year). https://raisedwaterresearch.com/spot/artificial-reef/australia/queensland/burkitts-reef/"
+     ],
+     "location": "card size field (R4)"
+    }
+   ]
+  },
+  "tide_range_type": {
+   "value": "spring range (MHWS - MLWS), Burnett Heads",
+   "unit": "text",
+   "status": "sourced",
+   "source": [],
+   "location": "what tide_spring_range_m holds for this reef (see unit of that field)",
+   "src_keys": ""
+  },
+  "tide_source": {
+   "value": "MSQ Semidiurnal Tidal Planes 2026, Burnett Heads (not independently verified)",
+   "unit": "text",
+   "status": "sourced",
+   "source": [],
+   "location": "full citations are in the source list of tide_spring_range_m",
+   "src_keys": ""
   },
   "swell_hs_m": {
    "value": "0.5-2 (wave face 2-6 ft)",
@@ -5730,10 +5949,10 @@
    "ICM": "Jackson, A. / Coastal Management (ICM) (n.d.; undated page, year 2026 earlier given was the access year). \"Building Artificial Surf Reefs: Worldwide Lessons & Applications.\" Web page of a coastal-engineering consultancy. https://www.coastalmanagement.com.au/artificial-surf-reefs"
   },
   "_status_counts": {
-   "sourced": 17,
-   "derived": 4,
+   "sourced": 16,
+   "derived": 6,
    "assumed": 0,
-   "unknown": 17
+   "unknown": 16
   }
  },
  {
@@ -5984,24 +6203,53 @@
    ]
   },
   "tide_spring_range_m": {
-   "value": 0.4,
-   "unit": "m (MHHW - MLLW; micro-tidal diurnal/mixed)",
+   "value": 1.2,
+   "unit": "m (predicted annual range, approx. LAT-HAT; NOT a spring range)",
    "status": "derived",
    "source": [
-    "| S_tide | GHD (2021). *Tidal Inundation Monitoring and Modelling Report*, Appendix B of the Southern Ports Authority Turkey Point Access Road approvals, Table 1 \"Tidal planes for Port of Bunbury\" (source cited there: Department of Defence 2018). https://www.epa.wa.gov.au/sites/default/files/PER_documentation2/App%20B%20-%20Tidal%20innudation%20report.pdf | HAT, MHHW, MLHW, MSL, MHLW, MLLW, LAT in m CD and m AHD | rounded to 0.1 m; gauge in Bunbury Port, about 3 km NE | public record |"
+    "Government of Western Australia, Department of Transport / Bureau of Meteorology (2026). Tide Predictions by Location, WA 2026 (heights above LAT). https://transport.wa.gov.au/getmedia/482d7b83-1a48-4220-9e2c-b07ebfcf8594/MAR_P_2026_Tide_Predictions_by_Location_WA.pdf (downloaded 2026-10-19; extremes extracted by script from 3 of 4 quarterly blocks, so they are lower bounds of the true annual extremes). Checked in 08_paper/notes/tides_check.md"
    ],
-   "location": "GHD 2021 Table 1, Port of Bunbury: MHHW +0.1, MLLW -0.3 m MSL; HAT +0.5, LAT -0.7 m MSL (rounded to 0.1 m)",
-   "src_keys": "GHD2021"
+   "location": "Bunbury 2026 predicted extremes above LAT: max 1.30, min 0.10 -> 1.20 m (2024: 1.24 - 0.12 = 1.12 m); GHD 2021 HAT +0.5 / LAT -0.7 m MSL (1.2 m) agrees; field name kept for the pipeline, the quantity is the annual range",
+   "src_keys": "repo:Government of Western Australia, Department of Transport / Bureau of Meteorology (2026). Tide Predictions by Location, WA 2026 (heights above LAT). https://transport.wa.gov.au/getmedia/482d7b83-1a48-4220-9e2c-b07ebfcf8594/MAR_P_2026_Tide_Predictions_by_Location_WA.pdf (downloaded 2026-10-19; extremes extracted by script from 3 of 4 quarterly blocks, so they are lower bounds of the true annual extremes). Checked in 08_paper/notes/tides_check.md",
+   "note": "Replaces 0.4 m (MHHW +0.1 - MLLW -0.3 m MSL, GHD 2021 Table 1), which understated the range (the GHD MHHW is below the typical predicted highs). Micro-tidal (< 2 m). Sample day 1 Jan 2026: LW 0.16, HW 1.09 m above LAT (daily range 0.93 m); no typical daily range was extracted. Lower bound (3 of 4 quarterly blocks parsed).",
+   "alternatives": [
+    {
+     "value": 0.4,
+     "label": "MHHW - MLLW, GHD 2021 Table 1 (superseded)",
+     "status": "derived",
+     "source": [
+      "| S_tide | GHD (2021). *Tidal Inundation Monitoring and Modelling Report*, Appendix B of the Southern Ports Authority Turkey Point Access Road approvals, Table 1 \"Tidal planes for Port of Bunbury\" (source cited there: Department of Defence 2018). https://www.epa.wa.gov.au/sites/default/files/PER_documentation2/App%20B%20-%20Tidal%20innudation%20report.pdf | HAT, MHHW, MLHW, MSL, MHLW, MLLW, LAT in m CD and m AHD | rounded to 0.1 m; gauge in Bunbury Port, about 3 km NE | public record |"
+     ],
+     "location": "MHHW +0.1, MLLW -0.3 m MSL, rounded to 0.1 m"
+    }
+   ]
   },
   "tide_mean_range_m": {
    "value": 0.25,
-   "unit": "m (MHW - MLW)",
+   "unit": "m (MHW - MLW, GHD 2021; likely understated, unverified)",
    "status": "derived",
    "source": [
     "| S_tide | GHD (2021). *Tidal Inundation Monitoring and Modelling Report*, Appendix B of the Southern Ports Authority Turkey Point Access Road approvals, Table 1 \"Tidal planes for Port of Bunbury\" (source cited there: Department of Defence 2018). https://www.epa.wa.gov.au/sites/default/files/PER_documentation2/App%20B%20-%20Tidal%20innudation%20report.pdf | HAT, MHHW, MLHW, MSL, MHLW, MLLW, LAT in m CD and m AHD | rounded to 0.1 m; gauge in Bunbury Port, about 3 km NE | public record |"
    ],
    "location": "MHLW -0.1, MLHW 0.0 m MSL: MHW = (MHHW+MLHW)/2 = +0.05, MLW = (MLLW+MHLW)/2 = -0.20",
-   "src_keys": "GHD2021"
+   "src_keys": "GHD2021",
+   "note": "tides_check 2026-10-19: GHD MHHW is below the predicted highs and a sample day has a 0.93 m range, so this 0.25 m is probably too small; not recomputed (needs a column-aware parse of the WA predictions)."
+  },
+  "tide_range_type": {
+   "value": "predicted annual range (approx. LAT-HAT), WA DoT 2026; not a spring range",
+   "unit": "text",
+   "status": "sourced",
+   "source": [],
+   "location": "what tide_spring_range_m holds for this reef (see unit of that field)",
+   "src_keys": ""
+  },
+  "tide_source": {
+   "value": "WA DoT / BoM Tide Predictions by Location WA 2026 (heights above LAT), Bunbury (+0.10 to +1.30 m)",
+   "unit": "text",
+   "status": "sourced",
+   "source": [],
+   "location": "full citations are in the source list of tide_spring_range_m",
+   "src_keys": ""
   },
   "swell_hs_m": {
    "value": null,
@@ -6378,6 +6626,22 @@
    "source": [],
    "location": "",
    "note": "not disclosed in any source found (no length, width, crest depth, volume, coordinates; no monitoring). Tides for Manzanillo (NOAA/UNAM) were not fetched."
+  },
+  "tide_range_type": {
+   "value": null,
+   "unit": "text",
+   "status": "unknown",
+   "source": [],
+   "location": "",
+   "note": "no tide value recorded"
+  },
+  "tide_source": {
+   "value": null,
+   "unit": "text",
+   "status": "unknown",
+   "source": [],
+   "location": "",
+   "note": "no tide value recorded"
   },
   "swell_hs_m": {
    "value": null,

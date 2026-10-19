@@ -12,7 +12,7 @@ profile; Hb, db = height and depth at breaking. Short source keys and full refer
 | Check | Result |
 |---|---|
 | Formulas in `wavelib.py` against the sources | Battjes breaker limits, d'Angremond and Briganti transmission (incl. bounds), Black & Andrews Eqs. 30-31 (checked on the rendered Blacka et al. 2013 p.21), Ranasinghe thresholds (Blacka p.22-23 text), Hudson, CERC (CEM form) and Hutt table: correct. Mead & Black vortex ratio: re-read in Mead (2000) printed p.115 (Eq. 6.5) and p.121 (Table 6.2): X = orthogonal seabed gradient "given as the horizontal distance to one vertical unit"; Y range 1.42-3.43. |
-| Datums and signs | All profiles in m MSL (per-reef datum links in `08_paper/data/profiles/<slug>.json`); tidal planes symmetric about MSL except Bunbury/Albany (z0 = mean of spring planes, used). Spring ranges plausible (Israel 0.40, Bunbury 0.40, Albany 0.60, Cables 0.80, Gold Coast 1.31, Pratte's 1.65, Mt Maunganui 1.75, Boscombe 1.76, Borth 4.30 m). Slope sign (rising shoreward) correct. |
+| Datums and signs | All profiles in m MSL (per-reef datum links in `08_paper/data/profiles/<slug>.json`); tidal planes symmetric about MSL (the WA annual-range band is centred on MSL; Bunbury/Albany keep their documented LAT/HAT/MHHW/MLLW planes in the profile JSON, z0 = mean of the band used). Tide ranges plausible (Israel 0.40 spring; Cables 1.14, Bunbury 1.20 and Albany 1.38 = WA DoT 2026 predicted annual range, approx. LAT-HAT, centred on MSL (ANN_LO/ANN_HI planes), NOT spring ranges; Gold Coast 1.31, Mt Maunganui 1.75, Boscombe 1.76, Borth 4.30 spring; Pratte's 1.65 great diurnal range; Opunake 3.16 and Burkitts 2.33 spring, not in the 3D set). Slope sign (rising shoreward) correct. |
 | **Bug 1 (fixed, `surf_analysis.py transform`)** | On the 1 m grid a wave could cross a steep face in one step, so the detected break had Hb/db up to 5.3 (physically impossible; 6-39 % of cases per reef had Hb/db > 0.9). The break is now located inside the last 1 m segment (solve H0 Ks(d) = gamma d). After the fix Hb/db = 0.78 (mean 0.783, max 1.23 in rare non-monotonic cells). Breaking position moves < 1 m; Hb on steep faces drops by up to ~25 % (e.g. Boscombe low tide 0.79 -> 0.73 m). |
 | **Bug 2 (fixed, `stability_analysis.py`)** | The uplift ratio U used only the pressure on the tube top (no dynamic pressure under the tube), and the Israeli depth scan scaled SIc with the SI factor instead of the SIc factor. Now both bounds are written: `uplift_fraction` (sealed base, upper bound) and `uplift_fraction_contact` (dynamic pressure reaches the base through the BD23 contact term Fc, lower bound), with `state` / `state_contact`; the contact state uses the BD23 index SIc only (SI without Fc is singular when U -> 1). |
 | Values that look odd but are real | Borth crest is ABOVE MSL (-1.09 m "depth": the coastal-defence reef dries at low water). Narrowneck model volume 13,496 m3 vs stated 70,000 m3 (the 3D model is the 2020 photo trace of the visible reef; the stated figure is the "some 70,000 m3" of Jackson 2007 via the NSW review). Pratte's crest-line ramp 1 m is a tip artefact (the representative line is the centreline). Peel speed is the same for every H at a reef (Snell invariant C/sin(alpha), see s3). |
@@ -108,14 +108,14 @@ formula is used here, within its stated scatter (R^2 0.71; Robertson et al. 2014
 | Reef | xi_b median (p10-p90) | Y median (p10-p90) | spill / plunge / surge share | Y < 1.6 share | Y outside fit range | Outcome |
 |---|---|---|---|---|---|---|
 | Palm Beach | 0.49 (0.31-0.70) | 2.01 (1.76-2.06) | 0.29 / 0.71 / 0.00 | 0.00 | 0.00 | works |
-| Cables | 0.64 (0.35-1.86) | 1.70 (1.10-2.30) | 0.16 / 0.77 / 0.07 | 0.38 | 0.28 | mixed |
-| Albany | 0.73 (0.08-2.67) | 1.65 (1.03-10.2) | 0.28 / 0.49 / 0.23 | 0.48 | 0.58 | works |
+| Cables | 0.63 (0.24-1.86) | 1.69 (1.10-2.69) | 0.19 / 0.73 / 0.08 | 0.39 | 0.34 | mixed |
+| Albany | 0.75 (0.11-2.80) | 1.64 (1.02-6.7) | 0.24 / 0.50 / 0.26 | 0.47 | 0.56 | works |
 | Narrowneck | 0.97 (0.46-2.44) | 1.36 (1.02-2.03) | 0.07 / 0.75 / 0.18 | 0.72 | 0.58 | works rarely |
 | Borth | 1.06 (0.47-2.21) | 1.39 (1.18-1.94) | 0.07 / 0.79 / 0.14 | 0.77 | 0.56 | unknown |
 | Pratte's | 1.13 (0.55-2.08) | 1.37 (1.03-2.05) | 0.02 / 0.85 / 0.13 | 0.63 | 0.58 | does not work |
 | Mt Maunganui | 1.62 (0.96-2.50) | 1.14 (1.02-1.53) | 0.04 / 0.67 / 0.29 | 0.91 | 0.87 | works rarely |
 | Boscombe | 2.00 (1.02-3.30) | 1.06 (1.02-1.20) | 0.00 / 0.50 / 0.50 | 1.00 | 0.99 | works rarely |
-| Bunbury | 3.06 (1.92-4.32) | 1.05 (0.98-1.15) | 0.00 / 0.13 / 0.87 | 1.00 | 0.98 | does not work |
+| Bunbury | 2.97 (2.09-4.88) | 1.05 (0.98-1.13) | 0.00 / 0.10 / 0.90 | 1.00 | 1.00 | does not work |
 
 Evidence layers: Boscombe surveyed surface 2011 (1:12 mean ramp, after the failure) xi_b 0.79, Y 1.44, 85 % Y < 1.6; Cables
 original 1999 design xi_b 0.70, Y 1.94; Mt Maunganui 2013 DEM xi_b 2.82, Y 1.04.
@@ -188,23 +188,23 @@ under spring ranges 0-4.3 m.
 |---|---|---|---|---|---|---|
 | Palm Beach (1.31) | 1.0 | -0.93 to +0.27 | 0.69 | 0.69 | 1.00 | 1 |
 | Narrowneck (1.31) | 1.5 | -0.93 to +0.55 | 0.94 | 0.34 | 0.06 | 0 |
-| Cables (0.80) | 1.5 | -0.45 to +0.45 | 1.00 | 1.00 | 1.00 | 1 |
+| Cables (1.14 annual) | 1.5 | -0.62 to +0.62 | 1.00 | 1.00 | 1.00 | 1 |
 | Mt Maunganui (1.75) | 1.0 | -1.21 to -0.23 | 0.41 | 0.25 | 0.00 | 0 |
 | Mt Maunganui | 1.5 | -1.21 to +0.49 | 0.79 | 0.26 | 0.81 | 1 |
 | Pratte's (1.65) | 1.2 | -1.24 to -0.14 | 0.43 | 0.00 | 0.00 | 0 |
 | Boscombe (1.76) | 0.5 | -1.51 to +0.03 | 0.57 | 0.00 | 0.00 | 0 |
-| Albany (0.60) | 0.5 | -0.79 to -0.05 | 0.36 | 0.35 | 0.39 | 0 |
+| Albany (1.38 annual) | 0.5 | -0.79 to -0.05 | 0.47 | 0.14 | 0.39 | 0 |
 
 Reef-level summary (`results_reef_summary.csv`, mean over H0 0.5-2 m, best default line): surfable fraction local -> Israeli
-tide: Palm Beach 0.70 -> 0.75; Cables 0.65 -> 0.72; Albany 0.59 -> 0.59; Borth 0.27 -> 0.20; Mt Maunganui 0.16 -> 0.20;
-Narrowneck 0.15 -> 0.04; Pratte's 0.04 -> 0.05; Boscombe 0 -> 0; Bunbury 0 -> 0. Range of depth-limited crest wave over a
-spring tide (0.78 x range): Israel 0.31 m; Gold Coast 1.02 m; Boscombe 1.37 m; Borth 3.35 m.
+tide: Palm Beach 0.70 -> 0.75; Cables 0.63 -> 0.72; Albany 0.62 -> 0.59; Borth 0.27 -> 0.20; Mt Maunganui 0.16 -> 0.20;
+Narrowneck 0.15 -> 0.04; Pratte's 0.04 -> 0.05; Boscombe 0 -> 0; Bunbury 0.01 -> 0. Range of depth-limited crest wave over a
+spring tide (0.78 x range): Israel 0.31 m; Cables 0.89 m; Bunbury 0.94 m; Gold Coast 1.02 m; Albany 1.08 m; Boscombe 1.37 m; Borth 3.35 m (the WA values use the annual range).
 Tide-range sweep (synthetic Haifa reef, 1:12 ramp, crest 1.0 m, mean of H0 0.6-1.5 m): surfable fraction 1.00 (no tide), 0.87
 (0.2-0.4 m), 0.81 (1.3 m), 0.72 (2.5 m), 0.64 (4.3 m) at T 7 s; 1.00, 0.98, 0.88, 0.78, 0.68 at T 10 s. A crest depth tuned to
 each range recovers part of the loss (0.74-0.79 at 4.3 m). 1:8 ramps stay <= 0.25 at every range (too hollow).
 
 **Reading.** A small tide does not raise the AVERAGE surfable time much (Israeli tide minus local tide, 92 reef x line x H cases:
-mean +0.01, range -0.30 to +0.61, 75 % of cases unchanged); it makes the outcome a function of wave height only: for a given swell the reef works all day or not at all.
+mean +0.01, range -0.31 to +0.61, 66 % of cases change by less than 0.05); it makes the outcome a function of wave height only: for a given swell the reef works all day or not at all.
 Large-tide sites gain a low-tide window for small swells and lose high tides; the small tide removes both. The load range on
 the crest over a tide is 3-10x smaller in Israel than at the built reefs.
 
@@ -260,16 +260,16 @@ likely (peak near 2); SZW = natural surf-zone width from the seabed-only profile
 |---|---|---|---|---|---|
 | Boscombe | 0.05 / 0.48 / 0.47 | 0.39 | 84 (Eq. 31 with D_tot = 1-3 B: 11-35) | 5.5 / 3.7 | +3.4 m at 0 m ODN (95 % CI +1.3..+5.3), BACI 316 surveys; inside nourishment signals |
 | Palm Beach | 0.29 / 0.52 / 0.75 | 0.43 | 114 | 4.8 / 2.0 | contour offsets <= 2 m at 1-3 m (chart, LOW) |
-| Cables | 0.36 / 0.46 / 0.56 | 0.44 | 102 (Eq. 31: 14-41) | 3.8 / 2.1 | lee high pre-dates the reef (1995); bed change 1995-2002 +0.03 m (SE 0.04); beach bulge +26 m (2001) shrinking to +10 m (2012) |
+| Cables | 0.32 / 0.46 / 0.60 | 0.44 | 102 (Eq. 31: 14-41) | 3.8 / 2.1 | lee high pre-dates the reef (1995); bed change 1995-2002 +0.03 m (SE 0.04); beach bulge +26 m (2001) shrinking to +10 m (2012) |
 | Borth | 0.05 / 0.05 / 0.43 | 0.38 (1.22 both mounds) | 89 | 2.2 / 1.4 | 0 m contour bulge +30 m (+12..+48), single 2022 LiDAR, no baseline |
 | Pratte's | 0.80 (cap) | 0.63 | 40 | 2.8 / 1.3 | contours +13 m (+9..+18) offshore in 5 months, no control, datum +-10 m |
 | Narrowneck | 0.42 / 0.64 / 0.68 | 0.39 | 104 | 3.3 / 1.3 | not testable (continuous nourishment); literature disputed |
 | Mt Maunganui | 0.44 / 0.66 / 0.80 | 0.23 | 79 | 2.1 / 1.1 | not testable here |
-| Albany | 0.33 / 0.41 / 0.52 | 0.78 | 77 | 2.4 / 1.6 | not testable here |
-| Bunbury | 0.55 / 0.64 / 0.67 | 0.34 | 11 | 1.5 / 0.7 | removed in days |
+| Albany | 0.20 / 0.41 / 0.63 | 0.78 | 77 | 2.4 / 1.6 | not testable here |
+| Bunbury | 0.46 / 0.64 / 0.80 | 0.34 | 11 | 1.5 / 0.7 | removed in days |
 
-Range over all H, T, tides: median Kt 0.24-0.80 for the submerged reefs (Boscombe 0.24, Palm Beach 0.35, Albany 0.37, Narrowneck
-0.41, Cables 0.48, Bunbury 0.54, Mt Maunganui 0.66, Pratte's 0.80); Borth 0.05 (crest emergent at most tides). H0 at which the natural SZW puts the reef at the Ranasinghe peak (Sa/SZW = 2):
+Range over all H, T, tides: median Kt 0.24-0.80 for the submerged reefs (Boscombe 0.24, Palm Beach 0.35, Albany 0.36, Narrowneck
+0.41, Cables 0.47, Bunbury 0.57, Mt Maunganui 0.66, Pratte's 0.80); Borth 0.05 (crest emergent at most tides). H0 at which the natural SZW puts the reef at the Ranasinghe peak (Sa/SZW = 2):
 0.7-2.1 m; at the erosion threshold (Sa/SZW = 1): 1.5-4.5 m (storms push every reef into the "erosion likely" zone).
 
 **Reading.** Both predictors expect a salient at every reef (B/S 0.23-0.78; Sa/SZW >= 1.5 at typical waves). Where it can be

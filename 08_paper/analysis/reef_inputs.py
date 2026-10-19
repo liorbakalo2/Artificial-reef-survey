@@ -96,6 +96,10 @@ def tide_model(planes, kind):
         As = (p['MHWS'] - p['MLWS']) / 2
         An = (p['MHWN'] - p['MLWN']) / 2 if 'MHWN' in p and 'MLWN' in p else 0.5 * As
         basis = 'MHWS/MLWS and MHWN/MLWN'
+    elif 'ANN_HI' in p and 'ANN_LO' in p:
+        As = (p['ANN_HI'] - p['ANN_LO']) / 2
+        An = 0.5 * As
+        basis = 'WA DoT 2026 predicted annual range (approx. LAT-HAT, centred on MSL) as the spring-amplitude proxy; neap = 0.5 spring (ASSUMPTION)'
     elif 'MHHW' in p and 'MLLW' in p:
         As = (p['MHHW'] - p['MLLW']) / 2
         if 'MHW' in p and 'MLW' in p:
@@ -105,24 +109,20 @@ def tide_model(planes, kind):
         else:
             An = 0.5 * As
             basis = 'MHHW/MLLW (spring proxy); neap = 0.5 spring (ASSUMPTION)'
-    elif 'HWt' in p and 'LWt' in p:
-        As = (p['HWt'] - p['LWt']) / 2
-        An = 0.5 * As
-        basis = 'typical HW/LW (0.8 m mean range, reefs.json tide_mean_range_m) as spring proxy; neap = 0.5 spring (ASSUMPTION)'
     else:
         raise ValueError('no tidal planes')
-    hi = max(p.get(k, -9) for k in ('HAT', 'MHWS', 'MHHW', 'HWt'))
-    lo = min(p.get(k, 9) for k in ('LAT', 'MLWS', 'MLLW', 'LWt'))
-    sh = p.get('MHWS', p.get('MHHW', p.get('HWt')))
-    sl = p.get('MLWS', p.get('MLLW', p.get('LWt')))
+    hi = max(p.get(k, -9) for k in ('HAT', 'MHWS', 'ANN_HI', 'MHHW'))
+    lo = min(p.get(k, 9) for k in ('LAT', 'MLWS', 'ANN_LO', 'MLLW'))
+    sh = p.get('MHWS', p.get('ANN_HI', p.get('MHHW')))
+    sl = p.get('MLWS', p.get('ANN_LO', p.get('MLLW')))
     z0 = (sh + sl) / 2   # mean of the spring high/low planes (not exactly 0 at Bunbury and Albany)
     return dict(A_spring=round(As, 3), A_neap=round(An, 3), z0=round(z0, 3), basis=basis, kind=kind, extreme_hi=hi, extreme_lo=lo)
 
 
 def tide_levels(planes):
-    """Low / mid / high water levels for the scenario runs: MLWS (or MLLW / LWt), MSL, MHWS (or MHHW / HWt)."""
-    lo = planes.get('MLWS', planes.get('MLLW', planes.get('LWt')))
-    hi = planes.get('MHWS', planes.get('MHHW', planes.get('HWt')))
+    """Low / mid / high water levels for the scenario runs: MLWS (or ANN_LO / MLLW), MSL, MHWS (or ANN_HI / MHHW)."""
+    lo = planes.get('MLWS', planes.get('ANN_LO', planes.get('MLLW')))
+    hi = planes.get('MHWS', planes.get('ANN_HI', planes.get('MHHW')))
     return dict(low=lo, mid=0.0, high=hi)
 
 

@@ -84,7 +84,9 @@
   "MSL": 0.0,
   "MLHW": 0.0,
   "MHHW": 0.1,
-  "HAT": 0.5
+  "HAT": 0.5,
+  "ANN_LO": -0.6,
+  "ANN_HI": 0.6
  },
  "confidence_3d": "medium",
  "lines": {
@@ -3279,5 +3281,6 @@
     "x_max_m": 5.75
    }
   ]
- }
+ },
+ "tidal_planes_note": "ANN_LO/ANN_HI = predicted annual range (approx. LAT-HAT) of the WA DoT/BoM 2026 predictions (Albany 1.38, Bunbury 1.20, Fremantle 1.14 m), centred on MSL (no LAT-to-MSL offset applied); not a spring range (08_paper/notes/tides_check.md). Replaces the Cables LWt/HWt +-0.4 m of Blacka 2013 Table 4.3."
 }
