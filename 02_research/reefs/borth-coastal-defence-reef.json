@@ -350,6 +350,13 @@
       "url": "https://www.tide-forecast.com/locations/Haifa/tides/latest",
       "accessed": "2026-09-24",
       "supports": "Haifa tidal range of tens of centimetres (the same page is R13 in the Pratte's card, which quotes ~0.3-0.4 m). LOCATION: live tide page, access day only."
+    },
+    {
+      "id": "R22",
+      "citation": "Reef rating (A surf quality, B safety and longevity, C sediment / storm protection), scores 1-5, approved by Lior 2026-10-19. Table: 08_paper/notes/rating_final.md; evidence per reef: 08_paper/notes/rating_evidence.md (this review, repo-internal files).",
+      "url": "",
+      "accessed": "2026-10-19",
+      "supports": "Scores A/B/C and reason for this reef"
     }
   ],
   "blocked_sources": [
@@ -368,5 +375,14 @@
   ],
   "hero_recommendation": "https://s0.geograph.org.uk/geophotos/02/57/55/2575564_e576dfb2.jpg",
   "videos_rejected": [],
-  "verdict_reason": "Verdict 'mixed' was assigned by the research agent that wrote this card (verified_on 2026-09-24), not by Lior; no Lior ruling on this verdict is recorded. Basis: coastal protection worked in the first months (two high tides did not flood properties, Dec 2011) [R2][R3]; surfing performance is undocumented: 'unknown (insufficient monitoring)' in Blacka et al. Table 4.1 [R14] and a 'proposed' site in Stormrider [R7]. Re-checked in the 2026-10-10 source audit; unchanged."
+  "verdict_reason": "Verdict 'mixed' was assigned by the research agent that wrote this card (verified_on 2026-09-24), not by Lior; no Lior ruling on this verdict is recorded. Basis: coastal protection worked in the first months (two high tides did not flood properties, Dec 2011) [R2][R3]; surfing performance is undocumented: 'unknown (insufficient monitoring)' in Blacka et al. Table 4.1 [R14] and a 'proposed' site in Stormrider [R7]. Re-checked in the 2026-10-10 source audit; unchanged.",
+  "rating": {
+    "rank": 6,
+    "A": "?",
+    "B": "4",
+    "C": "3*",
+    "reason": "rock, part of coastal defence; no surf evidence [R22]",
+    "scale": "1-5, ?=no evidence, *=provisional",
+    "source": "this review, Lior-approved 2026-10-19"
+  }
 }

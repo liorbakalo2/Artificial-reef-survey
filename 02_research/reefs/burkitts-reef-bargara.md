@@ -179,3 +179,7 @@ See 05_qa/source_audit/cards_citations_2026-10-10.md. lat/lon = traced platform 
 - Duration: RWR two days (8 hours) vs ABC/Swellnet 'within weeks' [R4 vs R1].
 - Dive depths 2-8 m 'along the headland' [R22].
 - Not found (dead ends): 02_research/dead_ends/burkitts-reef-bargara.json.
+
+## Added 2026-10-19 (paper review: rating, tide check)
+- **tide_check**: Burkitts (reference port: Burnett Heads): Maritime Safety Queensland 2026 planes give MHWS 2.94 m, MLWS 0.61 m (above LAT), so spring range 2.33 m and mean range 1.74 m. This replaces the earlier '2.5 m tide swing' (Raised Water Research, basis unknown). The planes come from this project's own copy (08_paper/data/profiles/_no_3d_model.json); the MSQ row itself was not read directly. [R23]
+- **rating** (A surf / B safety+longevity / C sediment): 3 / 4 / ?; rock, reported working; thin evidence [R24]

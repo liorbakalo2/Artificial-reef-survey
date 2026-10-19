@@ -289,6 +289,20 @@
       "url": "https://www.bundabergregion.org/?p=5180",
       "accessed": "2026-10-10",
       "supports": "dive depths along the headland (same headland as the surf reef)"
+    },
+    {
+      "id": "R23",
+      "citation": "Maritime Safety Queensland. Semidiurnal Tidal Planes 2026, Burnett Heads (height above LAT).",
+      "url": "https://www.msq.qld.gov.au/_/media/tmronline/msqinternet/msqfiles/home/tides/tidal-planes/2026-semidiurnal-tidal-planes.pdf",
+      "accessed": "2026-10-19",
+      "supports": "Spring range 2.33 m and mean range 1.74 m at Burnett Heads (Burnett Heads row not read directly: PDF host returned 403)"
+    },
+    {
+      "id": "R24",
+      "citation": "Reef rating (A surf quality, B safety and longevity, C sediment / storm protection), scores 1-5, approved by Lior 2026-10-19. Table: 08_paper/notes/rating_final.md; evidence per reef: 08_paper/notes/rating_evidence.md (this review, repo-internal files).",
+      "url": "",
+      "accessed": "2026-10-19",
+      "supports": "Scores A/B/C and reason for this reef"
     }
   ],
   "blocked_sources": [
@@ -364,5 +378,15 @@
     "duration_conflict": "RWR: two days (8 hours) in Feb 1997; ABC/Swellnet: 'within weeks' - kept side by side",
     "dive_depth": "2-8 m along the headland (R22): same headland as the surf reef per this source",
     "not_found": "QImagery 1990s aerials (token needed), Pitt (2005) 'Redgard the Reef Renovator', Redgard (2006) pers. comm. (maps of phases 1-3); see 02_research/dead_ends/burkitts-reef-bargara.json"
+  },
+  "tide_check": "Burkitts (reference port: Burnett Heads): Maritime Safety Queensland 2026 planes give MHWS 2.94 m, MLWS 0.61 m (above LAT), so spring range 2.33 m and mean range 1.74 m. This replaces the earlier '2.5 m tide swing' (Raised Water Research, basis unknown). The planes come from this project's own copy (08_paper/data/profiles/_no_3d_model.json); the MSQ row itself was not read directly. [R23]",
+  "rating": {
+    "rank": 3,
+    "A": "3",
+    "B": "4",
+    "C": "?",
+    "reason": "rock, reported working; thin evidence [R24]",
+    "scale": "1-5, ?=no evidence, *=provisional",
+    "source": "this review, Lior-approved 2026-10-19"
   }
 }

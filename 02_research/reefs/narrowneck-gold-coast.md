@@ -190,3 +190,6 @@ See 05_qa/source_audit/cards_citations_2026-10-10.md. Tags/labels added: size (1
 - **financed_by**: No private or state/federal co-funding was found in any of the sources listed in References (a negative search result of this card, not a sourced statement).
 - **relevance_to_israel**: "If correct (INFERENCE of this card's author from Lior's hypothesis [R18]; no Haifa tide-range figure is sourced here, so this is unsourced), a Haifa reef would face a smaller version of Narrowneck's tide-datum problem."
 - **gaps**: tags added: AUD $2.3M [R3], ~AUD $2.1M [R5], Lior's $2.5M [R19][R20]; footprints [R9], [R8]; designers [R11], [R3]; hypothesis [R18].
+
+## Added 2026-10-19 (paper review: rating, tide check)
+- **rating** (A surf / B safety+longevity / C sediment): 2 / 3 / 2; geobags; rarely surfable; nourishment confounds [R31]

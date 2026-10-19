@@ -281,6 +281,7 @@
     financed: function (r) { return stripRefs(r.financed_by).toLowerCase(); },
     verdict: function (r) { return (V_BY_KEY[r.verdict] || V_BY_KEY['n-a']).order; },
     refs: function (r) { return (r.references || []).length; },
+    rating: function (r) { return r.rating && r.rating.rank ? r.rating.rank : null; },
     loc: function (r) { var L = r.location || {}; return L.status === 'none' ? 2 : L.status === 'approximate' ? 1 : 0; }
   };
   function current() {
@@ -385,13 +386,25 @@
   var COLS = [
     { k: 'name', t: 'Name' }, { k: 'country', t: 'Country' }, { k: 'year', t: 'Year' }, { k: 'type', t: 'Type' },
     { k: 'size', t: 'Size' }, { k: 'cost', t: 'Cost (~US$)' }, { k: 'financed', t: 'Financed by' },
-    { k: 'loc', t: 'Location' }, { k: 'verdict', t: 'Verdict' }, { k: 'refs', t: '# refs' }
+    { k: 'loc', t: 'Location' }, { k: 'verdict', t: 'Verdict' }, { k: 'rating', t: 'Rating A/B/C' }, { k: 'refs', t: '# refs' }
   ];
+  /* 2026-10-19 (paper review): reef rating A/B/C from the card key `rating` (source: 08_paper/notes/rating_final.md, evidence rating_evidence.md). */
+  function RATING_INFO() {
+    return infoHTML('Reef rating: criteria and scale',
+      '<span class="pp"><b>Reef rating A / B / C</b> (this review, approved by Lior 2026-10-19). Scores 1 to 5: 1 very poor, 2 poor, 3 mixed or neutral (includes "no measurable effect"), 4 good, 5 very good. ? = no usable evidence; * = provisional (a signal exists but cannot be attributed to the reef).</span>' +
+      '<span class="pp"><b>A</b> surf quality. <b>B</b> safety and longevity (material survived, injuries, removal). <b>C</b> sediment and storm protection. Ranking is mainly by A, with B as tie-break; C is not weighed equally.</span>' +
+      '<span class="pp">Evidence: the repo notes <i>rating_final.md</i> and <i>rating_evidence.md</i> (08_paper/notes), built from the reef cards and the papers cited there. Much of the surf evidence is journalism, designer reports or anecdote, so treat the scores as an informed ranking, not a measurement.</span>');
+  }
+  function ratingCell(r) {
+    var q = r.rating; if (!q) return '<span class="muted">—</span>';
+    return '<span title="' + esc(stripRefs(q.reason)) + '">' + esc(q.A) + ' / ' + esc(q.B) + ' / ' + esc(q.C) + '</span>';
+  }
   function renderTable(list) {
     var head = '<thead><tr>' + COLS.map(function (c) {
       var s = state.sort === c.k ? (state.dir > 0 ? 'ascending' : 'descending') : 'none';
       return '<th scope="col" aria-sort="' + s + '"><button type="button" data-sort="' + c.k + '">' + esc(c.t) + '</button></th>';
     }).join('') + '</tr></thead>';
+    head = head.replace('Rating A/B/C</button>', 'Rating A/B/C</button>' + RATING_INFO());
     var body = '<tbody>' + list.map(function (r) {
       var cost = r.usd
         ? '<span title="' + esc(r.usd.basis + ' — card: ' + r.usd.source_text) + '">' + esc(r.usd.label) + '</span>'
@@ -406,6 +419,7 @@
         '<td class="wide">' + esc(short(stripRefs(r.financed_by), 140)) + plainRefs(uniqRefs(r.financed_by)) + '</td>' +
         '<td class="loc">' + locLinks(r, true) + '</td>' +
         '<td>' + badge(r) + '</td>' +
+        '<td class="num">' + ratingCell(r) + '</td>' +
         '<td class="num">' + (r.references || []).length + '</td>' +
       '</tr>';
     }).join('') + '</tbody>';
@@ -446,7 +460,9 @@
     var rows = [
       ['Place', r.place], ['Country', r.country], ['Year', r.year], ['Type', r.type], ['Purpose', r.purpose],
       ['Size', r.size], ['Cost', r.cost], ['Cost (approx. USD)', r.cost_usd_approx], ['Financed by', r.financed_by],
-      ['Designer', r.designer], ['Contractor', r.contractor], ['Status now', r.status_now], ['Location', { html: locFact(r) }]
+      ['Designer', r.designer], ['Contractor', r.contractor], ['Status now', r.status_now], ['Location', { html: locFact(r) }],
+      ['Tide range (checked 2026-10-19)', r.tide_check],
+      ['Rating A / B / C', r.rating ? { html: '<b>' + esc(r.rating.A) + ' / ' + esc(r.rating.B) + ' / ' + esc(r.rating.C) + '</b>' + (r.rating.rank ? ' (rank ' + r.rating.rank + ' of 12)' : '') + ' ' + RATING_INFO() + '<br>' + refify(r.rating.reason, r, 'link') + ' <span class="muted">A surf, B safety and longevity, C sediment / storm protection; 1 to 5.</span>' } : null]
     ];
     return '<table class="qf"><tbody>' + rows.filter(function (x) { return x[1] != null && x[1] !== ''; }).map(function (x) {
       if (x[1] && x[1].html) return '<tr><th scope="row">' + esc(x[0]) + '</th><td>' + x[1].html + '</td></tr>';

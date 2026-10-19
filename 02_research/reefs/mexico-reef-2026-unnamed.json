@@ -184,6 +184,13 @@
       "url": "https://xala.com/community/ ; https://xala.com/real-estate/ ; https://xala.com/press/six-senses-xala/",
       "accessed": "2026-10-10",
       "supports": "location context: ~5 miles of coastline, ~65 miles south of Puerto Vallarta, 10 min from the Costalegre airport, 3,000 acres; 'new coastal protection reef to create a consistently great wave to surf'. No reef dimensions or coordinates"
+    },
+    {
+      "id": "R14",
+      "citation": "Reef rating (A surf quality, B safety and longevity, C sediment / storm protection), scores 1-5, approved by Lior 2026-10-19. Table: 08_paper/notes/rating_final.md; evidence per reef: 08_paper/notes/rating_evidence.md (this review, repo-internal files).",
+      "url": "",
+      "accessed": "2026-10-19",
+      "supports": "Scores A/B/C and reason for this reef"
     }
   ],
   "blocked_sources": [
@@ -214,5 +221,14 @@
     "result": "No plan, coordinates or size found with full network access. RWR post re-fetched (announcement only); RWR site search, xala.com pages, THR, WSCC bio, DHI site, SEMARNAT search (gaceta host unreachable), Esri imagery: nothing. Details: 02_research/dead_ends/mexico-reef-2026-unnamed.json and 07_scale/shapes/mexico-reef-2026-unnamed/FEASIBILITY.md section 6.",
     "location_context": "Xala: ~5 miles (8 km) of Pacific coast near the Xola-Paraman lagoon, Tomatlan/Costalegre; Chalacatepec airstrip ~19.719,-105.231 (the area pin); lagoon mouth ~19.731,-105.291 (by eye from Esri imagery). The reef position on that coast is unknown.",
     "designer_note": "WSCC 2026 bio: Mortensen designed 'three additional surfing reefs globally, most recent in the Americas' (Xala not named)."
+  },
+  "rating": {
+    "rank": null,
+    "A": "?",
+    "B": "?",
+    "C": "?",
+    "reason": "not enough information [R14]",
+    "scale": "1-5, ?=no evidence, *=provisional",
+    "source": "this review, Lior-approved 2026-10-19"
   }
 }

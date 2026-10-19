@@ -313,6 +313,13 @@
       "url": "(file in papers/, supplied by Lior; repository URL not recorded)",
       "accessed": "2026-10-13",
       "supports": "volume 4,300 m3 SFC for Kovalum (2010, Kerala, India); cost column 1,640,321 (currency header not checked); read 2026-10-13 from the PDF in papers/"
+    },
+    {
+      "id": "R16",
+      "citation": "Reef rating (A surf quality, B safety and longevity, C sediment / storm protection), scores 1-5, approved by Lior 2026-10-19. Table: 08_paper/notes/rating_final.md; evidence per reef: 08_paper/notes/rating_evidence.md (this review, repo-internal files).",
+      "url": "",
+      "accessed": "2026-10-19",
+      "supports": "Scores A/B/C and reason for this reef"
     }
   ],
   "blocked_sources": [
@@ -330,5 +337,14 @@
     "Relationship between the currently-marketed \"Artificial Off Shore Coral Reef\" tourism attraction and the 2009-10 ASR structure - unconfirmed [R9]",
     "Position (citations audit 2026-10-10): lat/lon changed from 8.4004, 76.9787 (Kovalam town [R7]) to 8.387313, 76.975188, the mean of the traced default outline vertices (07_scale/shapes/kovalam-reef-india/shape.json geo.polygons_latlon; fitted-camera trace from one oblique photo on the Esri 2011-02-28 frame, LOW confidence, stated position uncertainty +-20 m for the camera, larger for the outline); the old point was 1507 m away. The page's Google Maps link uses this value."
   ],
-  "videos_rejected": []
+  "videos_rejected": [],
+  "rating": {
+    "rank": 8,
+    "A": "2",
+    "B": "1",
+    "C": "3*",
+    "reason": "geobags damaged; surf disputed [R16]",
+    "scale": "1-5, ?=no evidence, *=provisional",
+    "source": "this review, Lior-approved 2026-10-19"
+  }
 }

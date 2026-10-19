@@ -358,6 +358,13 @@
       "url": "https://www.linz.govt.nz/guidance/marine-information/tide-prediction-guidance/standard-port-tidal-levels",
       "accessed": "2026-10-05",
       "supports": "Tauranga above CD: HAT 2.20, MHWS 1.96, MHWN 1.66, MLWN 0.57, MLWS 0.21, LAT -0.03 m (MHWS..MLWS 2026-27, HAT/LAT 2000-2018); Moturiki readme: chart datum 4.103 m below BM BC84. LOCATION: tables on the web pages"
+    },
+    {
+      "id": "R23",
+      "citation": "Reef rating (A surf quality, B safety and longevity, C sediment / storm protection), scores 1-5, approved by Lior 2026-10-19. Table: 08_paper/notes/rating_final.md; evidence per reef: 08_paper/notes/rating_evidence.md (this review, repo-internal files).",
+      "url": "",
+      "accessed": "2026-10-19",
+      "supports": "Scores A/B/C and reason for this reef"
     }
   ],
   "blocked_sources": [
@@ -375,5 +382,14 @@
   ],
   "hero_recommendation": "https://raisedwaterresearch.com/wp-content/uploads/2019/11/Mount-Reef-Multibean-2007.jpg",
   "videos_rejected": [],
-  "verdict_reason": "Verdict 'failed' was assigned by the research agent that wrote this card (verified_on 2026-09-24), not by Lior; no Lior ruling on it is recorded. Basis: built to 2,800 m3 of a 5,000-6,500 m3 design [R2][R17]; Mead & Borrero themselves judge it 'a failure in terms of surfing' [R17]; consent lapsed 2010 and the large containers were removed in 2014 [R3][R4][R6]; rip-current/scour concerns [R2][R3][R4]. Re-checked 2026-10-10; unchanged."
+  "verdict_reason": "Verdict 'failed' was assigned by the research agent that wrote this card (verified_on 2026-09-24), not by Lior; no Lior ruling on it is recorded. Basis: built to 2,800 m3 of a 5,000-6,500 m3 design [R2][R17]; Mead & Borrero themselves judge it 'a failure in terms of surfing' [R17]; consent lapsed 2010 and the large containers were removed in 2014 [R3][R4][R6]; rip-current/scour concerns [R2][R3][R4]. Re-checked 2026-10-10; unchanged.",
+  "rating": {
+    "rank": 9,
+    "A": "2",
+    "B": "1",
+    "C": "1",
+    "reason": "geobags failed; council: more rips [R23]",
+    "scale": "1-5, ?=no evidence, *=provisional",
+    "source": "this review, Lior-approved 2026-10-19"
+  }
 }

@@ -489,6 +489,20 @@
       "accessed": "2026-10-13",
       "supports": "Lead only (request W8): attribute table (searched as text, no GIS reader) lists WA Department of Transport surveys 'Middleton Bay & Oyster Harbour' (multibeam; laser scanner), 'Middleton Bay' (single beam) and 'King George Sound' (single beam, RTK), Data Access https://maps.slip.wa.gov.au/Marine/app/ ; years and extents not read. Nothing used for values.",
       "origin": "Lior's uploads 2026-10-11 and live pages, read by agent Albany uploads 2026-10-13"
+    },
+    {
+      "id": "R34",
+      "citation": "WA Department of Transport / Bureau of Meteorology. Tide Predictions by Location WA 2026, Albany (heights above LAT); 2024 edition read as a cross-check. Extremes extracted by script from 3 of 4 quarterly blocks, so they are lower bounds of the true extremes.",
+      "url": "https://transport.wa.gov.au:443/getmedia/482d7b83-1a48-4220-9e2c-b07ebfcf8594/MAR_P_2026_Tide_Predictions_by_Location_WA.pdf",
+      "accessed": "2026-10-19",
+      "supports": "Predicted annual extremes (not MHWS-MLWS) used for the corrected tide-range text; method and limits in 08_paper/notes/tides_check.md"
+    },
+    {
+      "id": "R35",
+      "citation": "Reef rating (A surf quality, B safety and longevity, C sediment / storm protection), scores 1-5, approved by Lior 2026-10-19. Table: 08_paper/notes/rating_final.md; evidence per reef: 08_paper/notes/rating_evidence.md (this review, repo-internal files).",
+      "url": "",
+      "accessed": "2026-10-19",
+      "supports": "Scores A/B/C and reason for this reef"
     }
   ],
   "blocked_sources": [
@@ -506,5 +520,15 @@
     "2026-10-13: funding split conflict (City page: Commonwealth 4.75 M / WA 5 M; WA Government statement and Raised Water Research: WA 4.75 M / Commonwealth 5 M) not resolved."
   ],
   "hero_recommendation": "https://live-production.wcms.abc-cdn.net.au/1927a3b21137e3775326b744d308276e?impolicy=wcms_crop_resize&cropH=2827&cropW=4240&xPos=0&yPos=3&width=862&height=575",
-  "videos_rejected": []
+  "videos_rejected": [],
+  "tide_check": "Albany: WA DoT / BoM 2026 predictions (datum LAT) give annual predicted extremes of 0.09 to 1.47 m, an annual predicted range of about 1.4 m (2024 edition: 0.12 to 1.40 m). The 0.6 m (MHHW-MLLW) used earlier in this review is too small. This is the predicted annual range, not a spring range (MHWS/MLWS not published on the pages read). [R34]",
+  "rating": {
+    "rank": 1,
+    "A": "5",
+    "B": "2",
+    "C": "?",
+    "reason": "best wave; injury reports, 18 rocks moved Feb 2026; too new for sediment data [R35]",
+    "scale": "1-5, ?=no evidence, *=provisional",
+    "source": "this review, Lior-approved 2026-10-19"
+  }
 }

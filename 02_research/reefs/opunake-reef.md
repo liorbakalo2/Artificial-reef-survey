@@ -192,3 +192,7 @@ R18. Taranaki Regional Council (2009). Opunake Artificial Reef Monitoring Progra
 R19. The Daily News (2004-06-11). Surf reef decision has Opunake buzzing at tourism prospects. Stuff.co.nz / The Daily News (author not printed); archived copy https://artificialreefs.org/Articles/STUFF%20%20TRAVEL%20%20IN%20NEW%20ZEALAND%20-%20STORY%20%20New%20Zealand's%20leading%20news%20and%20information%20website.htm . Accessed 2026-10-13. Supports: 2004 concept (bags 1.5-2 m high, 'around 90m long and 20m wide', slight hook), council decision to fund NZ$1.1 million.
 
 R20. Toitu Te Whenua Land Information New Zealand. NZGD49 to NZGD2000 distortion grid nz_linz_nzgd2kgrid0005 (0.2 m). https://cdn.proj.org/nz_linz_nzgd2kgrid0005.tif . Accessed 2026-10-13. Supports: datum conversion of the consent co-ordinates (07_scale/shapes/opunake-reef/scripts/build_consent_georef.py).
+
+## Added 2026-10-19 (paper review: rating, tide check)
+- **tide_check**: Opunake (reference port: Port Taranaki, not checked for suitability): LINZ standard-port levels 2026-27 give MHWS 3.56 m and MLWS 0.40 m above chart datum, so spring range 3.16 m, neap range 1.53 m, mean range 2.35 m. The earlier mean '>3.0 m' (Blacka 2013 Table 4.3) matches the spring range, not the mean. Values taken from a search extract of the LINZ page (host blocked from the session). [R21]
+- **rating** (A surf / B safety+longevity / C sediment): 1 / 1 / ?; no wave; bags failed [R22]

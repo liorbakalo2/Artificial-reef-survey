@@ -151,3 +151,6 @@ lat/lon checked against the reef's shape/HANDOFF position; see gaps (last item) 
 
 ## Network pass 2026-10-10 (shape agent)
 No plan, coordinates or dimensions found with full network access (RWR post, xala.com, Hollywood Reporter, WSCC bio, DHI, SEMARNAT search, Esri imagery). Context only: Xala has about 5 miles (8 km) of coast near the Xola-Paraman lagoon, ~65 miles south of Puerto Vallarta and 10 min from the Costalegre airport [R13]. Dead ends: 02_research/dead_ends/mexico-reef-2026-unnamed.json.
+
+## Added 2026-10-19 (paper review: rating, tide check)
+- **rating** (A surf / B safety+longevity / C sediment): ? / ? / ?; not enough information [R14]

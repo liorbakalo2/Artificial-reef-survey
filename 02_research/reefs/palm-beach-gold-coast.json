@@ -371,6 +371,13 @@
       "url": "https://icce-ojs-tamu.tdl.org/icce/article/view/12921",
       "accessed": "2026-10-05",
       "supports": "stable structure, no significant movement or settlement; basalt/greenstone rock; crest 1.5 m below MSL. LOCATION: abstract page only"
+    },
+    {
+      "id": "R25",
+      "citation": "Reef rating (A surf quality, B safety and longevity, C sediment / storm protection), scores 1-5, approved by Lior 2026-10-19. Table: 08_paper/notes/rating_final.md; evidence per reef: 08_paper/notes/rating_evidence.md (this review, repo-internal files).",
+      "url": "",
+      "accessed": "2026-10-19",
+      "supports": "Scores A/B/C and reason for this reef"
     }
   ],
   "blocked_sources": [
@@ -393,5 +400,14 @@
   ],
   "hero_recommendation": "https://www.crucollective.com.au/wp-content/uploads/2019/10/Palm-Beach-Artificial-Reef-Completion.jpg",
   "videos_rejected": [],
-  "verdict_reason": "Verdict 'partly worked' was assigned by the research agent that wrote this card (verified_on 2026-09-24, enriched 2026-10-10), not by Lior; no Lior ruling on it is recorded. Basis: protection side reported positive (about 550,000 m3 of sand retained in two years, ABC 2022 [R9]; stable structure [R24]); surf side only partly satisfactory: a narrow, fast-changing tidal window and 'alarmingly shallow' first impressions [R15], rated a 'modest' improvement [R18]; no systematic surf or ecological monitoring found. Re-checked 2026-10-10; unchanged."
+  "verdict_reason": "Verdict 'partly worked' was assigned by the research agent that wrote this card (verified_on 2026-09-24, enriched 2026-10-10), not by Lior; no Lior ruling on it is recorded. Basis: protection side reported positive (about 550,000 m3 of sand retained in two years, ABC 2022 [R9]; stable structure [R24]); surf side only partly satisfactory: a narrow, fast-changing tidal window and 'alarmingly shallow' first impressions [R15], rated a 'modest' improvement [R18]; no systematic surf or ecological monitoring found. Re-checked 2026-10-10; unchanged.",
+  "rating": {
+    "rank": 4,
+    "A": "3",
+    "B": "4",
+    "C": "3*",
+    "reason": "rock, intact; inconsistent wave (Lior: \"not consistent at all\"); nourishment confounds shoreline [R25]",
+    "scale": "1-5, ?=no evidence, *=provisional",
+    "source": "this review, Lior-approved 2026-10-19"
+  }
 }

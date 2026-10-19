@@ -293,6 +293,20 @@
         "url": "https://www.bundabergregion.org/?p=5180",
         "accessed": "2026-10-10",
         "supports": "dive depths along the headland (same headland as the surf reef)"
+      },
+      {
+        "id": "R23",
+        "citation": "Maritime Safety Queensland. Semidiurnal Tidal Planes 2026, Burnett Heads (height above LAT).",
+        "url": "https://www.msq.qld.gov.au/_/media/tmronline/msqinternet/msqfiles/home/tides/tidal-planes/2026-semidiurnal-tidal-planes.pdf",
+        "accessed": "2026-10-19",
+        "supports": "Spring range 2.33 m and mean range 1.74 m at Burnett Heads (Burnett Heads row not read directly: PDF host returned 403)"
+      },
+      {
+        "id": "R24",
+        "citation": "Reef rating (A surf quality, B safety and longevity, C sediment / storm protection), scores 1-5, approved by Lior 2026-10-19. Table: 08_paper/notes/rating_final.md; evidence per reef: 08_paper/notes/rating_evidence.md (this review, repo-internal files).",
+        "accessed": "2026-10-19",
+        "supports": "Scores A/B/C and reason for this reef",
+        "url": ""
       }
     ],
     "gaps": [
@@ -314,6 +328,16 @@
       "duration_conflict": "RWR: two days (8 hours) in Feb 1997; ABC/Swellnet: 'within weeks' - kept side by side",
       "dive_depth": "2-8 m along the headland (R22): same headland as the surf reef per this source",
       "not_found": "QImagery 1990s aerials (token needed), Pitt (2005) 'Redgard the Reef Renovator', Redgard (2006) pers. comm. (maps of phases 1-3); see 02_research/dead_ends/burkitts-reef-bargara.json"
+    },
+    "tide_check": "Burkitts (reference port: Burnett Heads): Maritime Safety Queensland 2026 planes give MHWS 2.94 m, MLWS 0.61 m (above LAT), so spring range 2.33 m and mean range 1.74 m. This replaces the earlier '2.5 m tide swing' (Raised Water Research, basis unknown). The planes come from this project's own copy (08_paper/data/profiles/_no_3d_model.json); the MSQ row itself was not read directly. [R23]",
+    "rating": {
+      "rank": 3,
+      "A": "3",
+      "B": "4",
+      "C": "?",
+      "reason": "rock, reported working; thin evidence [R24]",
+      "scale": "1-5, ?=no evidence, *=provisional",
+      "source": "this review, Lior-approved 2026-10-19"
     },
     "year_short": "1997",
     "sort_year": 1997,
@@ -1007,6 +1031,20 @@
         "supports": "Position of the reef (traced original design plan fitted to the Nov 1999 soundings: 91 % of rock soundings inside, rotation 9.7 deg, +-2 m; centre -32.015648, 115.748452), measured pre-construction seabed (1998), surveyed rock surface and volume (Nov 1999, Feb 2002), distance 254-263 m to the 0 m AHD line. Used through the 3D model: 07_scale/shapes/cables-reef-wa/3d/METHODS_3D.md sections 2, 3.2, 3.4 and 4; VERIFY.md. Official data set; accuracy variable, no warranty."
       },
       {
+        "id": "R23",
+        "citation": "WA Department of Transport / Bureau of Meteorology. Tide Predictions by Location WA 2026, Fremantle (heights above LAT); 2024 edition read as a cross-check. Extremes extracted by script from 3 of 4 quarterly blocks, so they are lower bounds of the true extremes.",
+        "url": "https://transport.wa.gov.au:443/getmedia/482d7b83-1a48-4220-9e2c-b07ebfcf8594/MAR_P_2026_Tide_Predictions_by_Location_WA.pdf",
+        "accessed": "2026-10-19",
+        "supports": "Predicted annual extremes (not MHWS-MLWS) used for the corrected tide-range text; method and limits in 08_paper/notes/tides_check.md"
+      },
+      {
+        "id": "R24",
+        "citation": "Reef rating (A surf quality, B safety and longevity, C sediment / storm protection), scores 1-5, approved by Lior 2026-10-19. Table: 08_paper/notes/rating_final.md; evidence per reef: 08_paper/notes/rating_evidence.md (this review, repo-internal files).",
+        "accessed": "2026-10-19",
+        "supports": "Scores A/B/C and reason for this reef",
+        "url": ""
+      },
+      {
         "id": "S1",
         "citation": "Pattiaratchi, C. \"Design Studies for an Artificial Surfing Reef: Cable Station, Western Australia.\" Centre for Water Research, University of Western Australia, ref. ED1483CP (undated conference/report paper, c.1999).",
         "url": "http://joas.free.fr/studies/bei/g2s/reefdesign.pdf",
@@ -1033,6 +1071,16 @@
       "Sources disagree (recorded 2026-10-10): year 1999 vs 1998 (Mead & Borrero 2011 [R17]; WA Government statement [R20]); volume 3,500 / 5,000 / 5,500 m3 [R1][R17][R18]; crest 1-3 m vs 1.0-2.5 m below MSL [R2][R18]; RL datum of the Lyons 1992 design plan ambiguous by 0.78 m [R18][R21]",
       "Position (updated 2026-10-10, page agent): lat/lon = -32.0156, 115.7485, the georeferenced centre of the traced original-plan outline (centre -32.015648, 115.748452; anchor -32.015644, 115.748462). The outline was moved and rotated only, to fit the DoT WA single-beam soundings of 22 Nov 1999 (91 % of the rock soundings inside, +-2 m) [R22], and checked on five Esri World Imagery captures (07_scale/shapes/cables-reef-wa/VERIFY.md R1; METHODS_3D.md section 3.2). It replaces the earlier -32.01575, 115.748417 taken from the Mondo.surf surf-spot listing (a commercial listing, not a survey), which lies about 12 m from it, and the generic -32.0, 115.74 before that. The page's Google Maps link uses the traced centre."
     ],
+    "tide_check": "Cables (Fremantle predictions): WA DoT / BoM 2026 (datum LAT) give annual predicted extremes of 0.30 to 1.44 m, an annual predicted range of at least 1.1 m (2024 edition: 0.32 to 1.38 m). The +/-0.4 m band used earlier in this review (Blacka 2013 Table 4.3, definition not given) is too small. No official MHWS/MLWS or mean range found. [R23]",
+    "rating": {
+      "rank": 2,
+      "A": "3",
+      "B": "4",
+      "C": "3",
+      "reason": "rock, intact; surf-day claims conflict [R24]",
+      "scale": "1-5, ?=no evidence, *=provisional",
+      "source": "this review, Lior-approved 2026-10-19"
+    },
     "year_short": "1999",
     "sort_year": 1999,
     "cost_short": "AUD $2 million (~US$1.3-1.4 million)",
@@ -3146,6 +3194,13 @@
         "url": "https://wayback.maptiles.arcgis.com/arcgis/rest/services/World_Imagery/WMTS/1.0.0/default028mm/MapServer",
         "accessed": "2026-10-06",
         "supports": "traced container field 6,239 m2, 7 polygons, scale 0.263665 m/px at zoom 19; centroid -27.986629, 153.434052. A project result, not a source statement. Private research copy; Esri terms"
+      },
+      {
+        "id": "R31",
+        "citation": "Reef rating (A surf quality, B safety and longevity, C sediment / storm protection), scores 1-5, approved by Lior 2026-10-19. Table: 08_paper/notes/rating_final.md; evidence per reef: 08_paper/notes/rating_evidence.md (this review, repo-internal files).",
+        "accessed": "2026-10-19",
+        "supports": "Scores A/B/C and reason for this reef",
+        "url": ""
       }
     ],
     "gaps": [
@@ -3160,6 +3215,15 @@
       "Source-audit 2026-10-10: lat/lon changed from (-27.98639, 153.42972), a Wikipedia point for the suburb/beach about 420 m west of the reef, to (-27.986629, 153.434052), the centroid of the project's traced container field on the 2020-08-08 image [R30]; a project result (+-15 m). Also not confirmed: Black & Mead (2001) record (not opened, paywalled); Jackson et al. (2007) journal page numbers (67-79 from a citing paper); DOI of Jackson et al. (2012); authors of R2, R5, R6, R7, R14 articles beyond the bylines shown. R17-R21 are project notes, not citable sources."
     ],
     "verdict_reason": "Verdict 'mixed' was assigned by the research agent that wrote this card (verified_on 2026-09-24, enriched 2026-10-10), not by Lior; no Lior ruling on it is recorded. Basis: the structure survives after more than 25 years and was renewed in 2018 [R2][R9][R14], and an independent monitoring record exists [R4][R7]; but the surf function is weak (crest changed for safety, surfing use declined) [R2][R5], the shoreline salient is disputed (20-50 m claimed vs a likely misreading, Blacka p.98-100 [R23]) and bags were damaged by anchors [R11][R14]. Re-checked 2026-10-10; unchanged.",
+    "rating": {
+      "rank": 5,
+      "A": "2",
+      "B": "3",
+      "C": "2",
+      "reason": "geobags; rarely surfable; nourishment confounds [R31]",
+      "scale": "1-5, ?=no evidence, *=provisional",
+      "source": "this review, Lior-approved 2026-10-19"
+    },
     "year_short": "1999–2000",
     "sort_year": 1999,
     "cost_short": "AUD $2.3 million (~USD $1.5M)",
@@ -5184,7 +5248,7 @@
     "design_as_planned": "The original 1997 CEQA filing by Surfrider Foundation (via the LA Dept. of Parks & Recreation) described '10-20 large geo-textile fabric bags containing approx. 5,000 cubic yards of sand' [R8]. As engineered by Skelly Engineering, the built design called for a V-shaped (delta/chevron) reef with arms at roughly 45 degrees to the predominant swell, meant to focus and peel incoming waves like a natural point break, cresting close to the low-tide waterline for consistent breaking [R4]. The goal was purely restoring a lost surfing amenity at the Grand Avenue break, not beach nourishment or ecological habitat creation [R4][R1].",
     "as_built_vs_design": "Construction proceeded in two funded phases instead of one: 110 bags in fall 2000 (using the initial $300,000 Chevron payment), then ~90 more bags in spring 2001 once the Coastal Conservancy added $200,000-250,000, for roughly 200 bags total [R1][R7]. Even after that expansion, the built reef was far smaller than the 1997 proposal's ~5,000 yd3 (~3,800 m3) target: built volume is reported at only ~1,400-1,600 m3 [R2][R4] — under half the size first proposed, and by Surfrider's own later accounting roughly one-seventh the volume of Mount Maunganui and one-tenth to one-thirtieth the volume of Narrowneck [R7]. Individual bags were also markedly smaller (~8 m3 each) than Narrowneck's containers (140-320 m3 each) [R2]. Chad Nelsen (Surfrider): 'we probably should have said $300,000 is not enough' [R7]. SOURCES DISAGREE on the Phase 2 date: Blacka et al. (2013, p.117) date the 90-bag extension in 2000 [R19]; the card has spring 2001 [R1][R7]. RESOLVED 2026-10-10 for 2001: Borrero & Nelsen (2003) p.3 give the second installation on 23-24 April 2001, 90 bags [R28]. Blacka Table A.11 also: after Phase 2 apex 0.9 m below MLLW and the crest then dropped 1.5 m in a year [R19].",
     "outcome": "Wikipedia states the reef 'had very little effect on the surfing conditions at Dockweiler Beach and ... no measurable effect on the shoreline morphology' [R1][R2]. Surfline's 2008 feature: over 'eight plus years, Pratte's Reef was as useless as useless gets' and 'it never produced a consistently surfable wave' [R7]. Diver surveys found bags had moved, sunk, and been buried by sand, with the black polypropylene material visibly deteriorating — 'largely disintegrated' within about two years [R4][R2]. No coastal-protection or ecological benefit is reported in any of the sources listed in References (negative search result of this card, not a sourced statement). The reef was removed over two phases (fall 2008, fall 2010), the first-ever removal of a purpose-built artificial surfing reef [R3][R6][R7][R9][R10].",
-    "why_worked_or_failed": "Undersized for its budget and site: a $300,000-$550,000 construction budget bought a reef roughly 1/7 the size of Mount Maunganui's and 1/10-1/30 the size of Narrowneck's [R7]. Crest-depth mismatch: on big swells the crest was too deep to trigger breaking, so waves broke outside the reef [R1][R7]. Pre-existing degraded beach: the Chevron groin had already straightened/steepened the beach and buried the original Grand Avenue break in trapped sand, conditions a small mitigation reef could not reverse [R7]. Material/structural failure: sand-filled fabric bags resting on a sandy, mobile seabed with no rigid foundation settled, sank, and were buried, and the polypropylene fabric deteriorated within roughly two years [R4][R2]. Insufficient pre-construction monitoring: Nelsen said more monitoring of sand bars and beach conditions beforehand 'would have told us the reef was too small before we even put it in' [R7].",
+    "why_worked_or_failed": "Undersized for its budget and site: a $300,000-$550,000 construction budget bought a reef roughly 1/7 the size of Mount Maunganui's and 1/10-1/30 the size of Narrowneck's [R7]. Crest-depth mismatch: on big swells the crest was too deep to trigger breaking, so waves broke outside the reef [R1][R7]. Pre-existing degraded beach: the Chevron groin had already straightened/steepened the beach and buried the original Grand Avenue break in trapped sand, conditions a small mitigation reef could not reverse [R7]. Material/structural failure: sand-filled fabric bags resting on a sandy, mobile seabed with no rigid foundation settled, sank, and were buried, and the polypropylene fabric deteriorated within roughly two years [R4][R2]. Insufficient pre-construction monitoring: Nelsen said more monitoring of sand bars and beach conditions beforehand 'would have told us the reef was too small before we even put it in' [R7]. Surfer and local comments on a YouTube video (2026, evidence grade D, anecdotal) agree that it rarely or never produced a rideable wave: too small, a steep approach that gave swells no time to build, swell shadow from Catalina Island and the land mass, and a V instead of a triangle [R33].",
     "unexpected_results": "No fishing-pressure or ecological side effects are reported for Pratte's Reef in any source found, unlike Narrowneck (Gold Coast), whose geotextile containers were colonized by macro-algae, benthos and pelagic fish and became popular for local (spear-)fishing, diving and snorkeling, though also flagged as vulnerable to vessel/anchor damage as a design risk [R17]. The project's most consequential outcome may have been legal/political: the 1984 mitigation condition Tom Pratte secured is credited by Surfrider as the first case in which the California Coastal Commission formally recognized a surf break as a protectable coastal recreational resource, a precedent Surfrider says later helped protect Trestles from development [R7]. Surfrider itself updated its institutional policy on artificial reefs after this project, moving toward protecting existing surf breaks rather than promising to recreate lost ones: 'I don't think we should ever trade a surf spot for the promise of building something else' (Chad Nelsen) [R7]. No litigation was found in any source listed in References (negative search result of this card, not a sourced statement).",
     "could_be_better": "Surfrider's Chad Nelsen (2008 Surfline retrospective): should have told Chevron up front that $300,000 was not enough to build a working reef; more monitoring of sand bars and beach conditions before construction would have revealed the reef was undersized before it was built; more broadly, mitigation itself is often 'a false promise', and protecting existing surf breaks is preferable to engineering replacements after the fact [R7]. Named Surfline commenters (2008): depth/tide design was wrong ('Andrew': should have been 'nearly dry on a negative tide to be legit', not 8 feet deep at zero tide); distance from shore was wrong, though commenters disagreed on direction ('Randy Wright': 'simply too far away from the shore'; Dr. Jose Borrero, quoted elsewhere: 'too small and too close to shore'); cruder/cheaper materials might have worked as well ('prattes is a joke': rocks or 'smashed up cars'); lack of surfer input in the engineering process ('evan') [R7][R4].",
     "relevance_to_israel": "Tidal range is the single most transferable engineering lesson: Pratte's Reef's crest depth was wrong for the local tide swing (too deep to break big swells; ~8 ft/2.4 m deep even at zero/low tide per a Surfrider-sourced figure) [R7]. Santa Monica Bay has a mean tidal range of ~1.4-1.7 m [R12], versus Haifa's ~0.3-0.4 m [R13], consistent with the Mediterranean's generally small tides [R11] — a crest depth calibrated for Haifa's ~0.3-0.4 m swing is a much smaller, more predictable engineering target than one spanning ~1.5 m, supporting Lior's thesis that Israel's small tidal range is a structural advantage for reef stability [R15]. Budget-driven undersizing (Nelsen: '$300,000 is not enough' [R7]) is, in this card author's INFERENCE (not a sourced statement), a transferable governance/funding risk, not a site-specific one, relevant to any small pilot reef Israel might build on a limited budget. Material degradation (UV/wave abrasion of polypropylene bags within ~2 years; the 'largely disintegrated within about two years' finding is the diver-survey report in the outcome field [R4][R2]) is a warning for any low-cost geotextile design proposed for the Israeli coast, including Lior's own 'cheap & light materials... for fast deployment and removal' sketch [R15]. Israel has no directly comparable built ASR yet — its only confirmed built geotextile project is the Ashkelon Geotube, a shore-protection structure, not a surf reef [R14]. Tide levels (NOAA CO-OPS Santa Monica 9410840, epoch 1983-2001, relative to MSL): MHHW +0.804, MLLW -0.849, HAT +1.382, LAT -1.469 m, i.e. MHHW - MLLW = 1.653 m [R30]; this is the sourced replacement for the live tide-forecast figure [R12]. Haifa's 0.3-0.4 m [R13] is a web tide-table figure, not a primary source.",
@@ -5271,6 +5335,66 @@
         "stance": "negative",
         "origin": "via Gemini survey, verified 2026-09-25",
         "ref_id": "R7"
+      },
+      {
+        "who": "@johnlong1100",
+        "role": "Worked at the adjacent power plant 1975-82 and 1988-2002 (YouTube comment)",
+        "quote_or_summary": "\"The sand bag reef never produced a surfable wave. I was there 365 days a year and never saw one.\" It sat where only a wind swell could reach it: \"The south swells wouldn't reach it because of Catalina Island blocking the swell ... The northwest swells didn't make it either\".",
+        "outlet": "YouTube comments, video DK7cqXDzLpM (grade D, user comments, retrieved 2026-10-19 via Lior)",
+        "date": "2025-26 (about 7-8 months before 2026-10-19)",
+        "url": "https://www.youtube.com/watch?v=DK7cqXDzLpM",
+        "stance": "negative",
+        "ref_id": "R33"
+      },
+      {
+        "who": "@spencerparker4691",
+        "role": "Surfer (YouTube comment)",
+        "quote_or_summary": "\"my buddies and I surfed Prattes reef on a couple of occasions when it actually broke. It was really tide sensitive and wave height sensitive. It was never going to handle legitimate overhead swell ... The wave came from deep water, hit the shallow reef quickly, then instantly went into deep water again ... it would mush out and disappear. It was barely surfable.\" \"The reef was shaped like a V instead of a triangle\".",
+        "outlet": "YouTube comments, video DK7cqXDzLpM (grade D, user comments, retrieved 2026-10-19 via Lior)",
+        "date": "2025-26 (about 7-8 months before 2026-10-19)",
+        "url": "https://www.youtube.com/watch?v=DK7cqXDzLpM",
+        "stance": "negative",
+        "ref_id": "R33"
+      },
+      {
+        "who": "@krokus1972",
+        "role": "Geologist (YouTube comment)",
+        "quote_or_summary": "\"it did nothing. A major letdown.\" \"The approach of shore at that location is too steep. The swells had no time to build before they encountered the tiny reef. Resulting in a tiny close out wave.\"",
+        "outlet": "YouTube comments, video DK7cqXDzLpM (grade D, user comments, retrieved 2026-10-19 via Lior)",
+        "date": "2025-26 (about 7-8 months before 2026-10-19)",
+        "url": "https://www.youtube.com/watch?v=DK7cqXDzLpM",
+        "stance": "negative",
+        "ref_id": "R33"
+      },
+      {
+        "who": "@camerongieda",
+        "role": "Helped with survey work, USC, 1990s (YouTube comment)",
+        "quote_or_summary": "\"We surfed over it a few times, but it was never big enough to hold any decent sized surf. The only thing it was good for was attracting lobster\".",
+        "outlet": "YouTube comments, video DK7cqXDzLpM (grade D, user comments, retrieved 2026-10-19 via Lior)",
+        "date": "2025-26 (about 7-8 months before 2026-10-19)",
+        "url": "https://www.youtube.com/watch?v=DK7cqXDzLpM",
+        "stance": "negative",
+        "ref_id": "R33"
+      },
+      {
+        "who": "@feedbackart",
+        "role": "Witness to the removal (YouTube comment)",
+        "quote_or_summary": "\"I saw them pull the bags out. The polymer bags were still intact.\" (If true, the failure was the wave, not the material; one anonymous comment.)",
+        "outlet": "YouTube comments, video DK7cqXDzLpM (grade D, user comments, retrieved 2026-10-19 via Lior)",
+        "date": "2025-26 (about 7-8 months before 2026-10-19)",
+        "url": "https://www.youtube.com/watch?v=DK7cqXDzLpM",
+        "stance": "neutral",
+        "ref_id": "R33"
+      },
+      {
+        "who": "@RonMiks-k6h, @TheTactical001, @kirbyharness9696, @BananaPistachio",
+        "role": "Other commenters (YouTube)",
+        "quote_or_summary": "Poor design and siting (\"the V-shape reef, use of sand bags and poor selection for reef placement ... Bummed nothing ever broke\"); \"the use of sand bags was a joke you need hard structure like boulders\"; \"never produced anything\"; \"never saw it break other than once when a big swell came through\".",
+        "outlet": "YouTube comments, video DK7cqXDzLpM (grade D, user comments, retrieved 2026-10-19 via Lior)",
+        "date": "2025-26 (about 7-8 months before 2026-10-19)",
+        "url": "https://www.youtube.com/watch?v=DK7cqXDzLpM",
+        "stance": "negative",
+        "ref_id": "R33"
       }
     ],
     "images": [
@@ -5636,6 +5760,27 @@
         "supports": "MSL - MLLW = 0.849 m (Los Angeles 0.861 m); MHHW +0.804, HAT +1.382, LAT -1.469 m rel. MSL (values recomputed by the project; the station-page URL is the standard CO-OPS address, the project accessed the metadata API). LOCATION: datums table"
       },
       {
+        "id": "R31",
+        "citation": "NOAA CO-OPS. Datums for station 9410840 Santa Monica, CA, metric (epoch 1983-2001).",
+        "url": "https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/9410840/datums.json?units=metric",
+        "accessed": "2026-10-19",
+        "supports": "Great diurnal range 1.654 m (MHHW 2.398 - MLLW 0.745) and mean range 1.145 m"
+      },
+      {
+        "id": "R32",
+        "citation": "Reef rating (A surf quality, B safety and longevity, C sediment / storm protection), scores 1-5, approved by Lior 2026-10-19. Table: 08_paper/notes/rating_final.md; evidence per reef: 08_paper/notes/rating_evidence.md (this review, repo-internal files).",
+        "accessed": "2026-10-19",
+        "supports": "Scores A/B/C and reason for this reef",
+        "url": ""
+      },
+      {
+        "id": "R33",
+        "citation": "YouTube comments on video DK7cqXDzLpM about Pratte's Reef (about 7-8 months before 2026-10-19). Quoted excerpts copied by Lior on 2026-10-19. Evidence grade D (anecdotal user comments): surfer testimony only, never measurement. Notes: 08_paper/notes/youtube_comments/prattes_DK7cqXDzLpM.md",
+        "url": "https://www.youtube.com/watch?v=DK7cqXDzLpM",
+        "accessed": "2026-10-19",
+        "supports": "Surfer and local testimony: no or barely surfable wave, swell shadowing, too small, V shape, bags intact at removal"
+      },
+      {
         "id": "S1",
         "citation": "Lior's reference file 03_images/from_lior/goldcoast_pptx/image26.png (4-panel satellite comparison graphic, third-party, sourced from raisedwaterresearch.com per its own caption); already listed in the card's lior_images array.",
         "accessed": "2026-09-25",
@@ -5688,6 +5833,16 @@
       "Source-audit 2026-10-10: the 'UV/wave abrasion of polypropylene bags within ~2 years' sentence in relevance_to_israel carries no [R#] tag; RESOLVED 2026-10-10 in the citations audit: the claim is the diver-survey finding already tagged in the outcome field [R4][R2], which now also stands beside the sentence."
     ],
     "verdict_reason": "Verdict 'failed' was assigned by the research agent that wrote this card (verified_on 2026-09-24, enriched 2026-10-10), not by Lior; no Lior ruling on it is recorded. Basis: the reef was removed in 2008 and 2010 (first removal of a purpose-built surf reef) [R3][R6]; surfers described unspectacular closeouts [R7]; the monitors report the reef gave only a few months of better waves after Phase II and the crest then eroded [R28, p.16, Fig 8]. Re-checked 2026-10-10; unchanged.",
+    "tide_check": "Pratte's (NOAA Santa Monica 9410840, 11.7 km away): great diurnal range (MHHW-MLLW) 1.654 m; mean range 1.145 m. The earlier value 1.65 m was labelled 'spring' in this review; it is the great diurnal range. No value change. [R31]",
+    "rating": {
+      "rank": 10,
+      "A": "1",
+      "B": "1",
+      "C": "2",
+      "reason": "too small; never produced a reliable wave; removed (A = 1 by Lior; surfer comments, grade D) [R32]",
+      "scale": "1-5, ?=no evidence, *=provisional",
+      "source": "this review, Lior-approved 2026-10-19"
+    },
     "year_short": "2000–2001",
     "sort_year": 2000,
     "cost_short": "$300,000 (~US$850K)",
@@ -5733,7 +5888,7 @@
       },
       {
         "title": "Why it worked / failed",
-        "html_or_text": "Undersized for its budget and site: a $300,000-$550,000 construction budget bought a reef roughly 1/7 the size of Mount Maunganui's and 1/10-1/30 the size of Narrowneck's [R7]. Crest-depth mismatch: on big swells the crest was too deep to trigger breaking, so waves broke outside the reef [R1][R7]. Pre-existing degraded beach: the Chevron groin had already straightened/steepened the beach and buried the original Grand Avenue break in trapped sand, conditions a small mitigation reef could not reverse [R7]. Material/structural failure: sand-filled fabric bags resting on a sandy, mobile seabed with no rigid foundation settled, sank, and were buried, and the polypropylene fabric deteriorated within roughly two years [R4][R2]. Insufficient pre-construction monitoring: Nelsen said more monitoring of sand bars and beach conditions beforehand 'would have told us the reef was too small before we even put it in' [R7]."
+        "html_or_text": "Undersized for its budget and site: a $300,000-$550,000 construction budget bought a reef roughly 1/7 the size of Mount Maunganui's and 1/10-1/30 the size of Narrowneck's [R7]. Crest-depth mismatch: on big swells the crest was too deep to trigger breaking, so waves broke outside the reef [R1][R7]. Pre-existing degraded beach: the Chevron groin had already straightened/steepened the beach and buried the original Grand Avenue break in trapped sand, conditions a small mitigation reef could not reverse [R7]. Material/structural failure: sand-filled fabric bags resting on a sandy, mobile seabed with no rigid foundation settled, sank, and were buried, and the polypropylene fabric deteriorated within roughly two years [R4][R2]. Insufficient pre-construction monitoring: Nelsen said more monitoring of sand bars and beach conditions beforehand 'would have told us the reef was too small before we even put it in' [R7]. Surfer and local comments on a YouTube video (2026, evidence grade D, anecdotal) agree that it rarely or never produced a rideable wave: too small, a steep approach that gave swells no time to build, swell shadow from Catalina Island and the land mass, and a V instead of a triangle [R33]."
       },
       {
         "title": "Unexpected results",
@@ -6973,6 +7128,13 @@
         "supports": "Tauranga above CD: HAT 2.20, MHWS 1.96, MHWN 1.66, MLWN 0.57, MLWS 0.21, LAT -0.03 m (MHWS..MLWS 2026-27, HAT/LAT 2000-2018); Moturiki readme: chart datum 4.103 m below BM BC84. LOCATION: tables on the web pages"
       },
       {
+        "id": "R23",
+        "citation": "Reef rating (A surf quality, B safety and longevity, C sediment / storm protection), scores 1-5, approved by Lior 2026-10-19. Table: 08_paper/notes/rating_final.md; evidence per reef: 08_paper/notes/rating_evidence.md (this review, repo-internal files).",
+        "accessed": "2026-10-19",
+        "supports": "Scores A/B/C and reason for this reef",
+        "url": ""
+      },
+      {
         "id": "S1",
         "citation": "Focus Resource Management Group, for Bay of Plenty Regional Council (2014). \"Mount Maunganui Reef - Assessment of Management Options.\" BoPRC technical report, 49 pp., citing Mead (2011) and Scarfe (2008) throughout.",
         "url": "https://www.boprc.govt.nz/media/558385/mount-maunganui-reef-assessment-of-management-options.pdf",
@@ -7015,6 +7177,15 @@
       "Source-audit 2026-10-10: not confirmed - authors/dates of the web pages R2, R3, R4, R7, R11, R12; page numbers of Mead & Black 1999 (not seen); FX 'US$1 million' is as stated by the source [R2]. R13-R15 are project notes, not citable sources."
     ],
     "verdict_reason": "Verdict 'failed' was assigned by the research agent that wrote this card (verified_on 2026-09-24), not by Lior; no Lior ruling on it is recorded. Basis: built to 2,800 m3 of a 5,000-6,500 m3 design [R2][R17]; Mead & Borrero themselves judge it 'a failure in terms of surfing' [R17]; consent lapsed 2010 and the large containers were removed in 2014 [R3][R4][R6]; rip-current/scour concerns [R2][R3][R4]. Re-checked 2026-10-10; unchanged.",
+    "rating": {
+      "rank": 9,
+      "A": "2",
+      "B": "1",
+      "C": "1",
+      "reason": "geobags failed; council: more rips [R23]",
+      "scale": "1-5, ?=no evidence, *=provisional",
+      "source": "this review, Lior-approved 2026-10-19"
+    },
     "year_short": "2005–2008",
     "sort_year": 2005,
     "cost_short": "NZ$1.5 million (~US$1,000,000)",
@@ -9723,6 +9894,20 @@
         "url": "https://cdn.proj.org/nz_linz_nzgd2kgrid0005.tif",
         "accessed": "2026-10-13",
         "supports": "Datum conversion of the consent co-ordinates (NZGD49 / Taranaki Circuit, EPSG:27209) to WGS84: 07_scale/shapes/opunake-reef/scripts/build_consent_georef.py; the 7-parameter fallback differs by 3.7 m."
+      },
+      {
+        "id": "R21",
+        "citation": "Land Information New Zealand (LINZ). Standard port tidal levels, Port Taranaki, 1 Jul 2026 - 30 Jun 2027.",
+        "url": "https://www.linz.govt.nz/guidance/marine-information/tide-prediction-guidance/standard-port-tidal-levels",
+        "accessed": "2026-10-19",
+        "supports": "Spring 3.16 m, neap 1.53 m, mean 2.35 m tide range at Port Taranaki (read from a search extract; the LINZ host was blocked)"
+      },
+      {
+        "id": "R22",
+        "citation": "Reef rating (A surf quality, B safety and longevity, C sediment / storm protection), scores 1-5, approved by Lior 2026-10-19. Table: 08_paper/notes/rating_final.md; evidence per reef: 08_paper/notes/rating_evidence.md (this review, repo-internal files).",
+        "accessed": "2026-10-19",
+        "supports": "Scores A/B/C and reason for this reef",
+        "url": ""
       }
     ],
     "gaps": [
@@ -9737,6 +9922,16 @@
       "Position (updated 2026-10-13): lat/lon now -39.4594, 173.8516 = centre of the 189 x 94 m occupation area of Coastal Permit 6376-1 (TRC 2009-33 Appendix I) [R18][R20]; the reef is somewhere inside it (+-47 m along, +-32 m across). The earlier value (-39.46, 173.86, about 720 m to the east) was the surf-break listing [R7].",
       "Post-construction dive survey of the reef (recommended by TRC for 2009-10) and the annual structural-integrity reports (consent condition 15) were not found; later TRC technical reports on Opunake were not found by web search 2026-10-13."
     ],
+    "tide_check": "Opunake (reference port: Port Taranaki, not checked for suitability): LINZ standard-port levels 2026-27 give MHWS 3.56 m and MLWS 0.40 m above chart datum, so spring range 3.16 m, neap range 1.53 m, mean range 2.35 m. The earlier mean '>3.0 m' (Blacka 2013 Table 4.3) matches the spring range, not the mean. Values taken from a search extract of the LINZ page (host blocked from the session). [R21]",
+    "rating": {
+      "rank": 11,
+      "A": "1",
+      "B": "1",
+      "C": "?",
+      "reason": "no wave; bags failed [R22]",
+      "scale": "1-5, ?=no evidence, *=provisional",
+      "source": "this review, Lior-approved 2026-10-19"
+    },
     "year_short": "2006",
     "sort_year": 2006,
     "cost_short": "NZ$1.3 million (~US$1.1m)",
@@ -10642,6 +10837,13 @@
         "supports": "outline of the reef (primary trace, shape.json) - a project result from imagery, not a source statement. LOCATION: tile crop in 07_scale/shapes/boscombe-surf-reef/"
       },
       {
+        "id": "R23",
+        "citation": "Reef rating (A surf quality, B safety and longevity, C sediment / storm protection), scores 1-5, approved by Lior 2026-10-19. Table: 08_paper/notes/rating_final.md; evidence per reef: 08_paper/notes/rating_evidence.md (this review, repo-internal files).",
+        "accessed": "2026-10-19",
+        "supports": "Scores A/B/C and reason for this reef",
+        "url": ""
+      },
+      {
         "id": "S1",
         "citation": "Wikipedia (n.d.). \"Boscombe Pier.\"",
         "url": "https://en.wikipedia.org/wiki/Boscombe_Pier",
@@ -10660,6 +10862,15 @@
       "Position (citations audit 2026-10-10): lat/lon changed from 50.7185, -1.8417 to 50.717532, -1.838909, the centroid of the traced reef outline (07_scale/shapes/boscombe-surf-reef/shape.json geo.centroid_latlon, traced on the Esri Wayback image of 2011-09-28 [R22]; HANDOFF.md); the old point was 224 m away (town/pier area). The page's Google Maps link uses this value."
     ],
     "verdict_reason": "Verdict 'failed' was assigned by the research agent that wrote this card (verified_on 2026-09-24, enriched 2026-10-10), not by Lior; no Lior ruling on it is recorded. Basis: closed to surfing since 31 March 2011 after the reef lost sand/changed shape [R1][R17]; Plymouth University evaluation met 4 of 11 objectives (Rendle p.70-71 [R17]; Mead & Borrero count 7 of 11 [R18], an interested party); ASR Ltd liquidated 2012 [R1]; rebranded as non-surf park [R1][R6]. Re-checked 2026-10-10; unchanged.",
+    "rating": {
+      "rank": 7,
+      "A": "2",
+      "B": "1",
+      "C": "2",
+      "reason": "too hollow (mostly bodyboarders); bag lost, closed 2011 [R23]",
+      "scale": "1-5, ?=no evidence, *=provisional",
+      "source": "this review, Lior-approved 2026-10-19"
+    },
     "year_short": "2008",
     "sort_year": 2008,
     "cost_short": "£3–3.2 million",
@@ -11696,6 +11907,13 @@
         "url": "(file in papers/, supplied by Lior; repository URL not recorded)",
         "accessed": "2026-10-13",
         "supports": "volume 4,300 m3 SFC for Kovalum (2010, Kerala, India); cost column 1,640,321 (currency header not checked); read 2026-10-13 from the PDF in papers/"
+      },
+      {
+        "id": "R16",
+        "citation": "Reef rating (A surf quality, B safety and longevity, C sediment / storm protection), scores 1-5, approved by Lior 2026-10-19. Table: 08_paper/notes/rating_final.md; evidence per reef: 08_paper/notes/rating_evidence.md (this review, repo-internal files).",
+        "accessed": "2026-10-19",
+        "supports": "Scores A/B/C and reason for this reef",
+        "url": ""
       }
     ],
     "gaps": [
@@ -11709,6 +11927,15 @@
       "Relationship between the currently-marketed \"Artificial Off Shore Coral Reef\" tourism attraction and the 2009-10 ASR structure - unconfirmed [R9]",
       "Position (citations audit 2026-10-10): lat/lon changed from 8.4004, 76.9787 (Kovalam town [R7]) to 8.387313, 76.975188, the mean of the traced default outline vertices (07_scale/shapes/kovalam-reef-india/shape.json geo.polygons_latlon; fitted-camera trace from one oblique photo on the Esri 2011-02-28 frame, LOW confidence, stated position uncertainty +-20 m for the camera, larger for the outline); the old point was 1507 m away. The page's Google Maps link uses this value."
     ],
+    "rating": {
+      "rank": 8,
+      "A": "2",
+      "B": "1",
+      "C": "3*",
+      "reason": "geobags damaged; surf disputed [R16]",
+      "scale": "1-5, ?=no evidence, *=provisional",
+      "source": "this review, Lior-approved 2026-10-19"
+    },
     "year_short": "2009–2010",
     "sort_year": 2009,
     "cost_short": "Rs 75,000,000 (~US$1.6M)",
@@ -12330,6 +12557,13 @@
         "supports": "Haifa tidal range of tens of centimetres (the same page is R13 in the Pratte's card, which quotes ~0.3-0.4 m). LOCATION: live tide page, access day only."
       },
       {
+        "id": "R22",
+        "citation": "Reef rating (A surf quality, B safety and longevity, C sediment / storm protection), scores 1-5, approved by Lior 2026-10-19. Table: 08_paper/notes/rating_final.md; evidence per reef: 08_paper/notes/rating_evidence.md (this review, repo-internal files).",
+        "accessed": "2026-10-19",
+        "supports": "Scores A/B/C and reason for this reef",
+        "url": ""
+      },
+      {
         "id": "S1",
         "citation": "Royal HaskoningDHV / Ceredigion County Council / Atkins, \"Borth Coastal Protection Scheme\" Phase 2 public exhibition poster set (4 pages; undated, contemporaneous with 2013 Phase-2 consultation per its own content).",
         "url": "http://www.borthcommunity.info/images/stories/CoastalDefences/borth%20cps%20phase%202%20-%20public%20exhibition%20posters_english%20lo%20res.pdf",
@@ -12358,6 +12592,15 @@
       "Position (citations audit 2026-10-10): lat/lon changed from 52.48533, -4.05103 to 52.48346, -4.05621, the area-weighted centroid of the two traced mounds (07_scale/shapes/borth-coastal-defence-reef/shape.json geo.polygons_latlon, Esri image of 2024-09-17 [R19]; position accuracy about +-5 m per HANDOFF.md); the old point was 408 m away. The page's Google Maps link uses this value."
     ],
     "verdict_reason": "Verdict 'mixed' was assigned by the research agent that wrote this card (verified_on 2026-09-24), not by Lior; no Lior ruling on this verdict is recorded. Basis: coastal protection worked in the first months (two high tides did not flood properties, Dec 2011) [R2][R3]; surfing performance is undocumented: 'unknown (insufficient monitoring)' in Blacka et al. Table 4.1 [R14] and a 'proposed' site in Stormrider [R7]. Re-checked in the 2026-10-10 source audit; unchanged.",
+    "rating": {
+      "rank": 6,
+      "A": "?",
+      "B": "4",
+      "C": "3*",
+      "reason": "rock, part of coastal defence; no surf evidence [R22]",
+      "scale": "1-5, ?=no evidence, *=provisional",
+      "source": "this review, Lior-approved 2026-10-19"
+    },
     "year_short": "2011",
     "sort_year": 2011,
     "cost_short": "GBP 7M (~US$1.56)",
@@ -13866,6 +14109,20 @@
         "accessed": "2026-10-10",
         "supports": "shoreline contour used for the site point and the seabed profile of the 3D model. LOCATION: file as above; download URL recorded in 07_scale/shapes/bunbury-airwave/3d/SOURCES_3D.md (not re-checked in this audit)",
         "url": ""
+      },
+      {
+        "id": "R28",
+        "citation": "WA Department of Transport / Bureau of Meteorology. Tide Predictions by Location WA 2026, Bunbury (heights above LAT); 2024 edition read as a cross-check. Extremes extracted by script from 3 of 4 quarterly blocks, so they are lower bounds of the true extremes.",
+        "url": "https://transport.wa.gov.au:443/getmedia/482d7b83-1a48-4220-9e2c-b07ebfcf8594/MAR_P_2026_Tide_Predictions_by_Location_WA.pdf",
+        "accessed": "2026-10-19",
+        "supports": "Predicted annual extremes (not MHWS-MLWS) used for the corrected tide-range text; method and limits in 08_paper/notes/tides_check.md"
+      },
+      {
+        "id": "R29",
+        "citation": "Reef rating (A surf quality, B safety and longevity, C sediment / storm protection), scores 1-5, approved by Lior 2026-10-19. Table: 08_paper/notes/rating_final.md; evidence per reef: 08_paper/notes/rating_evidence.md (this review, repo-internal files).",
+        "accessed": "2026-10-19",
+        "supports": "Scores A/B/C and reason for this reef",
+        "url": ""
       }
     ],
     "gaps": [
@@ -14008,6 +14265,16 @@
         "note": "Material statements differ [R20][R25]; no document found for a concrete design."
       }
     ],
+    "tide_check": "Bunbury: WA DoT / BoM 2026 predictions (datum LAT) give annual predicted extremes of 0.10 to 1.30 m, an annual predicted range of about 1.2 m (2024 edition: 0.12 to 1.24 m); on 1 Jan 2026 low 0.16 m, high 1.09 m (daily range 0.93 m). The 0.4 m used earlier in this review is too small. Still micro-tidal. Predicted annual range, not a spring range. [R28]",
+    "rating": {
+      "rank": 12,
+      "A": "1",
+      "B": "1",
+      "C": "?",
+      "reason": "inflatable, failed fast [R29]",
+      "scale": "1-5, ?=no evidence, *=provisional",
+      "source": "this review, Lior-approved 2026-10-19"
+    },
     "year_short": "2019",
     "sort_year": 2019,
     "cost_short": "A$75,000 (~US$50,000)",
@@ -15012,6 +15279,13 @@
         "supports": "stable structure, no significant movement or settlement; basalt/greenstone rock; crest 1.5 m below MSL. LOCATION: abstract page only"
       },
       {
+        "id": "R25",
+        "citation": "Reef rating (A surf quality, B safety and longevity, C sediment / storm protection), scores 1-5, approved by Lior 2026-10-19. Table: 08_paper/notes/rating_final.md; evidence per reef: 08_paper/notes/rating_evidence.md (this review, repo-internal files).",
+        "accessed": "2026-10-19",
+        "supports": "Scores A/B/C and reason for this reef",
+        "url": ""
+      },
+      {
         "id": "S1",
         "citation": "City of Gold Coast (2019-05-21). \"Palm Beach Artificial Reef\" (official explainer video).",
         "url": "https://www.youtube.com/watch?v=i6k6WN2GtWI",
@@ -15033,6 +15307,15 @@
       "Source-audit 2026-10-10: not confirmed - authors/dates for R1, R2, R4, R5, R7, R10, R11, R12, R18 ('n.d.' pages); DOI, pages and full authors of Prenzler et al. (2022) [R24]; 'AU$18.2M' is not tied to a price year; the HC2 joint venture and 'up to 8 t' wording rest on contractor/consultant pages only."
     ],
     "verdict_reason": "Verdict 'partly worked' was assigned by the research agent that wrote this card (verified_on 2026-09-24, enriched 2026-10-10), not by Lior; no Lior ruling on it is recorded. Basis: protection side reported positive (about 550,000 m3 of sand retained in two years, ABC 2022 [R9]; stable structure [R24]); surf side only partly satisfactory: a narrow, fast-changing tidal window and 'alarmingly shallow' first impressions [R15], rated a 'modest' improvement [R18]; no systematic surf or ecological monitoring found. Re-checked 2026-10-10; unchanged.",
+    "rating": {
+      "rank": 4,
+      "A": "3",
+      "B": "4",
+      "C": "3*",
+      "reason": "rock, intact; inconsistent wave (Lior: \"not consistent at all\"); nourishment confounds shoreline [R25]",
+      "scale": "1-5, ?=no evidence, *=provisional",
+      "source": "this review, Lior-approved 2026-10-19"
+    },
     "year_short": "2019",
     "sort_year": 2019,
     "cost_short": "AU$18.2 million (~US$12.5 million)",
@@ -16455,6 +16738,20 @@
         "accessed": "2026-10-13",
         "supports": "Lead only (request W8): attribute table (searched as text, no GIS reader) lists WA Department of Transport surveys 'Middleton Bay & Oyster Harbour' (multibeam; laser scanner), 'Middleton Bay' (single beam) and 'King George Sound' (single beam, RTK), Data Access https://maps.slip.wa.gov.au/Marine/app/ ; years and extents not read. Nothing used for values.",
         "origin": "Lior's uploads 2026-10-11 and live pages, read by agent Albany uploads 2026-10-13"
+      },
+      {
+        "id": "R34",
+        "citation": "WA Department of Transport / Bureau of Meteorology. Tide Predictions by Location WA 2026, Albany (heights above LAT); 2024 edition read as a cross-check. Extremes extracted by script from 3 of 4 quarterly blocks, so they are lower bounds of the true extremes.",
+        "url": "https://transport.wa.gov.au:443/getmedia/482d7b83-1a48-4220-9e2c-b07ebfcf8594/MAR_P_2026_Tide_Predictions_by_Location_WA.pdf",
+        "accessed": "2026-10-19",
+        "supports": "Predicted annual extremes (not MHWS-MLWS) used for the corrected tide-range text; method and limits in 08_paper/notes/tides_check.md"
+      },
+      {
+        "id": "R35",
+        "citation": "Reef rating (A surf quality, B safety and longevity, C sediment / storm protection), scores 1-5, approved by Lior 2026-10-19. Table: 08_paper/notes/rating_final.md; evidence per reef: 08_paper/notes/rating_evidence.md (this review, repo-internal files).",
+        "accessed": "2026-10-19",
+        "supports": "Scores A/B/C and reason for this reef",
+        "url": ""
       }
     ],
     "gaps": [
@@ -16467,6 +16764,16 @@
       "2026-10-13: still no as-built survey, crest survey, section or seabed depth after reading Lior's four uploads and the live Raised Water Research pages; leads: WA Department of Transport surveys 'Middleton Bay & Oyster Harbour' (multibeam, laser scanner) found in the AusSeabed 2021 holdings list [R33] (request W8), and the March 2025 practical-completion survey (e-mail to the City, Bluecoast or Heron).",
       "2026-10-13: funding split conflict (City page: Commonwealth 4.75 M / WA 5 M; WA Government statement and Raised Water Research: WA 4.75 M / Commonwealth 5 M) not resolved."
     ],
+    "tide_check": "Albany: WA DoT / BoM 2026 predictions (datum LAT) give annual predicted extremes of 0.09 to 1.47 m, an annual predicted range of about 1.4 m (2024 edition: 0.12 to 1.40 m). The 0.6 m (MHHW-MLLW) used earlier in this review is too small. This is the predicted annual range, not a spring range (MHWS/MLWS not published on the pages read). [R34]",
+    "rating": {
+      "rank": 1,
+      "A": "5",
+      "B": "2",
+      "C": "?",
+      "reason": "best wave; injury reports, 18 rocks moved Feb 2026; too new for sediment data [R35]",
+      "scale": "1-5, ?=no evidence, *=provisional",
+      "source": "this review, Lior-approved 2026-10-19"
+    },
     "year_short": "2024",
     "sort_year": 2024,
     "cost_short": "AUD $11.75 million (~USD $7.6-8.5 million)",
@@ -17532,6 +17839,13 @@
         "url": "https://xala.com/community/ ; https://xala.com/real-estate/ ; https://xala.com/press/six-senses-xala/",
         "accessed": "2026-10-10",
         "supports": "location context: ~5 miles of coastline, ~65 miles south of Puerto Vallarta, 10 min from the Costalegre airport, 3,000 acres; 'new coastal protection reef to create a consistently great wave to surf'. No reef dimensions or coordinates"
+      },
+      {
+        "id": "R14",
+        "citation": "Reef rating (A surf quality, B safety and longevity, C sediment / storm protection), scores 1-5, approved by Lior 2026-10-19. Table: 08_paper/notes/rating_final.md; evidence per reef: 08_paper/notes/rating_evidence.md (this review, repo-internal files).",
+        "accessed": "2026-10-19",
+        "supports": "Scores A/B/C and reason for this reef",
+        "url": ""
       }
     ],
     "gaps": [
@@ -17550,6 +17864,15 @@
       "result": "No plan, coordinates or size found with full network access. RWR post re-fetched (announcement only); RWR site search, xala.com pages, THR, WSCC bio, DHI site, SEMARNAT search (gaceta host unreachable), Esri imagery: nothing. Details: 02_research/dead_ends/mexico-reef-2026-unnamed.json and 07_scale/shapes/mexico-reef-2026-unnamed/FEASIBILITY.md section 6.",
       "location_context": "Xala: ~5 miles (8 km) of Pacific coast near the Xola-Paraman lagoon, Tomatlan/Costalegre; Chalacatepec airstrip ~19.719,-105.231 (the area pin); lagoon mouth ~19.731,-105.291 (by eye from Esri imagery). The reef position on that coast is unknown.",
       "designer_note": "WSCC 2026 bio: Mortensen designed 'three additional surfing reefs globally, most recent in the Americas' (Xala not named)."
+    },
+    "rating": {
+      "rank": null,
+      "A": "?",
+      "B": "?",
+      "C": "?",
+      "reason": "not enough information [R14]",
+      "scale": "1-5, ?=no evidence, *=provisional",
+      "source": "this review, Lior-approved 2026-10-19"
     },
     "year_short": "2025",
     "sort_year": 2025,

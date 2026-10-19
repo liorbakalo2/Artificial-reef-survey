@@ -589,6 +589,13 @@
       "url": "https://livingatlas.arcgis.com/wayback/",
       "accessed": "2026-10-04",
       "supports": "outline of the reef (primary trace, shape.json) - a project result from imagery, not a source statement. LOCATION: tile crop in 07_scale/shapes/boscombe-surf-reef/"
+    },
+    {
+      "id": "R23",
+      "citation": "Reef rating (A surf quality, B safety and longevity, C sediment / storm protection), scores 1-5, approved by Lior 2026-10-19. Table: 08_paper/notes/rating_final.md; evidence per reef: 08_paper/notes/rating_evidence.md (this review, repo-internal files).",
+      "url": "",
+      "accessed": "2026-10-19",
+      "supports": "Scores A/B/C and reason for this reef"
     }
   ],
   "blocked_sources": [],
@@ -606,5 +613,14 @@
     "reason": "Best single image for a reader unfamiliar with the site: shows the pier, beach, town and the reef's rectangular submerged footprint all in one aerial frame at the correct scale and offshore distance, directly illustrating the dossier's stated size/position. Boscombe-Exposed (close-up bag rows) is a strong second choice for readers who want to see the physical bags themselves."
   },
   "videos_rejected": [],
-  "verdict_reason": "Verdict 'failed' was assigned by the research agent that wrote this card (verified_on 2026-09-24, enriched 2026-10-10), not by Lior; no Lior ruling on it is recorded. Basis: closed to surfing since 31 March 2011 after the reef lost sand/changed shape [R1][R17]; Plymouth University evaluation met 4 of 11 objectives (Rendle p.70-71 [R17]; Mead & Borrero count 7 of 11 [R18], an interested party); ASR Ltd liquidated 2012 [R1]; rebranded as non-surf park [R1][R6]. Re-checked 2026-10-10; unchanged."
+  "verdict_reason": "Verdict 'failed' was assigned by the research agent that wrote this card (verified_on 2026-09-24, enriched 2026-10-10), not by Lior; no Lior ruling on it is recorded. Basis: closed to surfing since 31 March 2011 after the reef lost sand/changed shape [R1][R17]; Plymouth University evaluation met 4 of 11 objectives (Rendle p.70-71 [R17]; Mead & Borrero count 7 of 11 [R18], an interested party); ASR Ltd liquidated 2012 [R1]; rebranded as non-surf park [R1][R6]. Re-checked 2026-10-10; unchanged.",
+  "rating": {
+    "rank": 7,
+    "A": "2",
+    "B": "1",
+    "C": "2",
+    "reason": "too hollow (mostly bodyboarders); bag lost, closed 2011 [R23]",
+    "scale": "1-5, ?=no evidence, *=provisional",
+    "source": "this review, Lior-approved 2026-10-19"
+  }
 }

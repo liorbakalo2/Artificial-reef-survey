@@ -348,6 +348,20 @@
       "url": "https://catalogue.data.wa.gov.au/dataset/dot-bathy",
       "accessed": "2026-10-10",
       "supports": "Position of the reef (traced original design plan fitted to the Nov 1999 soundings: 91 % of rock soundings inside, rotation 9.7 deg, +-2 m; centre -32.015648, 115.748452), measured pre-construction seabed (1998), surveyed rock surface and volume (Nov 1999, Feb 2002), distance 254-263 m to the 0 m AHD line. Used through the 3D model: 07_scale/shapes/cables-reef-wa/3d/METHODS_3D.md sections 2, 3.2, 3.4 and 4; VERIFY.md. Official data set; accuracy variable, no warranty."
+    },
+    {
+      "id": "R23",
+      "citation": "WA Department of Transport / Bureau of Meteorology. Tide Predictions by Location WA 2026, Fremantle (heights above LAT); 2024 edition read as a cross-check. Extremes extracted by script from 3 of 4 quarterly blocks, so they are lower bounds of the true extremes.",
+      "url": "https://transport.wa.gov.au:443/getmedia/482d7b83-1a48-4220-9e2c-b07ebfcf8594/MAR_P_2026_Tide_Predictions_by_Location_WA.pdf",
+      "accessed": "2026-10-19",
+      "supports": "Predicted annual extremes (not MHWS-MLWS) used for the corrected tide-range text; method and limits in 08_paper/notes/tides_check.md"
+    },
+    {
+      "id": "R24",
+      "citation": "Reef rating (A surf quality, B safety and longevity, C sediment / storm protection), scores 1-5, approved by Lior 2026-10-19. Table: 08_paper/notes/rating_final.md; evidence per reef: 08_paper/notes/rating_evidence.md (this review, repo-internal files).",
+      "url": "",
+      "accessed": "2026-10-19",
+      "supports": "Scores A/B/C and reason for this reef"
     }
   ],
   "blocked_sources": [
@@ -366,5 +380,15 @@
     "Position (updated 2026-10-10, page agent): lat/lon = -32.0156, 115.7485, the georeferenced centre of the traced original-plan outline (centre -32.015648, 115.748452; anchor -32.015644, 115.748462). The outline was moved and rotated only, to fit the DoT WA single-beam soundings of 22 Nov 1999 (91 % of the rock soundings inside, +-2 m) [R22], and checked on five Esri World Imagery captures (07_scale/shapes/cables-reef-wa/VERIFY.md R1; METHODS_3D.md section 3.2). It replaces the earlier -32.01575, 115.748417 taken from the Mondo.surf surf-spot listing (a commercial listing, not a survey), which lies about 12 m from it, and the generic -32.0, 115.74 before that. The page's Google Maps link uses the traced centre."
   ],
   "hero_recommendation": "https://raisedwaterresearch.com/wp-content/uploads/2019/11/Cables-Reef.jpg",
-  "videos_rejected": []
+  "videos_rejected": [],
+  "tide_check": "Cables (Fremantle predictions): WA DoT / BoM 2026 (datum LAT) give annual predicted extremes of 0.30 to 1.44 m, an annual predicted range of at least 1.1 m (2024 edition: 0.32 to 1.38 m). The +/-0.4 m band used earlier in this review (Blacka 2013 Table 4.3, definition not given) is too small. No official MHWS/MLWS or mean range found. [R23]",
+  "rating": {
+    "rank": 2,
+    "A": "3",
+    "B": "4",
+    "C": "3",
+    "reason": "rock, intact; surf-day claims conflict [R24]",
+    "scale": "1-5, ?=no evidence, *=provisional",
+    "source": "this review, Lior-approved 2026-10-19"
+  }
 }

@@ -186,3 +186,7 @@ lat/lon checked against the reef's shape/HANDOFF position; see gaps (last item) 
 ## Position update 2026-10-10 (page agent)
 
 lat/lon = -32.0156, 115.7485: the georeferenced centre of the traced original-plan outline (centre -32.015648, 115.748452), fitted to the DoT WA single-beam soundings of 22 Nov 1999 [R22] and checked on five Esri images (07_scale/shapes/cables-reef-wa/VERIFY.md R1). Replaces the Mondo.surf listing point -32.01575, 115.748417 (about 12 m away; a commercial listing, not a survey). The size text now gives the model's surveyed volumes and the 254-263 m distance to the 0 m AHD line, with the stated values (250 / 275 m, 3,500 / 5,000 / 5,500 m3) kept as stated.
+
+## Added 2026-10-19 (paper review: rating, tide check)
+- **tide_check**: Cables (Fremantle predictions): WA DoT / BoM 2026 (datum LAT) give annual predicted extremes of 0.30 to 1.44 m, an annual predicted range of at least 1.1 m (2024 edition: 0.32 to 1.38 m). The +/-0.4 m band used earlier in this review (Blacka 2013 Table 4.3, definition not given) is too small. No official MHWS/MLWS or mean range found. [R23]
+- **rating** (A surf / B safety+longevity / C sediment): 3 / 4 / 3; rock, intact; surf-day claims conflict [R24]

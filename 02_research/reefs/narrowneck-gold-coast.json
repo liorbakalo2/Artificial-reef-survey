@@ -450,6 +450,13 @@
       "url": "https://wayback.maptiles.arcgis.com/arcgis/rest/services/World_Imagery/WMTS/1.0.0/default028mm/MapServer",
       "accessed": "2026-10-06",
       "supports": "traced container field 6,239 m2, 7 polygons, scale 0.263665 m/px at zoom 19; centroid -27.986629, 153.434052. A project result, not a source statement. Private research copy; Esri terms"
+    },
+    {
+      "id": "R31",
+      "citation": "Reef rating (A surf quality, B safety and longevity, C sediment / storm protection), scores 1-5, approved by Lior 2026-10-19. Table: 08_paper/notes/rating_final.md; evidence per reef: 08_paper/notes/rating_evidence.md (this review, repo-internal files).",
+      "url": "",
+      "accessed": "2026-10-19",
+      "supports": "Scores A/B/C and reason for this reef"
     }
   ],
   "blocked_sources": [
@@ -468,5 +475,14 @@
   ],
   "hero_recommendation": "https://static.wixstatic.com/media/164422_8b3239d82ee84d159668f47acabd0dc2~mv2.png/v1/fill/w_1920,h_1080,al_c,q_95,enc_auto/164422_8b3239d82ee84d159668f47acabd0dc2~mv2.png",
   "videos_rejected": [],
-  "verdict_reason": "Verdict 'mixed' was assigned by the research agent that wrote this card (verified_on 2026-09-24, enriched 2026-10-10), not by Lior; no Lior ruling on it is recorded. Basis: the structure survives after more than 25 years and was renewed in 2018 [R2][R9][R14], and an independent monitoring record exists [R4][R7]; but the surf function is weak (crest changed for safety, surfing use declined) [R2][R5], the shoreline salient is disputed (20-50 m claimed vs a likely misreading, Blacka p.98-100 [R23]) and bags were damaged by anchors [R11][R14]. Re-checked 2026-10-10; unchanged."
+  "verdict_reason": "Verdict 'mixed' was assigned by the research agent that wrote this card (verified_on 2026-09-24, enriched 2026-10-10), not by Lior; no Lior ruling on it is recorded. Basis: the structure survives after more than 25 years and was renewed in 2018 [R2][R9][R14], and an independent monitoring record exists [R4][R7]; but the surf function is weak (crest changed for safety, surfing use declined) [R2][R5], the shoreline salient is disputed (20-50 m claimed vs a likely misreading, Blacka p.98-100 [R23]) and bags were damaged by anchors [R11][R14]. Re-checked 2026-10-10; unchanged.",
+  "rating": {
+    "rank": 5,
+    "A": "2",
+    "B": "3",
+    "C": "2",
+    "reason": "geobags; rarely surfable; nourishment confounds [R31]",
+    "scale": "1-5, ?=no evidence, *=provisional",
+    "source": "this review, Lior-approved 2026-10-19"
+  }
 }

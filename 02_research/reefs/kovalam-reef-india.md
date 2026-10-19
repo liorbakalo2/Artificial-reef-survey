@@ -172,3 +172,6 @@ See 05_qa/source_audit/cards_citations_2026-10-10.md. cost_usd_approx corrected 
 
 lat/lon checked against the reef's shape/HANDOFF position; see gaps (last item) and 05_qa/source_audit/cards_citations_2026-10-10.md.
 - **gaps** (added): Position (citations audit 2026-10-10): lat/lon changed from 8.4004, 76.9787 (Kovalam town [R7]) to 8.387313, 76.975188, the mean of the traced default outline vertices (07_scale/shapes/kovalam-reef-india/shape.json geo.polygons_latlon; fitted-camera trace from one oblique photo on the Esri 2011-02-28 frame, LOW confidence, stated position uncertainty +-20 m for the camera, larger for the outline); the old point was 1507 m away. The page's Google Maps link uses this value.
+
+## Added 2026-10-19 (paper review: rating, tide check)
+- **rating** (A surf / B safety+longevity / C sediment): 2 / 1 / 3*; geobags damaged; surf disputed [R16]

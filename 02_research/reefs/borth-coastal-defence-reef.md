@@ -153,3 +153,6 @@ See 05_qa/source_audit/cards_citations_2026-10-10.md. R21 (Haifa tide table) add
 
 lat/lon checked against the reef's shape/HANDOFF position; see gaps (last item) and 05_qa/source_audit/cards_citations_2026-10-10.md.
 - **gaps** (added): Position (citations audit 2026-10-10): lat/lon changed from 52.48533, -4.05103 to 52.48346, -4.05621, the area-weighted centroid of the two traced mounds (07_scale/shapes/borth-coastal-defence-reef/shape.json geo.polygons_latlon, Esri image of 2024-09-17 [R19]; position accuracy about +-5 m per HANDOFF.md); the old point was 408 m away. The page's Google Maps link uses this value.
+
+## Added 2026-10-19 (paper review: rating, tide check)
+- **rating** (A surf / B safety+longevity / C sediment): ? / 4 / 3*; rock, part of coastal defence; no surf evidence [R22]

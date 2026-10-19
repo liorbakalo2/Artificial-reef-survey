@@ -343,6 +343,20 @@
       "url": "https://cdn.proj.org/nz_linz_nzgd2kgrid0005.tif",
       "accessed": "2026-10-13",
       "supports": "Datum conversion of the consent co-ordinates (NZGD49 / Taranaki Circuit, EPSG:27209) to WGS84: 07_scale/shapes/opunake-reef/scripts/build_consent_georef.py; the 7-parameter fallback differs by 3.7 m."
+    },
+    {
+      "id": "R21",
+      "citation": "Land Information New Zealand (LINZ). Standard port tidal levels, Port Taranaki, 1 Jul 2026 - 30 Jun 2027.",
+      "url": "https://www.linz.govt.nz/guidance/marine-information/tide-prediction-guidance/standard-port-tidal-levels",
+      "accessed": "2026-10-19",
+      "supports": "Spring 3.16 m, neap 1.53 m, mean 2.35 m tide range at Port Taranaki (read from a search extract; the LINZ host was blocked)"
+    },
+    {
+      "id": "R22",
+      "citation": "Reef rating (A surf quality, B safety and longevity, C sediment / storm protection), scores 1-5, approved by Lior 2026-10-19. Table: 08_paper/notes/rating_final.md; evidence per reef: 08_paper/notes/rating_evidence.md (this review, repo-internal files).",
+      "url": "",
+      "accessed": "2026-10-19",
+      "supports": "Scores A/B/C and reason for this reef"
     }
   ],
   "blocked_sources": [
@@ -363,5 +377,15 @@
     "Post-construction dive survey of the reef (recommended by TRC for 2009-10) and the annual structural-integrity reports (consent condition 15) were not found; later TRC technical reports on Opunake were not found by web search 2026-10-13."
   ],
   "hero_recommendation": "none",
-  "videos_rejected": []
+  "videos_rejected": [],
+  "tide_check": "Opunake (reference port: Port Taranaki, not checked for suitability): LINZ standard-port levels 2026-27 give MHWS 3.56 m and MLWS 0.40 m above chart datum, so spring range 3.16 m, neap range 1.53 m, mean range 2.35 m. The earlier mean '>3.0 m' (Blacka 2013 Table 4.3) matches the spring range, not the mean. Values taken from a search extract of the LINZ page (host blocked from the session). [R21]",
+  "rating": {
+    "rank": 11,
+    "A": "1",
+    "B": "1",
+    "C": "?",
+    "reason": "no wave; bags failed [R22]",
+    "scale": "1-5, ?=no evidence, *=provisional",
+    "source": "this review, Lior-approved 2026-10-19"
+  }
 }

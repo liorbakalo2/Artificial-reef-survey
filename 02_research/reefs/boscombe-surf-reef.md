@@ -198,3 +198,6 @@ See 05_qa/source_audit/cards_citations_2026-10-10.md. Tags [R17]/[R10] added; la
 
 lat/lon checked against the reef's shape/HANDOFF position; see gaps (last item) and 05_qa/source_audit/cards_citations_2026-10-10.md.
 - **gaps** (added): Position (citations audit 2026-10-10): lat/lon changed from 50.7185, -1.8417 to 50.717532, -1.838909, the centroid of the traced reef outline (07_scale/shapes/boscombe-surf-reef/shape.json geo.centroid_latlon, traced on the Esri Wayback image of 2011-09-28 [R22]; HANDOFF.md); the old point was 224 m away (town/pier area). The page's Google Maps link uses this value.
+
+## Added 2026-10-19 (paper review: rating, tide check)
+- **rating** (A surf / B safety+longevity / C sediment): 2 / 1 / 2; too hollow (mostly bodyboarders); bag lost, closed 2011 [R23]

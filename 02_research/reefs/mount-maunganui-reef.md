@@ -150,3 +150,6 @@ See 05_qa/source_audit/cards_group_A_2026-10-10.md. Additions to the JSON card (
 See 05_qa/source_audit/cards_citations_2026-10-10.md. Mead et al. 2007 is the 18th ACOEC (Coasts and Ports 2007, Melbourne, 18-20 July 2007; proceedings.com via WebSearch): card correct, shape.json corrected. Tags and inference labels added.
 - **relevance_to_israel** (JSON wording; the dossier prose differs): ...The fact that Mount Maunganui's higher tidal range did not save the project from failure (the failure was volume/construction-driven, per Mead & Borrero 2011 [R17]; 'not tide-driven' is this card author's INFERENCE, unsourced) is itself...
 - **gaps[4]** (JSON wording; the dossier prose differs): ...(Feb 2005 per [R1] vs Nov 2005 per [R2][R8])...
+
+## Added 2026-10-19 (paper review: rating, tide check)
+- **rating** (A surf / B safety+longevity / C sediment): 2 / 1 / 1; geobags failed; council: more rips [R23]

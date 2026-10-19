@@ -340,6 +340,20 @@
       "url": "",
       "accessed": "2026-10-10",
       "supports": "shoreline contour used for the site point and the seabed profile of the 3D model. LOCATION: file as above; download URL recorded in 07_scale/shapes/bunbury-airwave/3d/SOURCES_3D.md (not re-checked in this audit)"
+    },
+    {
+      "id": "R28",
+      "citation": "WA Department of Transport / Bureau of Meteorology. Tide Predictions by Location WA 2026, Bunbury (heights above LAT); 2024 edition read as a cross-check. Extremes extracted by script from 3 of 4 quarterly blocks, so they are lower bounds of the true extremes.",
+      "url": "https://transport.wa.gov.au:443/getmedia/482d7b83-1a48-4220-9e2c-b07ebfcf8594/MAR_P_2026_Tide_Predictions_by_Location_WA.pdf",
+      "accessed": "2026-10-19",
+      "supports": "Predicted annual extremes (not MHWS-MLWS) used for the corrected tide-range text; method and limits in 08_paper/notes/tides_check.md"
+    },
+    {
+      "id": "R29",
+      "citation": "Reef rating (A surf quality, B safety and longevity, C sediment / storm protection), scores 1-5, approved by Lior 2026-10-19. Table: 08_paper/notes/rating_final.md; evidence per reef: 08_paper/notes/rating_evidence.md (this review, repo-internal files).",
+      "url": "",
+      "accessed": "2026-10-19",
+      "supports": "Scores A/B/C and reason for this reef"
     }
   ],
   "blocked_sources": [
@@ -487,5 +501,15 @@
       "founder_says": "now going for concrete [R25]",
       "note": "Material statements differ [R20][R25]; no document found for a concrete design."
     }
-  ]
+  ],
+  "tide_check": "Bunbury: WA DoT / BoM 2026 predictions (datum LAT) give annual predicted extremes of 0.10 to 1.30 m, an annual predicted range of about 1.2 m (2024 edition: 0.12 to 1.24 m); on 1 Jan 2026 low 0.16 m, high 1.09 m (daily range 0.93 m). The 0.4 m used earlier in this review is too small. Still micro-tidal. Predicted annual range, not a spring range. [R28]",
+  "rating": {
+    "rank": 12,
+    "A": "1",
+    "B": "1",
+    "C": "?",
+    "reason": "inflatable, failed fast [R29]",
+    "scale": "1-5, ?=no evidence, *=provisional",
+    "source": "this review, Lior-approved 2026-10-19"
+  }
 }
