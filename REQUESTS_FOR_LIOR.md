@@ -301,3 +301,15 @@ What to read for every row: tap the point, read the depth (or drying height), an
   4. Paste them in a message with the record number (117452 or 115084) and today's date.
   5. If the page shows a "Data Access restriction" other than "by negotiation", copy that too. Do not request or download the data.
 - Kovalam 2026-10-13: surfer.com article re-read through Wayback (works with `https://web.archive.org/web/2/<url>`): no plan or dimensions (dead end logged); archived asrltd.com pages are a parked domain after 2011 (dead end); Navionics/Garmin viewer drew no map in the cloud's headless Chrome (dead end). The Navionics reading for Kovalam (section 5, rows for 8.3867 N 76.9757 E) therefore still needs you or an agent on your PC.
+
+
+## Added 2026-10-19: 3D water-level proposals from the tide check (needs Lior's approval; NOT applied)
+Source for all new values: 08_paper/notes/tides_check.md (WA DoT/BoM *Tide Predictions by Location WA 2026*; LINZ Port Taranaki 2026-27; MSQ Burnett Heads 2026). The page now shows the corrected ranges as card text only. The 3D models still use the old levels below.
+| # | Model | Old value in 3D / paper | New value (source) | Proposed change |
+|---|---|---|---|---|
+| T1 | Albany | tide band MHHW 0.34 / MLLW -0.26 m AHD (range 0.6); viewer also LAT -0.74 to predicted HAT 0.66 AHD (2024 predictions) | predicted annual range about 1.38 m above LAT (0.09 to 1.47, 2026; 0.12 to 1.40, 2024), WA DoT/BoM; MHHW/MLLW not published | keep LAT/HAT planes; replace the MHHW/MLLW band by values computed from the full predictions (column-aware parser needed) |
+| T2 | Bunbury | water levels from GHD 2021 Table 1: MLLW -0.3, MHHW +0.1 m MSL (range 0.4), LAT -0.7, HAT +0.5 | predicted annual range about 1.20 m above LAT (0.10 to 1.30, 2026); daily range 0.93 m on 1 Jan 2026 | decide whether to keep GHD planes (consistent with HAT-LAT 1.2) and relabel, or recompute MHHW/MLLW from the predictions |
+| T3 | Cables | band -0.4 / +0.4 m MSL (range 0.8, Blacka 2013 Table 4.3, symmetry an estimate) | Fremantle predicted annual range at least 1.14 m (0.30 to 1.44 above LAT, 2026; lower bound, 3 of 4 blocks) | widen the band (about -0.55 / +0.6 about MSL) once the official planes are found; not applied |
+| T4 | Opunake (not modelled, on hold) | mean range ">3.0 m" | Port Taranaki spring 3.16, neap 1.53, mean 2.35 m (LINZ 2026-27) | use when the model is built |
+| T5 | Burkitts (not modelled, on hold) | mean 2.5 m "tide swing" (RWR) | Burnett Heads spring 2.33, mean 1.74 m (MSQ 2026; row not read directly) | use when the model is built |
+Pratte's needs no value change (NOAA great diurnal range 1.654 m; only the label "spring" was wrong).
