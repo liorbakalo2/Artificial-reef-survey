@@ -722,3 +722,6 @@ Mexico/Xala: nothing new that allows a trace. RWR post fetched (announcement onl
 - `08_paper/analysis/extract_profiles.py`: per-reef CUT_OVERRIDES (surf cut through the surfed part, shore-normal; oblique sampling by bilinear interpolation); old line kept as `crest_line_auto`. Pipeline (`run_all.py`) and all figure scripts re-run; 3D models untouched.
 - Figures: colour = reef with coloured name labels; marker shape = outcome class (unknown hollow) with legends; Fig. 4 axes/bands explained; Fig. 5 Hutt 2001 + Walker 1975, no personal names; Fig. 3 redrawn per `notes/fig3_theory.md` (two time steps, set-down/set-up, bores). Captions updated.
 - RESULTS.md / FINDINGS.md edited in place (old values kept). Old/new numbers and writer to-do: `08_paper/analysis/RECUT_NOTES.md`. Albany's collapsing-band position in Fig. 4 resolved (mean face 1:4.0, Y 1.08 -> 1:19.8, Y 2.11). Sections text not edited.
+
+## 2026-10-19 (page agent) - Palm Beach video 8Ebp7VNAGEY + viewer comment
+- Added the wave-pocket-tracking video (title/channel from oEmbed, reef confirmed by title; video not watched) and the grade-D comment to the Palm Beach card; full update "state saved", check.py 0 failures. Details: 04_build/HANDOFF.md 0f.

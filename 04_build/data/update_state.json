@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-19 16:00",
+ "updated": "2026-10-19 20:02",
  "sig": {
   "models": {
    "borth-coastal-defence-reef": {
@@ -62,7 +62,7 @@
     "annotated": "708425714f0edd31",
     "shape.json": "9d74d332271d31bb",
     "registry": "a0f9ca0e8bc26a39",
-    "card": "a706ad185846ca95",
+    "card": "7a295b57d6b472b5",
     "config": "6cc3935c10b7789f"
    },
    "prattes-reef-el-segundo": {

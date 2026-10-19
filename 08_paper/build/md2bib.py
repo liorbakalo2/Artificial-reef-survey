@@ -250,6 +250,14 @@ def fmt(v, k):
         if k in ('author', 'editor'):
             return v.replace('&', r'\&') if not v.startswith('{') else '{' + v[1:-1].replace('&', r'\&') + '}'
         return v.replace('_', r'\_') if k == 'sorttitle' else v
+    if 'http' in v:   # URLs inside notes: clickable and breakable
+        out, pos = '', 0
+        for m in re.finditer(r'https?://[^\s\]]+', v):
+            u = m.group(0); tail = ''
+            while u and u[-1] in '.,;)': tail = u[-1] + tail; u = u[:-1]
+            out += tex(v[pos:m.start()]) + '\\url{' + u.replace('%', r'\%').replace('#', r'\#').replace('&', r'\&') + '}' + tex(tail)
+            pos = m.end()
+        return out + tex(v[pos:])
     return tex(v)
 
 
