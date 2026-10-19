@@ -1,6 +1,42 @@
-# Build of paper.pdf
+# Build of paper.pdf (LaTeX, APA 7)
 
-Rebuild (from `08_paper/build/`): `python3 build.py`
+## Current build: LaTeX (xelatex + biber, biblatex-apa)
+Rebuild (from `08_paper/build/`): `python3 build_latex.py` (about 1 minute; output `paper.pdf`; work files and logs in the scratchpad
+`.../scratchpad/latex/`, override with env `LATEX_WORK`). Needs xelatex, biber, pandoc 3.1.3 and the LaTeX packages already installed.
+- Steps in `build_latex.py`: concatenate `../sections/ORDER.txt` (no `10_references.md`) -> pandoc `--biblatex` with `template.latex`
+  (pandoc default minus the automatic bibliography), `latex_header.tex` and the Lua filter `tables.lua` -> `xelatex`, `biber`, `xelatex` x2.
+  `\printbibliography[title=References]` is inserted before Appendix A; a `\clearpage` precedes each appendix.
+- `references.bib` (143 entries + 3 `skipbib` secondary sources) is written by `python3 md2bib.py` from `../sections/10_references.md`
+  (heuristic parser; hand fixes in `bib_overrides.py`; keys like `hutt2001`, `mead2001a`, `raisedwaterndb`; key table in `citekeys.json`).
+  Rerun `md2bib.py` only after editing 10_references.md, then rebuild. The `[not read]`-type notes are kept in the `addendum` field.
+- In-text citations in the section files are pandoc/biblatex markup, written once by `python3 md2cite.py` (idempotent; plain-text originals
+  in `sections_plain_backup/`): `[@key, p. 4]`, `@key` (narrative), `[@a; @b]`; groups that hold other text keep their parentheses and use
+  raw `` `\cite[p. 4]{key}`{=latex} `` / `\citeyear`. 7 odd spots were converted by hand (Hutt et al. Figure 5 caption, possessives, Esri/LINZ-style aliases).
+  Result: 585 citation items converted automatically; every key exists in the bib; all 143 listed works are cited.
+  Check: `grep` the `.tex` for keys vs `references.bib` (done: none missing), `paper.log` has no undefined citation.
+- Style: A4, 11 pt Latin Modern, 2.5 cm margins, hyperref colored links (dark blue), citations link to the reference entry, DOIs/URLs
+  clickable, hanging indent 1.27 cm, sentence-case titles kept as written (`\DeclareCaseLangs{}`). Headings keep their typed numbers
+  ("1 Introduction", "A.1"), so no LaTeX numbering. Captions are the Markdown ones ("Figure N."). `tables.lua` sets column widths from content,
+  small type for wide tables and landscape pages for 8+ column tables with long content (Appendix C, Tables C1 and C3).
+- Result: `paper.pdf`, 89 pages A4 = title pp. 1, contents pp. 2-4, main text Sections 1-9 pp. 5-40 (36 pages), References pp. 41-52 (12 pages),
+  Appendices A-F pp. 53-89 (37 pages; B 66, C 67, D 77, E 82, F 87). 14 figures, no "??" or undefined citations, no Missing character.
+  Greek in text is only phi and the dagger (taken from the math font by `newunicodechar`); Hebrew occurs only in URLs (percent-encoded).
+- Old HTML build kept: `paper_html.pdf` (50 pages) from `build.py`. It is now outdated: the sections contain `[@key]` markup and
+  `10_references.md` is no longer in ORDER.txt (the file itself is kept as the source of the bib).
+
+### Known issues (LaTeX build)
+- 89 pages against 50 in the HTML version (11 pt, 2.5 cm margins, long captions, reference notes kept); the main text is 36 pages (15-20 target).
+- Reference list is generated from heuristic parsing: web pages without italics in the Markdown list are typeset by biblatex-apa as
+  online items; the bracket notes appear after the entry as in the Markdown list. Check against `REFERENCE_ISSUES.md` before submission.
+- "As cited in" citations print `(Pitt, 2009, as cited in Raised Water Research, 2019a)` through raw `\cite`; Shand 2011, Weppe et al. 2007 and
+  Geofabrics 2013 are cited but, as APA 7 requires, not listed (`skipbib`, no link).
+- Tables C1 and C3 are on landscape pages and leave white space at the end of those pages. Three or four table cells overrun the margin by 6-7 pt.
+- Harmless log warnings: microtype "Unknown slot number" (8), hyperref `colorlinks` already used.
+- Moores (2006) month "March-April" is in a note, not the date (biber cannot sort a non-numeric month).
+
+## Previous build: HTML (outdated, see above)
+
+Rebuild (from `08_paper/build/`): `python3 build.py` (no longer matches the sections: no citeproc, no reference list)
 - Concatenates the files in `../sections/ORDER.txt` into `paper.md` (page break before References and Appendix A).
 - pandoc: `paper.md -s --mathml --toc --toc-depth=2 --resource-path .. -c paper.css --embed-resources -o paper.html`.
 - python playwright (`pip install playwright`, uses `/opt/pw-browsers/chromium-1194/chrome-linux/chrome --no-sandbox`) prints A4 with a page-number footer (`footerTemplate`). The plain Chrome flag `--no-pdf-header-footer` would remove the numbers.
@@ -16,3 +52,5 @@ Result: `paper.pdf`, 50 pages A4 = title and contents pp. 1-3 (abstract on p. 3)
 ## Known issues
 - Some white space below figures (figures are not split across pages).
 - Main text is longer than the 15-20 page target (OPEN_ISSUES item 2 lists cut candidates).
+
+- 2026-10-19: `thesurfeye2023` (Palm Beach video comments) was added by hand to references.bib. If md2bib.py is re-run, add it again or add it to 10_references.md first.
