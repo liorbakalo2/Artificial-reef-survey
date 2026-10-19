@@ -48,7 +48,7 @@ Channel Coastal Observatory. (2026b). *Beach profile surveys, Boscombe lines 5f0
 
 Chien, A., Tseng, F., & Tang, A. (2013). Geotextile tube application on beach refurbishment in UAE. *WIT Transactions on Ecology and the Environment, 169*, 231-239. https://doi.org/10.2495/CP130201 [not read; metadata checked in Crossref]
 
-Chien, A., Wu, S., Tseng, F., & Tang, A. (2014). Geotextile tubes application on beach nourishment in UAE. *International Journal of Environmental Science and Development, 5*(5), 506-509. https://doi.org/10.7763/IJESD.2014.V5.535 [abstract level only]
+Chien, A., Wu, S., Tseng, F., & Tang, A. (2014). Geotextile tubes application on beach nourishment in UAE. *International Journal of Environmental Science and Development, 5*(5), 506-509. [as cited by Bar and Drimer (2023); not verified: the DOI given there (10.7763/IJESD.2014.V5.535) resolves to an unrelated paper]
 
 City of Albany. (n.d.). *Southern Ocean Surf Reef (SOSR)* [Project pages, including the detailed-design table; page current 24 September 2026]. https://www.albany.wa.gov.au/council/projects/completed-projects/southern-ocean-surf-reef-sosr.aspx
 
