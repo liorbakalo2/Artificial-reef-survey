@@ -471,6 +471,45 @@ LAND_LIMIT = -50.0    # m, profile starts at most this far landward of the model
 GAP_BRIDGE = 12.0     # m, gaps in the reef along a line up to this length are bridged when the reef run is formed (discrete containers / arms; ASSUMPTION)
 HYPSO_LEVELS = [0.5, 0.0, -0.5, -1.0, -1.5, -2.0, -2.5, -3.0, -4.0, -5.0]   # m MSL, for the alongshore-extent table
 
+# ---- per-reef override of the PRIMARY cut ('crest_line'), after Lior's figure review of 2026-10-19 ------------------
+# The automatic rule (constant model x through the shallowest crest cell) is kept for every other reef. For the reefs
+# below the automatic line does not cross the part of the reef where the wave breaks and is surfed, or is not
+# perpendicular to the local shoreline. The override line is given by an anchor point (model x, y) and the direction of
+# the offshore shore normal; the profile is sampled along that line by the same bilinear interpolation on the model
+# grids (seabed and reef surface). The automatic line is kept in the JSON as lines.crest_line_auto (not used downstream).
+#   anchor: (x, y) in the model frame, or 'centroid' = area centroid of the reef footprint
+#   normal: 'model_y' = the model +y axis (the model frame is shore-normal for these reefs), or
+#           ('shore_bearing', deg T) = perpendicular to a shoreline of that bearing (offshore side), converted with the
+#           model axis bearings x_bearing / y_bearing of the adapter's true_shoreline record
+CUT_OVERRIDES = {
+    'southern-ocean-surf-reef-albany': dict(
+        anchor=(17.0, 118.0), normal='model_y',
+        reason='Lior 2026-10-19: the automatic crest line (x = 48 m, through the -1.0 m AHD take-off plateau at the offshore '
+               'end) lies on the short offshore part of the reef, not where the wave is ridden. The cut is moved to the middle '
+               'of the long -2.0 m AHD ridge ("crest 110 m @ -2 m AHD", City of Albany / Bluecoast design table, '
+               'SOURCE_AUDIT_2026-10-10 design_table): the ridge cells of the model (row-wise maximum of the reef surface, '
+               'z > -2.15 m) run from (x 3, y 68) to (x 38, y 168); the middle of that -2 m ridge is about (x 17, y 118). '
+               'Cut perpendicular to the shoreline (model x = 17 m constant; the Albany frame is shore-normal). '
+               'Built reef is a left-hander with the take-off at the offshore (east) end and the ride along this ridge '
+               '(design table "left-hander, peel 60 deg, rides to 100 m"; 07_scale/shapes/southern-ocean-surf-reef-albany/'
+               'HANDOFF.md, 3d/REGISTER_3D.md A7).'),
+    'cables-reef-wa': dict(
+        anchor='centroid', normal=('shore_bearing', 7.8),
+        reason='Lior 2026-10-19: the automatic crest line followed the design-frame y axis, which is about 17.5 deg off the '
+               'shore normal, and passed through the west arm. The cut now goes through the middle of the reef (area '
+               'centroid of the footprint) and is perpendicular to the local shoreline: fitted 0 m AHD line, bearing 7.8 deg T '
+               '(07_scale/shapes/cables-reef-wa/HANDOFF.md, shore_and_datum.py), so the cut runs offshore at bearing '
+               '277.8 deg T. Check: the mean down-slope direction of the model seabed over the reef area '
+               '(x -80..80 m, y 200..330 m) is 17.9 deg from the model +y axis, the same side and within 0.4 deg.'),
+    'borth-coastal-defence-reef': dict(
+        anchor=(-43.5, 338.0), normal='model_y',
+        reason='Lior 2026-10-19: move the cut a little to the right in the plan of Figure 1 (looking seaward), i.e. 10 m '
+               'south (model x -33.5 -> -43.5 m), so that it crosses the middle of the main ridge of the northern (boot) '
+               'surf reef instead of its northern shoulder. No source locates the surf break at Borth (reef card: no '
+               'ride or break position found), so the position is a judgement on the plan. Cut perpendicular to the shoreline '
+               '(model x constant; the Borth frame is shore-normal).'),
+}
+
 
 def rnd(a, nd=3):
     a = np.asarray(a, float)
