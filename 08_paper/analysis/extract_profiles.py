@@ -863,20 +863,62 @@ def profile_range(seabed, x, y_lo_model, y_reef_hi):
     return lo, hi
 
 
-def line_block(label, x, layer, seabed, y_reef_hi, true_shore_fn=None, defn=''):
+def line_points(s, x, y_anchor, d):
+    """model (x, y) of the points at line coordinate s. Constant-x lines: d = None, s = model y. Oblique lines:
+    point = (x, y_anchor) + (s - y_anchor) * d with d the unit offshore direction, so s is a true distance along the line
+    that equals the model y at the anchor."""
+    s = np.asarray(s, float)
+    if d is None:
+        return np.full_like(s, x), s
+    return x + (s - y_anchor) * d[0], y_anchor + (s - y_anchor) * d[1]
+
+
+def profile_range_dir(seabed, x, y_anchor, d, y_reef_hi):
+    ss = np.arange(-300.0, 1000.0 + 1e-9, STEP)
+    zs = seabed(*line_points(ss, x, y_anchor, d))
+    ok = np.isfinite(zs)
+    if not ok.any():
+        raise RuntimeError('no seabed on line through x=%s' % x)
+    return max(float(ss[ok][0]), LAND_LIMIT), min(float(ss[ok][-1]), y_reef_hi + PAD_SEA)
+
+
+def line_block(label, x, layer, seabed, y_reef_hi, true_shore_fn=None, defn='', y_anchor=None, direction=None):
+    """direction = None: constant-x line (model y axis). direction = (dx, dy) unit vector (offshore, dy > 0): oblique line
+    through (x, y_anchor); 'offshore_m' is then the distance along the line, equal to the model y at the anchor."""
     rx, ry, RZf = layer['rx'], layer['ry'], layer['RZf']
-    lo, hi = profile_range(seabed, x, 0.0, y_reef_hi)
+    d = None if direction is None else np.asarray(direction, float) / np.hypot(*direction)
+    if d is None:
+        lo, hi = profile_range(seabed, x, 0.0, y_reef_hi)
+    else:
+        lo, hi = profile_range_dir(seabed, x, y_anchor, d, y_reef_hi)
     y = np.arange(math.ceil(lo), math.floor(hi) + 1e-9, STEP)
-    xs_ = np.full_like(y, x)
-    zs = seabed(xs_, y)
-    zr = sample_reef(rx, ry, RZf, xs_, y)
+    xs_, ys_ = line_points(y, x, y_anchor, d)
+    zs = seabed(xs_, ys_)
+    zr = sample_reef(rx, ry, RZf, xs_, ys_)
     zr = np.where(np.isfinite(zs) & (zr - zs >= THK_MIN), zr, np.nan)
     met = line_metrics(y, zs, zr)
     blk = dict(definition=defn, x_line_m=round(float(x), 2), metrics=met)
+    if d is not None:
+        blk['oblique'] = dict(anchor_xy_m=[round(float(x), 2), round(float(y_anchor), 2)], direction_xy=[round(float(d[0]), 5), round(float(d[1]), 5)],
+                              angle_from_model_y_deg=round(math.degrees(math.atan2(d[0], d[1])), 2),
+                              note='offshore_m = distance along this line (m), equal to the model y at the anchor; x_line_m = anchor x')
+    if met.get('reef_on_line'):
+        pa = line_points([met['shoreward_toe_y_m'], met['seaward_toe_y_m']], x, y_anchor, d)
+        blk['reef_run_xy_m'] = [[round(float(pa[0][k]), 2), round(float(pa[1][k]), 2)] for k in (0, 1)]
     prof = dict(offshore_m=[round(float(v), 2) for v in y], seabed_msl_m=rnd(zs), reef_msl_m=rnd(zr))
     if met.get('y_msl_crossing_m') is not None:
         prof['offshore_from_msl_line_m'] = [round(float(v) - met['y_msl_crossing_m'], 2) for v in y]
-    if true_shore_fn is not None:
+    if true_shore_fn is not None and d is not None:
+        # line coordinate s where the line meets the derived shoreline y = f(x) (f is linear in x)
+        g = [float(line_points(t, x, y_anchor, d)[1] - true_shore_fn(line_points(t, x, y_anchor, d)[0])) for t in (0.0, 1.0)]
+        ysh = -g[0] / (g[1] - g[0])
+        blk['derived_true_shoreline_y_at_line_m'] = round(ysh, 2)
+        blk['derived_true_shoreline_note'] = 'line coordinate s (offshore_m) at which this line meets the fitted 0 m AHD line; distances along the line from it are shore-normal distances'
+        prof['offshore_from_true_shoreline_m'] = [round(float(v) - ysh, 2) for v in y]
+        if met.get('reef_on_line'):
+            met['crest_distance_from_true_shoreline_m'] = round(met['crest_y_m'] - ysh, 2)
+            met['seaward_toe_distance_from_true_shoreline_m'] = round(met['seaward_toe_y_m'] - ysh, 2)
+    elif true_shore_fn is not None:
         ysh = float(true_shore_fn(x))
         blk['derived_true_shoreline_y_at_line_m'] = round(ysh, 2)
         prof['offshore_from_true_shoreline_m'] = [round(float(v) - ysh, 2) for v in y]
