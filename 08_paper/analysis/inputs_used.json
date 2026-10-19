@@ -1318,68 +1318,68 @@
    },
    "crest_line": {
     "reef_on_line": true,
-    "crest_z_msl_m": -1.56,
-    "crest_y_m": 267.0,
-    "crest_depth_below_msl_m": 1.56,
-    "crest_seabed_z_msl_m": -3.565,
-    "crest_height_above_seabed_m": 2.005,
+    "crest_z_msl_m": -1.922,
+    "crest_y_m": 269.0,
+    "crest_depth_below_msl_m": 1.922,
+    "crest_seabed_z_msl_m": -3.543,
+    "crest_height_above_seabed_m": 1.621,
     "crest_zone_y_m": [
-     266.0,
-     268.0
+     268.0,
+     270.0
     ],
     "crest_zone_width_m": 3.0,
-    "seaward_toe_y_m": 312.0,
-    "seaward_toe_reef_z_msl_m": -3.83,
-    "seaward_toe_seabed_z_msl_m": -6.432,
-    "seaward_toe_thickness_m": 2.602,
-    "ramp_length_m": 44.0,
-    "ramp_rise_m": 2.17,
-    "crest_to_toe_drop_m": 2.27,
-    "crest_to_toe_seabed_drop_m": 4.872,
+    "seaward_toe_y_m": 315.0,
+    "seaward_toe_reef_z_msl_m": -3.867,
+    "seaward_toe_seabed_z_msl_m": -6.516,
+    "seaward_toe_thickness_m": 2.648,
+    "ramp_length_m": 45.0,
+    "ramp_rise_m": 1.898,
+    "crest_to_toe_drop_m": 1.946,
+    "crest_to_toe_seabed_drop_m": 4.594,
     "mean_seaward_slope": {
-     "tan": 0.0493,
-     "deg": 2.82,
-     "one_in": 20.28
+     "tan": 0.0422,
+     "deg": 2.41,
+     "one_in": 23.71
     },
     "max_seaward_slope": {
-     "tan": 0.13,
-     "deg": 7.41,
-     "one_in": 7.69
+     "tan": 0.1513,
+     "deg": 8.6,
+     "one_in": 6.61
     },
-    "max_seaward_slope_at_y_m": 268.0,
-    "shoreward_toe_y_m": 262.0,
-    "shoreward_toe_reef_z_msl_m": -2.44,
-    "shoreward_toe_seabed_z_msl_m": -3.451,
+    "max_seaward_slope_at_y_m": 302.0,
+    "shoreward_toe_y_m": 264.0,
+    "shoreward_toe_reef_z_msl_m": -3.132,
+    "shoreward_toe_seabed_z_msl_m": -3.297,
     "shoreward_ramp_length_m": 4.0,
-    "shoreward_ramp_rise_m": 0.83,
+    "shoreward_ramp_rise_m": 1.121,
     "mean_shoreward_slope": {
-     "tan": 0.2075,
-     "deg": 11.72,
-     "one_in": 4.82
+     "tan": 0.2803,
+     "deg": 15.66,
+     "one_in": 3.57
     },
-    "reef_cross_shore_extent_m": 51.0,
-    "max_thickness_on_line_m": 2.603,
+    "reef_cross_shore_extent_m": 52.0,
+    "max_thickness_on_line_m": 2.648,
     "y_msl_crossing_m": null,
     "segments": [
      {
-      "y_from_m": 262.0,
-      "y_to_m": 312.0,
-      "max_z_msl_m": -1.56
+      "y_from_m": 264.0,
+      "y_to_m": 315.0,
+      "max_z_msl_m": -1.922
      }
     ],
     "bridged_gaps": [],
     "seabed_mean_slope_under_reef": {
-     "tan": 0.0596,
-     "deg": 3.41,
-     "one_in": 16.77
+     "tan": 0.0631,
+     "deg": 3.61,
+     "one_in": 15.84
     },
     "seabed_mean_slope_seaward_of_toe_100m": {
-     "tan": 0.0252,
-     "deg": 1.44,
-     "one_in": 39.75
+     "tan": 0.0253,
+     "deg": 1.45,
+     "one_in": 39.55
     },
-    "crest_distance_from_true_shoreline_m": 263.91,
-    "seaward_toe_distance_from_true_shoreline_m": 308.91
+    "crest_distance_from_true_shoreline_m": 249.44,
+    "seaward_toe_distance_from_true_shoreline_m": 295.44
    },
    "second_crest_line": {
     "reef_on_line": true,
@@ -1445,6 +1445,71 @@
     },
     "crest_distance_from_true_shoreline_m": 234.41,
     "seaward_toe_distance_from_true_shoreline_m": 254.41
+   },
+   "crest_line_auto": {
+    "reef_on_line": true,
+    "crest_z_msl_m": -1.56,
+    "crest_y_m": 267.0,
+    "crest_depth_below_msl_m": 1.56,
+    "crest_seabed_z_msl_m": -3.565,
+    "crest_height_above_seabed_m": 2.005,
+    "crest_zone_y_m": [
+     266.0,
+     268.0
+    ],
+    "crest_zone_width_m": 3.0,
+    "seaward_toe_y_m": 312.0,
+    "seaward_toe_reef_z_msl_m": -3.83,
+    "seaward_toe_seabed_z_msl_m": -6.432,
+    "seaward_toe_thickness_m": 2.602,
+    "ramp_length_m": 44.0,
+    "ramp_rise_m": 2.17,
+    "crest_to_toe_drop_m": 2.27,
+    "crest_to_toe_seabed_drop_m": 4.872,
+    "mean_seaward_slope": {
+     "tan": 0.0493,
+     "deg": 2.82,
+     "one_in": 20.28
+    },
+    "max_seaward_slope": {
+     "tan": 0.13,
+     "deg": 7.41,
+     "one_in": 7.69
+    },
+    "max_seaward_slope_at_y_m": 268.0,
+    "shoreward_toe_y_m": 262.0,
+    "shoreward_toe_reef_z_msl_m": -2.44,
+    "shoreward_toe_seabed_z_msl_m": -3.451,
+    "shoreward_ramp_length_m": 4.0,
+    "shoreward_ramp_rise_m": 0.83,
+    "mean_shoreward_slope": {
+     "tan": 0.2075,
+     "deg": 11.72,
+     "one_in": 4.82
+    },
+    "reef_cross_shore_extent_m": 51.0,
+    "max_thickness_on_line_m": 2.603,
+    "y_msl_crossing_m": null,
+    "segments": [
+     {
+      "y_from_m": 262.0,
+      "y_to_m": 312.0,
+      "max_z_msl_m": -1.56
+     }
+    ],
+    "bridged_gaps": [],
+    "seabed_mean_slope_under_reef": {
+     "tan": 0.0596,
+     "deg": 3.41,
+     "one_in": 16.77
+    },
+    "seabed_mean_slope_seaward_of_toe_100m": {
+     "tan": 0.0252,
+     "deg": 1.44,
+     "one_in": 39.75
+    },
+    "crest_distance_from_true_shoreline_m": 263.91,
+    "seaward_toe_distance_from_true_shoreline_m": 308.91
    },
    "layer:design_plan_original_1999": {
     "reef_on_line": true,
@@ -3475,78 +3540,78 @@
    },
    "crest_line": {
     "reef_on_line": true,
-    "crest_z_msl_m": 1.09,
-    "crest_y_m": 273.0,
-    "crest_depth_below_msl_m": -1.09,
-    "crest_seabed_z_msl_m": -3.353,
-    "crest_height_above_seabed_m": 4.443,
+    "crest_z_msl_m": 0.47,
+    "crest_y_m": 338.0,
+    "crest_depth_below_msl_m": -0.47,
+    "crest_seabed_z_msl_m": -4.306,
+    "crest_height_above_seabed_m": 4.776,
     "crest_zone_y_m": [
-     272.0,
-     273.0
+     335.0,
+     342.0
     ],
-    "crest_zone_width_m": 2.0,
-    "seaward_toe_y_m": 346.0,
-    "seaward_toe_reef_z_msl_m": -3.95,
-    "seaward_toe_seabed_z_msl_m": -4.259,
-    "seaward_toe_thickness_m": 0.309,
-    "ramp_length_m": 73.0,
-    "ramp_rise_m": 5.04,
-    "crest_to_toe_drop_m": 5.04,
-    "crest_to_toe_seabed_drop_m": 5.349,
+    "crest_zone_width_m": 8.0,
+    "seaward_toe_y_m": 382.0,
+    "seaward_toe_reef_z_msl_m": -3.85,
+    "seaward_toe_seabed_z_msl_m": -4.3,
+    "seaward_toe_thickness_m": 0.45,
+    "ramp_length_m": 40.0,
+    "ramp_rise_m": 4.235,
+    "crest_to_toe_drop_m": 4.32,
+    "crest_to_toe_seabed_drop_m": 4.77,
     "mean_seaward_slope": {
-     "tan": 0.069,
-     "deg": 3.95,
-     "one_in": 14.48
+     "tan": 0.1059,
+     "deg": 6.04,
+     "one_in": 9.45
     },
     "max_seaward_slope": {
-     "tan": 0.35,
-     "deg": 19.29,
-     "one_in": 2.86
+     "tan": 0.3925,
+     "deg": 21.43,
+     "one_in": 2.55
     },
-    "max_seaward_slope_at_y_m": 336.0,
-    "shoreward_toe_y_m": 253.0,
+    "max_seaward_slope_at_y_m": 375.0,
+    "shoreward_toe_y_m": 264.0,
     "shoreward_toe_reef_z_msl_m": -2.61,
-    "shoreward_toe_seabed_z_msl_m": -2.82,
-    "shoreward_ramp_length_m": 19.0,
-    "shoreward_ramp_rise_m": 3.61,
+    "shoreward_toe_seabed_z_msl_m": -2.736,
+    "shoreward_ramp_length_m": 71.0,
+    "shoreward_ramp_rise_m": 2.98,
     "mean_shoreward_slope": {
-     "tan": 0.19,
-     "deg": 10.76,
-     "one_in": 5.26
+     "tan": 0.042,
+     "deg": 2.4,
+     "one_in": 23.83
     },
-    "reef_cross_shore_extent_m": 94.0,
-    "max_thickness_on_line_m": 4.529,
-    "y_msl_crossing_m": 79.2,
+    "reef_cross_shore_extent_m": 119.0,
+    "max_thickness_on_line_m": 4.776,
+    "y_msl_crossing_m": 86.92,
     "segments": [
      {
-      "y_from_m": 253.0,
-      "y_to_m": 346.0,
-      "max_z_msl_m": 1.09
+      "y_from_m": 264.0,
+      "y_to_m": 382.0,
+      "max_z_msl_m": 0.47
      }
     ],
     "bridged_gaps": [],
     "seabed_mean_slope_under_reef": {
-     "tan": 0.0155,
-     "deg": 0.89,
-     "one_in": 64.64
+     "tan": 0.0133,
+     "deg": 0.76,
+     "one_in": 75.46
     },
-    "crest_distance_from_msl_line_m": 193.8,
-    "seaward_toe_distance_from_msl_line_m": 266.8,
-    "shoreward_toe_distance_from_msl_line_m": 173.8,
+    "crest_distance_from_msl_line_m": 251.08,
+    "seaward_toe_distance_from_msl_line_m": 295.08,
+    "shoreward_toe_distance_from_msl_line_m": 177.08,
     "seabed_mean_slope_msl_line_to_seaward_toe": {
-     "tan": 0.016,
-     "deg": 0.91,
-     "one_in": 62.64
+     "tan": 0.0146,
+     "deg": 0.83,
+     "one_in": 68.62
     },
     "seabed_mean_slope_msl_line_to_shoreward_toe": {
-     "tan": 0.0162,
-     "deg": 0.93,
-     "one_in": 61.62
+     "tan": 0.0155,
+     "deg": 0.89,
+     "one_in": 64.72
     },
     "seabed_mean_slope_seaward_of_toe_100m": {
-     "tan": 0.0046,
-     "deg": 0.26,
-     "one_in": 218.91
+     "tan": 0.0077,
+     "deg": 0.44,
+     "one_in": 129.7
     }
    },
    "second_crest_line": {
@@ -3623,6 +3688,82 @@
      "tan": 0.009,
      "deg": 0.52,
      "one_in": 110.77
+    }
+   },
+   "crest_line_auto": {
+    "reef_on_line": true,
+    "crest_z_msl_m": 1.09,
+    "crest_y_m": 273.0,
+    "crest_depth_below_msl_m": -1.09,
+    "crest_seabed_z_msl_m": -3.353,
+    "crest_height_above_seabed_m": 4.443,
+    "crest_zone_y_m": [
+     272.0,
+     273.0
+    ],
+    "crest_zone_width_m": 2.0,
+    "seaward_toe_y_m": 346.0,
+    "seaward_toe_reef_z_msl_m": -3.95,
+    "seaward_toe_seabed_z_msl_m": -4.259,
+    "seaward_toe_thickness_m": 0.309,
+    "ramp_length_m": 73.0,
+    "ramp_rise_m": 5.04,
+    "crest_to_toe_drop_m": 5.04,
+    "crest_to_toe_seabed_drop_m": 5.349,
+    "mean_seaward_slope": {
+     "tan": 0.069,
+     "deg": 3.95,
+     "one_in": 14.48
+    },
+    "max_seaward_slope": {
+     "tan": 0.35,
+     "deg": 19.29,
+     "one_in": 2.86
+    },
+    "max_seaward_slope_at_y_m": 336.0,
+    "shoreward_toe_y_m": 253.0,
+    "shoreward_toe_reef_z_msl_m": -2.61,
+    "shoreward_toe_seabed_z_msl_m": -2.82,
+    "shoreward_ramp_length_m": 19.0,
+    "shoreward_ramp_rise_m": 3.61,
+    "mean_shoreward_slope": {
+     "tan": 0.19,
+     "deg": 10.76,
+     "one_in": 5.26
+    },
+    "reef_cross_shore_extent_m": 94.0,
+    "max_thickness_on_line_m": 4.529,
+    "y_msl_crossing_m": 79.2,
+    "segments": [
+     {
+      "y_from_m": 253.0,
+      "y_to_m": 346.0,
+      "max_z_msl_m": 1.09
+     }
+    ],
+    "bridged_gaps": [],
+    "seabed_mean_slope_under_reef": {
+     "tan": 0.0155,
+     "deg": 0.89,
+     "one_in": 64.64
+    },
+    "crest_distance_from_msl_line_m": 193.8,
+    "seaward_toe_distance_from_msl_line_m": 266.8,
+    "shoreward_toe_distance_from_msl_line_m": 173.8,
+    "seabed_mean_slope_msl_line_to_seaward_toe": {
+     "tan": 0.016,
+     "deg": 0.91,
+     "one_in": 62.64
+    },
+    "seabed_mean_slope_msl_line_to_shoreward_toe": {
+     "tan": 0.0162,
+     "deg": 0.93,
+     "one_in": 61.62
+    },
+    "seabed_mean_slope_seaward_of_toe_100m": {
+     "tan": 0.0046,
+     "deg": 0.26,
+     "one_in": 218.91
     }
    }
   }
@@ -4458,78 +4599,78 @@
    },
    "crest_line": {
     "reef_on_line": true,
-    "crest_z_msl_m": -1.167,
-    "crest_y_m": 192.0,
-    "crest_depth_below_msl_m": 1.167,
-    "crest_seabed_z_msl_m": -7.097,
-    "crest_height_above_seabed_m": 5.93,
+    "crest_z_msl_m": -1.97,
+    "crest_y_m": 118.0,
+    "crest_depth_below_msl_m": 1.97,
+    "crest_seabed_z_msl_m": -4.5,
+    "crest_height_above_seabed_m": 2.53,
     "crest_zone_y_m": [
-     187.0,
-     202.0
+     111.0,
+     132.0
     ],
-    "crest_zone_width_m": 16.0,
-    "seaward_toe_y_m": 224.0,
-    "seaward_toe_reef_z_msl_m": -6.749,
-    "seaward_toe_seabed_z_msl_m": -7.319,
-    "seaward_toe_thickness_m": 0.57,
-    "ramp_length_m": 22.0,
-    "ramp_rise_m": 5.503,
-    "crest_to_toe_drop_m": 5.582,
-    "crest_to_toe_seabed_drop_m": 6.152,
+    "crest_zone_width_m": 22.0,
+    "seaward_toe_y_m": 231.0,
+    "seaward_toe_reef_z_msl_m": -7.068,
+    "seaward_toe_seabed_z_msl_m": -7.368,
+    "seaward_toe_thickness_m": 0.3,
+    "ramp_length_m": 99.0,
+    "ramp_rise_m": 4.998,
+    "crest_to_toe_drop_m": 5.098,
+    "crest_to_toe_seabed_drop_m": 5.398,
     "mean_seaward_slope": {
-     "tan": 0.2501,
-     "deg": 14.04,
-     "one_in": 4.0
+     "tan": 0.0505,
+     "deg": 2.89,
+     "one_in": 19.81
     },
     "max_seaward_slope": {
-     "tan": 0.4219,
-     "deg": 22.88,
-     "one_in": 2.37
+     "tan": 0.2869,
+     "deg": 16.01,
+     "one_in": 3.48
     },
-    "max_seaward_slope_at_y_m": 218.0,
-    "shoreward_toe_y_m": 161.0,
-    "shoreward_toe_reef_z_msl_m": -5.943,
-    "shoreward_toe_seabed_z_msl_m": -6.393,
-    "shoreward_ramp_length_m": 26.0,
-    "shoreward_ramp_rise_m": 4.69,
+    "max_seaward_slope_at_y_m": 228.0,
+    "shoreward_toe_y_m": 92.0,
+    "shoreward_toe_reef_z_msl_m": -2.83,
+    "shoreward_toe_seabed_z_msl_m": -3.2,
+    "shoreward_ramp_length_m": 19.0,
+    "shoreward_ramp_rise_m": 0.779,
     "mean_shoreward_slope": {
-     "tan": 0.1804,
-     "deg": 10.23,
-     "one_in": 5.54
+     "tan": 0.041,
+     "deg": 2.35,
+     "one_in": 24.38
     },
-    "reef_cross_shore_extent_m": 64.0,
-    "max_thickness_on_line_m": 5.96,
+    "reef_cross_shore_extent_m": 140.0,
+    "max_thickness_on_line_m": 4.85,
     "y_msl_crossing_m": -5.33,
     "segments": [
      {
-      "y_from_m": 161.0,
-      "y_to_m": 224.0,
-      "max_z_msl_m": -1.167
+      "y_from_m": 92.0,
+      "y_to_m": 231.0,
+      "max_z_msl_m": -1.97
      }
     ],
     "bridged_gaps": [],
     "seabed_mean_slope_under_reef": {
-     "tan": 0.0147,
-     "deg": 0.84,
-     "one_in": 67.99
+     "tan": 0.03,
+     "deg": 1.72,
+     "one_in": 33.35
     },
-    "crest_distance_from_msl_line_m": 197.33,
-    "seaward_toe_distance_from_msl_line_m": 229.33,
-    "shoreward_toe_distance_from_msl_line_m": 166.33,
+    "crest_distance_from_msl_line_m": 123.33,
+    "seaward_toe_distance_from_msl_line_m": 236.33,
+    "shoreward_toe_distance_from_msl_line_m": 97.33,
     "seabed_mean_slope_msl_line_to_seaward_toe": {
-     "tan": 0.0319,
-     "deg": 1.83,
-     "one_in": 31.33
+     "tan": 0.0312,
+     "deg": 1.79,
+     "one_in": 32.08
     },
     "seabed_mean_slope_msl_line_to_shoreward_toe": {
-     "tan": 0.0384,
-     "deg": 2.2,
-     "one_in": 26.02
+     "tan": 0.0329,
+     "deg": 1.88,
+     "one_in": 30.42
     },
     "seabed_mean_slope_seaward_of_toe_100m": {
      "tan": 0.0064,
-     "deg": 0.37,
-     "one_in": 155.51
+     "deg": 0.36,
+     "one_in": 157.41
     }
    },
    "second_crest_line": {
@@ -4606,6 +4747,82 @@
      "tan": 0.0065,
      "deg": 0.37,
      "one_in": 154.34
+    }
+   },
+   "crest_line_auto": {
+    "reef_on_line": true,
+    "crest_z_msl_m": -1.167,
+    "crest_y_m": 192.0,
+    "crest_depth_below_msl_m": 1.167,
+    "crest_seabed_z_msl_m": -7.097,
+    "crest_height_above_seabed_m": 5.93,
+    "crest_zone_y_m": [
+     187.0,
+     202.0
+    ],
+    "crest_zone_width_m": 16.0,
+    "seaward_toe_y_m": 224.0,
+    "seaward_toe_reef_z_msl_m": -6.749,
+    "seaward_toe_seabed_z_msl_m": -7.319,
+    "seaward_toe_thickness_m": 0.57,
+    "ramp_length_m": 22.0,
+    "ramp_rise_m": 5.503,
+    "crest_to_toe_drop_m": 5.582,
+    "crest_to_toe_seabed_drop_m": 6.152,
+    "mean_seaward_slope": {
+     "tan": 0.2501,
+     "deg": 14.04,
+     "one_in": 4.0
+    },
+    "max_seaward_slope": {
+     "tan": 0.4219,
+     "deg": 22.88,
+     "one_in": 2.37
+    },
+    "max_seaward_slope_at_y_m": 218.0,
+    "shoreward_toe_y_m": 161.0,
+    "shoreward_toe_reef_z_msl_m": -5.943,
+    "shoreward_toe_seabed_z_msl_m": -6.393,
+    "shoreward_ramp_length_m": 26.0,
+    "shoreward_ramp_rise_m": 4.69,
+    "mean_shoreward_slope": {
+     "tan": 0.1804,
+     "deg": 10.23,
+     "one_in": 5.54
+    },
+    "reef_cross_shore_extent_m": 64.0,
+    "max_thickness_on_line_m": 5.96,
+    "y_msl_crossing_m": -5.33,
+    "segments": [
+     {
+      "y_from_m": 161.0,
+      "y_to_m": 224.0,
+      "max_z_msl_m": -1.167
+     }
+    ],
+    "bridged_gaps": [],
+    "seabed_mean_slope_under_reef": {
+     "tan": 0.0147,
+     "deg": 0.84,
+     "one_in": 67.99
+    },
+    "crest_distance_from_msl_line_m": 197.33,
+    "seaward_toe_distance_from_msl_line_m": 229.33,
+    "shoreward_toe_distance_from_msl_line_m": 166.33,
+    "seabed_mean_slope_msl_line_to_seaward_toe": {
+     "tan": 0.0319,
+     "deg": 1.83,
+     "one_in": 31.33
+    },
+    "seabed_mean_slope_msl_line_to_shoreward_toe": {
+     "tan": 0.0384,
+     "deg": 2.2,
+     "one_in": 26.02
+    },
+    "seabed_mean_slope_seaward_of_toe_100m": {
+     "tan": 0.0064,
+     "deg": 0.37,
+     "one_in": 155.51
     }
    }
   }

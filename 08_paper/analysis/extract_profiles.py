@@ -11,6 +11,8 @@ Each reef's frame, datum and shoreline definition are recorded in its JSON (read
 build_3d.py / index.html). Reef-surface rules that the viewers evaluate at run time (Prattes, Bunbury, Mount Maunganui,
 Albany) are re-implemented in the adapters below, line by line from the viewer / build code (cited in each JSON, "method").
 Every number written is DERIVED from the model data; assumptions are named in the JSON.
+Primary cut ('crest_line') = constant model x through the shallowest crest cell, except where CUT_OVERRIDES (Lior's
+review 2026-10-19) sets a surf cut through the surfed part of the reef, perpendicular to the shoreline (Albany, Cables, Borth).
 Sections of this file: (1) per-reef adapters, (2) profile/metric core, (3) main (driver, summary, non-3D records).
 """
 
@@ -1004,6 +1006,34 @@ def process(slug):
     if c2 is not None:
         lines['second_crest_line'] = line_block('second_crest_line', c2[0], layer, seabed, cc['y_range'][1], ts_fn,
                                                 'cross-shore line through the shallowest reef cell on the OTHER side of the centreline than the main crest line (for two-arm reefs: the other arm); crest cell z = %.2f m MSL' % c2[2])
+    ov = CUT_OVERRIDES.get(slug)
+    if ov:
+        if ov['anchor'] == 'centroid':
+            xa, ya = cc['x_centroid'], cc['y_centroid']
+        else:
+            xa, ya = ov['anchor']
+        if ov['normal'] == 'model_y':
+            dvec = None
+            ang = 0.0
+        else:
+            ts = a['true_shoreline']
+            ob = None
+            for b in (ov['normal'][1] - 90.0, ov['normal'][1] + 90.0):   # offshore side = positive model-y component
+                v = (math.cos(math.radians(b - ts['x_bearing'])), math.cos(math.radians(b - ts['y_bearing'])))
+                if v[1] > 0:
+                    dvec, ob = v, b % 360
+            ang = math.degrees(math.atan2(dvec[0], dvec[1]))
+        lines['crest_line_auto'] = lines['crest_line']
+        lines['crest_line_auto']['definition'] += ' [AUTOMATIC RULE, superseded for this reef by the override in crest_line; kept for reference, not used downstream]'
+        nb = line_block('crest_line', xa, layer, seabed, cc['y_range'][1], ts_fn,
+                        'SURF CUT (per-reef override of the automatic crest line): cross-shore line through (x %.1f, y %.1f) m, %s. Reason: %s' % (
+                            xa, ya, 'along the model y axis (perpendicular to the shoreline)' if dvec is None else
+                            'perpendicular to the shoreline (offshore bearing %.1f deg T, %.1f deg from the model y axis)' % (ob, ang), ov['reason']),
+                        y_anchor=ya if dvec is not None else None, direction=dvec)
+        nb['override'] = dict(reason=ov['reason'], anchor_xy_m=[round(float(xa), 2), round(float(ya), 2)],
+                              angle_from_model_y_deg=round(ang, 2), offshore_bearing_deg_T=None if dvec is None else round(ob, 1),
+                              automatic_line_x_m=lines['crest_line_auto']['x_line_m'])
+        lines['crest_line'] = nb
     out = dict(
         slug=slug, name=m.get('name') or m.get('meta', {}).get('name'),
         generated=datetime.date.today().isoformat(),
@@ -1033,6 +1063,8 @@ def process(slug):
         confidence_3d=m.get('confidence_3d', {}).get('level') if isinstance(m.get('confidence_3d'), dict) else None,
         global_=glob, lines=lines,
     )
+    if ov:
+        out['method']['sampling']['crest_line'] += ' -- OVERRIDDEN for this reef by a per-reef SURF CUT (CUT_OVERRIDES, Lior 2026-10-19); definition and reason in lines.crest_line.definition / .override; the automatic line is lines.crest_line_auto'
     if 'region_masks' in meta:
         out['region_masks'] = meta['region_masks']
     SBg = layer['SB']
@@ -1180,7 +1212,7 @@ def write_summary(results, non3d, path):
     A('Generated %s by `08_paper/analysis/extract_profiles.py` (re-runnable) from the DEFAULT version of each 3D model in `07_scale/shapes/<slug>/3d/model.js` (read only). One JSON per reef with a 3D model: `08_paper/data/profiles/<slug>.json` (metadata, datum, shoreline definition, profiles every %.0f m on two or three lines, metrics, sources, caveats); the four reefs without a 3D model: `08_paper/data/profiles/_no_3d_model.json`.\n' % (datetime.date.today().isoformat(), STEP))
     A('Every number for the nine modelled reefs is **DERIVED** from the model grids by the method stated here and in each JSON (not a new measurement). The inputs behind each model and their sources are cited in the JSON field `key_inputs` and in `07_scale/shapes/<slug>/3d/METHODS_3D.md`. The re-implemented reef surfaces reproduce the volumes stated by the models to within 1 % (JSON `reconstruction_check`). z = metres above MSL (each model\'s datum link is in the JSON field `datum`); y = offshore distance from the model shoreline y = 0 (defined differently per reef, see section 2).\n')
     A('## 1. Master table, all reefs (default version; crest-line profile)\n')
-    A('Crest line = cross-shore line (constant model x) through the shallowest crest cell. Ramp = seaward face from the seaward edge of the crest zone (points within 0.10 m of the line maximum) to the seaward toe (last point where the reef is at least 0.10 m above the natural seabed). Mean slope = ramp drop / ramp length; max slope = steepest 2 m central difference on the ramp. Crest depth below MSL is negative where the crest is above MSL (Borth). "(cut)" = the model surface stops at its outline with more than 0.5 m of reef still standing, so the toe is not where the surface meets the seabed. Alongshore length = x-span of reef cells at or above the level: (a) -0.5 m MSL, (b) 0.5 m below the crest (the request "at crest -0.5 m" is ambiguous, both given).\n')
+    A('Crest line = cross-shore line (constant model x) through the shallowest crest cell, EXCEPT for the reefs in section 1a, where a per-reef SURF CUT replaces it (Lior 2026-10-19). Ramp = seaward face from the seaward edge of the crest zone (points within 0.10 m of the line maximum) to the seaward toe (last point where the reef is at least 0.10 m above the natural seabed). Mean slope = ramp drop / ramp length; max slope = steepest 2 m central difference on the ramp. Crest depth below MSL is negative where the crest is above MSL (Borth). "(cut)" = the model surface stops at its outline with more than 0.5 m of reef still standing, so the toe is not where the surface meets the seabed. Alongshore length = x-span of reef cells at or above the level: (a) -0.5 m MSL, (b) 0.5 m below the crest (the request "at crest -0.5 m" is ambiguous, both given).\n')
     A('| Reef | Version / basis | Crest z (m MSL) | Crest depth below MSL (m) | Crest height above bed (m) | Crest distance offshore (m) | Toe z reef / bed (m MSL) | Drop crest to toe, on reef / to bed (m) | Ramp length (m) | Mean seaward slope | Max seaward slope | Alongshore length (a) z>=-0.5 m / (b) z>=crest-0.5 m (m) |')
     A('|---|---|---|---|---|---|---|---|---|---|---|---|')
     for slug, r, g, L, C in summary_rows(results):
@@ -1204,6 +1236,16 @@ def write_summary(results, non3d, path):
     for slug, d in non3d.items():
         A('| **%s** | no 3D model (card / FEASIBILITY) | unknown as a located value | %s | unknown | unknown | toe/bed: %s | unknown | unknown | unknown | unknown | %s |' % (
             slug, d['crest_depth'], d['toe_depth'], d['alongshore_length']))
+    A('\n### 1a. Per-reef surf cuts (override of the automatic crest line; Lior 2026-10-19)\n')
+    A('For these reefs the automatic crest line does not cross the part of the reef where the wave breaks and is surfed, or is not perpendicular to the local shoreline. The row above (and `lines.crest_line` in the JSON, used by every downstream script) is the SURF CUT: a line through the stated anchor, perpendicular to the shoreline, sampled every %.0f m by the same bilinear interpolation on the model grids. The automatic line stays in the JSON as `lines.crest_line_auto` (reference only).\n' % STEP)
+    A('| Reef | Automatic line x (m) | Surf cut anchor (x, y) (m) | Cut direction | Reason |')
+    A('|---|---|---|---|---|')
+    for slug, r in results.items():
+        o = r['lines']['crest_line'].get('override')
+        if not o:
+            continue
+        dtxt = 'model y axis (shore-normal frame)' if o['offshore_bearing_deg_T'] is None else 'offshore bearing %.1f deg T (%.1f deg from model y)' % (o['offshore_bearing_deg_T'], o['angle_from_model_y_deg'])
+        A('| %s | %.1f | %.1f, %.1f | %s | %s |' % (slug, o['automatic_line_x_m'], o['anchor_xy_m'][0], o['anchor_xy_m'][1], dtxt, o['reason']))
     A('\nSizes of the four reefs without a 3D model (card / FEASIBILITY values, full citations in `_no_3d_model.json`):\n')
     for slug, d in non3d.items():
         A('* **%s**: %s. Read in: %s.' % (slug, d['size'], d['read_from']))
@@ -1253,7 +1295,7 @@ def write_summary(results, non3d, path):
     A('\n## 6. Reading guide and caveats common to all reefs\n')
     A('* **What is survey and what is a rule**: Cables (Nov 1999 sounding surface), Borth (2022 LiDAR DSM) and Mount Maunganui (rise inside the -2.0 m CD contour from the 2013 DEM) carry survey information; Boscombe (flat crest, 1:3 flanks), Prattes (constant 1.35 m stack, 1:1 flanks), Bunbury (spherical cap), Palm Beach (contour interpolation), Narrowneck and Albany (design-surface rules) are idealised. Ramp lengths and slopes are model results and inherit these assumptions; the surfaces were not re-measured.')
     A('* **Seabed**: the natural seabed under each reef is interpolated (a pre-construction survey exists only for Cables, 1998). Mount Maunganui uses an ASSUMED as-built bed of -3.6 m CD; Palm Beach and Narrowneck rely on Navionics/multibeam with datum assumptions. Crest HEIGHT and ramp slopes depend on these; crest LEVEL is sourced for Mount Maunganui, Boscombe, Palm Beach, Prattes and Albany (design or stated values), surveyed for Cables and Borth.')
-    A('* **Slopes are along the model y axis** (the cross-shore direction of the model frame). For oblique ridges (Albany, Boscombe, Borth boot) the slope normal to the crest differs; for Cables the frame axis is about 17.5 deg off the shore normal.')
+    A('* **Slopes are along the model y axis** (the cross-shore direction of the model frame). For oblique ridges (Albany, Boscombe, Borth boot) the slope normal to the crest differs; for Cables the frame axis is about 17.5 deg off the shore normal, so the Cables surf cut (crest_line) is turned 17.5 deg to the shore normal and its distances are along that line; the centreline and second crest line of Cables still follow the frame axis.')
     A('* **Tidal planes** (m above MSL, small-tide sites): JSON field `tidal_planes_m_above_msl`.')
     A('* **JSON layout**: `lines.<name>.profile.{offshore_m, seabed_msl_m, reef_msl_m}` are equal-length arrays at 1 m spacing (`null` = no reef / no data); `lines.<name>.metrics` are the numbers above; `global` holds crest, footprint and alongshore extents; `extra_layers` holds the evidence layers; `reconstruction_check` the volume test.')
     open(path, 'w', encoding='utf-8').write('\n'.join(t) + '\n')

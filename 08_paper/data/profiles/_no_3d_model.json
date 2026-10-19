@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-15",
+ "generated": "2026-10-19",
  "note": "Reefs without a 3D model: only what the reef cards and FEASIBILITY files give; \"unknown\" where no source gives a value. No profile arrays.",
  "reefs": {
   "kovalam-reef-india": {
@@ -27,7 +27,7 @@
    "size": "design about 99 m long x 30 m wide x 3.5 m high, plan area about 2,970 m2 (a bounding rectangle 99 x 30, not the true footprint), volume about 4,900 m3 (TRC 2009 printed p.4); Blacka 2013 Table 4.2: 30 m longshore x 100 m cross-shore, ~300 m offshore; 27 bags in place by April 2008, structure not completed (Sept 2009)",
    "ramp_slope": "unknown (no cross-section)",
    "alongshore_length": "design long axis 99 m, bearing 63 deg (occupation area 189 x 94 m rectangle); true footprint unknown",
-   "tide": "spring range 3.16 m (MHWS 3.56 - MLWS 0.40 m above chart datum), mean range 2.35 m: LINZ standard port Port Taranaki 2026-27 (checked 2026-10-19; whether Port Taranaki represents Opunake exactly is unchecked). Blacka et al. 2013 Table 4.3 \"tide range > 3.0 m\" is consistent with the spring range.",
+   "tide": "tide range > 3.0 m (Blacka et al. 2013 Table 4.3)",
    "sources": [
     "Taranaki Regional Council (2009). Opunake Artificial Reef Monitoring Programme 2005-2009. Technical Report 2009-33 (ISSN 0114-8184; document 631513). Stratford, NZ, September 2009, 58 pp. (Lior's copy: new uploads from lior/Opunake Artificial Reef monitoring programme 2005-2009.pdf)",
     "Blacka, M.J., Shand, T.D., Carley, J.T. and Mariani, A. (2013). A Review of Artificial Reefs for Coastal Protection in NSW. WRL Technical Report 2012/08, UNSW Water Research Laboratory, for NSW Office of Environment and Heritage. https://doi.org/10.4225/53/58e1dc7368c7a (report page = PDF page - 12)"
@@ -43,7 +43,7 @@
    "size": "about 300 m3 of rock moved, at least 12 large basalt boulders relocated (RWR Burkitts Reef page; Swellnet comment 2022); traced natural basalt platform 31,485 m2 minimum (321 x 377 m, Esri 2025-09-05, LOW confidence) which is NOT the reshaped zone; Redgard Phase 3 work-zone ellipse about 1,750 m2 (43 x 52 m, +-20-30 m, LOW)",
    "ramp_slope": "unknown",
    "alongshore_length": "unknown (reef zone not located)",
-   "tide": "spring range 2.33 m (MHWS 2.94 - MLWS 0.61), mean range 1.74 m: MSQ 2026 planes Burnett Heads, m above LAT (MHWS 2.94, MHWN 2.35, MLWN 1.20, MLWS 0.61, MSL 1.78, HAT 3.68). Replaces the \"about 2.5 m swing\" of the Raised Water Research card (basis unknown). Row not independently verified (tides_check.md).",
+   "tide": "about 2.5 m swing (no datum); MSQ 2026 planes Burnett Heads: MHWS 2.94, MHWN 2.35, MLWN 1.20, MLWS 0.61, MSL 1.78, HAT 3.68 m above LAT",
    "sources": [
     "Raised Water Research (n.d.). \"Burkitts Reef\" [spot page, artificial-reef database]. https://raisedwaterresearch.com/spot/artificial-reef/australia/queensland/burkitts-reef/ (accessed 2026-09-24)",
     "Swellnet comment thread, user truebluebasher, 2022-06-02. https://www.swellnet.com/comments/get/540429"

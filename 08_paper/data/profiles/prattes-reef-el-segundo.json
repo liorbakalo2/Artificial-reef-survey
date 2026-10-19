@@ -1,7 +1,7 @@
 {
  "slug": "prattes-reef-el-segundo",
  "name": "Pratte's Reef (permit name: Chevron Reef), El Segundo / Dockweiler Beach, California",
- "generated": "2026-10-15",
+ "generated": "2026-10-19",
  "script": "08_paper/analysis/extract_profiles.py",
  "status": "DERIVED: every number in \"global\", \"lines\" and \"extra_layers\" is computed by the script from the published 3D-model data (no new measurement); the model inputs and their sources are in \"key_inputs\" and in the model METHODS_3D.md.",
  "version": {
@@ -161,6 +161,16 @@
      "one_in": 37.34
     }
    },
+   "reef_run_xy_m": [
+    [
+     -0.02,
+     93.0
+    ],
+    [
+     -0.02,
+     103.0
+    ]
+   ],
    "profile": {
     "offshore_m": [
      -50.0,
@@ -1467,6 +1477,16 @@
      "one_in": 35.03
     }
    },
+   "reef_run_xy_m": [
+    [
+     -26.77,
+     75.0
+    ],
+    [
+     -26.77,
+     79.0
+    ]
+   ],
    "profile": {
     "offshore_m": [
      -50.0,
@@ -2773,6 +2793,16 @@
      "one_in": 35.11
     }
    },
+   "reef_run_xy_m": [
+    [
+     26.48,
+     76.0
+    ],
+    [
+     26.48,
+     80.0
+    ]
+   ],
    "profile": {
     "offshore_m": [
      -50.0,

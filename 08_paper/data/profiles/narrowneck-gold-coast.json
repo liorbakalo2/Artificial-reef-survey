@@ -1,7 +1,7 @@
 {
  "slug": "narrowneck-gold-coast",
  "name": "Narrowneck Reef, Gold Coast (Queensland, Australia)",
- "generated": "2026-10-15",
+ "generated": "2026-10-19",
  "script": "08_paper/analysis/extract_profiles.py",
  "status": "DERIVED: every number in \"global\", \"lines\" and \"extra_layers\" is computed by the script from the published 3D-model data (no new measurement); the model inputs and their sources are in \"key_inputs\" and in the model METHODS_3D.md.",
  "version": {
@@ -172,6 +172,16 @@
      "one_in": 41.11
     }
    },
+   "reef_run_xy_m": [
+    [
+     -1.0,
+     317.0
+    ],
+    [
+     -1.0,
+     369.0
+    ]
+   ],
    "profile": {
     "offshore_m": [
      -40.0,
@@ -2517,6 +2527,16 @@
      "one_in": 31.62
     }
    },
+   "reef_run_xy_m": [
+    [
+     46.0,
+     216.0
+    ],
+    [
+     46.0,
+     233.0
+    ]
+   ],
    "profile": {
     "offshore_m": [
      -40.0,
@@ -4847,6 +4867,16 @@
      "one_in": 31.95
     }
    },
+   "reef_run_xy_m": [
+    [
+     -40.0,
+     232.0
+    ],
+    [
+     -40.0,
+     332.0
+    ]
+   ],
    "profile": {
     "offshore_m": [
      -40.0,

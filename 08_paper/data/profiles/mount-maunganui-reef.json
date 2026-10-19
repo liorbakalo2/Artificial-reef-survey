@@ -1,7 +1,7 @@
 {
  "slug": "mount-maunganui-reef",
  "name": "Mount Maunganui Beach Reef (\"Mount Reef\"), New Zealand",
- "generated": "2026-10-15",
+ "generated": "2026-10-19",
  "script": "08_paper/analysis/extract_profiles.py",
  "status": "DERIVED: every number in \"global\", \"lines\" and \"extra_layers\" is computed by the script from the published 3D-model data (no new measurement); the model inputs and their sources are in \"key_inputs\" and in the model METHODS_3D.md.",
  "version": {
@@ -161,6 +161,16 @@
      "one_in": 67.15
     }
    },
+   "reef_run_xy_m": [
+    [
+     -0.5,
+     334.0
+    ],
+    [
+     -0.5,
+     344.0
+    ]
+   ],
    "profile": {
     "offshore_m": [
      -30.0,
@@ -2359,6 +2369,16 @@
      "one_in": 69.42
     }
    },
+   "reef_run_xy_m": [
+    [
+     14.0,
+     296.0
+    ],
+    [
+     14.0,
+     323.0
+    ]
+   ],
    "profile": {
     "offshore_m": [
      -30.0,
@@ -4557,6 +4577,16 @@
      "one_in": 71.55
     }
    },
+   "reef_run_xy_m": [
+    [
+     -22.5,
+     287.0
+    ],
+    [
+     -22.5,
+     313.0
+    ]
+   ],
    "profile": {
     "offshore_m": [
      -30.0,
@@ -6879,6 +6909,16 @@
        "one_in": 68.11
       }
      },
+     "reef_run_xy_m": [
+      [
+       -0.5,
+       257.0
+      ],
+      [
+       -0.5,
+       386.0
+      ]
+     ],
      "profile": {
       "offshore_m": [
        -30.0,
@@ -9290,6 +9330,16 @@
        "one_in": 68.71
       }
      },
+     "reef_run_xy_m": [
+      [
+       14.0,
+       259.0
+      ],
+      [
+       14.0,
+       392.0
+      ]
+     ],
      "profile": {
       "offshore_m": [
        -30.0,
@@ -11697,6 +11747,16 @@
        "one_in": 67.02
       }
      },
+     "reef_run_xy_m": [
+      [
+       -29.0,
+       252.0
+      ],
+      [
+       -29.0,
+       375.0
+      ]
+     ],
      "profile": {
       "offshore_m": [
        -30.0,

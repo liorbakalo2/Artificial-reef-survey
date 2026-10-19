@@ -1,7 +1,7 @@
 {
  "slug": "bunbury-airwave",
  "name": "Bunbury Airwave: sand-slurry-ballasted rubber (Hypalon) bladder, as installed Dec 2019 - torn, not a working reef",
- "generated": "2026-10-15",
+ "generated": "2026-10-19",
  "script": "08_paper/analysis/extract_profiles.py",
  "status": "DERIVED: every number in \"global\", \"lines\" and \"extra_layers\" is computed by the script from the published 3D-model data (no new measurement); the model inputs and their sources are in \"key_inputs\" and in the model METHODS_3D.md.",
  "version": {
@@ -169,6 +169,16 @@
      "one_in": 25.96
     }
    },
+   "reef_run_xy_m": [
+    [
+     0.0,
+     32.0
+    ],
+    [
+     0.0,
+     43.0
+    ]
+   ],
    "profile": {
     "offshore_m": [
      -40.0,
@@ -1195,6 +1205,16 @@
      "one_in": 25.96
     }
    },
+   "reef_run_xy_m": [
+    [
+     0.0,
+     32.0
+    ],
+    [
+     0.0,
+     43.0
+    ]
+   ],
    "profile": {
     "offshore_m": [
      -40.0,
@@ -2221,6 +2241,16 @@
      "one_in": 25.96
     }
    },
+   "reef_run_xy_m": [
+    [
+     -0.25,
+     32.0
+    ],
+    [
+     -0.25,
+     43.0
+    ]
+   ],
    "profile": {
     "offshore_m": [
      -40.0,
@@ -3281,6 +3311,5 @@
     "x_max_m": 5.75
    }
   ]
- },
- "tidal_planes_note": "ANN_LO/ANN_HI = predicted annual range (approx. LAT-HAT) of the WA DoT/BoM 2026 predictions (Albany 1.38, Bunbury 1.20, Fremantle 1.14 m), centred on MSL (no LAT-to-MSL offset applied); not a spring range (08_paper/notes/tides_check.md). Replaces the Cables LWt/HWt +-0.4 m of Blacka 2013 Table 4.3."
+ }
 }

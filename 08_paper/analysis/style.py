@@ -45,11 +45,42 @@ COLORS = {
     'southern-ocean-surf-reef-albany': '#117733', 'burkitts-reef-bargara': '#AA4499', 'bunbury-airwave': '#1F9E89',
     'mexico-reef-2026-unnamed': '#EE6677'}
 
-MARKERS = {
-    'narrowneck-gold-coast': 'o', 'cables-reef-wa': 's', 'prattes-reef-el-segundo': '^', 'mount-maunganui-reef': 'D',
-    'opunake-reef': 'v', 'boscombe-surf-reef': 'P', 'kovalam-reef-india': '<', 'borth-coastal-defence-reef': 'X',
-    'palm-beach-gold-coast': '>', 'southern-ocean-surf-reef-albany': 'h', 'burkitts-reef-bargara': '*',
-    'bunbury-airwave': 'p', 'mexico-reef-2026-unnamed': 'd'}
+# MARKER SHAPE = OUTCOME CLASS (Lior's review 2026-10-19: no per-reef shapes; colour + name label = reef, shape = outcome).
+# Outcome per reef = reefs.json surf_outcome.value (read below). 'unknown' is a small HOLLOW square so it never looks like
+# 'works' (filled circle). Every figure that uses these shapes carries outcome_legend_handles().
+OUTCOME_CLASSES = ['works', 'works rarely', 'mixed', 'does not work', 'unknown']
+OUTCOME_MARKER = {'works': 'o', 'works rarely': '^', 'mixed': 'D', 'does not work': 'X', 'unknown': 's'}
+OUTCOME_HOLLOW = {'unknown'}
+OUTCOME_SIZE = {'works': 1.0, 'works rarely': 1.0, 'mixed': 0.85, 'does not work': 1.05, 'unknown': 0.7}
+
+
+def outcome_class(o):
+    """reefs.json surf_outcome value -> one of OUTCOME_CLASSES"""
+    if not isinstance(o, str):
+        return 'unknown'
+    o = o.strip().lower()
+    if o.startswith('works rarely'):
+        return 'works rarely'
+    if o.startswith('mixed'):
+        return 'mixed'
+    if o.startswith('does not'):
+        return 'does not work'
+    if o == 'works':
+        return 'works'
+    return 'unknown'
+
+
+def _load_outcomes():
+    import json
+    try:
+        R = json.load(open(os.path.join(DATA_DIR, 'reefs.json'), encoding='utf-8'))
+        return {r['slug']: outcome_class((r.get('surf_outcome') or {}).get('value')) for r in R}
+    except Exception:
+        return {}
+
+
+OUTCOME = _load_outcomes()
+MARKERS = {s: OUTCOME_MARKER[OUTCOME.get(s, 'unknown')] for s in SLUGS}
 
 # neutral inks / grounds (shared)
 INK = '#222222'
@@ -90,6 +121,34 @@ def setup():
         'axes.facecolor': 'white', 'savefig.facecolor': 'white', 'pdf.fonttype': 42, 'ps.fonttype': 42,
         'svg.fonttype': 'none', 'mathtext.default': 'regular'})
     return fam
+
+
+def _dark(c, f=0.6):
+    from matplotlib import colors as mc
+    r, g, b = mc.to_rgb(c)
+    return (r * f, g * f, b * f)
+
+
+def marker_kw(slug, ms=6.0, outcome=None):
+    """matplotlib plot kwargs for one reef point: colour = reef, shape = outcome class (hollow for unknown)."""
+    oc = outcome_class(outcome) if outcome is not None else OUTCOME.get(slug, 'unknown')
+    col = COLORS.get(slug, UNKNOWN)
+    hollow = oc in OUTCOME_HOLLOW
+    return dict(marker=OUTCOME_MARKER[oc], ms=ms * OUTCOME_SIZE[oc], mfc='white' if hollow else col,
+                mec=col if hollow else _dark(col), mew=1.1 if hollow else 0.5, ls='none')
+
+
+def outcome_legend_handles(ms=5.5, color='#7F7F7F'):
+    """legend entries for the outcome shapes (grey; the colour of a real point is the reef's colour)"""
+    from matplotlib.lines import Line2D
+    lab = {'works': 'works', 'works rarely': 'works rarely', 'mixed': 'mixed / disputed', 'does not work': 'does not work',
+           'unknown': 'unknown (hollow)'}
+    out = []
+    for oc in OUTCOME_CLASSES:
+        hollow = oc in OUTCOME_HOLLOW
+        out.append(Line2D([0], [0], marker=OUTCOME_MARKER[oc], ms=ms * OUTCOME_SIZE[oc], mfc='white' if hollow else color,
+                          mec=color if hollow else _dark(color), mew=1.1 if hollow else 0.5, ls='none', label=lab[oc]))
+    return out
 
 
 def save(fig, name, dpi=300):

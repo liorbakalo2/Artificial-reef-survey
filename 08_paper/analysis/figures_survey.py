@@ -84,6 +84,8 @@ def year_label(r):
 
 def pick_line(pr, table_crest):
     """Section whose crest depth is closest to the master-table crest depth (ties: crest_line, centreline, second)."""
+    if pr['lines']['crest_line'].get('override'):          # per-reef surf cut (Lior 2026-10-19) is always the plotted section
+        return 'crest_line'
     best = None
     for ln in ('crest_line', 'centreline', 'second_crest_line'):
         m = pr['lines'][ln]['metrics']
@@ -124,7 +126,8 @@ def section_data(slug, R, pr):
     return dict(line=ln, x_line=L['x_line_m'], ysh=ysh, d=d, bed=bed, reef=reef, reef_d0=d[ok].min(), reef_d1=d[ok].max(),
                 crest_d=m['crest_y_m'] - ysh, crest_z=crest_z, crest_depth=-crest_z, toe_d=toe_d, toe_bed=toe_bed,
                 toe_depth=-toe_bed, gap=(-toe_bed) - (-crest_z), tide_lo=lo, tide_hi=hi, tide_name=nm,
-                ramp=m['ramp_length_m'], off=off)
+                ramp=m['ramp_length_m'], off=off, run_xy=L.get('reef_run_xy_m'),
+                dirv=(L.get('oblique') or {}).get('direction_xy', [0.0, 1.0]), override=bool(L.get('override')))
 
 
 def default_polys(sh):
@@ -159,15 +162,17 @@ def plan_geometry(slug, sec):
             dE, dN = E - S0[0], N - S0[1]
             return dE * dv[0] + dN * dv[1], dE * nv[0] + dN * nv[1]
         P = [np.array([c2uv(x, y) for x, y in poly]) for poly in polys]
-        xs = -sec['x_line']                       # model x = -canonical x
-        y0, y1 = sec['reef_d0'] + ysh - 8, sec['reef_d1'] + ysh + 8
-        sline = np.array([c2uv(xs, y0), c2uv(xs, y1)])
+        (xa, ya), (xb, yb) = sec['run_xy']        # model (x, y) of the reef run on the plotted (possibly oblique) cut
+        dvx, dvy = sec['dirv']
+        sline = np.array([c2uv(-(xa - 8 * dvx), ya - 8 * dvy), c2uv(-(xb + 8 * dvx), yb + 8 * dvy)])   # canonical x = -model x
     elif slug == 'bunbury-airwave':
         P = [np.array([(-x, y + sec['crest_d']) for x, y in poly]) for poly in polys]   # circle D = 12 m, centre at crest distance
         sline = np.array([(0, sec['reef_d0'] - 8), (0, sec['reef_d1'] + 8)], float)
     else:
         P = [np.array([(-x, y - ysh) for x, y in poly]) for poly in polys]
-        sline = np.array([(-sec['x_line'], sec['reef_d0'] - 8), (-sec['x_line'], sec['reef_d1'] + 8)], float)
+        (xa, ya), (xb, yb) = sec['run_xy']
+        dvx, dvy = sec['dirv']
+        sline = np.array([(-(xa - 8 * dvx), ya - 8 * dvy - ysh), (-(xb + 8 * dvx), yb + 8 * dvy - ysh)], float)
     allp = np.vstack(P)
     cx = 0.5 * (allp[:, 0].min() + allp[:, 0].max())
     P = [p - np.array([cx, 0]) for p in P]
@@ -179,6 +184,12 @@ def darker(c, f=0.55):
     c = c.lstrip('#')
     r, g, b = [int(c[i:i + 2], 16) for i in (0, 2, 4)]
     return '#%02x%02x%02x' % (int(r * f), int(g * f), int(b * f))
+
+
+def lighter(c, f=0.45):
+    c = c.lstrip('#')
+    r, g, b = [int(c[i:i + 2], 16) for i in (0, 2, 4)]
+    return '#%02x%02x%02x' % tuple(int(v + (255 - v) * (1 - f)) for v in (r, g, b))
 
 
 HALO = [pe.withStroke(linewidth=1.6, foreground='white')]
@@ -274,10 +285,10 @@ def draw_row(fig, H, y_top, slugs, R, SEC, GEO, with_notes):
         # header (three short lines, left aligned)
         xl = i * W_slot_m + 0.30 * SCALE
         tr = axp.get_xaxis_transform()
-        axp.plot([i * W_slot_m + 0.13 * SCALE], [1 + (0.09 + 0.54 + 0.10) / PLAN_H], transform=tr, marker=MARKERS[slug],
-                 ms=4.2, mfc=col, mec=darker(col), mew=0.4, clip_on=False, ls='')
+        axp.plot([i * W_slot_m + 0.13 * SCALE], [1 + (0.09 + 0.54 + 0.10) / PLAN_H], transform=tr, clip_on=False,
+                 **S.marker_kw(slug, ms=4.6))
         axp.text(xl, 1 + 0.09 / PLAN_H + 0.54 / PLAN_H, NAMES[slug], transform=tr, fontsize=7.5, fontweight='bold', va='bottom',
-                 ha='left', clip_on=False)
+                 ha='left', clip_on=False, color=darker(col, 0.8))
         axp.text(xl, 1 + 0.09 / PLAN_H + 0.27 / PLAN_H, '%s, %s' % (year_label(r), S.PLACE[slug].split(', ')[-1]), transform=tr,
                  fontsize=7, va='bottom', ha='left', clip_on=False, color=S.INK2)
         if slug in NOTE3:
@@ -293,10 +304,10 @@ def draw_row(fig, H, y_top, slugs, R, SEC, GEO, with_notes):
             axp.plot([x0 + 6], [yy], marker=MARKERS[u], ms=4, mfc='white', mec=S.UNKNOWN, mew=0.8, ls='')
             axp.text(x0 + 20, yy, '%s (%s, %s)' % (SHORT_UNK[u], S.PLACE[u].split(', ')[-1], year_label(R[u]).split('\u2013')[0]),
                      fontsize=7, va='center', ha='left', color=S.INK2)
-        axp.text(x0, 190, 'Dashed line: section\nshown below', fontsize=7, va='top', ha='left', color=S.INK2)
-        axp.plot([x0, x0 + 100], [118, 118], color='black', lw=1.6, solid_capstyle='butt')
-        axp.text(x0 + 50, 106, '100 m', fontsize=7, ha='center', va='top')
-        axp.text(x0, 78, 'x and y: one scale\n(1 cm = %d m)' % SCALE, fontsize=7, ha='left', va='top', color=S.INK2)
+        axp.text(x0, 190, 'Dashed line: section\nshown below (through\nthe surfed part, normal\nto the shoreline)', fontsize=7, va='top', ha='left', color=S.INK2)
+        axp.plot([x0, x0 + 100], [96, 96], color='black', lw=1.6, solid_capstyle='butt')
+        axp.text(x0 + 50, 84, '100 m', fontsize=7, ha='center', va='top')
+        axp.text(x0, 58, 'x and y: one scale\n(1 cm = %d m)' % SCALE, fontsize=7, ha='left', va='top', color=S.INK2)
     axp.text(NSLOT * W_slot_m - 6, -10, 'alongshore: arbitrary slots, view seaward', fontsize=7, va='center', ha='right', color='#5A4A2A', zorder=5)
     # profiles
     y_prof = y_top + HEAD_H + PLAN_H + GAP_H
@@ -327,12 +338,16 @@ def build_fig1(rows, name):
     PR = {s: load_profile(s) for s in ORDER_A + ORDER_B}
     SEC = {s: section_data(s, R, PR[s]) for s in PR}
     GEO = {s: plan_geometry(s, SEC[s]) for s in PR}
-    H = 0.1 + len(rows) * ROW_H + (len(rows) - 1) * 0.15
+    LEG_H = 0.80                                      # bottom strip: outcome-shape legend of the header symbols
+    H = 0.1 + len(rows) * ROW_H + (len(rows) - 1) * 0.15 + LEG_H
     fig = plt.figure(figsize=(FIG_W * S.CM, H * S.CM))
     y = 0.1
     for k, slugs in enumerate(rows):
         draw_row(fig, H, y, slugs, R, SEC, GEO, with_notes=(len(slugs) < NSLOT))
         y += ROW_H + 0.15
+    fig.legend(handles=S.outcome_legend_handles(ms=5.0), loc='lower center', bbox_to_anchor=(0.5 + 0.5 * ML / FIG_W, 0.0), ncol=5,
+               frameon=False, fontsize=7, handletextpad=0.3, columnspacing=1.2,
+               title=None, borderaxespad=0.1).set_title('Symbol before each name: surf outcome (shape); colour = reef', prop=dict(size=7))
     out = S.save(fig, name)
     return out, SEC, GEO, R, H
 
@@ -376,7 +391,7 @@ def fig2():
     n = len(ORDER_ALL)
     LAB_W, GAPX = 3.75, 0.28
     pw = (FIG_W - LAB_W - MR - 4 * GAPX) / 5
-    ROWH, HEAD, FOOT = 0.50, 0.85, 1.65
+    ROWH, HEAD, FOOT = 0.50, 0.85, 2.25
     H = HEAD + n * ROWH + FOOT
     fig = plt.figure(figsize=(FIG_W * S.CM, H * S.CM))
 
@@ -392,8 +407,8 @@ def fig2():
         if i % 2 == 0:
             axl.axhspan(i - 0.5, i + 0.5, color='#F3F3F3', lw=0, zorder=0, clip_on=False, xmin=0, xmax=1)
         r = R[s]
-        axl.plot([0.05], [i], marker=MARKERS[s], ms=4.6, mfc=COLORS[s], mec=darker(COLORS[s]), mew=0.4, ls='', clip_on=False)
-        axl.text(0.14, i, NAMES[s], fontsize=7.5, fontweight='bold', va='center', ha='left')
+        axl.plot([0.05], [i], clip_on=False, **S.marker_kw(s, ms=4.8))
+        axl.text(0.14, i, NAMES[s], fontsize=7.5, fontweight='bold', va='center', ha='left', color=darker(COLORS[s], 0.8))
         axl.text(0.945, i, str(val(r, 'year_built')), fontsize=7, va='center', ha='right', color=S.INK2)
     stats = {}
     for c, (f, head, islog, xl, ticks, fmt) in enumerate(F2_COLS):
@@ -433,18 +448,22 @@ def fig2():
             col = COLORS[s]
             base = xl[0] if islog else 0
             ax.plot([base, v], [i, i], color=col, lw=0.8, alpha=0.55, zorder=3, solid_capstyle='butt')
-            ax.plot([v], [i], marker=MARKERS[s], ms=4.6, mfc='white' if op else col, mec=darker(col) if not op else col,
-                    mew=0.9 if op else 0.4, ls='', zorder=4, clip_on=False)
+            kw = S.marker_kw(s, ms=4.8)
+            if op and S.OUTCOME.get(s) != 'unknown':      # low confidence = light (half-tone) fill; unknown outcome stays hollow
+                kw.update(mfc=lighter(col), mec=col, mew=0.9)
+            ax.plot([v], [i], zorder=4, clip_on=False, **kw)
             lab = fmt.format(v).replace('-', '−')
             ax.text(full, i, lab, fontsize=7, va='center', ha='right', color=S.INK2 if op else S.INK, zorder=5)
             stats[(s, f)] = v
     # footnote / key
     yk = H - 0.95
-    fig.text(0.05 / FIG_W, 1 - (H - 1.12) / H,
-             'Rows in order of construction start (year at right of name); numbers at the right of each panel are the plotted values. Filled symbol: sourced\n'
-             'or derived from traced geometry; open symbol: assumed, low-confidence or not directly comparable (photo trace, bounding rectangle, both mounds\n'
-             'at Borth, LAT datum at Opunake); "unknown": not found in any source checked.',
+    fig.text(0.05 / FIG_W, 1 - (H - 1.72) / H,
+             'Rows in order of construction start (year at right of name); numbers at the right of each panel are the plotted values. Colour and name = reef;\n'
+             'symbol shape = surf outcome (legend below). Solid fill: sourced or derived from traced geometry; light fill: assumed, low-confidence or not directly\n'
+             'comparable (photo trace, bounding rectangle, both mounds at Borth, LAT datum at Opunake); "unknown" value: not found in any source checked.',
              fontsize=7, va='top', ha='left', color=S.INK2, linespacing=1.3)
+    fig.legend(handles=S.outcome_legend_handles(ms=5.0), loc='lower left', bbox_to_anchor=(0.05 / FIG_W, 0.0), ncol=5, frameon=False,
+               fontsize=7, handletextpad=0.3, columnspacing=1.2, title='Surf outcome (symbol shape)', title_fontsize=7, alignment='left')
     S.save(fig, 'fig2_reef_size_overview')
     print('fig2 height cm', round(H, 1), 'plot rows', n)
 
@@ -489,8 +508,9 @@ def figB():
         lab.axis('off')
         lab.set_xlim(0, 1)
         lab.set_ylim(0, 1)
-        lab.plot([0.035], [0.70], marker=MARKERS[slug], ms=4.6, mfc=COLORS[slug], mec=darker(COLORS[slug]), mew=0.4, ls='')
-        lab.text(0.08, 0.70, '(%s) %s, %s' % ('abcdefghi'[k], NAMES[slug], year_label(R[slug])), fontsize=7.5, fontweight='bold', va='center', ha='left')
+        lab.plot([0.035], [0.70], **S.marker_kw(slug, ms=4.8))
+        lab.text(0.08, 0.70, '(%s) %s, %s' % ('abcdefghi'[k], NAMES[slug], year_label(R[slug])), fontsize=7.5, fontweight='bold', va='center', ha='left',
+                 color=darker(COLORS[slug], 0.8))
         lab.text(0.08, 0.24, ver, fontsize=7, va='center', ha='left', color=S.INK2)
     S.save(fig, 'figB_3d_gallery')
     print('figB height cm', round(H, 1), 'tile', round(tile_w, 2), 'x', round(tile_h, 2))
@@ -536,11 +556,15 @@ def write_captions():
         "\n\n---\nBuild notes (not part of the caption): source images `07_scale/shapes/<slug>/3d/preview_oblique.png` (Pratte's and Mount Maunganui: `preview_plan.png`), cropped to the 3D viewport "
         "(crop boxes in `figures_survey.py`, `GALLERY`); the text labels inside the tiles come from the viewer. Plan previews for the other reefs are not used because Figure 1 shows their plan shapes.\n")
     for name, txt in (('fig1_plan_and_profiles', c1 + n1), ('fig2_reef_size_overview', c2), ('figB_3d_gallery', cb)):
-        open(os.path.join(S.FIG_DIR, name + '.caption.md'), 'w', encoding='utf-8').write(txt)
+        fp = os.path.join(S.FIG_DIR, name + '.caption.md')
+        if os.path.exists(fp):        # LEGACY first-draft texts: never overwrite the hand-maintained captions (surf cuts, outcome shapes)
+            print('caption exists, not overwritten:', fp)
+            continue
+        open(fp, 'w', encoding='utf-8').write(txt)
 
 
 
 if __name__ == '__main__':
-    todo = sys.argv[1:] or ['fig1', 'fig2', 'figB', 'write_captions']
+    todo = sys.argv[1:] or ['fig1', 'fig2', 'figB']   # captions are maintained by hand in figures/*.caption.md (since 2026-10-19)
     for t in todo:
         globals()[t]()

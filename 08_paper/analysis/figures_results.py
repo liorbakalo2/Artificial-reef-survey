@@ -21,7 +21,7 @@ import pandas as pd
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import style as S  # noqa: E402
 import wavelib as W  # noqa: E402
-from style import COLORS, INK, INK2, MARKERS, NAMES, UNKNOWN, GRID  # noqa: E402
+from style import COLORS, INK, INK2, MARKERS, NAMES, UNKNOWN, GRID  # MARKERS = outcome shape per reef  # noqa: E402
 
 import matplotlib.colors as mcolors  # noqa: E402
 import matplotlib.pyplot as plt  # noqa: E402
@@ -58,33 +58,26 @@ def outcome_kind(o):
 
 
 def pt(ax, slug, x, y, outcome, ms=6.0, z=6, ghost=False):
-    """One reef marker: colour + shape = reef (style.py), fill = outcome."""
-    col, mk = COLORS[slug], MARKERS[slug]
-    k = outcome_kind(outcome)
+    """One reef marker: colour = reef (style.py), SHAPE = outcome class (style.OUTCOME_MARKER; unknown = small hollow square)."""
+    kw = S.marker_kw(slug, ms=ms, outcome=outcome)
     if ghost:
-        ax.plot([x], [y], marker=mk, ms=ms * 0.8, mfc='none', mec=col, mew=0.8, ls='none', zorder=z - 1, alpha=0.9)
+        kw.update(mfc='none', mec=COLORS[slug], mew=0.8, ms=kw['ms'] * 0.8)
+        ax.plot([x], [y], zorder=z - 1, alpha=0.75, **kw)
         return
-    if k == 'full':
-        ax.plot([x], [y], marker=mk, ms=ms, mfc=col, mec=darken(col), mew=0.5, ls='none', zorder=z)
-    elif k == 'half':
-        ax.plot([x], [y], marker=mk, ms=ms, mfc=col, mfcalt='white', fillstyle='left', mec=darken(col), mew=0.9, ls='none',
-                zorder=z)
-    elif k == 'no':
-        ax.plot([x], [y], marker=mk, ms=ms, mfc='white', mec=col, mew=1.2, ls='none', zorder=z)
-        ax.plot([x], [y], marker='x', ms=ms * 0.75, mec=INK, mew=0.9, ls='none', zorder=z + 0.1)
-    else:
-        ax.plot([x], [y], marker=mk, ms=ms, mfc=UNKNOWN, mec=INK2, mew=0.6, ls='none', zorder=z)
+    ax.plot([x], [y], zorder=z, **kw)
 
 
 def outcome_legend_handles():
-    g = '#7F7F7F'
-    return [
-        Line2D([0], [0], marker='o', ms=6, mfc=g, mec=INK2, mew=0.5, ls='none', label='works'),
-        Line2D([0], [0], marker='o', ms=6, mfc=g, mfcalt='white', fillstyle='left', mec=INK2, mew=0.9, ls='none',
-               label='works rarely / mixed'),
-        Line2D([0], [0], marker='o', ms=6, mfc='white', mec=g, mew=1.2, ls='none', label='does not work'),
-        Line2D([0], [0], marker='o', ms=6, mfc=UNKNOWN, mec=INK2, mew=0.6, ls='none', label='unknown'),
-    ]
+    return S.outcome_legend_handles()
+
+
+def reef_label(ax, slug, x, y, dx, dy, ha='left', va='center', text=None, fs=7, z=7):
+    """direct label in the reef's own colour (darkened for contrast), white halo"""
+    import matplotlib.patheffects as pe
+    t = ax.annotate(text or NAMES[slug], (x, y), xytext=(dx, dy), textcoords='offset points', fontsize=fs, ha=ha, va=va,
+                    color=darken(COLORS[slug], 0.8), fontweight='bold', zorder=z)
+    t.set_path_effects([pe.withStroke(linewidth=2.2, foreground='white')])
+    return t
 
 
 def halo_text(ax, x, y, s, **kw):
@@ -112,9 +105,9 @@ def fig4():
     summ = rd('results_reef_summary.csv').set_index('slug')
     corr = rj('results_outcome_correlations.json')['corr']
     alb = json.load(open(os.path.join(S.DATA_DIR, 'profiles', 'southern-ocean-surf-reef-albany.json'), encoding='utf-8'))
-    am = alb['lines']['centreline']['metrics']
-    fig = plt.figure(figsize=(S.cm(14.5), S.cm(11.6)))
-    ax = fig.add_axes([0.085, 0.265, 0.905, 0.715])
+    am = alb['lines'].get('crest_line_auto', alb['lines']['centreline'])['metrics']   # old automatic cut (take-off plateau)
+    fig = plt.figure(figsize=(S.cm(14.5), S.cm(13.2)))
+    ax = fig.add_axes([0.085, 0.315, 0.905, 0.67])
     xlim, ylim = (0.7, 300.0), (0.9, 10.0)
     ax.set_xscale('log')
     ax.set_yscale('log')
@@ -137,16 +130,35 @@ def fig4():
         for xi in (0.4, 2.0):
             Xl = 1.0 / (xi * math.sqrt(1.0 / L0))
             ax.plot(xs, xs / Xl, color=col, lw=0.9, ls=ls, zorder=2)
-    ax.text(1.0, 9.0, 'collapsing (Y < 1.6)', fontsize=7, color=INK2, ha='left', va='center', zorder=3)
+    # band labels: slope 1:X of each class limit, written along its diagonal near the top edge
+    for X, nm in zip(Xs, ['Y = 1.6', 'Y = 1.9', 'Y = 2.5', 'Y = 3.1']):
+        yl = 8.6
+        xl = yl * X
+        if xl < xlim[1] * 0.8:
+            ang = ray_angle(ax, xl, yl)
+            ax.text(xl, yl, '1:%.0f' % X, fontsize=6.3, color='#6F6F6F', rotation=ang, rotation_mode='anchor', ha='right',
+                    va='bottom', zorder=3)
+    band_mid = [(1.6, 'collapsing /\nbeyond extreme'), (math.sqrt(Xs[0] * Xs[1]), 'extreme'), (math.sqrt(Xs[1] * Xs[2]), 'very high\n/ high'),
+                (math.sqrt(Xs[2] * Xs[3]), 'medium'), (60.0, 'gentle')]
+    for X, nm in band_mid:
+        yb = 1.25
+        xb = yb * X
+        if xlim[0] < xb < xlim[1]:
+            ax.text(xb, yb, nm, fontsize=6.3, color='#5A5A5A', rotation=ray_angle(ax, xb, yb), rotation_mode='anchor', ha='center',
+                    va='center', zorder=3, style='italic')
+    ax.text(0.012, 0.985, 'Each diagonal = one constant ramp slope \u0394h / L.\nBreaking intensity depends on the slope only,\n'
+            'so its zones are parallel diagonal bands:\nsteeper (upper left) = more intense, plunging/\ncollapsing; '
+            'gentler (lower right) = spilling.', transform=ax.transAxes, fontsize=6.5, color=INK, ha='left', va='top', zorder=8,
+            bbox=dict(boxstyle='round,pad=0.25', fc='white', ec=GRID, lw=0.5))
     order = ['narrowneck-gold-coast', 'palm-beach-gold-coast', 'cables-reef-wa', 'mount-maunganui-reef',
              'prattes-reef-el-segundo', 'boscombe-surf-reef', 'borth-coastal-defence-reef', 'bunbury-airwave',
              'southern-ocean-surf-reef-albany']
     off = {  # label offset in points (dx, dy, ha, va)
-        'narrowneck-gold-coast': (8, 0, 'left', 'center'), 'palm-beach-gold-coast': (7, 5, 'left', 'bottom'),
-        'cables-reef-wa': (-8, 3, 'right', 'bottom'), 'mount-maunganui-reef': (8, 0, 'left', 'center'),
+        'narrowneck-gold-coast': (8, 0, 'left', 'center'), 'palm-beach-gold-coast': (-7, 5, 'right', 'bottom'),
+        'cables-reef-wa': (8, 3, 'left', 'bottom'), 'mount-maunganui-reef': (8, 0, 'left', 'center'),
         'prattes-reef-el-segundo': (8, 0, 'left', 'center'), 'boscombe-surf-reef': (-8, 0, 'right', 'center'),
-        'borth-coastal-defence-reef': (0, -8, 'center', 'top'), 'bunbury-airwave': (-8, 0, 'right', 'center'),
-        'southern-ocean-surf-reef-albany': (8, 3, 'left', 'bottom')}
+        'borth-coastal-defence-reef': (-7, -2, 'right', 'top'), 'bunbury-airwave': (-8, 0, 'right', 'center'),
+        'southern-ocean-surf-reef-albany': (8, -3, 'left', 'top')}
     for s in order:
         r = summ.loc[s]
         x, y = r.rep_ramp_length_m, r.rep_depth_gap_m
@@ -156,19 +168,14 @@ def fig4():
             pt(ax, s, xg, yg, r.outcome, ms=6.0, ghost=True)
         pt(ax, s, x, y, r.outcome, ms=6.8)
         dx, dy, ha, va = off[s]
-        t = ax.annotate(NAMES[s], (x, y), xytext=(dx, dy), textcoords='offset points', fontsize=7, ha=ha, va=va, color=INK, zorder=7)
-        import matplotlib.patheffects as pe
-        t.set_path_effects([pe.withStroke(linewidth=2.2, foreground='white')])
+        reef_label(ax, s, x, y, dx, dy, ha=ha, va=va)
     s = 'southern-ocean-surf-reef-albany'                                      # Albany centreline ghost
     xa, ya = am['ramp_length_m'], am['crest_to_toe_seabed_drop_m']
     ax.plot([summ.loc[s].rep_ramp_length_m, xa], [summ.loc[s].rep_depth_gap_m, ya], color=COLORS[s], lw=0.6, zorder=3, alpha=0.8)
     pt(ax, s, xa, ya, 'works', ghost=True)
-    t = ax.annotate('Albany\ncentreline', (xa, ya), xytext=(6, -3), textcoords='offset points', fontsize=7, ha='left', va='top',
-                    color=INK, zorder=7)
-    import matplotlib.patheffects as pe
-    t.set_path_effects([pe.withStroke(linewidth=2.2, foreground='white')])
-    ax.set_xlabel('Ramp length, crest edge to seaward toe (m)')
-    ax.set_ylabel('Depth gap, crest to seaward-toe bed (m)')
+    reef_label(ax, s, xa, ya, 6, 2, ha='left', va='bottom', text='Albany, old cut\n(take-off plateau)', fs=6.5)
+    ax.set_xlabel('Ramp length L, from the seaward edge of the crest to the seaward toe (m, log scale)')
+    ax.set_ylabel('Depth gap \u0394h = toe bed depth \u2212 crest depth (m, log scale)')
     ax.set_xticks([1, 2, 5, 10, 20, 50, 100, 200])
     ax.set_xticklabels(['1', '2', '5', '10', '20', '50', '100', '200'])
     ax.set_yticks([1, 2, 3, 4, 5, 6, 8, 10])
@@ -183,16 +190,17 @@ def fig4():
             bbox=dict(boxstyle='round,pad=0.25', fc='white', ec=GRID, lw=0.5), zorder=8)
     h1 = [Line2D([0], [0], color='#1B5E87', lw=0.9, ls=(0, (4, 2)), label='\u03be$_b$ = 0.4 and 2.0, T = 10 s (1:31, 1:6.2)'),
           Line2D([0], [0], color='#B03A2E', lw=0.9, ls=(0, (1.5, 1.5)), label='\u03be$_b$ = 0.4 and 2.0, T = 7 s (1:22, 1:4.4)'),
-          Line2D([0], [0], color='#8F8F8F', lw=0.5, label='Mead class limits (Y = 1.6, 1.9, 2.5, 3.1)'),
-          Line2D([0], [0], marker='o', ms=5.5, mfc='none', mec=INK2, mew=0.8, ls='none', label='crest-line value (ghost)')]
+          Line2D([0], [0], color='#8F8F8F', lw=0.5, label='Mead class limits Y = 1.6, 1.9, 2.5, 3.1\n(slopes 1:12, 1:17, 1:26, 1:35)'),
+          Line2D([0], [0], marker='o', ms=5.5, mfc='none', mec=INK2, mew=0.8, ls='none', label='other cut of the same reef\n(thin line joins the two)')]
     fig.legend(handles=h1, loc='lower left', bbox_to_anchor=(0.0, 0.0), ncol=1, frameon=False, fontsize=7, handlelength=2.0,
-               labelspacing=0.3, title='Lines', title_fontsize=7, alignment='left')
+               labelspacing=0.3, title='Lines (all are constant slopes \u0394h / L)', title_fontsize=7, alignment='left')
     h2 = [Patch(fc=shades[i], ec='#8F8F8F', lw=0.4, label=n_) for i, n_ in enumerate(
-        ['collapsing, Y < 1.6', 'extreme, 1.6-1.9', 'very high / high, 1.9-2.5', 'medium, 2.5-3.1', 'gentle, Y > 3.1'])]
-    fig.legend(handles=h2, loc='lower left', bbox_to_anchor=(0.43, 0.0), ncol=1, frameon=False, fontsize=7, handlelength=1.4,
-               labelspacing=0.3, title='Breaking intensity (Mead & Black)', title_fontsize=7, alignment='left')
-    fig.legend(handles=outcome_legend_handles(), loc='lower left', bbox_to_anchor=(0.77, 0.0), ncol=1, frameon=False, fontsize=7,
-               labelspacing=0.3, handletextpad=0.4, title='Outcome', title_fontsize=7, alignment='left')
+        ['beyond extreme, Y < 1.6 (steeper than 1:12)', 'extreme, Y 1.6-1.9 (1:12-1:17)', 'very high / high, Y 1.9-2.5 (1:17-1:26)',
+         'medium, Y 2.5-3.1 (1:26-1:35)', 'gentle, Y > 3.1 (gentler than 1:35)'])]
+    fig.legend(handles=h2, loc='lower left', bbox_to_anchor=(0.415, 0.0), ncol=1, frameon=False, fontsize=7, handlelength=1.4,
+               labelspacing=0.3, title='Breaking intensity (Mead 2000, vortex ratio Y)', title_fontsize=7, alignment='left')
+    fig.legend(handles=outcome_legend_handles(), loc='lower left', bbox_to_anchor=(0.80, 0.0), ncol=1, frameon=False, fontsize=7,
+               labelspacing=0.3, handletextpad=0.4, title='Outcome (shape)', title_fontsize=7, alignment='left')
     return fig
 
 
@@ -206,9 +214,9 @@ def fig5():
              'southern-ocean-surf-reef-albany', 'cables-reef-wa', 'boscombe-surf-reef', 'palm-beach-gold-coast']
     assumed = {'narrowneck-gold-coast', 'palm-beach-gold-coast', 'mount-maunganui-reef', 'borth-coastal-defence-reef',
                'southern-ocean-surf-reef-albany'}      # phi0 ASSUMPTION in results_peel.csv (phi0_src); checked below
-    fig = plt.figure(figsize=(S.cm(9.6), S.cm(11.8)))
-    axT = fig.add_axes([0.285, 0.665, 0.69, 0.32])
-    axB = fig.add_axes([0.285, 0.17, 0.69, 0.455], sharex=axT)
+    fig = plt.figure(figsize=(S.cm(9.6), S.cm(14.0)))
+    axT = fig.add_axes([0.285, 0.715, 0.69, 0.275])
+    axB = fig.add_axes([0.285, 0.30, 0.69, 0.38], sharex=axT)
     # --- top: Hutt rating rows (a rating can ride a wave with peel angle >= its limit)
     for r in range(1, 11):
         lim = W.HUTT[r][0]
@@ -221,16 +229,20 @@ def fig5():
         px += [lim, lim]
         py += [r - 0.5, r + 0.5]
     axT.plot(px, py, color=INK, lw=0.9, zorder=3, solid_joinstyle='miter')
+    for r in range(1, 11):              # Hutt et al. (2001) Table 3: breaking-wave height range of each rating (m, ASSUMED units)
+        lim, hmin, hmax, _ = W.HUTT[r]
+        htxt = '%.2f-%s m' % (hmin, ('%.2f' % hmax) if math.isfinite(hmax) else '>4')
+        xt = (lim - 2.0) if (lim is not None and lim < 90) else (88.0 if lim is not None else 52.0)
+        pre = {1: 'beginner: ', 7: '', 8: ''}.get(r, '')
+        axT.text(xt, r, pre + ('%d\u00b0, ' % lim if lim is not None else '') + 'H$_b$ ' + htxt, fontsize=6.3, va='center',
+                 ha='left', color=INK if r == 1 else INK2, zorder=4)
     axT.set_ylim(10.5, 0.5)
     axT.set_yticks(range(1, 11))
     axT.set_ylabel('Hutt skill rating')
-    axT.text(88, 1.0, 'beginner', fontsize=7, va='center', ha='left', color=INK, zorder=4)
     axT.text(88, 7.0, 'top amateur', fontsize=7, va='center', ha='left', color=INK, zorder=4)
     axT.text(88, 8.0, 'professional', fontsize=7, va='center', ha='left', color=INK, zorder=4)
-    axT.text(88, 9.5, 'peel limit not reached', fontsize=7, va='center', ha='left', color=INK, zorder=4,
+    axT.text(88, 9.5, 'no limit', fontsize=7, va='center', ha='left', color=INK, zorder=4,
              bbox=dict(boxstyle='round,pad=0.1', fc='white', ec='none', alpha=0.8))
-    axT.text(52, 2.0, 'learners (1-3) need 60-90\u00b0:\nno reef gives it within the\nrating\'s wave-height range', fontsize=7,
-             va='center', ha='left', color=INK2, zorder=4, bbox=dict(boxstyle='round,pad=0.1', fc='white', ec='none', alpha=0.9))
     plt.setp(axT.get_xticklabels(), visible=False)
     # --- bottom: reefs
     n = len(reefs)
@@ -251,39 +263,45 @@ def fig5():
                 axB.plot([a], [i], marker='+', ms=7, mec=INK, mew=0.8, ls='none', zorder=6)
         # unrefracted incident angle phi0 (both arms)
         for phi0 in sorted(sub.phi0_deg.unique()):
-            axB.plot([phi0], [i], marker='D', ms=4.2, mfc='white', mec=col, mew=1.1, ls='none', zorder=4)
+            axB.plot([phi0], [i], marker='|', ms=8, mec=col, mew=1.6, ls='none', zorder=4)
         # site-H value
         r = summ.loc[s]
         pt(axB, s, r.peel_alpha_snell_deg, i, r.outcome, ms=7.0, z=7)
     # Narrowneck alternative phi0 = 41 deg (dashed variant)
     alt = peel[(peel.slug == 'narrowneck-gold-coast') & peel.phi0_src.str.startswith('ALT')].iloc[0]
     axB.plot([alt.phi0_deg, alt.alpha_break_deg], [0.3, 0.3], color=COLORS['narrowneck-gold-coast'], lw=0.8, ls=(0, (3, 2)), zorder=4)
-    axB.plot([alt.phi0_deg], [0.3], marker='D', ms=3.6, mfc='white', mec=COLORS['narrowneck-gold-coast'], mew=0.9, ls='none', zorder=4)
+    axB.plot([alt.phi0_deg], [0.3], marker='|', ms=6, mec=COLORS['narrowneck-gold-coast'], mew=1.2, ls='none', zorder=4)
     axB.plot([alt.alpha_break_deg], [0.3], marker='o', ms=3.2, mfc='white', mec=COLORS['narrowneck-gold-coast'], mew=0.8, ls='none',
              zorder=4)
     axB.annotate('alt. \u03c6$_0$ 41\u00b0', (31.0, 0.3), xytext=(0, -3), textcoords='offset points', fontsize=7, ha='center',
                  va='top', color=INK2)
     axB.set_yticks(range(n))
     axB.set_yticklabels([NAMES[s] + ('*' if s in assumed else '') for s in reefs])
+    for tl, s in zip(axB.get_yticklabels(), reefs):        # reef name in the reef's colour
+        tl.set_color(darken(COLORS[s], 0.8))
+        tl.set_fontweight('bold')
     axB.set_xlim(90, 0)
     axB.set_xlabel('Peel angle at breaking (deg; smaller = faster)')
     axB.set_xticks([90, 70, 60, 50, 40, 30, 20, 10, 0])
-    # shared vertical guides: 30 deg (Lior) and the close-out band
+    # shared vertical guides: Walker's 30 deg minimum (6-ft plunging wave) and the close-out band
     for ax in (axT, axB):
         ax.axvspan(25, 0, color='#EDEDED', lw=0, zorder=0)
         ax.axvline(30, color='#B03A2E', lw=0.8, ls=(0, (4, 2)), zorder=1)
         for sp in ('top', 'right'):
             ax.spines[sp].set_visible(False)
     axB.text(7.5, (n - 1) / 2.0, 'approaching close-out (< 25\u00b0)', fontsize=7, va='center', ha='center', color=INK2, rotation=90, zorder=2)
-    axT.text(28.5, 4.5, '30\u00b0 (Lior) =\nrating 7 limit (29\u00b0)', fontsize=7, color='#B03A2E', ha='left', va='center', zorder=4)
+    axT.text(28.5, 9.5, 'Walker (1975): 30\u00b0 min.,\n6-ft plunging wave', fontsize=6.3, color='#B03A2E', ha='left', va='center', zorder=4,
+             bbox=dict(boxstyle='round,pad=0.1', fc='white', ec='none', alpha=0.85))
     h = [Line2D([0], [0], marker='o', ms=3.8, mfc='#7F7F7F', mec=INK2, mew=0.7, ls='none', label='H$_0$ 0.5-3 m, breaks on reef'),
          Line2D([0], [0], marker='o', ms=3.8, mfc='white', mec=INK2, mew=0.7, ls='none', label='no break on the reef'),
          Line2D([0], [0], marker='+', ms=6, mec=INK, mew=0.8, ls='none', label='H$_b$ above rating\'s height range'),
-         Line2D([0], [0], marker='D', ms=4, mfc='white', mec=INK2, mew=1.1, ls='none', label='φ$_0$, no refraction'),
-         Line2D([0], [0], marker='o', ms=6.5, mfc='#7F7F7F', mec=INK2, mew=0.5, ls='none', label='site-H wave (fill = outcome)')]
-    fig.legend(handles=h, loc='lower left', bbox_to_anchor=(0.0, 0.0), ncol=2, frameon=False, fontsize=7, columnspacing=0.8,
-               labelspacing=0.3, handletextpad=0.3)
-    fig.text(0.99, 0.005, '* φ$_0$ assumed', fontsize=7, ha='right', va='bottom', color=INK2)
+         Line2D([0], [0], marker='|', ms=7, mec=INK2, mew=1.4, ls='none', label='φ$_0$, no refraction'),
+         Line2D([0], [0], color='#B03A2E', lw=0.8, ls=(0, (4, 2)), label='Walker (1975) 30\u00b0 minimum')]
+    fig.legend(handles=h, loc='lower left', bbox_to_anchor=(0.0, 0.03), ncol=1, frameon=False, fontsize=6.5, columnspacing=0.8,
+               labelspacing=0.3, handletextpad=0.3, title='Small symbols: H$_0$ 0.5-3 m runs', title_fontsize=6.5, alignment='left')
+    fig.legend(handles=outcome_legend_handles(), loc='lower left', bbox_to_anchor=(0.6, 0.03), ncol=1, frameon=False, fontsize=6.5,
+               labelspacing=0.25, handletextpad=0.3, title='Site-H wave, shape = outcome', title_fontsize=6.5, alignment='left')
+    fig.text(0.01, 0.005, '* φ$_0$ (incident angle to the peel line) assumed; see caption', fontsize=6.5, ha='left', va='bottom', color=INK2)
     return fig
 
 
@@ -293,8 +311,8 @@ def fig6():
     vo = rd('results_volume_outcome.csv')
     summ = rd('results_reef_summary.csv').set_index('slug')
     corr = rj('results_outcome_correlations.json')
-    fig = plt.figure(figsize=(S.cm(9.6), S.cm(9.4)))
-    ax = fig.add_axes([0.21, 0.425, 0.72, 0.565])
+    fig = plt.figure(figsize=(S.cm(9.6), S.cm(11.4)))
+    ax = fig.add_axes([0.21, 0.49, 0.72, 0.495])
     ax.set_xscale('log')
     ax.set_xlim(50, 100000)
     ax.set_ylim(0.45, 3.55)
@@ -318,13 +336,10 @@ def fig6():
             vm = summ.loc[s].volume_model_m3
             ax.plot([r.volume_stated_m3, vm], [y, y], color=COLORS[s], lw=0.7, zorder=3)
             ax.plot([vm], [y], marker=MARKERS[s], ms=4.6, mfc='white', mec=COLORS[s], mew=1.0, ls='none', zorder=4)
-        ax.plot([r.volume_stated_m3], [y], marker=MARKERS[s], ms=7.5 if s != 'burkitts-reef-bargara' else 9, mfc=COLORS[s],
-                mec=darken(COLORS[s]), mew=0.5, ls='none', zorder=6)
+        pt(ax, s, r.volume_stated_m3, y, summ.loc[s].outcome if s in summ.index else S.OUTCOME.get(s), ms=7.5, z=6)
         dx, dy, ha, va = lab[s]
         nm = NAMES[s] if s != 'burkitts-reef-bargara' else 'Burkitts*'
-        t = ax.annotate(nm, (r.volume_stated_m3, y), xytext=(dx, dy), textcoords='offset points', fontsize=7, ha=ha, va=va,
-                        color=INK, zorder=8)
-        t.set_path_effects([pe.withStroke(linewidth=2.2, foreground='white')])
+        reef_label(ax, s, r.volume_stated_m3, y, dx, dy, ha=ha, va=va, text=nm, z=8)
     ax.set_yticks([1, 2, 3])
     ax.set_yticklabels(['does not\nwork', 'works rarely\nor mixed', 'works'])
     ax.set_xlabel('Reef volume (m$^3$, log scale)')
@@ -341,12 +356,15 @@ def fig6():
               c['built_reefs_excl_burkitts']['n'], c['all_incl_burkitts_natural']['spearman_rho'],
               c['all_incl_burkitts_natural']['p_permutation'], c['all_incl_burkitts_natural']['n'], cm_['spearman_rho'],
               cm_['p_permutation'], cm_['n']))
-    fig.text(0.0, 0.225, 'Spearman rank correlation with outcome:\n' + txt, fontsize=7, color=INK, ha='left', va='center', linespacing=1.3)
+    fig.text(0.0, 0.335, 'Spearman rank correlation with outcome:\n' + txt, fontsize=7, color=INK, ha='left', va='center', linespacing=1.3)
     h = [Line2D([0], [0], marker='o', ms=6.5, mfc='#7F7F7F', mec=INK2, mew=0.5, ls='none', label='stated volume (source)'),
-         Line2D([0], [0], marker='o', ms=4.4, mfc='white', mec='#7F7F7F', mew=1.0, ls='none', label='volume of the 3D model')]
-    fig.legend(handles=h, loc='lower left', bbox_to_anchor=(0.0, 0.0), ncol=2, frameon=False, fontsize=7, columnspacing=1.0,
-               handletextpad=0.3)
-    fig.text(0.0, 0.095, '* Burkitts: natural reef reshaped (about 300 m$^3$ of rock moved)', fontsize=7, color=INK2, ha='left',
+         Line2D([0], [0], marker='o', ms=4.4, mfc='white', mec='#7F7F7F', mew=1.0, ls='none', label='volume of the 3D model'),
+         Line2D([0], [0], color='#7F7F7F', lw=0.7, label='joins the two volumes')]
+    fig.legend(handles=h, loc='lower left', bbox_to_anchor=(0.0, 0.03), ncol=1, frameon=False, fontsize=6.5, labelspacing=0.25,
+               handletextpad=0.3, title='Colour + label = reef', title_fontsize=6.5, alignment='left')
+    fig.legend(handles=outcome_legend_handles()[:4], loc='lower left', bbox_to_anchor=(0.55, 0.03), ncol=1, frameon=False, fontsize=6.5,
+               labelspacing=0.25, handletextpad=0.3, title='Shape = outcome', title_fontsize=6.5, alignment='left')
+    fig.text(0.0, 0.012, '* Burkitts: natural reef reshaped (about 300 m$^3$ of rock moved)', fontsize=7, color=INK2, ha='left',
              va='center')
     return fig
 
@@ -357,8 +375,8 @@ def fig7():
     import matplotlib.patheffects as pe
     t = rd('results_tide_range_summary.csv')
     summ = rd('results_reef_summary.csv').set_index('slug')
-    fig = plt.figure(figsize=(S.cm(13.0), S.cm(10.2)))
-    ax = fig.add_axes([0.075, 0.31, 0.915, 0.675])
+    fig = plt.figure(figsize=(S.cm(13.0), S.cm(11.4)))
+    ax = fig.add_axes([0.075, 0.375, 0.915, 0.61])
     ax.set_xlim(0, 4.5)
     ax.set_ylim(-0.045, 1.04)
     # Israeli range band (Rosen 2001: neap 0.15 m, spring 0.40 m)
@@ -380,7 +398,7 @@ def fig7():
            'southern-ocean-surf-reef-albany': (9, -1, 'left', 'center'), 'borth-coastal-defence-reef': (0, 8, 'center', 'bottom'),
            'mount-maunganui-reef': (9, 1, 'left', 'center'), 'narrowneck-gold-coast': (-9, 3, 'right', 'center'),
            'prattes-reef-el-segundo': (9, 1, 'left', 'center'), 'boscombe-surf-reef': (9, -1, 'left', 'center'),
-           'bunbury-airwave': (0, 12, 'center', 'bottom')}
+           'bunbury-airwave': (-10, 3, 'right', 'bottom')}
     for s in order:
         r = summ.loc[s]
         x, y, yi = r.spring_range_m, r.surfable_frac_best_line, r.surfable_frac_israeli_tide_best_line
@@ -388,13 +406,13 @@ def fig7():
         if abs(x - 0.40) > 1e-6:
             ax.annotate('', xy=(0.40, yi), xytext=(x, y), arrowprops=dict(arrowstyle='-|>', color=col, lw=0.8, shrinkA=4.5, shrinkB=2.5,
                                                                           mutation_scale=5, alpha=0.9), zorder=4)
-        ax.plot([0.40], [yi], marker=MARKERS[s], ms=4.2, mfc='white', mec=col, mew=1.0, ls='none', zorder=5)
+        kw = S.marker_kw(s, ms=4.4, outcome=r.outcome)
+        kw.update(mfc='white', mec=col, mew=1.0)
+        ax.plot([0.40], [yi], zorder=5, **kw)
         ax.plot([x, x], [-0.045, -0.018], color=col, lw=1.6, solid_capstyle='butt', zorder=5, clip_on=False)   # range tick
         pt(ax, s, x, y, r.outcome, ms=6.8, z=7)
         dx, dy, ha, va = off[s]
-        tx = ax.annotate('Bunbury' if s == 'bunbury-airwave' else NAMES[s], (x, y), xytext=(dx, dy), textcoords='offset points', fontsize=7,
-                         ha=ha, va=va, color=INK, zorder=9)
-        tx.set_path_effects([pe.withStroke(linewidth=2.2, foreground='white')])
+        reef_label(ax, s, x, y, dx, dy, ha=ha, va=va, text='Bunbury' if s == 'bunbury-airwave' else NAMES[s], z=9)
     ax.set_xlabel('Tide range (m): spring; great diurnal at Pratte\'s; annual at WA reefs')
     ax.set_ylabel('Fraction of the lunar month with a surfable break')
     ax.set_xticks([0, 0.4, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5])
@@ -417,9 +435,9 @@ def fig7():
     fig.legend(handles=h1, loc='lower left', bbox_to_anchor=(0.0, 0.0), ncol=1, frameon=False, fontsize=7, handlelength=2.2,
                labelspacing=0.25)
     h2 = outcome_legend_handles() + [Line2D([0], [0], marker='o', ms=4.2, mfc='white', mec='#7F7F7F', mew=1.0, ls='none',
-                                           label='same reef, Israeli tide')]
+                                           label='small hollow: same reef under\nthe Israeli tide (arrow, own colour)')]
     fig.legend(handles=h2, loc='lower left', bbox_to_anchor=(0.62, 0.0), ncol=1, frameon=False, fontsize=7, labelspacing=0.25,
-               handletextpad=0.3)
+               handletextpad=0.3, title='Shape = outcome; colour + label = reef', title_fontsize=7, alignment='left')
     return fig
 
 
@@ -473,9 +491,9 @@ def fig8():
             axR.annotate('', xy=(XL[1], k), xytext=(XL[1] - 0.4, k), arrowprops=dict(arrowstyle='-|>', color=INK, lw=0.8, mutation_scale=5))
         lab = '%s %.1f-%.1f m%s' % (nm, Hlo, Hhi, dag)
         if side == 'right':
-            axR.text(hi_c + 0.12, k, lab, fontsize=7, ha='left', va='center', color=INK)
+            axR.text(hi_c + 0.12, k, lab, fontsize=7, ha='left', va='center', color=darken(col, 0.8), fontweight='bold')
         else:
-            axR.text(lo - 0.12, k, lab, fontsize=7, ha='right', va='center', color=INK)
+            axR.text(lo - 0.12, k, lab, fontsize=7, ha='right', va='center', color=darken(col, 0.8), fontweight='bold')
     axR.set_ylim(2.55, -1.4)
     axR.set_yticks([])
     axR.spines['left'].set_visible(False)
@@ -646,23 +664,22 @@ def fig9():
     # recommended envelope: crest 0.6-1.0 m, ramp 1:16-1:20
     ax.add_patch(Rectangle((xe[2], ye[0]), xe[4] - xe[2], ye[3] - ye[0], fill=False, ec='black', lw=2.2, zorder=6))
     # reference reefs (crest depth, mean seaward ramp slope)
-    ALB_C = json.load(open(os.path.join(S.DATA_DIR, 'profiles', 'southern-ocean-surf-reef-albany.json'), encoding='utf-8'))['lines']['centreline']['metrics']
+    al = summ.loc['southern-ocean-surf-reef-albany']      # surf cut (crest_line override, Lior 2026-10-19)
     pb, cb_, nn = summ.loc['palm-beach-gold-coast'], summ.loc['cables-reef-wa'], summ.loc['narrowneck-gold-coast']
     ref = [('palm-beach-gold-coast', 'Palm Beach', pb.crest_depth_msl_m, pb.mean_seaward_slope_1_in, pb.outcome, (-8, 4, 'right', 'bottom')),
            ('cables-reef-wa', 'Cables', cb_.crest_depth_msl_m, cb_.mean_seaward_slope_1_in, cb_.outcome, (8, 5, 'left', 'bottom')),
-           ('southern-ocean-surf-reef-albany', 'Albany (centreline)', ALB_C['crest_depth_below_msl_m'], ALB_C['mean_seaward_slope']['one_in'], 'works',
+           ('southern-ocean-surf-reef-albany', 'Albany (surf cut)', al.rep_crest_depth_msl_m, al.rep_mean_seaward_slope_1_in, al.outcome,
             (8, 0, 'left', 'center')),
            ('narrowneck-gold-coast', 'Narrowneck (2nd crest line)', nn.rep_crest_depth_msl_m, nn.rep_mean_seaward_slope_1_in, nn.outcome,
             (8, 0, 'left', 'center'))]
     for s, nm, dc, X, outc, (dx, dy, ha, va) in ref:
         pt(ax, s, X, dc, outc, ms=7.0, z=8)
-        t = ax.annotate(nm, (X, dc), xytext=(dx, dy), textcoords='offset points', fontsize=7, ha=ha, va=va, color=INK, zorder=9)
-        t.set_path_effects([pe.withStroke(linewidth=2.4, foreground='white')])
+        reef_label(ax, s, X, dc, dx, dy, ha=ha, va=va, text=nm, z=9)
     bx = summ.loc['boscombe-surf-reef']
     ax.annotate('', xy=(xe[0] * 1.0, bx.crest_depth_msl_m), xytext=(xe[0] * 1.2, bx.crest_depth_msl_m),
                 arrowprops=dict(arrowstyle='-|>', color=COLORS['boscombe-surf-reef'], lw=1.4, mutation_scale=7), zorder=8)
     t = ax.text(xe[0] * 1.22, bx.crest_depth_msl_m, 'Boscombe\n1:%.1f (off scale)' % bx.mean_seaward_slope_1_in, fontsize=7, ha='left',
-                va='center', color=INK, zorder=9, linespacing=1.1)
+                va='center', color=darken(COLORS['boscombe-surf-reef'], 0.8), fontweight='bold', zorder=9, linespacing=1.1)
     t.set_path_effects([pe.withStroke(linewidth=2.4, foreground='white')])
     ax.text(xe[0] * 1.03, 2.5, 'no model rows below 2.0 m', fontsize=7, color=INK2, ha='left', va='center')
     for sp in ('top', 'right'):
@@ -687,10 +704,10 @@ def fig9():
              'Recommended Haifa envelope\n(heavy box): crest 0.6-1.0 m,\nramp 1:16-1:20; rock armour\nDn50 ~ 0.7-0.85 m (1-1.6 t);\n15,000-25,000 m$^3$ per 100 m;\nT 6-8 s; Israeli tide 0.4 m',
              fontsize=7, ha='left', va='top', color=INK, linespacing=1.25, bbox=dict(boxstyle='round,pad=0.3', fc='white', ec=GRID, lw=0.6))
     ho = [Line2D([0], [0], color='#222222', lw=0.7, label='volume per 100 m (m$^3$)'),
-          Line2D([0], [0], color='#444444', lw=0.7, ls=(0, (3, 2)), label="Lior's field breaking\ndepth, crest 1.2-1.5 m\n(Hs 0.45-0.6 m)")]
+          Line2D([0], [0], color='#444444', lw=0.7, ls=(0, (3, 2)), label="field breaking\ndepth, Haifa:\ncrest 1.2-1.5 m\n(Hs 0.45-0.6 m;\nBakalo 2025)")]
     ho += outcome_legend_handles()
     fig.legend(handles=ho, loc='upper left', bbox_to_anchor=(13.4 / wcm, 5.7 / hcm), ncol=1, frameon=False, fontsize=7, handlelength=1.6,
-               labelspacing=0.35, handletextpad=0.4, title='Reference reefs\n(fill = outcome)', title_fontsize=7, alignment='left')
+               labelspacing=0.35, handletextpad=0.4, title='Reference reefs\n(colour + label = reef,\nshape = outcome)', title_fontsize=7, alignment='left')
     return fig
 
 
