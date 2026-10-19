@@ -32,14 +32,14 @@ local function analyse(tbl)
   for i = 1, n do
     local mean = cnt[i] > 0 and sumlen[i] / cnt[i] or 1
     local x = math.min(0.5 * maxlen[i] + 0.5 * mean, 48)
-    x = math.max(x, maxword[i] * 1.25 + 2, 4)
+    x = math.max(x, maxword[i] * 1.45 + 2, 4)
     w[i] = x; tot = tot + x
   end
   for i = 1, n do
     local al = tbl.colspecs[i][1]
     tbl.colspecs[i] = {al, w[i] / tot}
   end
-  io.stderr:write(string.format('TABLE cols=%d weight=%.0f\n', n, tot))
+  -- io.stderr:write(string.format('TABLE cols=%d weight=%.0f\n', n, tot))
   return n, tot
 end
 
