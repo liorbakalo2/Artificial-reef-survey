@@ -1,6 +1,6 @@
 # FINDINGS: the strongest quantitative results, tested against Lior's insights (a)-(h)
 
-Status 2026-10-16. Numbers, methods and sources: `RESULTS.md` (section given as s#). Literature verdicts on each insight: `08_paper/notes/insights_in_literature.md` (the writer cites it: "consistent with X" or "new observation of this review"). Sample sizes are small (8-12 reefs) and outcomes are ordinal judgements, so every statistic is descriptive. Verdicts: SUPPORTED, PARTLY, NOT SUPPORTED, or TOO THIN (data cannot decide).
+Status 2026-10-16; updated 2026-10-19 for the per-reef surf cuts of Albany, Cables and Borth (`RECUT_NOTES.md`). Numbers, methods and sources: `RESULTS.md` (section given as s#). Literature verdicts on each insight: `08_paper/notes/insights_in_literature.md` (the writer cites it: "consistent with X" or "new observation of this review"). Sample sizes are small (8-12 reefs) and outcomes are ordinal judgements, so every statistic is descriptive. Verdicts: SUPPORTED, PARTLY, NOT SUPPORTED, or TOO THIN (data cannot decide).
 
 | # | Finding (one line) | Insight | Verdict |
 |---|---|---|---|
@@ -16,7 +16,7 @@ Status 2026-10-16. Numbers, methods and sources: `RESULTS.md` (section given as 
 ## 1. Reefs that work are big (a) - SUPPORTED, descriptive
 - **Correlation.** Model volume vs outcome (8 modelled reefs): Spearman rho 0.93, permutation p 0.005 (s6). Stated volume of all 10 built reefs: rho 0.72, p_perm 0.021.
 - **Groups.** All "does not work" reefs are 4,900 m3 or less (Bunbury 105, Pratte's 1,350, Opunake 4,900). Both built reefs rated "works" are 25,000 m3 or more (Palm Beach 25,000, Albany 34,000).
-- **Mechanism (DERIVED).** Volume buys relief and ramp length. Depth gap rho 0.93 (p_perm 0.005), ramp length 0.85 (0.015), crest depth 0.00. A 1:16-1:20 ramp on a 4-5 m bed needs 15,000-25,000 m3 per 100 m (s10).
+- **Mechanism (DERIVED).** Volume buys ramp length (and relief). Depth gap rho 0.93 (p_perm 0.005), ramp length 0.93 (0.005), mean ramp slope 0.77 (0.039), crest depth 0.39 (0.36, not significant). (Before the 2026-10-19 surf cuts: ramp length 0.85 (0.015), mean slope 0.62 (0.15), crest depth 0.00.) A 1:16-1:20 ramp on a 4-5 m bed needs 15,000-25,000 m3 per 100 m (s10).
 - **Caveats.**
   - n is 8-10.
   - Size is collinear with material (the large reefs are recent rock reefs) and with budget.
@@ -30,7 +30,7 @@ Status 2026-10-16. Numbers, methods and sources: `RESULTS.md` (section given as 
   - Bunbury (1:2.7): Y below 1.6 in 100% of cases, median xi_b 2.97.
   - Boscombe (1:3): 100%, xi_b 2.00.
   - Mt Maunganui: 91%.
-- **Across reefs.** Median xi_b ranks with outcome at rho -0.69 (p_perm 0.078); crest depth does not (rho 0.00). The same 2-4 m depth gap gives a surfable wave over a long ramp and a collapsing wave over an abrupt rise.
+- **Across reefs.** Median xi_b ranks with outcome at rho -0.77 (p_perm 0.039; was -0.69, 0.078 before the surf cuts); the mean ramp slope at 0.77 (0.039); crest depth does not (rho 0.39, p_perm 0.36). Albany, which works, now sits with Palm Beach on a long gentle ramp (99 m, 1:19.8, Y 2.11 on the face, 0% surging); on its former take-off line (22 m, 1:4) it looked like a collapsing reef. The same 2-4 m depth gap gives a surfable wave over a long ramp and a collapsing wave over an abrupt rise.
 - **Haifa thresholds (T 6-8 s, s10).**
   - 1:8: collapsing in 67-100% of cases.
   - 1:12-1:16: Y 1.6-1.9 ("extreme", expert).
@@ -47,7 +47,7 @@ Status 2026-10-16. Numbers, methods and sources: `RESULTS.md` (section given as 
 
 ## 3. Narrow surfable wave-height window (d) - SUPPORTED; Boscombe detail PARTLY
 - **Height window.** At MSL a wave needs H0 of 0.3-1.3 m to break on the reef. Above H0 1.6-5.2 m it breaks seaward of the reef (s2). Over the full grid, 34-84% of cases break on the reef.
-- **Surfable time fraction, given the swell (s5).** Palm Beach 0.70, Cables 0.63, Albany 0.62, Borth 0.27, Mt Maunganui 0.16, Narrowneck 0.15, Pratte's 0.04, Bunbury 0.01, Boscombe 0 (Cables, Albany and Bunbury use the WA annual range 1.14, 1.38 and 1.20 m as the local tide; 2026-10-19 tide correction).
+- **Surfable time fraction, given the swell (s5).** Palm Beach 0.70, Albany 0.62, Cables 0.55, Borth 0.19, Mt Maunganui 0.16, Narrowneck 0.15, Pratte's 0.04, Bunbury 0.01, Boscombe 0 (Cables, Albany and Bunbury use the WA annual range 1.14, 1.38 and 1.20 m as the local tide; 2026-10-19 tide correction).
 - **Reported surfable days per year.** Cables 142, Albany 146, Burkitts 30, Boscombe 77 (design baseline).
 - **Boscombe "too steep": SUPPORTED.** The 1:3 flank collapses in every case; the 0.5 m wave gives xi_b 1.6, Y 1.3.
 - **Boscombe "only bodyboarders": PARTLY.** The model class reads "bodyboard or expert", but the one audit with surfers reports "advanced level surfers" (Davidson 2010 via Rendle 2016).
@@ -56,7 +56,7 @@ Status 2026-10-16. Numbers, methods and sources: `RESULTS.md` (section given as 
 ## 4. Peel angles serve advanced surfers, never learners (g) - SUPPORTED
 - **Refraction.** Designed arm angles of 45-81 deg refract to 16-62 deg at the break.
 - **Skill ratings.** Hutt ratings are 3-9 with refraction and 2-6 without. At H0 0.5 m every reef reaches alpha below 27-29 deg (Hutt 8-9).
-- **Learners.** No reef reaches 60 deg or more at the break (Hutt 1-3), with one exception: Borth at H0 = 3 m (61.9 deg, rating 3; RESULTS.md s4), a large wave on a reef with no surf record. Peel speeds are 6.9-11.4 m/s.
+- **Learners.** No reef reaches 60 deg or more at the break (Hutt 1-3), with one exception: Borth at H0 = 3 m (61.5 deg, rating 3; RESULTS.md s4), a large wave on a reef with no surf record. Peel speeds are 6.9-11.4 m/s.
 - **Beginners.** Spilling is 0-29% of on-reef breaks. A dedicated spilling reef needs a ~1:30 ramp (35,000-49,000 m3 per 100 m).
 - **Lior's 30 deg.** It matches the Hutt limits: 29 deg is rating 7 (top amateur), 27 deg is rating 8 (professional).
 - **Caveat.** The incident angle phi0 is assumed for 5 of 8 reefs. The Narrowneck alternative (41 deg) moves its rating from 4-9 to 9.

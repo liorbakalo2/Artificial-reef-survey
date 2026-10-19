@@ -717,3 +717,8 @@ Mexico/Xala: nothing new that allows a trace. RWR post fetched (announcement onl
 
 ## 2026-10-19 (page agent) - paper-review additions on the page
 - Added from 08_paper: Pratte's surfer testimony (6 reviews, grade D), reef rating A/B/C (Table column, Quick facts row, (i) note), corrected tide ranges as card text (Albany, Bunbury, Cables, Opunake, Burkitts, Prattes), "Paper figures" section (fig1-9). Fixed Albany image label and Cables 'Crest level' quote; applied Albany/Cables text-only PAGE_TEXTS. 3D untouched; 3D tide proposals listed in REQUESTS_FOR_LIOR.md (item T1). Details: 04_build/HANDOFF.md 0e.
+
+## 2026-10-19 (08_paper, recut agent) - surf cuts Albany/Cables/Borth + figure fixes (Lior's figure review)
+- `08_paper/analysis/extract_profiles.py`: per-reef CUT_OVERRIDES (surf cut through the surfed part, shore-normal; oblique sampling by bilinear interpolation); old line kept as `crest_line_auto`. Pipeline (`run_all.py`) and all figure scripts re-run; 3D models untouched.
+- Figures: colour = reef with coloured name labels; marker shape = outcome class (unknown hollow) with legends; Fig. 4 axes/bands explained; Fig. 5 Hutt 2001 + Walker 1975, no personal names; Fig. 3 redrawn per `notes/fig3_theory.md` (two time steps, set-down/set-up, bores). Captions updated.
+- RESULTS.md / FINDINGS.md edited in place (old values kept). Old/new numbers and writer to-do: `08_paper/analysis/RECUT_NOTES.md`. Albany's collapsing-band position in Fig. 4 resolved (mean face 1:4.0, Y 1.08 -> 1:19.8, Y 2.11). Sections text not edited.
