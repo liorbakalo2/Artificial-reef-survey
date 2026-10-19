@@ -2,7 +2,7 @@ key,group
 abcnews2019,other
 abcnews2022,other
 acegeosyntheticsnd,other
-alvarez2006,other
+alvarez2006,academic
 alvarez2007,academic
 antunesdocarmo2011,academic
 baker2018,academic
@@ -24,8 +24,8 @@ channelcoastal2026a,academic
 channelcoastal2026b,academic
 chien2013,academic
 chien2014,academic
-cityofnd,other
-cityof2023,other
+cityofnd,academic
+cityof2023,academic
 cityofndb,academic
 collins2010,other
 corbett2023,academic
@@ -42,11 +42,11 @@ emodnetbathymetry2024,academic
 esrind,academic
 fontaine2008,other
 galvin1968,academic
-garminnavionicsnd,other
+garminnavionicsnd,academic
 geosyntheticsmagazine2023,other
 ghd2021,academic
 gonzalezleija2014,academic
-mccp2026,other
+mccp2026,academic
 hansford2011,other
 haskoninguk2011,academic
 hochul2024,other
@@ -88,7 +88,7 @@ oh2006a,academic
 oh2006b,academic
 pattiaratchi1999,academic
 peregrine1983,academic
-pitt2009,other
+pitt2009,academic
 prenzler2023,academic
 raisedwaternda,other
 raisedwaterndb,other
@@ -139,7 +139,7 @@ wadot2020,academic
 wadot2024,academic
 wadot2026,academic
 worldbank2026,academic
-zalul2025,other
+zalul2025,academic
 zviely2007,academic
 zviely2009,academic
 shand2011,academic
