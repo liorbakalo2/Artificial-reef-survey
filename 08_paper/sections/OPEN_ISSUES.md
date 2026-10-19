@@ -29,3 +29,9 @@ Status: assembly complete (no CHECKPOINT needed). Files written or edited in thi
 ## Files written or edited in this round
 - New: `00_front.md`, `08_discussion.md`, `09_conclusions.md`, `10_references.md`, `citations_check.json`, `ORDER.txt`, `appendix_B_3d.md`, `OPEN_ISSUES.md`.
 - Edited: `02_methods.md` (AI sentences), `03_survey.md` (Pratte's testimony, Figure 1-2 captions, Borth note), `04_surf_quality.md` (Borth exception, Pratte's testimony, Table 2 Borth note, shorter captions), `06_materials.md` (Table 4, Figure 11 label and caption), `07_israel.md` (Table 5, Figure 12 label and caption, tide sentence), `appendix_A_methods.md` (AI sentences, Channel Coastal Observatory 2026b), `../analysis/FINDINGS.md` (item 4, Borth exception).
+
+## Lior's reference checks (2026-10-19), applied
+- Chien et al. (2014): DOI removed from `10_references.md` (it resolves to an unrelated paper); the entry and Appendix D.4 now say "as reported by Bar and Drimer (2023); original not verified".
+- Oh and Shin (2006a, b): Appendix D.1 now states explicitly that it is a submerged geotube shore-protection example, not a surf reef (Section 6.4 uses it only for colonisation).
+- Gouaud (2016): cited only through Bar and Drimer (2023) in Appendix D.10, now marked "not verified"; no list entry.
+- ten Voorde et al. (2009) Fig. 14: `08_paper/lit/figs/` did not exist when this round ended, so no placeholder was added to `05_sediment.md` (coordinator to add).
