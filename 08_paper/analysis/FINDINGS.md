@@ -56,7 +56,7 @@ Status 2026-10-16. Numbers, methods and sources: `RESULTS.md` (section given as 
 ## 4. Peel angles serve advanced surfers, never learners (g) - SUPPORTED
 - **Refraction.** Designed arm angles of 45-81 deg refract to 16-62 deg at the break.
 - **Skill ratings.** Hutt ratings are 3-9 with refraction and 2-6 without. At H0 0.5 m every reef reaches alpha below 27-29 deg (Hutt 8-9).
-- **Learners.** No reef reaches 60 deg or more at the break (Hutt 1-3). Peel speeds are 6.9-11.4 m/s.
+- **Learners.** No reef reaches 60 deg or more at the break (Hutt 1-3), with one exception: Borth at H0 = 3 m (61.9 deg, rating 3; RESULTS.md s4), a large wave on a reef with no surf record. Peel speeds are 6.9-11.4 m/s.
 - **Beginners.** Spilling is 0-29% of on-reef breaks. A dedicated spilling reef needs a ~1:30 ramp (35,000-49,000 m3 per 100 m).
 - **Lior's 30 deg.** It matches the Hutt limits: 29 deg is rating 7 (top amateur), 27 deg is rating 8 (professional).
 - **Caveat.** The incident angle phi0 is assumed for 5 of 8 reefs. The Narrowneck alternative (41 deg) moves its rating from 4-9 to 9.

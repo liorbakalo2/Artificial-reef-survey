@@ -57,3 +57,12 @@ Full citations, as printed in [BD23] and checked against Crossref where a DOI ex
 - [24] Gouaud, F. Geotextile Structures for Beach Protection Ashkelon, Israel. Corinthe Ingenierie: Grimaud, France, 2016. Design report, not found online.
 
 Not in this list: [22] (downloaded, see above).
+
+## Lior's checks 2026-10-19
+
+Checks reported by Lior. Not re-verified by the agent, except the Task 1 status below.
+
+- [8] Chien et al. 2014 (Al Aqah, UAE). DOI 10.7763/IJESD.2014.V5.535 does not resolve to that paper. Lior found that it resolves to Dabir, V., Deki, S., Agarwal, K., Ranjan, A., & Khare, K. (2020). Permeability of a composite seawall: effect of the orientation of gaps in the structure. IOP Conf. Ser.: Earth Environ. Sci. 527(1), 012004. The Bar & Drimer citation is therefore unverifiable or erroneous. Do not use [8] as a source for Al Aqah until a correct reference is found.
+- [21] Oh & Shin 2006 (Young-Jin beach, Korea). Lior judges that it is not an artificial surf reef. It is a submerged geotube shore-protection work. Keep it only as a geotube-breakwater example in Appendix D, not as a surf reef.
+- [24] Gouaud 2016 (Ashkelon). Lior has not found it either. Still unverified.
+- [15] ten Voorde et al. 2009. Lior's upload is not in "new uploads from lior/" or papers/. Agent attempt on 2026-10-19: Semantic Scholar and Unpaywall both point to the LNEC repository (repositorio.lnec.pt). That host did not resolve (DNS failure) on retry. BioOne returned an Incapsula bot check, which was not bypassed. Coimbra repository redirected in a loop. Status: awaiting Lior's upload of the PDF. Figure 14 has not been read.
