@@ -19,7 +19,7 @@ The author's insight (c) holds that soft structures do not survive long in the b
 | Bunbury Airwave (2019) | Hypalon bladder filled with sand (and air) | seam tore during installation; removed within days (ABC News, 2019) | seam glued because the Hypalon could not be welded (Bunbury Mail, 2022) |
 | Cables (1999) | rock, 1.5 t and 3 t, on limestone bedrock | in place; crest change $-0.16$ m in 2.2 years, within survey error (Appendix C) | none reported |
 | Borth (2012) | graded rock, units of several tonnes | in place | none reported |
-| Palm Beach (2019) | rock, about 25,000 m³ | in place (Prenzler et al., 2022) | none reported |
+| Palm Beach (2019) | rock, about 25,000 m³ | in place (Prenzler et al., 2023) | none reported |
 | Albany (2025) | rock in three graded layers | core rock moved in a storm before armouring (Appendix C); 18 rocks repositioned for safety (Sheil, 2026) | storm during construction; surfer injuries |
 
 The GSC failures follow a common sequence: point damage from anchors, propellers, knives, debris or construction faults, then loss of fill and change of shape, because "as soon as even a single sand-filled container broke and lost sand, the whole structure changed shape due to the fluid nature of sand" (Mead, as quoted in Geosynthetics Magazine, 2023). At Boscombe the damage to one large container led to the loss of two, 12.5 % of the reef's volume, and the reef was judged "unlikely" to survive its proposed 25-year life "without multiple repairs" (Rendle, 2016, pp. 98, 121). The manufacturers' design life of about 20 years for outer-layer containers (Geofabrics, 2013, as cited in Blacka et al., 2013, p. 35) contrasts with one to eight years before major loss in the field.

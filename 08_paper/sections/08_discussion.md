@@ -36,7 +36,7 @@ To answer the question that motivates the review, which reefs have delivered wha
 | 1 | Albany | 5 | 2 | ? | best wave, rides of 100-120 m (Raised Water Research, n.d.-d); injuries, 18 rocks repositioned in 2026 (Sheil, 2026); too new for sediment data |
 | 2 | Cables | 3 | 4 | 3 | rock, intact since 1999; surf-day claims conflict (Mead & Borrero, 2011; Blacka et al., 2013) |
 | 3 | Burkitts | 3 | 4 | ? | reshaped natural rock, no maintenance in nearly three decades; about 30 surf days a year is an estimate (Howells & O'Neal, 2024; Raised Water Research, n.d.-b) |
-| 4 | Palm Beach | 3 | 4 | 3* | rock, stable; wave only in E or S swell with $H_s$ > 0.8 m, $T_p$ > 7 s (Prenzler et al., 2022); nourishment confounds the shoreline (Section 5.4) |
+| 4 | Palm Beach | 3 | 4 | 3* | rock, stable; wave only in E or S swell with $H_s$ > 0.8 m, $T_p$ > 7 s (Prenzler et al., 2023); nourishment confounds the shoreline (Section 5.4) |
 | 5 | Narrowneck | 2 | 3 | 2 | "rarely surfed" (EcoShape, n.d.); containers settled 1-2 m and were renewed in 2017-18 (Corbett et al., 2023); nourishment confounds |
 | 6 | Borth | ? | 4 | 3* | rock, no damage in 2012-2024 imagery; no surf record (Blacka et al., 2013); +30 m bulge not attributable (Section 5.3) |
 | 7 | Boscombe | 2 | 1 | 2 | too hollow, mostly bodyboarders (Rendle, 2016); a container lost and the reef closed in 2011 |

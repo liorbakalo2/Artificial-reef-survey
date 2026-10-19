@@ -28,11 +28,11 @@ Black, K. P., & Andrews, C. J. (2001). Sandy shoreline response to offshore obst
 
 Blacka, M. J., Shand, T. D., Carley, J. T., & Mariani, A. (2013). *A review of artificial reefs for coastal protection in NSW* (WRL Technical Report 2012/08, final report of 11 June 2013). UNSW Water Research Laboratory, for the NSW Office of Environment and Heritage. https://doi.org/10.4225/53/58e1dc7368c7a [pages cited are printed report pages, = PDF page minus 12]
 
-Bluecoast Consulting Engineers. (n.d.). *Artificial reefs* [Project page with the Nearmap aerial of the Palm Beach reef]. https://www.bluecoastconsulting.com.au/artificialreefs
+Bluecoast Consulting Engineers. (n.d.). *Artificial reefs for coastal protection and surfing* [Project page with the Nearmap aerial of the Palm Beach reef]. https://www.bluecoastconsulting.com.au/artificialreefs
 
 BMT Western Australia. (2018). *Middleton Beach artificial surf reef environmental impact assessment* (Report 1345_001/1_Rev2, September 2018). Prepared for the City of Albany. https://epa.wa.gov.au/sites/default/files/Referral_Documentation/Environmental%20Impact%20Assessment_0.pdf
 
-Borrero, J. C., & Nelsen, C. (2003). Results of a comprehensive monitoring program at Pratte's Reef. In K. Black & S. Mead (Eds.), *Proceedings of the 3rd International Surfing Reef Symposium*. Raglan, New Zealand. [Private copy supplied by the author. The file prints neither venue nor year; both are taken from the citation recorded in the project files, and the content (monitoring to October 2002) is consistent with them.]
+Borrero, J. C., & Nelsen, C. (2003). Results of a comprehensive monitoring program at Pratte's Reef. In K. Black & S. Mead (Eds.), *Proceedings of the 3rd International Surfing Reef Symposium*. Raglan, New Zealand (not verified). [Private copy supplied by the author. The file prints neither venue nor year; both are taken from the citation recorded in the project files; the content (monitoring to October 2002) is consistent with them, but year and venue could not be confirmed (a search found only that Borrero and Nelsen co-organised the 4th Surfing Reef Symposium, January 2005). Not verified.]
 
 Borth Community. (n.d.). *Borth coastal defence overview*. http://www.borthcommunity.info/index.php/planning-drawings/235-borth-coastal-defence/46-overview
 
@@ -48,7 +48,7 @@ Channel Coastal Observatory. (2026b). *Beach profile surveys, Boscombe lines 5f0
 
 Chien, A., Tseng, F., & Tang, A. (2013). Geotextile tube application on beach refurbishment in UAE. *WIT Transactions on Ecology and the Environment, 169*, 231-239. https://doi.org/10.2495/CP130201 [not read; metadata checked in Crossref]
 
-Chien, A., Wu, S., Tseng, F., & Tang, A. (2014). Geotextile tubes application on beach nourishment in UAE. *International Journal of Environmental Science and Development, 5*(5), 506-509. [As reported by Bar and Drimer (2023); original not verified. The DOI given in earlier sources (10.7763/IJESD.2014.V5.535) resolves to an unrelated paper and is omitted.]
+Chien, A., Wu, S., Tseng, F., & Tang, A. (2014). Geotextile tubes application on beach nourishment in UAE. *International Journal of Environmental Science and Development, 5*(5), 506-509. https://doi.org/10.7763/IJESD.2014.V5.535 [metadata confirmed in Crossref; full text not read]
 
 City of Albany. (n.d.). *Southern Ocean Surf Reef (SOSR)* [Project pages, including the detailed-design table; page current 24 September 2026]. https://www.albany.wa.gov.au/council/projects/completed-projects/southern-ocean-surf-reef-sosr.aspx
 
@@ -112,7 +112,7 @@ Indelicato, P. (2026, March 31). Unveiling the new reef in Mexico. *Raised Water
 
 Jackson, L. A., & Corbett, B. (2007). Review of existing multi-functional artificial reefs. *Australasian Conference on Coasts and Ports 2007*. International Coastal Management, Queensland.
 
-Jackson, L. A., Corbett, B., McGrath, J., Tomlinson, R., & Stuart, G. (2007). Narrowneck Reef: Review of seven years of monitoring. *Shore & Beach, 75*(4). http://hdl.handle.net/10072/17995
+Jackson, L. A., Corbett, B., Tomlinson, R., McGrath, J., & Stuart, G. (2007). Narrowneck Reef: Review of seven years of monitoring. *Shore & Beach, 75*(4), 67-79. http://hdl.handle.net/10072/17995
 
 Jackson, A., Tomlinson, R., Corbett, B., & Strauss, D. (2012). Long term performance of a submerged coastal control structure: A case study of the Narrowneck multi-functional artificial reef. *Coastal Engineering Proceedings, 33*, structures.54. https://doi.org/10.9753/icce.v33.structures.54 [first author's initial given as L. in 08_paper/lit/references.json and as A. in the Appendix references; to be checked]
 
@@ -174,7 +174,7 @@ Pattiaratchi, C. B. (1999). *Design studies for an artificial surfing reef: Cabl
 
 Pitt, A. (2009). Critique of Cables Reef. [original not seen; cited as reported by Raised Water Research (2019b)]
 
-Prenzler, P., Hunt, S., Elliott-Perkins, Z., Hamilton, D., Messiter, D., Wharton, C., & Watterson, E. (2022). Monitoring of the Palm Beach artificial reef. *Coastal Engineering Proceedings, 37*, structures.65. https://doi.org/10.9753/icce.v37.structures.65 [ICCE 2022 extended abstract; dated 2023 in 08_paper/notes/sediment.md]
+Prenzler, P., Hunt, S., Elliott-Perkins, Z., Hamilton, D., Messiter, D., Wharton, C., & Watterson, E. (2023). Monitoring of the Palm Beach artificial reef. *Coastal Engineering Proceedings, 37*, structures.65. https://doi.org/10.9753/icce.v37.structures.65 [ICCE 2022 extended abstract; proceedings volume dated 2023 in Crossref]
 
 Raised Water Research. (n.d.-a). *Bunbury Airwave* [Spot page in the artificial-reef database]. https://raisedwaterresearch.com/spot/artificial-reef/australia/western-australia/bunbury-airwave/
 
@@ -230,7 +230,7 @@ Skelly Engineering. (c. 2000). *Pratte's Reef* [Plan-view design drawing, 110 ba
 
 Solmax. (2023). *GEOTUBE breakwaters: Shoreline protection at Sigandu Beach, Indonesia* [Case study]. https://www.solmax.com/en/apac/case-studies/geotube-breakwaters-shoreline-protection-at-sigandu-beach-indonesia [manufacturer page, read]
 
-Spanier, E., & Zviely, D. (2023). Key environmental impacts along the Mediterranean coast of Israel in the last 100 years. *Journal of Marine Science and Engineering, 11*(1), 2. https://doi.org/10.3390/jmse11010002
+Spanier, E., & Zviely, D. (2022). Key environmental impacts along the Mediterranean coast of Israel in the last 100 years. *Journal of Marine Science and Engineering, 11*(1), 2. https://doi.org/10.3390/jmse11010002
 
 State Comptroller of Israel. (2020). *How government authorities deal with the processes of coastal cliff destruction* [In Hebrew; chapter of the Local government audit reports 2020, 128-page PDF]. https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2020/Shilton-2020/2020-Shilton2020-102-Matzok.pdf [page numbers cited are PDF pages]
 
@@ -272,7 +272,7 @@ Western Australia Department of Transport, & Bureau of Meteorology. (2024). *Tid
 
 Western Australia Department of Transport, & Bureau of Meteorology. (2026). *Tide predictions by location, WA 2026: Albany, Bunbury and Fremantle* [Predicted high and low waters, heights above LAT]. Government of Western Australia. https://transport.wa.gov.au/getmedia/482d7b83-1a48-4220-9e2c-b07ebfcf8594/MAR_P_2026_Tide_Predictions_by_Location_WA.pdf [downloaded 2026-10-19; annual extremes taken from three of four quarterly blocks, so they are lower bounds; see 08_paper/notes/tides_check.md]
 
-World Bank. (2026). *World Development Indicators: PA.NUS.FCRF Official exchange rate (LCU per US$, period average) and FP.CPI.TOTL Consumer price index (2010 = 100), United States* [Data set]. https://api.worldbank.org/v2 (retrieved 15 October 2026)
+World Bank. (2026). *World Development Indicators: PA.NUS.FCRF Official exchange rate (LCU per US$, period average) and FP.CPI.TOTL Consumer price index (2010 = 100), United States* [Data set]. https://api.worldbank.org/v2/country/USA/indicator/PA.NUS.FCRF?format=json (retrieved 15 October 2026)
 
 Zalul. (2025, July 2). *Appeal to the appeals sub-committee of the National Planning and Building Council against the decision of the Coastal Environment Protection Committee of 21 May 2025 (plan 304-0860023, Kiryat Haim breakwaters)* [In Hebrew; 28 pp.; quotes an expert opinion by N. Drimer of 17 November 2024]. https://zalul.org.il/wp-content/uploads/2025/07/ערר-שוברי-גלים-קרית-חים-02.07.25.pdf
 
