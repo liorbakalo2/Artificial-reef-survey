@@ -16,9 +16,9 @@
 \newunicodechar{φ}{\ensuremath{\varphi}}
 % captions: the Markdown captions already begin with "Figure N." / "Table N."
 \captionsetup{labelformat=empty,font=small,justification=justified,singlelinecheck=false,skip=6pt}
-\captionsetup[figure]{position=below}
+\captionsetup[figure]{position=below,font=footnotesize}
 % figures: leave room for the (long) captions
-\AtBeginDocument{\renewcommand{\maxheight}{0.58\textheight}\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}}
+\AtBeginDocument{\setkeys{Gin}{keepaspectratio}}
 \renewcommand{\topfraction}{0.9}\renewcommand{\bottomfraction}{0.9}\renewcommand{\textfraction}{0.08}
 \renewcommand{\floatpagefraction}{0.7}
 % tables

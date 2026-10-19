@@ -32,14 +32,15 @@ local function analyse(tbl)
   for i = 1, n do
     local mean = cnt[i] > 0 and sumlen[i] / cnt[i] or 1
     local x = math.min(0.5 * maxlen[i] + 0.5 * mean, 48)
-    x = math.max(x, maxword[i] + 2, 4)
+    x = math.max(x, maxword[i] * 1.25 + 2, 4)
     w[i] = x; tot = tot + x
   end
   for i = 1, n do
     local al = tbl.colspecs[i][1]
     tbl.colspecs[i] = {al, w[i] / tot}
   end
-  return n
+  io.stderr:write(string.format('TABLE cols=%d weight=%.0f\n', n, tot))
+  return n, tot
 end
 
 local function starts_with_table(b)
@@ -52,9 +53,9 @@ function Blocks(blocks)
   local out = {}
   for _, b in ipairs(blocks) do
     if b.t == 'Table' then
-      local n = analyse(b)
+      local n, tot = analyse(b)
       local size = n >= 10 and '\\scriptsize' or (n >= 7 and '\\footnotesize' or nil)
-      local land = n >= 9
+      local land = n >= 8 and tot > 125
       local cap
       if land and #out > 0 and starts_with_table(out[#out]) then cap = table.remove(out) end
       if land then out[#out + 1] = pandoc.RawBlock('latex', '\\begin{landscape}') end
@@ -68,4 +69,22 @@ function Blocks(blocks)
     end
   end
   return out
+end
+
+-- Figures: keep the widths of the Markdown attributes; limit the height so that image and (long) caption fit on a page.
+function Figure(fig)
+  local cap = 0
+  for _, b in ipairs(fig.caption.long) do cap = cap + #stringify(b) end
+  local lines = math.ceil(cap / 100)
+  local cap_pt = lines * 11.5 + 16
+  local avail = 690 - cap_pt - 24
+  local pct = math.floor(100 * avail / 700)
+  if pct > 75 then pct = 75 end
+  if pct < 25 then pct = 25 end
+  fig.content = fig.content:walk({
+    Image = function(img)
+      img.attributes.height = pct .. '%'
+      return img
+    end })
+  return fig
 end
