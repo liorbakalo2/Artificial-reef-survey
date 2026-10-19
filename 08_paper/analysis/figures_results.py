@@ -162,18 +162,15 @@ def fig4():
     for s in order:
         r = summ.loc[s]
         x, y = r.rep_ramp_length_m, r.rep_depth_gap_m
-        if abs(r.ramp_length_m - r.rep_ramp_length_m) > 0.5 or abs(r.depth_gap_crest_to_toe_bed_m - r.rep_depth_gap_m) > 0.05:
-            xg, yg = r.ramp_length_m, r.depth_gap_crest_to_toe_bed_m          # crest-line value as a ghost
-            ax.plot([xg, x], [yg, y], color=COLORS[s], lw=0.6, zorder=3, alpha=0.8)
-            pt(ax, s, xg, yg, r.outcome, ms=6.0, ghost=True)
+        # one cut per reef (Lior 2026-10-19): the Narrowneck north-arm tip cut and Pratte's tip cut were dropped (no surf meaning)
         pt(ax, s, x, y, r.outcome, ms=6.8)
         dx, dy, ha, va = off[s]
-        reef_label(ax, s, x, y, dx, dy, ha=ha, va=va)
-    s = 'southern-ocean-surf-reef-albany'                                      # Albany centreline ghost
+        reef_label(ax, s, x, y, dx, dy, ha=ha, va=va, text=('Albany: ride section\n(main cut, Fig. 1)' if s == 'southern-ocean-surf-reef-albany' else None))
+    s = 'southern-ocean-surf-reef-albany'                                      # Albany take-off peak (secondary cut, kept: clear meaning)
     xa, ya = am['ramp_length_m'], am['crest_to_toe_seabed_drop_m']
     ax.plot([summ.loc[s].rep_ramp_length_m, xa], [summ.loc[s].rep_depth_gap_m, ya], color=COLORS[s], lw=0.6, zorder=3, alpha=0.8)
     pt(ax, s, xa, ya, 'works', ghost=True)
-    reef_label(ax, s, xa, ya, 6, 2, ha='left', va='bottom', text='Albany, old cut\n(take-off plateau)', fs=6.5)
+    reef_label(ax, s, xa, ya, 6, 2, ha='left', va='bottom', text='Albany: take-off peak\n(offshore plateau)', fs=6.5)
     ax.set_xlabel('Ramp length L, from the seaward edge of the crest to the seaward toe (m, log scale)')
     ax.set_ylabel('Depth gap \u0394h = toe bed depth \u2212 crest depth (m, log scale)')
     ax.set_xticks([1, 2, 5, 10, 20, 50, 100, 200])
@@ -191,7 +188,7 @@ def fig4():
     h1 = [Line2D([0], [0], color='#1B5E87', lw=0.9, ls=(0, (4, 2)), label='\u03be$_b$ = 0.4 and 2.0, T = 10 s (1:31, 1:6.2)'),
           Line2D([0], [0], color='#B03A2E', lw=0.9, ls=(0, (1.5, 1.5)), label='\u03be$_b$ = 0.4 and 2.0, T = 7 s (1:22, 1:4.4)'),
           Line2D([0], [0], color='#8F8F8F', lw=0.5, label='Mead class limits Y = 1.6, 1.9, 2.5, 3.1\n(slopes 1:12, 1:17, 1:26, 1:35)'),
-          Line2D([0], [0], marker='o', ms=5.5, mfc='none', mec=INK2, mew=0.8, ls='none', label='other cut of the same reef\n(thin line joins the two)')]
+          Line2D([0], [0], marker='o', ms=5.5, mfc='none', mec=INK2, mew=0.8, ls='none', label='Albany only: second cut through the\ntake-off peak (thin line joins it to the\nride-section cut, Fig. 1); see Appendix E')]
     fig.legend(handles=h1, loc='lower left', bbox_to_anchor=(0.0, 0.0), ncol=1, frameon=False, fontsize=7, handlelength=2.0,
                labelspacing=0.3, title='Lines (all are constant slopes \u0394h / L)', title_fontsize=7, alignment='left')
     h2 = [Patch(fc=shades[i], ec='#8F8F8F', lw=0.4, label=n_) for i, n_ in enumerate(
