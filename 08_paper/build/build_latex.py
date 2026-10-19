@@ -12,6 +12,24 @@ WORK = pathlib.Path(os.environ.get('LATEX_WORK',
         '/tmp/claude-0/-home-user-artificial-reef-survey/a15463be-9870-58d0-a03c-7b5bb85bb876/scratchpad/latex'))
 WORK.mkdir(parents=True, exist_ok=True)
 
+# 0. reference groups: ref_groups.csv (+ ref_groups_new.csv, re-read now) -> keywords injected into a work copy of the bib
+import csv
+groups = {}
+for fn in ('ref_groups.csv', 'ref_groups_new.csv'):
+    p = here / fn
+    if p.exists():
+        for row in csv.reader(p.read_text(encoding='utf-8').splitlines()):
+            if len(row) >= 2 and row[0].strip() and row[0].strip() != 'key':
+                groups[row[0].strip()] = row[1].strip()
+bad = sorted(k for k, g in groups.items() if g not in ('academic', 'other'))
+if bad:
+    sys.exit('Invalid group (must be academic|other) for: ' + ', '.join(bad))
+bibtext = (here / 'references.bib').read_text(encoding='utf-8')
+bibkeys = re.findall(r'^@\w+\{([^,\s]+),', bibtext, re.M)
+REFS = ('\\section*{References}\\addcontentsline{toc}{section}{References}\n'
+        '\\printbibliography[keyword=academic,heading=subbibintoc,title={Scholarly and technical sources}]\n'
+        '\\printbibliography[keyword=other,heading=subbibintoc,title={Media, web and other non-academic sources}]\n')
+
 # 1. concatenate
 files = [l.strip() for l in (sec / 'ORDER.txt').read_text().split('\n') if l.strip()]
 parts, seen_app = [], False
@@ -22,19 +40,27 @@ for f in files:
     t = (sec / f).read_text(encoding='utf-8')
     if f.startswith('appendix_'):
         if not seen_app:
-            parts.append('\\clearpage\n\n```{=latex}\n\\begingroup\\raggedright\\printbibliography[heading=bibintoc,title={References}]\\endgroup\n```\n')
+            parts.append('\\clearpage\n\n```{=latex}\n\\begingroup\\raggedright\n'+REFS+'\\endgroup\n```\n')
             seen_app = True
         t = '\\clearpage\n\n' + t
     parts.append(t)
 if not seen_app:
-    parts.append('\n```{=latex}\n\\clearpage\\printbibliography[heading=bibintoc,title={References}]\n```\n')
+    parts.append('\n```{=latex}\n\\clearpage\n'+REFS+'```\n')
 (WORK / 'paper_tex.md').write_text('\n\n'.join(parts), encoding='utf-8')
 
 # 2. template = pandoc default minus the automatic \printbibliography at the end
 tpl = subprocess.run(['pandoc', '-D', 'latex'], capture_output=True, text=True, check=True).stdout
 tpl = tpl.replace('\\printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$', '')
 (here / 'template.latex').write_text(tpl, encoding='utf-8')
-shutil.copy(here / 'references.bib', WORK / 'references.bib')
+(WORK / 'references.bib').write_text(
+    re.sub(r'^(@\w+\{([^,\s]+),)', lambda m: m.group(1) + '\n  keywords = {' + groups.get(m.group(2), 'ungrouped') + '},',
+           bibtext, flags=re.M), encoding='utf-8')
+# every bib entry (listed or only cited) must have a group: fail loudly
+missing = [k for k in bibkeys if k not in groups]
+if missing:
+    print('ERROR: %d bib keys have no group in ref_groups.csv / ref_groups_new.csv:' % len(missing))
+    print('\n'.join('  ' + k for k in missing))
+    sys.exit(1)
 shutil.copy(here / 'latex_header.tex', WORK / 'latex_header.tex')
 
 # 3. pandoc -> tex
