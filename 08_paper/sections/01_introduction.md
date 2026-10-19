@@ -24,4 +24,4 @@ The research questions are:
 4. Which materials survive in the breaking zone, and why do soft structures fail (Section 6)?
 5. What do the answers imply for a reef at Haifa (Section 7)?
 
-Section 2 gives the methods, Section 8 the discussion and Section 9 the conclusions. Appendix A documents the method for each reef, Appendix B shows the three-dimensional reconstructions, Appendix C holds the full data table, Appendix D covers the other structures named by @bar2023 and the Israeli geotube projects, Appendix E shows where the depth profiles and peel-angle lines were taken on each reef, and Appendix F lists the author's leads and their status.
+Section 2 gives the methods, Section 8 the discussion and Section 9 the conclusions. Appendix A documents the method for each reef, Appendix B shows the three-dimensional reconstructions, Appendix C holds the full data table, Appendix D covers the other structures named by @bar2023 and the Israeli geotube projects, Figure E1 (Appendix E) shows where the depth profiles and peel-angle lines were taken on each reef, and Appendix F lists the author's leads and their status.

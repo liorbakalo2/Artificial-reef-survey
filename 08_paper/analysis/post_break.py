@@ -17,7 +17,10 @@ point two measures of the "sustained-breaking length" are computed:
              -(K/h) (H^2 h^0.5 - (G h)^2 h^0.5), K = 0.15, G = 0.4, integrated shoreward on the 1 m grid from Hb; breaking
              stops where H <= G h. Green's law shoaling is implied where h changes.
 If breaking never stops before the shoreline (h <= 0.05 m) the length is to the shoreline and the flag 'to_shore' is set
-(the reef wave joins the beach surf zone). Break points seaward of the reef or on no reef are flagged. Limits: normal
+(the reef wave joins the beach surf zone). L_reef_supported = min(L_dally, reef length shoreward of the break): the part of
+the sustained breaking that happens over the reef rather than on the natural bed. Per reef, its median and maximum over the
+on-reef cases (3 heights x low/mid/high water) and their Spearman rank against the outcome score (summarize.py OUTCOME_SCORE; permutation p from summarize.perm_p) are written
+as rows with tide = 'all'. Break points seaward of the reef or on no reef are flagged. Limits: normal
 incidence, no refraction or 2-D spreading (a V or narrow arm loses depth sideways too), no set-up, no friction, the
 model profile (survey or idealised, see profiles/SUMMARY.md).
 """
@@ -94,24 +97,47 @@ def run():
                     r.update(L_dally_m=round(float(y[i0] - y[j]), 1), dally_to_shore=True)
                 else:
                     r.update(L_dally_m=round(float(L), 1), dally_to_shore=False)
+                if r['break_on_reef']:
+                    r['L_reef_supported_m'] = round(min(r['L_dally_m'], r['reef_shoreward_of_break_m']), 1)
                 rows.append(r)
-    return rows
+    # per-reef summary: median and max reef-supported length over the on-reef cases (3 tides x 3 heights)
+    from scipy.stats import spearmanr
+    summ_rows = []
+    for slug in inp:
+        v = [r['L_reef_supported_m'] for r in rows if r['slug'] == slug and 'L_reef_supported_m' in r]
+        o = summ.get(slug, {})
+        summ_rows.append(dict(slug=slug, outcome=o.get('outcome'), tide='all', status='summary_on_reef_cases',
+                              n_on_reef=len(v), L_reef_supported_median_m=round(float(np.median(v)), 1) if v else '',
+                              L_reef_supported_max_m=round(float(np.max(v)), 1) if v else '',
+                              outcome_score=o.get('outcome_score')))
+    ok = [r for r in summ_rows if r['outcome_score'] not in (None, '') and r['n_on_reef']]
+    xs, ys = [r['L_reef_supported_median_m'] for r in ok], [float(r['outcome_score']) for r in ok]
+    rho, _ = spearmanr(xs, ys)
+    from summarize import perm_p
+    p = perm_p(xs, ys)
+    for r in summ_rows:
+        r['spearman_median_vs_outcome'] = '%.2f (permutation p=%.3f, n=%d)' % (rho, p, len(ok))
+    return rows + summ_rows
 
 
 def main():
     rows = run()
     keys = ['slug', 'outcome', 'line', 'tide', 'eta_msl_m', 'Hb_m', 'h_crest_m', 'status', 'y_break_m', 'h_break_m',
             'break_on_reef', 'reef_shoreward_of_break_m', 'L_simple_m', 'simple_to_shore', 'h_max_after_break_m',
-            'L_dally_m', 'dally_to_shore']
+            'L_dally_m', 'dally_to_shore', 'L_reef_supported_m', 'n_on_reef', 'L_reef_supported_median_m',
+            'L_reef_supported_max_m', 'outcome_score', 'spearman_median_vs_outcome']
     with open(os.path.join(HERE, 'results_post_break.csv'), 'w', newline='') as f:
         w = csv.DictWriter(f, fieldnames=keys)
         w.writeheader()
         for r in rows:
             w.writerow({k: r.get(k, '') for k in keys})
     for r in rows:
-        if r['tide'] == 'mid' or r['tide'] == 'low':
-            print(r['slug'][:14], r['tide'], r['Hb_m'], r['status'], r.get('h_crest_m'), r.get('reef_shoreward_of_break_m'),
-                  r.get('L_simple_m'), r.get('simple_to_shore'), r.get('L_dally_m'), r.get('dally_to_shore'))
+        if r['tide'] == 'all':
+            print(r['slug'][:16], r['outcome'], r['n_on_reef'], r['L_reef_supported_median_m'], r['L_reef_supported_max_m'],
+                  r['spearman_median_vs_outcome'])
+        elif r.get('break_on_reef'):
+            print(r['slug'][:16], r['tide'], r['Hb_m'], 'reef', r['reef_shoreward_of_break_m'], 'dally', r['L_dally_m'],
+                  r['dally_to_shore'], 'simple', r['L_simple_m'], 'supported', r['L_reef_supported_m'])
 
 
 if __name__ == '__main__':

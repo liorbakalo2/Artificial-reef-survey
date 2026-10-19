@@ -14,9 +14,9 @@ The shoreline responds to gradients of the wave-driven flow in the lee. In the m
 
 ## 5.2 Predictions for the built reefs
 
-Table 3 applies these predictors to the reconstructed reefs. At mid tide the submerged reefs transmit 41 to 80 % of the site-wave height, i.e. 17 to 64 % of its energy; only Borth, whose crest dries, blocks most waves. Both predictors expect a salient at every reef ($B/S$ 0.23 to 0.78; amplitude 11 to 114 m; $S_a/SZW$ 1.5 to 5.5 under typical waves), but storms widen the surf zone until $S_a/SZW$ = 1 at $H_0$ of 1.5 to 4.5 m, putting every reef in the erosion-likely regime.
+Table 4 applies these predictors to the reconstructed reefs. At mid tide the submerged reefs transmit 41 to 80 % of the site-wave height, i.e. 17 to 64 % of its energy; only Borth, whose crest dries, blocks most waves. Both predictors expect a salient at every reef ($B/S$ 0.23 to 0.78; amplitude 11 to 114 m; $S_a/SZW$ 1.5 to 5.5 under typical waves), but storms widen the surf zone until $S_a/SZW$ = 1 at $H_0$ of 1.5 to 4.5 m, putting every reef in the erosion-likely regime.
 
-**Table 3. Predicted and observed shoreline response (predictions derived in this review; observations from Section 5.3).** $K_t$ for the site wave at low, mid and high tide [@dangremond1996; @briganti2003]; $B/S$ and the salient amplitude of @black2001 [Eq. 30], in brackets the lower reading of their Eq. 31 (with an assumed total salient length of 1 to 3 $B$); $S_a/SZW$ for the site wave and twice the site wave [@ranasinghe2006b].
+**Table 4. Predicted and observed shoreline response (predictions derived in this review; observations from Section 5.3).** $K_t$ for the site wave at low, mid and high tide [@dangremond1996; @briganti2003]; $B/S$ and the salient amplitude of @black2001 [Eq. 30], in brackets the lower reading of their Eq. 31 (with an assumed total salient length of 1 to 3 $B$); $S_a/SZW$ for the site wave and twice the site wave [@ranasinghe2006b].
 
 | Reef | $K_t$ low / mid / high | $B/S$ | Predicted salient (m) | $S_a/SZW$ ($H$ / $2H$) | Observed lee response |
 |:--|:--|--:|--:|:--|:--|
