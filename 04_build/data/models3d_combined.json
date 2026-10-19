@@ -113,7 +113,7 @@
       "hand": 1,
       "polygon": "M.versions.filter(function(v){return v.id===M.default_version;})[0].outline_m",
       "crest_z": "M.versions.filter(function(v){return v.id===M.default_version;})[0].crest_AHD_m",
-      "crest_note": "surveyed (Nov 1999) highest surface point -1.55 m AHD (highest single sounding -1.40 m), AHD taken as MSL (ASSUMPTION); design crest line RL -1.0 = -1.78 m MSL under datum reading A (RL = chart datum, MSL = RL + 0.78) or -1.0 m under reading B; the soundings imply an RL-AHD offset of 0.5-0.6 m (nearer to A)",
+      "crest_note": "surveyed (Nov 1999) highest surface point -1.55 m AHD (highest single sounding -1.40 m); design crest line RL -1.0 = -1.72 m AHD under datum reading A (RL = Fremantle Low Water Datum, AHD = RL - 0.716 m; DNM TR12 Table 3) or -1.0 m under reading B; the soundings imply an RL-AHD offset of 0.5-0.6 m (nearer to A); AHD = MSL 1966-68 (local MSL 1992-2011 is +0.057 m)",
       "shore_mode": "none",
       "sublabels": [
         {

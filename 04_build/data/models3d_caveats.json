@@ -690,16 +690,16 @@
   {
    "slug": "cables-reef-wa",
    "q": "Datum link: RL / AHD / MSL",
-   "model": "reading A (RL = chart datum, MSL = RL + 0.78 m): design crest -1.78 m MSL; AHD taken as MSL",
+   "model": "reading A (RL = Fremantle Low Water Datum, AHD = RL - 0.716 m): design crest -1.72 m AHD; AHD taken as MSL (MSL 1966-68)",
    "stated": "Blacka 2013: crest 1-2.5 m below MSL; soundings imply RL - AHD = 0.59 / 0.50 m (Nov 1999 / Feb 2002)",
-   "diff": "0.2-0.3 m between reading A (0.78) and the soundings (0.5-0.6)",
-   "reason": "The RL of the design drawing is not tied to AHD in any source found; the soundings favour reading A but the gap is unresolved.",
-   "status": "unresolved",
-   "resolve": "Transport WA (Fremantle chart datum to AHD offset, HAT / LAT); the Lyons (1992) drawing set",
+   "diff": "0.13 / 0.22 m between reading A (0.716) and the soundings (0.59 / 0.50)",
+   "reason": "The design drawing's RL is not tied to AHD in any source, but the gauge zero = Fremantle LWD is tied to AHD by DNM TR12 Table 3 (0.716 m); the soundings favour reading A; the remaining 0.13-0.22 m is physical (rock above the design ramp, settlement) or a survey effect, not a datum effect.",
+   "status": "resolved (offset); gap physical",
+   "resolve": "HAT / LAT of Fremantle (Transport WA tides@transport.wa.gov.au or the Australian National Tide Tables); the Lyons (1992) drawing set",
    "section": "3.1; 4; 7 L1",
    "ids": "DoT1999; DoT2002; BoM; img26",
    "ev": [
-    "unresolved gap 0.2-0.3 m (A12)"
+    "remaining gap to A 0.13 / 0.22 m is physical or survey, not datum (3.1)"
    ]
   },
   {
@@ -737,14 +737,14 @@
    "q": "Design-surface versions are idealised",
    "model": "design surface on the measured bed: {{versions/design_plan_original_1999/volume_m3|n0}} m3 (original) / {{versions/design_plan_plus_extension_1999/volume_m3|n0}} m3 (with extension)",
    "stated": "surveyed {{versions/survey_surface_1999_11/volume_m3|n0}} m3 (Nov 1999) and {{versions/survey_surface_2002_02/volume_m3|n0}} m3 (Feb 2002)",
-   "diff": "16-25 % below the surveyed volume",
-   "reason": "The design surface is 0.3 m below the surveyed rock: 0.97 m thick as modelled against 1.15-1.29 m surveyed.",
+   "diff": "11-21 % below the surveyed volume",
+   "reason": "The design surface is 0.25-0.3 m below the surveyed rock: 1.02 m thick as modelled against 1.15-1.29 m surveyed.",
    "status": "by-design",
    "resolve": "-",
    "section": "3.3; 4",
    "ids": "DoT1999; DoT2002; img26",
    "ev": [
-    "thickness 0.97 m modelled vs 1.15-1.29 m surveyed"
+    "thickness 1.02 m modelled vs 1.15-1.29 m surveyed"
    ]
   },
   {
@@ -785,7 +785,7 @@
    "diff": "if CD = LAT the bed is 0.74 m deeper (+5.7k m3)",
    "reason": "Only continuous contour source found; the full Detailed Design Report with the 2017 bathymetry is not public.",
    "status": "unresolved",
-   "resolve": "Full Bluecoast report / 2017 bathymetry / March 2025 as-built survey from the City of Albany; Navionics readings by Lior",
+   "resolve": "Full Bluecoast report / 2017 bathymetry / mid-2025 as-built survey from the City of Albany; Navionics readings by Lior",
    "section": "3.2; 4; 7",
    "ids": "S11; S12",
    "ev": [
@@ -839,17 +839,17 @@
   },
   {
    "slug": "southern-ocean-surf-reef-albany",
-   "q": "Eighteen rocks moved March 2026",
+   "q": "Later rock movements (May 2025 storm; 18 rocks repositioned February 2026)",
    "model": "not modelled",
-   "stated": "Albany Advertiser 11 Mar 2026",
+   "stated": "RWR 28 May 2025; Albany Advertiser 28 May 2025 and 11 Mar 2026",
    "diff": "note only",
    "reason": "Positions and sizes not published.",
    "status": "by-design",
    "resolve": "",
    "section": "1",
-   "ids": "card R11, R18",
+   "ids": "S17-S19; card R11, R18",
    "ev": [
-    "18 rocks moved in March 2026 are a note only"
+    "the rock movements of May 2025 and February 2026 are notes only"
    ]
   },
   {
@@ -858,13 +858,43 @@
    "model": "design outline (default) positioned on the 2026 satellite image",
    "stated": "no survey; 19 Wayback releases hold only three captures (2022-12-19, 2025-01-16, 2026-01-20)",
    "diff": "area -30 %/+20 %",
-   "reason": "Practical-completion survey of March 2025 not public.",
+   "reason": "Completion survey of mid-2025 (the City programme said March 2025) not public.",
    "status": "open",
    "resolve": "City of Albany; Google Earth Pro historical imagery (Lior)",
    "section": "2; 7",
    "ids": "S1; S2",
    "ev": [
     "so there is no construction-sequence image"
+   ]
+  },
+  {
+   "slug": "southern-ocean-surf-reef-albany",
+   "q": "Rock quantity: 62,800 t or 70,000 t",
+   "model": "62,800 t = 34,000 m3 (City design table); loft fitted to 34,000 m3",
+   "stated": "ABC News 16 Jul 2025 and Raised Water Research: 70,000 t",
+   "diff": "70,000 t = 37,898 m3: N 2.73 -> 3.89, mean height 2.59 -> 2.89 m",
+   "reason": "No source says whether 70,000 t is the as-built quantity; the City layer sum is 62,800 t.",
+   "status": "open",
+   "resolve": "Completion survey or as-built quantities from the City / Heron Construction",
+   "section": "4",
+   "ids": "S6; S15; S22; A13",
+   "ev": [
+    "70,000 t = 37,898 m3 needs loft exponent N = 3.89 (now 2.73)"
+   ]
+  },
+  {
+   "slug": "southern-ocean-surf-reef-albany",
+   "q": "Footprint 13,104 m2 or 16,100 m2",
+   "model": "13,104 m2 (Bluecoast design outline), 10,918 m2 (satellite patch)",
+   "stated": "Raised Water Research: 1.61 ha, 165 m x up to 110 m; City FAQ 2023 about 16,000 m2 (earlier concept)",
+   "diff": "drawn outline 19 % smaller; 16,100 m2 would fill 89 % of the 165 x 110 m bounding box (drawn outline 72 %)",
+   "reason": "RWR gives no source and mixes 2015 and final-design numbers.",
+   "status": "unresolved",
+   "resolve": "Design drawing with area, or completion survey",
+   "section": "4",
+   "ids": "S8; S15",
+   "ev": [
+    "16,100 m2 would fill 89 % of it"
    ]
   }
  ]

@@ -16434,7 +16434,9 @@
         "depicts": "Rocks moved shoreward by the 26 May 2025 storm while the reef was under construction (registry southern-ocean-surf-reef-albany-img-29; file in 03_images/reefs/southern-ocean-surf-reef-albany/)",
         "kind": "photo",
         "hotlink_ok": true,
-        "shows": "Dark core rocks showing above the water closer to the beach than designed, late May 2025 (482 x 282 px, the largest size on the RWR site); used as a note on later changes, not as model geometry."
+        "shows": "structure visible: dark core rocks showing above the water closer to the beach than designed, late May 2025 (482 x 282 px, the largest size on the RWR site); used as a note on later changes, not as model geometry.",
+        "shows_label": "shows the structure",
+        "shows_key": "structure-visible"
       }
     ],
     "videos": [

@@ -749,7 +749,7 @@
   },
   "cables-reef-wa": {
    "state_short": "Default: rock surface surveyed by WA Department of Transport in Nov 1999 (840 soundings, month before completion) on the Lyons (1992) design footprint, georeferenced by those soundings, over the measured 1998 seabed. Also: Feb 2002 surveyed surface, design surface with and without the drawn south-arm extension (not confirmed), two plan-only outlines.",
-   "confidence_short": "Plan: HIGH for the original design plan (survey and imagery), LOW for the extension. Seabed under the reef MEDIUM-HIGH (measured, +-0.3 m, 1998). Rock surface MEDIUM (single-beam, +-0.3 m, interpolated). Datum link MEDIUM (0.2-0.3 m unresolved); tides LOW-MEDIUM.",
+   "confidence_short": "Plan: HIGH for the original design plan (survey and imagery), LOW for the extension. Seabed under the reef MEDIUM-HIGH (measured, +-0.3 m, 1998). Rock surface MEDIUM (single-beam, +-0.3 m, interpolated). Datum link MEDIUM-HIGH (official LWD-AHD link 0.716 +-0.04 m; gap to the soundings 0.13-0.22 m is not a datum effect); tides LOW-MEDIUM (HAT / LAT not found).",
    "ve_note": "At VE = 5 the 2 m ramp looks 10 m high; slopes of 1:13 to 1:20 look like 1:2.6 to 1:4 (plan is true).",
    "key_numbers": [
     {
@@ -776,13 +776,13 @@
     },
     {
      "q": "Crest level",
-     "model": "highest surveyed surface point {{versions/survey_surface_1999_11/crest_AHD_m|n2}} m AHD (Nov 1999), {{versions/survey_surface_2002_02/crest_AHD_m|n2}} m (Feb 2002); AHD taken as MSL (ASSUMPTION, +-0.1-0.3 m)",
-     "stated": "design crest RL -1.0 = 1.78 m below MSL (reading A: RL = chart datum, MSL = RL + 0.78) or 1.0 m (reading B); Blacka 2013 A.1.1: crest submergence 1-2.5 m below MSL",
-     "diff": "the soundings imply RL - AHD = 0.5-0.6 m (A = 0.78, B = 0): nearer to A, a 0.2-0.3 m gap is unresolved",
+     "model": "highest surveyed surface point {{versions/survey_surface_1999_11/crest_AHD_m|n2}} m AHD (Nov 1999), {{versions/survey_surface_2002_02/crest_AHD_m|n2}} m (Feb 2002); AHD taken as MSL (MSL 1966-68; local MSL 1992-2011 is +0.057 m)",
+     "stated": "design crest RL -1.0 = 1.72 m below AHD (reading A: RL = Fremantle Low Water Datum, AHD = RL - 0.716 m) or 1.0 m (reading B); Blacka 2013 A.1.1: crest submergence 1-2.5 m below MSL",
+     "diff": "the soundings imply RL - AHD = 0.5-0.6 m (A = 0.716, B = 0): nearer to A; the remaining gap of 0.13 / 0.22 m is physical or survey, not datum",
      "ids": "DoT1999; DoT2002; BoM; img26",
-     "note": "The Transport WA offset between the Fremantle chart datum and AHD was not found.",
+     "note": "AHD 0.000 is 0.716 m above the Fremantle gauge zero (Low Water Datum): Roelse et al. 1975, DNM TR12, Table 3 (+-0.04 m Perth metro zone, Landgate); the Transport WA e-mail answer is no longer needed for this.",
      "ev": [
-      "RL minus AHD on the ramp 0.59 / 0.50 m; A 0.78, B 0.00"
+      "RL minus AHD on the ramp 0.59 / 0.50 m (sd 0.58)"
      ]
     },
     {
@@ -799,9 +799,9 @@
     },
     {
      "q": "Tide (local, Fremantle gauge)",
-     "model": "range 0.8 m, low / high water MSL -0.4 / +0.4 m (symmetry is an estimate); datum 0.78 m below MSL",
-     "stated": "range 0.8 m (Blacka 2013 Table 4.3); mean tide level 0.78 m above datum (Pattiaratchi 1999 p.3); BoM Fremantle gauge MSL 0.773 m above gauge zero (1992-2011)",
-     "diff": "0.007 m (0.78 vs 0.773)",
+     "model": "range 0.8 m, low / high water MSL -0.4 / +0.4 m (symmetry is an estimate); datum (Fremantle LWD) 0.716 m below AHD = MSL",
+     "stated": "range 0.8 m (Blacka 2013 Table 4.3); AHD 0.000 = 0.716 m above gauge zero (DNM TR12 Table 3); BoM Fremantle gauge MSL 0.773 m above gauge zero (1992-2011); 'mean tide level 0.78 m above datum' (Pattiaratchi 1999 p.3)",
+     "diff": "MSL 1992-2011 is AHD +0.057 m (0.773 vs 0.716)",
      "ids": "BoM; img20",
      "note": "HAT and LAT were not found. The Fremantle gauge (Corkhill Landing) is about 4 km south of the reef."
     }
@@ -809,7 +809,7 @@
    "relied": []
   },
   "southern-ocean-surf-reef-albany": {
-   "state_short": "As built (completed March 2025). Plan = Bluecoast final-design outer contour (13,104 m2, default) or the visible rock patch on Esri 2026-01-20 (10,918 m2). Heights: City design crest levels over a seabed read from a 2015 design contour plot (datum assumed AHD), rock volume fitted to the City figure of 34,000 m3: LOW confidence. 18 rocks moved in March 2026 are not modelled.",
+   "state_short": "As built (rock placed 18 March - June 2025, opened 16 July 2025). Plan = Bluecoast final-design outer contour (13,104 m2, default) or the visible rock patch on Esri 2026-01-20 (10,918 m2). Heights: City design crest levels over a seabed read from a 2015 design contour plot (datum assumed AHD), rock volume fitted to the City figure of 34,000 m3: LOW confidence. A May 2025 storm move of core rock and the 18 high rocks repositioned in late February 2026 are not modelled.",
    "ve_note": "At VE = 5 the 1:21 bed between the -2 m and -5 m contours looks like 1:4.1 and the 6.0 m high pile looks 30 m high.",
    "ve_ev": [
     "At VE = 5 the 1:21 bed between the -2 m and -5 m contours looks like 1:4.1 and the 6.0 m high pile looks 30 m high"
