@@ -94,6 +94,16 @@
       "url": "https://stabmag.com/news/this-artificial-reef-on-the-gold-coast-is-showing-serious-potential/",
       "stance": "positive",
       "origin": "via Gemini survey, verified 2026-09-25"
+    },
+    {
+      "who": "@rebeccaeccles1480",
+      "role": "YouTube viewer comment (surfer who was at the reef that day)",
+      "quote_or_summary": "\"Great Video, I was out their on the reef that day and IT Was Solid\" - a solid session is singled out as notable, suggesting such days are occasional.",
+      "outlet": "YouTube comments, video mHSiPEh-93M (grade D, anecdotal user comment, copied by Lior 2026-10-19; automated retrieval blocked by a bot check)",
+      "date": "about 3 years before 2026-10-19",
+      "url": "https://www.youtube.com/watch?v=mHSiPEh-93M",
+      "stance": "positive",
+      "origin": "08_paper/notes/youtube_comments/palm_beach_mHSiPEh-93M.md"
     }
   ],
   "images": [
@@ -200,6 +210,26 @@
       "key_quotes": [],
       "frames": [],
       "about": "mentions the reef briefly"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=8Ebp7VNAGEY",
+      "platform": "YouTube",
+      "video_id": "8Ebp7VNAGEY",
+      "title": "Wave Pocket Tracking at the Palm Beach Artificial Reef",
+      "channel": "Michael Thompson",
+      "channel_url": "https://www.youtube.com/@michaelthompson9374",
+      "duration_seconds": null,
+      "date": "not retrieved (year unknown)",
+      "retrieved": "2026-10-19",
+      "embed_ok": false,
+      "best_timestamp_seconds": null,
+      "what_it_shows": "Footage of the Palm Beach reef with tracked wave pockets, used to extract surf-amenity metrics (average ride length, ride duration, ride rate, ride direction). Description (supplied by Lior 2026-10-19): \"Tracking wave pockets is an effective way to assess surf amenity. We can extract surf amenity metrics such as average ride length, average ride duration, ride rate, ride direction and many more. Thanks to the City of Gold Coast, Bluecoast Consulting Engineers, Swellnet and UQ for making this possible\". Lior's note: very low swell in the footage, but it documents the reef shape nicely and shows surf-amenity tracking. Reef assignment: confirmed by the video title (oEmbed, 2026-10-19). Video not watched or downloaded by the project; no transcript.",
+      "transcript_path": null,
+      "key_quotes": [],
+      "frames": [],
+      "about": "about the reef",
+      "licence": "YouTube standard licence; linked, not embedded or downloaded",
+      "source_of_metadata": "YouTube oEmbed endpoint, retrieved 2026-10-19"
     }
   ],
   "lior_images": [],

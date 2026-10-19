@@ -458,10 +458,12 @@ def e_crest(slug, arms):
     return ang, nv
 
 
-E_HWREF = 220.0                                   # half-width (m) of the common scale (1x); zoom z shows a half-width of E_HWREF / z
-E_ZOOM = {'prattes-reef-el-segundo': 2, 'mount-maunganui-reef': 3, 'bunbury-airwave': 5}
-E_BAR = {1: 50, 2: 50, 3: 20, 5: 10}
-E_BREAK = {'mount-maunganui-reef': ((-28.0, 30.0), (262.0, 350.0))}   # reef too far offshore to share the zoomed window with the shoreline
+E_HW0 = 173.5                                     # half-width (m) of the common baseline scale = Albany's panel; zoom z shows E_HW0 / z
+E_YSH = 28.0                                      # shoreline sits E_YSH / z m above the bottom edge, i.e. at the same height on the page in every panel
+E_ZOOM = {'prattes-reef-el-segundo': 3, 'mount-maunganui-reef': 3, 'bunbury-airwave': 5}
+E_BAR = {1: 50, 3: 20, 5: 10}
+E_TICK = {1: 100, 3: 50, 5: 20}
+E_GAP = 0.55                                      # cm height of the gap between the strips of a y-axis break
 
 
 def figE():
@@ -482,16 +484,24 @@ def figE():
         allp = np.vstack(g['polys'])
         vmax = max(allp[:, 1].max(), g['section'][:, 1].max())
         z = E_ZOOM.get(slug, 1)
-        hw = max(0.5 * np.ptp(allp[:, 0]) + 38, 0.5 * (vmax + 100 + 28) * PW / PH, 95.0) if z == 1 else E_HWREF / z
-        sc = PW / (2 * hw)                                   # cm per m (same in x and y)
-        brk = E_BREAK.get(slug)
+        hw = E_HW0 / z
+        sc = PW / (2 * hw)                                   # cm per m (same in x and y; = z x the baseline scale)
+        ybot = -E_YSH / z
+        ytop = ybot + PH / sc
+        ylo_r, yhi_r = min(allp[:, 1].min(), g['section'][:, 1].min()), max(vmax, g['section'][:, 1].max())
+        brk = None
+        if yhi_r + 4 / z > ytop:     # reef does not fit in the window that keeps the shoreline at the common height -> y-axis break
+            up0, up1 = ylo_r - 32 / z, yhi_r + 12 / z
+            h_up = (up1 - up0) * sc
+            h_lo = PH - E_GAP - h_up
+            brk = ((ybot, ybot + h_lo / sc), (up0, up1))
         if brk:       # two stacked strips with the same scale: shoreline strip at the bottom, reef strip above, break marks between
             (lo0, lo1), (up0, up1) = brk
             h_lo, h_up = (lo1 - lo0) * sc, (up1 - up0) * sc
             gap = PH - h_lo - h_up
             strips = [(0.0, h_lo, lo0, lo1), (h_lo + gap, PH, up0, up1)]
         else:
-            strips = [(0.0, PH, -28.0, -28.0 + 2 * hw * PH / PW)]
+            strips = [(0.0, PH, ybot, ytop)]
         axs = []
         for (b0, b1, ya, yb) in strips:
             ax = fig.add_axes([x0 / W_CM, 1 - (y0 + PH - b0) / H_CM, PW / W_CM, (b1 - b0) / H_CM])
@@ -506,13 +516,10 @@ def figE():
             ax.tick_params(labelsize=6.5)
             axs.append(ax)
         lo_ax, top_ax = axs[0], axs[-1]
-        step = {1: 100, 2: 100, 3: 100, 5: 20}[z]
-        if brk:
-            lo_ax.set_yticks([0]); axs[1].set_yticks([300])
-        else:
-            ymax = strips[0][3]
-            lo_ax.set_yticks([t for t in range(0, 400, step) if t < ymax])
-        lo_ax.text(-hw + 4 / z, -14 if not brk else -14, 'shoreline', fontsize=7, color='#5A4A2A', va='center', ha='left', zorder=5)
+        step = E_TICK[z]
+        for ax_, (_, _, ya_, yb_) in zip(axs, strips):
+            ax_.set_yticks([t for t in range(0, 500, step) if ya_ - 1e-6 <= t <= yb_ + 1e-6])
+        lo_ax.text(-hw + 4 / z, -14 / z, 'shoreline', fontsize=7, color='#5A4A2A', va='center', ha='left', zorder=5)
         arms = e_arms(slug, g)
         for ax in axs:
             for kk, P in enumerate(g['polys']):
@@ -542,7 +549,7 @@ def figE():
         if slug == 'bunbury-airwave':
             lab_ax.text(mid[0] - 5 / z, mid[1] - 2 / z, lab_main, fontsize=6.3, color='black', ha='right', va='top', zorder=8)
         else:
-            lab_ax.text(mid[0] + (36 if slug == 'southern-ocean-surf-reef-albany' else 12 if brk else 4 / z), mid[1] - 4 / z + (24 if brk else 0), lab_main, fontsize=6.3, color='black', ha='left', va='top', zorder=8)
+            lab_ax.text(mid[0] + (36 if slug == 'southern-ocean-surf-reef-albany' else 4 / z), mid[1] - 4 / z, lab_main, fontsize=6.3, color='black', ha='left', va='top', zorder=8)
         if arms:
             ang_c, nv = e_crest(slug, arms)          # assumed crest, kept for the phi0 checks only (not drawn)
             checks[slug] = dict(arm_angle_to_shoreline=[round(_acute(a[1], 0.0), 1) for a in arms], arm_pca=[round(_acute(a[3], 0.0), 1) for a in arms],
@@ -550,12 +557,12 @@ def figE():
                                 swell_off_shorenormal=round(math.degrees(math.atan2(abs(nv[0]), abs(nv[1]))), 1))
         # scale bar (shoreline strip)
         L = E_BAR[z]
-        lo_ax.plot([hw - 8 / z - L, hw - 8 / z], [-18 if not brk else -18] * 2, color='black', lw=1.6, solid_capstyle='butt', zorder=9)
-        lo_ax.text(hw - 8 / z - L / 2, -14, '%d m' % L, fontsize=6.3, ha='center', va='bottom')
+        lo_ax.plot([hw - 8 / z - L, hw - 8 / z], [-18 / z] * 2, color='black', lw=1.6, solid_capstyle='butt', zorder=9)
+        lo_ax.text(hw - 8 / z - L / 2, -14 / z, '%d m' % L, fontsize=6.3, ha='center', va='bottom')
         if brk:       # break marks on the axis and a note
             for ax_, yy in ((lo_ax, 1.0), (top_ax, 0.0)):
                 ax_.plot([-0.025, 0.025], [yy - 0.03, yy + 0.03], transform=ax_.transAxes, color='black', lw=0.8, clip_on=False, zorder=10)
-            fig.text((x0 + 0.12) / W_CM, 1 - (y0 + PH - h_lo - gap / 2) / H_CM, 'axis break (y = 30 to 262 m not shown)', fontsize=6, color=S.INK2, ha='left', va='center')
+            fig.text((x0 + 0.12) / W_CM, 1 - (y0 + PH - h_lo - gap / 2) / H_CM, 'axis break (y = %d to %d m not shown)' % (round(lo1), round(up0)), fontsize=6, color=S.INK2, ha='left', va='center')
         # header
         phi, status = E_REEFS[slug][2], E_STATUS[E_REEFS[slug][3]]
         tr = top_ax.transAxes
@@ -577,8 +584,9 @@ def figE():
          Line2D([], [], color='#1A1A1A', lw=1.5, label='reef arm used for the peel angle φ$_0$')]
     fig.legend(handles=h, loc='lower left', bbox_to_anchor=(0.02, 0.0), ncol=2, frameon=False, fontsize=6.8, columnspacing=1.2,
                labelspacing=0.3, handlelength=2.2)
-    fig.text(0.02, 0.058, 'Plan view looking seaward (seaward up, north not up). Red φ$_0$ = assumed value. Panels without a label are at the common scale '
-             '(1×; bar = 50 m);\nlabelled panels are zoomed about the shoreline (y = 0) by the factor shown, bar as marked.',
+    fig.text(0.02, 0.058, 'Plan view looking seaward (seaward up, north not up). Red φ$_0$ = assumed value.\n'
+             'Every panel uses the axis ranges of the Albany panel (1×, bar = 50 m) divided by its zoom factor; labelled panels are zoomed by that factor, bar as marked.\n'
+             'The shoreline (y = 0) is at the same height in every panel; gaps marked // are y-axis breaks.',
              fontsize=6.5, color=S.INK2, ha='left', va='bottom')
     out = S.save(fig, 'figE_lines_per_reef')
     for k_, v_ in checks.items():

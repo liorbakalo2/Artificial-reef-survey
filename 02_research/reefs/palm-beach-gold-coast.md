@@ -199,3 +199,7 @@ See 05_qa/source_audit/cards_citations_2026-10-10.md. FISH HAVEN label marked de
 
 ## Added 2026-10-19 (paper review: rating, tide check)
 - **rating** (A surf / B safety+longevity / C sediment): 3 / 4 / 3*; rock, intact; inconsistent wave (Lior: "not consistent at all"); nourishment confounds shoreline [R25]
+
+## Added 2026-10-19 (page agent)
+- Video: "Wave Pocket Tracking at the Palm Beach Artificial Reef", channel Michael Thompson, https://www.youtube.com/watch?v=8Ebp7VNAGEY (year not retrieved; title/channel via YouTube oEmbed 2026-10-19). Shows wave-pocket tracking for surf-amenity metrics (ride length, duration, rate, direction); thanks City of Gold Coast, Bluecoast, Swellnet, UQ. Lior: very low swell, but shows the reef shape well. YouTube standard licence, linked only.
+- Review (grade D): @rebeccaeccles1480 on video mHSiPEh-93M, "I was out their on the reef that day and IT Was Solid" (about 3 years old; copied by Lior 2026-10-19).

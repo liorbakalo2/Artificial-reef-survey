@@ -55,7 +55,7 @@ function Blocks(blocks)
     if b.t == 'Table' then
       local n, tot = analyse(b)
       local size = n >= 10 and '\\scriptsize' or (n >= 7 and '\\footnotesize' or nil)
-      local land = n >= 8 and tot > 125
+      local land = n >= 8 and tot >= 150
       local cap
       if land and #out > 0 and starts_with_table(out[#out]) then cap = table.remove(out) end
       if land then out[#out + 1] = pandoc.RawBlock('latex', '\\begin{landscape}') end
