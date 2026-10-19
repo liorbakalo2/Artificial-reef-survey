@@ -471,9 +471,9 @@ def figE():
     PR = {s: load_profile(s) for s in E_ORDER}
     SEC = {s: section_data(s, R, PR[s]) for s in E_ORDER}
     GEO = {s: plan_geometry(s, SEC[s]) for s in E_ORDER}
-    W_CM, H_CM = 17.0, 22.9
+    W_CM, H_CM = 17.0, 22.95
     fig = plt.figure(figsize=(W_CM * S.CM, H_CM * S.CM))
-    PW, PH, TOP, LEFT, GX, GY = 4.85, 5.8, 1.25, 1.05, 0.30, 1.35
+    PW, PH, TOP, LEFT, GX, GY = 4.85, 5.8, 1.15, 1.05, 0.30, 1.25
     checks = {}
     for k, slug in enumerate(E_ORDER):
         r, c = divmod(k, 3)
@@ -495,6 +495,7 @@ def figE():
             ax = fig.add_axes([x0 / W_CM, 1 - (y0 + PH - b0) / H_CM, PW / W_CM, (b1 - b0) / H_CM])
             ax.set_xlim(-hw, hw)
             ax.set_ylim(ya, yb)
+            ax.set_aspect('equal', adjustable='box')      # 1 m in x = 1 m in y on paper (window sizes are chosen to match, so the box is unchanged)
             ax.axhspan(0, 1e4, color=S.SEA, lw=0, zorder=0)
             ax.axhspan(-1e4, 0, color=S.SAND, lw=0, zorder=0)
             ax.axhline(0, color='#6B5B3A', lw=1.0, zorder=2)
@@ -555,8 +556,8 @@ def figE():
         def fy(v): return 1 - (y0 + PH - v * PH) / H_CM          # v in panel fractions (1 = top)
         mk = S.marker_kw(slug, ms=4.6)
         fig.add_artist(Line2D([fx(0.03)], [fy(1 + 0.68 / PH)], transform=fig.transFigure, **mk))
-        fig.text(fx(0.08), fy(1 + 0.48 / PH), NAMES[slug], fontsize=7.8, fontweight='bold', va='bottom', ha='left', color=darker(col, 0.8))
-        fig.text(fx(0.0), fy(1 + 0.12 / PH), 'φ$_0$ ' + phi + (', ' + status if status else ''), fontsize=6.8, va='top', ha='left',
+        fig.text(fx(0.08), fy(1 + 0.5 / PH), NAMES[slug], fontsize=7.8, fontweight='bold', va='bottom', ha='left', color=darker(col, 0.8))
+        fig.text(fx(0.0), fy(1 + 0.16 / PH), 'φ$_0$ ' + phi + (', ' + status if status else ''), fontsize=6.8, va='top', ha='left',
                  color=('#B03A2E' if E_REEFS[slug][3] == 'assumed' else S.INK2))
         if z > 1:
             top_ax.text(0.98, 0.97, '%d× zoom' % z, transform=tr, fontsize=7.2, fontweight='bold', color=S.INK, ha='right', va='top', zorder=12)
@@ -568,7 +569,7 @@ def figE():
          Line2D([], [], color='#1A1A1A', lw=1.5, label='reef arm used for the peel angle φ$_0$')]
     fig.legend(handles=h, loc='lower left', bbox_to_anchor=(0.02, 0.0), ncol=2, frameon=False, fontsize=6.8, columnspacing=1.2,
                labelspacing=0.3, handlelength=2.2)
-    fig.text(0.02, 0.058, 'Plan view looking seaward (seaward up, north not up). Red φ$_0$ = assumed value.\n'
+    fig.text(0.02, 0.95 / H_CM, 'Plan view looking seaward (seaward up, north not up). Red φ$_0$ = assumed value.\n'
              'Every panel uses the axis ranges of the Albany panel (1×, bar = 50 m) divided by its zoom factor; labelled panels are zoomed by that factor, bar as marked.\n'
              'The shoreline (y = 0) is at the same height in every panel; no panel has an axis break.',
              fontsize=6.5, color=S.INK2, ha='left', va='bottom')
