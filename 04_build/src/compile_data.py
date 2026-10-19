@@ -1188,6 +1188,8 @@ def main():
     for f in sorted(ASSETS_DIR.rglob("*")):
         if f.is_file():
             rel = str(f.relative_to(BUILD_DIR)).replace("\\", "/")
+            if rel.startswith("assets/paper_figures/"):
+                continue          # 2026-10-19: paper figures are referenced by src/template.html, not by reef data
             if rel.startswith("assets/images/"):
                 continue          # round 11: the 3D tab's picture copies belong to compile_models3d.py (it regenerates and prunes them itself); sweeping them here forced a 55 s re-encode on every build
             if rel not in blob:
