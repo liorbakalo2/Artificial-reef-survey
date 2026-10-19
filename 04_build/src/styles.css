@@ -489,3 +489,9 @@ td.loc { white-space: nowrap; }
 .loc-pop { margin: 4px 0 6px; padding: 8px 10px; background: var(--surface); color: var(--text); border: 1px solid var(--line); border-radius: 8px; font-size: .88rem; white-space: normal; }
 .m3d-loc { margin: 0 0 8px; font-size: .88rem; }
 .dloc2 { margin-top: -4px; }
+
+/* 2026-10-19: paper figures section */
+.paper-figs{margin:2rem 0}.paper-figs summary{cursor:pointer}.paper-figs summary h2{display:inline;font-size:1.25rem}
+.pf-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,22rem),1fr));gap:1.25rem;margin-top:1rem}
+.pf{margin:0}.pf img{width:100%;height:auto;border:1px solid var(--line,#ccc);background:#fff}
+.pf figcaption{font-size:.85rem;line-height:1.4}.pf figcaption p{margin:.4rem 0}

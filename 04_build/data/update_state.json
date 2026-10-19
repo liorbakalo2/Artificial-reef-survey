@@ -1,23 +1,23 @@
 {
- "updated": "2026-10-10 23:24",
+ "updated": "2026-10-19 15:37",
  "sig": {
   "models": {
    "borth-coastal-defence-reef": {
     "viewer": "b7c0a5256049da1f",
     "model.js": "3bd7b9a87acbe4ee",
-    "annotated": "826aa18903896b1f",
+    "annotated": "524dabfd92d50590",
     "shape.json": "79f821bbbcbb8216",
-    "registry": "0c13db533771c544",
-    "card": "5e7c3fe695aed59e",
+    "registry": "0b971b9ecafc96a6",
+    "card": "1921c173734dc180",
     "config": "ef26b489de2476f0"
    },
    "boscombe-surf-reef": {
     "viewer": "e8db33a945177645",
     "model.js": "ac4af560e672f929",
-    "annotated": "8b89d8089762e706",
+    "annotated": "b3d5ba567c52fceb",
     "shape.json": "b6b5a73f1edb3bb3",
-    "registry": "a40b657771c032b1",
-    "card": "cd96d3f53021fb58",
+    "registry": "7eae313cf8c1a35a",
+    "card": "78253ea94a5b1e0f",
     "config": "314597db2694400b"
    },
    "bunbury-airwave": {
@@ -26,17 +26,17 @@
     "annotated": "5f6ffe80757bc223",
     "shape.json": "f78f81e31007f34e",
     "registry": "5b81179d65f3abd3",
-    "card": "5c0a81c0405264de",
+    "card": "73d9e42fce001bfd",
     "config": "8f4511caba80610f"
    },
    "cables-reef-wa": {
-    "viewer": "e768843aef618e3e",
-    "model.js": "21023e3bc5f17b0d",
+    "viewer": "2368f8995993efad",
+    "model.js": "d890416171a630ca",
     "annotated": "56f7d4835b9c905f",
     "shape.json": "b83ef2a938544c47",
-    "registry": "f919a627121c6005",
-    "card": "909cd144ed042e8c",
-    "config": "f5ac26da2a5b22c7"
+    "registry": "0cfa6baa16eee871",
+    "card": "99481d2756a78fd7",
+    "config": "7c8888e5b75b9c34"
    },
    "mount-maunganui-reef": {
     "viewer": "af8c47045781463f",
@@ -44,7 +44,7 @@
     "annotated": "66b0e754f7a2b3af",
     "shape.json": "15800bc56c7ef000",
     "registry": "3aec3e0e7b50f400",
-    "card": "72dec5fb6b430483",
+    "card": "cd190f82ce47a569",
     "config": "b82c4001e5c55272"
    },
    "narrowneck-gold-coast": {
@@ -53,7 +53,7 @@
     "annotated": "35ed980edd5d344c",
     "shape.json": "99350be6db10ba96",
     "registry": "6abbd57482eba0ed",
-    "card": "2193da5c22166fa2",
+    "card": "b2e8d4db6d43d42d",
     "config": "b8bc5884a392ca6b"
    },
    "palm-beach-gold-coast": {
@@ -62,7 +62,7 @@
     "annotated": "708425714f0edd31",
     "shape.json": "9d74d332271d31bb",
     "registry": "a0f9ca0e8bc26a39",
-    "card": "4ffd984dc5b3061b",
+    "card": "a706ad185846ca95",
     "config": "6cc3935c10b7789f"
    },
    "prattes-reef-el-segundo": {
@@ -71,21 +71,21 @@
     "annotated": "c3f4f1239e62c46a",
     "shape.json": "6d61b893baf8be08",
     "registry": "2dcfd7a4cd326fed",
-    "card": "d732dbd9bd08cbad",
+    "card": "141b8dbb1eee6831",
     "config": "0f6abe26168fdcb7"
    },
    "southern-ocean-surf-reef-albany": {
-    "viewer": "964b454fbcde0bfa",
-    "model.js": "5dc762e62c41f18c",
+    "viewer": "ed24972c301104d3",
+    "model.js": "0d1158b948cf2fae",
     "annotated": "24b1d72dcfa452c5",
     "shape.json": "57031b438df2c099",
-    "registry": "e6468537a151b296",
-    "card": "666e1422461e3b43",
-    "config": "4d6ee6b96177c3d6"
+    "registry": "1e68d41e5010b807",
+    "card": "3890d3b54924515e",
+    "config": "8fe356573e331a75"
    }
   },
   "hold": "199b9c8e89ba5ae4",
-  "src": "96ebe17965c9b07d"
+  "src": "88510a794bb9cc1e"
  },
  "snapshot": {
   "borth-coastal-defence-reef": {
@@ -115,7 +115,7 @@
     "Length of the oval breakwater": "38 m between the crest ends (setting-out table of drawing 1020)",
     "Distance offshore": "centroid of both mounds 330.5 m offshore (nearest edge 257 m, farthest 397 m)"
    },
-   "pictures": 23,
+   "pictures": 25,
    "match_buttons": 8,
    "combined": {
     "status": "ok",
@@ -136,7 +136,7 @@
     "Footprint": "4,042 m2 (25 vertices; minimum rotated rectangle 121.1 x 45.0 m)",
     "Volume": "13,119 m3 (loft)"
    },
-   "pictures": 34,
+   "pictures": 36,
    "match_buttons": 6,
    "combined": {
     "status": "ok",
@@ -170,11 +170,11 @@
    "versions": {
     "design_plan_plus_extension_1999": {
      "area_m2": 4355.0,
-     "volume_m3": 4249.0
+     "volume_m3": 4465.0
     },
     "design_plan_original_1999": {
      "area_m2": 4049.0,
-     "volume_m3": 3920.0
+     "volume_m3": 4136.0
     },
     "paper_fig7_site_plan_1999": {
      "area_m2": 4586.0,
@@ -195,10 +195,10 @@
    },
    "key_numbers": {
     "Footprint (plan outline)": "4,049 m2 (original design plan, 121 x 76 m; position and orientation fitted to the Nov 1999 soundings: 91 % of rock soundings inside); with ",
-    "Rock volume": "4,671 m3 surveyed Nov 1999 (+-1,000); 5,219 m3 surveyed Feb 2002; design surface on the measured bed 3,920 m3 (original) / 4,249 m3 (with ex",
-    "Crest level": "highest surveyed surface point -1.55 m AHD (Nov 1999), -1.71 m (Feb 2002); AHD taken as MSL (ASSUMPTION, +-0.1-0.3 m)",
+    "Rock volume": "4,671 m3 surveyed Nov 1999 (+-1,000); 5,219 m3 surveyed Feb 2002; design surface on the measured bed 4,136 m3 (original) / 4,465 m3 (with ex",
+    "Crest level": "highest surveyed surface point -1.55 m AHD (Nov 1999), -1.71 m (Feb 2002); AHD taken as MSL (MSL 1966-68; local MSL 1992-2011 is +0.057 m)",
     "Water depth at the reef": "measured bed (DoT 1998 soundings, AHD) 2.8-6.6 m below MSL along the outline; 254-263 m from the reef centre to the 0 m AHD line",
-    "Tide (local, Fremantle gauge)": "range 0.8 m, low / high water MSL -0.4 / +0.4 m (symmetry is an estimate); datum 0.78 m below MSL"
+    "Tide (local, Fremantle gauge)": "range 0.8 m, low / high water MSL -0.4 / +0.4 m (symmetry is an estimate); datum (Fremantle LWD) 0.716 m below AHD = MSL"
    },
    "pictures": 24,
    "match_buttons": 0,
@@ -342,7 +342,7 @@
     "LAT and mean level": "LAT = -0.74 m AHD; MLLW -0.26, MHHW +0.34 m AHD",
     "Plan, default outline": "13,104 m2 (toggle: 10,918 m2)"
    },
-   "pictures": 16,
+   "pictures": 17,
    "match_buttons": 0,
    "combined": {
     "status": "ok",

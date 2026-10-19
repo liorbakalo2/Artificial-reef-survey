@@ -11,7 +11,7 @@ PASS markers are rendered as pop-up buttons (ref-mark / data-ref / aria-controls
 PASS every one of 2831 [R#] markers has a pop-up target with citation text (missing=[])
 INFO references without a URL (pop-up shows 'internal note — no URL'): 47
 PASS every review has a source link or a reference pop-up (none=[])
-INFO leak tests run on the page without the dead-ends data (152,661 characters removed)
+INFO leak tests run on the page without the dead-ends data (152,657 characters removed)
 PASS no videos_rejected content rendered (6 rejected ids/urls/titles checked; leaked=[])
 PASS Burkitts shows 0 videos (videos=0, hero=https://live-production.wcms.abc-cdn.net.au/a6112bacdcff4864)
 INFO items tagged with an origin (e.g. via Gemini survey, verified): 38 [('cables-reef-wa', 'S1'), ('cables-reef-wa', 'S2'), ('prattes-reef-el-segundo', '"evan"'), ('prattes-reef-el-segundo', 'S1'), ('prattes-reef-el-segundo', 'S2'), ('prattes-reef-el-segundo', 'S3'), ('prattes-reef-el-segundo', 'S4'), ('prattes-reef-el-segundo', 'S5'), ('mount-maunganui-reef', 'S1'), ('mount-maunganui-reef', 'S2'), ('mount-maunganui-reef', 'S3'), ('mount-maunganui-reef', 'S4'), ('boscombe-surf-reef', 'Dr Mark Davidson'), ('boscombe-surf-reef', 'S1'), ('borth-coastal-defence-reef', 'S1'), ('borth-coastal-defence-reef', 'S2'), ('bunbury-airwave', 'R9'), ('bunbury-airwave', 'R15'), ('bunbury-airwave', 'R21'), ('bunbury-airwave', 'R22'), ('bunbury-airwave', 'R23'), ('bunbury-airwave', 'R24'), ('bunbury-airwave', 'R25'), ('palm-beach-gold-coast', 'Stab Magazine'), ('palm-beach-gold-coast', 'S1'), ('southern-ocean-surf-reef-albany', 'R18'), ('southern-ocean-surf-reef-albany', 'R19'), ('southern-ocean-surf-reef-albany', 'R23'), ('southern-ocean-surf-reef-albany', 'R24'), ('southern-ocean-surf-reef-albany', 'R25'), ('southern-ocean-surf-reef-albany', 'R26'), ('southern-ocean-surf-reef-albany', 'R27'), ('southern-ocean-surf-reef-albany', 'R28'), ('southern-ocean-surf-reef-albany', 'R29'), ('southern-ocean-surf-reef-albany', 'R30'), ('southern-ocean-surf-reef-albany', 'R31'), ('southern-ocean-surf-reef-albany', 'R32'), ('southern-ocean-surf-reef-albany', 'R33')]
@@ -106,7 +106,7 @@ PASS [dialog mexico-reef-2026-unnamed] shows the 'Shape not drawn' text
 PASS [dialog mexico-reef-2026-unnamed] says location not published and has no map link (outside the dead-ends section)
 PASS [dialog mexico-reef-2026-unnamed] 'Checked, nothing useful (18)' section: present, closed by default, last section, after (not inside) References, 18 entries as in dead_ends/mexico-reef-2026-unnamed.json
 PASS table: a Location link in every row that has coordinates (12 of 12; Mexico shows 'not published')
-FAIL every image with a 'shows' verdict carries a caption label (missing=['southern-ocean-surf-reef-albany:6'])
+PASS every image with a 'shows' verdict carries a caption label (missing=[])
 PASS site-only videos render as link-only with their label (bad=[])
 PASS hero image prefers structure visible > reef effect > site context (bad=[])
 PASS no images_rejected URL rendered anywhere, incl. the Scale tab (16 checked; leaked=[])
@@ -142,11 +142,11 @@ PASS [3D] every gallery picture has a non-empty how_used + citation for its tool
 PASS [3D] every model has confidence badge data, state, vertical-exaggeration note, key numbers, caveats and references (bad=[])
 PASS [3D] mandated caveat rows present (lacking=[])
 PASS [3D] merged reference list: 128 entries, each with id and text
-FAIL [3D] curated quotes / evidence snippets verified against the documents at build time (144 checked, failed=["cables-reef-wa | key number 'Crest level' | RL minus AHD on the ramp 0.59 / 0.50 m; A 0.78, B 0.00", "cables-reef-wa | caveat 'Datum link: RL / AHD / MSL' | unresolved gap 0.2-0.3 m (A12)", "cables-reef-wa | caveat 'Design-surface versions are idealised' | thickness 0.97 m modelled vs 1.15-1.29 m surveyed"])
+PASS [3D] curated quotes / evidence snippets verified against the documents at build time (146 checked, failed=[])
 PASS [3D] project-wide methods text rendered
 PASS [3D] every relied-on quotation is <= 25 words
 PASS [3D] outline-version contract for the 5 model(s) with versions (bad=[])
-INFO [3D] 9 models ['borth-coastal-defence-reef - medium', 'boscombe-surf-reef - medium', 'bunbury-airwave - medium', 'cables-reef-wa - medium', 'mount-maunganui-reef - medium', 'narrowneck-gold-coast - medium', 'palm-beach-gold-coast - medium', 'prattes-reef-el-segundo - low', 'southern-ocean-surf-reef-albany - low']; pictures 245; caveat rows 83; references 128; with versions 5; not yet modelled ['burkitts-reef-bargara', 'opunake-reef', 'kovalam-reef-india', 'mexico-reef-2026-unnamed']
+INFO [3D] 9 models ['borth-coastal-defence-reef - medium', 'boscombe-surf-reef - medium', 'bunbury-airwave - medium', 'cables-reef-wa - medium', 'mount-maunganui-reef - medium', 'narrowneck-gold-coast - medium', 'palm-beach-gold-coast - medium', 'prattes-reef-el-segundo - low', 'southern-ocean-surf-reef-albany - low']; pictures 245; caveat rows 85; references 128; with versions 5; not yet modelled ['burkitts-reef-bargara', 'opunake-reef', 'kovalam-reef-india', 'mexico-reef-2026-unnamed']
 PASS [3D] sticky top navigation (#topnav) holds the view buttons and comes before the site header
 PASS [3D] back-to-top control present
 PASS [3D] every copied viewer (and the combined viewer) has the injected 'Back to the page' bar, hidden when framed (missing=[])
