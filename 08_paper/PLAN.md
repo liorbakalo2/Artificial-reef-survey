@@ -88,3 +88,5 @@ C) full data table; D) reefs of Bar & Drimer (2023) not built as surf reefs.
 ## Workflow scripts (to resume in a new session)
 - Round 2: `_agent_briefs/workflows/paper_round2.js`; rounds 3-4: `_agent_briefs/workflows/paper_round3_4.js` (run with the Workflow tool).
 - Status 2026-10-16 04:40 UTC: round 1 done (data, profiles, lit, notes, seabed analysis, analysis scripts+results, insights check); round 2 running.
+
+- 2026-10-19 (Lior): length is fine as is (~26 pages main text); no cuts.
