@@ -1,0 +1,82 @@
+slug,outcome,line,tide,eta_msl_m,Hb_m,h_crest_m,status,y_break_m,h_break_m,break_on_reef,reef_shoreward_of_break_m,L_simple_m,simple_to_shore,h_max_after_break_m,L_dally_m,dally_to_shore
+narrowneck-gold-coast,works rarely,second_crest_line,low,-0.66,1.0,1.66,breaks_seaward_of_reef,103.0,1.278,False,-129.0,78.0,True,1.28,77.0,False
+narrowneck-gold-coast,works rarely,second_crest_line,low,-0.66,1.5,1.66,breaks_on_reef,295.0,1.66,True,63.0,270.0,True,3.38,57.0,False
+narrowneck-gold-coast,works rarely,second_crest_line,low,-0.66,2.0,1.66,breaks_on_reef,314.0,2.49,True,82.0,289.0,True,3.38,76.0,False
+narrowneck-gold-coast,works rarely,second_crest_line,mid,0.0,1.0,2.32,breaks_seaward_of_reef,52.0,1.28,False,-180.0,55.0,True,1.28,54.0,False
+narrowneck-gold-coast,works rarely,second_crest_line,mid,0.0,1.5,2.32,breaks_seaward_of_reef,100.0,1.92,False,-132.0,103.0,True,1.92,102.0,False
+narrowneck-gold-coast,works rarely,second_crest_line,mid,0.0,2.0,2.32,breaks_on_reef,295.0,2.32,True,63.0,298.0,True,4.04,57.0,False
+narrowneck-gold-coast,works rarely,second_crest_line,high,0.65,1.0,2.97,breaks_seaward_of_reef,21.0,1.262,False,-211.0,47.0,True,1.26,46.0,False
+narrowneck-gold-coast,works rarely,second_crest_line,high,0.65,1.5,2.97,breaks_seaward_of_reef,51.0,1.91,False,-181.0,77.0,True,1.91,76.0,False
+narrowneck-gold-coast,works rarely,second_crest_line,high,0.65,2.0,2.97,breaks_seaward_of_reef,99.0,2.564,False,-133.0,125.0,True,2.56,124.0,False
+palm-beach-gold-coast,works,crest_line,low,-0.66,1.0,0.84,breaks_on_reef,279.0,1.27,True,39.0,30.0,False,4.0,18.0,False
+palm-beach-gold-coast,works,crest_line,low,-0.66,1.5,0.84,breaks_on_reef,291.0,1.91,True,51.0,51.0,False,4.0,31.0,False
+palm-beach-gold-coast,works,crest_line,low,-0.66,2.0,0.84,breaks_on_reef,302.0,2.52,True,62.0,280.0,True,4.0,42.0,False
+palm-beach-gold-coast,works,crest_line,mid,0.0,1.0,1.5,breaks_seaward_of_reef,42.0,1.275,False,-198.0,41.0,True,1.27,40.0,False
+palm-beach-gold-coast,works,crest_line,mid,0.0,1.5,1.5,breaks_on_reef,278.0,1.87,True,38.0,34.0,False,4.66,21.0,False
+palm-beach-gold-coast,works,crest_line,mid,0.0,2.0,1.5,breaks_on_reef,290.0,2.52,True,50.0,289.0,True,4.66,33.0,False
+palm-beach-gold-coast,works,crest_line,high,0.65,1.0,2.15,breaks_seaward_of_reef,20.0,1.28,False,-220.0,30.0,True,1.28,29.0,False
+palm-beach-gold-coast,works,crest_line,high,0.65,1.5,2.15,breaks_seaward_of_reef,41.0,1.898,False,-199.0,51.0,True,1.9,50.0,False
+palm-beach-gold-coast,works,crest_line,high,0.65,2.0,2.15,breaks_on_reef,278.0,2.52,True,38.0,37.0,False,5.31,23.0,False
+cables-reef-wa,mixed/disputed,crest_line,low,-0.57,1.0,1.352,no_break_on_profile,,,,,,,,,
+cables-reef-wa,mixed/disputed,crest_line,low,-0.57,1.5,1.352,breaks_on_reef,287.0,1.899,True,23.0,100.0,False,3.78,21.0,False
+cables-reef-wa,mixed/disputed,crest_line,low,-0.57,2.0,1.352,breaks_on_reef,298.0,2.556,True,34.0,112.0,True,3.78,32.0,False
+cables-reef-wa,mixed/disputed,crest_line,mid,0.0,1.0,1.922,no_break_on_profile,,,,,,,,,
+cables-reef-wa,mixed/disputed,crest_line,mid,0.0,1.5,1.922,breaks_on_reef,269.0,1.922,True,5.0,48.0,False,4.24,5.0,False
+cables-reef-wa,mixed/disputed,crest_line,mid,0.0,2.0,1.922,breaks_on_reef,288.0,2.544,True,24.0,102.0,True,4.35,23.0,False
+cables-reef-wa,mixed/disputed,crest_line,high,0.57,1.0,2.492,no_break_on_profile,,,,,,,,,
+cables-reef-wa,mixed/disputed,crest_line,high,0.57,1.5,2.492,no_break_on_profile,,,,,,,,,
+cables-reef-wa,mixed/disputed,crest_line,high,0.57,2.0,2.492,breaks_on_reef,270.0,2.54,True,6.0,84.0,True,4.92,37.0,False
+mount-maunganui-reef,works rarely,crest_line,low,-0.92,1.0,1.158,breaks_on_reef,311.0,1.278,True,15.0,14.0,False,3.61,4.0,False
+mount-maunganui-reef,works rarely,crest_line,low,-0.92,1.5,1.158,breaks_on_reef,320.0,1.907,True,24.0,270.0,True,3.61,22.0,False
+mount-maunganui-reef,works rarely,crest_line,low,-0.92,2.0,1.158,breaks_on_reef,321.0,2.144,True,25.0,271.0,True,3.61,24.0,False
+mount-maunganui-reef,works rarely,crest_line,mid,0.0,1.0,2.078,breaks_seaward_of_reef,66.0,1.264,False,-230.0,64.0,True,1.26,62.0,False
+mount-maunganui-reef,works rarely,crest_line,mid,0.0,1.5,2.078,breaks_seaward_of_reef,100.0,1.915,False,-196.0,98.0,True,1.92,96.0,False
+mount-maunganui-reef,works rarely,crest_line,mid,0.0,2.0,2.078,breaks_on_reef,312.0,2.383,True,16.0,310.0,True,4.53,15.0,False
+mount-maunganui-reef,works rarely,crest_line,high,0.83,1.0,2.908,breaks_seaward_of_reef,23.0,1.271,False,-273.0,35.0,True,1.27,34.0,False
+mount-maunganui-reef,works rarely,crest_line,high,0.83,1.5,2.908,breaks_seaward_of_reef,57.0,1.922,False,-239.0,69.0,True,1.92,68.0,False
+mount-maunganui-reef,works rarely,crest_line,high,0.83,2.0,2.908,breaks_seaward_of_reef,90.0,2.554,False,-206.0,102.0,True,2.55,101.0,False
+prattes-reef-el-segundo,does not work,centreline,low,-0.849,1.0,1.57,breaks_seaward_of_reef,45.0,1.249,False,-48.0,37.0,True,1.25,36.0,False
+prattes-reef-el-segundo,does not work,centreline,low,-0.849,1.5,1.57,breaks_on_reef,102.0,1.887,True,9.0,94.0,True,2.83,10.0,False
+prattes-reef-el-segundo,does not work,centreline,low,-0.849,2.0,1.57,breaks_on_reef,102.0,1.887,True,9.0,94.0,True,2.83,93.0,False
+prattes-reef-el-segundo,does not work,centreline,mid,0.0,1.0,2.419,breaks_seaward_of_reef,16.0,1.276,False,-77.0,16.0,True,1.28,16.0,True
+prattes-reef-el-segundo,does not work,centreline,mid,0.0,1.5,2.419,breaks_seaward_of_reef,39.0,1.901,False,-54.0,39.0,True,1.9,39.0,True
+prattes-reef-el-segundo,does not work,centreline,mid,0.0,2.0,2.419,breaks_on_reef,99.0,2.548,True,6.0,99.0,True,3.68,99.0,True
+prattes-reef-el-segundo,does not work,centreline,high,0.804,1.0,3.223,breaks_seaward_of_reef,3.0,1.166,False,-90.0,9.0,True,1.17,9.0,True
+prattes-reef-el-segundo,does not work,centreline,high,0.804,1.5,3.223,breaks_seaward_of_reef,12.0,1.893,False,-81.0,18.0,True,1.89,18.0,True
+prattes-reef-el-segundo,does not work,centreline,high,0.804,2.0,3.223,breaks_seaward_of_reef,34.0,2.559,False,-59.0,40.0,True,2.56,40.0,True
+boscombe-surf-reef,works rarely,crest_line,low,-0.95,1.0,-0.05,breaks_on_reef,242.0,0.98,True,55.0,3.0,True,0.98,3.0,True
+boscombe-surf-reef,works rarely,crest_line,low,-0.95,1.5,-0.05,breaks_on_reef,244.0,1.66,True,57.0,5.0,True,1.66,5.0,True
+boscombe-surf-reef,works rarely,crest_line,low,-0.95,2.0,-0.05,breaks_on_reef,247.0,2.52,True,60.0,8.0,True,2.52,8.0,True
+boscombe-surf-reef,works rarely,crest_line,mid,0.0,1.0,0.9,breaks_on_reef,239.0,0.97,True,52.0,42.0,False,4.81,34.0,False
+boscombe-surf-reef,works rarely,crest_line,mid,0.0,1.5,0.9,breaks_on_reef,241.0,1.61,True,54.0,51.0,False,4.81,36.0,False
+boscombe-surf-reef,works rarely,crest_line,mid,0.0,2.0,0.9,breaks_on_reef,243.0,2.28,True,56.0,250.0,True,4.81,39.0,False
+boscombe-surf-reef,works rarely,crest_line,high,0.81,1.0,1.71,breaks_seaward_of_reef,20.0,1.27,False,-167.0,35.0,True,1.27,35.0,True
+boscombe-surf-reef,works rarely,crest_line,high,0.81,1.5,1.71,breaks_on_reef,239.0,1.78,True,52.0,45.0,False,5.62,35.0,False
+boscombe-surf-reef,works rarely,crest_line,high,0.81,2.0,1.71,breaks_on_reef,241.0,2.42,True,54.0,53.0,False,5.62,37.0,False
+borth-coastal-defence-reef,unknown,crest_line,low,-2.05,1.0,-2.52,breaks_on_reef,375.0,1.01,True,111.0,12.0,True,1.01,11.0,False
+borth-coastal-defence-reef,unknown,crest_line,low,-2.05,1.5,-2.52,breaks_on_reef,382.0,1.8,True,118.0,19.0,True,1.8,17.0,False
+borth-coastal-defence-reef,unknown,crest_line,low,-2.05,2.0,-2.52,breaks_seaward_of_reef,440.0,2.557,False,176.0,77.0,True,2.56,76.0,False
+borth-coastal-defence-reef,unknown,crest_line,mid,0.0,1.0,-0.47,breaks_on_reef,358.0,1.085,True,94.0,12.0,True,1.08,10.0,False
+borth-coastal-defence-reef,unknown,crest_line,mid,0.0,1.5,-0.47,breaks_on_reef,361.0,1.89,True,97.0,15.0,True,1.89,13.0,False
+borth-coastal-defence-reef,unknown,crest_line,mid,0.0,2.0,-0.47,breaks_on_reef,371.0,2.475,True,107.0,25.0,True,2.48,23.0,False
+borth-coastal-defence-reef,unknown,crest_line,high,2.25,1.0,1.78,breaks_seaward_of_reef,59.0,1.265,False,-205.0,20.0,True,1.27,20.0,True
+borth-coastal-defence-reef,unknown,crest_line,high,2.25,1.5,1.78,breaks_on_reef,342.0,1.865,True,78.0,38.0,False,5.37,24.0,False
+borth-coastal-defence-reef,unknown,crest_line,high,2.25,2.0,1.78,breaks_on_reef,349.0,2.42,True,85.0,63.0,False,5.37,32.0,False
+bunbury-airwave,does not work,crest_line,low,-0.6,1.0,0.081,breaks_on_reef,41.0,0.899,True,9.0,30.0,True,1.67,4.0,False
+bunbury-airwave,does not work,crest_line,low,-0.6,1.5,0.081,breaks_on_reef,42.0,1.378,True,10.0,31.0,True,1.67,5.0,False
+bunbury-airwave,does not work,crest_line,low,-0.6,2.0,0.081,breaks_seaward_of_reef,46.0,2.548,False,14.0,35.0,True,2.55,9.0,False
+bunbury-airwave,does not work,crest_line,mid,0.0,1.0,0.681,breaks_on_reef,40.0,1.139,True,8.0,37.0,True,2.27,7.0,False
+bunbury-airwave,does not work,crest_line,mid,0.0,1.5,0.681,breaks_on_reef,41.0,1.499,True,9.0,38.0,True,2.27,9.0,False
+bunbury-airwave,does not work,crest_line,mid,0.0,2.0,0.681,breaks_on_reef,42.0,1.978,True,10.0,39.0,True,2.27,38.0,False
+bunbury-airwave,does not work,crest_line,high,0.6,1.0,1.281,breaks_on_reef,37.0,1.281,True,5.0,5.0,False,2.87,4.0,False
+bunbury-airwave,does not work,crest_line,high,0.6,1.5,1.281,breaks_on_reef,40.0,1.739,True,8.0,46.0,True,2.87,8.0,False
+bunbury-airwave,does not work,crest_line,high,0.6,2.0,1.281,breaks_on_reef,41.0,2.099,True,9.0,47.0,True,2.87,46.0,False
+southern-ocean-surf-reef-albany,works,crest_line,low,-0.69,1.0,1.28,breaks_on_reef,118.0,1.28,True,26.0,98.0,True,2.46,15.0,False
+southern-ocean-surf-reef-albany,works,crest_line,low,-0.69,1.5,1.28,breaks_on_reef,202.0,1.887,True,110.0,182.0,True,2.46,89.0,False
+southern-ocean-surf-reef-albany,works,crest_line,low,-0.69,2.0,1.28,breaks_on_reef,210.0,2.512,True,118.0,190.0,True,2.51,97.0,False
+southern-ocean-surf-reef-albany,works,crest_line,mid,0.0,1.0,1.97,breaks_seaward_of_reef,43.0,1.25,False,-49.0,48.0,True,1.25,47.0,False
+southern-ocean-surf-reef-albany,works,crest_line,mid,0.0,1.5,1.97,breaks_seaward_of_reef,61.0,1.893,False,-31.0,66.0,True,1.89,65.0,False
+southern-ocean-surf-reef-albany,works,crest_line,mid,0.0,2.0,1.97,breaks_on_reef,201.0,2.52,True,109.0,206.0,True,3.15,91.0,False
+southern-ocean-surf-reef-albany,works,crest_line,high,0.69,1.0,2.66,breaks_seaward_of_reef,12.0,1.276,False,-80.0,34.0,True,1.28,33.0,False
+southern-ocean-surf-reef-albany,works,crest_line,high,0.69,1.5,2.66,breaks_seaward_of_reef,42.0,1.904,False,-50.0,64.0,True,1.9,63.0,False
+southern-ocean-surf-reef-albany,works,crest_line,high,0.69,2.0,2.66,breaks_seaward_of_reef,60.0,2.547,False,-32.0,82.0,True,2.55,81.0,False

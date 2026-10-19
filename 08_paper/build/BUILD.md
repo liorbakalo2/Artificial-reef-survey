@@ -5,7 +5,7 @@ Rebuild (from `08_paper/build/`): `python3 build_latex.py` (about 1 minute; outp
 `.../scratchpad/latex/`, override with env `LATEX_WORK`). Needs xelatex, biber, pandoc 3.1.3 and the LaTeX packages already installed.
 - Steps in `build_latex.py`: concatenate `../sections/ORDER.txt` (no `10_references.md`) -> pandoc `--biblatex` with `template.latex`
   (pandoc default minus the automatic bibliography), `latex_header.tex` and the Lua filter `tables.lua` -> `xelatex`, `biber`, `xelatex` x2.
-  `\printbibliography[title=References]` is inserted before Appendix A; a `\clearpage` precedes each appendix.
+  Under one "References" heading two lists are inserted before Appendix A (see "Two reference lists" below); a `\clearpage` precedes each appendix.
 - `references.bib` (143 entries + 3 `skipbib` secondary sources) is written by `python3 md2bib.py` from `../sections/10_references.md`
   (heuristic parser; hand fixes in `bib_overrides.py`; keys like `hutt2001`, `mead2001a`, `raisedwaterndb`; key table in `citekeys.json`).
   Rerun `md2bib.py` only after editing 10_references.md, then rebuild. The `[not read]`-type notes are kept in the `addendum` field.
@@ -54,3 +54,16 @@ Result: `paper.pdf`, 50 pages A4 = title and contents pp. 1-3 (abstract on p. 3)
 - Main text is longer than the 15-20 page target (OPEN_ISSUES item 2 lists cut candidates).
 
 - 2026-10-19: `thesurfeye2023` (Palm Beach video comments) was added by hand to references.bib. If md2bib.py is re-run, add it again or add it to 10_references.md first.
+
+## Two reference lists (grouping)
+- `ref_groups.csv` (`key,group`, group = `academic` | `other`) covers every key in `references.bib`; `ref_groups_new.csv` (same format, written by
+  other agents for appended entries) is re-read at each build and overrides. Edit these CSVs, never `references.bib`, to move an entry.
+- `build_latex.py` writes a work copy of the bib with `keywords = {academic|other}` added to each entry; the source bib stays unchanged.
+  It stops with a list if any bib key has no group (or a group other than academic/other).
+- Back matter: `\section*{References}` then `\printbibliography[keyword=academic,heading=subbibintoc,title={Scholarly and technical sources}]`
+  and `[keyword=other,...,title={Media, web and other non-academic sources}]`. Citation links still point to the entries.
+- Group 1 = papers, conference papers, books, theses, technical/government/council/consultancy reports, official data sets, tide tables, standards.
+  Group 2 = news and trade press, websites/blogs, company pages, YouTube, forum/social media, personal communications.
+- Counts (at 2026-10-19): 147 keys = 99 academic + 48 other; listed (3 `skipbib` not printed) = 97 + 47.
+- Doubtful, placed in group 2: pitt2009, zalul2025 (NGO appeal), mccp2026 (agency project list), cityof2023 (council FAQ), cityofnd (council web page),
+  garminnavionicsnd (app chart), alvarez2006 (trade magazine). Doubtful, in group 1: rcahmw2020 (Coflein record), esrind (imagery), nationaltidalnd, verhagen2012 (lecture notes).
