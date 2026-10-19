@@ -22,12 +22,12 @@ Table 3 applies these predictors to the reconstructed reefs. At mid tide the sub
 |:--|:--|--:|--:|:--|:--|
 | Boscombe | 0.05 / 0.48 / 0.47 | 0.39 | 84 (Eq. 31: 11-35) | 5.5 / 3.7 | +3.4 m (95 % CI +1.3 to +5.3), before/after with controls |
 | Palm Beach | 0.29 / 0.52 / 0.75 | 0.43 | 114 | 4.8 / 2.0 | 2 m or less (chart, low confidence) |
-| Cables | 0.32 / 0.46 / 0.60 | 0.44 | 102 (Eq. 31: 14-41) | 3.8 / 2.1 | lee high pre-dates the reef; beach bulge shrinking |
-| Borth | 0.05 / 0.05 / 0.43 | 0.38 | 89 | 2.2 / 1.4 | +30 m bulge (+12 to +48), single survey, no baseline |
+| Cables | 0.38 / 0.52 / 0.67 | 0.47 | 98 (Eq. 31: 14-41) | 3.6 / 2.0 | lee high pre-dates the reef; beach bulge shrinking |
+| Borth | 0.05 / 0.05 / 0.66 | 0.39 | 88 | 1.8 / 1.4 | +30 m bulge (+12 to +48), single survey, no baseline |
 | Pratte's | 0.80 (upper limit) | 0.63 | 40 | 2.8 / 1.3 | +13 m in 5 months, no control; "no discernible impact" |
 | Narrowneck | 0.42 / 0.64 / 0.68 | 0.39 | 104 | 3.3 / 1.3 | not testable (continuous nourishment) |
 | Mt Maunganui | 0.44 / 0.66 / 0.80 | 0.23 | 79 | 2.1 / 1.1 | "subtle and within the natural variation" |
-| Albany | 0.20 / 0.41 / 0.63 | 0.78 | 77 | 2.4 / 1.6 | no post-construction data (opened 2025) |
+| Albany | 0.39 / 0.41 / 0.40 | 0.78 | 77 | 2.4 / 1.6 | no post-construction data (opened 2025) |
 | Bunbury | 0.46 / 0.64 / 0.80 | 0.34 | 11 | 1.5 / 0.7 | removed within days |
 
 ## 5.3 Observed response: the seabed and beach surveys
@@ -50,7 +50,7 @@ The literature agrees. At Mount Maunganui effects were "subtle and within the na
 
 ## 5.4 The Gold Coast and the nourishment confound
 
-The author's observation (b) is that the Gold Coast reefs are claimed to protect the coast although the shoreline shows little change, and that the claim cannot be attributed to the reef because sand is nourished continuously. The record supports it. Narrowneck was built as "a coastal control point to stabilize the nourished beaches to the south" after 1.3 million m³ of nourishment in 1999-2000, with at least 60,000 m³ a year planned thereafter (Jackson et al., 2012, pp. 1-2). The designers report a beach 30 to 50 m wider (Mead & Borrero, 2011, p. 4), whereas Blacka et al. (2013, pp. 98-100) found "only a minor planform perturbation" of about 10 m and called the published widening "a likely misreading" of an arbitrary reference line, and Jackson et al. (2012) found "a minor groyne effect" and no long-term salient. Palm Beach was part of an AU$18 million nourishment project that placed about 470,000 m³ on the beach (Royal HaskoningDHV, n.d.); the City's statement that the reef "retained about 550,000 cubic metres" in two years (ABC News, 2022) is of the same order as the volume placed, and there is no nourishment-only control (Prenzler et al., 2023).
+The author's lead (b; Appendix F) is that the Gold Coast reefs are claimed to protect the coast although the shoreline shows little change, and that the claim cannot be attributed to the reef because sand is nourished continuously. The record supports it. Narrowneck was built as "a coastal control point to stabilize the nourished beaches to the south" after 1.3 million m³ of nourishment in 1999-2000, with at least 60,000 m³ a year planned thereafter (Jackson et al., 2012, pp. 1-2). The designers report a beach 30 to 50 m wider (Mead & Borrero, 2011, p. 4), whereas Blacka et al. (2013, pp. 98-100) found "only a minor planform perturbation" of about 10 m and called the published widening "a likely misreading" of an arbitrary reference line, and Jackson et al. (2012) found "a minor groyne effect" and no long-term salient. Palm Beach was part of an AU$18 million nourishment project that placed about 470,000 m³ on the beach (Royal HaskoningDHV, n.d.); the City's statement that the reef "retained about 550,000 cubic metres" in two years (ABC News, 2022) is of the same order as the volume placed, and there is no nourishment-only control (Prenzler et al., 2023).
 
 ## 5.5 Burial, settlement and scour
 

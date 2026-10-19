@@ -158,14 +158,14 @@ def fig4():
         'cables-reef-wa': (8, 3, 'left', 'bottom'), 'mount-maunganui-reef': (8, 0, 'left', 'center'),
         'prattes-reef-el-segundo': (8, 0, 'left', 'center'), 'boscombe-surf-reef': (-8, 0, 'right', 'center'),
         'borth-coastal-defence-reef': (-7, -2, 'right', 'top'), 'bunbury-airwave': (-8, 0, 'right', 'center'),
-        'southern-ocean-surf-reef-albany': (8, -3, 'left', 'top')}
+        'southern-ocean-surf-reef-albany': (9, 0, 'left', 'center')}
     for s in order:
         r = summ.loc[s]
         x, y = r.rep_ramp_length_m, r.rep_depth_gap_m
         # one cut per reef (Lior 2026-10-19): the Narrowneck north-arm tip cut and Pratte's tip cut were dropped (no surf meaning)
         pt(ax, s, x, y, r.outcome, ms=6.8)
         dx, dy, ha, va = off[s]
-        reef_label(ax, s, x, y, dx, dy, ha=ha, va=va, text=('Albany: ride section\n(main cut, Fig. 1)' if s == 'southern-ocean-surf-reef-albany' else None))
+        reef_label(ax, s, x, y, dx, dy, ha=ha, va=va, text=('Albany: ride\nsection (main\ncut, Fig. 1)' if s == 'southern-ocean-surf-reef-albany' else None))
     s = 'southern-ocean-surf-reef-albany'                                      # Albany take-off peak (secondary cut, kept: clear meaning)
     xa, ya = am['ramp_length_m'], am['crest_to_toe_seabed_drop_m']
     ax.plot([summ.loc[s].rep_ramp_length_m, xa], [summ.loc[s].rep_depth_gap_m, ya], color=COLORS[s], lw=0.6, zorder=3, alpha=0.8)

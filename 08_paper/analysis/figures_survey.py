@@ -371,6 +371,201 @@ def fig1():
     print('VE', round(VE, 1), 'H cm', round(H, 1), 'ROW_H', round(ROW_H, 2), 'SLOT_W', round(SLOT_W, 3))
 
 
+# ----------------------------------------------------------------------------- figure E1 (Appendix E)
+# Reef arm used for the peel angle phi0 and the assumed incident wave-crest direction, per reef (Appendix E).
+# Arm line = TRUE BEARING of the arm axis (shape.json 'angles' / reefs.json arm_angle_to_shoreline_deg), turned into the plan frame
+# with the seaward (shore-normal) bearing n:  plan vector = (sin(b - n), cos(b - n)), x = alongshore looking seaward, y = offshore.
+# crest = direction of the assumed incident wave crest in the plan frame; status = how phi0 was obtained.
+E_REEFS = {   # slug: (n seaward bearing, arm bearings [left, right looking seaward], phi0 text, status, crest rule)
+    'narrowneck-gold-coast': (86.2, [104.0, 86.2], '81.1\u00b0 used (both arms)', 'assumed', 'shore'),
+    'cables-reef-wa': (277.8, [128.0, 35.0], '45\u00b0 (both arms)', 'sourced', 'bisect'),
+    'prattes-reef-el-segundo': (None, None, '44.7\u00b0 / 44.4\u00b0', 'derived', 'shore'),
+    'mount-maunganui-reef': (46.15, [86.0, 11.0], '50.1\u00b0 / 54.9\u00b0', 'assumed', 'shore'),
+    'boscombe-surf-reef': (173.4, [28.1], '72.9\u00b0', 'derived', 'boscombe'),
+    'borth-coastal-defence-reef': (269.6, [63.8], '64.2\u00b0', 'assumed', 'shore'),
+    'palm-beach-gold-coast': (64.3, [109.6], '44.7\u00b0', 'assumed', 'shore'),
+    'bunbury-airwave': (None, None, 'no arm (dome)', 'none', None),
+    'southern-ocean-surf-reef-albany': (120.3, [281.5], '71.2\u00b0', 'assumed', 'shore')}
+E_ORDER = ['narrowneck-gold-coast', 'cables-reef-wa', 'prattes-reef-el-segundo', 'mount-maunganui-reef', 'boscombe-surf-reef',
+           'borth-coastal-defence-reef', 'palm-beach-gold-coast', 'southern-ocean-surf-reef-albany', 'bunbury-airwave']
+E_STATUS = {'assumed': 'assumed', 'sourced': 'sourced (design)', 'derived': 'derived from design drawing', 'none': ''}
+
+
+def _pca_angle(P):
+    c = P - P.mean(0)
+    w, v = np.linalg.eigh(np.cov(c.T))
+    d = v[:, np.argmax(w)]
+    return math.degrees(math.atan2(d[1], d[0])) % 180.0
+
+
+def _line_ang(vec):
+    return math.degrees(math.atan2(vec[1], vec[0])) % 180.0
+
+
+def _acute(a, b):
+    d = abs(a - b) % 180.0
+    return min(d, 180.0 - d)
+
+
+def e_arms(slug, geo):
+    """list of (centre xy, direction angle deg mod 180, half-length m) of the arm lines in the plan frame"""
+    n, bearings, _, _, _ = E_REEFS[slug]
+    polys = geo['polys']
+    if slug == 'bunbury-airwave':
+        return []
+    if slug == 'narrowneck-gold-coast':      # two arm polygons = the two largest
+        big = sorted(polys, key=lambda q: -abs(0.5 * np.dot(q[:, 0], np.roll(q[:, 1], -1)) - 0.5 * np.dot(q[:, 1], np.roll(q[:, 0], -1))))[:2]
+        groups = sorted(big, key=lambda q: q[:, 0].mean())
+    elif slug in ('cables-reef-wa', 'prattes-reef-el-segundo', 'mount-maunganui-reef'):
+        allp = np.vstack(polys) if slug == 'mount-maunganui-reef' else polys[0]
+        xm = allp[:, 0].mean()
+        if slug == 'mount-maunganui-reef':        # the two largest polygons are the arms; others (focus bags) are ignored
+            big = sorted(polys, key=lambda q: -np.ptp(q[:, 0]) * np.ptp(q[:, 1]))[:2]
+            groups = sorted(big, key=lambda q: q[:, 0].mean())
+        else:
+            groups = [allp[allp[:, 0] < xm], allp[allp[:, 0] >= xm]]
+    else:
+        groups = [max(polys, key=lambda q: np.ptp(q[:, 0]) * np.ptp(q[:, 1]))]
+    out = []
+    for i, Pg in enumerate(groups):
+        if bearings:
+            b = bearings[i]
+            ang = _line_ang((math.sin(math.radians(b - n)), math.cos(math.radians(b - n))))
+        else:
+            ang = _pca_angle(Pg)
+        d = np.array([math.cos(math.radians(ang)), math.sin(math.radians(ang))])
+        c = Pg.mean(0)
+        t = (Pg - c) @ d
+        out.append((c, ang, 0.5 * (t.max() - t.min()), _pca_angle(Pg)))
+    return out
+
+
+def e_crest(slug, arms):
+    """assumed incident crest line angle (deg mod 180, plan frame) and the travel vector (landward component)"""
+    rule = E_REEFS[slug][4]
+    if rule == 'shore':
+        ang = 0.0
+    elif rule == 'bisect':                   # swell nearest to shore-normal that meets both arms at the same angle
+        a1, a2 = arms[0][1], arms[1][1]
+        cands = [((a1 + a2) / 2) % 180.0, ((a1 + a2) / 2 + 90) % 180.0]
+        cands = [c if abs(((a1 - a2 + 90) % 180) - 90) < 90 else c for c in cands]
+        ang = min(cands, key=lambda c: _acute(c, 0.0))
+    else:                                    # boscombe: crest bearing 101 vs shoreline 83.4 -> turned 17.6 deg clockwise
+        ang = (-17.6) % 180.0
+    nv = np.array([-math.sin(math.radians(ang)), math.cos(math.radians(ang))])
+    if nv[1] > 0:
+        nv = -nv                              # travel landward (down in the plan)
+    return ang, nv
+
+
+def figE():
+    S.setup()
+    R = load_reefs()
+    PR = {s: load_profile(s) for s in E_ORDER}
+    SEC = {s: section_data(s, R, PR[s]) for s in E_ORDER}
+    GEO = {s: plan_geometry(s, SEC[s]) for s in E_ORDER}
+    W_CM, H_CM = 17.0, 20.6
+    fig = plt.figure(figsize=(W_CM * S.CM, H_CM * S.CM))
+    PW, PH, TOP, LEFT, GX, GY = 4.85, 5.2, 1.25, 1.05, 0.30, 1.05
+    INKB = '#2B5F8A'
+    checks = {}
+    for k, slug in enumerate(E_ORDER):
+        r, c = divmod(k, 3)
+        x0 = LEFT + c * (PW + GX)
+        y0 = TOP + r * (PH + GY)
+        ax = fig.add_axes([x0 / W_CM, 1 - (y0 + PH) / H_CM, PW / W_CM, PH / H_CM])
+        g, sec, col = GEO[slug], SEC[slug], COLORS[slug]
+        allp = np.vstack(g['polys'])
+        vmax = max(allp[:, 1].max(), g['section'][:, 1].max())
+        hw = max(0.5 * np.ptp(allp[:, 0]) + 38, 0.5 * (vmax + 100 + 28) * PW / PH, 95.0)
+        ax.set_xlim(-hw, hw)
+        ax.set_ylim(-28, -28 + 2 * hw * PH / PW)
+        ax.set_aspect('equal', adjustable='box')
+        ax.axhspan(0, 1e4, color=S.SEA, lw=0, zorder=0)
+        ax.axhspan(-1e4, 0, color=S.SAND, lw=0, zorder=0)
+        ax.axhline(0, color='#6B5B3A', lw=1.0, zorder=2)
+        ax.text(-hw + 4, -14, 'shoreline', fontsize=7, color='#5A4A2A', va='center', ha='left', zorder=5)
+        for kk, P in enumerate(g['polys']):
+            oval = slug == 'borth-coastal-defence-reef' and kk == 1
+            ax.add_patch(Polygon(P, closed=True, fc=col, ec=darker(col), lw=0.5, alpha=0.5 if oval else 0.85, hatch='////' if oval else None, zorder=4))
+        if slug == 'bunbury-airwave':
+            ax.plot([0], [sec['crest_d']], 'o', ms=9, mfc='none', mec=darker(col), mew=0.6, zorder=3)
+        arms = e_arms(slug, g)
+        # main cut (as Fig. 1) and the Albany take-off cut
+        ax.plot(g['section'][:, 0], g['section'][:, 1], color='black', lw=0.9, ls=(0, (3, 1.6)), zorder=7)
+        mid = g['section'][0]
+        lab_main = 'main cut\n(Fig. 1)'
+        if slug == 'southern-ocean-surf-reef-albany':
+            lab_main = 'ride-section cut\n(main, Fig. 1)'
+            s2 = dict(sec)
+            s2['run_xy'] = PR[slug]['lines']['crest_line_auto']['reef_run_xy_m']
+            s2['dirv'] = [0.0, 1.0]
+            g2 = plan_geometry(slug, s2)
+            ax.plot(g2['section'][:, 0], g2['section'][:, 1], color='#C0392B', lw=1.0, ls=(0, (1, 1.3)), zorder=7)
+            ax.text(g2['section'][0][0] - 4, g2['section'][0][1] - 4, 'take-off peak cut\n(second cut, Fig. 4)', fontsize=6.3, color='#C0392B',
+                    ha='right', va='top', zorder=8)
+            checks['albany_takeoff_xy'] = g2['section'].tolist()
+        if slug == 'bunbury-airwave':
+            ax.text(mid[0] - 5, mid[1] - 2, lab_main, fontsize=6.3, color='black', ha='right', va='top', zorder=8)
+        else:
+            ax.text(mid[0] + (36 if slug == 'southern-ocean-surf-reef-albany' else 4), mid[1] - 4, lab_main, fontsize=6.3, color='black', ha='left', va='top', zorder=8)
+        ang_c = None
+        if arms:
+            ang_c, nv = e_crest(slug, arms)
+            dc = np.array([math.cos(math.radians(ang_c)), math.sin(math.radians(ang_c))])
+            for (cen, ang, hl, pca) in arms:
+                d = np.array([math.cos(math.radians(ang)), math.sin(math.radians(ang))])
+                a0, a1 = cen - d * (hl + 6), cen + d * (hl + 6)
+                ln, = ax.plot([a0[0], a1[0]], [a0[1], a1[1]], color='white', lw=3.0, zorder=8, solid_capstyle='butt')
+                ax.plot([a0[0], a1[0]], [a0[1], a1[1]], color='#1A1A1A', lw=1.5, zorder=9, solid_capstyle='butt')
+                b0, b1 = cen - dc * 45, cen + dc * 45                     # incident crest through the arm centre
+                ax.plot([b0[0], b1[0]], [b0[1], b1[1]], color=INKB, lw=0.8, ls=(0, (4, 2)), zorder=8)
+            # arrow offshore of the reef, with the crest line through its tail
+            P0 = np.array([-0.55 * hw, vmax + 40.0])
+            c0, c1 = P0 - dc * 55, P0 + dc * 55
+            ax.plot([c0[0], c1[0]], [c0[1], c1[1]], color=INKB, lw=0.8, ls=(0, (4, 2)), zorder=8)
+            ax.annotate('', xy=P0 + nv * 62, xytext=P0, arrowprops=dict(arrowstyle='-|>', color=INKB, lw=1.3, shrinkA=0, shrinkB=0), zorder=9)
+            ax.text(P0[0] + 8, P0[1] - 8, 'waves', fontsize=6.5, color=INKB, ha='left', va='top')
+            checks[slug] = dict(arm_angle_to_shoreline=[round(_acute(a[1], 0.0), 1) for a in arms], arm_pca=[round(_acute(a[3], 0.0), 1) for a in arms],
+                                crest_to_shoreline=round(_acute(ang_c, 0.0), 1), phi_drawn=[round(_acute(a[1], ang_c), 1) for a in arms],
+                                swell_off_shorenormal=round(math.degrees(math.atan2(abs(nv[0]), abs(nv[1]))), 1))
+        # scale bar
+        ax.plot([hw - 58, hw - 8], [-18] * 2, color='black', lw=1.6, solid_capstyle='butt', zorder=9)
+        ax.text(hw - 33, -14, '50 m', fontsize=6.3, ha='center', va='bottom')
+        ax.set_xlim(-hw, hw)
+        ax.set_ylim(-28, -28 + 2 * hw * PH / PW)
+        ax.set_xticks([])
+        ax.set_yticks([t for t in (0, 100, 200, 300) if t < 2 * hw * PH / PW - 28])
+        ax.tick_params(labelsize=6.5)
+        ax.set_xlim(-hw, hw)
+        ax.set_ylim(-28, -28 + 2 * hw * PH / PW)
+        for sp in ('left', 'bottom'):
+            ax.spines[sp].set_visible(False)
+        ax.spines['left'].set_visible(True)
+        # header
+        phi, status = E_REEFS[slug][2], E_STATUS[E_REEFS[slug][3]]
+        tr = ax.transAxes
+        ax.plot([0.03], [1.205], transform=tr, clip_on=False, **S.marker_kw(slug, ms=4.6))
+        ax.text(0.08, 1.14, NAMES[slug], transform=tr, fontsize=7.8, fontweight='bold', va='bottom', ha='left', color=darker(col, 0.8))
+        ax.text(0.0, 1.135, '\u03c6$_0$ ' + phi + (', ' + status if status else ''), transform=tr, fontsize=6.8, va='top', ha='left',
+                color=('#B03A2E' if E_REEFS[slug][3] == 'assumed' else S.INK2), clip_on=False)
+        if c == 0:
+            ax.set_ylabel('Distance offshore (m)', fontsize=7, labelpad=2)
+    # legend strip
+    h = [Line2D([], [], color='black', lw=0.9, ls=(0, (3, 1.6)), label='main profile cut (Figure 1; Figures 4, 5, 7-9)'),
+         Line2D([], [], color='#C0392B', lw=1.0, ls=(0, (1, 1.3)), label='second cut kept in Figure 4 (Albany only)'),
+         Line2D([], [], color='#1A1A1A', lw=1.5, label='reef arm used for the peel angle \u03c6$_0$'),
+         Line2D([], [], color=INKB, lw=0.8, ls=(0, (4, 2)), label='incident wave crest (arrow: travel direction)')]
+    fig.legend(handles=h, loc='lower left', bbox_to_anchor=(0.02, 0.0), ncol=2, frameon=False, fontsize=6.8, columnspacing=1.2,
+               labelspacing=0.3, handlelength=2.2)
+    fig.text(0.02, 0.058, 'Plan view looking seaward (seaward up, north not up). Red \u03c6$_0$ = assumed value. Own scale per panel (bar = 50 m).',
+             fontsize=6.5, color=S.INK2, ha='left', va='bottom')
+    out = S.save(fig, 'figE_lines_per_reef')
+    for k_, v_ in checks.items():
+        print(k_, v_)
+    return out, SEC, GEO
+
+
 # ----------------------------------------------------------------------------- figure 2
 ORDER_ALL = ['burkitts-reef-bargara', 'cables-reef-wa', 'narrowneck-gold-coast', 'prattes-reef-el-segundo', 'mount-maunganui-reef',
              'opunake-reef', 'boscombe-surf-reef', 'kovalam-reef-india', 'borth-coastal-defence-reef', 'palm-beach-gold-coast',
