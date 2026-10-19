@@ -67,8 +67,8 @@
    "02_methods.md",
    "03_survey.md",
    "06_materials.md",
-   "08_discussion.md",
-   "appendix_D_other_structures.md"
+   "appendix_D_other_structures.md",
+   "appendix_F_leads.md"
   ],
   "in_list": true,
   "cited": true
@@ -105,7 +105,8 @@
   "files": [
    "02_methods.md",
    "05_sediment.md",
-   "08_discussion.md"
+   "08_discussion.md",
+   "appendix_F_leads.md"
   ],
   "in_list": true,
   "cited": true
@@ -121,7 +122,8 @@
    "06_materials.md",
    "08_discussion.md",
    "appendix_A_methods.md",
-   "appendix_C_data.md"
+   "appendix_C_data.md",
+   "appendix_F_leads.md"
   ],
   "in_list": true,
   "cited": true
@@ -149,7 +151,8 @@
    "04_surf_quality.md",
    "08_discussion.md",
    "appendix_A_methods.md",
-   "appendix_C_data.md"
+   "appendix_C_data.md",
+   "appendix_F_leads.md"
   ],
   "in_list": true,
   "cited": true
@@ -158,6 +161,14 @@
   "citation_in_text": "Borth Community, n.d.",
   "files": [
    "03_survey.md"
+  ],
+  "in_list": true,
+  "cited": true
+ },
+ {
+  "citation_in_text": "Bowen et al., 1968",
+  "files": [
+   "04_surf_quality.md"
   ],
   "in_list": true,
   "cited": true
@@ -220,18 +231,19 @@
   "cited": true
  },
  {
-  "citation_in_text": "City of Albany, n.d.",
+  "citation_in_text": "City of Albany, 2023",
   "files": [
-   "03_survey.md",
-   "appendix_A_methods.md"
+   "04_surf_quality.md"
   ],
   "in_list": true,
   "cited": true
  },
  {
-  "citation_in_text": "City of Albany, 2023",
+  "citation_in_text": "City of Albany, n.d.",
   "files": [
-   "04_surf_quality.md"
+   "03_survey.md",
+   "appendix_A_methods.md",
+   "appendix_E_lines.md"
   ],
   "in_list": true,
   "cited": true
@@ -277,6 +289,14 @@
   "cited": true
  },
  {
+  "citation_in_text": "d'Angremond et al., 1996",
+  "files": [
+   "05_sediment.md"
+  ],
+  "in_list": true,
+  "cited": true
+ },
+ {
   "citation_in_text": "Dahm and Gibberd, 2013",
   "files": [
    "03_survey.md",
@@ -300,15 +320,9 @@
   "files": [
    "03_survey.md",
    "04_surf_quality.md",
-   "08_discussion.md"
-  ],
-  "in_list": true,
-  "cited": true
- },
- {
-  "citation_in_text": "d'Angremond et al., 1996",
-  "files": [
-   "05_sediment.md"
+   "08_discussion.md",
+   "09_conclusions.md",
+   "appendix_F_leads.md"
   ],
   "in_list": true,
   "cited": true
@@ -391,10 +405,19 @@
   "cited": true
  },
  {
+  "citation_in_text": "Geofabrics, 2013",
+  "files": [
+   "06_materials.md"
+  ],
+  "in_list": false,
+  "cited": true,
+  "note": "secondary citation (\"as cited in\"); listed under Works cited only through a secondary source"
+ },
+ {
   "citation_in_text": "Geosynthetics Magazine, 2023",
   "files": [
    "06_materials.md",
-   "08_discussion.md"
+   "appendix_F_leads.md"
   ],
   "in_list": true,
   "cited": true
@@ -465,6 +488,7 @@
   "citation_in_text": "Hunt et al., 2022",
   "files": [
    "03_survey.md",
+   "08_discussion.md",
    "appendix_A_methods.md",
    "appendix_C_data.md"
   ],
@@ -476,7 +500,8 @@
   "files": [
    "02_methods.md",
    "04_surf_quality.md",
-   "08_discussion.md"
+   "08_discussion.md",
+   "appendix_F_leads.md"
   ],
   "in_list": true,
   "cited": true
@@ -526,14 +551,6 @@
   "cited": true
  },
  {
-  "citation_in_text": "Land Information New Zealand, n.d.",
-  "files": [
-   "appendix_A_methods.md"
-  ],
-  "in_list": true,
-  "cited": true
- },
- {
   "citation_in_text": "Land Information New Zealand, 2010-2011",
   "files": [
    "appendix_A_methods.md"
@@ -558,6 +575,14 @@
   "cited": true
  },
  {
+  "citation_in_text": "Land Information New Zealand, n.d.",
+  "files": [
+   "appendix_A_methods.md"
+  ],
+  "in_list": true,
+  "cited": true
+ },
+ {
   "citation_in_text": "Lewis et al., 2015",
   "files": [
    "02_methods.md",
@@ -567,9 +592,9 @@
   "cited": true
  },
  {
-  "citation_in_text": "López et al., 2016",
+  "citation_in_text": "Longuet-Higgins and Stewart, 1964",
   "files": [
-   "appendix_D_other_structures.md"
+   "04_surf_quality.md"
   ],
   "in_list": true,
   "cited": true
@@ -578,7 +603,16 @@
   "citation_in_text": "Lyons, 1992",
   "files": [
    "03_survey.md",
-   "appendix_A_methods.md"
+   "appendix_A_methods.md",
+   "appendix_E_lines.md"
+  ],
+  "in_list": true,
+  "cited": true
+ },
+ {
+  "citation_in_text": "López et al., 2016",
+  "files": [
+   "appendix_D_other_structures.md"
   ],
   "in_list": true,
   "cited": true
@@ -602,14 +636,6 @@
   "cited": true
  },
  {
-  "citation_in_text": "Mead, 2000",
-  "files": [
-   "04_surf_quality.md"
-  ],
-  "in_list": true,
-  "cited": true
- },
- {
   "citation_in_text": "Mead and Black, 1999",
   "files": [
    "03_survey.md",
@@ -623,7 +649,8 @@
   "files": [
    "02_methods.md",
    "04_surf_quality.md",
-   "08_discussion.md"
+   "08_discussion.md",
+   "appendix_F_leads.md"
   ],
   "in_list": true,
   "cited": true
@@ -635,6 +662,24 @@
    "04_surf_quality.md",
    "07_israel.md",
    "08_discussion.md"
+  ],
+  "in_list": true,
+  "cited": true
+ },
+ {
+  "citation_in_text": "Mead and Borrero, 2011",
+  "files": [
+   "01_introduction.md",
+   "02_methods.md",
+   "03_survey.md",
+   "04_surf_quality.md",
+   "05_sediment.md",
+   "06_materials.md",
+   "08_discussion.md",
+   "appendix_A_methods.md",
+   "appendix_C_data.md",
+   "appendix_E_lines.md",
+   "appendix_F_leads.md"
   ],
   "in_list": true,
   "cited": true
@@ -654,23 +699,16 @@
    "03_survey.md",
    "04_surf_quality.md",
    "07_israel.md",
-   "appendix_A_methods.md"
+   "appendix_A_methods.md",
+   "appendix_E_lines.md"
   ],
   "in_list": true,
   "cited": true
  },
  {
-  "citation_in_text": "Mead and Borrero, 2011",
+  "citation_in_text": "Mead, 2000",
   "files": [
-   "01_introduction.md",
-   "02_methods.md",
-   "03_survey.md",
-   "04_surf_quality.md",
-   "05_sediment.md",
-   "06_materials.md",
-   "08_discussion.md",
-   "appendix_A_methods.md",
-   "appendix_C_data.md"
+   "04_surf_quality.md"
   ],
   "in_list": true,
   "cited": true
@@ -681,7 +719,8 @@
    "03_survey.md",
    "04_surf_quality.md",
    "08_discussion.md",
-   "appendix_A_methods.md"
+   "appendix_A_methods.md",
+   "appendix_F_leads.md"
   ],
   "in_list": true,
   "cited": true
@@ -699,7 +738,8 @@
   "citation_in_text": "Mortensen et al., 2015",
   "files": [
    "03_survey.md",
-   "appendix_A_methods.md"
+   "appendix_A_methods.md",
+   "appendix_E_lines.md"
   ],
   "in_list": true,
   "cited": true
@@ -708,6 +748,14 @@
   "citation_in_text": "National Tidal and Sea Level Facility, n.d.",
   "files": [
    "appendix_A_methods.md"
+  ],
+  "in_list": true,
+  "cited": true
+ },
+ {
+  "citation_in_text": "Nettle, 2017",
+  "files": [
+   "appendix_E_lines.md"
   ],
   "in_list": true,
   "cited": true
@@ -765,7 +813,16 @@
   "citation_in_text": "Pattiaratchi, 1999",
   "files": [
    "03_survey.md",
-   "appendix_A_methods.md"
+   "appendix_A_methods.md",
+   "appendix_E_lines.md"
+  ],
+  "in_list": true,
+  "cited": true
+ },
+ {
+  "citation_in_text": "Peregrine, 1983",
+  "files": [
+   "04_surf_quality.md"
   ],
   "in_list": true,
   "cited": true
@@ -779,70 +836,15 @@
   "cited": true
  },
  {
-  "citation_in_text": "Prenzler et al., 2022",
+  "citation_in_text": "Prenzler et al., 2023",
   "files": [
    "03_survey.md",
    "04_surf_quality.md",
    "05_sediment.md",
    "06_materials.md",
    "07_israel.md",
-   "08_discussion.md"
-  ],
-  "in_list": true,
-  "cited": true
- },
- {
-  "citation_in_text": "Raised Water Research, n.d.-a",
-  "files": [
-   "03_survey.md",
-   "appendix_A_methods.md"
-  ],
-  "in_list": true,
-  "cited": true
- },
- {
-  "citation_in_text": "Raised Water Research, n.d.-b",
-  "files": [
-   "03_survey.md",
    "08_discussion.md",
-   "appendix_A_methods.md"
-  ],
-  "in_list": true,
-  "cited": true
- },
- {
-  "citation_in_text": "Raised Water Research, n.d.-c",
-  "files": [
-   "03_survey.md",
-   "08_discussion.md",
-   "appendix_A_methods.md",
-   "appendix_C_data.md"
-  ],
-  "in_list": true,
-  "cited": true
- },
- {
-  "citation_in_text": "Raised Water Research, n.d.-d",
-  "files": [
-   "03_survey.md",
-   "08_discussion.md",
-   "appendix_A_methods.md"
-  ],
-  "in_list": true,
-  "cited": true
- },
- {
-  "citation_in_text": "Raised Water Research, n.d.-e",
-  "files": [
-   "03_survey.md"
-  ],
-  "in_list": true,
-  "cited": true
- },
- {
-  "citation_in_text": "Raised Water Research, n.d.-f",
-  "files": [
-   "03_survey.md"
+   "09_conclusions.md"
   ],
   "in_list": true,
   "cited": true
@@ -873,11 +875,70 @@
   "cited": true
  },
  {
+  "citation_in_text": "Raised Water Research, n.d.-a",
+  "files": [
+   "03_survey.md",
+   "appendix_A_methods.md"
+  ],
+  "in_list": true,
+  "cited": true
+ },
+ {
+  "citation_in_text": "Raised Water Research, n.d.-b",
+  "files": [
+   "03_survey.md",
+   "08_discussion.md",
+   "09_conclusions.md",
+   "appendix_A_methods.md"
+  ],
+  "in_list": true,
+  "cited": true
+ },
+ {
+  "citation_in_text": "Raised Water Research, n.d.-c",
+  "files": [
+   "03_survey.md",
+   "08_discussion.md",
+   "appendix_A_methods.md",
+   "appendix_C_data.md"
+  ],
+  "in_list": true,
+  "cited": true
+ },
+ {
+  "citation_in_text": "Raised Water Research, n.d.-d",
+  "files": [
+   "03_survey.md",
+   "08_discussion.md",
+   "09_conclusions.md",
+   "appendix_A_methods.md"
+  ],
+  "in_list": true,
+  "cited": true
+ },
+ {
+  "citation_in_text": "Raised Water Research, n.d.-e",
+  "files": [
+   "03_survey.md"
+  ],
+  "in_list": true,
+  "cited": true
+ },
+ {
+  "citation_in_text": "Raised Water Research, n.d.-f",
+  "files": [
+   "03_survey.md",
+   "appendix_E_lines.md"
+  ],
+  "in_list": true,
+  "cited": true
+ },
+ {
   "citation_in_text": "Ranasinghe and Turner, 2006",
   "files": [
    "02_methods.md",
    "05_sediment.md",
-   "08_discussion.md"
+   "appendix_F_leads.md"
   ],
   "in_list": true,
   "cited": true
@@ -885,7 +946,8 @@
  {
   "citation_in_text": "Ranasinghe et al., 2006",
   "files": [
-   "05_sediment.md"
+   "05_sediment.md",
+   "08_discussion.md"
   ],
   "in_list": true,
   "cited": true
@@ -903,6 +965,16 @@
   "cited": true
  },
  {
+  "citation_in_text": "Rendle and Davidson, 2012",
+  "files": [
+   "03_survey.md",
+   "appendix_A_methods.md",
+   "appendix_C_data.md"
+  ],
+  "in_list": true,
+  "cited": true
+ },
+ {
   "citation_in_text": "Rendle, 2016",
   "files": [
    "03_survey.md",
@@ -910,17 +982,8 @@
    "05_sediment.md",
    "06_materials.md",
    "08_discussion.md",
-   "appendix_A_methods.md"
-  ],
-  "in_list": true,
-  "cited": true
- },
- {
-  "citation_in_text": "Rendle and Davidson, 2012",
-  "files": [
-   "03_survey.md",
    "appendix_A_methods.md",
-   "appendix_C_data.md"
+   "appendix_F_leads.md"
   ],
   "in_list": true,
   "cited": true
@@ -987,14 +1050,6 @@
   "cited": true
  },
  {
-  "citation_in_text": "Royal HaskoningDHV, n.d.",
-  "files": [
-   "05_sediment.md"
-  ],
-  "in_list": true,
-  "cited": true
- },
- {
   "citation_in_text": "Royal HaskoningDHV, 2011",
   "files": [
    "appendix_A_methods.md"
@@ -1006,10 +1061,29 @@
   "citation_in_text": "Royal HaskoningDHV, 2015",
   "files": [
    "03_survey.md",
-   "appendix_A_methods.md"
+   "appendix_A_methods.md",
+   "appendix_E_lines.md"
   ],
   "in_list": true,
   "cited": true
+ },
+ {
+  "citation_in_text": "Royal HaskoningDHV, n.d.",
+  "files": [
+   "05_sediment.md"
+  ],
+  "in_list": true,
+  "cited": true
+ },
+ {
+  "citation_in_text": "Shand, 2011",
+  "files": [
+   "04_surf_quality.md",
+   "appendix_F_leads.md"
+  ],
+  "in_list": false,
+  "cited": true,
+  "note": "secondary citation (\"as cited in\"); listed under Works cited only through a secondary source"
  },
  {
   "citation_in_text": "Sheil, 2026",
@@ -1017,6 +1091,7 @@
    "03_survey.md",
    "06_materials.md",
    "08_discussion.md",
+   "09_conclusions.md",
    "appendix_A_methods.md",
    "appendix_C_data.md"
   ],
@@ -1026,7 +1101,8 @@
  {
   "citation_in_text": "Skelly Engineering, c. 2000",
   "files": [
-   "appendix_A_methods.md"
+   "appendix_A_methods.md",
+   "appendix_E_lines.md"
   ],
   "in_list": true,
   "cited": true
@@ -1040,7 +1116,7 @@
   "cited": true
  },
  {
-  "citation_in_text": "Spanier and Zviely, 2023",
+  "citation_in_text": "Spanier and Zviely, 2022",
   "files": [
    "01_introduction.md",
    "07_israel.md"
@@ -1053,8 +1129,8 @@
   "files": [
    "03_survey.md",
    "07_israel.md",
-   "08_discussion.md",
-   "appendix_D_other_structures.md"
+   "appendix_D_other_structures.md",
+   "appendix_F_leads.md"
   ],
   "in_list": true,
   "cited": true
@@ -1163,7 +1239,7 @@
   "citation_in_text": "Walker, 1975",
   "files": [
    "04_surf_quality.md",
-   "08_discussion.md"
+   "appendix_F_leads.md"
   ],
   "in_list": true,
   "cited": true
@@ -1186,21 +1262,13 @@
   "cited": true
  },
  {
-  "citation_in_text": "Western Australia Department of Transport, 2009",
+  "citation_in_text": "Weppe et al., 2007",
   "files": [
-   "appendix_A_methods.md"
+   "05_sediment.md"
   ],
-  "in_list": true,
-  "cited": true
- },
- {
-  "citation_in_text": "Western Australia Department of Transport, 2020",
-  "files": [
-   "05_sediment.md",
-   "appendix_A_methods.md"
-  ],
-  "in_list": true,
-  "cited": true
+  "in_list": false,
+  "cited": true,
+  "note": "secondary citation (\"as cited in\"); listed under Works cited only through a secondary source"
  },
  {
   "citation_in_text": "Western Australia Department of Transport, & Bureau of Meteorology, 2024",
@@ -1215,6 +1283,22 @@
   "files": [
    "03_survey.md",
    "appendix_C_data.md"
+  ],
+  "in_list": true,
+  "cited": true
+ },
+ {
+  "citation_in_text": "Western Australia Department of Transport, 2009",
+  "files": [
+   "appendix_A_methods.md"
+  ],
+  "in_list": true,
+  "cited": true
+ },
+ {
+  "citation_in_text": "Western Australia Department of Transport, 2020",
+  "files": [
+   "05_sediment.md"
   ],
   "in_list": true,
   "cited": true
@@ -1247,34 +1331,10 @@
  {
   "citation_in_text": "Zviely et al., 2009",
   "files": [
-   "07_israel.md"
+   "07_israel.md",
+   "appendix_F_leads.md"
   ],
   "in_list": true,
   "cited": true
- },
- {
-  "citation_in_text": "Shand, 2011",
-  "files": [
-   "04_surf_quality.md",
-   "08_discussion.md"
-  ],
-  "in_list": false,
-  "note": "secondary citation (\"as cited in\"); listed under Works cited only through a secondary source"
- },
- {
-  "citation_in_text": "Weppe et al., 2007",
-  "files": [
-   "05_sediment.md"
-  ],
-  "in_list": false,
-  "note": "secondary citation (\"as cited in\"); listed under Works cited only through a secondary source"
- },
- {
-  "citation_in_text": "Geofabrics, 2013",
-  "files": [
-   "06_materials.md"
-  ],
-  "in_list": false,
-  "note": "secondary citation (\"as cited in\"); listed under Works cited only through a secondary source"
  }
 ]

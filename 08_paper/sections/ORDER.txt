@@ -13,3 +13,5 @@ appendix_A_methods.md
 appendix_B_3d.md
 appendix_C_data.md
 appendix_D_other_structures.md
+appendix_E_lines.md
+appendix_F_leads.md

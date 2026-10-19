@@ -36,6 +36,8 @@ Borrero, J. C., & Nelsen, C. (2003). Results of a comprehensive monitoring progr
 
 Borth Community. (n.d.). *Borth coastal defence overview*. http://www.borthcommunity.info/index.php/planning-drawings/235-borth-coastal-defence/46-overview
 
+Bowen, A. J., Inman, D. L., & Simmons, V. P. (1968). Wave "set-down" and set-up. *Journal of Geophysical Research, 73*(8), 2569-2577. https://doi.org/10.1029/JB073i008p02569 [not read; cited for the set-down and set-up shown schematically in Figure 3]
+
 Briganti, R., van der Meer, J. W., Buccino, M., & Calabrese, M. (2003). Wave transmission behind low-crested structures. In *Coastal Structures 2003* (pp. 580-592). ASCE. [Original not read; equation as reproduced by Blacka et al., 2013, Eq. 29.]
 
 Bunbury Mail. (2022, March 22). Airwave founder Troy Bottegal moves towards making Bunbury WA's premier surfing destination. https://www.bunburymail.com.au/story/7667604/bunbury-still-set-to-become-surfing-destination/ [developer's account; content taken from the reef card, not re-read]
@@ -128,6 +130,8 @@ Land Information New Zealand. (2026). *Standard port tidal levels, Port Taranaki
 
 Lewis, J., Hunt, S., & Evans, T. (2015). Quantification of surfing amenity for beach value and management. *NSW Coastal Conference 2015*. https://www.coastalconference.com/2015/papers2015/James%20Lewis.pdf
 
+Longuet-Higgins, M. S., & Stewart, R. W. (1964). Radiation stresses in water waves; a physical discussion, with applications. *Deep-Sea Research, 11*(4), 529-562. https://doi.org/10.1016/0011-7471(64)90001-4 [not read; set-down coefficient as summarised in notes/fig3_theory.md]
+
 López, I., Tinoco, H., Aragonés, L., & García-Barba, J. (2016). The multifunctional artificial reef and its role in the defence of the Mediterranean coast. *Science of the Total Environment, 550*, 910-923. https://doi.org/10.1016/j.scitotenv.2016.01.180 [abstract only, via the University of Alicante record]
 
 Lyons, M. (1992). *Design studies for an artificial surfing reef* [Unpublished report]. Department of Environmental Engineering, University of Western Australia. [Cited as reproduced in Blacka et al. (2013, Fig. A.2); title and venue as given there; not read.]
@@ -158,6 +162,8 @@ Mortensen, S. B., Hibberd, S., Kaergaard, K., Kristensen, S. E., Deigaard, R., &
 
 National Tidal and Sea Level Facility. (n.d.). *Chart datum and ordnance datum*. https://ntslf.org/tides/datum
 
+Nettle, S. (2017, November 7). Narrowneck artificial reef nears completion (updated). *Swellnet Dispatch*. https://www.swellnet.com/news/swellnet-dispatch/2017/11/07/narrowneck-artificial-reef-nears-completion-updated [read 24 September 2026; source of the south-east swell observation]
+
 Nettle, S. (2019, August 19). Narrowneck renewal deemed a success. *Swellnet Analysis*. https://www.swellnet.com/news/swellnet-analysis/2019/08/19/narrowneck-renewal-deemed-success
 
 NOAA Center for Operational Oceanographic Products and Services. (2026). *Tidal datums, station 9410840 Santa Monica, CA* (epoch 1983-2001) [Data set]. https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/9410840/datums.json?units=metric
@@ -171,6 +177,8 @@ Oh, Y. I., & Shin, E. C. (2006a). Application of submerged geotextile tubes for 
 Oh, Y. I., & Shin, E. C. (2006b). Using submerged geotextile tubes in the protection of the E. Korean shore. *Coastal Engineering, 53*(11), 879-895. https://doi.org/10.1016/j.coastaleng.2006.06.005 [paywalled, not read]
 
 Pattiaratchi, C. B. (1999). *Design studies for an artificial surfing reef: Cable Station, Western Australia* (Report ED1483CP). Centre for Water Research, University of Western Australia. http://joas.free.fr/studies/bei/g2s/reefdesign.pdf [mirror copy]
+
+Peregrine, D. H. (1983). Breaking waves on beaches. *Annual Review of Fluid Mechanics, 15*, 149-178. https://doi.org/10.1146/annurev.fl.15.010183.001053 [not read; typical plunging-lip thickness]
 
 Pitt, A. (2009). Critique of Cables Reef. [original not seen; cited as reported by Raised Water Research (2019b)]
 
