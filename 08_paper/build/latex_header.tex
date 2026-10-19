@@ -18,7 +18,7 @@
 \captionsetup{labelformat=empty,font=small,justification=justified,singlelinecheck=false,skip=6pt}
 \captionsetup[figure]{position=below}
 % figures: leave room for the (long) captions
-\AtBeginDocument{\renewcommand{\maxheight}{0.68\textheight}\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}}
+\AtBeginDocument{\renewcommand{\maxheight}{0.58\textheight}\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}}
 \renewcommand{\topfraction}{0.9}\renewcommand{\bottomfraction}{0.9}\renewcommand{\textfraction}{0.08}
 \renewcommand{\floatpagefraction}{0.7}
 % tables
@@ -44,6 +44,7 @@
 \widowpenalty=10000 \clubpenalty=10000
 % biblatex-apa: hanging indent is the default; keep long URLs breakable
 \AtEndPreamble{%
+\appto{\UrlBreaks}{\do\%\do\_}
 \setcounter{biburlnumpenalty}{100}\setcounter{biburlucpenalty}{100}\setcounter{biburllcpenalty}{100}
 \setlength{\bibhang}{1.27cm}
 \setlength{\bibitemsep}{0.45\baselineskip}

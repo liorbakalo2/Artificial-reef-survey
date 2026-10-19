@@ -458,41 +458,74 @@ def e_crest(slug, arms):
     return ang, nv
 
 
+E_HWREF = 220.0                                   # half-width (m) of the common scale (1x); zoom z shows a half-width of E_HWREF / z
+E_ZOOM = {'prattes-reef-el-segundo': 2, 'mount-maunganui-reef': 3, 'bunbury-airwave': 5}
+E_BAR = {1: 50, 2: 50, 3: 20, 5: 10}
+E_BREAK = {'mount-maunganui-reef': ((-28.0, 30.0), (262.0, 350.0))}   # reef too far offshore to share the zoomed window with the shoreline
+
+
 def figE():
     S.setup()
     R = load_reefs()
     PR = {s: load_profile(s) for s in E_ORDER}
     SEC = {s: section_data(s, R, PR[s]) for s in E_ORDER}
     GEO = {s: plan_geometry(s, SEC[s]) for s in E_ORDER}
-    W_CM, H_CM = 17.0, 20.6
+    W_CM, H_CM = 17.0, 21.1
     fig = plt.figure(figsize=(W_CM * S.CM, H_CM * S.CM))
     PW, PH, TOP, LEFT, GX, GY = 4.85, 5.2, 1.25, 1.05, 0.30, 1.05
-    INKB = '#2B5F8A'
     checks = {}
     for k, slug in enumerate(E_ORDER):
         r, c = divmod(k, 3)
         x0 = LEFT + c * (PW + GX)
         y0 = TOP + r * (PH + GY)
-        ax = fig.add_axes([x0 / W_CM, 1 - (y0 + PH) / H_CM, PW / W_CM, PH / H_CM])
         g, sec, col = GEO[slug], SEC[slug], COLORS[slug]
         allp = np.vstack(g['polys'])
         vmax = max(allp[:, 1].max(), g['section'][:, 1].max())
-        hw = max(0.5 * np.ptp(allp[:, 0]) + 38, 0.5 * (vmax + 100 + 28) * PW / PH, 95.0)
-        ax.set_xlim(-hw, hw)
-        ax.set_ylim(-28, -28 + 2 * hw * PH / PW)
-        ax.set_aspect('equal', adjustable='box')
-        ax.axhspan(0, 1e4, color=S.SEA, lw=0, zorder=0)
-        ax.axhspan(-1e4, 0, color=S.SAND, lw=0, zorder=0)
-        ax.axhline(0, color='#6B5B3A', lw=1.0, zorder=2)
-        ax.text(-hw + 4, -14, 'shoreline', fontsize=7, color='#5A4A2A', va='center', ha='left', zorder=5)
-        for kk, P in enumerate(g['polys']):
-            oval = slug == 'borth-coastal-defence-reef' and kk == 1
-            ax.add_patch(Polygon(P, closed=True, fc=col, ec=darker(col), lw=0.5, alpha=0.5 if oval else 0.85, hatch='////' if oval else None, zorder=4))
-        if slug == 'bunbury-airwave':
-            ax.plot([0], [sec['crest_d']], 'o', ms=9, mfc='none', mec=darker(col), mew=0.6, zorder=3)
+        z = E_ZOOM.get(slug, 1)
+        hw = max(0.5 * np.ptp(allp[:, 0]) + 38, 0.5 * (vmax + 100 + 28) * PW / PH, 95.0) if z == 1 else E_HWREF / z
+        sc = PW / (2 * hw)                                   # cm per m (same in x and y)
+        brk = E_BREAK.get(slug)
+        if brk:       # two stacked strips with the same scale: shoreline strip at the bottom, reef strip above, break marks between
+            (lo0, lo1), (up0, up1) = brk
+            h_lo, h_up = (lo1 - lo0) * sc, (up1 - up0) * sc
+            gap = PH - h_lo - h_up
+            strips = [(0.0, h_lo, lo0, lo1), (h_lo + gap, PH, up0, up1)]
+        else:
+            strips = [(0.0, PH, -28.0, -28.0 + 2 * hw * PH / PW)]
+        axs = []
+        for (b0, b1, ya, yb) in strips:
+            ax = fig.add_axes([x0 / W_CM, 1 - (y0 + PH - b0) / H_CM, PW / W_CM, (b1 - b0) / H_CM])
+            ax.set_xlim(-hw, hw)
+            ax.set_ylim(ya, yb)
+            ax.axhspan(0, 1e4, color=S.SEA, lw=0, zorder=0)
+            ax.axhspan(-1e4, 0, color=S.SAND, lw=0, zorder=0)
+            ax.axhline(0, color='#6B5B3A', lw=1.0, zorder=2)
+            ax.set_xticks([])
+            for sp in ('left', 'bottom', 'top', 'right'):
+                ax.spines[sp].set_visible(sp == 'left')
+            ax.tick_params(labelsize=6.5)
+            axs.append(ax)
+        lo_ax, top_ax = axs[0], axs[-1]
+        step = {1: 100, 2: 100, 3: 100, 5: 20}[z]
+        if brk:
+            lo_ax.set_yticks([0]); axs[1].set_yticks([300])
+        else:
+            ymax = strips[0][3]
+            lo_ax.set_yticks([t for t in range(0, 400, step) if t < ymax])
+        lo_ax.text(-hw + 4 / z, -14 if not brk else -14, 'shoreline', fontsize=7, color='#5A4A2A', va='center', ha='left', zorder=5)
         arms = e_arms(slug, g)
-        # main cut (as Fig. 1) and the Albany take-off cut
-        ax.plot(g['section'][:, 0], g['section'][:, 1], color='black', lw=0.9, ls=(0, (3, 1.6)), zorder=7)
+        for ax in axs:
+            for kk, P in enumerate(g['polys']):
+                oval = slug == 'borth-coastal-defence-reef' and kk == 1
+                ax.add_patch(Polygon(P, closed=True, fc=col, ec=darker(col), lw=0.5, alpha=0.5 if oval else 0.85, hatch='////' if oval else None, zorder=4))
+            if slug == 'bunbury-airwave':
+                ax.plot([0], [sec['crest_d']], 'o', ms=9 * (1 if z == 1 else 1.0), mfc='none', mec=darker(col), mew=0.6, zorder=3)
+            ax.plot(g['section'][:, 0], g['section'][:, 1], color='black', lw=0.9, ls=(0, (3, 1.6)), zorder=7)
+            for (cen, ang, hl, pca) in arms:
+                d = np.array([math.cos(math.radians(ang)), math.sin(math.radians(ang))])
+                a0, a1 = cen - d * (hl + 6 / z), cen + d * (hl + 6 / z)
+                ax.plot([a0[0], a1[0]], [a0[1], a1[1]], color='white', lw=3.0, zorder=8, solid_capstyle='butt')
+                ax.plot([a0[0], a1[0]], [a0[1], a1[1]], color='#1A1A1A', lw=1.5, zorder=9, solid_capstyle='butt')
         mid = g['section'][0]
         lab_main = 'main cut\n(Fig. 1)'
         if slug == 'southern-ocean-surf-reef-albany':
@@ -501,64 +534,51 @@ def figE():
             s2['run_xy'] = PR[slug]['lines']['crest_line_auto']['reef_run_xy_m']
             s2['dirv'] = [0.0, 1.0]
             g2 = plan_geometry(slug, s2)
-            ax.plot(g2['section'][:, 0], g2['section'][:, 1], color='#C0392B', lw=1.0, ls=(0, (1, 1.3)), zorder=7)
-            ax.text(g2['section'][0][0] - 4, g2['section'][0][1] - 4, 'take-off peak cut\n(second cut, Fig. 4)', fontsize=6.3, color='#C0392B',
-                    ha='right', va='top', zorder=8)
+            top_ax.plot(g2['section'][:, 0], g2['section'][:, 1], color='#C0392B', lw=1.0, ls=(0, (1, 1.3)), zorder=7)
+            top_ax.text(g2['section'][0][0] - 4, g2['section'][0][1] - 4, 'take-off peak cut\n(second cut, Fig. 4)', fontsize=6.3, color='#C0392B',
+                        ha='right', va='top', zorder=8)
             checks['albany_takeoff_xy'] = g2['section'].tolist()
+        lab_ax = axs[-1] if brk else top_ax
         if slug == 'bunbury-airwave':
-            ax.text(mid[0] - 5, mid[1] - 2, lab_main, fontsize=6.3, color='black', ha='right', va='top', zorder=8)
+            lab_ax.text(mid[0] - 5 / z, mid[1] - 2 / z, lab_main, fontsize=6.3, color='black', ha='right', va='top', zorder=8)
         else:
-            ax.text(mid[0] + (36 if slug == 'southern-ocean-surf-reef-albany' else 4), mid[1] - 4, lab_main, fontsize=6.3, color='black', ha='left', va='top', zorder=8)
-        ang_c = None
+            lab_ax.text(mid[0] + (36 if slug == 'southern-ocean-surf-reef-albany' else 12 if brk else 4 / z), mid[1] - 4 / z + (24 if brk else 0), lab_main, fontsize=6.3, color='black', ha='left', va='top', zorder=8)
         if arms:
-            ang_c, nv = e_crest(slug, arms)
-            dc = np.array([math.cos(math.radians(ang_c)), math.sin(math.radians(ang_c))])
-            for (cen, ang, hl, pca) in arms:
-                d = np.array([math.cos(math.radians(ang)), math.sin(math.radians(ang))])
-                a0, a1 = cen - d * (hl + 6), cen + d * (hl + 6)
-                ln, = ax.plot([a0[0], a1[0]], [a0[1], a1[1]], color='white', lw=3.0, zorder=8, solid_capstyle='butt')
-                ax.plot([a0[0], a1[0]], [a0[1], a1[1]], color='#1A1A1A', lw=1.5, zorder=9, solid_capstyle='butt')
-                b0, b1 = cen - dc * 45, cen + dc * 45                     # incident crest through the arm centre
-                ax.plot([b0[0], b1[0]], [b0[1], b1[1]], color=INKB, lw=0.8, ls=(0, (4, 2)), zorder=8)
-            # arrow offshore of the reef, with the crest line through its tail
-            P0 = np.array([-0.55 * hw, vmax + 40.0])
-            c0, c1 = P0 - dc * 55, P0 + dc * 55
-            ax.plot([c0[0], c1[0]], [c0[1], c1[1]], color=INKB, lw=0.8, ls=(0, (4, 2)), zorder=8)
-            ax.annotate('', xy=P0 + nv * 62, xytext=P0, arrowprops=dict(arrowstyle='-|>', color=INKB, lw=1.3, shrinkA=0, shrinkB=0), zorder=9)
-            ax.text(P0[0] + 8, P0[1] - 8, 'waves', fontsize=6.5, color=INKB, ha='left', va='top')
+            ang_c, nv = e_crest(slug, arms)          # assumed crest, kept for the phi0 checks only (not drawn)
             checks[slug] = dict(arm_angle_to_shoreline=[round(_acute(a[1], 0.0), 1) for a in arms], arm_pca=[round(_acute(a[3], 0.0), 1) for a in arms],
                                 crest_to_shoreline=round(_acute(ang_c, 0.0), 1), phi_drawn=[round(_acute(a[1], ang_c), 1) for a in arms],
                                 swell_off_shorenormal=round(math.degrees(math.atan2(abs(nv[0]), abs(nv[1]))), 1))
-        # scale bar
-        ax.plot([hw - 58, hw - 8], [-18] * 2, color='black', lw=1.6, solid_capstyle='butt', zorder=9)
-        ax.text(hw - 33, -14, '50 m', fontsize=6.3, ha='center', va='bottom')
-        ax.set_xlim(-hw, hw)
-        ax.set_ylim(-28, -28 + 2 * hw * PH / PW)
-        ax.set_xticks([])
-        ax.set_yticks([t for t in (0, 100, 200, 300) if t < 2 * hw * PH / PW - 28])
-        ax.tick_params(labelsize=6.5)
-        ax.set_xlim(-hw, hw)
-        ax.set_ylim(-28, -28 + 2 * hw * PH / PW)
-        for sp in ('left', 'bottom'):
-            ax.spines[sp].set_visible(False)
-        ax.spines['left'].set_visible(True)
+        # scale bar (shoreline strip)
+        L = E_BAR[z]
+        lo_ax.plot([hw - 8 / z - L, hw - 8 / z], [-18 if not brk else -18] * 2, color='black', lw=1.6, solid_capstyle='butt', zorder=9)
+        lo_ax.text(hw - 8 / z - L / 2, -14, '%d m' % L, fontsize=6.3, ha='center', va='bottom')
+        if brk:       # break marks on the axis and a note
+            for ax_, yy in ((lo_ax, 1.0), (top_ax, 0.0)):
+                ax_.plot([-0.025, 0.025], [yy - 0.03, yy + 0.03], transform=ax_.transAxes, color='black', lw=0.8, clip_on=False, zorder=10)
+            fig.text((x0 + 0.12) / W_CM, 1 - (y0 + PH - h_lo - gap / 2) / H_CM, 'axis break (y = 30 to 262 m not shown)', fontsize=6, color=S.INK2, ha='left', va='center')
         # header
         phi, status = E_REEFS[slug][2], E_STATUS[E_REEFS[slug][3]]
-        tr = ax.transAxes
-        ax.plot([0.03], [1.205], transform=tr, clip_on=False, **S.marker_kw(slug, ms=4.6))
-        ax.text(0.08, 1.14, NAMES[slug], transform=tr, fontsize=7.8, fontweight='bold', va='bottom', ha='left', color=darker(col, 0.8))
-        ax.text(0.0, 1.135, '\u03c6$_0$ ' + phi + (', ' + status if status else ''), transform=tr, fontsize=6.8, va='top', ha='left',
-                color=('#B03A2E' if E_REEFS[slug][3] == 'assumed' else S.INK2), clip_on=False)
+        tr = top_ax.transAxes
+        # header positions are relative to the whole panel, so place them in figure coordinates
+        def fx(u): return (x0 + u * PW) / W_CM
+        def fy(v): return 1 - (y0 + PH - v * PH) / H_CM          # v in panel fractions (1 = top)
+        mk = S.marker_kw(slug, ms=4.6)
+        fig.add_artist(Line2D([fx(0.03)], [fy(1.205)], transform=fig.transFigure, **mk))
+        fig.text(fx(0.08), fy(1.14), NAMES[slug], fontsize=7.8, fontweight='bold', va='bottom', ha='left', color=darker(col, 0.8))
+        fig.text(fx(0.0), fy(1.135), 'φ$_0$ ' + phi + (', ' + status if status else ''), fontsize=6.8, va='top', ha='left',
+                 color=('#B03A2E' if E_REEFS[slug][3] == 'assumed' else S.INK2))
+        if z > 1:
+            top_ax.text(0.98, 0.97, '%d× zoom' % z, transform=tr, fontsize=7.2, fontweight='bold', color=S.INK, ha='right', va='top', zorder=12)
         if c == 0:
-            ax.set_ylabel('Distance offshore (m)', fontsize=7, labelpad=2)
+            fig.text((x0 - 0.75) / W_CM, fy(0.5), 'Distance offshore (m)', fontsize=7, rotation=90, va='center', ha='center')
     # legend strip
     h = [Line2D([], [], color='black', lw=0.9, ls=(0, (3, 1.6)), label='main profile cut (Figure 1; Figures 4, 5, 7-9)'),
          Line2D([], [], color='#C0392B', lw=1.0, ls=(0, (1, 1.3)), label='second cut kept in Figure 4 (Albany only)'),
-         Line2D([], [], color='#1A1A1A', lw=1.5, label='reef arm used for the peel angle \u03c6$_0$'),
-         Line2D([], [], color=INKB, lw=0.8, ls=(0, (4, 2)), label='incident wave crest (arrow: travel direction)')]
+         Line2D([], [], color='#1A1A1A', lw=1.5, label='reef arm used for the peel angle φ$_0$')]
     fig.legend(handles=h, loc='lower left', bbox_to_anchor=(0.02, 0.0), ncol=2, frameon=False, fontsize=6.8, columnspacing=1.2,
                labelspacing=0.3, handlelength=2.2)
-    fig.text(0.02, 0.058, 'Plan view looking seaward (seaward up, north not up). Red \u03c6$_0$ = assumed value. Own scale per panel (bar = 50 m).',
+    fig.text(0.02, 0.058, 'Plan view looking seaward (seaward up, north not up). Red φ$_0$ = assumed value. Panels without a label are at the common scale '
+             '(1×; bar = 50 m);\nlabelled panels are zoomed about the shoreline (y = 0) by the factor shown, bar as marked.',
              fontsize=6.5, color=S.INK2, ha='left', va='bottom')
     out = S.save(fig, 'figE_lines_per_reef')
     for k_, v_ in checks.items():
