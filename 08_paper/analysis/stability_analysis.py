@@ -9,11 +9,16 @@ Writes: results_stability_fk.csv (force / sliding-index ESTIMATE per tube, depth
 A. ESTIMATE of the Bar & Drimer (2023) sliding index (NOT the BELWF model, whose code is not released): linear (Airy)
    incident-wave pressure integrated over a rigid tube section on the bed (Froude-Krylov; no diffraction, no added mass,
    no nonlinearity), BD23 Eqs. 3-5: SI = Fy / (W' - Fz), SIc = Fy / (W' - Fz - Fc), Fc = L_contact (P_UW + P_DW)/2,
-   W' = (rho_fill - rho_w) g A. Section = upper half of a superellipse |2x/B|^p + (z/D)^p = 1, p = 2.5 (ASSUMPTION; the
-   Bezuijen & Vastenburg construction is not given as a formula in BD23). L_contact = B (ASSUMPTION). Evaluated over one
-   period; the critical value is the maximum |SI|. Calibrated against BD23 read-offs: validation case (two tubes, 12 m wide,
-   3.8 m high, h = 5 m, T = 7 s, H = 0.3-1.6 m; Fy, Fz, SI read from Figs. 5-6 via 08_paper/notes/bar_drimer_2023_coverage.md
-   s6.4) and design case (single tube 11 x 2.2 m, h = 4 m, T = 9 s, H = 2.86 m; SI ~0.17, SIc ~0.31 from Fig. 11).
+   W' = (rho_fill - rho_w) g A. Section (2026-10-20, Lior's review of Fig. 11): the partly filled Bezuijen & Vastenburg shape
+   described by BD23 Sec. 2.2 (flat base, quarter-circle sides, semi-elliptical top, continuous curvature; construction in
+   bv_shape) for a fixed fabric circumference C (pi x reported diameter, or fitted to the reported filled B x D), at filling
+   ratios FA 0.6, 0.7, 0.8 (default, BD23 validation) and 1.0 (full circle, reference). L_contact = flat base length.
+   Pressure integrated over the wetted contour (base excluded = sealed base). Evaluated over one period; the critical value
+   is the maximum |SI|. Calibrated against BD23 read-offs: validation case (R 3.425 m, FA 0.8, widened by a flat middle
+   section to 12 m as BD23 p.4 describes for adjacent tubes; h = 5 m, T = 7 s, H = 0.3-1.6 m; Fy, Fz, SI read from Figs. 5-6
+   via 08_paper/notes/bar_drimer_2023_coverage.md s6.4) and design case (11 x 2.2 m, C from the 2.2 m height at FA 0.8,
+   h = 4 m, T = 9 s, H = 2.86 m; SI ~0.17, SIc ~0.31 from Fig. 11). U is an index of the cyclic vertical load relative to
+   the submerged weight (a tearing driver), not a lift-off prediction. Writes also results_stability_fa_summary.csv.
 B. van Steeg et al. (2011) tube criterion chi Hs / (Delta sqrt(B D) (f cos a + sin a)) <= 0.65, chi = 1, f = 0.5
    (ASSUMPTION), compared with the depth-limited significant wave Hs = 0.55 h (ASSUMPTION gamma_s) at the tube base.
 C. Hudson (1959) rock stability, K_D = 2.0 (breaking waves, 2 layers, trunk, SPM 1984 via Verhagen 2012 slide 6).
