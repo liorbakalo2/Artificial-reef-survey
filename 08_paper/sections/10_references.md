@@ -2,6 +2,8 @@
 
 Alphabetical list of all works cited in the main text and the appendices (APA 7). Notes in square brackets record how far a work was read or verified.
 
+4Surfers. (2025). *Israeli surf forecast* [Hebrew-language wave forecast for the Israeli coast; consulted July to October 2025]. https://4surfers.co.il/
+
 ABC News. (2019, December 16). Bunbury's Back Beach surfers deflated as artificial reef, Airwave, tears during installation. https://www.abc.net.au/news/2019-12-16/word-first-surf-reef-tears-during-installation/11803228
 
 ABC News. (2022, September 3). Millions spent to protect Gold Coast beaches, but climate change poses a huge challenge. https://www.abc.net.au/news/2022-09-03/gold-coast-no-stranger-to-beach-erosion/101381812 [statements attributed to the City of Gold Coast and its engineers]
@@ -80,6 +82,8 @@ Dean, R. G., & Dalrymple, R. A. (1991). *Water wave mechanics for engineers and 
 
 ECOncrete. (n.d.). *ECOncrete case studies* [Company document]. https://www.monmouth.edu/uci/wp-content/uploads/sites/58/2021/09/ECOncrete-Case-Studies.pdf [company-supplied evidence]
 
+Elezovich, J. (2026, July). Albany 2026: Reef advocates look back on decades-long journey to bring Southern Ocean Surf Reef to life. *Albany Advertiser*. https://www.albanyadvertiser.com.au/news/albany-advertiser/albany-2026-reef-advocates-look-back-on-decades-long-journey-to-bring-southern-ocean-surf-reef-to-life-c-22657778 [source of the final cost of AUD 13 M; read from a search-engine extract, the full page was not accessed]
+
 EcoShape. (n.d.). *Artificial reefs: Example cases*. https://www.ecoshape.org/en/knowledge-articles/artificial-reefs/example-cases/
 
 EMODnet Bathymetry Consortium. (2024). *EMODnet digital bathymetry (DTM 2024)* [Data set]. https://doi.org/10.12770/cf51df64-56f9-4a99-b1aa-36b8d7b743a1
@@ -99,6 +103,8 @@ GHD. (2021). *Tidal inundation monitoring and modelling report* (Appendix B, Tab
 González Leija, M. B., Chávez, X., Alvarez, E., Mendoza, E., & Silva, R. (2014). Experimental study on geotextile tube applications as submerged breakwaters for beach protection in Yucatan, Mexico. *Coastal Engineering Proceedings, 34*, posters.25. https://doi.org/10.9753/icce.v34.posters.25
 
 Government Company for the Protection of Mediterranean Sea Cliffs [MCCP]. (2026). *Projects list: Ashkelon North geotubes, Netanya breakwaters, Ashkelon geotube maintenance* [In Hebrew]. https://www.mccp.co.il/page.php?type=projectsGroups (accessed 15 October 2026)
+
+Government of Western Australia. (2025, July 16). *Joint media statement: Albany artificial reef makes a splash* [Media statement]. https://www.wa.gov.au/government/media-statements/Cook-Labor-Government/Joint-media-statement---Albany-artificial-reef-makes-a-splash-20250716 [funding shares: Australian Government AUD 5 M, State Government AUD 4.75 M; read from a search-engine extract, the full page was not accessed]
 
 Hansford, M. (2011, September 15). Borth's big dig. *New Civil Engineer*. https://www.newcivilengineer.com/archive/borths-big-dig-15-09-2011/ [used for rock quantities as an upper bound]
 
@@ -253,6 +259,8 @@ State Comptroller of Israel. (2024, July). *How government authorities deal with
 Sulaiman, D. M., Bachtiar, H., Taufiq, A., & Hermanto. (2015). Beach profile changes due to low crested breakwaters at Sigandu Beach, Central Java. *Procedia Engineering, 116*, 510-519. https://doi.org/10.1016/j.proeng.2015.08.320 [abstract only; full text not accessible]
 
 Sulaiman, D. M., Junarsa, D., Bachtiar, H., & Nurhabni, F. (2017). Lessons learned from deploying low crested breakwaters in North Coast of Java. In *Asian and Pacific Coasts 2017* (pp. 445-454). World Scientific. https://doi.org/10.1142/9789813233812_0041 [not read]
+
+Surfline. (2025). *Haifa surf report and forecast* [Wave forecast pages, including the former Magicseaweed (MSW) forecast; consulted July to October 2025]. https://www.surfline.com/travel/israel/haifa-surfing-and-beaches/294800
 
 SunLive. (n.d.). Time called on artificial reef. https://www.sunlive.co.nz/news/86837-time-called-on-artificial-reef.html [web news report; date not recorded]
 

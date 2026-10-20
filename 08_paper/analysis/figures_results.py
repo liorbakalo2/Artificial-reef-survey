@@ -348,11 +348,13 @@ def fig6():
         ax.spines[sp].set_visible(False)
     c = corr['volume_stated_all_reefs']
     cm_ = corr['corr']['volume_model_m3']
+    ab = c['built_reefs_asbuilt_basis']
     txt = ('built reefs: ρ = %.2f, p$_{perm}$ = %.3f (n = %d)\nincl. Burkitts*: ρ = %.2f, p$_{perm}$ = %.3f (n = %d)\nmodelled volume: ρ = %.2f, p$_{perm}$ = %.3f (n = %d)'
+           '\nas built (Narrowneck mound 13,495,\n  Opunake built ~3,400 m$^3$): ρ = %.2f, p$_{perm}$ = %.3f (n = %d)'
            % (c['built_reefs_excl_burkitts']['spearman_rho'], c['built_reefs_excl_burkitts']['p_permutation'],
               c['built_reefs_excl_burkitts']['n'], c['all_incl_burkitts_natural']['spearman_rho'],
               c['all_incl_burkitts_natural']['p_permutation'], c['all_incl_burkitts_natural']['n'], cm_['spearman_rho'],
-              cm_['p_permutation'], cm_['n']))
+              cm_['p_permutation'], cm_['n'], ab['spearman_rho'], ab['p_permutation'], ab['n']))
     fig.text(0.0, 0.335, 'Spearman rank correlation with outcome:\n' + txt, fontsize=7, color=INK, ha='left', va='center', linespacing=1.3)
     h = [Line2D([0], [0], marker='o', ms=6.5, mfc='#7F7F7F', mec=INK2, mew=0.5, ls='none', label='stated volume (source)'),
          Line2D([0], [0], marker='o', ms=4.4, mfc='white', mec='#7F7F7F', mew=1.0, ls='none', label='volume of the 3D model'),
@@ -655,9 +657,11 @@ def fig9():
     # volume contours (m3 per 100 m of reef length)
     cs = ax.contour(Xs, Ds, V, levels=[10000, 15000, 25000, 40000], colors=['#222222'], linewidths=0.7, linestyles='-', zorder=2.5)
     ax.clabel(cs, fmt=lambda v: '{:,}'.format(int(v)), fontsize=7, inline=True, inline_spacing=1, colors='#222222')
-    # Lior's field breaking depth: dashed lines at crest depth 1.2 and 1.5 m
-    for yy in (1.2, 1.5):
-        ax.axhline(yy, color='#444444', lw=0.7, ls=(0, (3, 2)), zorder=2.6)
+    # field observations at Haifa (Appendix G, slide 2 of the author's notes): water depth at the peak when the wave breaks,
+    # 1.30 m (Hs 0.45 / Hmax 0.6 m) and 1.50 m (Hs 0.60 / Hmax 0.8 m); take-off depth in borderline sea about 1.0 m
+    for yy in (1.3, 1.5):
+        ax.axhline(yy, color='#444444', lw=0.8, ls=(0, (3, 2)), zorder=2.6)
+    ax.axhline(1.0, color='#444444', lw=0.9, ls=(0, (1, 1.5)), zorder=2.6)
     # recommended envelope: crest 0.6-1.0 m, ramp 1:16-1:20
     ax.add_patch(Rectangle((xe[2], ye[0]), xe[4] - xe[2], ye[3] - ye[0], fill=False, ec='black', lw=2.2, zorder=6))
     # reference reefs (crest depth, mean seaward ramp slope)
@@ -681,11 +685,15 @@ def fig9():
     ax.text(xe[0] * 1.03, 2.5, 'no model rows below 2.0 m', fontsize=7, color=INK2, ha='left', va='center')
     for sp in ('top', 'right'):
         ax.spines[sp].set_visible(False)
-    # +1 m arrow (settlement or bed rise) right of the number column
-    ax.annotate('', xy=(1.17, 1.8), xytext=(1.17, 0.8), xycoords=tr, textcoords=tr,
-                arrowprops=dict(arrowstyle='-|>', color='#B03A2E', lw=1.6, mutation_scale=8), annotation_clip=False)
-    ax.text(1.21, 1.3, '+1 m settlement\nor bed rise:\ncrest 0.8 to 1.8 m', transform=tr, fontsize=7, color='#B03A2E', ha='left', va='center',
-            clip_on=False)
+    # bracket right of the number column: observed depths at the peak, from the smallest surfable shoulder (1.15 m)
+    # to the depth at which the largest sets break (1.70 m), both bounds (Appendix G)
+    bk = '#444444'
+    ax.plot([1.17, 1.17], [1.15, 1.70], transform=tr, color=bk, lw=1.0, clip_on=False, solid_capstyle='butt')
+    for yy, w in ((1.15, 0.02), (1.70, 0.02), (1.30, 0.012), (1.50, 0.012)):
+        ax.plot([1.17 - w, 1.17], [yy, yy], transform=tr, color=bk, lw=1.0, clip_on=False)
+    ax.text(1.20, 1.42, 'observed at\nHaifa, depth\nat the peak:\n1.15-1.70 m\n(break 1.30\nand 1.50 m)', transform=tr, fontsize=7, color=bk,
+            ha='left', va='center', clip_on=False, linespacing=1.1)
+    ax.text(1.20, 1.0, 'take-off\n~1.0 m', transform=tr, fontsize=7, color=bk, ha='left', va='center', clip_on=False, linespacing=1.1)
     # colour bar and class legend
     cax = fig.add_axes([1.4 / wcm, 1.0 / hcm, 4.0 / wcm, 0.25 / hcm])
     sm = plt.cm.ScalarMappable(cmap=cmap, norm=mcolors.Normalize(0, 1))
@@ -701,7 +709,8 @@ def fig9():
              'Recommended Haifa envelope\n(heavy box): crest 0.6-1.0 m,\nramp 1:16-1:20; rock armour\nDn50 ~ 0.7-0.85 m (1-1.6 t);\n15,000-25,000 m$^3$ per 100 m;\nT 6-8 s; Israeli tide 0.4 m',
              fontsize=7, ha='left', va='top', color=INK, linespacing=1.25, bbox=dict(boxstyle='round,pad=0.3', fc='white', ec=GRID, lw=0.6))
     ho = [Line2D([0], [0], color='#222222', lw=0.7, label='volume per 100 m (m$^3$)'),
-          Line2D([0], [0], color='#444444', lw=0.7, ls=(0, (3, 2)), label="field breaking\ndepth, Haifa:\ncrest 1.2-1.5 m\n(Hs 0.45-0.6 m;\nBakalo 2025)")]
+          Line2D([0], [0], color='#444444', lw=0.8, ls=(0, (3, 2)), label='breaking depth at\nthe peak, Haifa:\n1.30 m (Hs 0.45 m),\n1.50 m (Hs 0.60 m)'),
+          Line2D([0], [0], color='#444444', lw=0.9, ls=(0, (1, 1.5)), label='take-off depth,\nborderline sea')]
     ho += outcome_legend_handles()
     fig.legend(handles=ho, loc='upper left', bbox_to_anchor=(13.4 / wcm, 5.7 / hcm), ncol=1, frameon=False, fontsize=7, handlelength=1.6,
                labelspacing=0.35, handletextpad=0.4, title='Reference reefs\n(colour + label = reef,\nshape = outcome)', title_fontsize=7, alignment='left')

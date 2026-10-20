@@ -230,9 +230,9 @@
     "source": "Maritime Safety Queensland (2026) Semidiurnal tidal planes 2026. msq.qld.gov.au."
    },
    "cost_usd_2024": {
-    "value": 2794000.0,
+    "value": 2957000.0,
     "status": "derived",
-    "location": "nominal USD x CPI_USA(2024) 143.86 / CPI_USA(1999) 76.39",
+    "location": "nominal USD x CPI_USA(2024) 143.86 / CPI_USA(2000) 78.97",
     "source": "World Bank, World Development Indicators: PA.NUS.FCRF \"Official exchange rate (LCU per US$, period average)\" and FP.CPI.TOTL \"Consumer price index (2010 = 100)\", USA; https://api.worldbank.org/v2 ; fetched 2026-10-15"
    },
    "distance_offshore_crest_m": {
@@ -4495,7 +4495,7 @@
     "source": "Government of Western Australia, Department of Transport / Bureau of Meteorology (2026). Tide Predictions by Location, WA 2026 (heights above LAT). https://transport.wa.gov.au/getmedia/482d7b83-1a48-4220-9e2c-b07ebfcf8594/MAR_P_2026_Tide_Predictions_by_Location_WA.pdf (downloaded 2026-10-19; extremes extracted by script from 3 of 4 quarterly blocks, so they are lower bounds of the true annual extremes). Checked in 08_paper/notes/tides_check.md"
    },
    "cost_usd_2024": {
-    "value": 7571000.0,
+    "value": 8376000.0,
     "status": "derived",
     "location": "nominal USD x CPI_USA(2024) 143.86 / CPI_USA(2025) 143.86",
     "source": "World Bank, World Development Indicators: PA.NUS.FCRF \"Official exchange rate (LCU per US$, period average)\" and FP.CPI.TOTL \"Consumer price index (2010 = 100)\", USA; https://api.worldbank.org/v2 ; fetched 2026-10-15"

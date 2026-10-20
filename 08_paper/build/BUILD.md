@@ -55,6 +55,15 @@ Result: `paper.pdf`, 50 pages A4 = title and contents pp. 1-3 (abstract on p. 3)
 
 - 2026-10-19: `thesurf2023` (Palm Beach video comments) was added by hand to references.bib. If md2bib.py is re-run, add it again or add it to 10_references.md first.
 
+- 2026-10-20: four references added to `10_references.md` (elezovich2026, governmentof2025, surfline2025, 4surfers2025; group `other` in
+  `ref_groups_new.csv`) and `md2bib.py` re-run: 154 entries (thesurf2023 is now generated from 10_references.md, no hand entry needed).
+- Table footnotes: Table 1 uses pandoc notes `^[...]` inside cells. pandoc writes `\footnote` inside the longtable and the template's
+  `\makesavenoteenv{longtable}` (footnotehyper) prints them at the foot of the page that holds the marker; if the table breaks across pages,
+  each page carries its own notes. Keep the notes short so that Table 1 stays on one page (checked: p. 9, all 9 notes on that page).
+  Landscape tables (C1, C3) carry their qualifications in the cells and in the "Notes to Tables C1-C5" instead.
+- `latex_header.tex` loads `needspace`; Appendix G uses a raw `\Needspace{10\baselineskip}` before Table G3 to keep it on one page.
+- Result 2026-10-20: 105 pages, no undefined citations.
+
 ## Two reference lists (grouping)
 - `ref_groups.csv` (`key,group`, group = `academic` | `other`) covers every key in `references.bib`; `ref_groups_new.csv` (same format, written by
   other agents for appended entries) is re-read at each build and overrides. Edit these CSVs, never `references.bib`, to move an entry.

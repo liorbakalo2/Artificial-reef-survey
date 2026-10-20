@@ -41,7 +41,7 @@ def build():
     r.U('surfable_days_per_year', 'days/yr', 'none (never operational).')
     r.F('durability', 'bladder torn along a glued seam during installation (Dec 2019), removed within ~3 days (one source: half a day); second prototype only planned; developer later proposed a granite reef instead', 'text', 'S', 'ABC1219+RWRTear', 'ABC 2019-12; RWR 2019-12-16; card status_now')
     r.U('sediment_shoreline_outcome', 'text', 'none (never operational).')
-    r.F('cost_local', 400000, 'USD', 'S', 'Stab', 'card cost field (R3, R10): total ~US$400,000 including installation (another source US$350,000); City of Bunbury committed A$75,000', price_year=2019, currency='USD', note='Sources disagree (350k vs 400k).', alts=[(350000, 'other source', 'S', 'RWRProfile', 'card cost field'), (75000, 'City of Bunbury sponsorship, AUD (2019)', 'S', 'ABC0613', 'card cost field')])
+    r.F('cost_local', 400000, 'USD', 'S', 'Stab', 'APPROXIMATE (spot-guide/press listing, Stab and Raised Water Research): total ~US$400,000 including installation (another source US$350,000); City of Bunbury committed A$75,000', price_year=2019, currency='USD', note='Sources disagree (350k vs 400k).', alts=[(350000, 'other source', 'S', 'RWRProfile', 'card cost field'), (75000, 'City of Bunbury sponsorship, AUD (2019)', 'S', 'ABC0613', 'card cost field')])
     r.F('shape_on_page', 'shown', 'category', 'S', None, '04_build/data/reefs.json footprint.display = True (read only; circle traced on a drone photo, position estimated)')
     r.F('model_3d', 'yes: stand-in spherical cap on lidar seabed; confidence MEDIUM', 'text', 'S', None, SH + '3d/METHODS_3D.md s1, s6')
     return r

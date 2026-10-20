@@ -116,6 +116,16 @@
    "spearman_rho": 0.428,
    "p": 0.1889,
    "p_permutation": 0.2063
+  },
+  "built_reefs_asbuilt_basis": {
+   "n": 10,
+   "spearman_rho": 0.868,
+   "p": 0.0011,
+   "p_permutation": 0.0026,
+   "substitutions": {
+    "narrowneck-gold-coast": 13495,
+    "opunake-reef": 3400
+   }
   }
  }
 }

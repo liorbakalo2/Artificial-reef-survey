@@ -1,5 +1,14 @@
 [
  {
+  "key": "4surfers2025",
+  "narr": "4Surfers",
+  "par": "4Surfers",
+  "year": "2025",
+  "type": "misc",
+  "kind": "ital",
+  "raw": "4Surfers. (2025). *Israeli surf forecast* [Hebrew-language wave forecast for the Israeli coast; consulted July to October 2025]. https://4surfers.co.il/"
+ },
+ {
   "key": "abcnews2019",
   "narr": "ABC News",
   "par": "ABC News",
@@ -351,6 +360,15 @@
   "raw": "ECOncrete. (n.d.). *ECOncrete case studies* [Company document]. https://www.monmouth.edu/uci/wp-content/uploads/sites/58/2021/09/ECOncrete-Case-Studies.pdf [company-supplied evidence]"
  },
  {
+  "key": "elezovich2026",
+  "narr": "Elezovich",
+  "par": "Elezovich",
+  "year": "2026",
+  "type": "article",
+  "kind": "art",
+  "raw": "Elezovich, J. (2026, July). Albany 2026: Reef advocates look back on decades-long journey to bring Southern Ocean Surf Reef to life. *Albany Advertiser*. https://www.albanyadvertiser.com.au/news/albany-advertiser/albany-2026-reef-advocates-look-back-on-decades-long-journey-to-bring-southern-ocean-surf-reef-to-life-c-22657778 [source of the final cost of AUD 13 M; read from a search-engine extract, the full page was not accessed]"
+ },
+ {
   "key": "ecoshapend",
   "narr": "EcoShape",
   "par": "EcoShape",
@@ -439,6 +457,15 @@
   "type": "misc",
   "kind": "ital",
   "raw": "Government Company for the Protection of Mediterranean Sea Cliffs [MCCP]. (2026). *Projects list: Ashkelon North geotubes, Netanya breakwaters, Ashkelon geotube maintenance* [In Hebrew]. https://www.mccp.co.il/page.php?type=projectsGroups (accessed 15 October 2026)"
+ },
+ {
+  "key": "governmentof2025",
+  "narr": "Government of Western Australia",
+  "par": "Government of Western Australia",
+  "year": "2025",
+  "type": "misc",
+  "kind": "ital",
+  "raw": "Government of Western Australia. (2025, July 16). *Joint media statement: Albany artificial reef makes a splash* [Media statement]. https://www.wa.gov.au/government/media-statements/Cook-Labor-Government/Joint-media-statement---Albany-artificial-reef-makes-a-splash-20250716 [funding shares: Australian Government AUD 5 M, State Government AUD 4.75 M; read from a search-engine extract, the full page was not accessed]"
  },
  {
   "key": "hansford2011",
@@ -1132,6 +1159,15 @@
   "type": "inproceedings",
   "kind": "proc",
   "raw": "Sulaiman, D. M., Junarsa, D., Bachtiar, H., & Nurhabni, F. (2017). Lessons learned from deploying low crested breakwaters in North Coast of Java. In *Asian and Pacific Coasts 2017* (pp. 445-454). World Scientific. https://doi.org/10.1142/9789813233812_0041 [not read]"
+ },
+ {
+  "key": "surfline2025",
+  "narr": "Surfline",
+  "par": "Surfline",
+  "year": "2025",
+  "type": "misc",
+  "kind": "ital",
+  "raw": "Surfline. (2025). *Haifa surf report and forecast* [Wave forecast pages, including the former Magicseaweed (MSW) forecast; consulted July to October 2025]. https://www.surfline.com/travel/israel/haifa-surfing-and-beaches/294800"
  },
  {
   "key": "sunlivend",

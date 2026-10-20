@@ -126,6 +126,17 @@ def main():
         r, pval = spearmanr(sub['volume_stated_m3'], sub['score'])
         vol_corr[lab] = dict(n=len(sub), spearman_rho=round(float(r), 3), p=round(float(pval), 4),
                              p_permutation=round(perm_p(sub['volume_stated_m3'], sub['score']), 4))
+    # sensitivity (2026-10-20, notes/cost_volume_check.md): as-built basis where the stated value is a fill or design volume:
+    # Narrowneck exposed mound of the 3D model (13,495 m3) instead of the 70,000 m3 sand fill; Opunake ~3,400 m3 built
+    # (Blacka et al. 2013 Table 4.4 cost per m3) instead of the 4,900 m3 design
+    ALT_BASIS = {'narrowneck-gold-coast': 13495, 'opunake-reef': 3400}
+    sub = vdf[~vdf.slug.isin(NATURAL_RESHAPED)].copy()
+    sub['volume_alt_m3'] = [ALT_BASIS.get(s_, v_) for s_, v_ in zip(sub.slug, sub.volume_stated_m3)]
+    r, pval = spearmanr(sub['volume_alt_m3'], sub['score'])
+    vol_corr['built_reefs_asbuilt_basis'] = dict(n=len(sub), spearman_rho=round(float(r), 3), p=round(float(pval), 4),
+                                                 p_permutation=round(perm_p(sub['volume_alt_m3'], sub['score']), 4),
+                                                 substitutions=ALT_BASIS)
+    vdf['volume_alt_m3'] = [ALT_BASIS.get(s_, v_) for s_, v_ in zip(vdf.slug, vdf.volume_stated_m3)]
     vdf.to_csv(os.path.join(HERE, 'results_volume_outcome.csv'), index=False)
     with open(os.path.join(HERE, 'results_outcome_correlations.json'), 'w') as f:
         json.dump(dict(note='Spearman rank correlation with outcome score (works 3, works rarely / mixed 2, does not work 1; unknown excluded). '
