@@ -37,7 +37,7 @@ local function mark_caps(doc)
   -- add a hypertarget at the start of every caption paragraph / figure caption
   local function fix(inls)
     local key = lead_anchor(inls)
-    if key then inls:insert(1, pandoc.RawInline('latex', '\\hypertarget{' .. caps[key] .. '}{}')) end
+    if key then inls:insert(1, pandoc.RawInline('latex', '\\protect\\hypertarget{' .. caps[key] .. '}{}')) end
   end
   doc = doc:walk({
     Para = function(p) fix(p.content); return p end,
