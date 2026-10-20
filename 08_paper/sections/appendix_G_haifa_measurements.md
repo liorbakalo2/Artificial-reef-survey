@@ -1,87 +1,103 @@
-# Appendix G. Field observations of breaking depths at Haifa
+# Appendix G. Field observations of surfable conditions and take-off depth at Haifa
 
-This appendix documents the author's own observations of the smallest sea states in which waves were surfable at Haifa, which Section 7 uses for the wave-height and depth range of a planned reef. The observations are field notes from regular surf sessions between late July and early October 2025, not a survey. They were recorded as a slide deck (six annotated chart pages and one summary page) and are reproduced here as they stand, with their limits stated. The numeric values are in `08_paper/data/haifa_breaking_depths.csv`.
+This appendix documents the author's own field observations at Haifa, which Section 7 uses for the wave conditions and the water depth of a planned reef. The observations are notes from regular surf sessions over about ten weeks, from late July to early October 2025, and are not a survey. They were recorded as a slide deck in which the author marked, on six charts of the Shikmona wave-buoy record, the stretches during which waves were surfable, borderline or not surfable. The numeric values read from those charts are in `08_paper/data/haifa_breaking_depths.csv`. Depths are treated separately in Section G.5, because no depth was measured with an instrument.
 
 ## G.1 What was recorded
 
-Two kinds of record exist, and they should not be confused.
-
-1. **Colour-coded sea states (chart pages A to F).** For each session period the author took the time series of the Shikmona wave buoy off Haifa, published by the Israel Marine Data Center [@isramar2025], and drew a coloured box over the stretch of the record in which a given surfability was observed. The chart gives the significant wave height $H_s$ (SWH), the maximal wave height (MWH) and the period of the maximal waves,. The boxes therefore mark *when* a condition held; the heights in Tables G1 and G2 are read off the chart inside each box. They are wave heights at the buoy, not water depths.
-2. **Breaking depths (summary page).** One page gives water depths under the breaking wave for two bounds of the sea state ($H_s$ 0.45 and 0.60 m). These are the only depths in the notes (Table G3). The notes do not tie them to a colour.
+1. **Colour-coded sea states (chart slides 3 to 8, charts A to F).** For each session period the author took the time series of the Shikmona wave buoy off Haifa, published by the Israel Marine Data Center [@isramar2025], and drew a coloured box over the stretch of the record in which a given surfability was observed. The chart gives the significant wave height $H_s$, the maximal wave height $H_{max}$ and the period of the maximal waves, which is called $T_p$ below. The boxes therefore mark *when* a condition held; $H_s$, $H_{max}$ and $T_p$ in Tables G1 and G2 were read from the chart inside each box. They are wave conditions at the buoy, not water depths.
+2. **Take-off depth (author's field estimate, Section G.5).** An estimate of the water depth at the take-off, made by the author in the water on some days.
 
 ## G.2 Colour classification
 
-The classification is the author's own judgement from regular surf sessions at Haifa; it was not measured by any instrument and no second observer checked it. The colours mean:
+The classification is the author's own judgement from regular surf sessions at Haifa; no instrument was involved and no second observer checked it. The colours mean:
 
-- **green**: surfable in all conditions, that is, the minimum for surfing on any day;
-- **yellow**: surfable in great conditions (the seabed shaping the wave, a favourable wind), or in normal conditions but only in the big sets that arrive about once in 15 minutes;
-- **orange**: surfable only in great conditions and only in the once-in-15-minutes sets; "not surfable, but a little more, or a perfectly shaped wave in a set, would have been surfable";
-- **red**: used on five chart pages for the stretches that were not surfable; the notes do not define it, so this reading is an inference.
+- **green**: surfable; the minimum conditions for surfing;
+- **yellow**: borderline; surfable only in the bigger sets that arrive about once in 15 minutes;
+- **orange**: the upper limit of red; not surfable, but a little more, or a perfectly shaped wave in a set that arrives about once in 15 minutes, would have been surfable;
+- **red**: not surfable.
 
-The definitions were fixed in writing on 20 October 2026, after the sessions; the chart pages carry the yellow and orange definitions in Hebrew, and none for green or red.
+The wording for yellow (chart slides 4 to 6) and orange (chart slides 7 and 8) is written on the slides in Hebrew; the meanings of green and red were confirmed by the author on 20 October 2026. The colours were assigned after the sessions, by judgement. They are not defined by a wave height alone: surfability depends on height *and* period (and on wind and seabed shaping), so the minimum conditions of a colour are given below as height-period pairs.
 
 ## G.3 Method and sources
 
-The wave data are screenshots of the ISRAMAR Shikmona buoy page [@isramar2025] (URL in the reference list; "Significant Wave Height and Period of maximal waves", $H_s$ and MWH in metres on the right axis, period in seconds on the left, local time). The author captured the page on the days stamped "last observed" on the charts: 6 August, 15 August, 19 September and 9 October 2025 (pages B, C, E, F). Pages A and D carry no stamp; page A covers 27 July to 1 August 2025 and page D 3 to 9 September 2025.
+The wave data are screenshots of the ISRAMAR Shikmona buoy page [@isramar2025] ("Shikmona Buoy Significant Wave Height and Period of maximal waves"; $H_s$ and $H_{max}$ in metres on the right axis, the period of the maximal waves in seconds on the left axis, local time). The charts cover six periods, 27 July to 9 October 2025, within a sample of about ten weeks:
 
-The values in Tables G1 and G2 were read by this review from the chart images, not by the author. The box outlines were mapped to the time axis and the two curves (SWH, MWH) were digitised by colour inside each box (pixel column by column, axis calibrated on the plot frame). The resulting precision is about 0.05 m in height and 1 to 2 hours in time, because the boxes were drawn by hand and their edges include some of the neighbouring record. For each box the table gives the lowest value (which the box edges can lower) and the 20th percentile (which is less sensitive to the edges).
+| Slide (chart) | Period shown | "Last observed" stamp on the screenshot |
+|:--|:--|:--|
+| 3 (A) | 27 Jul to 1 Aug 2025 | none |
+| 4 (B) | 2 to 7 Aug 2025 | 6 Aug 2025, 19:00 UTC |
+| 5 (C) | 11 to 15 Aug 2025 | 15 Aug 2025, 09:00 UTC |
+| 6 (D) | 3 to 9 Sep 2025 | none (a splice in the screenshot omits part of 7 to 8 Sep) |
+| 7 (E) | 15 to 19 Sep 2025 | 19 Sep 2025, 11:00 UTC |
+| 8 (F) | 5 to 9 Oct 2025 | 9 Oct 2025, 05:00 UTC |
 
-Swell direction, noted by the author beside each chart, was 284 degrees on pages A, E (to 14:30 on 19 September, then 300 degrees), 284 changing to above 292 degrees on page B, and 292 to 294 degrees on pages C and D; none is noted for page F. The author's forecast sources for the days of the depth measurements were Surfline (0.6 to 0.9 m), 4Surfers (0.65 to 0.8 m, "knee high", 6 to 8 s, 285 to 294 degrees).
+The values in Tables G1 and G2 were read by this review from the chart images, not by the author. The slides were rendered without the coloured boxes, the plot frame was located by its axis lines and calibrated on the axis ranges, and the two curves and the period dots were then extracted by colour inside the area of each box (pixel column by column). The reading error is about 0.05 m in $H_s$ and $H_{max}$, about 0.3 s in $T_p$ (the period dots are discrete and 2 to 14 fall inside a box), and about 1 to 2 hours in time, because the boxes were drawn by hand and their edges include some of the neighbouring record. For each box the tables give the lowest $H_s$ inside the box, the $H_{max}$ at the same time, and $T_p$ as the median of the period dots within about 1.25 h of that time; the range of all period dots inside the box is also given. Because box edges can include a lower neighbouring value, the lowest $H_s$ of a box is a lower bound on the minimum condition, and the 20th percentile of $H_s$ (in the CSV) is less sensitive to the edges.
 
-## G.4 Results: wave height by colour
+The author's own readings of the orange boxes, for comparison, were $H_s$ 0.6 m, $H_{max}$ 0.8 m, $T_p$ 5.5 s (chart 8, F); $H_s$ 0.45 m, $H_{max}$ 0.5 m, $T_p$ 7.5 s (chart 7, E); and $H_s$ 0.5 m, $H_{max}$ 0.55 m, $T_p$ 7 s (chart 7, E). The pairs of this review agree within the reading error for chart 7 ($H_s$ 0.42 to 0.53 m, $T_p$ 6.9 to 7.3 s; the $H_{max}$ of 0.50 m is within 0.05 m of the 0.54 m read here). For chart 8 the box starts at $H_s$ about 0.57 m and $H_{max}$ about 0.73 to 0.80 m with period dots at 3.8 to 4.5 s, and the dots near 5.5 s occur later in the box (around 12:00 to 16:00 on 5 October), where $H_s$ and $H_{max}$ are higher. The author's pair mixes the two ends of the box; both readings are given in Tables G1 and G2.
 
-**Table G1. Coloured stretches of the Shikmona record (chart pages A to F; heights read from the charts by this review, $\pm$0.05 m).**
+Swell direction, noted by the author beside each chart, was 284 degrees on charts A and E (E: 300 degrees from 14:30 on 19 September), 284 changing to above 292 degrees on chart B, and 292 to 294 degrees on charts C and D; none is noted for chart F.
 
-| Chart | Date(s), 2025 | Colour | Min SWH (m) | Min MWH (m) | 20th pct SWH / MWH (m) |
-|:--|:--|:--|--:|--:|:--|
-| A | 28 Jul, 06:30-09:00 | green | 0.41 | 0.52 | 0.44 / 0.57 |
-| A | 30-31 Jul | green | 0.64 | 0.81 | 0.70 / 0.90 |
-| B | 3-4 Aug | green | 0.50 | 0.64 | 0.61 / 0.78 |
-| C | 11-12 Aug | green | 0.41 | 0.53 | 0.47 / 0.60 |
-| D | 3 Sep, 11:00 to 4 Sep, 00:00 | green | 0.80 | 1.01 | 0.90 / 1.14 |
-| D | 4 Sep, 05:00-12:30 | green | 0.73 | 0.93 | 0.75 / 0.95 |
-| B | 4-5 Aug (night to midday) | yellow | 0.45 | 0.58 | 0.47 / 0.60 |
-| C | 11 Aug, 00:00-12:30 | yellow | 0.40 | 0.51 | 0.42 / 0.53 |
-| C | 13 Aug, 04:30 to 14 Aug, 00:00 | yellow | 0.41 | 0.52 | 0.45 / 0.58 |
-| D | 4 Sep, 15:30-19:45 | yellow | 0.67 | 0.85 | 0.68 / 0.87 |
-| D | 8 Sep, 14:45-22:15 | yellow | 0.41 | 0.52 | 0.48 / 0.61 |
-| E | 16 Sep, 07:15-12:15 | orange | 0.41 | 0.52 | 0.44 / 0.57 |
-| E | 16 Sep, 17:00-22:00 | orange | 0.43 | 0.55 | 0.43 / 0.55 |
-| E | 17 Sep, 14:00-21:15 | orange | 0.52 | 0.67 | 0.53 / 0.68 |
-| E | 18 Sep, 07:00-11:15 | orange | 0.41 | 0.52 | 0.48 / 0.61 |
-| E | 18 Sep, 16:00-20:15 | orange | 0.43 | 0.55 | 0.47 / 0.60 |
-| E | 19 Sep, 01:45-11:15 | orange | 0.48 | 0.61 | 0.55 / 0.70 |
-| F | 5 Oct, 00:15-16:15 | orange | 0.56 | 0.72 | 0.58 / 0.74 |
+## G.4 Results: wave conditions by colour
 
-Red stretches (not surfable, six boxes, 28 July to 8 October) have $H_s$ from 0.11 to 0.49 m at their lowest; they are in the CSV.
+**Table G1. Coloured stretches of the Shikmona record (chart slides 3 to 8; read from the charts by this review: $H_s$ and $H_{max}$ $\pm$0.05 m, $T_p$ $\pm$0.3 s).** $H_s$ is the lowest value in the box, $H_{max}$ the value at that time, $T_p$ the period of the maximal waves near that time.
 
-**Table G2. Lowest wave height of each colour over all boxes (SWH / MWH, m).**
+| Slide (chart) | Chart period | Box (2025) | Colour | Hs (m) | Hmax (m) | Tp (s) | Tp range in box (s) |
+|:--|:--|:--|:--|--:|--:|--:|:--|
+| 3 (A) | 27 Jul-1 Aug | 28 Jul, 00:30-06:30 | red | 0.38 | 0.49 | 6.5 | 6.2-7.3 |
+| 3 (A) | 27 Jul-1 Aug | 28 Jul, 06:30-09:00 | green | 0.44 | 0.57 | 6.3 | 6.2-6.5 |
+| 3 (A) | 27 Jul-1 Aug | 29 Jul, 10:00-16:00 | red | 0.42 | 0.54 | 5.1 | 4.6-5.7 |
+| 3 (A) | 27 Jul-1 Aug | 30 Jul 09:00 to 31 Jul 18:30 | green | 0.63 | 0.81 | 7.8 | 5.4-8.2 |
+| 4 (B) | 2-7 Aug | 3 Aug 18:30 to 4 Aug 22:00 | green | 0.53 | 0.69 | 7.1 | 6.2-7.7 |
+| 4 (B) | 2-7 Aug | 4 Aug 22:00 to 5 Aug 11:30 | yellow | 0.46 | 0.59 | 6.5 | 6.2-7.3 |
+| 4 (B) | 2-7 Aug | 5 Aug 11:30 to 6 Aug 21:00 | red | 0.40 | 0.51 | 5.9 | 5.2-6.5 |
+| 5 (C) | 11-15 Aug | 11 Aug, 00:30-12:30 | yellow | 0.41 | 0.52 | 6.9 | 6.5-7.7 |
+| 5 (C) | 11-15 Aug | 11 Aug 12:00 to 12 Aug 22:00 | green | 0.42 | 0.54 | 6.9 | 3.9-8.2 |
+| 5 (C) | 11-15 Aug | 13 Aug 04:30 to 14 Aug 00:00 | yellow | 0.42 | 0.54 | 5.3 | 4.1-6.5 |
+| 5 (C) | 11-15 Aug | 14 Aug 00:00 to 15 Aug 10:30 | red | 0.17 | 0.22 | 3.7 | 3.3-6.2 |
+| 6 (D) | 3-9 Sep | 3 Sep 11:00 to 4 Sep 00:30 | green | 0.80 | 1.03 | 6.9 | 6.2-7.7 |
+| 6 (D) | 3-9 Sep | 4 Sep, 05:30-12:30 | green | 0.73 | 0.93 | 7.3 | 6.2-7.7 |
+| 6 (D) | 3-9 Sep | 4 Sep, 15:30-20:00 | yellow | 0.67 | 0.86 | 7.3 | 6.9-7.7 |
+| 6 (D) | 3-9 Sep | 5 Sep 03:30 to 7 Sep 17:30 | red | 0.34 | 0.44 | 6.5 | 4.5-7.3 |
+| 6 (D) | 3-9 Sep | 8 Sep, 14:30-22:00 | yellow | 0.41 | 0.53 | 6.5 | 5.2-7.7 |
+| 7 (E) | 15-19 Sep | 16 Sep, 07:30-12:30 | orange | 0.42 | 0.54 | 6.9 | 6.2-7.3 |
+| 7 (E) | 15-19 Sep | 16 Sep, 17:00-22:00 | orange | 0.44 | 0.56 | 7.1 | 5.9-7.3 |
+| 7 (E) | 15-19 Sep | 17 Sep, 14:00-21:30 | orange | 0.53 | 0.68 | 7.3 | 6.5-7.7 |
+| 7 (E) | 15-19 Sep | 18 Sep, 06:30-11:00 | orange | 0.42 | 0.54 | 7.3 | 6.9-7.7 |
+| 7 (E) | 15-19 Sep | 18 Sep, 15:30-20:00 | orange | 0.44 | 0.56 | 7.1 | 6.5-7.3 |
+| 7 (E) | 15-19 Sep | 19 Sep, 01:30-11:00 | orange | 0.48 | 0.62 | 6.9 | 4.5-7.3 |
+| 8 (F) | 5-9 Oct | 5 Oct, 00:30-16:30 | orange | 0.57 | 0.73 | 3.9 | 3.8-5.7 |
+| 8 (F) | 5-9 Oct | 7 Oct 23:00 to 8 Oct 17:30 | red | 0.13 | 0.16 | 4.8 | 3.9-5.7 |
 
-| Colour | Boxes | Lowest in any box | Lowest 20th percentile | Reading |
-|:--|--:|:--|:--|:--|
-| green | 6 | 0.41 / 0.52 | 0.44 / 0.57 | minimum for all conditions |
-| yellow | 5 | 0.40 / 0.51 | 0.42 / 0.53 | borderline |
-| orange | 7 | 0.41 / 0.52 | 0.43 / 0.55 | only great conditions, big sets |
+**Table G2. Minimum conditions in which each colour was observed ($H_s$, $H_{max}$, $T_p$ pairs; the lowest-energy boxes of each colour, ordered by $H_s^2 T_p$ as a rough energy measure).**
 
-The three colours reach about the same lowest height ($H_s$ 0.40 to 0.45 m, MWH 0.50 to 0.55 m): wave height alone does not separate "always", "borderline" and "only in great conditions". This is expected from the definitions, which depend on wind, seabed shaping and set size, and it means that Table G2 gives only the *floor* of the surfable height range at Haifa, about $H_s$ 0.4 to 0.45 m. It does not give a threshold per colour. The 0.45 to 0.60 m range quoted in Section 7 is the range of the depth-measurement days (Table G3), consistent with this floor.
+| Colour | $H_s$ (m) | $H_{max}$ (m) | $T_p$ (s) | Box (chart) |
+|:--|--:|--:|--:|:--|
+| green | 0.42 | 0.54 | 6.9 | 11 to 12 Aug (C) |
+| green | 0.44 | 0.57 | 6.3 | 28 Jul, 06:30-09:00 (A) |
+| green | 0.53 | 0.69 | 7.1 | 3 to 4 Aug (B) |
+| yellow | 0.42 | 0.54 | 5.3 | 13 to 14 Aug (C) |
+| yellow | 0.41 | 0.53 | 6.5 | 8 Sep (D) |
+| yellow | 0.41 | 0.52 | 6.9 | 11 Aug (C) |
+| yellow | 0.46 | 0.59 | 6.5 | 4 to 5 Aug (B) |
+| orange | 0.42 | 0.54 | 6.9 | 16 Sep, morning (E) |
+| orange | 0.42 | 0.54 | 7.3 | 18 Sep, morning (E) |
+| orange | 0.44 | 0.56 | 7.1 | 16 and 18 Sep, evening (E) |
+| orange | 0.57 | 0.73 | 3.9 (3.8 to 4.5 for the first hours; 5.4 to 5.7 later in the box) | 5 Oct (F) |
+| red (not surfable), highest of the six boxes | 0.42 | 0.54 | 5.1 | 29 Jul (A); the other red boxes have $H_s$ 0.40 m ($H_{max}$ 0.51 m, $T_p$ 5.9 s, 5 to 6 Aug, B), 0.38 m (0.49 m, 6.5 s, 28 Jul, A), 0.34 m (0.44 m, 6.5 s, 5 to 7 Sep, D), 0.17 m and 0.13 m |
 
-## G.5 Results: breaking depths
+Three points follow from the tables. First, the minimum height at which waves were surfable at Haifa in this sample is about $H_s$ 0.4 to 0.45 m with $H_{max}$ about 0.5 to 0.55 m, at periods of 6.5 to 7.5 s; green, yellow and orange boxes reach the same low heights at similar periods, so height alone does not separate the colours. Second, the colours do separate when height and period are read together with the other factors named in G.2 (set size, wind, seabed shaping): the one orange box at a short period (chart F, 3.8 to 4.5 s) has $H_s$ 0.57 m, higher than the long-period orange boxes (0.42 to 0.53 m), which indicates that a short period needs more height for the same classification. Third, the yellow box of 13 to 14 August has the shortest period near its minimum (5.3 s, dots 4.1 to 6.5 s) at $H_s$ 0.42 m, so a single height-period boundary per colour cannot be drawn from six charts; the pairs above are minimum conditions that were observed, not thresholds. The red box of 29 July (chart A) has $H_s$ 0.42 m at $T_p$ 5.1 s and was not surfable, whereas green boxes at the same height had $T_p$ 6.3 to 6.9 s, which is again consistent with period mattering. The sample has no surfable record below $H_s$ 0.4 m.
 
-**Table G3. Water depth under the breaking wave, as noted by the author (summary page).**
+## G.5 Water depth at the take-off (author's field estimate)
 
-| Sea state | Min depth (m) | Wave-breaking depth (m) | No breaking above (m) |
-|:--|--:|--:|--:|
-| Low bound: $H_s$ 0.45 m, MWH 0.6 m | 1.15 | 1.30 | 1.45 |
-| High bound: $H_s$ 0.60 m, MWH 0.8 m | 1.35 | 1.50 | 1.70 |
+No depth was measured with an instrument. On some days the author estimated the water depth at the wave peak by standing in the water at the take-off position and noting where the water reached on the body; that body height was measured afterwards with a tape. On this basis the author estimates that the **minimum water depth at the take-off for yellow and orange conditions is about 1 m (about chest height)**, **decreasing to about 0.5 m towards the end of the ride**.
 
-The notes define the terms as follows. "Min depth" is the breaking depth of the smallest part of the wave that can still be surfed (the smallest shoulder or intersection). "Wave-breaking depth" is the depth at which the wave breaks. "No breaking" is the upper limit of depth at which a wave does not break, that is, the minimum breaking depth for the mega sets. Depths were taken about one second after the wave broke, at the point under the breaking crest. A separate length measure (2 m from the take-off to the break) has an accuracy of $\pm$0.5 m. The measuring days had $H_s$ 0.45 to 0.60 m, MWH 0.6 to 0.8 m, swell from 285 to 294 degrees. Whether the breaking depths relate to the green, yellow and orange boxes is not stated, and this review does not assume it: the depth rows in the CSV carry no colour.
+The estimate is a field estimate by a single observer. Its uncertainty is of the order of $\pm$0.2 m. No datum or tide correction was applied; the tidal range at Haifa is small (about 0.4 m, Section 7.1), so the tide is of the same order as the estimate's error, and the water-level anomaly of the day (weather, season) may add to it. The days of the estimates are not recorded and the estimate is not tied to a particular box in Table G1; it is therefore stated for the yellow and orange conditions in general. The estimate is used in Section 7 only as an order-of-magnitude figure for the water depth over the crest of a reef that is meant to be surfable at the lower end of the wave-height range (about 1 m at take-off, about 0.5 m near the end of the ride). The CSV carries two rows for it (record type `depth_estimate`).
 
 ## G.6 Limitations
 
-- **Single observer, no instrument for the classification.** The colours are a personal judgement of surfability by one surfer, which depends on skill, board and expectation. There is no inter-observer check.
-- **Buoy, not breaker.** Heights are from the Shikmona buoy, offshore of the break, and are read from images. Shoaling, refraction and the sheltered position of Haifa Bay (Section 7.1) mean the height at the breaker differs from the buoy value.
-- **Height read from charts, not depth.** The coloured data are heights; the depths in Table G3 are not tied to any colour or date. The colours are defined as minimum conditions for surfing, but the notes support only minimum wave heights, and Table G2 is worded accordingly.
-- **Datum.** The depths have no stated datum or tide level. Haifa's tide is small (about 0.15 to 0.4 m; Section 7.1), so the error from this is of that order, but the water-level anomaly of the day (weather, season) can be larger. The values should be read as water depth at the time, not as depth below chart datum or mean sea level.
-- **Depth method not recorded.** How the depths were obtained (instrument, position, wading or swimming) is not written in the notes, and the accuracy given ($\pm$0.5 m) is stated only for the length measure.
-- **Short and uneven sample.** Six record periods between 27 July and 9 October 2025 (summer to early autumn, no winter swell), 24 coloured boxes, and no wave height recorded for the depth days beyond the ranges above. Dates of the depth measurements are not given.
-- **Unresolved points.** The meaning of red is inferred; pages A and D have no capture stamp; the swell direction is missing for page F; and a gap in page D (a splice in the screenshot between 7 and 8 September) means that the record there is partly missing.
+- **Single observer, no instrument.** The colours are a personal judgement of surfability by one surfer, which depends on skill, board and expectation. There is no inter-observer check. The depth figures in G.5 are likewise single-observer estimates.
+- **Buoy, not breaker.** Heights and periods are from the Shikmona buoy, offshore of the break, and were read from images. Shoaling, refraction and the sheltered position of Haifa Bay (Section 7.1) mean the height at the breaker differs from the buoy value. The period dots show the period of the maximal waves, not of the whole spectrum.
+- **Conditions, not depths.** Tables G1 and G2 are wave conditions. The depth estimate is not tied to any colour box or date.
+- **Box edges.** Boxes were drawn by hand and their edges include neighbouring record, so the lowest values of a box can come from its edge; the pairs in Table G2 are lower bounds of the minimum conditions.
+- **Datum.** The depth estimate has no datum or tide level, and the error from this is of the order of the tidal range (about 0.4 m).
+- **Short and uneven sample.** About ten weeks, 27 July to 9 October 2025 (summer to early autumn, no winter swell), six chart periods and 24 coloured boxes. Chart D has a gap between 7 and 8 September where the screenshot is spliced; charts A and D carry no capture stamp; the swell direction is missing for chart F.

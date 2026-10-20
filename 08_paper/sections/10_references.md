@@ -68,6 +68,8 @@ Dahm, J., & Gibberd, B. (2013). *Mount Maunganui Reef: Assessment of management 
 
 Daily Post. (2013, April 16). Borth's new coastal defences to transform town into a surfer's paradise. *North Wales Live*. https://www.dailypost.co.uk/news/local-news/borths-new-coastal-defences-transform-2685578
 
+Dally, W. R., Dean, R. G., & Dalrymple, R. A. (1985). Wave height variation across beaches of arbitrary profile. *Journal of Geophysical Research, 90*(C6), 11917-11927. https://doi.org/10.1029/JC090iC06p11917 [full text not accessed; used as cited by other sources]
+
 Dan Harmon. (2026, February 17). *The $500k surf reef failure* [Video; viewer comments retrieved 19 October 2026, evidence grade D]. YouTube. https://www.youtube.com/watch?v=DK7cqXDzLpM
 
 d'Angremond, K., van der Meer, J. W., & de Jong, R. J. (1996). Wave transmission at low-crested structures. In *Proceedings of the 25th International Conference on Coastal Engineering* (pp. 2418-2427). ASCE. [Original not read; equations as reproduced by Blacka et al., 2013, Eqs. 25-27, with the standard signs.]
