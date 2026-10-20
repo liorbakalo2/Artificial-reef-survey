@@ -53,7 +53,7 @@ Result: `paper.pdf`, 50 pages A4 = title and contents pp. 1-3 (abstract on p. 3)
 - Some white space below figures (figures are not split across pages).
 - Main text is longer than the 15-20 page target (OPEN_ISSUES item 2 lists cut candidates).
 
-- 2026-10-19: `thesurfeye2023` (Palm Beach video comments) was added by hand to references.bib. If md2bib.py is re-run, add it again or add it to 10_references.md first.
+- 2026-10-19: `thesurf2023` (Palm Beach video comments) was added by hand to references.bib. If md2bib.py is re-run, add it again or add it to 10_references.md first.
 
 ## Two reference lists (grouping)
 - `ref_groups.csv` (`key,group`, group = `academic` | `other`) covers every key in `references.bib`; `ref_groups_new.csv` (same format, written by

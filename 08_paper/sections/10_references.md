@@ -112,6 +112,8 @@ Hunt, S., Britton, G., Messiter, D., Prenzler, P., Knight, S., & Watterson, E. (
 
 Hutt, J. A., Black, K. P., & Mead, S. T. (2001). Classification of surf breaks in relation to surfing skill. *Journal of Coastal Research, Special Issue 29*, 66-81. http://www.jstor.org/stable/25736206 [original not read; Table 3 used as reproduced by Lewis et al. (2015)]
 
+ISRAMAR. (2025). *Shikmona buoy: Significant wave height and period of maximal waves* [Data set]. Israel Marine Data Center. https://isramar.ocean.org.il/isramar2009/station/shikmonaBuoyM.aspx
+
 Indelicato, P. (2026, March 31). Unveiling the new reef in Mexico. *Raised Water Research*. https://raisedwaterresearch.com/unveiling-the-new-reef-in-mexico/ [industry website, announcement]
 
 Jackson, L. A., & Corbett, B. (2007). Review of existing multi-functional artificial reefs. *Australasian Conference on Coasts and Ports 2007*. International Coastal Management, Queensland.
@@ -137,6 +139,8 @@ Longuet-Higgins, M. S., & Stewart, R. W. (1964). Radiation stresses in water wav
 López, I., Tinoco, H., Aragonés, L., & García-Barba, J. (2016). The multifunctional artificial reef and its role in the defence of the Mediterranean coast. *Science of the Total Environment, 550*, 910-923. https://doi.org/10.1016/j.scitotenv.2016.01.180 [abstract only, via the University of Alicante record]
 
 Lyons, M. (1992). *Design studies for an artificial surfing reef* [Unpublished report]. Department of Environmental Engineering, University of Western Australia. [Cited as reproduced in Blacka et al. (2013, Fig. A.2); title and venue as given there; not read.]
+
+Marrone, J., Zhou, S., Brashear, P., Howe, B., & Baker, S. (2019). Numerical and physical modeling to inform design of the Living Breakwaters project, Staten Island, New York. *Proceedings of the Coastal Structures Conference 2019*. Hanover, Germany.
 
 Maritime Safety Queensland. (2026). *Semidiurnal tidal planes 2026*. Queensland Government. https://www.msq.qld.gov.au/ (file `tides/tidal-planes/2026-semidiurnal-tidal-planes.pdf`)
 
@@ -255,6 +259,8 @@ SunLive. (n.d.). Time called on artificial reef. https://www.sunlive.co.nz/news/
 Taranaki Regional Council. (2009). *Opunake artificial reef monitoring programme 2005-2009* (Technical Report 2009-33). Taranaki Regional Council, Stratford, New Zealand. [Private copy; the council site blocks automated access.]
 
 ten Voorde, M., Antunes do Carmo, J., & Neves, M. G. (2009). Designing a preliminary multifunctional artificial reef to protect the Portuguese coast. *Journal of Coastal Research, 25*(1), 69-79. https://doi.org/10.2112/07-0827.1 [not read]
+
+The Surf Eye. (2023). *Surfing the artificial reef at Palm Beach* [Video; viewer comments]. YouTube. https://www.youtube.com/watch?v=mHSiPEh-93M
 
 The Daily News. (2004, June 11). Surf reef decision has Opunake buzzing at tourism prospects. *Stuff*. [Copy at https://artificialreefs.org/Articles/STUFF%20%20TRAVEL%20%20IN%20NEW%20ZEALAND%20-%20STORY%20%20New%20Zealand's%20leading%20news%20and%20information%20website.htm; author not printed]
 
