@@ -662,8 +662,9 @@ def fig9():
     for yy in (1.3, 1.5):
         ax.axhline(yy, color='#444444', lw=0.8, ls=(0, (3, 2)), zorder=2.6)
     ax.axhline(1.0, color='#444444', lw=0.9, ls=(0, (1, 1.5)), zorder=2.6)
-    # recommended envelope: crest 0.6-1.0 m, ramp 1:16-1:20
-    ax.add_patch(Rectangle((xe[2], ye[0]), xe[4] - xe[2], ye[3] - ye[0], fill=False, ec='black', lw=2.2, zorder=6))
+    # recommended envelope: crest 1.0-1.2 m, ramp 1:16-1:20 (revised 2026-10-20: model breaking depths for H0 >= 0.6-0.8 m,
+    # at least 0.5 m of water over the crest at the 1-year low level -0.38 m MSL; Section 7.5)
+    ax.add_patch(Rectangle((xe[2], ye[2]), xe[4] - xe[2], ye[4] - ye[2], fill=False, ec='black', lw=2.2, zorder=6))
     # reference reefs (crest depth, mean seaward ramp slope)
     al = summ.loc['southern-ocean-surf-reef-albany']      # surf cut (crest_line override, Lior 2026-10-19)
     pb, cb_, nn = summ.loc['palm-beach-gold-coast'], summ.loc['cables-reef-wa'], summ.loc['narrowneck-gold-coast']
@@ -691,7 +692,7 @@ def fig9():
     ax.plot([1.17, 1.17], [1.15, 1.70], transform=tr, color=bk, lw=1.0, clip_on=False, solid_capstyle='butt')
     for yy, w in ((1.15, 0.02), (1.70, 0.02), (1.30, 0.012), (1.50, 0.012)):
         ax.plot([1.17 - w, 1.17], [yy, yy], transform=tr, color=bk, lw=1.0, clip_on=False)
-    ax.text(1.20, 1.42, 'observed at\nHaifa, depth\nat the peak:\n1.15-1.70 m\n(break 1.30\nand 1.50 m)', transform=tr, fontsize=7, color=bk,
+    ax.text(1.20, 1.42, 'observed at\nHaifa (indic.),\ndepth at the\npeak: 1.15-1.70 m\n(break 1.30\nand 1.50 m)', transform=tr, fontsize=7, color=bk,
             ha='left', va='center', clip_on=False, linespacing=1.1)
     ax.text(1.20, 1.0, 'take-off\n~1.0 m', transform=tr, fontsize=7, color=bk, ha='left', va='center', clip_on=False, linespacing=1.1)
     # colour bar and class legend
@@ -706,14 +707,14 @@ def fig9():
                columnspacing=1.0, title='Bar in each cell: share of waves at MSL', title_fontsize=7, alignment='left')
     # right column: text box and legend
     fig.text(13.45 / wcm, 10.5 / hcm,
-             'Recommended Haifa envelope\n(heavy box): crest 0.6-1.0 m,\nramp 1:16-1:20; rock armour\nDn50 ~ 0.7-0.85 m (1-1.6 t);\n15,000-25,000 m$^3$ per 100 m;\nT 6-8 s; Israeli tide 0.4 m',
+             'Recommended Haifa envelope\n(heavy box): crest 1.0-1.2 m,\nramp 1:16-1:20; rock armour\nDn50 ~ 0.7-0.85 m (1-1.6 t);\n14,000-20,000 m$^3$ per 100 m.\nCells: Haifa waves (T 6-8 s)\nand Israeli tide 0.4 m',
              fontsize=7, ha='left', va='top', color=INK, linespacing=1.25, bbox=dict(boxstyle='round,pad=0.3', fc='white', ec=GRID, lw=0.6))
     ho = [Line2D([0], [0], color='#222222', lw=0.7, label='volume per 100 m (m$^3$)'),
-          Line2D([0], [0], color='#444444', lw=0.8, ls=(0, (3, 2)), label='breaking depth at\nthe peak, Haifa:\n1.30 m (Hs 0.45 m),\n1.50 m (Hs 0.60 m)'),
+          Line2D([0], [0], color='#444444', lw=0.8, ls=(0, (3, 2)), label='observed breaking\ndepth, Haifa (indicative):\n1.30 m (Hs 0.45 m),\n1.50 m (Hs 0.60 m)'),
           Line2D([0], [0], color='#444444', lw=0.9, ls=(0, (1, 1.5)), label='take-off depth,\nborderline sea')]
     ho += outcome_legend_handles()
     fig.legend(handles=ho, loc='upper left', bbox_to_anchor=(13.4 / wcm, 5.7 / hcm), ncol=1, frameon=False, fontsize=7, handlelength=1.6,
-               labelspacing=0.35, handletextpad=0.4, title='Reference reefs\n(colour + label = reef,\nshape = outcome)', title_fontsize=7, alignment='left')
+               labelspacing=0.35, handletextpad=0.4, title='Built reefs: geometry\nonly (crest depth, slope);\ncells = Haifa waves, not\nthe reefs\' own climates;\nshape = outcome', title_fontsize=7, alignment='left')
     return fig
 
 

@@ -15,7 +15,7 @@ local function analyse(tbl)
   local function row(r)
     for i, c in ipairs(r.cells) do
       if i <= n then
-        local s = stringify(c.contents)
+        local s = stringify(pandoc.Blocks(c.contents):walk({ Note = function() return {} end }))
         local l = #s
         if l > 0 then
           sumlen[i] = sumlen[i] + l; cnt[i] = cnt[i] + 1
@@ -61,11 +61,13 @@ function Blocks(blocks)
       local cap
       if #out > 0 and starts_with_table(out[#out]) then cap = table.remove(out) end
       if land then out[#out + 1] = pandoc.RawBlock('latex', '\\begin{landscape}') end
-      out[#out + 1] = pandoc.RawBlock('latex', '\\begingroup' .. (size and ('\\renewcommand{\\tablefont}{' .. size .. '}') or ''))
+      -- in wide (landscape) tables the cell notes are set in script size so that table and notes share one page
+      out[#out + 1] = pandoc.RawBlock('latex', '\\begingroup' .. (size and ('\\renewcommand{\\tablefont}{' .. size .. '}') or '')
+        .. (land and '\\let\\footnotesize\\scriptsize' or ''))
       out[#out + 1] = b
       out[#out + 1] = pandoc.RawBlock('latex', '\\endgroup')
       if cap then
-        out[#out + 1] = pandoc.RawBlock('latex', '\\nopagebreak[4]\\vspace{-2pt}\\begingroup\\footnotesize\\noindent')
+        out[#out + 1] = pandoc.RawBlock('latex', '\\nopagebreak[4]\\vspace{-2pt}\\begingroup\\footnotesize\\setlength{\\parindent}{0pt}')
         out[#out + 1] = cap
         out[#out + 1] = pandoc.RawBlock('latex', '\\par\\endgroup\\medskip')
       end
