@@ -30,7 +30,7 @@ from matplotlib.lines import Line2D  # noqa: E402
 from matplotlib.patches import Patch, Polygon  # noqa: E402
 from matplotlib.ticker import MultipleLocator  # noqa: E402
 
-SCALE = 62.0            # m per cm, plan (x and y) and profile abscissa: ONE horizontal scale
+SCALE = 66.0            # m per cm, plan (x and y) and profile abscissa: ONE horizontal scale
 FIG_W = 17.0            # cm
 ML, MR = 1.75, 0.08      # left / right margin (cm)
 NSLOT = 5
