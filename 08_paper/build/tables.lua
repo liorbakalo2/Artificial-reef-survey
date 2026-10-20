@@ -26,7 +26,8 @@ local function analyse(tbl)
       end
     end
   end
-  for _, r in ipairs(tbl.head.rows) do row(r) end
+  -- wide tables (10+ columns): header words may wrap, so the widths follow the body only
+  if n < 10 then for _, r in ipairs(tbl.head.rows) do row(r) end end
   for _, b in ipairs(tbl.bodies) do for _, r in ipairs(b.body) do row(r) end end
   local w, tot = {}, 0
   for i = 1, n do
@@ -62,8 +63,9 @@ function Blocks(blocks)
       if #out > 0 and starts_with_table(out[#out]) then cap = table.remove(out) end
       if land then out[#out + 1] = pandoc.RawBlock('latex', '\\begin{landscape}') end
       -- in wide (landscape) tables the cell notes are set in script size so that table and notes share one page
-      out[#out + 1] = pandoc.RawBlock('latex', '\\begingroup' .. (size and ('\\renewcommand{\\tablefont}{' .. size .. '}') or '')
-        .. (land and '\\let\\footnotesize\\scriptsize' or ''))
+      out[#out + 1] = pandoc.RawBlock('latex', '\\begingroup\\let\\origfootnotesize\\footnotesize'
+        .. (size and ('\\renewcommand{\\tablefont}{' .. (size == '\\footnotesize' and '\\origfootnotesize' or size) .. '}') or '')
+        .. (land and '\\let\\footnotesize\\scriptsize\\setlength{\\tabcolsep}{3.5pt}\\renewcommand{\\arraystretch}{1.0}' or ''))
       out[#out + 1] = b
       out[#out + 1] = pandoc.RawBlock('latex', '\\endgroup')
       if cap then
