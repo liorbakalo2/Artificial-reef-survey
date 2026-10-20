@@ -358,8 +358,8 @@
   // ---------------------------------------------------------------- gallery
   function tileHTML(r) {
     var h = r.hero_image, hv = r.hover || {};
-    var media = h && safeUrl(h.url)
-      ? imgTag(h.url, stripRefs(h.depicts) || r.name) + fallbackBox(h.source_page, true)
+    var media = h && (h.local || safeUrl(h.url))
+      ? imgTag(h.local || h.url, stripRefs(h.depicts) || r.name) + fallbackBox(h.source_page, true)
       : fallbackBox(h && h.source_page, false);
     var descId = 'hv-' + r.slug;
     var credit = h ? 'Image: ' + esc(h.credit || 'unknown') + ' · ' + esc(h.license || 'licence not stated') + ' · ' + extLink(h.source_page, 'source') : '';
@@ -501,6 +501,9 @@
     return '<div class="media-grid">' + (r.images || []).map(function (im) {
       var cred = 'Credit: ' + esc(im.credit || 'unknown') + ' · Licence: ' + esc(im.license || 'not stated') + ' · ' + extLink(im.source_page || im.url, 'source');
       var lab = showsTag(im);
+      if (im.local) {
+        return figureHTML({ url: im.local, local: true, alt: stripRefs(im.depicts) || r.name, caption: lab + refify(im.depicts, r, 'link'), credit: cred + ' · local copy', contain: im.kind !== 'photo' });
+      }
       if (im.hotlink_ok === true && safeUrl(im.url)) {
         return figureHTML({ url: im.url, alt: stripRefs(im.depicts) || r.name, caption: lab + refify(im.depicts, r, 'link'), credit: cred, source: im.source_page, contain: im.kind !== 'photo' });
       }

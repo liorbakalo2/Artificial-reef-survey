@@ -725,3 +725,6 @@ Mexico/Xala: nothing new that allows a trace. RWR post fetched (announcement onl
 
 ## 2026-10-19 (page agent) - Palm Beach video 8Ebp7VNAGEY + viewer comment
 - Added the wave-pocket-tracking video (title/channel from oEmbed, reef confirmed by title; video not watched) and the grade-D comment to the Palm Beach card; full update "state saved", check.py 0 failures. Details: 04_build/HANDOFF.md 0f.
+
+## 2026-10-20 (page agent) - Opunake photo localised; testimony check
+- Opunake Wikimedia photo (CC BY-SA 3.0) now served from `assets/opunake-reef/` via new generic `local` field (compile_data.py + app.js); same for other CC images already registered. Other hot-links left (rights not cleared). Pratte's/Palm Beach comments, videos and A/B/C rating confirmed in dialogs and Table. Full update "state saved", check.py 0 failures.

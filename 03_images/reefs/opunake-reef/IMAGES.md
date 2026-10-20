@@ -6,6 +6,8 @@ Source of truth: `images.json` in this folder (convention: `_agent_briefs/image_
 
 ## opunake-reef-img-01 - Opunake Beach: picnic shelter on the grassed foreshore (Gonzalobaeza, 2012)
 
+
+- Page (2026-10-20): hero tile and Media list now show the LOCAL copy (04_build/assets/opunake-reef/), not the Wikimedia hot-link.
 ![opunake-reef-img-01](../../../03_images/reefs/opunake-reef/opunake-reef_picnic-shelter-foreshore_2012-02.jpg)
 
 - **file**: `03_images/reefs/opunake-reef/opunake-reef_picnic-shelter-foreshore_2012-02.jpg`

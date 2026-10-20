@@ -349,6 +349,7 @@
     "place_short": "near Bundaberg, Australia",
     "hero_image": {
       "url": "https://live-production.wcms.abc-cdn.net.au/a6112bacdcff48646a25f1539549b362?impolicy=wcms_crop_resize&cropH=583&cropW=874&xPos=47&yPos=0&width=862&height=575",
+      "local": null,
       "credit": "Supplied: Greg Redgard, via ABC News",
       "license": "link-only (news photo, ABC News/Supplied — no reuse license found; link and credit only)",
       "source_page": "https://www.abc.net.au/news/2024-01-28/diy-surf-break-built-by-mates-at-burkitts-reef-bargara/103387450",
@@ -1091,6 +1092,7 @@
     "place_short": "Perth, Australia",
     "hero_image": {
       "url": "https://raisedwaterresearch.com/wp-content/uploads/2019/11/Cables-Side-View.jpg",
+      "local": null,
       "credit": "Raised Water Research — \"Cables Reef\" spot page",
       "license": "Unknown / all rights reserved — link only, not downloaded into the project",
       "source_page": "https://raisedwaterresearch.com/spot/artificial-reef/australia/western-australia/cables-reef/",
@@ -2850,7 +2852,8 @@
         "hotlink_ok": true,
         "shows": "site context only",
         "shows_label": "site context only",
-        "shows_key": "site-context-only"
+        "shows_key": "site-context-only",
+        "local": "assets/narrowneck-gold-coast/narrowneck-gold-coast_north-narrowneck-beach-sign_2026-07.jpg"
       },
       {
         "url": "https://static.wixstatic.com/media/97fa2b_f659d48522734f379fcf1a8bf0db6496~mv2.jpg/v1/fill/w_980,h_603,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/97fa2b_f659d48522734f379fcf1a8bf0db6496~mv2.jpg",
@@ -3234,6 +3237,7 @@
     "place_short": "Gold Coast, Australia",
     "hero_image": {
       "url": "https://static.wixstatic.com/media/164422_8b3239d82ee84d159668f47acabd0dc2~mv2.png/v1/fill/w_1920,h_1080,al_c,q_95,enc_auto/164422_8b3239d82ee84d159668f47acabd0dc2~mv2.png",
+      "local": null,
       "credit": "International Coastal Management (ICM)",
       "license": "Copyright ICM, company website -- link-only, not for reproduction (not downloaded into project)",
       "source_page": "https://www.coastalmanagement.com.au/artificial-surf-reefs",
@@ -5853,6 +5857,7 @@
     "place_short": "El Segundo, USA",
     "hero_image": {
       "url": "https://raisedwaterresearch.com/wp-content/uploads/2019/07/Building-Prattes-Reef.jpg",
+      "local": null,
       "credit": "Raised Water Research, \"Pratte's Reef\" spot page",
       "license": "Unknown/all-rights-reserved — link only, do not republish without checking with site owner",
       "source_page": "https://raisedwaterresearch.com/spot/artificial-reef/us/california/prattes-reef/",
@@ -6897,7 +6902,8 @@
         "hotlink_ok": true,
         "shows": "reef effect visible",
         "shows_label": "shows the reef's effect",
-        "shows_key": "reef-effect-visible"
+        "shows_key": "reef-effect-visible",
+        "local": "assets/mount-maunganui-reef/mount-maunganui-reef_surf-wave-mead-borrero_unknown-date.jpg"
       },
       {
         "url": "https://raisedwaterresearch.com/wp-content/uploads/2019/11/Mount-Reef-Multibean-2007.jpg",
@@ -6921,7 +6927,8 @@
         "hotlink_ok": true,
         "shows": "structure visible",
         "shows_label": "shows the structure",
-        "shows_key": "structure-visible"
+        "shows_key": "structure-visible",
+        "local": "assets/mount-maunganui-reef/mount-maunganui-reef_apex-deflated-render_2013.jpg"
       }
     ],
     "videos": [
@@ -7196,6 +7203,7 @@
     "place_short": "Mount Maunganui, New Zealand",
     "hero_image": {
       "url": "https://raisedwaterresearch.com/wp-content/uploads/2019/11/Mount-Reef-Multibean-2007.jpg",
+      "local": null,
       "credit": "Raised Water Research, sourced to Scarf 2009",
       "license": "All rights reserved (link only, no explicit CC/open license stated on page)",
       "source_page": "https://raisedwaterresearch.com/spot/artificial-reef/new-zealand/north-island/mount-maunganui/",
@@ -9694,7 +9702,8 @@
         "hotlink_ok": true,
         "shows": "site context only",
         "shows_label": "site context only",
-        "shows_key": "site-context-only"
+        "shows_key": "site-context-only",
+        "local": "assets/opunake-reef/opunake-reef_picnic-shelter-foreshore_2012-02.jpg"
       }
     ],
     "videos": [
@@ -9942,6 +9951,7 @@
     "place_short": "Taranaki, New Zealand",
     "hero_image": {
       "url": "https://upload.wikimedia.org/wikipedia/commons/8/86/Opunake_Beach.JPG",
+      "local": "assets/opunake-reef/opunake-reef_picnic-shelter-foreshore_2012-02.jpg",
       "credit": "Gonzalobaeza, own work, via Wikimedia Commons",
       "license": "CC BY-SA 3.0",
       "source_page": "https://commons.wikimedia.org/wiki/File:Opunake_Beach.JPG",
@@ -10369,7 +10379,8 @@
         "hotlink_ok": true,
         "shows": "site context only",
         "shows_label": "site context only",
-        "shows_key": "site-context-only"
+        "shows_key": "site-context-only",
+        "local": "assets/boscombe-surf-reef/boscombe-surf-reef_exposed-mound-flickr_2009-07.jpg"
       },
       {
         "url": "https://raisedwaterresearch.com/wp-content/uploads/2019/11/Boscombe-Arial-1024x683.jpg",
@@ -10417,7 +10428,8 @@
         "hotlink_ok": true,
         "shows": "structure visible",
         "shows_label": "shows the structure",
-        "shows_key": "structure-visible"
+        "shows_key": "structure-visible",
+        "local": "assets/boscombe-surf-reef/boscombe-surf-reef_construction-sketch-whiston_2010-04.jpg"
       }
     ],
     "videos": [
@@ -10881,6 +10893,7 @@
     "place_short": "Bournemouth, United Kingdom",
     "hero_image": {
       "url": "https://raisedwaterresearch.com/wp-content/uploads/2019/11/Boscombe-Arial-1024x683.jpg",
+      "local": null,
       "credit": "Bournemouth Echo (via Raised Water Research spot page, captioned \"Boscombe Arial\")",
       "license": "Link-only; no explicit reuse license stated on the page — credited to Bournemouth Echo",
       "source_page": "https://raisedwaterresearch.com/spot/artificial-reef/europe/united-kingdom/boscombe-surf-reef/",
@@ -11946,6 +11959,7 @@
     "place_short": "Kovalam, India",
     "hero_image": {
       "url": "https://raisedwaterresearch.com/wp-content/uploads/2019/12/Kovalam-Overview-Good-1024x512.jpg",
+      "local": null,
       "credit": "Raised Water Research (spot page: \"Kovalam\")",
       "license": "No explicit license stated on page; link-only, not downloaded into project folder",
       "source_page": "https://raisedwaterresearch.com/spot/artificial-reef/asia/india/kovalam/",
@@ -12272,7 +12286,8 @@
         "hotlink_ok": true,
         "shows": "structure visible",
         "shows_label": "shows the structure",
-        "shows_key": "structure-visible"
+        "shows_key": "structure-visible",
+        "local": "assets/borth-coastal-defence-reef/borth-coastal-defence-reef_bigger-splash-barge_2011-04.jpg"
       },
       {
         "url": "https://s0.geograph.org.uk/geophotos/02/55/47/2554717_ca5fc76b.jpg",
@@ -12611,6 +12626,7 @@
     "place_short": "Ceredigion, United Kingdom",
     "hero_image": {
       "url": "https://s0.geograph.org.uk/geophotos/02/57/55/2575564_e576dfb2.jpg",
+      "local": null,
       "credit": "Chris Denny, via Geograph Britain and Ireland",
       "license": "CC BY-SA 2.0",
       "source_page": "https://www.geograph.org.uk/photo/2575564",
@@ -14285,6 +14301,7 @@
     "place_short": "Bunbury Back Beach, Australia",
     "hero_image": {
       "url": "https://live-production.wcms.abc-cdn.net.au/cc84b43142e4cdd5abcbae122250f275",
+      "local": null,
       "credit": "ABC South West WA",
       "license": "Copyright ABC News (Australian Broadcasting Corporation) — link only, not for redistribution/reuse beyond linking",
       "source_page": "https://www.abc.net.au/news/2019-12-16/word-first-surf-reef-tears-during-installation/11803228",
@@ -15357,6 +15374,7 @@
     "place_short": "Gold Coast, Australia",
     "hero_image": {
       "url": "https://www.crucollective.com.au/wp-content/uploads/2019/10/Palm-Beach-Artificial-Reef-Completion.jpg",
+      "local": null,
       "credit": "Cru Collective (blog post \"Palm Beach Artificial Reef Completion\")",
       "license": "link-only / all-rights-reserved — no explicit open license found on page",
       "source_page": "https://www.crucollective.com.au/blog/palm-beach-artificial-reef-completion/",
@@ -16817,6 +16835,7 @@
     "place_short": "Albany, Australia",
     "hero_image": {
       "url": "https://live-production.wcms.abc-cdn.net.au/8ffae200f1ff9606775f71f627b5dc7e?impolicy=wcms_crop_resize&cropH=2268&cropW=3402&xPos=315&yPos=0&width=862&height=575",
+      "local": null,
       "credit": "ABC News - caption \"Specialised vessels came from around the world to build the Albany surf reef.\"",
       "license": "All rights reserved / news editorial use - link only, do not redistribute",
       "source_page": "https://www.abc.net.au/news/2025-07-16/southern-ocean-surf-reef-transforms-albany-wa/105530202",
@@ -17917,6 +17936,7 @@
     "place_short": "Costalegre coast, Mexico",
     "hero_image": {
       "url": "https://raisedwaterresearch.com/wp-content/uploads/2026/04/Reef1-1024x573.jpg",
+      "local": null,
       "credit": "Raised Water Research (Peter Indelicato)",
       "license": "All rights reserved / no explicit license stated — link-only use, do not download into project folder",
       "source_page": "https://raisedwaterresearch.com/unveiling-the-new-reef-in-mexico/",

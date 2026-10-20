@@ -437,6 +437,26 @@ def label_images(images):
     return out
 
 
+def local_copy_for(slug, url, license_text, problems):
+    """2026-10-20: a hot-linked image with an open (CC / public domain) licence whose original is
+    saved and registered in 03_images/reefs/<slug>/images.json is shown from the LOCAL copy
+    (assets/<slug>/...). Others stay hot-linked (rights not cleared). Returns the path or None."""
+    if not url or not re.search(r"\bcc\b|creative commons|public domain", license_text or "", re.I):
+        return None
+    reg = ROOT / "03_images" / "reefs" / slug / "images.json"
+    if not reg.is_file():
+        return None
+    try:
+        rows = json.loads(reg.read_text(encoding="utf-8"))
+    except ValueError:
+        return None
+    for row in rows:
+        f = row.get("file") or ""
+        if _norm_url(row.get("image_url")) == _norm_url(url) and f.startswith(f"03_images/reefs/{slug}/") and (ROOT / f).is_file():
+            return copy_local_asset(f, slug, problems)
+    return None
+
+
 def compute_hero_image(card, slug, problems):
     """Hero = best hotlinkable image by what it shows: structure visible, then reef effect
     visible, then site context only, then unlabelled. Within a tier: the media re-check's
@@ -465,6 +485,7 @@ def compute_hero_image(card, slug, problems):
         s = norm_shows(im.get("shows"))
         return {
             "url": im.get("url"),
+            "local": local_copy_for(slug, im.get("url"), im.get("license"), problems),
             "credit": im.get("credit"),
             "license": im.get("license"),
             "source_page": im.get("source_page"),
@@ -1097,6 +1118,10 @@ def compile_card(slug, problems):
     references = process_references(card, slug, problems)
     reviews = process_reviews(card, references, slug, problems)
     images = label_images(card.get("images") or [])
+    for im in images:
+        loc = local_copy_for(slug, im.get("url"), im.get("license"), problems) if im.get("hotlink_ok") is True else None
+        if loc:
+            im["local"] = loc
 
     # Scale tab: verified footprint + its references (S# ids kept distinct from the card's R#)
     footprint, fp_refs = load_footprint(slug, card, problems)

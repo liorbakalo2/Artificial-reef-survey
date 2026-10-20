@@ -230,3 +230,8 @@ quality, and reef shape fidelity (surveyed vs idealised). The label of each reef
 
 ## 0f. Palm Beach video + comment (2026-10-19, page agent)
 - Card `palm-beach-gold-coast.json`: new video 8Ebp7VNAGEY ("Wave Pocket Tracking at the Palm Beach Artificial Reef", channel Michael Thompson, via oEmbed; year not retrieved; Lior's description and note in `what_it_shows`; linked only) and review @rebeccaeccles1480 (grade D). `.md` card got a dated "Added" section. Run: full update ended "state saved", check.py 0 FAIL.
+
+## 0g. Open-licence hot-links localised (2026-10-20, page agent)
+- `src/compile_data.py local_copy_for()`: an image whose licence says CC / public domain AND whose original is saved + registered in `03_images/reefs/<slug>/images.json` (matched by image_url) gets a `local` path (copied to `assets/<slug>/`); `src/app.js` shows `local` in the tile and the Media list (url stays the source link). Effect: Opunake hero + Media photo (Wikimedia, CC BY-SA 3.0, Gonzalobaeza) and 6 more CC/registered images (Borth geograph, Boscombe, Mount Maunganui, Narrowneck) now local. All other hot-links (raisedwaterresearch, abc-cdn, wixstatic, crucollective, squarespace, albany.wa.gov.au, ...) stay hot-linked: licence "not stated / all rights reserved / link only".
+- Pratte's (DK7cqXDzLpM) and Palm Beach (mHSiPEh-93M, 8Ebp7VNAGEY) testimony + A/B/C rating verified in Gallery dialogs (Reviews / Media) and the Table (playwright, 1200x800). Palm Beach viewer comment has no R-number source button (card has no matching reference).
+- Run: `--full` "state saved", check.py 0 failures.
