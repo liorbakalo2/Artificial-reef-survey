@@ -24,7 +24,7 @@ Sections 4 to 7 apply standard coastal-engineering relations to the profiles; fo
 
 ## 2.6 Limitations of the method
 
-Every value is traced to a cited source, and the author's decisions are listed in Appendix A. Readings from figures are by eye or by calibrated scales and carry the stated reading error. The original texts of @hutt2001, @mead2001a and @black2001 were not read; their content is used as reproduced by later sources, and this is stated where it matters. No new field data were collected; the author's Haifa observations are used only in Section 7 and are labelled there. The consequences of the small sample, the unknown wave climates and the idealised seabeds are discussed in Section 8.2.
+Every value is traced to a cited source, and the design choices made in this review are listed in Appendix A. Readings from figures are by eye or by calibrated scales and carry the stated reading error. The original texts of @hutt2001, @mead2001a and @black2001 were not read; their content is used as reproduced by later sources, and this is stated where it matters. No new field data were collected; the author's field observations at Haifa (Appendix G) are used only in Section 7 and are labelled there. The consequences of the small sample, the unknown wave climates and the idealised seabeds are discussed in Section 8.2.
 
 ## 2.7 Authorship and use of AI tools
 

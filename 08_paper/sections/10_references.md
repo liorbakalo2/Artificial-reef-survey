@@ -32,7 +32,7 @@ Bluecoast Consulting Engineers. (n.d.). *Artificial reefs for coastal protection
 
 BMT Western Australia. (2018). *Middleton Beach artificial surf reef environmental impact assessment* (Report 1345_001/1_Rev2, September 2018). Prepared for the City of Albany. https://epa.wa.gov.au/sites/default/files/Referral_Documentation/Environmental%20Impact%20Assessment_0.pdf
 
-Borrero, J. C., & Nelsen, C. (2003). Results of a comprehensive monitoring program at Pratte's Reef. In K. Black & S. Mead (Eds.), *Proceedings of the 3rd International Surfing Reef Symposium*. Raglan, New Zealand (not verified). [Private copy supplied by the author. The file prints neither venue nor year; both are taken from the citation recorded in the project files; the content (monitoring to October 2002) is consistent with them, but year and venue could not be confirmed (a search found only that Borrero and Nelsen co-organised the 4th Surfing Reef Symposium, January 2005). Not verified.]
+Borrero, J. C., & Nelsen, C. (2003). Results of a comprehensive monitoring program at Pratte's Reef. In K. Black & S. Mead (Eds.), *Proceedings of the 3rd International Surfing Reef Symposium*. Raglan, New Zealand (not verified). [The copy read prints neither venue nor year; both are taken from the publisher record; the content (monitoring to October 2002) is consistent with them, but year and venue could not be confirmed. Not verified.]
 
 Borth Community. (n.d.). *Borth coastal defence overview*. http://www.borthcommunity.info/index.php/planning-drawings/235-borth-coastal-defence/46-overview
 
@@ -40,9 +40,9 @@ Bowen, A. J., Inman, D. L., & Simmons, V. P. (1968). Wave "set-down" and set-up.
 
 Briganti, R., van der Meer, J. W., Buccino, M., & Calabrese, M. (2003). Wave transmission behind low-crested structures. In *Coastal Structures 2003* (pp. 580-592). ASCE. [Original not read; equation as reproduced by Blacka et al., 2013, Eq. 29.]
 
-Bunbury Mail. (2022, March 22). Airwave founder Troy Bottegal moves towards making Bunbury WA's premier surfing destination. https://www.bunburymail.com.au/story/7667604/bunbury-still-set-to-become-surfing-destination/ [developer's account; content taken from the reef card, not re-read]
+Bunbury Mail. (2022, March 22). Airwave founder Troy Bottegal moves towards making Bunbury WA's premier surfing destination. https://www.bunburymail.com.au/story/7667604/bunbury-still-set-to-become-surfing-destination/ [developer's account]
 
-Carmel, Z., Inman, D. L., & Golik, A. (1985). Characteristics of storm waves off the Mediterranean coast of Israel. *Coastal Engineering, 9*(1), 1-19. https://doi.org/10.1016/0378-3839(85)90024-9 [abstract as recorded in the project dossier; full text not read]
+Carmel, Z., Inman, D. L., & Golik, A. (1985). Characteristics of storm waves off the Mediterranean coast of Israel. *Coastal Engineering, 9*(1), 1-19. https://doi.org/10.1016/0378-3839(85)90024-9 [abstract only; full text not read]
 
 Channel Coastal Observatory. (2026a). *Beach profile surveys, Boscombe frontage, 11 profile lines, 316 surveys 2004-2026* [Data set]. Southeast Regional Coastal Monitoring Programme. https://coastalmonitoring.org/ (accessed October 2026) [Appendix C cites the same series by one survey date: lines 5f00424 to 429A, survey of 20 April 2010.]
 
@@ -54,7 +54,7 @@ Chien, A., Wu, S., Tseng, F., & Tang, A. (2014). Geotextile tubes application on
 
 City of Albany. (n.d.). *Southern Ocean Surf Reef (SOSR)* [Project pages, including the detailed-design table; page current 24 September 2026]. https://www.albany.wa.gov.au/council/projects/completed-projects/southern-ocean-surf-reef-sosr.aspx
 
-City of Albany. (2023, May). *Albany artificial surf reef: Community update and FAQs* [Community information document]. City of Albany, Western Australia. [Private copy supplied by the author; design claims, not measurements.]
+City of Albany. (2023, May). *Albany artificial surf reef: Community update and FAQs* [Community information document]. City of Albany, Western Australia. [Design claims, not measurements.]
 
 City of Gold Coast. (n.d.). *Artificial reef* [Feature layer, Open Data, CC BY 3.0]. https://data-goldcoast.opendata.arcgis.com/datasets/c9d0b521374740cc9e9561b04c453736_0
 
@@ -76,7 +76,7 @@ Davidson, M. (2010). *6-month interim report: Performance of Boscombe surfing re
 
 Dean, R. G., & Dalrymple, R. A. (1991). *Water wave mechanics for engineers and scientists* (Advanced Series on Ocean Engineering, Vol. 2). World Scientific. (Original work published 1984 by Prentice-Hall)
 
-ECOncrete. (n.d.). *ECOncrete case studies* [Company document]. https://www.monmouth.edu/uci/wp-content/uploads/sites/58/2021/09/ECOncrete-Case-Studies.pdf [company-supplied evidence; taken from the project dossier, not re-opened]
+ECOncrete. (n.d.). *ECOncrete case studies* [Company document]. https://www.monmouth.edu/uci/wp-content/uploads/sites/58/2021/09/ECOncrete-Case-Studies.pdf [company-supplied evidence]
 
 EcoShape. (n.d.). *Artificial reefs: Example cases*. https://www.ecoshape.org/en/knowledge-articles/artificial-reefs/example-cases/
 
@@ -116,7 +116,7 @@ Jackson, L. A., & Corbett, B. (2007). Review of existing multi-functional artifi
 
 Jackson, L. A., Corbett, B., Tomlinson, R., McGrath, J., & Stuart, G. (2007). Narrowneck Reef: Review of seven years of monitoring. *Shore & Beach, 75*(4), 67-79. http://hdl.handle.net/10072/17995
 
-Jackson, A., Tomlinson, R., Corbett, B., & Strauss, D. (2012). Long term performance of a submerged coastal control structure: A case study of the Narrowneck multi-functional artificial reef. *Coastal Engineering Proceedings, 33*, structures.54. https://doi.org/10.9753/icce.v33.structures.54 [first author's initial given as L. in 08_paper/lit/references.json and as A. in the Appendix references; to be checked]
+Jackson, L. A., Tomlinson, R., Corbett, B., & Strauss, D. (2012). Long term performance of a submerged coastal control structure: A case study of the Narrowneck multi-functional artificial reef. *Coastal Engineering Proceedings, 33*, structures.54. https://doi.org/10.9753/icce.v33.structures.54
 
 Kurian, J. (1995). Collective action for common property resource rejuvenation: The case of people's artificial reefs in Kerala State, India. *Human Organization, 54*, 160-168. [not read; cited as reported by Mead & Borrero (2011)]
 
@@ -126,11 +126,11 @@ Land Information New Zealand. (2010-2011). *Bay of Plenty 0.125 m urban aerial p
 
 Land Information New Zealand. (2011-2012). *Taranaki 0.4 m rural aerial photos* [Aerial imagery, tile BJ28_5000_0806]. LINZ Data Service. https://nz-imagery.s3.ap-southeast-2.amazonaws.com/taranaki/taranaki_2011-2012_0.4m/rgb/2193/BJ28_5000_0806.tiff
 
-Land Information New Zealand. (2026). *Standard port tidal levels, Port Taranaki, 1 July 2026 to 30 June 2027*. https://www.linz.govt.nz/guidance/marine-information/tide-prediction-guidance/standard-port-tidal-levels [values read from a search extract on 2026-10-19; the host was not reachable from the working environment; see 08_paper/notes/tides_check.md]
+Land Information New Zealand. (2026). *Standard port tidal levels, Port Taranaki, 1 July 2026 to 30 June 2027*. https://www.linz.govt.nz/guidance/marine-information/tide-prediction-guidance/standard-port-tidal-levels [values read from a search extract on 2026-10-19]
 
 Lewis, J., Hunt, S., & Evans, T. (2015). Quantification of surfing amenity for beach value and management. *NSW Coastal Conference 2015*. https://www.coastalconference.com/2015/papers2015/James%20Lewis.pdf
 
-Longuet-Higgins, M. S., & Stewart, R. W. (1964). Radiation stresses in water waves; a physical discussion, with applications. *Deep-Sea Research, 11*(4), 529-562. https://doi.org/10.1016/0011-7471(64)90001-4 [not read; set-down coefficient as summarised in notes/fig3_theory.md]
+Longuet-Higgins, M. S., & Stewart, R. W. (1964). Radiation stresses in water waves; a physical discussion, with applications. *Deep-Sea Research, 11*(4), 529-562. https://doi.org/10.1016/0011-7471(64)90001-4 [not read]
 
 López, I., Tinoco, H., Aragonés, L., & García-Barba, J. (2016). The multifunctional artificial reef and its role in the defence of the Mediterranean coast. *Science of the Total Environment, 550*, 910-923. https://doi.org/10.1016/j.scitotenv.2016.01.180 [abstract only, via the University of Alicante record]
 
@@ -146,7 +146,7 @@ Mead, S., & Black, K. (1999). A multipurpose, artificial reef at Mount Maunganui
 
 Mead, S. T., & Black, K. P. (2001a). Field studies leading to the bathymetric classification of world-class surfing breaks. *Journal of Coastal Research*, Special Issue 29, 5-20. [Pages conflict (5-20 or 5-10); not read; content as summarised by Blacka et al., 2013, Section 2.6.]
 
-Mead, S. T., & Black, K. P. (2001b). Predicting the breaking intensity of surfing waves. *Journal of Coastal Research*, Special Issue 29, 51-65. [Pages conflict (51-65 or 103-130); read as Chapter 6 of Mead, 2000. Letters a/b assigned here by title order; 08_paper/lit/references.json uses the ids mead_black2001a and mead_black2001c.]
+Mead, S. T., & Black, K. P. (2001b). Predicting the breaking intensity of surfing waves. *Journal of Coastal Research*, Special Issue 29, 51-65. [Pages conflict (51-65 or 103-130); read as Chapter 6 of Mead, 2000. Letters a/b assigned by title order.]
 
 Mead, S. T., Black, K. P., & Moores, A. (2007). Mount Maunganui Reef: Amalgamating design and the constraints of construction. In *Coasts and Ports 2007: 18th Australasian Coastal and Ocean Engineering Conference* (pp. 768-773). https://doi.org/10.3316/informit.816670201626573
 
@@ -170,7 +170,7 @@ NOAA Center for Operational Oceanographic Products and Services. (2026). *Tidal 
 
 NOAA National Geophysical Data Center. (2010). *Santa Monica, California 1/3 arc-second NAVD 88 coastal digital elevation model* [Data set]. NOAA National Centers for Environmental Information. https://www.ngdc.noaa.gov/metaview/page?xml=NOAA/NESDIS/NGDC/MGG/DEM/iso/xml/726.xml
 
-NZ Herald. (2014). Mount's artificial reef to be removed. *Bay of Plenty Times*. https://www.nzherald.co.nz/bay-of-plenty-times/news/mounts-artificial-reef-to-be-removed/GA44JIIW7LW5P457SBPXO5PKYU/ [year as recorded in this review's reef card; the copy read prints no date]
+NZ Herald. (2014). Mount's artificial reef to be removed. *Bay of Plenty Times*. https://www.nzherald.co.nz/bay-of-plenty-times/news/mounts-artificial-reef-to-be-removed/GA44JIIW7LW5P457SBPXO5PKYU/ [the copy read prints no date]
 
 Oh, Y. I., & Shin, E. C. (2006a). Application of submerged geotextile tubes for erosion prevention in east coast of Korea. In F. Kuwano & J. Koseki (Eds.), *Geosynthetics: Proceedings of the 8th International Conference on Geosynthetics* (pp. 757-760). Millpress. https://library.geosyntheticssociety.org/wp-content/uploads/resources/proceedings/C.2.03%20Application%20of%20submerged%20geotextile%20tubes%20for%20erosion%20prevention%20in%20east%20coast%20of%20Korea.pdf
 
@@ -250,7 +250,7 @@ Sulaiman, D. M., Junarsa, D., Bachtiar, H., & Nurhabni, F. (2017). Lessons learn
 
 SunLive. (n.d.). Time called on artificial reef. https://www.sunlive.co.nz/news/86837-time-called-on-artificial-reef.html [web news report; date not recorded]
 
-Taranaki Regional Council. (2009). *Opunake artificial reef monitoring programme 2005-2009* (Technical Report 2009-33). Taranaki Regional Council, Stratford, New Zealand. [Private copy supplied by the author; the council site blocks automated access.]
+Taranaki Regional Council. (2009). *Opunake artificial reef monitoring programme 2005-2009* (Technical Report 2009-33). Taranaki Regional Council, Stratford, New Zealand. [Private copy; the council site blocks automated access.]
 
 ten Voorde, M., Antunes do Carmo, J., & Neves, M. G. (2009). Designing a preliminary multifunctional artificial reef to protect the Portuguese coast. *Journal of Coastal Research, 25*(1), 69-79. https://doi.org/10.2112/07-0827.1 [not read]
 
@@ -274,11 +274,11 @@ Welsh Government. (2022). *LiDAR 2020-22, 1 m DSM and DTM, tile SN6089, flown 19
 
 Western Australia Department of Transport. (2009). *Two Rocks to Naturaliste lidar 2009* (survey Lidar2009TRBS, file BU2009TRBS_Lidar.bag) [Data set]. https://dotazprdauegisextpubst01.blob.core.windows.net/transport-wa-public/bathymetry/rasters/BU2009TRBS_Lidar.bag
 
-Western Australia Department of Transport. (2020). *Bathymetry point data, Fremantle ("FR") package: Surveys of 30 March 1998, 22 November 1999 and 1 February 2002* [Data set, CC BY 4.0; file dated 11 November 2020]. Coastal Information Branch. https://catalogue.data.wa.gov.au/dataset/dot-bathy [the December 1995 pre-construction survey used in Section 5 is from the same DoT WA FR package (08_paper/analysis/SEABED_SEDIMENT.md); its listing should be added]
+Western Australia Department of Transport. (2020). *Bathymetry point data, Fremantle ("FR") package: Surveys of 30 March 1998, 22 November 1999 and 1 February 2002* [Data set, CC BY 4.0; file dated 11 November 2020]. Coastal Information Branch. https://catalogue.data.wa.gov.au/dataset/dot-bathy [the December 1995 pre-construction survey used in Section 5 is from the same DoT WA FR package; its listing should be added]
 
 Western Australia Department of Transport, & Bureau of Meteorology. (2024). *Tide predictions by location, WA 2024: Albany* (datum of predictions LAT). https://transport.wa.gov.au/mediaFiles/marine/MAR_P_2024_Tide_Predictions_by_Location_WA.PDF
 
-Western Australia Department of Transport, & Bureau of Meteorology. (2026). *Tide predictions by location, WA 2026: Albany, Bunbury and Fremantle* [Predicted high and low waters, heights above LAT]. Government of Western Australia. https://transport.wa.gov.au/getmedia/482d7b83-1a48-4220-9e2c-b07ebfcf8594/MAR_P_2026_Tide_Predictions_by_Location_WA.pdf [downloaded 2026-10-19; annual extremes taken from three of four quarterly blocks, so they are lower bounds; see 08_paper/notes/tides_check.md]
+Western Australia Department of Transport, & Bureau of Meteorology. (2026). *Tide predictions by location, WA 2026: Albany, Bunbury and Fremantle* [Predicted high and low waters, heights above LAT]. Government of Western Australia. https://transport.wa.gov.au/getmedia/482d7b83-1a48-4220-9e2c-b07ebfcf8594/MAR_P_2026_Tide_Predictions_by_Location_WA.pdf [downloaded 2026-10-19; annual extremes taken from three of four quarterly blocks, so they are lower bounds]
 
 World Bank. (2026). *World Development Indicators: PA.NUS.FCRF Official exchange rate (LCU per US$, period average) and FP.CPI.TOTL Consumer price index (2010 = 100), United States* [Data set]. https://api.worldbank.org/v2/country/USA/indicator/PA.NUS.FCRF?format=json (retrieved 15 October 2026)
 

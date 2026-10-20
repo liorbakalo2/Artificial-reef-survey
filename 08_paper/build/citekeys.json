@@ -141,7 +141,7 @@
   "year": "2003",
   "type": "inproceedings",
   "kind": "proc",
-  "raw": "Borrero, J. C., & Nelsen, C. (2003). Results of a comprehensive monitoring program at Pratte's Reef. In K. Black & S. Mead (Eds.), *Proceedings of the 3rd International Surfing Reef Symposium*. Raglan, New Zealand (not verified). [Private copy supplied by the author. The file prints neither venue nor year; both are taken from the citation recorded in the project files; the content (monitoring to October 2002) is consistent with them, but year and venue could not be confirmed (a search found only that Borrero and Nelsen co-organised the 4th Surfing Reef Symposium, January 2005). Not verified.]"
+  "raw": "Borrero, J. C., & Nelsen, C. (2003). Results of a comprehensive monitoring program at Pratte's Reef. In K. Black & S. Mead (Eds.), *Proceedings of the 3rd International Surfing Reef Symposium*. Raglan, New Zealand (not verified). [The copy read prints neither venue nor year; both are taken from the publisher record; the content (monitoring to October 2002) is consistent with them, but year and venue could not be confirmed. Not verified.]"
  },
  {
   "key": "borthcommunitynd",
@@ -177,7 +177,7 @@
   "year": "2022",
   "type": "online",
   "kind": "plain",
-  "raw": "Bunbury Mail. (2022, March 22). Airwave founder Troy Bottegal moves towards making Bunbury WA's premier surfing destination. https://www.bunburymail.com.au/story/7667604/bunbury-still-set-to-become-surfing-destination/ [developer's account; content taken from the reef card, not re-read]"
+  "raw": "Bunbury Mail. (2022, March 22). Airwave founder Troy Bottegal moves towards making Bunbury WA's premier surfing destination. https://www.bunburymail.com.au/story/7667604/bunbury-still-set-to-become-surfing-destination/ [developer's account]"
  },
  {
   "key": "carmel1985",
@@ -186,7 +186,7 @@
   "year": "1985",
   "type": "article",
   "kind": "art",
-  "raw": "Carmel, Z., Inman, D. L., & Golik, A. (1985). Characteristics of storm waves off the Mediterranean coast of Israel. *Coastal Engineering, 9*(1), 1-19. https://doi.org/10.1016/0378-3839(85)90024-9 [abstract as recorded in the project dossier; full text not read]"
+  "raw": "Carmel, Z., Inman, D. L., & Golik, A. (1985). Characteristics of storm waves off the Mediterranean coast of Israel. *Coastal Engineering, 9*(1), 1-19. https://doi.org/10.1016/0378-3839(85)90024-9 [abstract only; full text not read]"
  },
  {
   "key": "channelcoastal2026a",
@@ -240,7 +240,7 @@
   "year": "2023",
   "type": "misc",
   "kind": "ital",
-  "raw": "City of Albany. (2023, May). *Albany artificial surf reef: Community update and FAQs* [Community information document]. City of Albany, Western Australia. [Private copy supplied by the author; design claims, not measurements.]"
+  "raw": "City of Albany. (2023, May). *Albany artificial surf reef: Community update and FAQs* [Community information document]. City of Albany, Western Australia. [Design claims, not measurements.]"
  },
  {
   "key": "cityofndb",
@@ -339,7 +339,7 @@
   "year": "n.d.",
   "type": "misc",
   "kind": "ital",
-  "raw": "ECOncrete. (n.d.). *ECOncrete case studies* [Company document]. https://www.monmouth.edu/uci/wp-content/uploads/sites/58/2021/09/ECOncrete-Case-Studies.pdf [company-supplied evidence; taken from the project dossier, not re-opened]"
+  "raw": "ECOncrete. (n.d.). *ECOncrete case studies* [Company document]. https://www.monmouth.edu/uci/wp-content/uploads/sites/58/2021/09/ECOncrete-Case-Studies.pdf [company-supplied evidence]"
  },
  {
   "key": "ecoshapend",
@@ -519,7 +519,7 @@
   "year": "2012",
   "type": "article",
   "kind": "art",
-  "raw": "Jackson, A., Tomlinson, R., Corbett, B., & Strauss, D. (2012). Long term performance of a submerged coastal control structure: A case study of the Narrowneck multi-functional artificial reef. *Coastal Engineering Proceedings, 33*, structures.54. https://doi.org/10.9753/icce.v33.structures.54 [first author's initial given as L. in 08_paper/lit/references.json and as A. in the Appendix references; to be checked]"
+  "raw": "Jackson, L. A., Tomlinson, R., Corbett, B., & Strauss, D. (2012). Long term performance of a submerged coastal control structure: A case study of the Narrowneck multi-functional artificial reef. *Coastal Engineering Proceedings, 33*, structures.54. https://doi.org/10.9753/icce.v33.structures.54"
  },
  {
   "key": "kurian1995",
@@ -564,7 +564,7 @@
   "year": "2026",
   "type": "misc",
   "kind": "ital",
-  "raw": "Land Information New Zealand. (2026). *Standard port tidal levels, Port Taranaki, 1 July 2026 to 30 June 2027*. https://www.linz.govt.nz/guidance/marine-information/tide-prediction-guidance/standard-port-tidal-levels [values read from a search extract on 2026-10-19; the host was not reachable from the working environment; see 08_paper/notes/tides_check.md]"
+  "raw": "Land Information New Zealand. (2026). *Standard port tidal levels, Port Taranaki, 1 July 2026 to 30 June 2027*. https://www.linz.govt.nz/guidance/marine-information/tide-prediction-guidance/standard-port-tidal-levels [values read from a search extract on 2026-10-19]"
  },
  {
   "key": "lewis2015",
@@ -582,7 +582,7 @@
   "year": "1964",
   "type": "article",
   "kind": "art",
-  "raw": "Longuet-Higgins, M. S., & Stewart, R. W. (1964). Radiation stresses in water waves; a physical discussion, with applications. *Deep-Sea Research, 11*(4), 529-562. https://doi.org/10.1016/0011-7471(64)90001-4 [not read; set-down coefficient as summarised in notes/fig3_theory.md]"
+  "raw": "Longuet-Higgins, M. S., & Stewart, R. W. (1964). Radiation stresses in water waves; a physical discussion, with applications. *Deep-Sea Research, 11*(4), 529-562. https://doi.org/10.1016/0011-7471(64)90001-4 [not read]"
  },
  {
   "key": "lopez2016",
@@ -654,7 +654,7 @@
   "year": "2001b",
   "type": "article",
   "kind": "art",
-  "raw": "Mead, S. T., & Black, K. P. (2001b). Predicting the breaking intensity of surfing waves. *Journal of Coastal Research*, Special Issue 29, 51-65. [Pages conflict (51-65 or 103-130); read as Chapter 6 of Mead, 2000. Letters a/b assigned here by title order; 08_paper/lit/references.json uses the ids mead_black2001a and mead_black2001c.]"
+  "raw": "Mead, S. T., & Black, K. P. (2001b). Predicting the breaking intensity of surfing waves. *Journal of Coastal Research*, Special Issue 29, 51-65. [Pages conflict (51-65 or 103-130); read as Chapter 6 of Mead, 2000. Letters a/b assigned by title order.]"
  },
  {
   "key": "mead2007",
@@ -762,7 +762,7 @@
   "year": "2014",
   "type": "article",
   "kind": "art",
-  "raw": "NZ Herald. (2014). Mount's artificial reef to be removed. *Bay of Plenty Times*. https://www.nzherald.co.nz/bay-of-plenty-times/news/mounts-artificial-reef-to-be-removed/GA44JIIW7LW5P457SBPXO5PKYU/ [year as recorded in this review's reef card; the copy read prints no date]"
+  "raw": "NZ Herald. (2014). Mount's artificial reef to be removed. *Bay of Plenty Times*. https://www.nzherald.co.nz/bay-of-plenty-times/news/mounts-artificial-reef-to-be-removed/GA44JIIW7LW5P457SBPXO5PKYU/ [the copy read prints no date]"
  },
  {
   "key": "oh2006a",
@@ -1122,7 +1122,7 @@
   "year": "2009",
   "type": "misc",
   "kind": "ital",
-  "raw": "Taranaki Regional Council. (2009). *Opunake artificial reef monitoring programme 2005-2009* (Technical Report 2009-33). Taranaki Regional Council, Stratford, New Zealand. [Private copy supplied by the author; the council site blocks automated access.]"
+  "raw": "Taranaki Regional Council. (2009). *Opunake artificial reef monitoring programme 2005-2009* (Technical Report 2009-33). Taranaki Regional Council, Stratford, New Zealand. [Private copy; the council site blocks automated access.]"
  },
  {
   "key": "tenvoorde2009",
@@ -1230,7 +1230,7 @@
   "year": "2020",
   "type": "misc",
   "kind": "ital",
-  "raw": "Western Australia Department of Transport. (2020). *Bathymetry point data, Fremantle (\"FR\") package: Surveys of 30 March 1998, 22 November 1999 and 1 February 2002* [Data set, CC BY 4.0; file dated 11 November 2020]. Coastal Information Branch. https://catalogue.data.wa.gov.au/dataset/dot-bathy [the December 1995 pre-construction survey used in Section 5 is from the same DoT WA FR package (08_paper/analysis/SEABED_SEDIMENT.md); its listing should be added]"
+  "raw": "Western Australia Department of Transport. (2020). *Bathymetry point data, Fremantle (\"FR\") package: Surveys of 30 March 1998, 22 November 1999 and 1 February 2002* [Data set, CC BY 4.0; file dated 11 November 2020]. Coastal Information Branch. https://catalogue.data.wa.gov.au/dataset/dot-bathy [the December 1995 pre-construction survey used in Section 5 is from the same DoT WA FR package; its listing should be added]"
  },
  {
   "key": "wadot2024",
@@ -1248,7 +1248,7 @@
   "year": "2026",
   "type": "misc",
   "kind": "ital",
-  "raw": "Western Australia Department of Transport, & Bureau of Meteorology. (2026). *Tide predictions by location, WA 2026: Albany, Bunbury and Fremantle* [Predicted high and low waters, heights above LAT]. Government of Western Australia. https://transport.wa.gov.au/getmedia/482d7b83-1a48-4220-9e2c-b07ebfcf8594/MAR_P_2026_Tide_Predictions_by_Location_WA.pdf [downloaded 2026-10-19; annual extremes taken from three of four quarterly blocks, so they are lower bounds; see 08_paper/notes/tides_check.md]"
+  "raw": "Western Australia Department of Transport, & Bureau of Meteorology. (2026). *Tide predictions by location, WA 2026: Albany, Bunbury and Fremantle* [Predicted high and low waters, heights above LAT]. Government of Western Australia. https://transport.wa.gov.au/getmedia/482d7b83-1a48-4220-9e2c-b07ebfcf8594/MAR_P_2026_Tide_Predictions_by_Location_WA.pdf [downloaded 2026-10-19; annual extremes taken from three of four quarterly blocks, so they are lower bounds]"
  },
  {
   "key": "worldbank2026",
