@@ -1,5 +1,5 @@
 -- Pandoc Lua filter for the LaTeX build: sensible column widths, smaller type for wide tables,
--- landscape pages (with their caption paragraph) for tables with 9 or more columns.
+-- landscape pages (with their caption paragraph) for wide tables; table captions below the table in footnote size.
 local stringify = pandoc.utils.stringify
 
 local function words_max(s)
@@ -56,13 +56,19 @@ function Blocks(blocks)
       local n, tot = analyse(b)
       local size = n >= 10 and '\\scriptsize' or (n >= 7 and '\\footnotesize' or nil)
       local land = n >= 8 and tot >= 150
+      -- the caption paragraph ("**Table N.** ...") written above the table in Markdown is set BELOW the table,
+      -- in footnote size (the same size as the figure captions), kept on the page of the table's last row
       local cap
-      if land and #out > 0 and starts_with_table(out[#out]) then cap = table.remove(out) end
+      if #out > 0 and starts_with_table(out[#out]) then cap = table.remove(out) end
       if land then out[#out + 1] = pandoc.RawBlock('latex', '\\begin{landscape}') end
-      if cap then out[#out + 1] = cap end
       out[#out + 1] = pandoc.RawBlock('latex', '\\begingroup' .. (size and ('\\renewcommand{\\tablefont}{' .. size .. '}') or ''))
       out[#out + 1] = b
       out[#out + 1] = pandoc.RawBlock('latex', '\\endgroup')
+      if cap then
+        out[#out + 1] = pandoc.RawBlock('latex', '\\nopagebreak[4]\\vspace{-2pt}\\begingroup\\footnotesize\\noindent')
+        out[#out + 1] = cap
+        out[#out + 1] = pandoc.RawBlock('latex', '\\par\\endgroup\\medskip')
+      end
       if land then out[#out + 1] = pandoc.RawBlock('latex', '\\end{landscape}') end
     else
       out[#out + 1] = b

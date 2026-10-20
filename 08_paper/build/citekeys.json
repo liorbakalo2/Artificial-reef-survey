@@ -459,6 +459,15 @@
   "raw": "Government Company for the Protection of Mediterranean Sea Cliffs [MCCP]. (2026). *Projects list: Ashkelon North geotubes, Netanya breakwaters, Ashkelon geotube maintenance* [In Hebrew]. https://www.mccp.co.il/page.php?type=projectsGroups (accessed 15 October 2026)"
  },
  {
+  "key": "governmentof2024",
+  "narr": "Government of Western Australia",
+  "par": "Government of Western Australia",
+  "year": "2024",
+  "type": "misc",
+  "kind": "ital",
+  "raw": "Government of Western Australia. (2024, February 4). *Surf's up for Albany artificial reef project* [Media statement]. https://www.wa.gov.au/government/media-statements/Cook-Labor-Government/Surf%27s-up-for-Albany-artificial-reef-project-20240204 [project value AUD 11.75 M; State share AUD 4.75 M]"
+ },
+ {
   "key": "governmentof2025",
   "narr": "Government of Western Australia",
   "par": "Government of Western Australia",
@@ -502,6 +511,15 @@
   "type": "article",
   "kind": "art",
   "raw": "Howells, S., & O'Neal, D. (2024, January 28). How a sugarcane cutter and his mates created a world-first DIY surf break at Burkitts Reef, Bargara. *ABC News*. https://www.abc.net.au/news/2024-01-28/diy-surf-break-built-by-mates-at-burkitts-reef-bargara/103387450"
+ },
+ {
+  "key": "internationalcoastal2025",
+  "narr": "International Coastal Management",
+  "par": "International Coastal Management",
+  "year": "2025",
+  "type": "misc",
+  "kind": "ital",
+  "raw": "International Coastal Management. (2025). *Artificial surf reefs* [Company web page, updated February 2025]. https://coastalmanagement.com.au/artificial-surf-reefs [Narrowneck AUD 2.3 M for about 70,000 m³; Palm Beach AUD 18.3 M, about AUD 700 per m³, quarried rock about 25,000 m³]"
  },
  {
   "key": "hunt2022",
@@ -1179,6 +1197,15 @@
   "raw": "SunLive. (n.d.). Time called on artificial reef. https://www.sunlive.co.nz/news/86837-time-called-on-artificial-reef.html [web news report; date not recorded]"
  },
  {
+  "key": "southwestern2019",
+  "narr": "South Western Times",
+  "par": "South Western Times",
+  "year": "2019",
+  "type": "article",
+  "kind": "art",
+  "raw": "South Western Times. (2019, June). Artificial surfing reef for Bunbury. *South Western Times*. https://swtimes.com.au/news/south-western-times/artificial-surfing-reef-for-bunbury-ng-b881227223z [City of Bunbury sponsorship of up to AUD 75,000]"
+ },
+ {
   "key": "taranakiregional2009",
   "narr": "Taranaki Regional Council",
   "par": "Taranaki Regional Council",
@@ -1197,13 +1224,22 @@
   "raw": "ten Voorde, M., Antunes do Carmo, J., & Neves, M. G. (2009). Designing a preliminary multifunctional artificial reef to protect the Portuguese coast. *Journal of Coastal Research, 25*(1), 69-79. https://doi.org/10.2112/07-0827.1 [not read]"
  },
  {
-  "key": "thesurf2023",
+  "key": "thesurf2022",
   "narr": "The Surf Eye",
   "par": "The Surf Eye",
-  "year": "2023",
+  "year": "2022",
   "type": "misc",
   "kind": "ital",
-  "raw": "The Surf Eye. (2023). *Surfing the artificial reef at Palm Beach* [Video; viewer comments]. YouTube. https://www.youtube.com/watch?v=mHSiPEh-93M"
+  "raw": "The Surf Eye. (2022, June 27). *Surfing the artificial reef at Palm Beach* [Video; viewer comments; filmed 23 June 2022]. YouTube. https://www.youtube.com/watch?v=mHSiPEh-93M"
+ },
+ {
+  "key": "theinertia2017",
+  "narr": "The Inertia",
+  "par": "The Inertia",
+  "year": "2017",
+  "type": "article",
+  "kind": "art",
+  "raw": "The Inertia. (2017, September 8). $2 million to be spent on Gold Coast artificial reef renovation; officials expect better surf. *The Inertia*. https://www.theinertia.com/surf/2-million-to-be-spent-on-gold-coast-artificial-reef-renovation-officials-expect-better-surf/ [renewal of Narrowneck Reef, about AUD 2 M]"
  },
  {
   "key": "thedaily2004",

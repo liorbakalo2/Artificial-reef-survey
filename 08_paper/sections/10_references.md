@@ -104,6 +104,8 @@ González Leija, M. B., Chávez, X., Alvarez, E., Mendoza, E., & Silva, R. (2014
 
 Government Company for the Protection of Mediterranean Sea Cliffs [MCCP]. (2026). *Projects list: Ashkelon North geotubes, Netanya breakwaters, Ashkelon geotube maintenance* [In Hebrew]. https://www.mccp.co.il/page.php?type=projectsGroups (accessed 15 October 2026)
 
+Government of Western Australia. (2024, February 4). *Surf's up for Albany artificial reef project* [Media statement]. https://www.wa.gov.au/government/media-statements/Cook-Labor-Government/Surf%27s-up-for-Albany-artificial-reef-project-20240204 [project value AUD 11.75 M; State share AUD 4.75 M]
+
 Government of Western Australia. (2025, July 16). *Joint media statement: Albany artificial reef makes a splash* [Media statement]. https://www.wa.gov.au/government/media-statements/Cook-Labor-Government/Joint-media-statement---Albany-artificial-reef-makes-a-splash-20250716 [funding shares: Australian Government AUD 5 M, State Government AUD 4.75 M; read from a search-engine extract, the full page was not accessed]
 
 Hansford, M. (2011, September 15). Borth's big dig. *New Civil Engineer*. https://www.newcivilengineer.com/archive/borths-big-dig-15-09-2011/ [used for rock quantities as an upper bound]
@@ -113,6 +115,8 @@ Haskoning UK. (2011). *Borth coastal protection scheme, Phase 1: Drawings 9V5090
 Hochul, K. (2024). *Governor Hochul announces completion of $111 million coastal resiliency project on Staten Island* [Press release]. Office of the Governor of New York State. https://www.governor.ny.gov/news/governor-hochul-announces-completion-111-million-coastal-resiliency-project-staten-island
 
 Howells, S., & O'Neal, D. (2024, January 28). How a sugarcane cutter and his mates created a world-first DIY surf break at Burkitts Reef, Bargara. *ABC News*. https://www.abc.net.au/news/2024-01-28/diy-surf-break-built-by-mates-at-burkitts-reef-bargara/103387450
+
+International Coastal Management. (2025). *Artificial surf reefs* [Company web page, updated February 2025]. https://coastalmanagement.com.au/artificial-surf-reefs [Narrowneck AUD 2.3 M for about 70,000 m³; Palm Beach AUD 18.3 M, about AUD 700 per m³, quarried rock about 25,000 m³]
 
 Hunt, S., Britton, G., Messiter, D., Prenzler, P., Knight, S., & Watterson, E. (2022). Palm Beach shoreline project: Innovative coastal management solution. *Coastal Engineering Proceedings, 37*, management.66. https://doi.org/10.9753/icce.v37.management.66 [ICCE 2022; published online 2023]
 
@@ -264,11 +268,15 @@ Surfline. (2025). *Haifa surf report and forecast* [Wave forecast pages, includi
 
 SunLive. (n.d.). Time called on artificial reef. https://www.sunlive.co.nz/news/86837-time-called-on-artificial-reef.html [web news report; date not recorded]
 
+South Western Times. (2019, June). Artificial surfing reef for Bunbury. *South Western Times*. https://swtimes.com.au/news/south-western-times/artificial-surfing-reef-for-bunbury-ng-b881227223z [City of Bunbury sponsorship of up to AUD 75,000]
+
 Taranaki Regional Council. (2009). *Opunake artificial reef monitoring programme 2005-2009* (Technical Report 2009-33). Taranaki Regional Council, Stratford, New Zealand. [Private copy; the council site blocks automated access.]
 
 ten Voorde, M., Antunes do Carmo, J., & Neves, M. G. (2009). Designing a preliminary multifunctional artificial reef to protect the Portuguese coast. *Journal of Coastal Research, 25*(1), 69-79. https://doi.org/10.2112/07-0827.1 [not read]
 
-The Surf Eye. (2023). *Surfing the artificial reef at Palm Beach* [Video; viewer comments]. YouTube. https://www.youtube.com/watch?v=mHSiPEh-93M
+The Surf Eye. (2022, June 27). *Surfing the artificial reef at Palm Beach* [Video; viewer comments; filmed 23 June 2022]. YouTube. https://www.youtube.com/watch?v=mHSiPEh-93M
+
+The Inertia. (2017, September 8). $2 million to be spent on Gold Coast artificial reef renovation; officials expect better surf. *The Inertia*. https://www.theinertia.com/surf/2-million-to-be-spent-on-gold-coast-artificial-reef-renovation-officials-expect-better-surf/ [renewal of Narrowneck Reef, about AUD 2 M]
 
 The Daily News. (2004, June 11). Surf reef decision has Opunake buzzing at tourism prospects. *Stuff*. [Copy at https://artificialreefs.org/Articles/STUFF%20%20TRAVEL%20%20IN%20NEW%20ZEALAND%20-%20STORY%20%20New%20Zealand's%20leading%20news%20and%20information%20website.htm; author not printed]
 
