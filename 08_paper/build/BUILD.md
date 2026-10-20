@@ -76,3 +76,14 @@ Result: `paper.pdf`, 50 pages A4 = title and contents pp. 1-3 (abstract on p. 3)
 - Counts (at 2026-10-19): 147 keys = 99 academic + 48 other; listed (3 `skipbib` not printed) = 97 + 47.
 - Doubtful, placed in group 2: pitt2009, zalul2025 (NGO appeal), mccp2026 (agency project list), cityof2023 (council FAQ), cityofnd (council web page),
   garminnavionicsnd (app chart), alvarez2006 (trade magazine). Doubtful, in group 1: rcahmw2020 (Coflein record), esrind (imagery), nationaltidalnd, verhagen2012 (lecture notes).
+
+- 2026-10-20 (later): table captions are now set BELOW the tables in footnote size (`tables.lua`: the "**Table N.**" paragraph that
+  precedes a table in the Markdown is moved after it, inside `\begingroup\footnotesize ... \endgroup` with `\nopagebreak`); figure
+  captions stay below in footnote size (`latex_header.tex`). In the Markdown the caption paragraph still goes ABOVE the table.
+  Wide tables (10+ columns): widths follow the body cells only (header words may wrap), cell notes `^[...]` are not counted, long
+  left-aligned columns get 1.4x weight. Landscape tables use `\tabcolsep` 3.5 pt, `\arraystretch` 1.0 and script-size cell notes.
+  Table 1 (13 columns, landscape) now fits on one page (p. 10) with its caption and its 10 notes.
+- References added to `10_references.md` (group `other`, `ref_groups_new.csv`): theinertia2017, governmentof2024, internationalcoastal2025,
+  southwestern2019. The Surf Eye video is now 2022 (key `thesurf2022`; `ref_groups.csv` and 08_discussion.md updated).
+- Fig 12 (`fig9_haifa_envelope`) regenerated with `python3 ../analysis/figures_results.py fig9` (box 1.0-1.2 m; legend: built reefs geometry only).
+- Result: 109 pages, no undefined citations.

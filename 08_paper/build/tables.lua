@@ -34,6 +34,8 @@ local function analyse(tbl)
     local mean = cnt[i] > 0 and sumlen[i] / cnt[i] or 1
     local x = math.min(0.5 * maxlen[i] + 0.5 * mean, 48)
     x = math.max(x, maxword[i] * 1.45 + 2, 4)
+    -- wide tables: text (left-aligned) columns wrap worse than short numbers, so they get more room
+    if n >= 10 and tbl.colspecs[i][1] == 'AlignLeft' and maxlen[i] > 8 then x = x * 1.4 end
     w[i] = x; tot = tot + x
   end
   for i = 1, n do

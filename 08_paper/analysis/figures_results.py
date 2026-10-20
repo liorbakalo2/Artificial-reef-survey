@@ -456,24 +456,27 @@ def spread(ys, gap):
 
 
 def fig8():
+    """Figure 11 in the text. Load indices for sand-filled tubes (Bezuijen & Vastenburg section, FA 0.6-0.8, default 0.8)."""
     S.setup()
     import matplotlib.patheffects as pe
-    wcm, hcm = 17.0, 9.9
+    wcm, hcm = 17.0, 11.6
     fig = plt.figure(figsize=(S.cm(wcm), S.cm(hcm)))
 
     def axes_cm(l, b, w, h, **kw):
         return fig.add_axes([l / wcm, b / hcm, w / wcm, h / hcm], **kw)
+    FA0, FAL = 0.8, 0.6
     fk = rd('results_stability_fk.csv')
     g = fk[fk.at_break == True]            # noqa: E712
-    agg = g.groupby(['B', 'D', 'h_base'])[['uplift_fraction', 'uplift_fraction_contact', 'SIc_calibrated']].max().reset_index()
-    band = g.groupby('h_base')[['uplift_fraction_contact', 'SIc_calibrated']].agg(['min', 'max'])
+    agg = g.groupby(['FA', 'C', 'h_base'])[['uplift_fraction', 'uplift_fraction_contact', 'SIc_calibrated', 'D', 'B']].max().reset_index()
+    g0 = g[g.FA == FA0]
+    band = g0.groupby('h_base')[['uplift_fraction_contact', 'SIc_calibrated']].agg(['min', 'max'])
     isr = rd('results_stability_israel_depth.csv')
     rock = rd('results_stability_rock.csv')
     XL = (1.5, 9.4)
     RED = '#B03A2E'
     # ---------------- (a) rock strip (top) and tubes under depth-limited breakers (main)
-    axR = axes_cm(1.3, 7.4, 7.3, 1.35)
-    ax = axes_cm(1.3, 1.5, 7.3, 5.55, sharex=axR)
+    axR = axes_cm(1.3, 9.1, 7.3, 1.35)
+    ax = axes_cm(1.3, 3.2, 7.3, 5.55, sharex=axR)
     rows = [('Albany armour', rock[(rock.reef == 'southern-ocean-surf-reef-albany') & rock.unit.str.startswith('armour')], '#117733', 'right'),
             ('Cables 1.5 t', rock[(rock.reef == 'cables-reef-wa') & rock.unit.str.startswith('body granite 1.5')], '#E69F00', 'right'),
             ('Borth 8 t', rock[(rock.reef == 'borth-coastal-defence-reef') & rock.unit.str.contains('8 t')], '#56B4E9', 'left')]
@@ -499,14 +502,14 @@ def fig8():
     axR.set_xlim(*XL)
     plt.setp(axR.get_xticklabels(), visible=False)
     axR.tick_params(axis='x', length=0)
-    axR.text(XL[0] + 0.05, -0.85, 'rock stable up to this depth (Hudson, K$_D$ = 2; H$_{stable}$ in m)', fontsize=7, color=INK2, ha='left',
-             va='center')
+    axR.text(XL[0] + 0.05, -0.85, 'bars: rock stable up to this depth (Hudson, K$_D$ = 2; stable H in m)', fontsize=7, color=INK2,
+             ha='left', va='center')
     for sp in ('top', 'right'):
         axR.spines[sp].set_visible(False)
     ax.axvspan(1.5, 3.0, color='#EFEFEF', lw=0, zorder=0)
     ax.axvspan(4.0, 6.0, color='#E3EEF7', lw=0, zorder=0)
     ax.text(2.25, 3.45, 'surf-reef\ncrest tubes', fontsize=7, ha='center', va='top', color=INK2)
-    ax.text(5.0, 3.45, 'Haifa toe depth\n(synthetic profile)', fontsize=7, ha='center', va='top', color='#1B5E87')
+    ax.text(5.0, 3.45, 'Haifa toe depth\n(synthetic 1:50 profile)', fontsize=7, ha='center', va='top', color='#1B5E87')
     hs = band.index.values
     ax.fill_between(hs, band[('uplift_fraction_contact', 'min')], band[('uplift_fraction_contact', 'max')], color='#9A9A9A', alpha=0.55,
                     lw=0, zorder=2)
@@ -516,16 +519,23 @@ def fig8():
     ax.plot(hs, band[('SIc_calibrated', 'min')], color='#555555', lw=0.6, zorder=3)
     ax.axhline(1.0, color=RED, lw=0.9, ls=(0, (4, 2)), zorder=3)
     ax.axhline(0.5, color='#555555', lw=0.8, ls=(0, (1.5, 1.5)), zorder=3)
+    single = g[(g.FA == 1.0) & (g.tube != 'BD23 design tube')]          # the BD23 structure keeps a flat middle base at FA 1
+    full = single.groupby('h_base').uplift_fraction.max()
+    ax.plot(full.index, full.values, color=INK, lw=0.8, ls=(0, (5, 1.5, 1, 1.5)), zorder=4)
     ends = []
-    for (B, D), d in agg.groupby(['B', 'D']):
+    for C, d in agg[agg.FA == FA0].groupby('C'):
         d = d.sort_values('h_base')
-        ax.plot(d.h_base, d.uplift_fraction, color=tube_color(D), lw=1.5, marker='o', ms=2.8, zorder=5)
-        ends.append((B, D, d.h_base.iloc[-1], d.uplift_fraction.iloc[-1]))
-    ys = spread([e[3] for e in ends], 0.17)
-    for (B, D, x, y), yl in zip(ends, ys):
-        tl = ax.annotate('%.4g x %.4g' % (B, D), (x, y), xytext=(x + 0.25, yl), fontsize=7, ha='left', va='center',
-                         color=darken(tube_color(D), 0.85), arrowprops=dict(arrowstyle='-', lw=0.4, color='#9A9A9A', shrinkA=0, shrinkB=2),
-                         zorder=10)
+        dl = agg[(agg.FA == FAL) & (agg.C == C)].set_index('h_base').uplift_fraction
+        col = tube_color(min(max(d.D.iloc[0], 1.0), 3.2))
+        hh = [h for h in d.h_base if h in dl.index]
+        ax.plot(dl.index, dl.values, color=col, lw=0.7, ls=(0, (3, 1.5)), alpha=0.75, zorder=4)
+        ax.plot(d.h_base, d.uplift_fraction, color=col, lw=1.5, marker='o', ms=2.6, zorder=5)
+        ends.append((d.B.iloc[0], d.D.iloc[0], col, d.h_base.iloc[-1], d.uplift_fraction.iloc[-1]))
+    ys = spread([e[4] for e in ends], 0.17)
+    for (B, D, col, x, y), yl in zip(ends, ys):
+        tl = ax.annotate('%.3g x %.3g' % (B, D), (x, y), xytext=(x + 0.25, yl), fontsize=7, ha='left', va='center',
+                         color=darken(col, 0.85), arrowprops=dict(arrowstyle='-', lw=0.4, color='#9A9A9A', shrinkA=0, shrinkB=2),
+                         zorder=10, annotation_clip=False)
         tl.set_path_effects([pe.withStroke(linewidth=3.0, foreground='white')])
     ax.set_xlim(*XL)
     ax.set_ylim(0, 3.5)
@@ -538,58 +548,65 @@ def fig8():
     ax2.set_xlabel('Depth-limited breaking height H$_b$ = 0.78 h (m)', labelpad=2)
     ax2.set_xticks([2, 4, 6, 8])
     fig.text(0.004, 0.992, '(a)', fontsize=8.5, fontweight='bold', va='top')
+    ha_ = [Line2D([0], [0], color=tube_color(2.0), lw=1.5, marker='o', ms=3, label='U per tube at FA 0.8 (label B x D, m)'),
+           Line2D([0], [0], color=tube_color(2.0), lw=0.7, ls=(0, (3, 1.5)), label='same tube filled to FA 0.6 (flatter)'),
+           Line2D([0], [0], color=INK, lw=0.8, ls=(0, (5, 1.5, 1, 1.5)), label='U at FA 1.0 (full circle), highest single tube'),
+           Line2D([0], [0], color=RED, lw=0.9, ls=(0, (4, 2)), label='U = 1: uplift equals submerged weight'),
+           Patch(fc='#9A9A9A', alpha=0.6, label='U$_c$ (pressure under the base), range over tubes and periods'),
+           Patch(fc='none', ec='#555555', hatch='///', label='computed sliding index SI$_c$, range over tubes and periods'),
+           Line2D([0], [0], color='#555555', lw=0.8, ls=(0, (1.5, 1.5)), label='sliding threshold (SI$_c$ = 0.5, friction f = 0.5)')]
+    fig.legend(handles=ha_, loc='lower left', bbox_to_anchor=(0.0 / wcm, 0.02), ncol=1, frameon=False, fontsize=6.6,
+               handlelength=2.2, handletextpad=0.4, labelspacing=0.22)
     # ---------------- (b) Israeli tubes vs depth in storms, (c) local Hs vs the single-tube sliding criterion
-    axb = axes_cm(10.5, 5.1, 5.15, 3.4)
-    axc = axes_cm(10.5, 1.5, 5.15, 2.75, sharex=axb)
-    storm_ls = {1.0: (0, (1, 1.5)), 3.3: '-', 5.0: (0, (4, 2))}
-    tubes = [('Israeli geotube (D_th 5 m)', 6.5, 2.75), ('Israeli geotube (D_th 3 m)', 3.9, 1.65)]
-    ends_b = []
-    for nm, B, D in tubes:
-        for Hs, ls in storm_ls.items():
-            d = isr[(isr.tube == nm) & (isr.Hs_storm == Hs)].sort_values('h_base')
-            axb.plot(d.h_base, d.uplift_fraction, color=tube_color(D), ls=ls, lw=1.3)
-            ends_b.append((Hs, D, d.h_base.iloc[-1], d.uplift_fraction.iloc[-1]))
-    yb = spread([e[3] for e in ends_b], 0.2)
-    for (Hs, D, x, y), yl in zip(ends_b, yb):
-        axb.annotate('%g m' % Hs, (x, y), xytext=(x + 0.5, yl), fontsize=7, ha='left', va='center', color=darken(tube_color(D), 0.85),
-                     annotation_clip=False, arrowprops=dict(arrowstyle='-', lw=0.4, color='#9A9A9A', shrinkA=0, shrinkB=1))
+    axb = axes_cm(10.5, 7.0, 5.15, 3.15)
+    axc = axes_cm(10.5, 3.85, 5.15, 2.35, sharex=axb)
+    storms = [(3.3, 10.0, '-'), (5.0, 12.0, (0, (4, 2))), (1.0, 7.0, (0, (1, 1.5)))]
+    tubes = [('Israeli geotube (D_th 5 m)', 5.0), ('Israeli geotube (D_th 3 m)', 3.0)]
+    tcol = {}
+    for nm, Dth in tubes:
+        d8 = isr[(isr.tube == nm) & (isr.FA == FA0)]
+        col = tube_color(min(max(d8.D.iloc[0], 1.0), 3.2))
+        tcol[nm] = (col, d8.B.iloc[0], d8.D.iloc[0], Dth)
+        for Hs, T, ls in storms:
+            d = d8[d8.Hs_storm == Hs].sort_values('h_base')
+            dl = isr[(isr.tube == nm) & (isr.FA == FAL) & (isr.Hs_storm == Hs)].set_index('h_base').uplift_fraction
+            hh = [h for h in d.h_base if h in dl.index]
+            axb.fill_between(hh, d.set_index('h_base').uplift_fraction.loc[hh], dl.loc[hh].clip(upper=3.0), color=col, alpha=0.07, lw=0)
+            axb.plot(d.h_base, d.uplift_fraction, color=col, ls=ls, lw=1.3)
     axb.axhline(1.0, color=RED, lw=0.9, ls=(0, (4, 2)), zorder=0)
     axb.set_ylim(0, 3.0)
     axb.set_xlim(2, 16)
-    axb.set_ylabel('U (sealed base)')
+    axb.set_ylabel('U (sealed base)', labelpad=4)
     axb.set_xticks([2, 4, 6, 8, 10, 12, 14, 16])
     plt.setp(axb.get_xticklabels(), visible=False)
     for sp in ('top', 'right'):
         axb.spines[sp].set_visible(False)
-    axb.text(2.4, 2.9, '6.5 x 2.75 m tube', fontsize=7, color=darken(tube_color(2.75), 0.85), ha='left', va='top')
-    axb.text(2.4, 2.6, '3.9 x 1.65 m tube', fontsize=7, color=darken(tube_color(1.65), 0.85), ha='left', va='top')
-    axb.text(0.0, 1.03, '(b) Israeli tubes in storms (Hs; T 7, 10, 12 s)', transform=axb.transAxes, fontsize=8, fontweight='bold',
-             ha='left', va='bottom')
-    d0 = isr[(isr.tube == tubes[0][0])]
-    for Hs, ls in storm_ls.items():
+    axb.text(0.0, 1.03, '(b) U of Israeli tubes in storms', transform=axb.transAxes, fontsize=8,
+             fontweight='bold', ha='left', va='bottom')
+    d0 = isr[(isr.tube == tubes[0][0]) & (isr.FA == FA0)]
+    for Hs, T, ls in storms:
         d = d0[d0.Hs_storm == Hs].sort_values('h_base')
         axc.plot(d.h_base, d.Hs_local, color=INK, ls=ls, lw=1.2)
-        axc.annotate('%g m' % Hs, (d.h_base.iloc[-1], d.Hs_local.iloc[-1]), xytext=(d.h_base.iloc[-1] + 0.5, d.Hs_local.iloc[-1] + (0.0 if Hs != 1.0 else 0.5)),
-                     fontsize=7, ha='left', va='center', color=INK, annotation_clip=False)
-    for nm, B, D in tubes:
-        crit = isr[isr.tube == nm].Hs_crit_vansteeg.iloc[0]
-        axc.axhline(crit, color=tube_color(D), lw=1.1, zorder=0)
-        axc.text(2.3, crit + (0.1 if crit > 1.0 else -0.1), '%.2f m' % crit, fontsize=7, color=darken(tube_color(D), 0.85), ha='left',
-                 va='bottom' if crit > 1.0 else 'top')
+    for nm, Dth in tubes:
+        col, B, D, _ = tcol[nm]
+        crit = isr[(isr.tube == nm) & (isr.FA == FA0)].Hs_crit_vansteeg.iloc[0]
+        axc.axhline(crit, color=col, lw=1.1, zorder=0)
+        axc.text(2.1, crit + (0.1 if crit > 1.0 else -0.1), 'sliding limit %.2f m' % crit, fontsize=6.6, color=darken(col, 0.85),
+                 ha='left', va='bottom' if crit > 1.0 else 'top')
     axc.set_ylim(0, 5.7)
     axc.set_xlabel('Water depth at the tube base h (m)')
     axc.set_ylabel('Local H$_s$ (m)')
     for sp in ('top', 'right'):
         axc.spines[sp].set_visible(False)
-    axc.text(0.0, 1.03, '(c) Hs against the sliding limit', transform=axc.transAxes, fontsize=8, fontweight='bold',
+    axc.text(0.0, 1.03, '(c) local H$_s$ against the sliding limit', transform=axc.transAxes, fontsize=8, fontweight='bold',
              ha='left', va='bottom')
-    ha_ = [Line2D([0], [0], color=tube_color(2.0), lw=1.5, marker='o', ms=3, label='U per tube (B x D in m)'),
-           Patch(fc='#9A9A9A', alpha=0.6, label='U$_c$, all tubes'),
-           Patch(fc='none', ec='#555555', hatch='///', label='SI$_c$, all tubes'),
-           Line2D([0], [0], color=RED, lw=0.9, ls=(0, (4, 2)), label='U = 1 (lift-off)'),
-           Line2D([0], [0], color='#555555', lw=0.8, ls=(0, (1.5, 1.5)), label='SI$_c$ = 0.5 (f = 0.5)')]
-    fig.legend(handles=ha_, loc='lower left', bbox_to_anchor=(0.0, 0.0), ncol=5, frameon=False, fontsize=7, handlelength=1.8,
-               columnspacing=1.0, handletextpad=0.35)
+    hb = [Line2D([0], [0], color=INK, lw=1.2, ls=ls, label='storm H$_s$ %g m, T %g s' % (Hs, T)) for Hs, T, ls in storms]
+    hb += [Line2D([0], [0], color=tcol[nm][0], lw=2.0, label='%.3g x %.3g m tube (D$_{th}$ %g m)' % (tcol[nm][1], tcol[nm][2], Dth))
+           for nm, Dth in tubes]
+    hb += [Patch(fc=tube_color(2.0), alpha=0.25, lw=0, label='(b) band: same tube filled to FA 0.6 (top)'),
+           Line2D([0], [0], color=tube_color(2.0), lw=1.1, label='(c) sliding limit, van Steeg et al. (2011)')]
+    fig.legend(handles=hb, loc='lower left', bbox_to_anchor=(9.7 / wcm, 0.0), ncol=1, frameon=False, fontsize=6.6,
+               handlelength=2.2, handletextpad=0.4, labelspacing=0.22, columnspacing=0.8)
     return fig
 
 

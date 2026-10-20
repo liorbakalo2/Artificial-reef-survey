@@ -1,5 +1,7 @@
 # FIGURE_SPECS: result figures F3-F9 (data, columns, axes, annotations)
 
+> Update 2026-10-20: the recommended Haifa crest is now 1.0 to 1.2 m below MSL (was 0.6 to 1.0 m), about 14,000 to 20,000 m3 per 100 m; basis: model breaking depths (gamma 0.78) plus at least 0.5 m of water over the crest at the 1-year low level (-0.38 m MSL). Field breaking depths are indicative only. See 08_paper/sections/07_israel.md section 7.5. Older statements below are superseded.
+
 Status 2026-10-16. For the figure agent. Shared style: `08_paper/analysis/style.py` (one colour + marker per reef: COLORS, MARKERS,
 NAMES; neutral SEA/SAND/SEABED/TIDE; FULL_W 17 cm, COL_W 8.3 cm; `save(fig, name)` writes PDF + PNG to 08_paper/figures/).
 Outcome encoding used in F4-F6 and F9 (one scheme everywhere): works = filled marker; works rarely / mixed = half-filled (or

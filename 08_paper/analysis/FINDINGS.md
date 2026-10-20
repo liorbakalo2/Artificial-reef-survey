@@ -1,5 +1,7 @@
 # FINDINGS: the strongest quantitative results, tested against Lior's insights (a)-(h)
 
+> Update 2026-10-20: the recommended Haifa crest is now 1.0 to 1.2 m below MSL (was 0.6 to 1.0 m), about 14,000 to 20,000 m3 per 100 m; basis: model breaking depths (gamma 0.78) plus at least 0.5 m of water over the crest at the 1-year low level (-0.38 m MSL). Field breaking depths are indicative only. See 08_paper/sections/07_israel.md section 7.5. Older statements below are superseded.
+
 Status 2026-10-16; updated 2026-10-19 for the per-reef surf cuts of Albany, Cables and Borth (`RECUT_NOTES.md`). Numbers, methods and sources: `RESULTS.md` (section given as s#). Literature verdicts on each insight: `08_paper/notes/insights_in_literature.md` (the writer cites it: "consistent with X" or "new observation of this review"). Sample sizes are small (8-12 reefs) and outcomes are ordinal judgements, so every statistic is descriptive. Verdicts: SUPPORTED, PARTLY, NOT SUPPORTED, or TOO THIN (data cannot decide).
 
 | # | Finding (one line) | Insight | Verdict |
