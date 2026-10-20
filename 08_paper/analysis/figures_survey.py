@@ -30,13 +30,13 @@ from matplotlib.lines import Line2D  # noqa: E402
 from matplotlib.patches import Patch, Polygon  # noqa: E402
 from matplotlib.ticker import MultipleLocator  # noqa: E402
 
-SCALE = 70.0            # m per cm, plan (x and y) and profile abscissa: ONE horizontal scale
+SCALE = 62.0            # m per cm, plan (x and y) and profile abscissa: ONE horizontal scale
 FIG_W = 17.0            # cm
-ML, MR = 1.2, 0.12      # left / right margin (cm)
+ML, MR = 1.75, 0.08      # left / right margin (cm)
 NSLOT = 5
 SLOT_W = (FIG_W - ML - MR) / NSLOT          # cm
-PAD = 0.14              # cm between profile panels
-YLO_PLAN, YHI_PLAN = -20.0, 385.0           # m
+PAD = 0.10              # cm between profile panels
+YLO_PLAN, YHI_PLAN = -14.0, 380.0           # m
 PLAN_H = (YHI_PLAN - YLO_PLAN) / SCALE      # cm (equal scale in x and y)
 HEAD_H = 0.95
 GAP_H = 0.28
@@ -327,6 +327,9 @@ def draw_row(fig, H, y_top, slugs, R, SEC, GEO, with_notes):
                   bbox_to_anchor=(0.0, 1.03), fontsize=7)
         ax.text(0.0, 0.40, 'C crest depth (m)\nT toe bed depth (m)\nG gap = T \u2212 C (m)\ndepths below MSL;\nC < 0: above MSL', fontsize=7,
                 va='top', ha='left', transform=ax.transAxes, linespacing=1.25)
+    # row labels (rotated, left of the y axes)
+    for ytop, hh, txt in ((y_top + HEAD_H, PLAN_H, 'Top view'), (y_prof, PROF_H, 'Side view')):
+        fig.text(0.28 / FIG_W, 1 - (ytop + hh / 2) / H, txt, rotation=90, ha='center', va='center', fontsize=9.5, fontweight='bold')
     # x label of the row
     fig.text((ML + 0.5 * NSLOT * SLOT_W) / FIG_W, 1 - (y_prof + PROF_H + 0.62) / H,
              'Distance offshore along the section (m); window position differs per reef, horizontal scale = plan scale',

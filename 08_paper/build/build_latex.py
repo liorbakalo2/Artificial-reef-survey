@@ -66,7 +66,7 @@ shutil.copy(here / 'latex_header.tex', WORK / 'latex_header.tex')
 # 3. pandoc -> tex
 cmd = ['pandoc', 'paper_tex.md', '-f', 'markdown+pipe_tables+tex_math_dollars+raw_tex', '-t', 'latex', '-s',
        '--template', str(here / 'template.latex'), '--biblatex', '--bibliography=references.bib',
-       '--toc', '--toc-depth=2', '--include-in-header=latex_header.tex', '--resource-path', str(root), '--lua-filter', str(here / 'tables.lua'),
+       '--toc', '--toc-depth=2', '--include-in-header=latex_header.tex', '--resource-path', str(root), '--lua-filter', str(here / 'xref.lua'), '--lua-filter', str(here / 'tables.lua'),
        '-V', 'documentclass=article', '-V', 'fontsize=11pt', '-V', 'papersize=a4',
        '-V', 'geometry:margin=2.5cm', '-V', 'indent=true', '-V', 'colorlinks=true',
        '-V', 'mainfont=Latin Modern Roman', '-V', 'sansfont=Latin Modern Sans', '-V', 'monofont=Latin Modern Mono',
