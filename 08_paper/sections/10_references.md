@@ -44,6 +44,8 @@ Briganti, R., van der Meer, J. W., Buccino, M., & Calabrese, M. (2003). Wave tra
 
 Bunbury Mail. (2022, March 22). Airwave founder Troy Bottegal moves towards making Bunbury WA's premier surfing destination. https://www.bunburymail.com.au/story/7667604/bunbury-still-set-to-become-surfing-destination/ [developer's account]
 
+Carley, J. T., & Cox, R. J. (2017). *Guidelines for sand nourishment: Science and synthesis for NSW* (WRL Research Report 263). UNSW Water Research Laboratory, for the NSW Office of Environment and Heritage. https://www.environment.nsw.gov.au/sites/default/files/sand-nourishment-guidelines-science-synthesis-nsw.pdf [Section 6.1, unit rates of placed nourishment sand]
+
 Carmel, Z., Inman, D. L., & Golik, A. (1985). Characteristics of storm waves off the Mediterranean coast of Israel. *Coastal Engineering, 9*(1), 1-19. https://doi.org/10.1016/0378-3839(85)90024-9 [abstract only; full text not read]
 
 Channel Coastal Observatory. (2026a). *Beach profile surveys, Boscombe frontage, 11 profile lines, 316 surveys 2004-2026* [Data set]. Southeast Regional Coastal Monitoring Programme. https://coastalmonitoring.org/ (accessed October 2026) [Appendix C cites the same series by one survey date: lines 5f00424 to 429A, survey of 20 April 2010.]

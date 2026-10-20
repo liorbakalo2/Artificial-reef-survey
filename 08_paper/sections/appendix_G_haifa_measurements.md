@@ -1,12 +1,12 @@
 # Appendix G. Field observations of surfable conditions and take-off depth at Haifa
 
-This appendix documents the author's own field observations at Haifa, which Section 7 uses for the wave conditions and the water depth of a planned reef. The observations are notes from regular surf sessions over about ten weeks, from late July to early October 2025, and are not a survey. They were recorded as a slide deck: one slide gives water depths measured in the surf for the minimum surfable waves, and six slides mark, on charts of the Shikmona wave-buoy record, the stretches during which waves were surfable, borderline or not surfable. The numeric values read from the charts and the depths are kept in the data set of this review. Depths are treated separately in Section G.5, because no depth was measured with an instrument.
+This appendix documents the author's own field observations at Haifa, which Section 7 uses for the wave conditions and the water depth of a planned reef. The observations are notes from regular surf sessions over about ten weeks, from late July to early October 2025, and are not a survey. They were recorded as a slide deck: one slide gives water depths measured in the surf for the minimum surfable waves, and six slides mark, on charts of the Shikmona wave-buoy record, the stretches during which waves were surfable, borderline or not surfable. The numeric values read from the charts and the depths are kept in the data set of this review. Depths are treated separately in Appendix G.5, because no depth was measured with an instrument.
 
 ## G.1 What was recorded
 
 1. **Colour-coded sea states (chart slides 3 to 8, charts A to F).** For each session period the author took the time series of the Shikmona wave buoy off Haifa, published by the Israel Marine Data Center [@isramar2025], and drew a coloured box over the stretch of the record in which a given surfability was observed. The chart gives the significant wave height $H_s$, the maximal wave height $H_{max}$ and the period of the maximal waves, which is called $T_p$ below. The boxes therefore mark *when* a condition held; $H_s$, $H_{max}$ and $T_p$ in Tables G1 and G2 were read from the chart inside each box. They are wave conditions at the buoy, not water depths.
-2. **Depths at the peak for the minimum surfable waves (slide 2, Section G.5).** Water depths measured by the author standing in the surf on days with $H_s$ 0.45 to 0.60 m, for two bounds of wave height and three positions of the break, with the distance from the measured depth to the break.
-3. **Take-off depth (author's field estimate, Section G.5).** An estimate of the water depth at the take-off in borderline conditions, made by the author in the water on some days.
+2. **Depths at the peak for the minimum surfable waves (slide 2, Appendix G.5).** Water depths measured by the author standing in the surf on days with $H_s$ 0.45 to 0.60 m, for two bounds of wave height and three positions of the break, with the distance from the measured depth to the break.
+3. **Take-off depth (author's field estimate, Appendix G.5).** An estimate of the water depth at the take-off in borderline conditions, made by the author in the water on some days.
 
 ## G.2 Colour classification
 
@@ -111,9 +111,9 @@ Both sets are field measurements by a single observer. The uncertainty of the ta
 
 ## G.6 Annotated buoy records
 
-Figure G1 reproduces the author's annotated chart slides (slides 3 to 8, charts A to F, panels a to f) and the depth-measure slide (slide 2, panel g, used in Section G.5), with one legend for all panels; the legend was drawn by this review, the charts, boxes and the author's handwritten swell-direction notes are unchanged.
+Figure G1 reproduces the author's annotated chart slides (slides 3 to 8, charts A to F, panels a to f) and the depth-measure slide (slide 2, panel g, used in Appendix G.5), with one legend for all panels; the legend was drawn by this review, the charts, boxes and the author's handwritten swell-direction notes are unchanged.
 
-![**Figure G1.** (a) to (f) ISRAMAR Shikmona buoy records, 27 July to 1 August, 2 to 7 August, 11 to 15 August, 3 to 9 September (the screenshot omits part of 7 to 8 September), 15 to 19 September and 5 to 9 October 2025 [@isramar2025], local time; (g) the author's depth and length measures (slide 2, Section G.5). The coloured boxes are the author's field classification of the surf, not an ISRAMAR product.](figures/appendixG/figG1_composite.png){width=100%}
+![**Figure G1.** (a) to (f) ISRAMAR Shikmona buoy records, 27 July to 1 August, 2 to 7 August, 11 to 15 August, 3 to 9 September (the screenshot omits part of 7 to 8 September), 15 to 19 September and 5 to 9 October 2025 [@isramar2025], local time; (g) the author's depth and length measures (slide 2, Appendix G.5). The coloured boxes are the author's field classification of the surf, not an ISRAMAR product.](figures/appendixG/figG1_composite.png){width=100%}
 
 ## G.7 Limitations
 

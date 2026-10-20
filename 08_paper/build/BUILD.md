@@ -87,3 +87,8 @@ Result: `paper.pdf`, 50 pages A4 = title and contents pp. 1-3 (abstract on p. 3)
   southwestern2019. The Surf Eye video is now 2022 (key `thesurf2022`; `ref_groups.csv` and 08_discussion.md updated).
 - Fig 12 (`fig9_haifa_envelope`) regenerated with `python3 ../analysis/figures_results.py fig9` (box 1.0-1.2 m; legend: built reefs geometry only).
 - Result: 109 pages, no undefined citations.
+
+## Captions and cross-reference links (2026-10-20)
+- Captions: all figure and table captions are `\footnotesize` (9 pt at 11 pt body), label bold, below the float (`latex_header.tex` `\captionsetup`; table captions are set by `tables.lua`). `tables.lua` `Figure()` now estimates caption height at 9 pt and lets images use up to 85 % of the text height (was 75 %).
+- `xref.lua` (new Pandoc Lua filter, runs before `tables.lua`, added in `build_latex.py`): links "Appendix X", "Appendix X.n", "Section X.n" and "Appendices A to F" (every listed letter) to the appendix headings (found from headings "Appendix X." / "X.n ..."), and "Figure N" / "Table N" (also E1, G3, ...) to the caption that begins "**Figure N.**" / "**Table N.**" (a `\hypertarget` is inserted there). Source Markdown is untouched. Headings, existing links and the caption labels themselves are not linked. Check: in PyMuPDF the links are kind 4 (named destinations `appendix-...`, `cap-Figure-1`).
+- Run with `LATEX_WORK=<dir>` to build in a private work directory (default dir is shared with other agents).
