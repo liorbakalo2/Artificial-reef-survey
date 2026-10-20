@@ -110,6 +110,7 @@ function Pandoc(doc)
     traverse = 'topdown',
     Header = function(h) return h, false end,
     Link = function(l) return l, false end,
+    Strong = function(st) if cap_key(stringify(st)) then return st, false end end,
     Inlines = function(inls) return linkify(inls) end,
   })
 end

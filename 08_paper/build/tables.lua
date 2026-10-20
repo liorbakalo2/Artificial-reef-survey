@@ -87,11 +87,11 @@ end
 function Figure(fig)
   local cap = 0
   for _, b in ipairs(fig.caption.long) do cap = cap + #stringify(b) end
-  local lines = math.ceil(cap / 100)
-  local cap_pt = lines * 11.5 + 16
+  local lines = math.ceil(cap / 125)
+  local cap_pt = lines * 10.5 + 14
   local avail = 690 - cap_pt - 24
   local pct = math.floor(100 * avail / 700)
-  if pct > 75 then pct = 75 end
+  if pct > 85 then pct = 85 end
   if pct < 25 then pct = 25 end
   fig.content = fig.content:walk({
     Image = function(img)
