@@ -456,7 +456,7 @@ def spread(ys, gap):
 
 
 def fig8():
-    """Figure 11 in the text. Load indices for sand-filled tubes (Bezuijen & Vastenburg section, FA 0.6-0.8, default 0.8)."""
+    """Figure 11 in the text. Load indices for sand-filled tubes (Bezuijen & Vastenburg section, FA 0.6 and 0.8; full tubes, FA 1.0, are not shown)."""
     S.setup()
     import matplotlib.patheffects as pe
     wcm, hcm = 17.0, 11.6
@@ -507,9 +507,11 @@ def fig8():
     for sp in ('top', 'right'):
         axR.spines[sp].set_visible(False)
     ax.axvspan(1.5, 3.0, color='#EFEFEF', lw=0, zorder=0)
-    ax.axvspan(4.0, 6.0, color='#E3EEF7', lw=0, zorder=0)
+    ax.axvspan(2.0, 6.1, color='#E3EEF7', lw=0, zorder=0)       # Haifa reef base depths, crest (1.0-1.2 m + ~1 m tube) to toe (6.1 m)
+    ax.axvspan(5.4, 6.1, color='#C9DFF0', lw=0, zorder=0)       # toe depth range, crest 1.0-1.2 m, ramp 1:16-1:20, bed 1:50
     ax.text(2.25, 3.45, 'surf-reef\ncrest tubes', fontsize=7, ha='center', va='top', color=INK2)
-    ax.text(5.0, 3.45, 'Haifa toe depth\n(synthetic 1:50 profile)', fontsize=7, ha='center', va='top', color='#1B5E87')
+    ax.text(4.9, 3.45, 'Haifa reef: base depths\nfrom crest to toe', fontsize=7, ha='center', va='top', color='#1B5E87')
+    ax.text(5.75, 2.55, 'toe\n5.4-6.1 m', fontsize=6.6, ha='center', va='top', color='#1B5E87')
     hs = band.index.values
     ax.fill_between(hs, band[('uplift_fraction_contact', 'min')], band[('uplift_fraction_contact', 'max')], color='#9A9A9A', alpha=0.55,
                     lw=0, zorder=2)
@@ -519,9 +521,6 @@ def fig8():
     ax.plot(hs, band[('SIc_calibrated', 'min')], color='#555555', lw=0.6, zorder=3)
     ax.axhline(1.0, color=RED, lw=0.9, ls=(0, (4, 2)), zorder=3)
     ax.axhline(0.5, color='#555555', lw=0.8, ls=(0, (1.5, 1.5)), zorder=3)
-    single = g[(g.FA == 1.0) & (g.tube != 'BD23 design tube')]          # the BD23 structure keeps a flat middle base at FA 1
-    full = single.groupby('h_base').uplift_fraction.max()
-    ax.plot(full.index, full.values, color=INK, lw=0.8, ls=(0, (5, 1.5, 1, 1.5)), zorder=4)
     ends = []
     for C, d in agg[agg.FA == FA0].groupby('C'):
         d = d.sort_values('h_base')
@@ -550,7 +549,6 @@ def fig8():
     fig.text(0.004, 0.992, '(a)', fontsize=8.5, fontweight='bold', va='top')
     ha_ = [Line2D([0], [0], color=tube_color(2.0), lw=1.5, marker='o', ms=3, label='U per tube at FA 0.8 (label B x D, m)'),
            Line2D([0], [0], color=tube_color(2.0), lw=0.7, ls=(0, (3, 1.5)), label='same tube filled to FA 0.6 (flatter)'),
-           Line2D([0], [0], color=INK, lw=0.8, ls=(0, (5, 1.5, 1, 1.5)), label='U at FA 1.0 (full circle), highest single tube'),
            Line2D([0], [0], color=RED, lw=0.9, ls=(0, (4, 2)), label='U = 1: uplift equals submerged weight'),
            Patch(fc='#9A9A9A', alpha=0.6, label='U$_c$ (pressure under the base), range over tubes and periods'),
            Patch(fc='none', ec='#555555', hatch='///', label='computed sliding index SI$_c$, range over tubes and periods'),
