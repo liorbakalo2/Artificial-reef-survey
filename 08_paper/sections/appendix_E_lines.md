@@ -4,7 +4,7 @@ This appendix shows, on the plan of each reef, the lines that the quantitative s
 
 *The main profile cut* (black dashed line) is the line along which the two-dimensional cross-section of the three-dimensional model is read; it is the profile of Figure 1 and the basis of the ramp length, depth gap and slopes of Figures 4, 5 and 7 to 9. Where the reef has two arms, the cut runs along one of them (Narrowneck: the south arm; Mount Maunganui: the south, long arm), because the cut through the other arm clips the tip of the structure and does not cross the part where the wave is ridden. For Albany, Cables and Borth the cut was placed along the surfed section of the reef (the reasons are given in the next paragraph); for the other reefs the cut is the line through the shallowest crest cell (or the middle of the footprint) that comes closest to the crest depth of the master table (Appendix A). Every cut was sampled every 1 m on the model grid and runs perpendicular to the local shoreline, except where stated.
 
-*Placement of the cuts at Albany, Cables and Borth.* Albany: the automatic line (x = 48 m of the model frame) crosses the short, shallow take-off plateau at the offshore end of the reef, not the ridge that is surfed, so the main cut was moved to the middle of the long -2.0 m AHD ridge ("crest 110 m at -2 m AHD", `\cite{cityofnd}`{=latex}), at x = 17 m. Cables: the main cut passes through the centroid of the footprint and is perpendicular to the fitted 0 m AHD shoreline (offshore bearing 277.8°T), so it is 17.5° off the model's y axis. Borth: the cut at x = -43.5 m is 10 m south of the line used for Figure 1 in an earlier version of this review; no source says where the Borth wave breaks, so the position is a judgement (Appendix A, section A.9).
+*Placement of the cuts at Albany, Cables and Borth.* Albany: the automatic line (x = 48 m of the model frame) crosses the short, shallow take-off plateau at the offshore end of the reef, not the ridge that is surfed, so the main cut was moved to the middle of the long -2.0 m AHD ridge ("crest 110 m at -2 m AHD", `\cite{cityofnd}`{=latex}), at x = 17 m. Cables: the main cut passes through the centroid of the footprint and is perpendicular to the fitted 0 m AHD shoreline (offshore bearing 277.8°T), so it is 17.5° off the model's y axis. Borth: the cut at x = -43.5 m is 10 m south of the line used for Figure 1 in an earlier version of this review; no source says where the Borth wave breaks, so the position is a judgement (Appendix A.9).
 
 *The second cut.* Figure 4 originally drew a second, hollow symbol for several reefs. A second cut is kept only where it has a clear physical meaning. Albany is the only such case: the main cut is the ride section along the long ridge, and the second cut (x = 48 m, red dotted line) passes through the take-off peak, the short and shallow part of the reef where the surfer catches the wave and which probably acts as a refraction and focusing element for the wave that then runs along the ridge (a reading of the design plan, not a measured fact; `\cite{royalhaskoningdhv2015}`{=latex}). The second cuts of Narrowneck (a cut through the north arm that clips the tip, ramp length 16 m) and Pratte's (a cut through the tip of the apex, ramp length 1 m) are artefacts of where the shallowest model cell happens to lie, and were dropped.
 
@@ -20,7 +20,7 @@ Cut positions are given in the horizontal frame of the model of each reef (x alo
 |:--------------------|:--------------------------------------------------------------|
 | Main cut | south arm, x = -40 m, reef run y = 232 to 332 m, offshore bearing 86.2°T; 39 m right of the plan middle |
 | Second cut | none (the north-arm cut, x = 46 m, clips the arm tip and was dropped) |
-| Arm axes | north arm 104.0°T (72.2° to the shoreline), south arm 86.2°T (90.0°); both from the traced outline (Appendix A, A.3) |
+| Arm axes | north arm 104.0°T (72.2° to the shoreline), south arm 86.2°T (90.0°); both from the traced outline (Appendix A.3) |
 | Incident direction | assumed shore-normal, from 86°T (crest parallel to the shoreline, 356.2°T) |
 | φ0 | 81.1° for both arms (mean of the two arm angles, converging seaward by 17.8°); alternative 41° for a south-easterly swell |
 | Status | assumed; the south-east swell direction is qualitative [@nettle2017] |
@@ -31,7 +31,7 @@ Cut positions are given in the horizontal frame of the model of each reef (x alo
 |:--------------------|:--------------------------------------------------------------|
 | Main cut | oblique cut through the footprint centroid (x = -5.0 m, y = 274.8 m), perpendicular to the fitted 0 m AHD shoreline (7.8°T), offshore bearing 277.8°T; at the plan middle (+1 m) |
 | Second cut | none |
-| Arm axes | north arm 35°T (27° to the shoreline), south arm 128°T (60°); georeferenced design outline (Appendix A, A.2); apex angle 87° |
+| Arm axes | north arm 35°T (27° to the shoreline), south arm 128°T (60°); georeferenced design outline (Appendix A.2); apex angle 87° |
 | Incident direction | the crest that meets both arms at the same angle: swell from about 262°T, 16° from shore-normal (derived from the design angle, not a measured direction) |
 | φ0 | 45° for both arms (43.5° as drawn) |
 | Status | sourced: design peel angle of about 45° (`\cite{pattiaratchi1999}`{=latex}; `\cite{lyons1992}`{=latex}, as cited by `\cite{mead2011}`{=latex}); the real swell direction is not confirmed |
@@ -53,7 +53,7 @@ Cut positions are given in the horizontal frame of the model of each reef (x alo
 |:--------------------|:--------------------------------------------------------------|
 | Main cut | south (long) arm, x = -22.5 m, reef run y = 287 to 313 m, offshore bearing 46.2°T; 22 m right of the plan middle |
 | Second cut | none |
-| Arm axes | west (northern) arm 86°T (50.1° to the shoreline of 136.2°T), south arm 11°T (54.9°); apex angle 75° (Appendix A, A.5) |
+| Arm axes | west (northern) arm 86°T (50.1° to the shoreline of 136.2°T), south arm 11°T (54.9°); apex angle 75° (Appendix A.5) |
 | Incident direction | assumed shore-normal, from 46°T |
 | φ0 | 50.1° and 54.9° |
 | Status | assumed; the swell direction is not confirmed in the sources read |
@@ -100,7 +100,7 @@ Cut positions are given in the horizontal frame of the model of each reef (x alo
 | Arm axes | crest (shoreward) edge of the traced wedge 281.5°T (71.2° to the shoreline of 30.3°T); the design crest line is 278.1°T [@royalhaskoningdhv2015; @cityofnd] |
 | Incident direction | assumed shore-normal, from 120°T; the real swell is probably oblique (refraction in King George Sound), which would lower φ0 |
 | φ0 | 71.2° |
-| Status | assumed; the 3D surface of Albany is a fitted design rule (low confidence, Appendix A, A.12) |
+| Status | assumed; the 3D surface of Albany is a fitted design rule (low confidence, Appendix A.12) |
 
 ## E.9 Bunbury Airwave
 
