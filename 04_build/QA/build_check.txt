@@ -3,17 +3,17 @@ PASS HTML parses with balanced tags (errors=[], unclosed=[])
 PASS title is 'Artificial Surf Reefs Survey'
 PASS data has exactly the 13 slugs (missing=set(), extra=set())
 PASS all 13 slugs appear in the HTML
-PASS 651 referenced assets/ paths exist on disk (missing=[])
-PASS no unreferenced files in assets/ (651 files; unused=[])
+PASS 659 referenced assets/ paths exist on disk (missing=[])
+PASS no unreferenced files in assets/ (659 files; unused=[])
 PASS every [R#] token resolves to its reef's references (unresolved=[])
 PASS source pop-up #ref-pop exists inside the reef <dialog> (renders in the top layer)
 PASS markers are rendered as pop-up buttons (ref-mark / data-ref / aria-controls=ref-pop, openPop, positionPop)
 PASS every one of 2831 [R#] markers has a pop-up target with citation text (missing=[])
 INFO references without a URL (pop-up shows 'internal note — no URL'): 47
 PASS every review has a source link or a reference pop-up (none=[])
-INFO leak tests run on the page without the dead-ends data (152,563 characters removed)
+INFO leak tests run on the page without the dead-ends data (152,306 characters removed)
 PASS no videos_rejected content rendered (6 rejected ids/urls/titles checked; leaked=[])
-PASS Burkitts shows 0 videos (videos=0, hero=https://live-production.wcms.abc-cdn.net.au/a6112bacdcff4864)
+PASS Burkitts shows 0 videos (videos=0, hero=https://live-production.wcms.abc-cdn.net.au/a315cc055a6a5d93)
 INFO items tagged with an origin (e.g. via Gemini survey, verified): 39 [('cables-reef-wa', 'S1'), ('cables-reef-wa', 'S2'), ('prattes-reef-el-segundo', '"evan"'), ('prattes-reef-el-segundo', 'S1'), ('prattes-reef-el-segundo', 'S2'), ('prattes-reef-el-segundo', 'S3'), ('prattes-reef-el-segundo', 'S4'), ('prattes-reef-el-segundo', 'S5'), ('mount-maunganui-reef', 'S1'), ('mount-maunganui-reef', 'S2'), ('mount-maunganui-reef', 'S3'), ('mount-maunganui-reef', 'S4'), ('boscombe-surf-reef', 'Dr Mark Davidson'), ('boscombe-surf-reef', 'S1'), ('borth-coastal-defence-reef', 'S1'), ('borth-coastal-defence-reef', 'S2'), ('bunbury-airwave', 'R9'), ('bunbury-airwave', 'R15'), ('bunbury-airwave', 'R21'), ('bunbury-airwave', 'R22'), ('bunbury-airwave', 'R23'), ('bunbury-airwave', 'R24'), ('bunbury-airwave', 'R25'), ('palm-beach-gold-coast', 'Stab Magazine'), ('palm-beach-gold-coast', '@rebeccaeccles1480'), ('palm-beach-gold-coast', 'S1'), ('southern-ocean-surf-reef-albany', 'R18'), ('southern-ocean-surf-reef-albany', 'R19'), ('southern-ocean-surf-reef-albany', 'R23'), ('southern-ocean-surf-reef-albany', 'R24'), ('southern-ocean-surf-reef-albany', 'R25'), ('southern-ocean-surf-reef-albany', 'R26'), ('southern-ocean-surf-reef-albany', 'R27'), ('southern-ocean-surf-reef-albany', 'R28'), ('southern-ocean-surf-reef-albany', 'R29'), ('southern-ocean-surf-reef-albany', 'R30'), ('southern-ocean-surf-reef-albany', 'R31'), ('southern-ocean-surf-reef-albany', 'R32'), ('southern-ocean-surf-reef-albany', 'R33')]
 PASS 13 footprints present (missing=[])
 PASS every footprint polygon is closed (not closed=[])
@@ -33,7 +33,7 @@ PASS footprint detail code (reef dialog 'Footprint & how we drew it') is in the 
 PASS no Map / Scale view, button, Leaflet or map-tile code remains in the page
 PASS retired #view/scale route (headless DOM dump): retired route falls back to the gallery (visible)
 PASS retired #view/scale route (headless DOM dump): no Map / Scale view section or button
-PASS retired #view/scale route (headless DOM dump): top navigation is exactly Gallery, Table, 3D models
+PASS retired #view/scale route (headless DOM dump): top navigation is exactly Gallery, Table, 3D models, Details
 PASS hidden-shape reefs = the 4 decided (Mexico, Opunake, Burkitts, Kovalam) + anything whose shape.json is missing / not traced or verified (compiled hidden=['burkitts-reef-bargara', 'kovalam-reef-india', 'mexico-reef-2026-unnamed', 'opunake-reef'], expected=['burkitts-reef-bargara', 'kovalam-reef-india', 'mexico-reef-2026-unnamed', 'opunake-reef'])
 PASS no hidden reef carries an outline polygon in the page data (leaking=[])
 PASS every hidden reef has a plain-text reason (missing=[])
@@ -44,7 +44,8 @@ PASS only reefs with no published coordinates have no link (no link: ['mexico-re
 INFO locations: narrowneck-gold-coast=ok:-27.986629,153.434052; cables-reef-wa=ok:-32.015648,115.748452; prattes-reef-el-segundo=approximate:33.92058,-118.43335; mount-maunganui-reef=ok:-37.644783,176.202591; opunake-reef=approximate:-39.459429,173.85164; boscombe-surf-reef=ok:50.717532,-1.838909; kovalam-reef-india=approximate:8.387326,76.97522; borth-coastal-defence-reef=ok:52.483243,-4.056157; palm-beach-gold-coast=ok:-28.107334,153.470913; southern-ocean-surf-reef-albany=ok:-35.01808,117.920935; burkitts-reef-bargara=approximate:-24.816017,152.467272; bunbury-airwave=approximate:-33.3276,115.6284; mexico-reef-2026-unnamed=none:None,None
 PASS location block data: 5-decimal 'lat, lon' text, degrees-decimal-minutes text, Google Earth web URL format (bad=[])
 PASS KML outline data only for reefs whose outline is shown AND georeferenced in shape.json geo (7 reefs; never for the hidden ['burkitts-reef-bargara', 'kovalam-reef-india', 'mexico-reef-2026-unnamed', 'opunake-reef']; expected=['borth-coastal-defence-reef', 'boscombe-surf-reef', 'cables-reef-wa', 'mount-maunganui-reef', 'narrowneck-gold-coast', 'palm-beach-gold-coast', 'southern-ocean-surf-reef-albany']; got=['borth-coastal-defence-reef', 'boscombe-surf-reef', 'cables-reef-wa', 'mount-maunganui-reef', 'narrowneck-gold-coast', 'palm-beach-gold-coast', 'southern-ocean-surf-reef-albany'])
-PASS [gallery] every reef with coordinates has the 'Open location in' menu in its tile (copy, KML, Google Earth; bad=[]; tiles=13)
+PASS [gallery] no tile for the reefs Lior took out of the Gallery (['borth-coastal-defence-reef', 'mexico-reef-2026-unnamed'])
+PASS [gallery] every reef with coordinates has the 'Open location in' menu in its tile (copy, KML, Google Earth; bad=[]; tiles=11)
 PASS [gallery] 'All reefs (KML)' button in the controls header
 PASS Navionics: paste-the-coordinates hint, no Navionics web link (webapp.navionics.com redirects to a Garmin page, tested 2026-10-13)
 PASS [3D tab] every model entry has the 'Open location in' block (copy, KML, Google Earth; models=9; bad=[])
@@ -105,7 +106,7 @@ PASS [dialog mexico-reef-2026-unnamed] no outline drawn (shape not drawn note pr
 PASS [dialog mexico-reef-2026-unnamed] shows the 'Shape not drawn' text
 PASS [dialog mexico-reef-2026-unnamed] says location not published and has no map link (outside the dead-ends section)
 PASS [dialog mexico-reef-2026-unnamed] 'Checked, nothing useful (18)' section: present, closed by default, last section, after (not inside) References, 18 entries as in dead_ends/mexico-reef-2026-unnamed.json
-PASS table: a Location link in every row that has coordinates (12 of 12; Mexico shows 'not published')
+PASS table: a Location link in every row that has coordinates (11 of 11; Mexico shows 'not published')
 PASS every image with a 'shows' verdict carries a caption label (missing=[])
 PASS site-only videos render as link-only with their label (bad=[])
 PASS hero image prefers structure visible > reef effect > site context (bad=[])
@@ -201,7 +202,7 @@ PASS [3D] combined export southern-ocean-surf-reef-albany: crest level vs model.
 PASS [3D] combined export southern-ocean-surf-reef-albany: seabed falls away offshore (+z): err 2.56e-16 deg (tolerance 20)
 PASS [3D] combined export southern-ocean-surf-reef-albany: seabed at the shoreline is near 0 m MSL: err 0.217 m (tolerance 1.5)
 INFO [3D] combined scene: borth-coastal-defence-reef ok; boscombe-surf-reef ok; bunbury-airwave ok; cables-reef-wa ok; mount-maunganui-reef ok; narrowneck-gold-coast ok; palm-beach-gold-coast ok; prattes-reef-el-segundo ok; southern-ocean-surf-reef-albany ok; tolerances {'area_rel': 0.25, 'crest_m': 0.2, 'centroid_m': 6.0, 'shore_m': 1.5, 'offshore_deg': 20}
-INFO [3D] folder sizes: assets/images 69.5 MB, 3d/ 33.4 MB (page itself 3.11 MB)
+INFO [3D] folder sizes: assets/images 69.5 MB, 3d/ 33.6 MB (page itself 3.14 MB)
 PASS [3D] DOM: tab is the visible view
 PASS [3D] DOM: URL hash follows the selector: default = first built model
 PASS [3D] DOM: selector has one button per model + 'All (compare)' (10), exactly one pressed

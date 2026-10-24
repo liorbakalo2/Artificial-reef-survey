@@ -4,17 +4,23 @@
 
   var PAYLOAD = JSON.parse(document.getElementById('data').textContent);
   var META = PAYLOAD.meta;
-  var REEFS = PAYLOAD.reefs;
+  var ALL_REEFS = PAYLOAD.reefs;
   var BY_SLUG = {};
-  REEFS.forEach(function (r) { BY_SLUG[r.slug] = r; });
+  ALL_REEFS.forEach(function (r) { BY_SLUG[r.slug] = r; });
+  /* 2026-10-24 (Lior's page requests D10, D11; data/page_overrides.json): Borth (a coastal defence) is left out of the Gallery and the Table;
+     Xala (announced, not documented) shows only in the collapsible "Announced, not yet documented" part under the Gallery.
+     Both stay openable (3D tab, References index). Counts, averages, sorts and filters use REEFS only. */
+  var PAGE = META.page || {}, EXCLUDED = PAGE.gallery_excluded || {}, ANNOUNCED = PAGE.announced || {};
+  var REEFS = ALL_REEFS.filter(function (r) { return !EXCLUDED[r.slug] && !ANNOUNCED[r.slug]; });
 
   /* 2026-10-24: the old outcome verdict (worked / mixed / failed) is replaced by the paper's two ratings, same scores and
      words as Table 1 of 08_paper/sections/03_survey.md (A = surf quality, B = safety and longevity). Source: card key `rating`. */
   var SCALE_A = { '5': 'excellent', '4': 'good', '3': 'inconsistent', '2': 'works rarely', '1': 'no surfable wave', '?': 'unknown' };
+  var SCALE_C = { '5': 'very good', '4': '', '3': 'mixed, neutral or no measurable effect', '2': '', '1': 'very poor (harm)', '?': 'unknown' };   // paper Table 1 names only 1, 3 and 5
   var SCALE_B = { '5': 'no problems', '4': 'intact', '3': 'renewed', '2': 'hazard', '1': 'failed', '?': 'unknown' };
   var SCORE_CLS = { '5': 'v-worked', '4': 'v-partly-worked', '3': 'v-mixed', '2': 'v-orange', '1': 'v-failed', '?': 'v-n-a', 'na': 'v-n-a' };
   function score(r, k) { var q = r.rating; if (!q || q[k] == null) return 'na'; return String(q[k]).replace('*', '') || 'na'; }
-  REEFS.forEach(function (r) { r.aKey = score(r, 'A'); r.bKey = score(r, 'B'); });
+  ALL_REEFS.forEach(function (r) { r.aKey = score(r, 'A'); r.bKey = score(r, 'B'); r.cKey = score(r, 'C'); });
   var VERDICTS = ['5', '4', '3', '2', '1', '?'].map(function (k, i) {
     return { key: k, label: k + ' \u2013 ' + SCALE_A[k], sym: k, note: '', order: i };
   });
@@ -136,7 +142,7 @@
     var openM = document.querySelectorAll('details.loc-menu[open]');
     for (var i = 0; i < openM.length; i++) if (!openM[i].contains(t)) openM[i].removeAttribute('open');
   });
-  window.ReefLoc = { extras: function (slug, withMaps) { var r = REEFS.filter(function (x) { return x.slug === slug; })[0]; return r ? locExtras(r, withMaps !== false) : ''; }, kml: kmlFor };
+  window.ReefLoc = { extras: function (slug, withMaps) { var r = ALL_REEFS.filter(function (x) { return x.slug === slug; })[0]; return r ? locExtras(r, withMaps !== false) : ''; }, kml: kmlFor };
   function disagreeBody(r) {
     var d = r.sources_disagree || [];
     return '<p class="muted">Where the sources, or a source and the founder, say different things. Both sides are kept, each with its source; nothing is averaged.</p>' +
@@ -268,7 +274,7 @@
   }
 
   // ------------------------------------------------------------------ state
-  var state = { q: '', verdict: {}, country: {}, type: {}, sort: 'year', dir: 1, view: 'gallery' };
+  var state = { q: '', verdict: {}, country: {}, type: {}, sort: 'year', dir: -1, view: 'gallery' };   // D9: newest first by default
   var lastFocus = null;
 
   function matches(r) {
@@ -289,6 +295,9 @@
     size: function (r) { return (r.size_short || '').toLowerCase(); },
     financed: function (r) { return stripRefs(r.financed_by).toLowerCase(); },
     verdict: function (r) { return (V_BY_KEY[r.aKey] || V_BY_KEY['na']).order; },
+    sA: function (r) { return /^[1-5]$/.test(r.aKey) ? -Number(r.aKey) : null; },
+    sB: function (r) { return /^[1-5]$/.test(r.bKey) ? -Number(r.bKey) : null; },
+    sC: function (r) { return /^[1-5]$/.test(r.cKey) ? -Number(r.cKey) : null; },
     refs: function (r) { return (r.references || []).length; },
     rating: function (r) { return r.rating && r.rating.rank ? r.rating.rank : null; },
     loc: function (r) { var L = r.location || {}; return L.status === 'none' ? 2 : L.status === 'approximate' ? 1 : 0; }
@@ -314,27 +323,38 @@
     REEFS.forEach(function (r) { countries[r.country] = true; });
     var nC = Object.keys(countries).length;
 
-    // round 10: two short lines; the rest sits behind the (i) pop-over (shared primitive, see "info pop-overs" below)
     $('#intro').innerHTML = 'The <strong>' + REEFS.length + ' artificial surf reefs</strong> we could document as built (' + y0 + '–' + y1 + ', ' + nC + ' countries): what each was meant to do, what was built, what it cost, how it ended.' +
       infoHTML('About this survey',
         '<span class="pp">Each reef is described by what it was meant to do, what was really built, what it cost, who paid, and how it turned out. It is written for municipal decision-makers and surfers weighing a reef for the Israeli coast.</span>' +
-        '<span class="pp">Open any reef for the big picture first (an at-a-glance strip and the outcome), then dig into the sections you care about. Every fact carries a numbered source marker [R#]: tap or hover it to see the source without losing your place.</span>' +
-        '<span class="pp">Compiled ' + esc(META.compiled_on) + '. The method is described in the footer and in the References index at the bottom of the page.</span>' +
-        '<a class="more" href="#references">Read more: References index &rarr;</a>');
+        '<span class="pp">Open any reef for the big picture first (an at-a-glance strip and the ratings), then dig into the sections you care about. Every fact carries a numbered source marker [R#]: tap or hover it to see the source without losing your place.</span>' +
+        '<span class="pp">Not in the Gallery or the Table: ' + Object.keys(EXCLUDED).map(function (k) { return esc((BY_SLUG[k] || { name: k }).name) + ' (' + esc(EXCLUDED[k]) + ')'; }).join('; ') +
+          (Object.keys(ANNOUNCED).length ? '; ' + Object.keys(ANNOUNCED).map(function (k) { return esc((BY_SLUG[k] || { name: k }).name); }).join(', ') + ' (announced, not yet documented: listed under the Gallery)' : '') + '.</span>' +
+        '<span class="pp">Compiled ' + esc(META.compiled_on) + '. The method, the rating scale, the paper figures and the References index are on the Details tab.</span>' +
+        '<a class="more" href="#view/details">Read more: Details &rarr;</a>');
 
-    $('#legend').innerHTML = '<span class="muted" style="font-size:.78rem;text-transform:uppercase;letter-spacing:.05em">Rating scale (paper Table 1)</span>' +
-      '<span class="legend-item"><b>Surf (A)</b> ' + ['5', '4', '3', '2', '1'].map(function (k) { return '<span class="badge ' + vclass(k) + '">' + k + ' ' + esc(SCALE_A[k]) + '</span>'; }).join(' ') + '</span>' +
-      '<span class="legend-item"><b>Construction (B)</b> ' + ['5', '4', '3', '2', '1'].map(function (k) { return '<span class="badge ' + vclass(k) + '">' + k + ' ' + esc(SCALE_B[k]) + '</span>'; }).join(' ') + '</span>' +
-      '<span class="legend-item"><span class="badge v-n-a">?</span><span class="muted">unknown or no evidence; * provisional</span></span>';
-
-    var totalM = META.usd_total_mid / 1e6;
-    var lowM = META.usd_total_low / 1e6, highM = META.usd_total_high / 1e6;
+    var ac = PAGE.avg_cost, avgHTML = '';
+    if (ac && ac.reefs && ac.reefs.length) {
+      var vals = ac.reefs.map(function (x) { return x.usd_m_2024; }), sum = vals.reduce(function (a, b) { return a + b; }, 0), mean = sum / vals.length;
+      var srt = vals.slice().sort(function (a, b) { return a - b; }), n = srt.length, med = n % 2 ? srt[(n - 1) / 2] : (srt[n / 2 - 1] + srt[n / 2]) / 2;
+      var list = ac.reefs.map(function (x) { return esc(x.name) + ' ' + (x.usd_m_2024 < 0.1 ? x.usd_m_2024.toFixed(3) : x.usd_m_2024.toFixed(2)); }).join(', ');
+      avgHTML = '<div><dt>Average cost per reef that did not break' + infoHTML('Average cost: which reefs and which prices',
+          '<span class="pp"><b>Rule.</b> ' + esc(ac.rule) + '</span>' +
+          '<span class="pp"><b>Reefs averaged (US$ M, 2024 prices).</b> ' + list + '. Mean ' + mean.toFixed(1) + ', median ' + med.toFixed(1) + '.</span>' +
+          '<span class="pp"><b>Price basis.</b> ' + esc(ac.basis) + '.</span>' +
+          '<span class="pp"><b>Source.</b> ' + esc(ac.source) + '. The cost per reef in the Table and the reef pages is the card\'s own rough conversion (not the paper\'s), so the two can differ.</span>') +
+        '</dt><dd>≈ US$' + mean.toFixed(1) + 'M<small>mean of ' + n + ' reefs (' + ac.reefs.map(function (x) { return esc(x.name); }).join(', ') + '), 2024 prices; median US$' + med.toFixed(1) + 'M. Failed reefs and Bunbury Airwave excluded.</small></dd></div>';
+    }
     $('#summary').innerHTML =
-      '<div><dt>Reefs</dt><dd>' + REEFS.length + '<small>built, ' + REEFS.filter(function (r) { return r.bKey === '1'; }).length + ' with construction rated 1 (failed)</small></dd></div>' +
+      '<div><dt>Surf reefs</dt><dd>' + REEFS.length + '<small>built, ' + REEFS.filter(function (r) { return r.bKey === '1'; }).length + ' with construction rated 1 (failed)</small></dd></div>' +
       '<div><dt>Countries</dt><dd>' + nC + '<small>' + esc(Object.keys(countries).join(', ')) + '</small></dd></div>' +
-      '<div><dt>Years built</dt><dd>' + y0 + '–' + y1 + '<small>first to most recent construction</small></dd></div>' +
-      '<div><dt>Total documented cost</dt><dd>≈ US$' + totalM.toFixed(0) + 'M<small>of ' + META.n_with_cost + ' with cost data (range US$' + lowM.toFixed(1) + '–' + highM.toFixed(1) +
-      'M). Mostly rough, unsourced currency conversions from the cards — see each reef.</small></dd></div>';
+      '<div><dt>Years built</dt><dd>' + y0 + '–' + y1 + '<small>first to most recent construction</small></dd></div>' + avgHTML;
+  }
+  function legendHTML() {     // the rating scale (moved from the page header to the Details tab, 2026-10-24)
+    return '<div class="legend" aria-label="Rating scale">' +
+      '<span class="legend-item"><b>A, surf quality</b> ' + ['5', '4', '3', '2', '1'].map(function (k) { return '<span class="badge ' + vclass(k) + '">' + k + ' ' + esc(SCALE_A[k]) + '</span>'; }).join(' ') + '</span>' +
+      '<span class="legend-item"><b>B, safety and longevity (construction)</b> ' + ['5', '4', '3', '2', '1'].map(function (k) { return '<span class="badge ' + vclass(k) + '">' + k + ' ' + esc(SCALE_B[k]) + '</span>'; }).join(' ') + '</span>' +
+      '<span class="legend-item"><b>C, sediment and storm protection</b> ' + ['5', '4', '3', '2', '1'].map(function (k) { return '<span class="badge ' + vclass(k) + '">' + k + (SCALE_C[k] ? ' ' + esc(SCALE_C[k]) : '') + '</span>'; }).join(' ') + '</span>' +
+      '<span class="legend-item"><span class="badge v-n-a">?</span><span class="muted">unknown or no evidence; * provisional</span></span></div>';
   }
 
   // ------------------------------------------------------------------ chips
@@ -354,11 +374,8 @@
     });
     countries.sort(); types.sort();
     var flags = {}; REEFS.forEach(function (r) { flags[r.country] = r.country_flag; });
-    var presentV = VERDICTS.filter(function (v) { return REEFS.some(function (r) { return r.aKey === v.key; }); });
+    /* 2026-10-24 (Lior C7): the rating ('Verdict') chip group is gone; Country and Type filters, the text search and the sort stay. */
     $('#chips').innerHTML =
-      group('Surf quality (A)', 'aKey', presentV.map(function (v) { return v.key; }), function (k) {
-        return '<span class="dot ' + vclass(k) + '" aria-hidden="true"></span>' + esc(V_BY_KEY[k].label);
-      }) +
       group('Country', 'country', countries, function (c) { return (flags[c] ? '<span class="flag" aria-hidden="true">' + flags[c] + '</span>' : '') + esc(c); }) +
       group('Type', 'type_short', types, function (t) { return esc(t); });
   }
@@ -392,28 +409,42 @@
   function renderGallery(list) { $('#grid').innerHTML = list.map(tileHTML).join(''); }
 
   // ------------------------------------------------------------------ table
+  /* 2026-10-24 (Lior E14-E17): no Verdict, no '# refs'; the three paper scores as separate coloured columns under a 'Scores' header;
+     Financed by just before Location; Location last. Names as in Table 1 of the paper (08_paper/sections/03_survey.md). */
   var COLS = [
     { k: 'name', t: 'Name' }, { k: 'country', t: 'Country' }, { k: 'year', t: 'Year' }, { k: 'type', t: 'Type' },
-    { k: 'size', t: 'Size' }, { k: 'cost', t: 'Cost (~US$)' }, { k: 'financed', t: 'Financed by' },
-    { k: 'loc', t: 'Location' }, { k: 'verdict', t: 'Surf (A) / Construction (B)' }, { k: 'rating', t: 'Rating A/B/C' }, { k: 'refs', t: '# refs' }
+    { k: 'size', t: 'Size' }, { k: 'cost', t: 'Cost (~US$)' },
+    { k: 'sA', t: 'A, surf quality', g: 'score' }, { k: 'sB', t: 'B, safety and longevity', g: 'score' }, { k: 'sC', t: 'C, sediment and storm protection', g: 'score' },
+    { k: 'financed', t: 'Financed by' }, { k: 'loc', t: 'Location' }
   ];
   /* 2026-10-19 (paper review): reef rating A/B/C from the card key `rating` (source: 08_paper/notes/rating_final.md, evidence rating_evidence.md). */
   function RATING_INFO() {
     return infoHTML('Reef rating: criteria and scale',
       '<span class="pp"><b>Reef rating A / B / C</b> (this review, approved by Lior 2026-10-19). Scores 1 to 5, the same words as Table 1 of the paper. <b>A, surf quality</b>: 5 excellent, 4 good, 3 inconsistent, 2 works rarely, 1 no surfable wave. <b>B, safety and longevity (construction)</b>: 5 no problems, 4 intact, 3 renewed, 2 hazard or repairs, 1 failed or removed. <b>C, sediment and storm protection</b>: 1 very poor (harm) to 5 very good, 3 mixed, neutral or no measurable effect. ? = unknown or no evidence; * = provisional (signal not attributable to the reef).</span>' +
-      '<span class="pp">Gallery badges show A ("Surf") and B ("Construction"); the filter and the sort on this tab use A. Ranking is mainly by A, with B as tie-break; C is not weighed equally.</span>' +
+      '<span class="pp">Gallery badges show A ("Surf") and B ("Construction"). Click a column title to sort by that score (best first). The paper ranks mainly by A, with B as tie-break; C does not affect the rank. Colours: green 5 to red 1, grey = unknown.</span>' +
       '<span class="pp">Evidence: the repo notes <i>rating_final.md</i> and <i>rating_evidence.md</i> (08_paper/notes), built from the reef cards and the papers cited there. Much of the surf evidence is journalism, designer reports or anecdote, so treat the scores as an informed ranking, not a measurement.</span>');
   }
-  function ratingCell(r) {
-    var q = r.rating; if (!q) return '<span class="muted">—</span>';
-    return '<span title="' + esc(stripRefs(q.reason)) + '">' + esc(q.A) + ' / ' + esc(q.B) + ' / ' + esc(q.C) + '</span>';
+  function scoreCell(r, k) {
+    var q = r.rating, raw = q && q[k] != null ? String(q[k]) : '', key = { A: r.aKey, B: r.bKey, C: r.cKey }[k];
+    var words = { A: SCALE_A, B: SCALE_B, C: SCALE_C }[k][key] || '';
+    if (!raw) return '<span class="muted">—</span>';
+    return '<span class="score ' + vclass(key) + '" title="' + esc((words ? key + ' ' + words : raw) + (q.reason ? ' — ' + stripRefs(q.reason) : '')) + '">' + esc(raw) + '</span>';
+  }
+  function sizeCell(r) {      // E14: first line = total volume as reported (paper Table 1), details below
+    var vol = (PAGE.volume_reported || {})[r.slug];
+    return (vol ? '<b class="vol" title="Volume as reported (paper Table 1)">' + esc(vol) + '</b><br>' : '') + '<span class="sz">' + esc(cleanShort(r.size_short)) + plainRefs(r.hover_refs.size) + '</span>';
   }
   function renderTable(list) {
-    var head = '<thead><tr>' + COLS.map(function (c) {
+    var nS = COLS.filter(function (c) { return c.g === 'score'; }).length, first = true;
+    var top = '<tr class="grp">' + COLS.map(function (c) {
+      if (c.g !== 'score') return '<th scope="col" aria-hidden="true"></th>';
+      if (!first) return ''; first = false;
+      return '<th scope="colgroup" colspan="' + nS + '" class="grp-score">Scores ' + RATING_INFO() + '</th>';
+    }).join('') + '</tr>';
+    var head = '<thead>' + top + '<tr>' + COLS.map(function (c) {
       var s = state.sort === c.k ? (state.dir > 0 ? 'ascending' : 'descending') : 'none';
-      return '<th scope="col" aria-sort="' + s + '"><button type="button" data-sort="' + c.k + '">' + esc(c.t) + '</button></th>';
+      return '<th scope="col" aria-sort="' + s + '"' + (c.g ? ' class="sc"' : '') + '><button type="button" data-sort="' + c.k + '">' + esc(c.t) + '</button></th>';
     }).join('') + '</tr></thead>';
-    head = head.replace('Rating A/B/C</button>', 'Rating A/B/C</button>' + RATING_INFO());
     var body = '<tbody>' + list.map(function (r) {
       var cost = r.usd
         ? '<span title="' + esc(r.usd.basis + ' — card: ' + r.usd.source_text) + '">' + esc(r.usd.label) + '</span>'
@@ -423,13 +454,13 @@
         '<td>' + flag(r) + esc(r.country) + '</td>' +
         '<td class="yr">' + esc(r.year_short) + plainRefs(r.hover_refs.year) + '</td>' +
         '<td>' + esc(r.type_short) + plainRefs(r.hover_refs.type) + '</td>' +
-        '<td class="wide">' + esc(cleanShort(r.size_short)) + plainRefs(r.hover_refs.size) + '</td>' +
+        '<td class="wide">' + sizeCell(r) + '</td>' +
         '<td class="num">' + cost + '</td>' +
+        '<td class="num sc">' + scoreCell(r, 'A') + '</td>' +
+        '<td class="num sc">' + scoreCell(r, 'B') + '</td>' +
+        '<td class="num sc">' + scoreCell(r, 'C') + '</td>' +
         '<td class="wide">' + esc(short(stripRefs(r.financed_by), 140)) + plainRefs(uniqRefs(r.financed_by)) + '</td>' +
         '<td class="loc">' + locLinks(r, true) + '</td>' +
-        '<td>' + badge(r) + '</td>' +
-        '<td class="num">' + ratingCell(r) + '</td>' +
-        '<td class="num">' + (r.references || []).length + '</td>' +
       '</tr>';
     }).join('') + '</tbody>';
     $('#table').innerHTML = '<caption class="sr">Artificial surf reefs — click a row for details</caption>' + head + body;
@@ -440,7 +471,7 @@
   function setView(v) {
     state.view = v;
     $all('.views button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.view === v)); });
-    ['gallery', 'table', 'models3d'].forEach(function (k) { $('#view-' + k).hidden = k !== v; });
+    ['gallery', 'table', 'models3d', 'details'].forEach(function (k) { $('#view-' + k).hidden = k !== v; });
     document.body.setAttribute('data-view', v);     // lets CSS hide the reef filters on the 3D models tab
     var vh = v === 'gallery' ? '' : '#view/' + v;
     var keepHash = /^#reef\//.test(location.hash) || (v === 'models3d' && /^#view\/models3d\//.test(location.hash));
@@ -453,7 +484,7 @@
     var list = current();
     $('#count').textContent = 'Showing ' + list.length + ' of ' + REEFS.length + ' reefs';
     $('#empty').hidden = list.length > 0;
-    if (state.view === 'gallery') renderGallery(list);
+    if (state.view === 'gallery') { renderGallery(list); renderAnnounced(); }
     else if (state.view === 'table') renderTable(list);
     else if (state.view === 'models3d' && window.ReefModels3D) window.ReefModels3D.render();   // src/models3d.js
     var sel = $('#sort'), val = state.sort + ':' + state.dir;
@@ -953,7 +984,7 @@
 
   function routeFromHash() {
     var m = /^#reef\/([a-z0-9-]+)(?:\/([RS]\d+))?$/i.exec(location.hash);
-    var vm = /^#view\/(gallery|table|models3d)(?:\/[a-z0-9-]+)?$/.exec(location.hash);
+    var vm = /^#view\/(gallery|table|models3d|details)(?:\/[a-z0-9-]+)?$/.exec(location.hash);
     if (vm && state.view !== vm[1]) setView(vm[1]);
     else if (!vm && /^#view\//.test(location.hash) && state.view !== 'gallery') setView('gallery');   // retired #view/map, #view/scale (2026-10-10) -> gallery
     if (m && BY_SLUG[m[1]]) openReef(m[1], m[2], true);
@@ -962,21 +993,36 @@
 
   // ---------------------------------------------------- references index
   function renderRefIndex() {
-    $('#refindex').innerHTML = REEFS.map(function (r) {
+    $('#refindex').innerHTML = ALL_REEFS.map(function (r) {
       return '<details><summary>' + esc(r.name) + ' <span class="muted">(' + (r.references || []).length + ' references)</span></summary>' +
         '<div class="refs">' + refsHTML(r, 'idx-' + r.slug + '-') + '</div>' +
         '<p><button type="button" class="linkish" data-open="' + esc(r.slug) + '">Open ' + esc(r.name) + '</button></p></details>';
     }).join('');
   }
 
-  function renderFooter() {
-    $('#footer').innerHTML =
-      '<p><strong>Method.</strong> Research agents gathered each reef\'s record from primary and secondary sources; separate agents then verified every claim against its cited source, and ' +
+  /* 2026-10-24 (Lior C8): the method text, the rating scale, the paper figures and the References index live on the Details tab
+     (collapsible parts). The hot-link note and the "Sections 2 and 3 in preparation" blocks are gone (B4, B5). */
+  function renderDetails() {
+    $('#det-method').innerHTML =
+      '<p>Research agents gathered each reef\'s record from primary and secondary sources; separate agents then verified every claim against its cited source, and ' +
       'every image and video was checked to show the named site. Verification reports are kept in the project folder <code>05_qa</code>. ' +
       'Only facts carrying a reference tag [R#] are shown; conflicts between sources are stated, not resolved. Dollar conversions marked approximate are rough, mostly unsourced estimates.</p>' +
       '<p>Some reviews and references were first spotted in a parallel survey made with another AI (Gemini). None was taken on trust: each was re-fetched from its original source and checked by our own agents before being added, and is tagged <span class="tag tag-gem">via Gemini survey, verified 2026-09-25</span>.</p>' +
-      '<p>Compiled ' + esc(META.compiled_on) + ' · <a href="#references">References index</a> · Sections 2 and 3 in preparation.</p>' +
-      '<p>Images are hotlinked from their sources and remain the property of their owners; credits are shown on each. Video embeds are served by YouTube (privacy-enhanced mode).</p>';
+      '<p>Compiled ' + esc(META.compiled_on) + '.</p>';
+    $('#det-scale').innerHTML = legendHTML() + '<p class="muted">Scores from Table 1 of the paper (08_paper/sections/03_survey.md); evidence in 08_paper/notes/rating_final.md and rating_evidence.md. ' + RATING_INFO() + '</p>';
+  }
+  function renderAnnounced() {     // D11: Xala and any other announced-only reef, under the Gallery
+    var box = $('#announced'), keys = Object.keys(ANNOUNCED);
+    if (!box) return;
+    box.hidden = !keys.length;
+    if (!keys.length) return;
+    $('#announced-body').innerHTML = keys.map(function (k) {
+      var a = ANNOUNCED[k], r = BY_SLUG[k] || { name: k, place_short: '' };
+      return '<article class="ann-card"><h3>' + flag(r) + esc(r.name) + '</h3><p class="tile-meta">' + esc(r.place_short || r.place || '') + '</p>' +
+        '<p>' + esc(a.text) + '</p>' +
+        (a.quote ? '<blockquote class="ann-q">&ldquo;' + esc(a.quote) + '&rdquo;<span class="cr">' + esc(a.ref) + ' ' + extLink(a.url, 'source ↗') + '</span></blockquote>' : '') +
+        '<p><button type="button" class="linkish" data-open="' + esc(k) + '">Open what we have on ' + esc(r.name) + '</button></p></article>';
+    }).join('');
   }
 
   // ---------------------------------------------------------------- print
@@ -1165,7 +1211,7 @@
 
   // ------------------------------------------------- API for footprint.js (reef-dialog footprint section)
   window.ReefApp = {
-    REEFS: REEFS, BY_SLUG: BY_SLUG, VERDICT_COLOR: VERDICT_COLOR, V_BY_KEY: V_BY_KEY,
+    REEFS: REEFS, ALL_REEFS: ALL_REEFS, ANNOUNCED: ANNOUNCED, BY_SLUG: BY_SLUG, VERDICT_COLOR: VERDICT_COLOR, V_BY_KEY: V_BY_KEY,
     esc: esc, safeUrl: safeUrl, extLink: extLink, refById: refById, markBtn: markBtn, badge: badge,
     imgTag: imgTag, refify: refify, short: short, flag: flag, openReef: openReef, closeReef: closeReef, closePop: closePop, setView: setView
   };
@@ -1174,9 +1220,9 @@
   renderHeader();
   renderChips();
   renderRefIndex();
-  renderFooter();
+  renderDetails();
   bind();
-  var initView = /^#view\/(gallery|table|models3d)(?:\/[a-z0-9-]+)?$/.exec(location.hash);
+  var initView = /^#view\/(gallery|table|models3d|details)(?:\/[a-z0-9-]+)?$/.exec(location.hash);
   setView(initView ? initView[1] : 'gallery');
   routeFromHash();
 })();

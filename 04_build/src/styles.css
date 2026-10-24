@@ -501,3 +501,28 @@ td.loc { white-space: nowrap; }
 .pf-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,22rem),1fr));gap:1.25rem;margin-top:1rem}
 .pf{margin:0}.pf img{width:100%;height:auto;border:1px solid var(--line,#ccc);background:#fff}
 .pf figcaption{font-size:.85rem;line-height:1.4}.pf figcaption p{margin:.4rem 0}
+/* 2026-10-24 (Lior's page requests): Details tab, announced reefs, score columns */
+body[data-view="details"] .controls, body[data-view="details"] .site-head, body[data-view="details"] #notice, body[data-view="details"] #empty { display: none; }
+.details-view { padding: 24px 0 48px; }
+.details-view .det-h { font-size: 1.6rem; margin: 0 0 .25rem; }
+.det-sec, .details-view .paper-figs, .details-view .refindex { border-top: 1px solid var(--line); padding: 10px 0; margin: 0; }
+.det-part > summary { cursor: pointer; padding: 6px 0; }
+.det-part > summary h2 { display: inline; font-size: 1.2rem; }
+.det-part[open] > summary { margin-bottom: 8px; }
+.det-part p { max-width: 80ch; }
+.announced { margin: 28px 0 8px; border-top: 1px solid var(--line); padding-top: 12px; }
+.announced > summary { cursor: pointer; }
+.announced > summary h2 { display: inline; font-size: 1.15rem; }
+.ann-card { max-width: 70ch; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px 16px; margin: 12px 0; }
+.ann-card h3 { margin: 0 0 4px; font-size: 1.05rem; }
+.ann-q { margin: 8px 0; padding-left: 12px; border-left: 3px solid var(--line); font-size: .9rem; color: var(--muted); }
+.ann-q .cr { display: block; margin-top: 4px; font-size: .8rem; }
+table.data tr.grp th { border-bottom: 0; padding-bottom: 0; }
+table.data th.grp-score { text-align: center; font-size: .8rem; text-transform: uppercase; letter-spacing: .05em; border-bottom: 2px solid var(--line); }
+table.data th.sc, table.data td.sc { text-align: center; }
+.score { display: inline-block; min-width: 1.9em; padding: 2px 6px; border-radius: 999px; font-weight: 700; font-variant-numeric: tabular-nums; }
+table.data .vol { font-weight: 600; }
+table.data .sz { font-size: .85em; color: var(--muted); }
+table.data thead th.sc { white-space: normal; width: 92px; min-width: 80px; line-height: 1.25; vertical-align: bottom; }
+table.data thead th.sc button { display: inline; }
+.details-view .refindex + .det-sec { border-top: 0; }

@@ -418,6 +418,20 @@ html.m3d-grid3.m3d-hide-left.m3d-hide-right:not(.m3d-embedded) #app { grid-templ
 """
 
 
+def fill_picker(slug: str, gallery: list) -> None:
+    """2026-10-24 (Lior A2): the viewer's 'Choose a project picture' list = the pictures of the page's photo panel, Plan shape first (GROUPS order)."""
+    vp = VIEW_DIR / slug / "index.html"
+    if not vp.is_file():
+        return
+    gl = {g[0]: g[1] for g in GROUPS}
+    pics = [{"id": g["id"], "t": g["title"], "g": g["group"], "gl": gl.get(g["group"], g["group"]), "w": "../../" + g["web"], "th": "../../" + (g.get("thumb") or g["web"])} for g in gallery]
+    html = vp.read_text(encoding="utf-8")
+    if "/*M3D_PICS*/null" not in html:
+        warn(f"{slug}: picture-picker placeholder not found in the copied viewer")
+        return
+    vp.write_text(html.replace("/*M3D_PICS*/null", json.dumps(pics, ensure_ascii=False).replace("</", "<\\/"), 1), encoding="utf-8", newline="\n")
+
+
 def bar_html(slug: str, title: str) -> str:
     links = "".join(f'<a href="../../artificial_reefs.html{h.format(slug=slug)}">{n}</a>' for n, h in BAR_TABS)
     return (f'<nav class="m3d-topbar" aria-label="Back to the survey page"><a class="back" href="../../artificial_reefs.html#view/models3d/{slug}">&larr; Back to the page</a>'
@@ -456,7 +470,7 @@ def inject_receiver(html: str, slug: str) -> str:
 def inject_chrome(html: str, slug: str, title: str) -> str:
     html = inject_receiver(html, slug)
     i = html.find("<script")
-    css = BAR_CSS.replace("/*M3D_CLASSES*/", layout_classes(html))
+    css = BAR_CSS.replace("/*M3D_CLASSES*/", layout_classes(html)) + (SRC / "viewer_ui.html").read_text(encoding="utf-8")   # 2026-10-24: HUD hide + picture picker
     html = html[:i] + css + html[i:] if i >= 0 else html + css
     m = re.search(r"<body[^>]*>", html)
     if m:
@@ -943,6 +957,7 @@ def main() -> int:
             vinfo = copy_viewer(slug, d3)
             ann_names = set((d3 / "annotated").iterdir()) if (d3 / "annotated").is_dir() else set()
             gallery, gstats = build_gallery(slug, {a.name for a in ann_names})
+            fill_picker(slug, gallery)
             for g in gallery:                                   # round 11: pictures with a documented plan-view transform get a 'Match this photo' button
                 pmv = PM_PICS.get(g["id"])
                 if pmv and pmv.get("slug") == slug and slug in PM_VIEWERS:

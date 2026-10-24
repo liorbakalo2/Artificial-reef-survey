@@ -12,7 +12,7 @@ combined: narrowneck-gold-coast: cached (ok)
 combined: palm-beach-gold-coast: cached (ok)
 combined: prattes-reef-el-segundo: cached (ok)
 combined: southern-ocean-surf-reef-albany: cached (ok)
-models3d: 9 models, 0 feasibility, 4 not yet; pictures {'borth-coastal-defence-reef': 25, 'boscombe-surf-reef': 36, 'bunbury-airwave': 13, 'cables-reef-wa': 24, 'mount-maunganui-reef': 25, 'narrowneck-gold-coast': 46, 'palm-beach-gold-coast': 27, 'prattes-reef-el-segundo': 32, 'southern-ocean-surf-reef-albany': 17}; 128 references (from 212); caveat rows 85; verify 146 checked, 0 failed; json 1682 KB; 14.7s
-wrote /home/user/artificial-reef-survey/04_build/artificial_reefs.html (3187 KB)
+models3d: 9 models, 0 feasibility, 4 not yet; pictures {'borth-coastal-defence-reef': 25, 'boscombe-surf-reef': 36, 'bunbury-airwave': 13, 'cables-reef-wa': 24, 'mount-maunganui-reef': 25, 'narrowneck-gold-coast': 46, 'palm-beach-gold-coast': 27, 'prattes-reef-el-segundo': 32, 'southern-ocean-surf-reef-albany': 17}; 128 references (from 212); caveat rows 85; verify 146 checked, 0 failed; json 1682 KB; 1.0s
+wrote /home/user/artificial-reef-survey/04_build/artificial_reefs.html (3214 KB)
 reefs: 13; with USD cost: 11; total ~US$46,306,500-49,357,500
 NOTE: kovalam-reef-india: USD needle '1100000' not found in cost_usd_approx -> dropped from total
