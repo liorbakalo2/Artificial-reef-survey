@@ -21,6 +21,8 @@
   --v-mixed: #c98a12;    --v-mixed-ink: #1b1f24;
   --v-partly: #9fd6a8;   --v-partly-ink: #10331a;
   --v-orange: #d9692a;   --v-orange-ink: #ffffff;
+  --v-yellow: #ffd60a;   --v-yellow-ink: #1b1f24;   /* 2026-10-24: B 'hazard' */
+  --v-blue: #2f6fa8;     --v-blue-ink: #ffffff;      /* B 'renewed' */
   --v-na: #e4e5e8;       --v-na-ink: #30343a;
   /* scale drawings */
   --sea: #e6f1f7;  --sand: #efe3c4;  --shore: #7a6a45;  --reef-line: #1b1f24;  --dim: #3d5a73;
@@ -97,6 +99,10 @@ button, input, select { font: inherit; color: inherit; }
 .v-mixed { background: var(--v-mixed); color: var(--v-mixed-ink); }
 .v-partly-worked { background: var(--v-partly); color: var(--v-partly-ink); }
 .v-orange { background: var(--v-orange); color: var(--v-orange-ink); }
+.v-yellow { background: var(--v-yellow); color: var(--v-yellow-ink); }
+.v-blue { background: var(--v-blue); color: var(--v-blue-ink); }
+.chip .cdot { display: inline-block; width: .7em; height: .7em; border-radius: 50%; margin-right: 5px; vertical-align: -1px; border: 1px solid rgba(0,0,0,.25); }
+.wico { display: inline-block; vertical-align: -3px; margin-left: 4px; color: var(--dim); }
 .v-n-a { background: var(--v-na); color: var(--v-na-ink); border-color: #b9bcc2; }
 
 /* ---------- controls ---------- */
@@ -520,7 +526,8 @@ body[data-view="details"] .controls, body[data-view="details"] .site-head, body[
 table.data tr.grp th { border-bottom: 0; padding-bottom: 0; }
 table.data th.grp-score { text-align: center; font-size: .8rem; text-transform: uppercase; letter-spacing: .05em; border-bottom: 2px solid var(--line); }
 table.data th.sc, table.data td.sc { text-align: center; }
-.score { display: inline-block; min-width: 1.9em; padding: 2px 6px; border-radius: 999px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.score .sw { font-weight: 600; margin-left: 2px; }
+.score { white-space: nowrap; display: inline-block; min-width: 1.9em; padding: 2px 6px; border-radius: 999px; font-weight: 700; font-variant-numeric: tabular-nums; }
 table.data .vol { font-weight: 600; }
 table.data .sz { font-size: .85em; color: var(--muted); }
 table.data thead th.sc { white-space: normal; width: 92px; min-width: 80px; line-height: 1.25; vertical-align: bottom; }

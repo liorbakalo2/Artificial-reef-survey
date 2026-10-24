@@ -65,8 +65,9 @@ ROLE_LABEL = {"plan_trace": "plan trace", "scale": "scale", "3d_crest": "crest",
 WARN: list[str] = []
 
 
-SCALE_A = {"5": "excellent", "4": "good", "3": "inconsistent", "2": "works rarely", "1": "no surfable wave", "?": "unknown"}
-SCALE_B = {"5": "no problems", "4": "intact", "3": "renewed", "2": "hazard", "1": "failed", "?": "unknown"}
+# one word per level (Lior 2026-10-24); same as WORD_A / WORD_B in src/app.js and WORD_* in src/models3d.js
+SCALE_A = {"5": "excellent", "4": "good", "3": "inconsistent", "2": "rarely", "1": "unsurfable", "?": "unknown"}
+SCALE_B = {"5": "intact", "4": "intact", "3": "renewed", "2": "hazard", "1": "failure", "?": "unknown"}
 
 
 def _rating_label(q):
@@ -1019,7 +1020,7 @@ def main() -> int:
             models.append({
                 "slug": slug, "name": rname, "place": names.get(slug, {}).get("place_short") or "",
                 "flag": names.get(slug, {}).get("country_flag") or "", "verdict": names.get(slug, {}).get("verdict") or "",
-                "verdict_label": _rating_label(names.get(slug, {}).get("rating")),
+                "verdict_label": _rating_label(names.get(slug, {}).get("rating")), "rating": names.get(slug, {}).get("rating"),
                 "model_name": m.get("name") or (m.get("meta") or {}).get("name") or "", "built": built,
                 "state_short": cur.get("state_short") or (state_auto if len(state_auto) < 330 else state_auto[:327].rsplit(" ", 1)[0] + "..."),
                 "state_full": state_auto, "caption": first_str(m, "caption"),

@@ -18,9 +18,15 @@
   var SCALE_A = { '5': 'excellent', '4': 'good', '3': 'inconsistent', '2': 'works rarely', '1': 'no surfable wave', '?': 'unknown' };
   var SCALE_C = { '5': 'very good', '4': '', '3': 'mixed, neutral or no measurable effect', '2': '', '1': 'very poor (harm)', '?': 'unknown' };   // paper Table 1 names only 1, 3 and 5
   var SCALE_B = { '5': 'no problems', '4': 'intact', '3': 'renewed', '2': 'hazard', '1': 'failed', '?': 'unknown' };
+  /* 2026-10-24 (Lior): one word per level, shown with the score. A keeps Table 1's meaning (full label in the tooltip); B has four words only:
+     intact (4-5, green), renewed (3, blue), hazard (2, yellow: surfers hit the reef or its rocks), failure (1, red: bags torn, deflated or removed). */
+  var WORD_A = { '5': 'excellent', '4': 'good', '3': 'inconsistent', '2': 'rarely', '1': 'unsurfable', '?': 'unknown' };
+  var WORD_B = { '5': 'intact', '4': 'intact', '3': 'renewed', '2': 'hazard', '1': 'failure', '?': 'unknown' };
+  var WORD_C = { '5': 'good', '3': 'mixed', '1': 'harm' };     // paper Table 1 names only 1, 3, 5
+  var CLS_B = { '5': 'v-worked', '4': 'v-worked', '3': 'v-blue', '2': 'v-yellow', '1': 'v-failed', '?': 'v-n-a', 'na': 'v-n-a' };
   var SCORE_CLS = { '5': 'v-worked', '4': 'v-partly-worked', '3': 'v-mixed', '2': 'v-orange', '1': 'v-failed', '?': 'v-n-a', 'na': 'v-n-a' };
   function score(r, k) { var q = r.rating; if (!q || q[k] == null) return 'na'; return String(q[k]).replace('*', '') || 'na'; }
-  ALL_REEFS.forEach(function (r) { r.aKey = score(r, 'A'); r.bKey = score(r, 'B'); r.cKey = score(r, 'C'); });
+  ALL_REEFS.forEach(function (r) { r.aKey = score(r, 'A'); r.bKey = score(r, 'B'); r.cKey = score(r, 'C'); r.bWord = WORD_B[r.bKey] || 'unknown'; });
   var VERDICTS = ['5', '4', '3', '2', '1', '?'].map(function (k, i) {
     return { key: k, label: k + ' \u2013 ' + SCALE_A[k], sym: k, note: '', order: i };
   });
@@ -37,12 +43,12 @@
       return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
     });
   }
-  function vclass(key) { return SCORE_CLS[key] || 'v-n-a'; }
+  function vclass(key, k) { return (k === 'B' ? CLS_B : SCORE_CLS)[key] || 'v-n-a'; }
   function oneBadge(r, k) {
-    var key = score(r, k), sc = k === 'A' ? SCALE_A : SCALE_B, name = k === 'A' ? 'Surf' : 'Construction';
+    var key = score(r, k), sc = k === 'A' ? WORD_A : WORD_B, name = k === 'A' ? 'Surf' : 'Construction';
     var txt = key === 'na' ? 'not rated' : key + ' \u2013 ' + sc[key];
     var star = r.rating && String(r.rating[k]).indexOf('*') >= 0 ? '*' : '';
-    return '<span class="badge ' + vclass(key) + '" title="' + (k === 'A' ? 'A, surf quality' : 'B, safety and longevity (construction)') + ' (paper Table 1)">' +
+    return '<span class="badge ' + vclass(key, k) + '" title="' + (k === 'A' ? 'A, surf quality: ' + (SCALE_A[key] || '') : 'B, safety and longevity (construction): ' + (SCALE_B[key] || '') + (key === '2' ? ' (surfers hit the reef or its rocks)' : key === '1' ? ' (bags torn or deflated, structure failed or removed)' : '')) + ' (paper Table 1)">' +
       '<span class="bk">' + name + ':</span> ' + esc(txt + star) + '</span>';
   }
   /* both ratings; on a tile they stack in the picture corner */
@@ -274,14 +280,14 @@
   }
 
   // ------------------------------------------------------------------ state
-  var state = { q: '', verdict: {}, country: {}, type: {}, sort: 'year', dir: -1, view: 'gallery' };   // D9: newest first by default
+  var state = { q: '', verdict: {}, bw: {}, country: {}, type: {}, sort: 'year', dir: -1, view: 'gallery' };   // D9: newest first by default
   var lastFocus = null;
 
   function matches(r) {
     var anyOf = function (set, val) { var keys = Object.keys(set); return !keys.length || set[val]; };
-    if (!anyOf(state.verdict, r.aKey) || !anyOf(state.country, r.country) || !anyOf(state.type, r.type_short)) return false;
+    if (!anyOf(state.verdict, r.aKey) || !anyOf(state.bw, r.bWord) || !anyOf(state.country, r.country) || !anyOf(state.type, r.type_short)) return false;
     if (state.q) {
-      var hay = [r.name, r.place, r.country, r.type, r.type_short, r.year, r.hover_text, r.designer, r.contractor, r.financed_by, 'surf ' + r.aKey + ' ' + (SCALE_A[r.aKey] || ''), 'construction ' + r.bKey + ' ' + (SCALE_B[r.bKey] || '')].join(' ').toLowerCase();
+      var hay = [r.name, r.place, r.country, r.type, r.type_short, r.year, r.hover_text, r.designer, r.contractor, r.financed_by, 'surf ' + r.aKey + ' ' + (SCALE_A[r.aKey] || '') + ' ' + (WORD_A[r.aKey] || ''), 'construction ' + r.bKey + ' ' + (SCALE_B[r.bKey] || '') + ' ' + (WORD_B[r.bKey] || '')].join(' ').toLowerCase();
       return state.q.toLowerCase().split(/\s+/).every(function (w) { return !w || hay.indexOf(w) !== -1; });
     }
     return true;
@@ -345,14 +351,14 @@
         '</dt><dd>≈ US$' + mean.toFixed(1) + 'M<small>mean of ' + n + ' reefs (' + ac.reefs.map(function (x) { return esc(x.name); }).join(', ') + '), 2024 prices; median US$' + med.toFixed(1) + 'M. Failed reefs and Bunbury Airwave excluded.</small></dd></div>';
     }
     $('#summary').innerHTML =
-      '<div><dt>Surf reefs</dt><dd>' + REEFS.length + '<small>built, ' + REEFS.filter(function (r) { return r.bKey === '1'; }).length + ' with construction rated 1 (failed)</small></dd></div>' +
+      '<div><dt>Surf reefs</dt><dd>' + REEFS.length + '<small>built, ' + REEFS.filter(function (r) { return r.bKey === '1'; }).length + ' with construction rated 1 (failure)</small></dd></div>' +
       '<div><dt>Countries</dt><dd>' + nC + '<small>' + esc(Object.keys(countries).join(', ')) + '</small></dd></div>' +
       '<div><dt>Years built</dt><dd>' + y0 + '–' + y1 + '<small>first to most recent construction</small></dd></div>' + avgHTML;
   }
   function legendHTML() {     // the rating scale (moved from the page header to the Details tab, 2026-10-24)
     return '<div class="legend" aria-label="Rating scale">' +
-      '<span class="legend-item"><b>A, surf quality</b> ' + ['5', '4', '3', '2', '1'].map(function (k) { return '<span class="badge ' + vclass(k) + '">' + k + ' ' + esc(SCALE_A[k]) + '</span>'; }).join(' ') + '</span>' +
-      '<span class="legend-item"><b>B, safety and longevity (construction)</b> ' + ['5', '4', '3', '2', '1'].map(function (k) { return '<span class="badge ' + vclass(k) + '">' + k + ' ' + esc(SCALE_B[k]) + '</span>'; }).join(' ') + '</span>' +
+      '<span class="legend-item"><b>A, surf quality</b> ' + ['5', '4', '3', '2', '1'].map(function (k) { return '<span class="badge ' + vclass(k) + '" title="' + esc(SCALE_A[k]) + '">' + k + ' ' + esc(WORD_A[k]) + '</span>'; }).join(' ') + '</span>' +
+      '<span class="legend-item"><b>B, safety and longevity (construction)</b> ' + ['5', '4', '3', '2', '1'].map(function (k) { return '<span class="badge ' + vclass(k, 'B') + '" title="' + esc(SCALE_B[k]) + '">' + k + ' ' + esc(WORD_B[k]) + '</span>'; }).join(' ') + '</span>' +
       '<span class="legend-item"><b>C, sediment and storm protection</b> ' + ['5', '4', '3', '2', '1'].map(function (k) { return '<span class="badge ' + vclass(k) + '">' + k + (SCALE_C[k] ? ' ' + esc(SCALE_C[k]) : '') + '</span>'; }).join(' ') + '</span>' +
       '<span class="legend-item"><span class="badge v-n-a">?</span><span class="muted">unknown or no evidence; * provisional</span></span></div>';
   }
@@ -374,12 +380,17 @@
     });
     countries.sort(); types.sort();
     var flags = {}; REEFS.forEach(function (r) { flags[r.country] = r.country_flag; });
-    /* 2026-10-24 (Lior C7): the rating ('Verdict') chip group is gone; Country and Type filters, the text search and the sort stay. */
+    /* 2026-10-24 (Lior C7): the old 'Verdict' chip group is gone. Lior's request 2 (same day): filters by Surf (A) and Construction (B), listing the options present. */
+    var aVals = ['5', '4', '3', '2', '1', '?'].filter(function (k) { return REEFS.some(function (r) { return r.aKey === k; }); });
+    var bVals = ['intact', 'hazard', 'renewed', 'failure', 'unknown'].filter(function (w) { return REEFS.some(function (r) { return r.bWord === w; }); });
+    var bKeyOf = { intact: '4', hazard: '2', renewed: '3', failure: '1', unknown: '?' };
     $('#chips').innerHTML =
+      group('Surf (A)', 'aKey', aVals, function (k) { return '<i class="cdot ' + vclass(k) + '"></i>' + esc(WORD_A[k]); }) +
+      group('Construction (B)', 'bWord', bVals, function (w) { return '<i class="cdot ' + vclass(bKeyOf[w], 'B') + '"></i>' + esc(w); }) +
       group('Country', 'country', countries, function (c) { return (flags[c] ? '<span class="flag" aria-hidden="true">' + flags[c] + '</span>' : '') + esc(c); }) +
       group('Type', 'type_short', types, function (t) { return esc(t); });
   }
-  var FIELD_TO_STATE = { aKey: 'verdict', country: 'country', type_short: 'type' };
+  var FIELD_TO_STATE = { aKey: 'verdict', bWord: 'bw', country: 'country', type_short: 'type' };
 
   // ---------------------------------------------------------------- gallery
   function tileHTML(r) {
@@ -420,15 +431,16 @@
   /* 2026-10-19 (paper review): reef rating A/B/C from the card key `rating` (source: 08_paper/notes/rating_final.md, evidence rating_evidence.md). */
   function RATING_INFO() {
     return infoHTML('Reef rating: criteria and scale',
-      '<span class="pp"><b>Reef rating A / B / C</b> (this review, approved by Lior 2026-10-19). Scores 1 to 5, the same words as Table 1 of the paper. <b>A, surf quality</b>: 5 excellent, 4 good, 3 inconsistent, 2 works rarely, 1 no surfable wave. <b>B, safety and longevity (construction)</b>: 5 no problems, 4 intact, 3 renewed, 2 hazard or repairs, 1 failed or removed. <b>C, sediment and storm protection</b>: 1 very poor (harm) to 5 very good, 3 mixed, neutral or no measurable effect. ? = unknown or no evidence; * = provisional (signal not attributable to the reef).</span>' +
-      '<span class="pp">Gallery badges show A ("Surf") and B ("Construction"). Click a column title to sort by that score (best first). The paper ranks mainly by A, with B as tie-break; C does not affect the rank. Colours: green 5 to red 1, grey = unknown.</span>' +
+      '<span class="pp"><b>Reef rating A / B / C</b> (this review, approved by Lior 2026-10-19). Scores 1 to 5, as in Table 1 of the paper. The page shows one word per level next to the score (full Table 1 labels in brackets).  <b>A, surf quality</b>: 5 excellent, 4 good, 3 inconsistent, 2 rarely (works rarely), 1 unsurfable (no surfable wave). <b>B, safety and longevity (construction)</b>, four words: <b>intact</b> (green; 5 no problems, 4 intact), <b>renewed</b> (blue, 3; maintained by renewing it, e.g. Narrowneck), <b>hazard</b> (yellow, 2; surfers hit the reef or its rocks and were injured, e.g. Albany), <b>failure</b> (red, 1; bags torn, deflated or removed, or the structure failed). <b>C, sediment and storm protection</b>: 1 very poor (harm) to 5 very good, 3 mixed, neutral or no measurable effect. ? = unknown or no evidence; * = provisional (signal not attributable to the reef).</span>' +
+      '<span class="pp">Gallery badges show A ("Surf") and B ("Construction"). Click a column title to sort by that score (best first). The paper ranks mainly by A, with B as tie-break; C does not affect the rank. Colours: A green 5 to red 1; B green intact, blue renewed, yellow hazard, red failure; grey = unknown.</span>' +
       '<span class="pp">Evidence: the repo notes <i>rating_final.md</i> and <i>rating_evidence.md</i> (08_paper/notes), built from the reef cards and the papers cited there. Much of the surf evidence is journalism, designer reports or anecdote, so treat the scores as an informed ranking, not a measurement.</span>');
   }
   function scoreCell(r, k) {
     var q = r.rating, raw = q && q[k] != null ? String(q[k]) : '', key = { A: r.aKey, B: r.bKey, C: r.cKey }[k];
     var words = { A: SCALE_A, B: SCALE_B, C: SCALE_C }[k][key] || '';
     if (!raw) return '<span class="muted">—</span>';
-    return '<span class="score ' + vclass(key) + '" title="' + esc((words ? key + ' ' + words : raw) + (q.reason ? ' — ' + stripRefs(q.reason) : '')) + '">' + esc(raw) + '</span>';
+    var one = { A: WORD_A, B: WORD_B, C: WORD_C }[k][key] || '';
+    return '<span class="score ' + vclass(key, k) + '" title="' + esc((words ? key + ' ' + words : raw) + (q.reason ? ' — ' + stripRefs(q.reason) : '')) + '">' + esc(raw) + (one ? ' <span class="sw">' + esc(one) + '</span>' : '') + '</span>';
   }
   function sizeCell(r) {      // E14: first line = total volume as reported (paper Table 1), details below
     var vol = (PAGE.volume_reported || {})[r.slug];
@@ -1094,7 +1106,7 @@
         return;
       }
       if (t.closest('[data-clear]')) {
-        state.q = ''; state.verdict = {}; state.country = {}; state.type = {};
+        state.q = ''; state.verdict = {}; state.bw = {}; state.country = {}; state.type = {};
         $('#q').value = '';
         $all('.chip').forEach(function (c) { c.setAttribute('aria-pressed', 'false'); });
         render();

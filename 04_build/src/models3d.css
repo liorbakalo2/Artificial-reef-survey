@@ -56,6 +56,10 @@ button.m3d-selbtn[aria-pressed="true"] .m3d-dot { box-shadow: 0 0 0 2px #fff; }
 .m3d-conf-high { border-left-color: var(--m3d-high); } .m3d-conf-medium { border-left-color: var(--m3d-med); } .m3d-conf-low { border-left-color: var(--m3d-low); }
 .m3d-conf .m3d-reason { flex: 1 1 0; min-width: 0; font-size: .88rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .m3d-conf .m3d-badge { flex: 0 0 auto; }
+.m3d-rate { margin: 0 0 4px; font-size: .88rem; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.m3d-rc { font-size: .82rem; color: var(--muted); }
+.m3d-vlist { margin: 4px 0 4px 18px; padding: 0; font-size: .85rem; }
+.m3d-selbtn .wico { margin-left: 3px; vertical-align: -2px; }
 .m3d-state { display: flex; align-items: baseline; gap: 10px; margin: 0 0 8px; font-size: .88rem; }
 .m3d-state b { flex: 0 0 auto; }
 .m3d-state .t { flex: 1 1 0; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
