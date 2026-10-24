@@ -541,7 +541,7 @@
     }
     applyHash();
   }
-  function firstId() { return D.models.length ? D.models[0].slug : null; }
+  function firstId() { return BY['narrowneck-gold-coast'] ? 'narrowneck-gold-coast' : (D.models.length ? D.models[0].slug : null); }   // 2026-10-24 (Lior): Narrowneck is the default reef
   function validId(id) { return id === 'all' ? !!CMP : !!BY[id]; }
   function hashId() { var m = /^#view\/models3d(?:\/([a-z0-9-]+))?$/.exec(location.hash); return m ? (m[1] || '') : null; }
   function applyHash() {

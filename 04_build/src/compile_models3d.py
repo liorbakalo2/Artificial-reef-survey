@@ -337,7 +337,7 @@ html:not(.m3d-embedded) #app { height: 100% !important; }
 html.m3d-embedded .m3d-topbar { display: none; }
 html.m3d-embedded:not(.m3d-sidectl) #side, html.m3d-embedded #right, html.m3d-embedded #wideBtn, html.m3d-embedded #reason { display: none !important; }
 /* Borth: #side holds the controls (view, water level, toggles), so it stays when framed, narrower, and the header is compacted */
-html.m3d-sidectl.m3d-embedded #app { grid-template-columns: minmax(0, 1fr) 280px; }
+html.m3d-sidectl.m3d-embedded #app { grid-template-columns: minmax(0, 1fr) 280px; grid-template-rows: minmax(0, 1fr); }   /* 2026-10-24: the viewers' own narrow rule (58% 42% rows) left the lower half empty when framed at < 900 px */
 html.m3d-sidectl.m3d-embedded #conf, html.m3d-sidectl.m3d-embedded #state, html.m3d-sidectl.m3d-embedded #top h1 { display: none; }
 html.m3d-sidectl.m3d-embedded #top { padding: 3px 8px; grid-template-columns: minmax(0, 1fr); grid-template-areas: 'v'; }
 html.m3d-sidectl.m3d-embedded #cap { display: none; }
