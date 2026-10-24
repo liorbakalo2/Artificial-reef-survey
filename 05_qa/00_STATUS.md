@@ -728,3 +728,6 @@ Mexico/Xala: nothing new that allows a trace. RWR post fetched (announcement onl
 
 ## 2026-10-20 (page agent) - Opunake photo localised; testimony check
 - Opunake Wikimedia photo (CC BY-SA 3.0) now served from `assets/opunake-reef/` via new generic `local` field (compile_data.py + app.js); same for other CC images already registered. Other hot-links left (rights not cleared). Pratte's/Palm Beach comments, videos and A/B/C rating confirmed in dialogs and Table. Full update "state saved", check.py 0 failures.
+
+## 2026-10-24 (page agent) - paper ratings A/B replace the outcome verdict on the page
+- Gallery, dialogs, Table, filters, sort and legend use A (surf) and B (construction) with the paper's Table 1 words; see `04_build/HANDOFF.md` section 0h. check.py 0 failures.

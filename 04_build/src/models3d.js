@@ -301,7 +301,7 @@
     var c = m.confidence, lvl = c.level, s = esc(m.slug);
     // one line each: the full text stays in the DOM (CSS ellipsis) and sits behind the (i)
     return '<header class="m3d-mhead"><h2 id="m3d-h-' + s + '" tabindex="-1">' + (m.flag ? '<span class="flag" aria-hidden="true">' + m.flag + '</span> ' : '') + esc(m.name) +
-      '<small>' + esc(m.place) + (m.verdict_label ? ' &middot; verdict: ' + esc(m.verdict_label) : '') + '</small></h2>' +
+      '<small>' + esc(m.place) + (m.verdict_label ? ' &middot; ' + esc(m.verdict_label) : '') + '</small></h2>' +
       '<div class="m3d-conf m3d-conf-' + esc(lvl) + '"><span class="m3d-badge" title="3D confidence rubric: Appendix A, section 8">3D confidence: ' + esc(lvl) + '</span>' +
       '<span class="m3d-reason" title="' + esc(c.reason_short || c.reason) + '">' + esc(c.reason_short || c.reason) + '</span>' + confInfoHTML(m) + '</div>' +
       '<p class="m3d-state"><b>State modelled:</b> <span class="t" title="' + esc(m.state_short) + '">' + esc(m.state_short) + '</span><span class="m3d-ve">Vertical exaggeration 1&times; by default</span></p>' +

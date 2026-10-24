@@ -8,16 +8,20 @@
   var BY_SLUG = {};
   REEFS.forEach(function (r) { BY_SLUG[r.slug] = r; });
 
-  var VERDICTS = [
-    { key: 'worked', label: 'Worked', sym: '✓', note: 'did what it was built for' },
-    { key: 'partly worked', label: 'Partly worked', sym: '◐', note: 'some goals met' },
-    { key: 'mixed', label: 'Mixed', sym: '≈', note: 'real gains and real failures' },
-    { key: 'failed', label: 'Failed', sym: '✕', note: 'did not deliver; removed or abandoned' },
-    { key: 'n-a', label: 'Too early to tell', sym: '?', note: 'too new to judge' }
-  ];
+  /* 2026-10-24: the old outcome verdict (worked / mixed / failed) is replaced by the paper's two ratings, same scores and
+     words as Table 1 of 08_paper/sections/03_survey.md (A = surf quality, B = safety and longevity). Source: card key `rating`. */
+  var SCALE_A = { '5': 'excellent', '4': 'good', '3': 'inconsistent', '2': 'works rarely', '1': 'no surfable wave', '?': 'unknown' };
+  var SCALE_B = { '5': 'no problems', '4': 'intact', '3': 'renewed', '2': 'hazard', '1': 'failed', '?': 'unknown' };
+  var SCORE_CLS = { '5': 'v-worked', '4': 'v-partly-worked', '3': 'v-mixed', '2': 'v-orange', '1': 'v-failed', '?': 'v-n-a', 'na': 'v-n-a' };
+  function score(r, k) { var q = r.rating; if (!q || q[k] == null) return 'na'; return String(q[k]).replace('*', '') || 'na'; }
+  REEFS.forEach(function (r) { r.aKey = score(r, 'A'); r.bKey = score(r, 'B'); });
+  var VERDICTS = ['5', '4', '3', '2', '1', '?'].map(function (k, i) {
+    return { key: k, label: k + ' \u2013 ' + SCALE_A[k], sym: k, note: '', order: i };
+  });
   var V_BY_KEY = {};
-  VERDICTS.forEach(function (v, i) { v.order = i; V_BY_KEY[v.key] = v; });
-  var VERDICT_COLOR = { 'worked': '#1e7a46', 'partly worked': '#6fbf7e', 'mixed': '#c98a12', 'failed': '#9b1c1c', 'n-a': '#9aa0a8' };
+  VERDICTS.forEach(function (v) { V_BY_KEY[v.key] = v; });
+  V_BY_KEY['na'] = { key: 'na', label: 'not rated', sym: '\u2013', note: '', order: 9 };
+  var VERDICT_COLOR = { '5': '#1e7a46', '4': '#6fbf7e', '3': '#c98a12', '2': '#d9692a', '1': '#9b1c1c', '?': '#9aa0a8', 'na': '#9aa0a8' };
 
   // ---------------------------------------------------------------- helpers
   function $(sel, root) { return (root || document).querySelector(sel); }
@@ -27,11 +31,16 @@
       return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
     });
   }
-  function vclass(key) { return 'v-' + String(key).replace(/\s+/g, '-'); }
-  function badge(r) {
-    var v = V_BY_KEY[r.verdict] || V_BY_KEY['n-a'];
-    return '<span class="badge ' + vclass(v.key) + '"><span class="sym" aria-hidden="true">' + v.sym + '</span>' + esc(v.label) + '</span>';
+  function vclass(key) { return SCORE_CLS[key] || 'v-n-a'; }
+  function oneBadge(r, k) {
+    var key = score(r, k), sc = k === 'A' ? SCALE_A : SCALE_B, name = k === 'A' ? 'Surf' : 'Construction';
+    var txt = key === 'na' ? 'not rated' : key + ' \u2013 ' + sc[key];
+    var star = r.rating && String(r.rating[k]).indexOf('*') >= 0 ? '*' : '';
+    return '<span class="badge ' + vclass(key) + '" title="' + (k === 'A' ? 'A, surf quality' : 'B, safety and longevity (construction)') + ' (paper Table 1)">' +
+      '<span class="bk">' + name + ':</span> ' + esc(txt + star) + '</span>';
   }
+  /* both ratings; on a tile they stack in the picture corner */
+  function badge(r) { return '<span class="badges">' + oneBadge(r, 'A') + oneBadge(r, 'B') + '</span>'; }
   function flag(r) { return r.country_flag ? '<span class="flag" aria-hidden="true">' + r.country_flag + '</span> ' : ''; }
   function mmss(sec) {
     sec = Math.max(0, Math.round(Number(sec) || 0));
@@ -264,9 +273,9 @@
 
   function matches(r) {
     var anyOf = function (set, val) { var keys = Object.keys(set); return !keys.length || set[val]; };
-    if (!anyOf(state.verdict, r.verdict) || !anyOf(state.country, r.country) || !anyOf(state.type, r.type_short)) return false;
+    if (!anyOf(state.verdict, r.aKey) || !anyOf(state.country, r.country) || !anyOf(state.type, r.type_short)) return false;
     if (state.q) {
-      var hay = [r.name, r.place, r.country, r.type, r.type_short, r.year, r.hover_text, r.designer, r.contractor, r.financed_by, r.verdict_label].join(' ').toLowerCase();
+      var hay = [r.name, r.place, r.country, r.type, r.type_short, r.year, r.hover_text, r.designer, r.contractor, r.financed_by, 'surf ' + r.aKey + ' ' + (SCALE_A[r.aKey] || ''), 'construction ' + r.bKey + ' ' + (SCALE_B[r.bKey] || '')].join(' ').toLowerCase();
       return state.q.toLowerCase().split(/\s+/).every(function (w) { return !w || hay.indexOf(w) !== -1; });
     }
     return true;
@@ -279,7 +288,7 @@
     type: function (r) { return r.type_short || ''; },
     size: function (r) { return (r.size_short || '').toLowerCase(); },
     financed: function (r) { return stripRefs(r.financed_by).toLowerCase(); },
-    verdict: function (r) { return (V_BY_KEY[r.verdict] || V_BY_KEY['n-a']).order; },
+    verdict: function (r) { return (V_BY_KEY[r.aKey] || V_BY_KEY['na']).order; },
     refs: function (r) { return (r.references || []).length; },
     rating: function (r) { return r.rating && r.rating.rank ? r.rating.rank : null; },
     loc: function (r) { var L = r.location || {}; return L.status === 'none' ? 2 : L.status === 'approximate' ? 1 : 0; }
@@ -313,15 +322,15 @@
         '<span class="pp">Compiled ' + esc(META.compiled_on) + '. The method is described in the footer and in the References index at the bottom of the page.</span>' +
         '<a class="more" href="#references">Read more: References index &rarr;</a>');
 
-    $('#legend').innerHTML = '<span class="muted" style="font-size:.78rem;text-transform:uppercase;letter-spacing:.05em">Verdict</span>' +
-      VERDICTS.map(function (v) {
-        return '<span class="legend-item"><span class="badge ' + vclass(v.key) + '"><span class="sym" aria-hidden="true">' + v.sym + '</span>' + esc(v.label) + '</span><span class="muted">' + esc(v.note) + '</span></span>';
-      }).join('');
+    $('#legend').innerHTML = '<span class="muted" style="font-size:.78rem;text-transform:uppercase;letter-spacing:.05em">Rating scale (paper Table 1)</span>' +
+      '<span class="legend-item"><b>Surf (A)</b> ' + ['5', '4', '3', '2', '1'].map(function (k) { return '<span class="badge ' + vclass(k) + '">' + k + ' ' + esc(SCALE_A[k]) + '</span>'; }).join(' ') + '</span>' +
+      '<span class="legend-item"><b>Construction (B)</b> ' + ['5', '4', '3', '2', '1'].map(function (k) { return '<span class="badge ' + vclass(k) + '">' + k + ' ' + esc(SCALE_B[k]) + '</span>'; }).join(' ') + '</span>' +
+      '<span class="legend-item"><span class="badge v-n-a">?</span><span class="muted">unknown or no evidence; * provisional</span></span>';
 
     var totalM = META.usd_total_mid / 1e6;
     var lowM = META.usd_total_low / 1e6, highM = META.usd_total_high / 1e6;
     $('#summary').innerHTML =
-      '<div><dt>Reefs</dt><dd>' + REEFS.length + '<small>built, ' + REEFS.filter(function (r) { return r.verdict === 'failed'; }).length + ' judged failed</small></dd></div>' +
+      '<div><dt>Reefs</dt><dd>' + REEFS.length + '<small>built, ' + REEFS.filter(function (r) { return r.bKey === '1'; }).length + ' with construction rated 1 (failed)</small></dd></div>' +
       '<div><dt>Countries</dt><dd>' + nC + '<small>' + esc(Object.keys(countries).join(', ')) + '</small></dd></div>' +
       '<div><dt>Years built</dt><dd>' + y0 + '–' + y1 + '<small>first to most recent construction</small></dd></div>' +
       '<div><dt>Total documented cost</dt><dd>≈ US$' + totalM.toFixed(0) + 'M<small>of ' + META.n_with_cost + ' with cost data (range US$' + lowM.toFixed(1) + '–' + highM.toFixed(1) +
@@ -345,15 +354,15 @@
     });
     countries.sort(); types.sort();
     var flags = {}; REEFS.forEach(function (r) { flags[r.country] = r.country_flag; });
-    var presentV = VERDICTS.filter(function (v) { return REEFS.some(function (r) { return r.verdict === v.key; }); });
+    var presentV = VERDICTS.filter(function (v) { return REEFS.some(function (r) { return r.aKey === v.key; }); });
     $('#chips').innerHTML =
-      group('Verdict', 'verdict', presentV.map(function (v) { return v.key; }), function (k) {
+      group('Surf quality (A)', 'aKey', presentV.map(function (v) { return v.key; }), function (k) {
         return '<span class="dot ' + vclass(k) + '" aria-hidden="true"></span>' + esc(V_BY_KEY[k].label);
       }) +
       group('Country', 'country', countries, function (c) { return (flags[c] ? '<span class="flag" aria-hidden="true">' + flags[c] + '</span>' : '') + esc(c); }) +
       group('Type', 'type_short', types, function (t) { return esc(t); });
   }
-  var FIELD_TO_STATE = { verdict: 'verdict', country: 'country', type_short: 'type' };
+  var FIELD_TO_STATE = { aKey: 'verdict', country: 'country', type_short: 'type' };
 
   // ---------------------------------------------------------------- gallery
   function tileHTML(r) {
@@ -386,13 +395,13 @@
   var COLS = [
     { k: 'name', t: 'Name' }, { k: 'country', t: 'Country' }, { k: 'year', t: 'Year' }, { k: 'type', t: 'Type' },
     { k: 'size', t: 'Size' }, { k: 'cost', t: 'Cost (~US$)' }, { k: 'financed', t: 'Financed by' },
-    { k: 'loc', t: 'Location' }, { k: 'verdict', t: 'Verdict' }, { k: 'rating', t: 'Rating A/B/C' }, { k: 'refs', t: '# refs' }
+    { k: 'loc', t: 'Location' }, { k: 'verdict', t: 'Surf (A) / Construction (B)' }, { k: 'rating', t: 'Rating A/B/C' }, { k: 'refs', t: '# refs' }
   ];
   /* 2026-10-19 (paper review): reef rating A/B/C from the card key `rating` (source: 08_paper/notes/rating_final.md, evidence rating_evidence.md). */
   function RATING_INFO() {
     return infoHTML('Reef rating: criteria and scale',
-      '<span class="pp"><b>Reef rating A / B / C</b> (this review, approved by Lior 2026-10-19). Scores 1 to 5: 1 very poor, 2 poor, 3 mixed or neutral (includes "no measurable effect"), 4 good, 5 very good. ? = no usable evidence; * = provisional (a signal exists but cannot be attributed to the reef).</span>' +
-      '<span class="pp"><b>A</b> surf quality. <b>B</b> safety and longevity (material survived, injuries, removal). <b>C</b> sediment and storm protection. Ranking is mainly by A, with B as tie-break; C is not weighed equally.</span>' +
+      '<span class="pp"><b>Reef rating A / B / C</b> (this review, approved by Lior 2026-10-19). Scores 1 to 5, the same words as Table 1 of the paper. <b>A, surf quality</b>: 5 excellent, 4 good, 3 inconsistent, 2 works rarely, 1 no surfable wave. <b>B, safety and longevity (construction)</b>: 5 no problems, 4 intact, 3 renewed, 2 hazard or repairs, 1 failed or removed. <b>C, sediment and storm protection</b>: 1 very poor (harm) to 5 very good, 3 mixed, neutral or no measurable effect. ? = unknown or no evidence; * = provisional (signal not attributable to the reef).</span>' +
+      '<span class="pp">Gallery badges show A ("Surf") and B ("Construction"); the filter and the sort on this tab use A. Ranking is mainly by A, with B as tie-break; C is not weighed equally.</span>' +
       '<span class="pp">Evidence: the repo notes <i>rating_final.md</i> and <i>rating_evidence.md</i> (08_paper/notes), built from the reef cards and the papers cited there. Much of the surf evidence is journalism, designer reports or anecdote, so treat the scores as an informed ranking, not a measurement.</span>');
   }
   function ratingCell(r) {
@@ -468,7 +477,7 @@
       if (x[1] && x[1].html) return '<tr><th scope="row">' + esc(x[0]) + '</th><td>' + x[1].html + '</td></tr>';
       var val = typeof x[1] === 'number' ? 'US$' + x[1].toLocaleString('en-US') : x[1];
       return '<tr><th scope="row">' + esc(x[0]) + '</th><td>' + refify(val, r, 'link') + '</td></tr>';
-    }).join('') + '<tr><th scope="row">Verdict</th><td>' + badge(r) + '</td></tr></tbody></table>';
+    }).join('') + '<tr><th scope="row">Surf (A) / Construction (B)</th><td>' + badge(r) + '</td></tr></tbody></table>';
   }
 
   function glanceHTML(r) {
@@ -477,7 +486,8 @@
     var cell = function (k, v, cls) { return '<div class="gl' + (cls ? ' ' + cls : '') + '"><span class="gl-k">' + k + '</span><span class="gl-v">' + v + '</span></div>'; };
     var outcome = (r.hover && r.hover.outcome) || '';
     return '<section class="glance" aria-label="At a glance"><h3 class="sr">At a glance</h3><div class="gl-grid">' +
-      cell('Verdict', badge(r)) +
+      cell('Surf quality (A)', oneBadge(r, 'A')) +
+      cell('Construction (B)', oneBadge(r, 'B')) +
       cell('Built', esc(r.year_short) + refMarks(hr.year, r)) +
       cell('Cost', esc(r.cost_tile || 'not disclosed') + refMarks(hr.cost, r)) +
       cell('Size', esc(cleanShort(r.size_short) || '—') + refMarks(hr.size, r)) +
