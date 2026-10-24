@@ -1585,5 +1585,46 @@
   },
   "added_by": "Pratte's re-verification, 2026-10-10",
   "source_pdf": "07_scale/shapes/prattes-reef-el-segundo/src/borrero_nelsen_2003_prattes_monitoring_results.pdf"
+ },
+ {
+  "id": "prattes-reef-el-segundo-img-39",
+  "file": "03_images/reefs/prattes-reef-el-segundo/prattes-reef-el-segundo_rwr-4reef-comparison-panel_lior-screenshot.png",
+  "annotated_files": [],
+  "kind": "plan_figure",
+  "title": "Pratte's Reef plan graphic (right-hand panel of the 4-panel Narrowneck / Cables / Mount Reef / Pratte's Reef satellite comparison), Lior's screenshot",
+  "citation": "Raised Water Research (n.d.). 4-panel satellite comparison of artificial surf reefs: Narrowneck, Cables, Mount Reef, Pratte's Reef (composite graphic, as reproduced on slide 12 of Lior's Gold Coast PowerPoint, archive copy 03_images/from_lior/goldcoast_pptx/image26.png; the slide names raisedwaterresearch.com as its source). Screenshot of the Pratte's Reef panel supplied by Lior Baruch 2026-10-24 (05_qa/lior_uploads_2026-10-24/prattes_from_4reef_comparison_screenshot.png). Original web URL of the composite not located (raisedwaterresearch.com answered 406 to a scripted request on 2026-10-24; not bypassed).",
+  "image_url": null,
+  "source_page": "https://raisedwaterresearch.com/spot/artificial-reef/us/california/prattes-reef/ (RWR Pratte's Reef spot page; the composite's own URL is not known)",
+  "page_or_figure": "right-hand panel of the 4-panel composite (image26 of Lior's PPTX, slide 12)",
+  "image_date": "unknown (composite undated; Pratte's Reef existed 2000-2008)",
+  "credit": "Raised Water Research (composite); screenshot by Lior Baruch",
+  "license": "third party, all rights reserved (no licence stated); private research copy supplied by Lior, reuse not cleared",
+  "retrieved": "2026-10-24",
+  "shows": "Satellite image of the El Segundo shore with the Pratte's Reef chevron (V-shaped bag layout) drawn as a hatched graphic offshore and labelled 'Pratte's Reef'; the reef itself is not visible in the image (drawn symbol).",
+  "structure_visible": false,
+  "state_shown": "design (drawn plan symbol over a later satellite image)",
+  "used_for": [
+   "context"
+  ],
+  "how_used": "Gallery hero picture of Pratte's Reef at Lior's request (LIOR_PAGE_REQUESTS_2026-10-24 D12). Not used for the plan trace or the 3D model (the Pratte's V in this composite is the Skelly drawing; its single 200 m bar is not valid across panels, see 07_scale/shapes/prattes-reef-el-segundo/sources.md).",
+  "linked_records": [
+   "04_build/LIOR_PAGE_REQUESTS_2026-10-24.md D12",
+   "07_scale/shapes/prattes-reef-el-segundo/sources.md (image26 row)",
+   "04_build/data/hero_overrides.json"
+  ],
+  "bytes": 127035,
+  "px": [
+   219,
+   349
+  ],
+  "sha256": "95b60ea92a39b1a31ecffbe3c1f25ba4acb62a1ca142827f056224e03eace257",
+  "rights_note": "Private research copy; reuse rights to be checked before any public release.",
+  "display": true,
+  "for_3d_check": {
+   "pending": false,
+   "what_to_check": "",
+   "model_values_affected": []
+  },
+  "added_by": "page agent (Lior's page requests), 2026-10-24"
  }
 ]

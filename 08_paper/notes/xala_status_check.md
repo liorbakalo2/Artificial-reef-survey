@@ -38,3 +38,7 @@ The boulder reef has been reported as placed since April 2025. Independent evide
 ## Card impact
 
 The card's `status_now` and `verdict` fields should stay as they are: "described as complete" by RWR, not verified. This note is a status check only. No file other than this note was changed.
+
+## Update 2026-10-24 (Lior; verbatim from the article)
+Raised Water Research, "Unveiling the new reef in Mexico", Peter Indelicato, 31 March 2026 (Surf Reef News): "On April 16 at 6:30 PM, the California Surf Club will host the unveiling of a newly completed artificial surf reef off the coast of Mexico. In a fireside conversation, reef designer Simon Brandi Mortensen and Raised Water Research founder Peter Indelicato will reveal the reef's location and debut never-before-seen footage of the reef in action."
+Verdict: COMPLETED (by early 2026), per the designer's announcement. Location undisclosed until 16 Apr 2026; no independent photos found yet.
