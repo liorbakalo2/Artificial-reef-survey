@@ -210,7 +210,7 @@ PASS [3D] DOM: selector buttons show the 3D-confidence dot of each reef
 PASS [3D] DOM: ONE model section visible (one at a time)
 PASS [3D] DOM: 9 model sections rendered (others hidden)
 PASS [3D] DOM: 245 thumbnails rendered (one per selected picture)
-PASS [3D] DOM: header: badge + one-line reason + state + vertical-exaggeration note
+PASS [3D] DOM: header: badge + one-line reason + Surf (A) / Construction (B) lines (2026-10-24)
 PASS [3D] DOM: every model has the full vertical-exaggeration text behind its (i)
 PASS [3D] DOM: text at the top is short: tab intro <= 260 chars, page intro <= 260 chars (the rest sits behind (i))
 PASS [3D] DOM: site header (long text) is collapsed on this tab

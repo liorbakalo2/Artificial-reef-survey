@@ -251,3 +251,10 @@ quality, and reef shape fidelity (surveyed vs idealised). The label of each reef
 - **Table (E)**: Size = volume (paper Table 1) in bold, card text below; scores A / B / C in three coloured columns under "Scores" (names from Table 1: "A, surf quality", "B, safety and longevity", "C, sediment and storm protection"; C words only for 1/3/5 as in the paper); order ... Cost, A, B, C, Financed by, Location (last).
 - **Checks adapted** (only where Lior removed something): qa_shots nav = Gallery/Table/3D models/Details; check.py gallery tiles and table Location rows exclude page_overrides reefs; hero-tier check skips Lior's chosen heroes. `ReefLoc.extras` uses all reefs (Borth 3D map block).
 - Open: Mount Maunganui crop registered but not shown (Lior asked for 3 panels); the 3D appendix is not moved to Details.
+
+## 0j. One-word ratings, filters, 3D header (2026-10-24, page agent) - NO geometry change
+- Words (`WORD_A/WORD_B/WORD_C` in `src/app.js`, mirrored in `src/models3d.js` and `compile_models3d.SCALE_*`): A 5 excellent, 4 good, 3 inconsistent, 2 rarely, 1 unsurfable, ? unknown (full Table 1 label in tooltips / (i)). B has four words: intact (4-5, green), renewed (3, blue), hazard (2, YELLOW), failure (1, red). C words only for 1/3/5: harm / mixed / good.
+- B per reef (rating_final.md): Albany hazard; Cables, Burkitts, Palm Beach, Borth intact; Narrowneck renewed; Boscombe, Kovalam, Mt Maunganui, Pratte's, Opunake, Bunbury failure. Xala unrated.
+- Gallery: chip groups "Surf (A)" and "Construction (B)" (options present only; state.verdict / state.bw), badges, Table score cells (score + word, coloured), dialog, legend and (i) use the words.
+- 3D tab: reef list buttons + header get a wave icon if A >= 4 (only Albany) and a beach-umbrella icon if C >= 4 (none of the reefs qualifies: max C is 3). Header "State modelled" line removed; replaced by two lines Surf (A) / Construction (B) (+ C only if >= 4 or 1, i.e. Mt Maunganui). (i) next to the Outline-version button explains the versions. qa_models3d.py header check adapted.
+- Run: dry, then `--full` check.py 0 failures.
